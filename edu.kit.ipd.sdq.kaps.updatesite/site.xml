@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/edu.kit.ipd.sdq.kaps.feature_1.0.0.qualifier.jar" id="edu.kit.ipd.sdq.kaps.feature" version="1.0.0.qualifier">
+      <category name="kaps_category"/>
+   </feature>
+   <category-def name="kaps_category" label="KAPS Addon"/>
+</site>
