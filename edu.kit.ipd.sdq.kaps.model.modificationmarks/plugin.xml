@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated KAPSModificationsmarks -->
+      <package
+            uri="http://sdq.ipd.kit.edu/KAPSModificationmarks/1.0"
+            class="edu.kit.ipd.sdq.kaps.model.modificationmarks.modificationmarksPackage"
+            genModel="model/KAPSModificationsmarks.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.extension_parser">
+      <!-- @generated KAPSModificationsmarks -->
+      <parser
+            type="modificationmarks"
+            class="edu.kit.ipd.sdq.kaps.model.modificationmarks.util.modificationmarksResourceFactoryImpl"/>
+   </extension>
+
+</plugin>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kaps.model.modificationmarks/src"
+    editDirectory="/edu.kit.ipd.sdq.kaps.model.modificationmarks.edit/src" editorDirectory="/edu.kit.ipd.sdq.kaps.model.modificationmarks.editor/src"
+    modelPluginID="edu.kit.ipd.sdq.kaps.model.modificationmarks" modelName="KAPSModificationmarks"
+    modelPluginClass="" editPluginClass="edu.kit.ipd.sdq.kaps.model.modificationmarks.provider.KAPSModificationmarksEditPlugin"
+    editorPluginClass="edu.kit.ipd.sdq.kaps.model.modificationmarks.presentation.KAPSModificationmarksEditorPlugin"
+    testSuiteClass="edu.kit.ipd.sdq.kaps.model.modificationmarks.tests.KAPSModificationmarksAllTests"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
+    editPluginID="edu.kit.ipd.sdq.kaps.model.modificationmarks.edit" editorPluginID="edu.kit.ipd.sdq.kaps.model.modificationmarks.editor"
+    usedGenPackages="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.genmodel#//modificationmarks platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units ../../xPPU/model/xPPU.genmodel#//xPPU">
+  <foreignModel>KAPSModificationsmarks.ecore</foreignModel>
+  <genPackages prefix="modificationmarks" basePackage="edu.kit.ipd.sdq.kaps.model"
+      resource="XMI" disposableProviderFactory="true" ecorePackage="KAPSModificationsmarks.ecore#/">
+    <genClasses image="false" ecoreClass="KAPSModificationsmarks.ecore#//AbstractKAPSModificationRepository">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//AbstractKAPSModificationRepository/T"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//KAPSModificationRepository"/>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//KAPSSeedModifications">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//KAPSSeedModifications/busBoxModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//KAPSSeedModifications/sensorModifications"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifySensor">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifySensor/T"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyPlantInterface">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyPlantInterface/T"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ChangePropagationDueToSensorChange">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToSensorChange/sensorModifications"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToSensorChange/signalinterfaceModifications"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToSensorChange/physicalConnectionModifications"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyEntity">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyEntity/T"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyBusBox">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyBusBox/T"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyPowerSupply">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyPowerSupply/T"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifySignalinterface">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifySignalinterface/T"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyPhysicalConnection">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyPhysicalConnection/T"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
