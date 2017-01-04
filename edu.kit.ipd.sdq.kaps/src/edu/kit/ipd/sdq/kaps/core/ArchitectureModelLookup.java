@@ -361,14 +361,14 @@ public class ArchitectureModelLookup {
 		return results;
 	}
 
-	public static Map<xPPU.Interface, Set<Sensor>> lookUpSensorsWithPhysicalConnections(ArchitectureVersion version,
+	public static Map<xPPU.InterfaceRepository.Interface, Set<Sensor>> lookUpSensorsWithPhysicalConnections(ArchitectureVersion version,
 			Collection<Sensor> seedSensors) {
-		Map<xPPU.Interface, Set<Sensor>> results = new HashMap<xPPU.Interface, Set<Sensor>>();
+		Map<xPPU.InterfaceRepository.Interface, Set<Sensor>> results = new HashMap<xPPU.InterfaceRepository.Interface, Set<Sensor>>();
 
 		Set<Sensor> sensors = new HashSet<Sensor>();
 		for(Sensor s : seedSensors){
 			sensors.add(s);
-			results.put((xPPU.Interface)s.getPhysicalconnection(), sensors);
+			results.put((xPPU.InterfaceRepository.Interface)s.getPhysicalconnection(), sensors);
 		}
 		return results;
 	}
