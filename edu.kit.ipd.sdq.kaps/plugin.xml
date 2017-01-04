@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="edu.kit.ipd.sdq.kaps.createsubalternativecontribution1"
+            objectClass="org.eclipse.core.resources.IContainer">
+         <menu
+               icon="../edu.kit.ipd.sdq.amp/icons/edit.png"
+               id="edu.kit.ipd.sdq.kaps.menukaps"
+               label="KAPS Analysis">
+         </menu>
+         <action
+               class="edu.kit.ipd.sdq.kaps.ui.CreateEmptyBaseModelAction"
+               icon="../edu.kit.ipd.sdq.amp/icons/filenew.png"
+               id="edu.kit.ipd.sdq.kaps.action1"
+               label="Create empty KAPS architecture"
+               menubarPath="kaps">
+         </action>
+         <action
+               class="edu.kit.ipd.sdq.kaps.ui.DeriveWorkplanAction"
+               icon="../edu.kit.ipd.sdq.amp/icons/run.png"
+               id="edu.kit.ipd.sdq.kaps.action3"
+               label="Derive KAPS workplan"
+               menubarPath="kaps">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
