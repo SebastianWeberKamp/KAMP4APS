@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/xPPU/src" modelPluginID="xPPU" modelName="XPPU"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>xPPU.ecore</foreignModel>
+  <genPackages prefix="XPPU" disposableProviderFactory="true" ecorePackage="xPPU.ecore#/">
+    <genClasses ecoreClass="xPPU.ecore#//Plant">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Plant/structures"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Structure">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Structure/parentPlant"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Structure/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Structure/components"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Structure/cranes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Structure/conveyor"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Structure/controlcabinets"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Structure/powernetworks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Structure/communicationnetworks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Structure/pneumaticnetworks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Structure/powerwiring"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//CommunicationNetwork">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//CommunicationNetwork/parentStructure"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//PowerNetwork">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//PowerNetwork/parentStructure"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//ControlCabinet">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//ControlCabinet/parentStructure"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//ControlCabinet/controller"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//PneumaticNetwork">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//PneumaticNetwork/parentStructure"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Conveyor">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Conveyor/belts"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Conveyor/parentStructure"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Crane">
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Crane/arm"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Crane/mountedOn"/>
+      <genFeatures children="true" createChild="true" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Crane/vacuumgripper"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Crane/parentStructure"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//PowerWiring">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//PowerWiring/parentStructure"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Modules">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Modules/modules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Modules/rampmodules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Modules/pushermodules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Modules/motormodules"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Modules/sensormodules"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Modules/parentStructure"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//RampModule">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//RampModule/parentModuleContainer"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//PusherModule">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//PusherModule/parentModuleContainer"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//MotorModule">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//MotorModule/parentModuleContainer"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//SensorModule">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//SensorModule/parentModuleContainer"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Arm">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Arm/mountedTo"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//TurningTable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//TurningTable/mounts"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//VacuumGripper">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//VacuumGripper/mountedTo"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//ConveyorBelt">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//ConveyorBelt/mountedTo"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Pusher">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Pusher/componentsRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Components">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Components/parentStructure"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/electronicComponents"/>
+      <genFeatures property="None" children="true" createChild="true" propertyCategory=""
+          propertyDescription="" ecoreFeature="ecore:EReference xPPU.ecore#//Components/interfaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/motors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/mechanicalAssemblys"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/sensors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/pipes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/compressors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/buscables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/busmasters"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/busslaves"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/busboxes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/cylinders"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/powercables"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/valves"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/mechanicalparts"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/powersupplys"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/pushers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/corners"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/dispensers"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/racks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/tanks"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/splitter"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/bottleSeperator"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/panels"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Components/cables"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Motor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Motor/gearing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Motor/screwing"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Motor/powersupply"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Motor/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//SimpleMotor"/>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Sensor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Sensor/physicalconnection"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Sensor/signalinterface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Sensor/powersupply"/>
+      <genFeatures property="None" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Sensor/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Rack">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Rack/screwing_to_base"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Rack/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Corner">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Corner/componentRepository"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Valve">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Valve/pneumaticsupply"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Valve/powersupply"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Valve/signalinterface"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Valve/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Tank">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Tank/watersupply"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Tank/screwing"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Tank/componentRepository"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//MechanicalPart">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//MechanicalPart/screwing"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//MechanicalPart/componentRepository"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Pushhead"/>
+    <genClasses ecoreClass="xPPU.ecore#//MechanicalAssembly">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//MechanicalAssembly/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Ramp">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Ramp/screwing_base"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Ramp/screwing_component"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Ramp/physicalconnection"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Cylinder">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Cylinder/pneumaticsupply"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Cylinder/SignalInterface"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Cylinder/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Dispenser">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Dispenser/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//BottleSeperator">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BottleSeperator/signalinterface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BottleSeperator/pneumaticsupply"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BottleSeperator/powersupply"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BottleSeperator/screwing_to_rack"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//BottleSeperator/componentRepository"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Splitter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Splitter/screwing"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Splitter/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//PowerSplitter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//PowerSplitter/powersupply"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//WaterSplitter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//WaterSplitter/watersupply"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//PneumaticSplitter">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//PneumaticSplitter/pneumaticsupply"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Panel">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Panel/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//OperationPanel">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//OperationPanel/screwing_rack"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//OperationPanel/leds"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//OperationPanel/buttons"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Cable">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Cable/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//PowerSupply">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//PowerSupply/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Compressor">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Compressor/powersupply"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Compressor/pneumaticsupply"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Compressor/pins"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Compressor/screwing"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Compressor/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//ElectronicPart">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//ElectronicPart/pin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//ElectronicPart/physicalconnection"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//ElectronicPart/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Switch"/>
+    <genClasses ecoreClass="xPPU.ecore#//PowerCable"/>
+    <genClasses ecoreClass="xPPU.ecore#//MonostableCylinder"/>
+    <genClasses ecoreClass="xPPU.ecore#//ProportionalCylinder"/>
+    <genClasses ecoreClass="xPPU.ecore#//BistableCylinder"/>
+    <genClasses ecoreClass="xPPU.ecore#//Controller">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Controller/signalinterface"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Controller/powersupply"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Controller/controllerOf"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//LED"/>
+    <genClasses ecoreClass="xPPU.ecore#//Button"/>
+    <genClasses ecoreClass="xPPU.ecore#//RegularRamp"/>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Pipe">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Pipe/plugs"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Pipe/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//PneumaticPipe"/>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//BusMaster">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BusMaster/signalinterfaces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BusMaster/signalinterface_controller"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//BusMaster/componentRepostitory"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//BusSlave">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BusSlave/signalinterface_master"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BusSlave/signalinterface_slave"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//BusSlave/componentRepository"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//BusCable">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BusCable/SignalPlug1"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BusCable/SignalPlug2"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//BusBox">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BusBox/signalinterfaces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BusBox/signalinterface_master"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BusBox/signalinterface_box"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//BusBox/powersupply"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Interface">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Interface/screwings"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Interface/suspensions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Interface/gearings"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Interface/clamping"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Interface/pneumaticsupplys"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Interface/signalinterfaces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Interface/powersupply"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Interface/watersupply"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Interface/physicalconnections"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Interface/transportconnection"/>
+      <genFeatures notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Interface/componentRepository"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Screwing">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Screwing/intefacePart"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Suspension">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Suspension/intefacePart"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Gearing">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//Gearing/intefacePart"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//Clamping">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//Clamping/intefacePart"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//PneumaticSupply">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//PneumaticSupply/intefacePart"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//SignalInterface">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//SignalInterface/intefacePart"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//WaterSupply">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//WaterSupply/intefacePart"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//PhysicalConnection">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//PhysicalConnection/intefacePart"/>
+    </genClasses>
+    <genClasses ecoreClass="xPPU.ecore#//TransportConnection">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference xPPU.ecore#//TransportConnection/intefacePart"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
