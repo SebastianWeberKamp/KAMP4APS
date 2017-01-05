@@ -25,7 +25,7 @@ public class ScenarioZero {
 		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, Sensor.class);
 	}
 
-	public void addScenarioModificationToChangePropagation(Sensor sensor, 
+	public void addSensorModificationToChangePropagation(Sensor sensor, 
 			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange,
 			Collection<SignalInterface> signalInterfaceToChange,
 			Collection<PhysicalConnection> physicalConnectionToChange) {

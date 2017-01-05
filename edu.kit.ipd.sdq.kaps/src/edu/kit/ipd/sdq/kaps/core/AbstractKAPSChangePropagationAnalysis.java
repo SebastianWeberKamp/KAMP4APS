@@ -41,6 +41,7 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 	 * Sensor Change
 	 */
 	protected void calculateAndMarkFromSensorPropagration(S version) {
+		scenarioZero = new ScenarioZero(version);
 		Collection<SignalInterface> signalInterfaceToChange = new ArrayList<SignalInterface>();
 		Collection<PhysicalConnection> physicalConnectionToChange = new ArrayList<PhysicalConnection>();
 		addSensorModifications(signalInterfaceToChange, physicalConnectionToChange);
@@ -49,7 +50,7 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 		private void addSensorModifications(Collection<SignalInterface> signalInterfaceToChange,
 				Collection<PhysicalConnection> physicalConnectionToChange) {
 			for (Sensor sensor : scenarioZero.getInitialMarkedSensors()) {
-				scenarioZero.addScenarioModificationToChangePropagation(sensor, 
+				scenarioZero.addSensorModificationToChangePropagation(sensor, 
 						changePropagationDueToHardwareChange,
 						signalInterfaceToChange,
 						physicalConnectionToChange);
