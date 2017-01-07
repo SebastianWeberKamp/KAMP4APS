@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: edu.kit.ipd.sdq.kaps.buckminster
-Bundle-SymbolicName: edu.kit.ipd.sdq.kaps.buckminster; singleton:=true
+Bundle-SymbolicName: edu.kit.ipd.sdq.kamp4aps.buckminster;singleton:=true
 Bundle-Version: 0.1.0.qualifier
 Require-Bundle: org.eclipse.emf.ecore
