@@ -3,8 +3,6 @@
 package xPPU.provider;
 
 
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.provider.KAPSModificationmarksEditPlugin;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -21,6 +19,8 @@ import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.KAPSModificationmarksEditPlugin;
 import xPPU.XPPUPackage;
 
 /**
