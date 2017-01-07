@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.core;
+package edu.kit.ipd.sdq.kamp4aps.core;
 
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesFactory;
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
@@ -7,17 +7,17 @@ import org.palladiosimulator.pcm.repository.RepositoryFactory;
 import org.palladiosimulator.pcm.system.System;
 import org.palladiosimulator.pcm.system.SystemFactory;
 
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.BuildSpecification;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.DeploymentSpecification;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.DevelopmentArtefactSpecification;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.ReleaseSpecification;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.StaffSpecification;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.TestSpecification;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.KAPSModificationRepository;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.KAPSSeedModifications;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.modificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.BuildSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.DeploymentSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.DevelopmentArtefactSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ReleaseSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StaffSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.TestSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSModificationRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 
 public class ArchitectureModelFactoryFacade {
 	

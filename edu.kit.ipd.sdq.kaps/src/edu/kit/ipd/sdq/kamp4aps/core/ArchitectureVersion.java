@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.core;
+package edu.kit.ipd.sdq.kamp4aps.core;
 
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesFactory;
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
@@ -9,9 +9,9 @@ import org.palladiosimulator.pcm.system.System;
 import org.palladiosimulator.pcm.system.SystemFactory;
 
 import edu.kit.ipd.sdq.amp.architecture.AbstractArchitectureVersion;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.AbstractKAPSModificationRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
 import xPPU.ComponentRepository.Component;
 
 public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAPSModificationRepository<?>> {

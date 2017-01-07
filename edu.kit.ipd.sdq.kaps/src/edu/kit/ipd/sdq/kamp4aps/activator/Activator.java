@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.activator;
+package edu.kit.ipd.sdq.kamp4aps.activator;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;

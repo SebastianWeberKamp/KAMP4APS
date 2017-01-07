@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.core;
+package edu.kit.ipd.sdq.kamp4aps.core;
 
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -7,8 +7,8 @@ import org.palladiosimulator.pcm.system.SystemPackage;
 
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesPackage;
 import edu.kit.ipd.sdq.amp.architecture.AbstractArchitectureVersionPersistency;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.FieldofactivityannotationsPackage;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.modificationmarksPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 
 public abstract class AbstractKAPSArchitectureVersionPersistency<T extends ArchitectureVersion> 
 		extends AbstractArchitectureVersionPersistency<T> {

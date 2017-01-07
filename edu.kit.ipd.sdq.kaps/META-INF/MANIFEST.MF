@@ -1,17 +1,17 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Karlsruhe Architectural Maintainability Prediction
-Bundle-SymbolicName: edu.kit.ipd.sdq.kaps;singleton:=true
+Bundle-SymbolicName: edu.kit.ipd.sdq.kamp4aps;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: edu.kit.ipd.sdq.kaps.activator.Activator
+Bundle-Activator: edu.kit.ipd.sdq.kamp4aps.activator.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.junit,
  org.palladiosimulator.pcm;bundle-version="3.2.0",
  org.eclipse.emf.compare;bundle-version="1.2.2",
  org.eclipse.core.resources;bundle-version="3.7.101",
- edu.kit.ipd.sdq.kaps.model.modificationmarks;bundle-version="1.0.0",
- edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations;bundle-version="1.0.0",
+ edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;bundle-version="1.0.0",
+ edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations;bundle-version="1.0.0",
  org.eclipse.emf.compare.rcp;bundle-version="2.3.0",
  de.uka.ipd.sdq.pcm.componentinternaldependencies;bundle-version="1.0.0",
  edu.kit.ipd.sdq.amp,
@@ -20,9 +20,9 @@ Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-Vendor: SDQ
-Export-Package: edu.kit.ipd.sdq.kaps.activator,
- edu.kit.ipd.sdq.kaps.core,
- edu.kit.ipd.sdq.kaps.core.derivation,
- edu.kit.ipd.sdq.kaps.ui
-Import-Package: edu.kit.ipd.sdq.kaps.model.modificationmarks.provider,
+Export-Package: edu.kit.ipd.sdq.kamp4aps.activator,
+ edu.kit.ipd.sdq.kamp4aps.core,
+ edu.kit.ipd.sdq.kamp4aps.core.derivation,
+ edu.kit.ipd.sdq.kamp4aps.ui
+Import-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider,
  xPPU

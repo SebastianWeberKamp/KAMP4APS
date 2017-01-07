@@ -1,15 +1,15 @@
-package edu.kit.ipd.sdq.kaps.core;
+package edu.kit.ipd.sdq.kamp4aps.core;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import edu.kit.ipd.sdq.amp.propagation.AbstractChangePropagationAnalysis;
-import edu.kit.ipd.sdq.kaps.core.scenarios.ScenarioOne;
-import edu.kit.ipd.sdq.kaps.core.scenarios.ScenarioTwo;
-import edu.kit.ipd.sdq.kaps.core.scenarios.ScenarioZero;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyBusBox;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyBusMaster;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyBusSlave;
+import edu.kit.ipd.sdq.kamp4aps.core.scenarios.ScenarioOne;
+import edu.kit.ipd.sdq.kamp4aps.core.scenarios.ScenarioTwo;
+import edu.kit.ipd.sdq.kamp4aps.core.scenarios.BusChanges;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
 import xPPU.BusComponents.BusBox;
 import xPPU.BusComponents.BusMaster;
 import xPPU.BusComponents.BusSlave;
@@ -32,7 +32,7 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 		implements AbstractChangePropagationAnalysis<S> {
 
 	private T changePropagationDueToHardwareChange;
-	private ScenarioZero scenarioZero;
+	private BusChanges scenarioZero;
 	private ScenarioOne scenarioOne;
 	private ScenarioTwo scenarioTwo;
 
@@ -41,7 +41,7 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 	 * Sensor Change
 	 */
 	protected void calculateAndMarkFromSensorPropagration(S version) {
-		scenarioZero = new ScenarioZero(version);
+		scenarioZero = new BusChanges(version);
 		Collection<SignalInterface> signalInterfaceToChange = new ArrayList<SignalInterface>();
 		Collection<PhysicalConnection> physicalConnectionToChange = new ArrayList<PhysicalConnection>();
 		addSensorModifications(signalInterfaceToChange, physicalConnectionToChange);

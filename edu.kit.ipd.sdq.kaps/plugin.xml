@@ -13,14 +13,14 @@
                label="KAPS Analysis">
          </menu>
          <action
-               class="edu.kit.ipd.sdq.kaps.ui.CreateEmptyBaseModelAction"
+               class="edu.kit.ipd.sdq.kamp4aps.ui.CreateEmptyBaseModelAction"
                icon="../edu.kit.ipd.sdq.amp/icons/filenew.png"
                id="edu.kit.ipd.sdq.kaps.action1"
                label="Create empty KAPS architecture"
                menubarPath="kaps">
          </action>
          <action
-               class="edu.kit.ipd.sdq.kaps.ui.DeriveWorkplanAction"
+               class="edu.kit.ipd.sdq.kamp4aps.ui.DeriveWorkplanAction"
                icon="../edu.kit.ipd.sdq.amp/icons/run.png"
                id="edu.kit.ipd.sdq.kaps.action3"
                label="Derive KAPS workplan"

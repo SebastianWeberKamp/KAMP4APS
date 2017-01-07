@@ -1,12 +1,12 @@
-package edu.kit.ipd.sdq.kaps.core.scenarios;
+package edu.kit.ipd.sdq.kamp4aps.core.scenarios;
 
 import java.util.Collection;
 
 import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
-import edu.kit.ipd.sdq.kaps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyMicroSwitchModule;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.modificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 import xPPU.ComponentRepository.MicroswitchModule;
 
 public class ScenarioOne {

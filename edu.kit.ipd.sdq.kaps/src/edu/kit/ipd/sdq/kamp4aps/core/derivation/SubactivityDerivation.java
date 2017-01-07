@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.core.derivation;
+package edu.kit.ipd.sdq.kamp4aps.core.derivation;
 
 import java.util.Collection;
 
@@ -22,8 +22,8 @@ import org.palladiosimulator.pcm.repository.SourceRole;
 import edu.kit.ipd.sdq.amp.workplan.AbstractActivityElementType;
 import edu.kit.ipd.sdq.amp.workplan.Activity;
 import edu.kit.ipd.sdq.amp.workplan.BasicActivity;
-import edu.kit.ipd.sdq.kaps.core.ActivityElementType;
-import edu.kit.ipd.sdq.kaps.core.ActivityType;
+import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
+import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 
 public class SubactivityDerivation {
 	

@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.core.scenarios;
+package edu.kit.ipd.sdq.kamp4aps.core.scenarios;
 
 import java.util.Collection;
 
@@ -6,13 +6,13 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
-import edu.kit.ipd.sdq.kaps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyBusBox;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyBusCable;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyBusMaster;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyBusSlave;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.modificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusCable;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 import xPPU.BusComponents.BusBox;
 import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusComponentsFactory;

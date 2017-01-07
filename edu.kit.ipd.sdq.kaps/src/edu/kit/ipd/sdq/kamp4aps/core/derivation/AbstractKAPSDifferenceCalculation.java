@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.core.derivation;
+package edu.kit.ipd.sdq.kamp4aps.core.derivation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,10 +11,10 @@ import org.palladiosimulator.pcm.repository.DataType;
 import edu.kit.ipd.sdq.amp.workplan.AbstractWorkplanDerivation;
 import edu.kit.ipd.sdq.amp.workplan.Activity;
 import edu.kit.ipd.sdq.amp.workplan.BasicActivity;
-import edu.kit.ipd.sdq.kaps.core.ActivityElementType;
-import edu.kit.ipd.sdq.kaps.core.ActivityType;
-import edu.kit.ipd.sdq.kaps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.provider.LabelCustomizing;
+import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
+import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.LabelCustomizing;
 
 public abstract class AbstractKAPSDifferenceCalculation<T extends ArchitectureVersion> 
 		extends AbstractWorkplanDerivation<T> {

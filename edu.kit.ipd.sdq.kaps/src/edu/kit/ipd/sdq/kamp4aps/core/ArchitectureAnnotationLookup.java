@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.core;
+package edu.kit.ipd.sdq.kamp4aps.core;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,21 +6,22 @@ import java.util.List;
 import org.palladiosimulator.pcm.core.composition.AssemblyConnector;
 import org.palladiosimulator.pcm.repository.ProvidedRole;
 import org.palladiosimulator.pcm.repository.RepositoryComponent;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.AcceptanceTestCase;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.AcceptanceTestCaseAggregation;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.BuildConfiguration;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.IntegrationTestCase;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.IntegrationTestCaseAggregation;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.MetadataFile;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.MetadataFileAggregation;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.ReleaseConfiguration;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.RuntimeInstance;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.RuntimeInstanceAggregation;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.SourceFile;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.SourceFileAggregation;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.ThirdPartyComponentOrLibrary;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.UnitTestCase;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.UnitTestCaseAggregation;
+
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.AcceptanceTestCase;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.AcceptanceTestCaseAggregation;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.BuildConfiguration;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.IntegrationTestCase;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.IntegrationTestCaseAggregation;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.MetadataFile;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.MetadataFileAggregation;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ReleaseConfiguration;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.RuntimeInstance;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.RuntimeInstanceAggregation;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.SourceFile;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.SourceFileAggregation;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ThirdPartyComponentOrLibrary;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.UnitTestCase;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.UnitTestCaseAggregation;
 
 public class ArchitectureAnnotationLookup {
 

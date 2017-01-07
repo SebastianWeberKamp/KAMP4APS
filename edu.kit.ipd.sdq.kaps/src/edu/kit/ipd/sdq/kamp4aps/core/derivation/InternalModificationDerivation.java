@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.core.derivation;
+package edu.kit.ipd.sdq.kamp4aps.core.derivation;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -12,17 +12,17 @@ import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
 import edu.kit.ipd.sdq.amp.workplan.AbstractActivityElementType;
 import edu.kit.ipd.sdq.amp.workplan.Activity;
 import edu.kit.ipd.sdq.amp.workplan.BasicActivity;
-import edu.kit.ipd.sdq.kaps.core.ActivityElementType;
-import edu.kit.ipd.sdq.kaps.core.ActivityType;
-import edu.kit.ipd.sdq.kaps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyComponent;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyDataType;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyEntity;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyInterface;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyProvidedRole;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyRequiredRole;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifySignature;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.provider.LabelCustomizing;
+import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
+import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyDataType;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyEntity;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyProvidedRole;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyRequiredRole;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignature;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.LabelCustomizing;
 
 public class InternalModificationDerivation {
 	

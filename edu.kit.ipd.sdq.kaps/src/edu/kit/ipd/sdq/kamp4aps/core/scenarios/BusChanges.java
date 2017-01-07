@@ -1,23 +1,23 @@
-package edu.kit.ipd.sdq.kaps.core.scenarios;
+package edu.kit.ipd.sdq.kamp4aps.core.scenarios;
 
 import java.util.Collection;
 
 import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
-import edu.kit.ipd.sdq.kaps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyPhysicalConnection;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifySensor;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifySignalinterface;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.modificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPhysicalConnection;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignalinterface;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 import xPPU.ComponentRepository.Sensor;
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.SignalInterface;
 
-public class ScenarioZero {
+public class BusChanges {
 	
 	private ArchitectureVersion version;
 	
-	public ScenarioZero(ArchitectureVersion v) {
+	public BusChanges(ArchitectureVersion v) {
 		version = v;
 	}
 	

@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.core.derivation;
+package edu.kit.ipd.sdq.kamp4aps.core.derivation;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,17 +11,17 @@ import org.palladiosimulator.pcm.repository.RequiredRole;
 import edu.kit.ipd.sdq.amp.workplan.AbstractEnrichedWorkplanDerivation;
 import edu.kit.ipd.sdq.amp.workplan.Activity;
 import edu.kit.ipd.sdq.amp.workplan.BasicActivity;
-import edu.kit.ipd.sdq.kaps.core.ActivityElementType;
-import edu.kit.ipd.sdq.kaps.core.ActivityType;
-import edu.kit.ipd.sdq.kaps.core.ArchitectureAnnotationLookup;
-import edu.kit.ipd.sdq.kaps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.BuildConfiguration;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.MetadataFile;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.MetadataFileAggregation;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.SourceFile;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.SourceFileAggregation;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.UnitTestCase;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.UnitTestCaseAggregation;
+import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
+import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureAnnotationLookup;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.BuildConfiguration;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.MetadataFile;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.MetadataFileAggregation;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.SourceFile;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.SourceFileAggregation;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.UnitTestCase;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.UnitTestCaseAggregation;
 
 public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends ArchitectureVersion> 
 		implements AbstractEnrichedWorkplanDerivation<T> {

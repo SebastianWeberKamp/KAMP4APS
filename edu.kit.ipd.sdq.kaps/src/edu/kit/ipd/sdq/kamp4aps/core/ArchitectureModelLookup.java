@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.core;
+package edu.kit.ipd.sdq.kamp4aps.core;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,10 +33,10 @@ import org.palladiosimulator.pcm.repository.SourceRole;
 
 import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
 import edu.kit.ipd.sdq.amp.util.MapUtil;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyComponent;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyProvidedRole;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifyRequiredRole;
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.ModifySignature;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyProvidedRole;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyRequiredRole;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignature;
 import xPPU.BusComponents.BusBox;
 import xPPU.ComponentRepository.PowerSupply;
 import xPPU.ComponentRepository.Sensor;

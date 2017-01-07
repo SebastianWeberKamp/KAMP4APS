@@ -1,4 +1,4 @@
-package edu.kit.ipd.sdq.kaps.core;
+package edu.kit.ipd.sdq.kamp4aps.core;
 
 import edu.kit.ipd.sdq.amp.workplan.AbstractActivityType;
 
