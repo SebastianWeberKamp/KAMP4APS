@@ -1,6 +1,6 @@
 /**
  */
-package xPPU.presentation;
+package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -39,15 +39,13 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.ui.IEditorPart;
 import org.eclipse.ui.PartInitException;
 
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.KAPSModificationmarksEditorPlugin;
-
 /**
- * This is the action bar contributor for the XPPU model editor.
+ * This is the action bar contributor for the modificationmarks model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class XPPUActionBarContributor
+public class modificationmarksActionBarContributor
 	extends EditingDomainActionBarContributor
 	implements ISelectionChangedListener {
 	/**
@@ -150,7 +148,7 @@ public class XPPUActionBarContributor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public XPPUActionBarContributor() {
+	public modificationmarksActionBarContributor() {
 		super(ADDITIONS_LAST_STYLE);
 		loadResourceAction = new LoadResourceAction();
 		validateAction = new ValidateAction();
@@ -165,8 +163,8 @@ public class XPPUActionBarContributor
 	 */
 	@Override
 	public void contributeToToolBar(IToolBarManager toolBarManager) {
-		toolBarManager.add(new Separator("xppu-settings"));
-		toolBarManager.add(new Separator("xppu-additions"));
+		toolBarManager.add(new Separator("modificationmarks-settings"));
+		toolBarManager.add(new Separator("modificationmarks-additions"));
 	}
 
 	/**
@@ -180,7 +178,7 @@ public class XPPUActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_XPPUEditor_menu"), "xPPUMenuID");
+		IMenuManager submenuManager = new MenuManager(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_modificationmarksEditor_menu"), "edu.kit.ipd.sdq.kaps.model.modificationmarksMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));

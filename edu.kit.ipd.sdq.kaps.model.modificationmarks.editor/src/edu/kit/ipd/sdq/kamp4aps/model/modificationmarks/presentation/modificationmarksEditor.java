@@ -1,6 +1,6 @@
 /**
  */
-package xPPU.presentation;
+package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation;
 
 
 import java.io.IOException;
@@ -154,8 +154,6 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import xPPU.provider.XPPUItemProviderAdapterFactory;
-
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.probfunction.provider.ProbfunctionItemProviderAdapterFactory;
@@ -165,7 +163,6 @@ import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
 import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
 
 import edu.kit.ipd.sdq.amp.model.modificationmarks.provider.ModificationmarksItemProviderAdapterFactory;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.KAPSModificationmarksEditorPlugin;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.modificationmarksItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
@@ -209,15 +206,23 @@ import org.palladiosimulator.pcm.subsystem.provider.SubsystemItemProviderAdapter
 import org.palladiosimulator.pcm.system.provider.SystemItemProviderAdapterFactory;
 
 import org.palladiosimulator.pcm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;
+import xPPU.BusComponents.provider.BusComponentsItemProviderAdapterFactory;
+import xPPU.ComponentRepository.provider.ComponentRepositoryItemProviderAdapterFactory;
+import xPPU.ElectronicComponents.provider.ElectronicComponentsItemProviderAdapterFactory;
+import xPPU.InterfaceRepository.provider.InterfaceRepositoryItemProviderAdapterFactory;
+import xPPU.MechanicalComponents.provider.MechanicalComponentsItemProviderAdapterFactory;
+import xPPU.ModuleRepository.provider.ModuleRepositoryItemProviderAdapterFactory;
+import xPPU.StructureRepository.provider.StructureRepositoryItemProviderAdapterFactory;
+import xPPU.provider.XPPUItemProviderAdapterFactory;
 
 
 /**
- * This is an example of a XPPU model editor.
+ * This is an example of a modificationmarks model editor.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class XPPUEditor
+public class modificationmarksEditor
 	extends MultiPageEditorPart
 	implements IEditingDomainProvider, ISelectionProvider, IMenuListener, IViewerProvider, IGotoMarker {
 	/**
@@ -379,18 +384,18 @@ public class XPPUEditor
 			public void partActivated(IWorkbenchPart p) {
 				if (p instanceof ContentOutline) {
 					if (((ContentOutline)p).getCurrentPage() == contentOutlinePage) {
-						getActionBarContributor().setActiveEditor(XPPUEditor.this);
+						getActionBarContributor().setActiveEditor(modificationmarksEditor.this);
 
 						setCurrentViewer(contentOutlineViewer);
 					}
 				}
 				else if (p instanceof PropertySheet) {
 					if (propertySheetPages.contains(((PropertySheet)p).getCurrentPage())) {
-						getActionBarContributor().setActiveEditor(XPPUEditor.this);
+						getActionBarContributor().setActiveEditor(modificationmarksEditor.this);
 						handleActivate();
 					}
 				}
-				else if (p == XPPUEditor.this) {
+				else if (p == modificationmarksEditor.this) {
 					handleActivate();
 				}
 			}
@@ -563,7 +568,7 @@ public class XPPUEditor
 								 public void run() {
 									 removedResources.addAll(visitor.getRemovedResources());
 									 if (!isDirty()) {
-										 getSite().getPage().closeEditor(XPPUEditor.this, false);
+										 getSite().getPage().closeEditor(modificationmarksEditor.this, false);
 									 }
 								 }
 							 });
@@ -574,7 +579,7 @@ public class XPPUEditor
 							(new Runnable() {
 								 public void run() {
 									 changedResources.addAll(visitor.getChangedResources());
-									 if (getSite().getPage().getActiveEditor() == XPPUEditor.this) {
+									 if (getSite().getPage().getActiveEditor() == modificationmarksEditor.this) {
 										 handleActivate();
 									 }
 								 }
@@ -606,7 +611,7 @@ public class XPPUEditor
 
 		if (!removedResources.isEmpty()) {
 			if (handleDirtyConflict()) {
-				getSite().getPage().closeEditor(XPPUEditor.this, false);
+				getSite().getPage().closeEditor(modificationmarksEditor.this, false);
 			}
 			else {
 				removedResources.clear();
@@ -736,7 +741,7 @@ public class XPPUEditor
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public XPPUEditor() {
+	public modificationmarksEditor() {
 		super();
 		initializeEditingDomain();
 	}
@@ -754,7 +759,6 @@ public class XPPUEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new modificationmarksItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new XPPUItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ModificationmarksItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new PcmItemProviderAdapterFactory());
@@ -780,6 +784,14 @@ public class XPPUEditor
 		adapterFactory.addAdapterFactory(new ProbfunctionItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new StoexItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new UnitsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new XPPUItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ComponentRepositoryItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new BusComponentsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ElectronicComponentsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new MechanicalComponentsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new StructureRepositoryItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ModuleRepositoryItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new InterfaceRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
@@ -1100,7 +1112,7 @@ public class XPPUEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), XPPUEditor.this) {
+					new ViewerPane(getSite().getPage(), modificationmarksEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							Tree tree = new Tree(composite, SWT.MULTI);
@@ -1134,7 +1146,7 @@ public class XPPUEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), XPPUEditor.this) {
+					new ViewerPane(getSite().getPage(), modificationmarksEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							Tree tree = new Tree(composite, SWT.MULTI);
@@ -1163,7 +1175,7 @@ public class XPPUEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), XPPUEditor.this) {
+					new ViewerPane(getSite().getPage(), modificationmarksEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new ListViewer(composite);
@@ -1188,7 +1200,7 @@ public class XPPUEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), XPPUEditor.this) {
+					new ViewerPane(getSite().getPage(), modificationmarksEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TreeViewer(composite);
@@ -1215,7 +1227,7 @@ public class XPPUEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), XPPUEditor.this) {
+					new ViewerPane(getSite().getPage(), modificationmarksEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TableViewer(composite);
@@ -1258,7 +1270,7 @@ public class XPPUEditor
 			//
 			{
 				ViewerPane viewerPane =
-					new ViewerPane(getSite().getPage(), XPPUEditor.this) {
+					new ViewerPane(getSite().getPage(), modificationmarksEditor.this) {
 						@Override
 						public Viewer createViewer(Composite composite) {
 							return new TreeViewer(composite);
@@ -1478,8 +1490,8 @@ public class XPPUEditor
 			new ExtendedPropertySheetPage(editingDomain) {
 				@Override
 				public void setSelectionToViewer(List<?> selection) {
-					XPPUEditor.this.setSelectionToViewer(selection);
-					XPPUEditor.this.setFocus();
+					modificationmarksEditor.this.setSelectionToViewer(selection);
+					modificationmarksEditor.this.setFocus();
 				}
 
 				@Override

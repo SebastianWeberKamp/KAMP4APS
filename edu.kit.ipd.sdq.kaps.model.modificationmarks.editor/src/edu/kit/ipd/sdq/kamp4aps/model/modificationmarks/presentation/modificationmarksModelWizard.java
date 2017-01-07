@@ -1,6 +1,6 @@
 /**
  */
-package xPPU.presentation;
+package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation;
 
 
 import java.util.ArrayList;
@@ -69,9 +69,8 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import xPPU.XPPUFactory;
-import xPPU.XPPUPackage;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.KAPSModificationmarksEditorPlugin;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.KAPSModificationmarksEditPlugin;
 
 import org.eclipse.core.runtime.Path;
@@ -91,7 +90,7 @@ import org.eclipse.ui.PartInitException;
  * <!-- end-user-doc -->
  * @generated
  */
-public class XPPUModelWizard extends Wizard implements INewWizard {
+public class modificationmarksModelWizard extends Wizard implements INewWizard {
 	/**
 	 * The supported extensions for created files.
 	 * <!-- begin-user-doc -->
@@ -99,7 +98,7 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final List<String> FILE_EXTENSIONS =
-		Collections.unmodifiableList(Arrays.asList(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_XPPUEditorFilenameExtensions").split("\\s*,\\s*")));
+		Collections.unmodifiableList(Arrays.asList(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_modificationmarksEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -108,7 +107,7 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	public static final String FORMATTED_FILE_EXTENSIONS =
-		KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_XPPUEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+		KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_modificationmarksEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.
@@ -116,7 +115,7 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected XPPUPackage xppuPackage = XPPUPackage.eINSTANCE;
+	protected modificationmarksPackage _modificationmarksPackage = modificationmarksPackage.eINSTANCE;
 
 	/**
 	 * This caches an instance of the model factory.
@@ -124,7 +123,7 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected XPPUFactory xppuFactory = xppuPackage.getXPPUFactory();
+	protected modificationmarksFactory _modificationmarksFactory = _modificationmarksPackage.getmodificationmarksFactory();
 
 	/**
 	 * This is the file creation page.
@@ -132,7 +131,7 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected XPPUModelWizardNewFileCreationPage newFileCreationPage;
+	protected modificationmarksModelWizardNewFileCreationPage newFileCreationPage;
 
 	/**
 	 * This is the initial object creation page.
@@ -140,7 +139,7 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected XPPUModelWizardInitialObjectCreationPage initialObjectCreationPage;
+	protected modificationmarksModelWizardInitialObjectCreationPage initialObjectCreationPage;
 
 	/**
 	 * Remember the selection during initialization for populating the default container.
@@ -176,7 +175,7 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 		this.workbench = workbench;
 		this.selection = selection;
 		setWindowTitle(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(KAPSModificationmarksEditorPlugin.INSTANCE.getImage("full/wizban/NewXPPU")));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(KAPSModificationmarksEditorPlugin.INSTANCE.getImage("full/wizban/Newmodificationmarks")));
 	}
 
 	/**
@@ -188,7 +187,7 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 	protected Collection<String> getInitialObjectNames() {
 		if (initialObjectNames == null) {
 			initialObjectNames = new ArrayList<String>();
-			for (EClassifier eClassifier : xppuPackage.getEClassifiers()) {
+			for (EClassifier eClassifier : _modificationmarksPackage.getEClassifiers()) {
 				if (eClassifier instanceof EClass) {
 					EClass eClass = (EClass)eClassifier;
 					if (!eClass.isAbstract()) {
@@ -208,8 +207,8 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 	 * @generated
 	 */
 	protected EObject createInitialModel() {
-		EClass eClass = (EClass)xppuPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
-		EObject rootObject = xppuFactory.create(eClass);
+		EClass eClass = (EClass)_modificationmarksPackage.getEClassifier(initialObjectCreationPage.getInitialObjectName());
+		EObject rootObject = _modificationmarksFactory.create(eClass);
 		return rootObject;
 	}
 
@@ -310,14 +309,14 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class XPPUModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
+	public class modificationmarksModelWizardNewFileCreationPage extends WizardNewFileCreationPage {
 		/**
 		 * Pass in the selection.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public XPPUModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
+		public modificationmarksModelWizardNewFileCreationPage(String pageId, IStructuredSelection selection) {
 			super(pageId, selection);
 		}
 
@@ -357,7 +356,7 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public class XPPUModelWizardInitialObjectCreationPage extends WizardPage {
+	public class modificationmarksModelWizardInitialObjectCreationPage extends WizardPage {
 		/**
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -385,7 +384,7 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		public XPPUModelWizardInitialObjectCreationPage(String pageId) {
+		public modificationmarksModelWizardInitialObjectCreationPage(String pageId) {
 			super(pageId);
 		}
 
@@ -569,10 +568,10 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 	public void addPages() {
 		// Create a page, set the title, and the initial model file name.
 		//
-		newFileCreationPage = new XPPUModelWizardNewFileCreationPage("Whatever", selection);
-		newFileCreationPage.setTitle(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_XPPUModelWizard_label"));
-		newFileCreationPage.setDescription(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_XPPUModelWizard_description"));
-		newFileCreationPage.setFileName(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_XPPUEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+		newFileCreationPage = new modificationmarksModelWizardNewFileCreationPage("Whatever", selection);
+		newFileCreationPage.setTitle(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_modificationmarksModelWizard_label"));
+		newFileCreationPage.setDescription(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_modificationmarksModelWizard_description"));
+		newFileCreationPage.setFileName(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_modificationmarksEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -598,7 +597,7 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_XPPUEditorFilenameDefaultBase");
+					String defaultModelBaseFilename = KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_modificationmarksEditorFilenameDefaultBase");
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
 					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
@@ -608,8 +607,8 @@ public class XPPUModelWizard extends Wizard implements INewWizard {
 				}
 			}
 		}
-		initialObjectCreationPage = new XPPUModelWizardInitialObjectCreationPage("Whatever2");
-		initialObjectCreationPage.setTitle(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_XPPUModelWizard_label"));
+		initialObjectCreationPage = new modificationmarksModelWizardInitialObjectCreationPage("Whatever2");
+		initialObjectCreationPage.setTitle(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_modificationmarksModelWizard_label"));
 		initialObjectCreationPage.setDescription(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
 		addPage(initialObjectCreationPage);
 	}
