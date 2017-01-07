@@ -1,6 +1,6 @@
 /**
  */
-package edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.presentation;
+package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation;
 
 
 import java.util.ArrayList;
@@ -69,10 +69,9 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.FieldofactivityannotationsPackage;
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.provider.KAPSFieldofactivityAnnotationsEditPlugin;
-
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.provider.KAPSFieldofactivityAnnotationsEditPlugin;
 
 import org.eclipse.core.runtime.Path;
 

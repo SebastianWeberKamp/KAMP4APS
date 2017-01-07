@@ -1,6 +1,6 @@
 /**
  */
-package edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.presentation;
+package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation;
 
 import java.util.ArrayList;
 import java.util.Collection;

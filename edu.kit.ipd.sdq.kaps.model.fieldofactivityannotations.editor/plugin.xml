@@ -14,7 +14,7 @@
       <wizard
             id="edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsModelWizardID"
             name="%_UI_FieldofactivityannotationsModelWizard_label"
-            class="edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsModelWizard"
+            class="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/FieldofactivityannotationsModelFile.gif">
          <description>%_UI_FieldofactivityannotationsModelWizard_description</description>
@@ -29,8 +29,8 @@
             name="%_UI_FieldofactivityannotationsEditor_label"
             icon="icons/full/obj16/FieldofactivityannotationsModelFile.gif"
             extensions="fieldofactivityannotations"
-            class="edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsEditor"
-            contributorClass="edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsActionBarContributor">
+            class="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsEditor"
+            contributorClass="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsActionBarContributor">
       </editor>
    </extension>
 

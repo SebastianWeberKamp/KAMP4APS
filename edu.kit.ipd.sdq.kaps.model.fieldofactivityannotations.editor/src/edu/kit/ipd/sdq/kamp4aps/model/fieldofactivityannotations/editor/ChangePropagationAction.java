@@ -1,11 +1,11 @@
-package edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.editor;
+package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.editor;
 
 import edu.kit.ipd.sdq.amp.architecture.AbstractArchitectureVersionPersistency;
 import edu.kit.ipd.sdq.amp.model.modificationmarks.editor.AbstractChangePropagationAction;
 import edu.kit.ipd.sdq.amp.propagation.AbstractChangePropagationAnalysis;
-import edu.kit.ipd.sdq.kaps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kaps.core.ArchitectureVersionPersistency;
-import edu.kit.ipd.sdq.kaps.core.ChangePropagationAnalysis;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersionPersistency;
+import edu.kit.ipd.sdq.kamp4aps.core.ChangePropagationAnalysis;
 
 public class ChangePropagationAction extends AbstractChangePropagationAction<ArchitectureVersion> {
 

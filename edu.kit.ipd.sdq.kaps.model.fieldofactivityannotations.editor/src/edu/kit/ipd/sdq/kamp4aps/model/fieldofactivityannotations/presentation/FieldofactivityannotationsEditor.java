@@ -1,6 +1,6 @@
 /**
  */
-package edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.presentation;
+package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation;
 
 
 import java.io.IOException;
@@ -154,8 +154,6 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.provider.FieldofactivityannotationsItemProviderAdapterFactory;
-
 import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.probfunction.provider.ProbfunctionItemProviderAdapterFactory;
@@ -163,6 +161,7 @@ import de.uka.ipd.sdq.probfunction.provider.ProbfunctionItemProviderAdapterFacto
 import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.provider.FieldofactivityannotationsItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 

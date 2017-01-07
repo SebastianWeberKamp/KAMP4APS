@@ -1,10 +1,10 @@
-package edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.editor;
+package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.editor;
 
 import edu.kit.ipd.sdq.amp.model.modificationmarks.editor.AbstractArchitectureBasedWorkplanDerivationAction;
-import edu.kit.ipd.sdq.kaps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kaps.core.ArchitectureVersionPersistency;
-import edu.kit.ipd.sdq.kaps.core.derivation.DifferenceCalculation;
-import edu.kit.ipd.sdq.kaps.core.derivation.EnrichedWorkplanDerivation;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersionPersistency;
+import edu.kit.ipd.sdq.kamp4aps.core.derivation.DifferenceCalculation;
+import edu.kit.ipd.sdq.kamp4aps.core.derivation.EnrichedWorkplanDerivation;
 
 public class ArchitectureBasedWorkplanDerivationAction extends AbstractArchitectureBasedWorkplanDerivationAction<ArchitectureVersion> {
 	
