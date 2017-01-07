@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: edu.kit.ipd.sdq.kaps.model.modificationmarks.tests;singleton:=true
+Bundle-SymbolicName: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: edu.kit.ipd.sdq.kaps.model.modificationmarks.tests,
+Export-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests,
  xPPU.tests
 Require-Bundle: org.eclipse.core.runtime,
- edu.kit.ipd.sdq.kaps.model.modificationmarks;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;visibility:=reexport,
  de.uka.ipd.sdq.identifier;visibility:=reexport,
  edu.kit.ipd.sdq.amp.model.modificationmarks;visibility:=reexport,
  org.palladiosimulator.pcm;visibility:=reexport,
