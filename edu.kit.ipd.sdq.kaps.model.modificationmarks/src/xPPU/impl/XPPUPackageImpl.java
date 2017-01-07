@@ -3,10 +3,8 @@
 package xPPU.impl;
 
 import edu.kit.ipd.sdq.amp.model.modificationmarks.ModificationmarksPackage;
-
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.impl.modificationmarksPackageImpl;
-
-import edu.kit.ipd.sdq.kaps.model.modificationmarks.modificationmarksPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;

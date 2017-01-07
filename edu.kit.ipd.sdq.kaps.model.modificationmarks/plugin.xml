@@ -9,7 +9,7 @@
       <!-- @generated KAPSModificationsmarks -->
       <package
             uri="http://sdq.ipd.kit.edu/KAPSModificationmarks/1.0"
-            class="edu.kit.ipd.sdq.kaps.model.modificationmarks.modificationmarksPackage"
+            class="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage"
             genModel="model/KAPSModificationsmarks.genmodel"/>
    </extension>
 
@@ -17,7 +17,7 @@
       <!-- @generated KAPSModificationsmarks -->
       <parser
             type="modificationmarks"
-            class="edu.kit.ipd.sdq.kaps.model.modificationmarks.util.modificationmarksResourceFactoryImpl"/>
+            class="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.util.modificationmarksResourceFactoryImpl"/>
    </extension>
 
 </plugin>

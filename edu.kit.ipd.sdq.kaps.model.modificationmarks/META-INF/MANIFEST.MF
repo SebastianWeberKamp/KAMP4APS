@@ -1,15 +1,15 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: edu.kit.ipd.sdq.kaps.model.modificationmarks;singleton:=true
+Bundle-SymbolicName: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: edu.kit.ipd.sdq.kaps.model.modificationmarks,
- edu.kit.ipd.sdq.kaps.model.modificationmarks.impl,
- edu.kit.ipd.sdq.kaps.model.modificationmarks.util,
+Export-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks,
+ edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl,
+ edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.util,
  xPPU,
  xPPU.impl,
  xPPU.util
