@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 
 /**
- * This is the item provider adapter for a {@link edu.kit.ipd.sdq.kaps.model.modificationmarks.ChangePropagationDueToBusChange} object.
+ * This is the item provider adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToBusChange} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
