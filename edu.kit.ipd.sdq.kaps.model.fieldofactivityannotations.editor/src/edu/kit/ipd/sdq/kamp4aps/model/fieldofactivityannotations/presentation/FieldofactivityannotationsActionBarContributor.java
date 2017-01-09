@@ -178,7 +178,7 @@ public class FieldofactivityannotationsActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditor_menu"), "edu.kit.ipd.sdq.kaps.model.fieldofactivityannotationsMenuID");
+		IMenuManager submenuManager = new MenuManager(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditor_menu"), "edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotationsMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));

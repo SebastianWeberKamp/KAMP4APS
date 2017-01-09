@@ -665,7 +665,7 @@ public class FieldofactivityannotationsEditor
 			BasicDiagnostic diagnostic =
 				new BasicDiagnostic
 					(Diagnostic.OK,
-					 "edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.editor",
+					 "edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.editor",
 					 0,
 					 null,
 					 new Object [] { editingDomain.getResourceSet() });
@@ -1053,7 +1053,7 @@ public class FieldofactivityannotationsEditor
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
 					(hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
-					 "edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.editor",
+					 "edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object [] { exception == null ? (Object)resource : exception });
@@ -1064,7 +1064,7 @@ public class FieldofactivityannotationsEditor
 			return
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations.editor",
+					 "edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object[] { exception });
