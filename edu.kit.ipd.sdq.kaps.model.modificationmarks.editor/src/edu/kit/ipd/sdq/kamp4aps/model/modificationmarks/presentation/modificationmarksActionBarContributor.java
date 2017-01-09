@@ -178,7 +178,7 @@ public class modificationmarksActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_modificationmarksEditor_menu"), "edu.kit.ipd.sdq.kaps.model.modificationmarksMenuID");
+		IMenuManager submenuManager = new MenuManager(KAPSModificationmarksEditorPlugin.INSTANCE.getString("_UI_modificationmarksEditor_menu"), "edu.kit.ipd.sdq.kamp4aps.model.modificationmarksMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));

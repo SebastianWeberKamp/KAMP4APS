@@ -11,7 +11,7 @@
             id="edu.kit.ipd.sdq.kaps.wizard.category"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="edu.kit.ipd.sdq.kaps.model.modificationmarks.presentation.modificationmarksModelWizardID"
+            id="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.modificationmarksModelWizardID"
             name="%_UI_modificationmarksModelWizard_label"
             class="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.modificationmarksModelWizard"
             category="edu.kit.ipd.sdq.kaps.wizard.category"
@@ -23,7 +23,7 @@
 
    <extension point="org.eclipse.ui.editors">
       <editor
-            id="edu.kit.ipd.sdq.kaps.model.modificationmarks.presentation.modificationmarksEditorID"
+            id="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.modificationmarksEditorID"
             name="%_UI_modificationmarksEditor_label"
             icon="icons/full/obj16/modificationmarksModelFile.gif"
             extensions="modificationmarks"
@@ -36,19 +36,19 @@
          point="org.eclipse.ui.popupMenus">
       <objectContribution
             adaptable="false"
-            id="edu.kit.ipd.sdq.kaps.model.modificationmarks.editor.objectContributionkaps1"
-            objectClass="edu.kit.ipd.sdq.kaps.model.modificationmarks.KAPSModificationRepository">
+            id="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor.objectContributionkaps1"
+            objectClass="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSModificationRepository">
          <action
                class="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor.ArchitectureBasedWorkplanDerivationAction"
                icon="../edu.kit.ipd.sdq.amp/icons/run.png"
-               id="edu.kit.ipd.sdq.kaps.model.modificationmarks.editor.actionArchitectureBasedWorkplanDerivation"
+               id="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor.actionArchitectureBasedWorkplanDerivation"
                label="Step 5: Calculate activities"
                menubarPath="edit">
          </action>
          <action
                class="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor.ChangePropagationAction"
                icon="../edu.kit.ipd.sdq.amp/icons/run.png"
-               id="edu.kit.ipd.sdq.kaps.model.modificationmarks.editor.actionChangePropagation"
+               id="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor.actionChangePropagation"
                label="Step 3: Calculate change propagation"
                menubarPath="edit">
          </action>

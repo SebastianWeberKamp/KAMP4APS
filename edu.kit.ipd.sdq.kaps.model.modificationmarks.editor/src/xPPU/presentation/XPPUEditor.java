@@ -670,7 +670,7 @@ public class XPPUEditor
 			BasicDiagnostic diagnostic =
 				new BasicDiagnostic
 					(Diagnostic.OK,
-					 "edu.kit.ipd.sdq.kaps.model.modificationmarks.editor",
+					 "edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor",
 					 0,
 					 null,
 					 new Object [] { editingDomain.getResourceSet() });
@@ -1060,7 +1060,7 @@ public class XPPUEditor
 			BasicDiagnostic basicDiagnostic =
 				new BasicDiagnostic
 					(hasErrors ? Diagnostic.ERROR : Diagnostic.WARNING,
-					 "edu.kit.ipd.sdq.kaps.model.modificationmarks.editor",
+					 "edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object [] { exception == null ? (Object)resource : exception });
@@ -1071,7 +1071,7 @@ public class XPPUEditor
 			return
 				new BasicDiagnostic
 					(Diagnostic.ERROR,
-					 "edu.kit.ipd.sdq.kaps.model.modificationmarks.editor",
+					 "edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor",
 					 0,
 					 getString("_UI_CreateModelError_message", resource.getURI()),
 					 new Object[] { exception });
