@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations/src"
-    modelPluginID="edu.kit.ipd.sdq.kaps.model.fieldofactivityannotations" modelName="KAPS Fieldofactivity Annotations"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations/src"
+    modelPluginID="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations" modelName="KAPS Fieldofactivity Annotations"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
     tableProviders="true" usedGenPackages="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units">
   <foreignModel>Fieldofactivityannotations.ecore</foreignModel>
-  <genPackages prefix="Fieldofactivityannotations" basePackage="edu.kit.ipd.sdq.kaps.model"
+  <genPackages prefix="Fieldofactivityannotations" basePackage="edu.kit.ipd.sdq.kamp4aps.model"
       resource="XMI" disposableProviderFactory="true" ecorePackage="Fieldofactivityannotations.ecore#/">
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fieldofactivityannotations.ecore#//TechnologicalCorrespondenceTypes">
       <genEnumLiterals ecoreEnumLiteral="Fieldofactivityannotations.ecore#//TechnologicalCorrespondenceTypes/SetOfClasses"/>
