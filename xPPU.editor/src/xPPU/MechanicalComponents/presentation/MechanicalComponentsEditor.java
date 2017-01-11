@@ -164,6 +164,7 @@ import xPPU.ComponentRepository.provider.ComponentRepositoryItemProviderAdapterF
 
 import xPPU.ElectronicComponents.provider.ElectronicComponentsItemProviderAdapterFactory;
 
+import xPPU.Identifier.provider.IdentifierItemProviderAdapterFactory;
 import xPPU.InterfaceRepository.provider.InterfaceRepositoryItemProviderAdapterFactory;
 
 import xPPU.ModuleRepository.provider.ModuleRepositoryItemProviderAdapterFactory;
@@ -725,6 +726,7 @@ public class MechanicalComponentsEditor
 		adapterFactory.addAdapterFactory(new StructureRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ModuleRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new InterfaceRepositoryItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
