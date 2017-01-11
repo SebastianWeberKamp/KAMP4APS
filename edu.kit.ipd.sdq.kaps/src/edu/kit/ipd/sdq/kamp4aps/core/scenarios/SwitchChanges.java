@@ -9,11 +9,11 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 import xPPU.ComponentRepository.MicroswitchModule;
 
-public class ScenarioOne {
+public class SwitchChanges {
 
 	private ArchitectureVersion version;
 
-	public ScenarioOne(ArchitectureVersion v) {
+	public SwitchChanges(ArchitectureVersion v) {
 		version = v;
 	}
 

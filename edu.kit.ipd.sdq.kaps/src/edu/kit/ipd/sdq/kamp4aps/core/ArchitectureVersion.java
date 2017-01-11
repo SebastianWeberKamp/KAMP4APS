@@ -12,80 +12,66 @@ import edu.kit.ipd.sdq.amp.architecture.AbstractArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
-import xPPU.ComponentRepository.Component;
+import xPPU.Plant;
+import xPPU.InterfaceRepository.InterfaceRepository;
 
 public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAPSModificationRepository<?>> {
-	private Repository repository;
-	private org.palladiosimulator.pcm.system.System system;
-	private FieldOfActivityAnnotationRepository fieldOfActivityRepository;
-	private ComponentInternalDependencyRepository componentInternalDependencyRepository;
-	private Component components;
+	private FieldOfActivityAnnotationRepository _fieldOfActivityRepository;
+	private ComponentInternalDependencyRepository _componentInternalDependencyRepository;
+	private Plant _xppuPlant;
 	
-	public ArchitectureVersion(String name, /*Components components,*/ Repository repository, System system,
-			FieldOfActivityAnnotationRepository fieldOfActivityRepository,
-			AbstractKAPSModificationRepository<?> modificationMarkRepository,
-			ComponentInternalDependencyRepository componentInternalDependencyRepository) {
-		super(name, modificationMarkRepository);
+	public static class ArchitectureVersionParams{
+		public String name;
+		public FieldOfActivityAnnotationRepository fieldOfActivityRepository;
+		public AbstractKAPSModificationRepository<?> modificationMarkRepository;
+		public ComponentInternalDependencyRepository componentInternalDependencyRepository;
+		public Plant xPPUPlant;
+	}
+	
+	public ArchitectureVersion(ArchitectureVersionParams params) {
+		super(params.name, params.modificationMarkRepository);
 		// Some of the files describing the architecture might not exist; prevent NullPointer
 		// in propagation algorithm by setting newly created objects (whose EReferences are
 		// instantiated with empty collections, so the algorithm can handle them)
 		
-//		if(components == null){
-//			components = 
-//		}
-		
-		if (repository == null) {
-			repository = RepositoryFactory.eINSTANCE.createRepository();
-		}
-		this.repository = repository;
-		if (system == null) {
-			system = SystemFactory.eINSTANCE.createSystem();
-		}
-		this.system = system;
-		if (fieldOfActivityRepository == null) {
-			fieldOfActivityRepository = FieldofactivityannotationsFactory.eINSTANCE.
+		if (params.fieldOfActivityRepository == null) {
+			params.fieldOfActivityRepository = FieldofactivityannotationsFactory.eINSTANCE.
 					createFieldOfActivityAnnotationRepository();
 		}
-		this.fieldOfActivityRepository = fieldOfActivityRepository;
-		if (componentInternalDependencyRepository == null) {
-			componentInternalDependencyRepository = ComponentInternalDependenciesFactory.eINSTANCE.
+		this._fieldOfActivityRepository = params.fieldOfActivityRepository;
+		if (_componentInternalDependencyRepository == null) {
+			_componentInternalDependencyRepository = ComponentInternalDependenciesFactory.eINSTANCE.
 					createComponentInternalDependencyRepository();
 		}
-		this.componentInternalDependencyRepository = componentInternalDependencyRepository;
-	}
-
-	public Repository getRepository() {
-		return repository;
-	}
-
-	public void setRepository(Repository repository) {
-		this.repository = repository;
-	}
-
-	public org.palladiosimulator.pcm.system.System getSystem() {
-		return system;
-	}
-
-	public void setSystem(org.palladiosimulator.pcm.system.System system) {
-		this.system = system;
+		this._componentInternalDependencyRepository = params.componentInternalDependencyRepository;
+		
+		this._xppuPlant = params.xPPUPlant;
 	}
 
 	public FieldOfActivityAnnotationRepository getFieldOfActivityRepository() {
-		return fieldOfActivityRepository;
+		return _fieldOfActivityRepository;
 	}
 
 	public void setFieldOfActivityRepository(
 			FieldOfActivityAnnotationRepository fieldOfActivityRepository) {
-		this.fieldOfActivityRepository = fieldOfActivityRepository;
+		this._fieldOfActivityRepository = fieldOfActivityRepository;
 	}
 
 	public ComponentInternalDependencyRepository getComponentInternalDependencyRepository() {
-		return componentInternalDependencyRepository;
+		return _componentInternalDependencyRepository;
 	}
 
 	public void setComponentInternalDependencyRepository(
 			ComponentInternalDependencyRepository componentInternalDependencyRepository) {
-		this.componentInternalDependencyRepository = componentInternalDependencyRepository;
+		this._componentInternalDependencyRepository = componentInternalDependencyRepository;
+	}
+	
+	public Plant getXPPUPlant(){
+		return _xppuPlant;
+	}
+
+	public void setXPPUPlant(Plant plant) {
+		this._xppuPlant = plant;
 	}
 
 }

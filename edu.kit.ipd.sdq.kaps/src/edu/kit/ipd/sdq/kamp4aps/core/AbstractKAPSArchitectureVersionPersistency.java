@@ -17,6 +17,7 @@ public abstract class AbstractKAPSArchitectureVersionPersistency<T extends Archi
 	public static final String FILEEXTENSION_SYSTEM = "system";
 	public static final String FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS = "fieldofactivityannotations";
 	public static final String FILEEXTENSION_COMPONENTINTERNALDEPENDENCIES = "componentinternaldependencies";
+	public static final String FILEEXTENSION_XPPU = "xppu";
 	
 	@Override
 	public void save(String targetDirectoryPath, String filename, T version) {
@@ -25,16 +26,11 @@ public abstract class AbstractKAPSArchitectureVersionPersistency<T extends Archi
 	
 	public static void savePCMAndKAPSModels(String targetDirectoryPath, String filename, ArchitectureVersion version) {
 		ResourceSet resourceSet = new ResourceSetImpl();
-		String repositoryfilePath = filename + "."+FILEEXTENSION_REPOSITORY;
-		String systemfilePath = filename + "."+FILEEXTENSION_SYSTEM;
 		String internalModFilePath = filename + "." + FILEEXTENSION_MODIFICATIONMARK;
 		String fieldOfActivityRepositoryFilePath = filename + "."+FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS;
 		String cidepfilePath = filename + "." + FILEEXTENSION_COMPONENTINTERNALDEPENDENCIES;
+		String xppu = filename + "." + FILEEXTENSION_XPPU;
 		
-		if (version.getRepository()!=null)
-			saveEmfModelToResource(version.getRepository(), targetDirectoryPath, repositoryfilePath, resourceSet);		
-		if (version.getSystem()!=null)
-			saveEmfModelToResource(version.getSystem(), targetDirectoryPath, systemfilePath, resourceSet);		
 		if (version.getModificationMarkRepository()!=null)
 			saveEmfModelToResource(version.getModificationMarkRepository(), targetDirectoryPath, internalModFilePath, resourceSet);		
 		if (version.getFieldOfActivityRepository()!=null)

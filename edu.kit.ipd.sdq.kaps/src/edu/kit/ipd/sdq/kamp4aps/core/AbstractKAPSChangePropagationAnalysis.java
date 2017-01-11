@@ -3,9 +3,9 @@ package edu.kit.ipd.sdq.kamp4aps.core;
 import java.util.ArrayList;
 import java.util.Collection;
 import edu.kit.ipd.sdq.amp.propagation.AbstractChangePropagationAnalysis;
-import edu.kit.ipd.sdq.kamp4aps.core.scenarios.ScenarioOne;
-import edu.kit.ipd.sdq.kamp4aps.core.scenarios.ScenarioTwo;
+import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SwitchChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.BusChanges;
+import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SensorChanges;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
@@ -32,16 +32,16 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 		implements AbstractChangePropagationAnalysis<S> {
 
 	private T changePropagationDueToHardwareChange;
-	private BusChanges scenarioZero;
-	private ScenarioOne scenarioOne;
-	private ScenarioTwo scenarioTwo;
+	private SensorChanges scenarioZero;
+	private SwitchChanges scenarioOne;
+	private BusChanges scenarioTwo;
 
 	/**
 	 * Scenario 0
 	 * Sensor Change
 	 */
 	protected void calculateAndMarkFromSensorPropagration(S version) {
-		scenarioZero = new BusChanges(version);
+		scenarioZero = new SensorChanges(version);
 		Collection<SignalInterface> signalInterfaceToChange = new ArrayList<SignalInterface>();
 		Collection<PhysicalConnection> physicalConnectionToChange = new ArrayList<PhysicalConnection>();
 		addSensorModifications(signalInterfaceToChange, physicalConnectionToChange);
@@ -62,7 +62,7 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 	 * Replace MicroSwitches with Potentiometers
 	 */
 	protected void calculateAndMarkReplacementOfMicroSwitch(S version) {
-		scenarioOne = new ScenarioOne(version);
+		scenarioOne = new SwitchChanges(version);
 		addMicroSwitchModifications();
 	}
 
@@ -78,7 +78,7 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 	 * BusChange
 	 */
 	protected void calculateAndMarkBusBoxChange(S version){
-		scenarioTwo = new ScenarioTwo(version);
+		scenarioTwo = new BusChanges(version);
 		addBusBoxModifications();
 		addBusMasterModifications();
 		addBusSlaveModifications();

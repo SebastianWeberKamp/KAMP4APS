@@ -2,11 +2,8 @@ package edu.kit.ipd.sdq.kamp4aps.core;
 
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesFactory;
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
-import org.palladiosimulator.pcm.repository.Repository;
-import org.palladiosimulator.pcm.repository.RepositoryFactory;
-import org.palladiosimulator.pcm.system.System;
-import org.palladiosimulator.pcm.system.SystemFactory;
 
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion.ArchitectureVersionParams;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.BuildSpecification;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.DeploymentSpecification;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.DevelopmentArtefactSpecification;
@@ -21,23 +18,13 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory
 
 public class ArchitectureModelFactoryFacade {
 	
+	private static ArchitectureVersionParams archParams = new ArchitectureVersionParams();
+	
 	public static ArchitectureVersion createEmptyModel(String name) {
-		Repository repository = ArchitectureModelFactoryFacade.createRepository(name);
-		System system = ArchitectureModelFactoryFacade.createSystem();
-		FieldOfActivityAnnotationRepository fieldOfActivityRepository = ArchitectureModelFactoryFacade.createFieldOfActivityAnnotationsRepository();
-		KAPSModificationRepository modificationMarkRepository = ArchitectureModelFactoryFacade.createKAPSModificationMarkRepository();
-		ComponentInternalDependencyRepository componentInternalDependencyRepository = ArchitectureModelFactoryFacade.createComponentInternalDependencyRepository();
-		return new ArchitectureVersion(name, repository, system, fieldOfActivityRepository, modificationMarkRepository, componentInternalDependencyRepository);
-	}
-	
-	public static Repository createRepository(String name) {
-		Repository repository = RepositoryFactory.eINSTANCE.createRepository();
-		repository.setEntityName(name);
-		return repository;
-	}
-	
-	public static org.palladiosimulator.pcm.system.System createSystem() {
-		return SystemFactory.eINSTANCE.createSystem();
+		archParams.name = name;
+		archParams.fieldOfActivityRepository = ArchitectureModelFactoryFacade.createFieldOfActivityAnnotationsRepository();
+		archParams.modificationMarkRepository = ArchitectureModelFactoryFacade.createKAPSModificationMarkRepository();
+		return new ArchitectureVersion(archParams);
 	}
 	
 	public static KAPSModificationRepository createKAPSModificationMarkRepository() {

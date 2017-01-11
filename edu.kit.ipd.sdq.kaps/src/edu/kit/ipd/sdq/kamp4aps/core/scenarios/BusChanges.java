@@ -2,61 +2,210 @@ package edu.kit.ipd.sdq.kamp4aps.core.scenarios;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.util.EList;
 import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPhysicalConnection;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignalinterface;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusCable;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
-import xPPU.ComponentRepository.Sensor;
-import xPPU.InterfaceRepository.PhysicalConnection;
+import xPPU.Plant;
+import xPPU.BusComponents.BusBox;
+import xPPU.BusComponents.BusCable;
+import xPPU.BusComponents.BusMaster;
+import xPPU.BusComponents.BusSlave;
+import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.SignalInterface;
 
 public class BusChanges {
-	
+
 	private ArchitectureVersion version;
-	
+
 	public BusChanges(ArchitectureVersion v) {
 		version = v;
 	}
+
+	public Collection<BusBox> getInitialMarkedBusBox() {
+		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusBox.class);
+	}
+	public Collection<BusMaster> getInitialMarkedBusMaster() {
+		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusMaster.class);
+	}
+	public Collection<BusSlave> getInitialMarkedBusSlave() {
+		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusSlave.class);
+	}
 	
-	public Collection<Sensor> getInitialMarkedSensors(){
-		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, Sensor.class);
+	public Collection<BusCable> getInitialMarkedBusCable() {
+		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusCable.class);
 	}
 
-	public void addSensorModificationToChangePropagation(Sensor sensor, 
-			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange,
-			Collection<SignalInterface> signalInterfaceToChange,
-			Collection<PhysicalConnection> physicalConnectionToChange) {
-		signalInterfaceToChange.add(sensor.getSignalinterface());
-		physicalConnectionToChange.add(sensor.getPhysicalconnection());
-		ModifySensor<Sensor> modifySensor = modificationmarksFactory.eINSTANCE.createModifySensor();
-		modifySensor.setToolderived(true);
-		modifySensor.setAffectedElement(sensor);
-		modifySensor.getCausingElements().addAll(getInitialMarkedSensors());
-	
-		for(SignalInterface signalInterface : signalInterfaceToChange){
-			if(signalInterface != null){
-				ModifySignalinterface<SignalInterface> msi = modificationmarksFactory.eINSTANCE.createModifySignalinterface();
-				msi.setToolderived(true);
-				msi.setAffectedElement(signalInterface);
-				msi.getCausingElements().add(sensor);
-				modifySensor.getModifySignalInterfaces().add(signalInterface);
-			}
-		}
-		
-		for(PhysicalConnection physicalConnection : physicalConnectionToChange){
-			if(physicalConnection != null){
-				ModifyPhysicalConnection<PhysicalConnection> mpc = modificationmarksFactory.eINSTANCE.createModifyPhysicalConnection();
-				mpc.setToolderived(true);
-				mpc.setAffectedElement(physicalConnection);
-				mpc.getCausingElements().add(sensor);
-				modifySensor.getModifyPhysicalConnections().add(physicalConnection);
-			}
-		}
-		
-		changePropagationDueToHardwareChange.getSensorModifications().add(modifySensor);
+	public ModifyBusBox<BusBox> createNewModifyBusBox(BusBox busBox) {
+		Collection<BusBox> initialMarkedBusBoxes = getInitialMarkedBusBox();
+		ModifyBusBox<BusBox> modifyBusBox = modificationmarksFactory.eINSTANCE.createModifyBusBox();
+		modifyBusBox.setToolderived(true);
+		modifyBusBox.setAffectedElement(busBox);
+		modifyBusBox.getCausingElements().addAll(initialMarkedBusBoxes);
+		return modifyBusBox;
 	}
+	
+	public ModifyBusMaster<BusMaster> createNewModifyBusMaster(BusMaster busMaster) {
+		ModifyBusMaster<BusMaster> modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
+		modifyBusMaster.setToolderived(true);
+		modifyBusMaster.setAffectedElement(busMaster);
+		modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusMaster());
+		return modifyBusMaster;
+	}
+	
+	public ModifyBusSlave<BusSlave> createNewModifyBusSlave(BusSlave busSlave) {
+		ModifyBusSlave<BusSlave> modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
+		modifyBusSlave.setToolderived(true);
+		modifyBusSlave.setAffectedElement(busSlave);
+		modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusMaster());
+		return modifyBusSlave;
+	}
+	
+	public void markChangesBasedOnBusBox(BusBox busBox, ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		SignalInterface siMaster = busBox.getSignalinterface_master();
+		
+		Plant xPPUPlant = version.getXPPUPlant();
+		EList<Component> xppuComponents = xPPUPlant.getComponentRepository().getAllComponentsInPlant();
+		if(siMaster != null){
+			for(Component component : xppuComponents){
+				if(component instanceof BusMaster){
+					EList<SignalInterface> sis = ((BusMaster)component).getSignalinterfaces();
+					for(SignalInterface si : sis){
+						if(si == siMaster){
+							BusMaster bm = (BusMaster) component;
+							ModifyBusMaster<BusMaster> modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
+							modifyBusMaster.setToolderived(true);
+							modifyBusMaster.setAffectedElement(bm);
+							modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusBox());
+							changePropagationDueToHardwareChange.getBusMasterModifications().add(modifyBusMaster);
+						}
+					}
+				}
+			}
+		}
+		
+		EList<SignalInterface> siSlaves = busBox.getSignalinterfaces();
+		if(siSlaves != null){
+			for(Component component : xppuComponents){
+				if(component instanceof BusSlave){
+					SignalInterface slaveSignalInterface = ((BusSlave)component).getSignalinterface_slave();
+					for(SignalInterface si : siSlaves){
+						if(si == slaveSignalInterface){
+							BusSlave bs = (BusSlave) component;
+							ModifyBusSlave<BusSlave> modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
+							modifyBusSlave.setToolderived(true);
+							modifyBusSlave.setAffectedElement(bs);
+							modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusBox());
+							changePropagationDueToHardwareChange.getBusSlaveModifications().add(modifyBusSlave);
+						}
+					}
+				} else if (component instanceof BusCable){
+					BusCable busCable = ((BusCable)component);
+					ModifyBusCable<BusCable> modifyBusCable = modificationmarksFactory.eINSTANCE.createModifyBusCable();
+					modifyBusCable.setToolderived(true);
+					modifyBusCable.setAffectedElement(busCable);
+					modifyBusCable.getCausingElements().addAll(getInitialMarkedBusBox());
+					changePropagationDueToHardwareChange.getBusCableModifications().add(modifyBusCable);
+				}
+			}
+		}
+	}
+	
+	public void markChangesBasedOnBusMaster(BusMaster busMaster, ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		SignalInterface siController = busMaster.getSignalinterface_controller();
+		
+		Plant xPPUPlant = version.getXPPUPlant();
+		EList<Component> xppuComponents = xPPUPlant.getComponentRepository().getAllComponentsInPlant();
+		
+		if(siController != null){
+			for(Component component : xppuComponents){
+				if(component instanceof BusMaster){
+					EList<SignalInterface> sis = ((BusMaster)component).getSignalinterfaces();
+					for(SignalInterface si : sis){
+						if(si == siController){
+							BusMaster bm = (BusMaster) component;
+							ModifyBusMaster<BusMaster> modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
+							modifyBusMaster.setToolderived(true);
+							modifyBusMaster.setAffectedElement(bm);
+							modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusMaster());
+							changePropagationDueToHardwareChange.getBusMasterModifications().add(modifyBusMaster);
+						}
+					}
+				}
+			}
+		}
+		
+		EList<SignalInterface> siSlaves = busMaster.getSignalinterfaces();
+		if(siSlaves != null){
+			for(Component component : xppuComponents){
+				if(component instanceof BusSlave){
+					SignalInterface slaveSignalInterface = ((BusSlave)component).getSignalinterface_slave();
+					for(SignalInterface si : siSlaves){
+						if(si == slaveSignalInterface){
+							BusSlave bs = (BusSlave) component;
+							ModifyBusSlave<BusSlave> modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
+							modifyBusSlave.setToolderived(true);
+							modifyBusSlave.setAffectedElement(bs);
+							modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusSlave());
+							changePropagationDueToHardwareChange.getBusSlaveModifications().add(modifyBusSlave);
+						}
+					}
+				} else if (component instanceof BusCable){
+					BusCable busCable = ((BusCable)component);
+					ModifyBusCable<BusCable> modifyBusCable = modificationmarksFactory.eINSTANCE.createModifyBusCable();
+					modifyBusCable.setToolderived(true);
+					modifyBusCable.setAffectedElement(busCable);
+					modifyBusCable.getCausingElements().addAll(getInitialMarkedBusCable());
+					changePropagationDueToHardwareChange.getBusCableModifications().add(modifyBusCable);
+				}
+			}
+		}
+	}
+	
+	public void markChangesBasedOnBusSlave(BusSlave busSlave, ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Plant xPPUPlant = version.getXPPUPlant();
+		EList<Component> xppuComponents = xPPUPlant.getComponentRepository().getAllComponentsInPlant();
+		
+		SignalInterface siMaster = busSlave.getSignalinterface_master();
+		if(siMaster != null){
+			for(Component component : xppuComponents){
+				if(component instanceof BusMaster){
+					EList<SignalInterface> sis = ((BusMaster)component).getSignalinterfaces();
+					for(SignalInterface si : sis){
+						if(si == siMaster){
+							BusMaster bm = (BusMaster) component;
+							ModifyBusMaster<BusMaster> modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
+							modifyBusMaster.setToolderived(true);
+							modifyBusMaster.setAffectedElement(bm);
+							modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusMaster());
+							changePropagationDueToHardwareChange.getBusMasterModifications().add(modifyBusMaster);
+						}
+					}
+				}
+			}
+		}
+		
+        SignalInterface siSlave = busSlave.getSignalinterface_slave();
+        if(siSlave != null){
+        	for(Component component : xppuComponents){
+        		if(component instanceof BusSlave){
+                    if(component == siSlave){
+                        BusSlave bs = (BusSlave) component;
+                        ModifyBusSlave<BusSlave> modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
+                        modifyBusSlave.setToolderived(true);
+                        modifyBusSlave.setAffectedElement(bs);
+                        modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusSlave());
+                        changePropagationDueToHardwareChange.getBusSlaveModifications().add(modifyBusSlave);
+                    }
+                }
+            }
+        }
+	}
+
 
 }
