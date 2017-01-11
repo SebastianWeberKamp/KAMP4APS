@@ -175,6 +175,15 @@ public interface InterfaceRepositoryFactory extends EFactory {
 	TransportConnection createTransportConnection();
 
 	/**
+	 * Returns a new object of class '<em>Interface Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Interface Repository</em>'.
+	 * @generated
+	 */
+	InterfaceRepository createInterfaceRepository();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -3,9 +3,7 @@
 package xPPU.InterfaceRepository.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
+import xPPU.Identifier.impl.IdentifierImpl;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
@@ -16,7 +14,7 @@ import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
  *
  * @generated
  */
-public abstract class InterfaceImpl extends MinimalEObjectImpl.Container implements Interface {
+public abstract class InterfaceImpl extends IdentifierImpl implements Interface {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

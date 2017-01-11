@@ -10,9 +10,8 @@ import org.eclipse.emf.ecore.util.Switch;
 import xPPU.ComponentRepository.*;
 
 import xPPU.ElectronicComponents.ElectronicPart;
-
+import xPPU.Identifier.Identifier;
 import xPPU.InterfaceRepository.Interface;
-
 import xPPU.MechanicalComponents.MechanicalPart;
 
 /**
@@ -75,12 +74,14 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 			case ComponentRepositoryPackage.COMPONENT: {
 				Component component = (Component)theEObject;
 				T result = caseComponent(component);
+				if (result == null) result = caseIdentifier(component);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case ComponentRepositoryPackage.PANEL: {
 				Panel panel = (Panel)theEObject;
 				T result = casePanel(panel);
+				if (result == null) result = caseIdentifier(panel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -88,6 +89,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				OperationPanel operationPanel = (OperationPanel)theEObject;
 				T result = caseOperationPanel(operationPanel);
 				if (result == null) result = casePanel(operationPanel);
+				if (result == null) result = caseIdentifier(operationPanel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -95,6 +97,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Motor motor = (Motor)theEObject;
 				T result = caseMotor(motor);
 				if (result == null) result = caseComponent(motor);
+				if (result == null) result = caseIdentifier(motor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -103,6 +106,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseSimpleMotor(simpleMotor);
 				if (result == null) result = caseMotor(simpleMotor);
 				if (result == null) result = caseComponent(simpleMotor);
+				if (result == null) result = caseIdentifier(simpleMotor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -110,6 +114,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				MechanicalAssembly mechanicalAssembly = (MechanicalAssembly)theEObject;
 				T result = caseMechanicalAssembly(mechanicalAssembly);
 				if (result == null) result = caseComponent(mechanicalAssembly);
+				if (result == null) result = caseIdentifier(mechanicalAssembly);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -119,6 +124,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = caseRamp(regularRamp);
 				if (result == null) result = caseMechanicalAssembly(regularRamp);
 				if (result == null) result = caseComponent(regularRamp);
+				if (result == null) result = caseIdentifier(regularRamp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -126,6 +132,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Sensor sensor = (Sensor)theEObject;
 				T result = caseSensor(sensor);
 				if (result == null) result = caseComponent(sensor);
+				if (result == null) result = caseIdentifier(sensor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -134,6 +141,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseOpticalSensor(opticalSensor);
 				if (result == null) result = caseSensor(opticalSensor);
 				if (result == null) result = caseComponent(opticalSensor);
+				if (result == null) result = caseIdentifier(opticalSensor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -142,6 +150,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseInductiveSensor(inductiveSensor);
 				if (result == null) result = caseSensor(inductiveSensor);
 				if (result == null) result = caseComponent(inductiveSensor);
+				if (result == null) result = caseIdentifier(inductiveSensor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -150,6 +159,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = casePresenceSensor(presenceSensor);
 				if (result == null) result = caseSensor(presenceSensor);
 				if (result == null) result = caseComponent(presenceSensor);
+				if (result == null) result = caseIdentifier(presenceSensor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -157,6 +167,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Pipe pipe = (Pipe)theEObject;
 				T result = casePipe(pipe);
 				if (result == null) result = caseComponent(pipe);
+				if (result == null) result = caseIdentifier(pipe);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -165,6 +176,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = casePneumaticPipe(pneumaticPipe);
 				if (result == null) result = casePipe(pneumaticPipe);
 				if (result == null) result = caseComponent(pneumaticPipe);
+				if (result == null) result = caseIdentifier(pneumaticPipe);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -172,6 +184,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Compressor compressor = (Compressor)theEObject;
 				T result = caseCompressor(compressor);
 				if (result == null) result = caseComponent(compressor);
+				if (result == null) result = caseIdentifier(compressor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -179,6 +192,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Cable cable = (Cable)theEObject;
 				T result = caseCable(cable);
 				if (result == null) result = caseComponent(cable);
+				if (result == null) result = caseIdentifier(cable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -187,6 +201,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = casePowerCable(powerCable);
 				if (result == null) result = caseCable(powerCable);
 				if (result == null) result = caseComponent(powerCable);
+				if (result == null) result = caseIdentifier(powerCable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -194,6 +209,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Cylinder cylinder = (Cylinder)theEObject;
 				T result = caseCylinder(cylinder);
 				if (result == null) result = caseComponent(cylinder);
+				if (result == null) result = caseIdentifier(cylinder);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -202,6 +218,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseProportionalCylinder(proportionalCylinder);
 				if (result == null) result = caseCylinder(proportionalCylinder);
 				if (result == null) result = caseComponent(proportionalCylinder);
+				if (result == null) result = caseIdentifier(proportionalCylinder);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -210,6 +227,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseBistableCylinder(bistableCylinder);
 				if (result == null) result = caseCylinder(bistableCylinder);
 				if (result == null) result = caseComponent(bistableCylinder);
+				if (result == null) result = caseIdentifier(bistableCylinder);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -217,6 +235,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Rack rack = (Rack)theEObject;
 				T result = caseRack(rack);
 				if (result == null) result = caseComponent(rack);
+				if (result == null) result = caseIdentifier(rack);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -224,6 +243,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Corner corner = (Corner)theEObject;
 				T result = caseCorner(corner);
 				if (result == null) result = caseComponent(corner);
+				if (result == null) result = caseIdentifier(corner);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -231,6 +251,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Valve valve = (Valve)theEObject;
 				T result = caseValve(valve);
 				if (result == null) result = caseComponent(valve);
+				if (result == null) result = caseIdentifier(valve);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -239,6 +260,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseRegularValve(regularValve);
 				if (result == null) result = caseValve(regularValve);
 				if (result == null) result = caseComponent(regularValve);
+				if (result == null) result = caseIdentifier(regularValve);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -246,6 +268,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Tank tank = (Tank)theEObject;
 				T result = caseTank(tank);
 				if (result == null) result = caseComponent(tank);
+				if (result == null) result = caseIdentifier(tank);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -253,6 +276,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Dispenser dispenser = (Dispenser)theEObject;
 				T result = caseDispenser(dispenser);
 				if (result == null) result = caseComponent(dispenser);
+				if (result == null) result = caseIdentifier(dispenser);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -260,6 +284,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				BottleSeperator bottleSeperator = (BottleSeperator)theEObject;
 				T result = caseBottleSeperator(bottleSeperator);
 				if (result == null) result = caseComponent(bottleSeperator);
+				if (result == null) result = caseIdentifier(bottleSeperator);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -267,6 +292,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Splitter splitter = (Splitter)theEObject;
 				T result = caseSplitter(splitter);
 				if (result == null) result = caseComponent(splitter);
+				if (result == null) result = caseIdentifier(splitter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -275,6 +301,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = casePowerSupply(powerSupply);
 				if (result == null) result = caseComponent(powerSupply);
 				if (result == null) result = caseInterface(powerSupply);
+				if (result == null) result = caseIdentifier(powerSupply);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -282,6 +309,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				VacuumGripper vacuumGripper = (VacuumGripper)theEObject;
 				T result = caseVacuumGripper(vacuumGripper);
 				if (result == null) result = caseComponent(vacuumGripper);
+				if (result == null) result = caseIdentifier(vacuumGripper);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -289,6 +317,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				ConveyorBelt conveyorBelt = (ConveyorBelt)theEObject;
 				T result = caseConveyorBelt(conveyorBelt);
 				if (result == null) result = caseComponent(conveyorBelt);
+				if (result == null) result = caseIdentifier(conveyorBelt);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -297,6 +326,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseFrame(frame);
 				if (result == null) result = caseMechanicalAssembly(frame);
 				if (result == null) result = caseComponent(frame);
+				if (result == null) result = caseIdentifier(frame);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -305,6 +335,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseRubberBand(rubberBand);
 				if (result == null) result = caseMechanicalPart(rubberBand);
 				if (result == null) result = caseComponent(rubberBand);
+				if (result == null) result = caseIdentifier(rubberBand);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -312,6 +343,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Pusher pusher = (Pusher)theEObject;
 				T result = casePusher(pusher);
 				if (result == null) result = caseComponent(pusher);
+				if (result == null) result = caseIdentifier(pusher);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -319,6 +351,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				TurningTable turningTable = (TurningTable)theEObject;
 				T result = caseTurningTable(turningTable);
 				if (result == null) result = caseComponent(turningTable);
+				if (result == null) result = caseIdentifier(turningTable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -326,6 +359,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				Controller controller = (Controller)theEObject;
 				T result = caseController(controller);
 				if (result == null) result = caseComponent(controller);
+				if (result == null) result = caseIdentifier(controller);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -333,6 +367,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				LogicalWiring logicalWiring = (LogicalWiring)theEObject;
 				T result = caseLogicalWiring(logicalWiring);
 				if (result == null) result = caseComponent(logicalWiring);
+				if (result == null) result = caseIdentifier(logicalWiring);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -341,6 +376,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseArm(arm);
 				if (result == null) result = caseMechanicalAssembly(arm);
 				if (result == null) result = caseComponent(arm);
+				if (result == null) result = caseIdentifier(arm);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -349,6 +385,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseRamp(ramp);
 				if (result == null) result = caseMechanicalAssembly(ramp);
 				if (result == null) result = caseComponent(ramp);
+				if (result == null) result = caseIdentifier(ramp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -357,6 +394,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseTable(table);
 				if (result == null) result = caseMechanicalAssembly(table);
 				if (result == null) result = caseComponent(table);
+				if (result == null) result = caseIdentifier(table);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -365,6 +403,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseGripperPart(gripperPart);
 				if (result == null) result = caseMechanicalAssembly(gripperPart);
 				if (result == null) result = caseComponent(gripperPart);
+				if (result == null) result = caseIdentifier(gripperPart);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -374,6 +413,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = caseSwitch(microswitchModule);
 				if (result == null) result = caseElectronicPart(microswitchModule);
 				if (result == null) result = caseComponent(microswitchModule);
+				if (result == null) result = caseIdentifier(microswitchModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -383,6 +423,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = caseSwitch(vacuumSwitch);
 				if (result == null) result = caseElectronicPart(vacuumSwitch);
 				if (result == null) result = caseComponent(vacuumSwitch);
+				if (result == null) result = caseIdentifier(vacuumSwitch);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -392,6 +433,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = caseSwitch(reedSwitch);
 				if (result == null) result = caseElectronicPart(reedSwitch);
 				if (result == null) result = caseComponent(reedSwitch);
+				if (result == null) result = caseIdentifier(reedSwitch);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -400,6 +442,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = casePowerSplitter(powerSplitter);
 				if (result == null) result = caseSplitter(powerSplitter);
 				if (result == null) result = caseComponent(powerSplitter);
+				if (result == null) result = caseIdentifier(powerSplitter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -408,6 +451,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseWaterSplitter(waterSplitter);
 				if (result == null) result = caseSplitter(waterSplitter);
 				if (result == null) result = caseComponent(waterSplitter);
+				if (result == null) result = caseIdentifier(waterSplitter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -416,6 +460,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = casePneumaticSplitter(pneumaticSplitter);
 				if (result == null) result = caseSplitter(pneumaticSplitter);
 				if (result == null) result = caseComponent(pneumaticSplitter);
+				if (result == null) result = caseIdentifier(pneumaticSplitter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -424,6 +469,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseCylinderPart(cylinderPart);
 				if (result == null) result = caseMechanicalPart(cylinderPart);
 				if (result == null) result = caseComponent(cylinderPart);
+				if (result == null) result = caseIdentifier(cylinderPart);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -432,6 +478,14 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				T result = caseMonostableCylinder(monostableCylinder);
 				if (result == null) result = caseCylinder(monostableCylinder);
 				if (result == null) result = caseComponent(monostableCylinder);
+				if (result == null) result = caseIdentifier(monostableCylinder);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ComponentRepositoryPackage.COMPONENT_REPOSITORY: {
+				ComponentRepository componentRepository = (ComponentRepository)theEObject;
+				T result = caseComponentRepository(componentRepository);
+				if (result == null) result = caseIdentifier(componentRepository);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1156,6 +1210,36 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMonostableCylinder(MonostableCylinder object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Component Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Component Repository</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComponentRepository(ComponentRepository object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIdentifier(Identifier object) {
 		return null;
 	}
 

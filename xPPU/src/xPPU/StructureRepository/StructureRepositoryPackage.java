@@ -5,6 +5,7 @@ package xPPU.StructureRepository;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import xPPU.Identifier.IdentifierPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,13 +67,22 @@ public interface StructureRepositoryPackage extends EPackage {
 	int STRUCTURE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__ID = IdentifierPackage.IDENTIFIER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__PARENT_PLANT = 0;
+	int STRUCTURE__PARENT_PLANT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
@@ -81,7 +91,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__MODULES = 1;
+	int STRUCTURE__MODULES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -90,7 +100,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__COMPONENTS = 2;
+	int STRUCTURE__COMPONENTS = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Structure</em>' class.
@@ -99,7 +109,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_FEATURE_COUNT = 3;
+	int STRUCTURE_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Structure</em>' class.
@@ -108,7 +118,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_OPERATION_COUNT = 0;
+	int STRUCTURE_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xPPU.StructureRepository.impl.CommunicationNetworkImpl <em>Communication Network</em>}' class.
@@ -119,6 +129,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int COMMUNICATION_NETWORK = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMUNICATION_NETWORK__ID = STRUCTURE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
@@ -176,6 +195,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	int POWER_NETWORK = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_NETWORK__ID = STRUCTURE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -229,6 +257,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int CONTROL_CABINET = 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_CABINET__ID = STRUCTURE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
@@ -295,6 +332,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	int PNEUMATIC_NETWORK = 4;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_NETWORK__ID = STRUCTURE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -348,6 +394,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int CONVEYOR = 5;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVEYOR__ID = STRUCTURE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
@@ -412,6 +467,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int CRANE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRANE__ID = STRUCTURE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
@@ -494,6 +558,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int POWER_WIRING = 7;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_WIRING__ID = STRUCTURE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.

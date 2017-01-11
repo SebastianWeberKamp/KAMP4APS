@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
+import xPPU.Identifier.Identifier;
 import xPPU.ModuleRepository.*;
 
 /**
@@ -69,6 +70,7 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 			case ModuleRepositoryPackage.MODULE: {
 				Module module = (Module)theEObject;
 				T result = caseModule(module);
+				if (result == null) result = caseIdentifier(module);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -76,6 +78,7 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 				RampModule rampModule = (RampModule)theEObject;
 				T result = caseRampModule(rampModule);
 				if (result == null) result = caseModule(rampModule);
+				if (result == null) result = caseIdentifier(rampModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -83,6 +86,7 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 				PusherModule pusherModule = (PusherModule)theEObject;
 				T result = casePusherModule(pusherModule);
 				if (result == null) result = caseModule(pusherModule);
+				if (result == null) result = caseIdentifier(pusherModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -90,6 +94,7 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 				MotorModule motorModule = (MotorModule)theEObject;
 				T result = caseMotorModule(motorModule);
 				if (result == null) result = caseModule(motorModule);
+				if (result == null) result = caseIdentifier(motorModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -97,6 +102,7 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 				SensorModule sensorModule = (SensorModule)theEObject;
 				T result = caseSensorModule(sensorModule);
 				if (result == null) result = caseModule(sensorModule);
+				if (result == null) result = caseIdentifier(sensorModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -104,6 +110,7 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 				OpticalSensorModule opticalSensorModule = (OpticalSensorModule)theEObject;
 				T result = caseOpticalSensorModule(opticalSensorModule);
 				if (result == null) result = caseModule(opticalSensorModule);
+				if (result == null) result = caseIdentifier(opticalSensorModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -111,6 +118,7 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 				InductiveSensorModule inductiveSensorModule = (InductiveSensorModule)theEObject;
 				T result = caseInductiveSensorModule(inductiveSensorModule);
 				if (result == null) result = caseModule(inductiveSensorModule);
+				if (result == null) result = caseIdentifier(inductiveSensorModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -118,6 +126,7 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 				PresenceSensorModule presenceSensorModule = (PresenceSensorModule)theEObject;
 				T result = casePresenceSensorModule(presenceSensorModule);
 				if (result == null) result = caseModule(presenceSensorModule);
+				if (result == null) result = caseIdentifier(presenceSensorModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -125,6 +134,7 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 				PressureSensorModule pressureSensorModule = (PressureSensorModule)theEObject;
 				T result = casePressureSensorModule(pressureSensorModule);
 				if (result == null) result = caseModule(pressureSensorModule);
+				if (result == null) result = caseIdentifier(pressureSensorModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -264,6 +274,21 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePressureSensorModule(PressureSensorModule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIdentifier(Identifier object) {
 		return null;
 	}
 

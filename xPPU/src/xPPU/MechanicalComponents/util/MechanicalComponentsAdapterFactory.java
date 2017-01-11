@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EObject;
 
 import xPPU.ComponentRepository.Component;
 
+import xPPU.Identifier.Identifier;
 import xPPU.MechanicalComponents.*;
 
 /**
@@ -84,6 +85,10 @@ public class MechanicalComponentsAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseReturnSpring(ReturnSpring object) {
 				return createReturnSpringAdapter();
+			}
+			@Override
+			public Adapter caseIdentifier(Identifier object) {
+				return createIdentifierAdapter();
 			}
 			@Override
 			public Adapter caseComponent(Component object) {
@@ -162,6 +167,20 @@ public class MechanicalComponentsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createReturnSpringAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.Identifier.Identifier <em>Identifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.Identifier.Identifier
+	 * @generated
+	 */
+	public Adapter createIdentifierAdapter() {
 		return null;
 	}
 

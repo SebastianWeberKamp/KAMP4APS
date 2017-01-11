@@ -73,6 +73,7 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 			case InterfaceRepositoryPackage.WATER_SUPPLY: return createWaterSupply();
 			case InterfaceRepositoryPackage.PHYSICAL_CONNECTION: return createPhysicalConnection();
 			case InterfaceRepositoryPackage.TRANSPORT_CONNECTION: return createTransportConnection();
+			case InterfaceRepositoryPackage.INTERFACE_REPOSITORY: return createInterfaceRepository();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -246,6 +247,16 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 	public TransportConnection createTransportConnection() {
 		TransportConnectionImpl transportConnection = new TransportConnectionImpl();
 		return transportConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InterfaceRepository createInterfaceRepository() {
+		InterfaceRepositoryImpl interfaceRepository = new InterfaceRepositoryImpl();
+		return interfaceRepository;
 	}
 
 	/**

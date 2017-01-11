@@ -1,14 +1,13 @@
 /**
  */
-package xPPU.util;
+package xPPU.Identifier.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import xPPU.*;
-import xPPU.Identifier.Identifier;
+import xPPU.Identifier.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,17 +19,17 @@ import xPPU.Identifier.Identifier;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see xPPU.XPPUPackage
+ * @see xPPU.Identifier.IdentifierPackage
  * @generated
  */
-public class XPPUSwitch<T> extends Switch<T> {
+public class IdentifierSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static XPPUPackage modelPackage;
+	protected static IdentifierPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -38,9 +37,9 @@ public class XPPUSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public XPPUSwitch() {
+	public IdentifierSwitch() {
 		if (modelPackage == null) {
-			modelPackage = XPPUPackage.eINSTANCE;
+			modelPackage = IdentifierPackage.eINSTANCE;
 		}
 	}
 
@@ -67,30 +66,14 @@ public class XPPUSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case XPPUPackage.PLANT: {
-				Plant plant = (Plant)theEObject;
-				T result = casePlant(plant);
-				if (result == null) result = caseIdentifier(plant);
+			case IdentifierPackage.IDENTIFIER: {
+				Identifier identifier = (Identifier)theEObject;
+				T result = caseIdentifier(identifier);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Plant</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Plant</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePlant(Plant object) {
-		return null;
 	}
 
 	/**
@@ -124,4 +107,4 @@ public class XPPUSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //XPPUSwitch
+} //IdentifierSwitch

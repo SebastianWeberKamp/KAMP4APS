@@ -3,11 +3,9 @@
 package xPPU.StructureRepository;
 
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
-
 import xPPU.ComponentRepository.Component;
 
+import xPPU.Identifier.Identifier;
 import xPPU.ModuleRepository.Module;
 
 import xPPU.Plant;
@@ -30,7 +28,7 @@ import xPPU.Plant;
  * @model abstract="true"
  * @generated
  */
-public interface Structure extends EObject {
+public interface Structure extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Parent Plant</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link xPPU.Plant#getStructures <em>Structures</em>}'.

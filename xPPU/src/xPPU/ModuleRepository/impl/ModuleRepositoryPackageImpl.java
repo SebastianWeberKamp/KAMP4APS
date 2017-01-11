@@ -20,6 +20,8 @@ import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 
 import xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
+import xPPU.Identifier.IdentifierPackage;
+import xPPU.Identifier.impl.IdentifierPackageImpl;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
 import xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl;
@@ -172,6 +174,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		MechanicalComponentsPackageImpl theMechanicalComponentsPackage = (MechanicalComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) instanceof MechanicalComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) : MechanicalComponentsPackage.eINSTANCE);
 		StructureRepositoryPackageImpl theStructureRepositoryPackage = (StructureRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) instanceof StructureRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) : StructureRepositoryPackage.eINSTANCE);
 		InterfaceRepositoryPackageImpl theInterfaceRepositoryPackage = (InterfaceRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) instanceof InterfaceRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) : InterfaceRepositoryPackage.eINSTANCE);
+		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theModuleRepositoryPackage.createPackageContents();
@@ -182,6 +185,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		theMechanicalComponentsPackage.createPackageContents();
 		theStructureRepositoryPackage.createPackageContents();
 		theInterfaceRepositoryPackage.createPackageContents();
+		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theModuleRepositoryPackage.initializePackageContents();
@@ -192,6 +196,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		theMechanicalComponentsPackage.initializePackageContents();
 		theStructureRepositoryPackage.initializePackageContents();
 		theInterfaceRepositoryPackage.initializePackageContents();
+		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theModuleRepositoryPackage.freeze();
@@ -474,6 +479,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
 		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
@@ -483,6 +489,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		moduleEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 		rampModuleEClass.getESuperTypes().add(this.getModule());
 		pusherModuleEClass.getESuperTypes().add(this.getModule());
 		motorModuleEClass.getESuperTypes().add(this.getModule());

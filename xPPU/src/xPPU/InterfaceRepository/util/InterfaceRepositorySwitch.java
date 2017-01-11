@@ -7,6 +7,7 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
+import xPPU.Identifier.Identifier;
 import xPPU.InterfaceRepository.*;
 
 /**
@@ -69,6 +70,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 			case InterfaceRepositoryPackage.INTERFACE: {
 				Interface interface_ = (Interface)theEObject;
 				T result = caseInterface(interface_);
+				if (result == null) result = caseIdentifier(interface_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -76,6 +78,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				Screwing screwing = (Screwing)theEObject;
 				T result = caseScrewing(screwing);
 				if (result == null) result = caseInterface(screwing);
+				if (result == null) result = caseIdentifier(screwing);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -84,6 +87,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				T result = caseScrewingSplitter(screwingSplitter);
 				if (result == null) result = caseScrewing(screwingSplitter);
 				if (result == null) result = caseInterface(screwingSplitter);
+				if (result == null) result = caseIdentifier(screwingSplitter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -92,6 +96,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				T result = caseScrewingMotor(screwingMotor);
 				if (result == null) result = caseScrewing(screwingMotor);
 				if (result == null) result = caseInterface(screwingMotor);
+				if (result == null) result = caseIdentifier(screwingMotor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -100,6 +105,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				T result = caseScrewingRack(screwingRack);
 				if (result == null) result = caseScrewing(screwingRack);
 				if (result == null) result = caseInterface(screwingRack);
+				if (result == null) result = caseIdentifier(screwingRack);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -108,6 +114,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				T result = caseScrewingCylinder(screwingCylinder);
 				if (result == null) result = caseScrewing(screwingCylinder);
 				if (result == null) result = caseInterface(screwingCylinder);
+				if (result == null) result = caseIdentifier(screwingCylinder);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -116,6 +123,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				T result = caseScrewingFixture(screwingFixture);
 				if (result == null) result = caseScrewing(screwingFixture);
 				if (result == null) result = caseInterface(screwingFixture);
+				if (result == null) result = caseIdentifier(screwingFixture);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -124,6 +132,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				T result = caseScrewingPotentiometer(screwingPotentiometer);
 				if (result == null) result = caseScrewing(screwingPotentiometer);
 				if (result == null) result = caseInterface(screwingPotentiometer);
+				if (result == null) result = caseIdentifier(screwingPotentiometer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -131,6 +140,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				Suspension suspension = (Suspension)theEObject;
 				T result = caseSuspension(suspension);
 				if (result == null) result = caseInterface(suspension);
+				if (result == null) result = caseIdentifier(suspension);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -139,6 +149,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				T result = caseSuspensionRack(suspensionRack);
 				if (result == null) result = caseSuspension(suspensionRack);
 				if (result == null) result = caseInterface(suspensionRack);
+				if (result == null) result = caseIdentifier(suspensionRack);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -147,6 +158,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				T result = caseSuspensionArm(suspensionArm);
 				if (result == null) result = caseSuspension(suspensionArm);
 				if (result == null) result = caseInterface(suspensionArm);
+				if (result == null) result = caseIdentifier(suspensionArm);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -154,6 +166,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				Gearing gearing = (Gearing)theEObject;
 				T result = caseGearing(gearing);
 				if (result == null) result = caseInterface(gearing);
+				if (result == null) result = caseIdentifier(gearing);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -161,6 +174,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				Clamping clamping = (Clamping)theEObject;
 				T result = caseClamping(clamping);
 				if (result == null) result = caseInterface(clamping);
+				if (result == null) result = caseIdentifier(clamping);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -168,6 +182,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				PneumaticSupply pneumaticSupply = (PneumaticSupply)theEObject;
 				T result = casePneumaticSupply(pneumaticSupply);
 				if (result == null) result = caseInterface(pneumaticSupply);
+				if (result == null) result = caseIdentifier(pneumaticSupply);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -175,6 +190,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				SignalInterface signalInterface = (SignalInterface)theEObject;
 				T result = caseSignalInterface(signalInterface);
 				if (result == null) result = caseInterface(signalInterface);
+				if (result == null) result = caseIdentifier(signalInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -182,6 +198,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				WaterSupply waterSupply = (WaterSupply)theEObject;
 				T result = caseWaterSupply(waterSupply);
 				if (result == null) result = caseInterface(waterSupply);
+				if (result == null) result = caseIdentifier(waterSupply);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -189,6 +206,7 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				PhysicalConnection physicalConnection = (PhysicalConnection)theEObject;
 				T result = casePhysicalConnection(physicalConnection);
 				if (result == null) result = caseInterface(physicalConnection);
+				if (result == null) result = caseIdentifier(physicalConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -196,6 +214,14 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				TransportConnection transportConnection = (TransportConnection)theEObject;
 				T result = caseTransportConnection(transportConnection);
 				if (result == null) result = caseInterface(transportConnection);
+				if (result == null) result = caseIdentifier(transportConnection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case InterfaceRepositoryPackage.INTERFACE_REPOSITORY: {
+				InterfaceRepository interfaceRepository = (InterfaceRepository)theEObject;
+				T result = caseInterfaceRepository(interfaceRepository);
+				if (result == null) result = caseIdentifier(interfaceRepository);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -470,6 +496,36 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseTransportConnection(TransportConnection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interface Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interface Repository</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInterfaceRepository(InterfaceRepository object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIdentifier(Identifier object) {
 		return null;
 	}
 

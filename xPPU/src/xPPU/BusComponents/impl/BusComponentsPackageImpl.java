@@ -27,6 +27,8 @@ import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 
 import xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
+import xPPU.Identifier.IdentifierPackage;
+import xPPU.Identifier.impl.IdentifierPackageImpl;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
 import xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl;
@@ -164,6 +166,7 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 		StructureRepositoryPackageImpl theStructureRepositoryPackage = (StructureRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) instanceof StructureRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) : StructureRepositoryPackage.eINSTANCE);
 		ModuleRepositoryPackageImpl theModuleRepositoryPackage = (ModuleRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) instanceof ModuleRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) : ModuleRepositoryPackage.eINSTANCE);
 		InterfaceRepositoryPackageImpl theInterfaceRepositoryPackage = (InterfaceRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) instanceof InterfaceRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) : InterfaceRepositoryPackage.eINSTANCE);
+		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theBusComponentsPackage.createPackageContents();
@@ -174,6 +177,7 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 		theStructureRepositoryPackage.createPackageContents();
 		theModuleRepositoryPackage.createPackageContents();
 		theInterfaceRepositoryPackage.createPackageContents();
+		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theBusComponentsPackage.initializePackageContents();
@@ -184,6 +188,7 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 		theStructureRepositoryPackage.initializePackageContents();
 		theModuleRepositoryPackage.initializePackageContents();
 		theInterfaceRepositoryPackage.initializePackageContents();
+		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theBusComponentsPackage.freeze();

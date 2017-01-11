@@ -5,6 +5,7 @@ package xPPU.ModuleRepository;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import xPPU.Identifier.IdentifierPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,13 +67,22 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int MODULE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__ID = IdentifierPackage.IDENTIFIER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__MODULES = 0;
+	int MODULE__MODULES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
@@ -81,7 +91,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__PARENT_STRUCTURE = 1;
+	int MODULE__PARENT_STRUCTURE = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Module</em>' class.
@@ -90,7 +100,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_FEATURE_COUNT = 2;
+	int MODULE_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Module</em>' class.
@@ -99,7 +109,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_OPERATION_COUNT = 0;
+	int MODULE_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xPPU.ModuleRepository.impl.RampModuleImpl <em>Ramp Module</em>}' class.
@@ -110,6 +120,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int RAMP_MODULE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAMP_MODULE__ID = MODULE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
@@ -158,6 +177,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int PUSHER_MODULE = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUSHER_MODULE__ID = MODULE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -202,6 +230,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int MOTOR_MODULE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTOR_MODULE__ID = MODULE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
@@ -286,6 +323,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int SENSOR_MODULE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR_MODULE__ID = MODULE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -330,6 +376,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int OPTICAL_SENSOR_MODULE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTICAL_SENSOR_MODULE__ID = MODULE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
@@ -396,6 +451,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int INDUCTIVE_SENSOR_MODULE = 6;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDUCTIVE_SENSOR_MODULE__ID = MODULE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -460,6 +524,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int PRESENCE_SENSOR_MODULE = 7;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESENCE_SENSOR_MODULE__ID = MODULE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -522,6 +595,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int PRESSURE_SENSOR_MODULE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESSURE_SENSOR_MODULE__ID = MODULE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.

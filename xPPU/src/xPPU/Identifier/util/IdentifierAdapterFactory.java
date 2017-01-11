@@ -1,6 +1,6 @@
 /**
  */
-package xPPU.util;
+package xPPU.Identifier.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -9,25 +9,24 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import xPPU.*;
-import xPPU.Identifier.Identifier;
+import xPPU.Identifier.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see xPPU.XPPUPackage
+ * @see xPPU.Identifier.IdentifierPackage
  * @generated
  */
-public class XPPUAdapterFactory extends AdapterFactoryImpl {
+public class IdentifierAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static XPPUPackage modelPackage;
+	protected static IdentifierPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -35,9 +34,9 @@ public class XPPUAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public XPPUAdapterFactory() {
+	public IdentifierAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = XPPUPackage.eINSTANCE;
+			modelPackage = IdentifierPackage.eINSTANCE;
 		}
 	}
 
@@ -66,12 +65,8 @@ public class XPPUAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected XPPUSwitch<Adapter> modelSwitch =
-		new XPPUSwitch<Adapter>() {
-			@Override
-			public Adapter casePlant(Plant object) {
-				return createPlantAdapter();
-			}
+	protected IdentifierSwitch<Adapter> modelSwitch =
+		new IdentifierSwitch<Adapter>() {
 			@Override
 			public Adapter caseIdentifier(Identifier object) {
 				return createIdentifierAdapter();
@@ -95,20 +90,6 @@ public class XPPUAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
-
-	/**
-	 * Creates a new adapter for an object of class '{@link xPPU.Plant <em>Plant</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see xPPU.Plant
-	 * @generated
-	 */
-	public Adapter createPlantAdapter() {
-		return null;
-	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link xPPU.Identifier.Identifier <em>Identifier</em>}'.
@@ -136,4 +117,4 @@ public class XPPUAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //XPPUAdapterFactory
+} //IdentifierAdapterFactory

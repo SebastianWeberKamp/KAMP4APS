@@ -68,6 +68,15 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_CABLE = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CABLE__ID = ComponentRepositoryPackage.CABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,6 +130,15 @@ public interface BusComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	int BUS_MASTER = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_MASTER__ID = ComponentRepositoryPackage.COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -178,6 +196,15 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_MASTER = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_MASTER__ID = BUS_MASTER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -231,6 +258,15 @@ public interface BusComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	int BUS_SLAVE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_SLAVE__ID = ComponentRepositoryPackage.COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -288,6 +324,15 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_SLAVE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_SLAVE__ID = BUS_SLAVE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -341,6 +386,15 @@ public interface BusComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	int BUS_BOX = 5;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_BOX__ID = ComponentRepositoryPackage.COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -416,6 +470,15 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_BOX = 6;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_BOX__ID = BUS_BOX__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -487,6 +550,15 @@ public interface BusComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	int PROFIBUS_DP_CABLE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_CABLE__ID = BUS_CABLE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.

@@ -3,7 +3,6 @@
 package xPPU.ComponentRepository.impl;
 
 import org.eclipse.emf.ecore.EClass;
-
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 import xPPU.ComponentRepository.PowerSupply;
 

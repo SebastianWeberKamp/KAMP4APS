@@ -17,6 +17,7 @@ import xPPU.ComponentRepository.BistableCylinder;
 import xPPU.ComponentRepository.BottleSeperator;
 import xPPU.ComponentRepository.Cable;
 import xPPU.ComponentRepository.Component;
+import xPPU.ComponentRepository.ComponentRepository;
 import xPPU.ComponentRepository.ComponentRepositoryFactory;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 import xPPU.ComponentRepository.Compressor;
@@ -67,6 +68,8 @@ import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 
 import xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
+import xPPU.Identifier.IdentifierPackage;
+import xPPU.Identifier.impl.IdentifierPackageImpl;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
 import xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl;
@@ -431,6 +434,13 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	private EClass monostableCylinderEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass componentRepositoryEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -484,6 +494,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		StructureRepositoryPackageImpl theStructureRepositoryPackage = (StructureRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) instanceof StructureRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) : StructureRepositoryPackage.eINSTANCE);
 		ModuleRepositoryPackageImpl theModuleRepositoryPackage = (ModuleRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) instanceof ModuleRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) : ModuleRepositoryPackage.eINSTANCE);
 		InterfaceRepositoryPackageImpl theInterfaceRepositoryPackage = (InterfaceRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) instanceof InterfaceRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) : InterfaceRepositoryPackage.eINSTANCE);
+		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theComponentRepositoryPackage.createPackageContents();
@@ -494,6 +505,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		theStructureRepositoryPackage.createPackageContents();
 		theModuleRepositoryPackage.createPackageContents();
 		theInterfaceRepositoryPackage.createPackageContents();
+		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theComponentRepositoryPackage.initializePackageContents();
@@ -504,6 +516,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		theStructureRepositoryPackage.initializePackageContents();
 		theModuleRepositoryPackage.initializePackageContents();
 		theInterfaceRepositoryPackage.initializePackageContents();
+		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theComponentRepositoryPackage.freeze();
@@ -1563,6 +1576,24 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getComponentRepository() {
+		return componentRepositoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponentRepository_AllComponentsInPlant() {
+		return (EReference)componentRepositoryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ComponentRepositoryFactory getComponentRepositoryFactory() {
 		return (ComponentRepositoryFactory)getEFactoryInstance();
 	}
@@ -1749,6 +1780,9 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		createEReference(monostableCylinderEClass, MONOSTABLE_CYLINDER__CYLINDER_PART);
 		createEReference(monostableCylinderEClass, MONOSTABLE_CYLINDER__VALVE);
 		createEReference(monostableCylinderEClass, MONOSTABLE_CYLINDER__BUS_SLAVE);
+
+		componentRepositoryEClass = createEClass(COMPONENT_REPOSITORY);
+		createEReference(componentRepositoryEClass, COMPONENT_REPOSITORY__ALL_COMPONENTS_IN_PLANT);
 	}
 
 	/**
@@ -1775,6 +1809,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
 		ElectronicComponentsPackage theElectronicComponentsPackage = (ElectronicComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(ElectronicComponentsPackage.eNS_URI);
 		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
@@ -1786,6 +1821,8 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		componentEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+		panelEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 		operationPanelEClass.getESuperTypes().add(this.getPanel());
 		motorEClass.getESuperTypes().add(this.getComponent());
 		simpleMotorEClass.getESuperTypes().add(this.getMotor());
@@ -1833,6 +1870,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		pneumaticSplitterEClass.getESuperTypes().add(this.getSplitter());
 		cylinderPartEClass.getESuperTypes().add(theMechanicalComponentsPackage.getMechanicalPart());
 		monostableCylinderEClass.getESuperTypes().add(this.getCylinder());
+		componentRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(componentEClass, Component.class, "Component", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1998,6 +2036,9 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		initEReference(getMonostableCylinder_CylinderPart(), this.getCylinderPart(), null, "cylinderPart", null, 1, -1, MonostableCylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMonostableCylinder_Valve(), this.getRegularValve(), null, "valve", null, 1, -1, MonostableCylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMonostableCylinder_BusSlave(), theBusComponentsPackage.getProfibusDPSlave(), null, "busSlave", null, 1, -1, MonostableCylinder.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(componentRepositoryEClass, ComponentRepository.class, "ComponentRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComponentRepository_AllComponentsInPlant(), this.getComponent(), null, "allComponentsInPlant", null, 0, -1, ComponentRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //ComponentRepositoryPackageImpl

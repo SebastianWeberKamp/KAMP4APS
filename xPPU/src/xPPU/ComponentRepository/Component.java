@@ -3,9 +3,7 @@
 package xPPU.ComponentRepository;
 
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
-
+import xPPU.Identifier.Identifier;
 import xPPU.InterfaceRepository.Interface;
 
 /**
@@ -24,7 +22,7 @@ import xPPU.InterfaceRepository.Interface;
  * @model abstract="true"
  * @generated
  */
-public interface Component extends EObject {
+public interface Component extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Interfaces</b></em>' containment reference list.
 	 * The list contents are of type {@link xPPU.InterfaceRepository.Interface}.

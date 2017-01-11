@@ -68,6 +68,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int MECHANICAL_PART = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MECHANICAL_PART__ID = ComponentRepositoryPackage.COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -112,6 +121,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	int PUSHHEAD = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUSHHEAD__ID = MECHANICAL_PART__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -160,6 +178,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int HOUSING = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOUSING__ID = MECHANICAL_PART__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -204,6 +231,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	int RETURN_SPRING = 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_SPRING__ID = MECHANICAL_PART__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.

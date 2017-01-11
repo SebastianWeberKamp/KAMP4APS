@@ -20,6 +20,8 @@ import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 
 import xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
+import xPPU.Identifier.IdentifierPackage;
+import xPPU.Identifier.impl.IdentifierPackageImpl;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
 import xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl;
@@ -164,6 +166,7 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		MechanicalComponentsPackageImpl theMechanicalComponentsPackage = (MechanicalComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) instanceof MechanicalComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) : MechanicalComponentsPackage.eINSTANCE);
 		ModuleRepositoryPackageImpl theModuleRepositoryPackage = (ModuleRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) instanceof ModuleRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) : ModuleRepositoryPackage.eINSTANCE);
 		InterfaceRepositoryPackageImpl theInterfaceRepositoryPackage = (InterfaceRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) instanceof InterfaceRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) : InterfaceRepositoryPackage.eINSTANCE);
+		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theStructureRepositoryPackage.createPackageContents();
@@ -174,6 +177,7 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		theMechanicalComponentsPackage.createPackageContents();
 		theModuleRepositoryPackage.createPackageContents();
 		theInterfaceRepositoryPackage.createPackageContents();
+		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theStructureRepositoryPackage.initializePackageContents();
@@ -184,6 +188,7 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		theMechanicalComponentsPackage.initializePackageContents();
 		theModuleRepositoryPackage.initializePackageContents();
 		theInterfaceRepositoryPackage.initializePackageContents();
+		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theStructureRepositoryPackage.freeze();
@@ -415,6 +420,7 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 		XPPUPackage theXPPUPackage = (XPPUPackage)EPackage.Registry.INSTANCE.getEPackage(XPPUPackage.eNS_URI);
 		ModuleRepositoryPackage theModuleRepositoryPackage = (ModuleRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI);
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
@@ -424,6 +430,7 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		structureEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 		communicationNetworkEClass.getESuperTypes().add(this.getStructure());
 		powerNetworkEClass.getESuperTypes().add(this.getStructure());
 		controlCabinetEClass.getESuperTypes().add(this.getStructure());

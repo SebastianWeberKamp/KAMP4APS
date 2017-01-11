@@ -3,9 +3,7 @@
 package xPPU.ModuleRepository;
 
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
-
+import xPPU.Identifier.Identifier;
 import xPPU.StructureRepository.Structure;
 
 /**
@@ -25,7 +23,7 @@ import xPPU.StructureRepository.Structure;
  * @model
  * @generated
  */
-public interface Module extends EObject {
+public interface Module extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Modules</b></em>' reference list.
 	 * The list contents are of type {@link xPPU.ModuleRepository.Module}.

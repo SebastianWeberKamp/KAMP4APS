@@ -2,7 +2,7 @@
  */
 package xPPU.InterfaceRepository;
 
-import org.eclipse.emf.ecore.EObject;
+import xPPU.Identifier.Identifier;
 
 /**
  * <!-- begin-user-doc -->
@@ -14,5 +14,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface Interface extends EObject {
+public interface Interface extends Identifier {
 } // Interface

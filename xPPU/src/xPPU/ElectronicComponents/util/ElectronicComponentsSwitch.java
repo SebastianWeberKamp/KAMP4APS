@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import xPPU.ComponentRepository.Component;
 
 import xPPU.ElectronicComponents.*;
+import xPPU.Identifier.Identifier;
 
 /**
  * <!-- begin-user-doc -->
@@ -72,6 +73,7 @@ public class ElectronicComponentsSwitch<T> extends Switch<T> {
 				ElectronicPart electronicPart = (ElectronicPart)theEObject;
 				T result = caseElectronicPart(electronicPart);
 				if (result == null) result = caseComponent(electronicPart);
+				if (result == null) result = caseIdentifier(electronicPart);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -80,6 +82,7 @@ public class ElectronicComponentsSwitch<T> extends Switch<T> {
 				T result = caseSwitch(switch_);
 				if (result == null) result = caseElectronicPart(switch_);
 				if (result == null) result = caseComponent(switch_);
+				if (result == null) result = caseIdentifier(switch_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -88,6 +91,7 @@ public class ElectronicComponentsSwitch<T> extends Switch<T> {
 				T result = caseLED(led);
 				if (result == null) result = caseElectronicPart(led);
 				if (result == null) result = caseComponent(led);
+				if (result == null) result = caseIdentifier(led);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -96,6 +100,7 @@ public class ElectronicComponentsSwitch<T> extends Switch<T> {
 				T result = caseButton(button);
 				if (result == null) result = caseElectronicPart(button);
 				if (result == null) result = caseComponent(button);
+				if (result == null) result = caseIdentifier(button);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -160,6 +165,21 @@ public class ElectronicComponentsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseButton(Button object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseIdentifier(Identifier object) {
 		return null;
 	}
 

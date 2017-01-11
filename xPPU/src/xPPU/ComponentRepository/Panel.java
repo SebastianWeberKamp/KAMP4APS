@@ -2,7 +2,7 @@
  */
 package xPPU.ComponentRepository;
 
-import org.eclipse.emf.ecore.EObject;
+import xPPU.Identifier.Identifier;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface Panel extends EObject {
+public interface Panel extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Component Repository</b></em>' reference.
 	 * <!-- begin-user-doc -->

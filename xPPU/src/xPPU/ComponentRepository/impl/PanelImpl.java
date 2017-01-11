@@ -8,11 +8,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 import xPPU.ComponentRepository.Panel;
+import xPPU.Identifier.impl.IdentifierImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +26,7 @@ import xPPU.ComponentRepository.Panel;
  *
  * @generated
  */
-public abstract class PanelImpl extends MinimalEObjectImpl.Container implements Panel {
+public abstract class PanelImpl extends IdentifierImpl implements Panel {
 	/**
 	 * The cached value of the '{@link #getComponentRepository() <em>Component Repository</em>}' reference.
 	 * <!-- begin-user-doc -->

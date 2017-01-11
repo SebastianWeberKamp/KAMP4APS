@@ -68,6 +68,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int ELECTRONIC_PART = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELECTRONIC_PART__ID = ComponentRepositoryPackage.COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,6 +130,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	int SWITCH = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SWITCH__ID = ELECTRONIC_PART__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -178,6 +196,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int LED = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LED__ID = ELECTRONIC_PART__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -231,6 +258,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	int BUTTON = 3;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__ID = ELECTRONIC_PART__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.

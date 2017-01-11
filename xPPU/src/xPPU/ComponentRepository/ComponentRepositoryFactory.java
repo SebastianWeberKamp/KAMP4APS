@@ -364,6 +364,15 @@ public interface ComponentRepositoryFactory extends EFactory {
 	MonostableCylinder createMonostableCylinder();
 
 	/**
+	 * Returns a new object of class '<em>Component Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component Repository</em>'.
+	 * @generated
+	 */
+	ComponentRepository createComponentRepository();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

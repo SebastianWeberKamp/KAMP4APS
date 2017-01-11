@@ -13,9 +13,8 @@ import xPPU.ComponentRepository.*;
 
 import xPPU.ElectronicComponents.ElectronicPart;
 import xPPU.ElectronicComponents.Switch;
-
+import xPPU.Identifier.Identifier;
 import xPPU.InterfaceRepository.Interface;
-
 import xPPU.MechanicalComponents.MechanicalPart;
 
 /**
@@ -265,6 +264,14 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseMonostableCylinder(MonostableCylinder object) {
 				return createMonostableCylinderAdapter();
+			}
+			@Override
+			public Adapter caseComponentRepository(ComponentRepository object) {
+				return createComponentRepositoryAdapter();
+			}
+			@Override
+			public Adapter caseIdentifier(Identifier object) {
+				return createIdentifierAdapter();
 			}
 			@Override
 			public Adapter caseInterface(Interface object) {
@@ -971,6 +978,34 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMonostableCylinderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.ComponentRepository.ComponentRepository <em>Component Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.ComponentRepository.ComponentRepository
+	 * @generated
+	 */
+	public Adapter createComponentRepositoryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.Identifier.Identifier <em>Identifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.Identifier.Identifier
+	 * @generated
+	 */
+	public Adapter createIdentifierAdapter() {
 		return null;
 	}
 

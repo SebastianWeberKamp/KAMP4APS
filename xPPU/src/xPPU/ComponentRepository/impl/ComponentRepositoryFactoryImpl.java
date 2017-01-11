@@ -94,6 +94,7 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 			case ComponentRepositoryPackage.PNEUMATIC_SPLITTER: return createPneumaticSplitter();
 			case ComponentRepositoryPackage.CYLINDER_PART: return createCylinderPart();
 			case ComponentRepositoryPackage.MONOSTABLE_CYLINDER: return createMonostableCylinder();
+			case ComponentRepositoryPackage.COMPONENT_REPOSITORY: return createComponentRepository();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -477,6 +478,16 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 	public MonostableCylinder createMonostableCylinder() {
 		MonostableCylinderImpl monostableCylinder = new MonostableCylinderImpl();
 		return monostableCylinder;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComponentRepository createComponentRepository() {
+		ComponentRepositoryImpl componentRepository = new ComponentRepositoryImpl();
+		return componentRepository;
 	}
 
 	/**

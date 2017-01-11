@@ -2,9 +2,11 @@
  */
 package xPPU;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import xPPU.Identifier.IdentifierPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -66,13 +68,49 @@ public interface XPPUPackage extends EPackage {
 	int PLANT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT__ID = IdentifierPackage.IDENTIFIER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Plant Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT__PLANT_NAME = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Structures</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__STRUCTURES = 0;
+	int PLANT__STRUCTURES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Interface Repository</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT__INTERFACE_REPOSITORY = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Component Repository</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT__COMPONENT_REPOSITORY = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Plant</em>' class.
@@ -81,7 +119,7 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_FEATURE_COUNT = 1;
+	int PLANT_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Plant</em>' class.
@@ -90,7 +128,7 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_OPERATION_COUNT = 0;
+	int PLANT_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 
 	/**
@@ -104,6 +142,17 @@ public interface XPPUPackage extends EPackage {
 	EClass getPlant();
 
 	/**
+	 * Returns the meta object for the attribute '{@link xPPU.Plant#getPlantName <em>Plant Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Plant Name</em>'.
+	 * @see xPPU.Plant#getPlantName()
+	 * @see #getPlant()
+	 * @generated
+	 */
+	EAttribute getPlant_PlantName();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link xPPU.Plant#getStructures <em>Structures</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -113,6 +162,28 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPlant_Structures();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link xPPU.Plant#getInterfaceRepository <em>Interface Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Interface Repository</em>'.
+	 * @see xPPU.Plant#getInterfaceRepository()
+	 * @see #getPlant()
+	 * @generated
+	 */
+	EReference getPlant_InterfaceRepository();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link xPPU.Plant#getComponentRepository <em>Component Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Component Repository</em>'.
+	 * @see xPPU.Plant#getComponentRepository()
+	 * @see #getPlant()
+	 * @generated
+	 */
+	EReference getPlant_ComponentRepository();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -148,12 +219,36 @@ public interface XPPUPackage extends EPackage {
 		EClass PLANT = eINSTANCE.getPlant();
 
 		/**
+		 * The meta object literal for the '<em><b>Plant Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PLANT__PLANT_NAME = eINSTANCE.getPlant_PlantName();
+
+		/**
 		 * The meta object literal for the '<em><b>Structures</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference PLANT__STRUCTURES = eINSTANCE.getPlant_Structures();
+
+		/**
+		 * The meta object literal for the '<em><b>Interface Repository</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PLANT__INTERFACE_REPOSITORY = eINSTANCE.getPlant_InterfaceRepository();
+
+		/**
+		 * The meta object literal for the '<em><b>Component Repository</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PLANT__COMPONENT_REPOSITORY = eINSTANCE.getPlant_ComponentRepository();
 
 	}
 

@@ -70,4 +70,12 @@
             genModel="model/xPPU.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xPPU -->
+      <package
+            uri="edu.kit.ipd.sdq.kaps.xppu.identifier"
+            class="xPPU.Identifier.IdentifierPackage"
+            genModel="model/xPPU.genmodel"/>
+   </extension>
+
 </plugin>

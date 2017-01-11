@@ -1,10 +1,10 @@
 /**
  */
-package xPPU.ElectronicComponents.impl;
+package xPPU.Identifier.impl;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
-import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
@@ -16,14 +16,14 @@ import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
 import xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl;
 
-import xPPU.ElectronicComponents.Button;
-import xPPU.ElectronicComponents.ElectronicComponentsFactory;
 import xPPU.ElectronicComponents.ElectronicComponentsPackage;
-import xPPU.ElectronicComponents.ElectronicPart;
-import xPPU.ElectronicComponents.Switch;
 
+import xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
+
+import xPPU.Identifier.Identifier;
+import xPPU.Identifier.IdentifierFactory;
 import xPPU.Identifier.IdentifierPackage;
-import xPPU.Identifier.impl.IdentifierPackageImpl;
+
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
 import xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl;
@@ -50,34 +50,13 @@ import xPPU.impl.XPPUPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ElectronicComponentsPackageImpl extends EPackageImpl implements ElectronicComponentsPackage {
+public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass electronicPartEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass switchEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass ledEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass buttonEClass = null;
+	private EClass identifierEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -90,12 +69,12 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see xPPU.ElectronicComponents.ElectronicComponentsPackage#eNS_URI
+	 * @see xPPU.Identifier.IdentifierPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private ElectronicComponentsPackageImpl() {
-		super(eNS_URI, ElectronicComponentsFactory.eINSTANCE);
+	private IdentifierPackageImpl() {
+		super(eNS_URI, IdentifierFactory.eINSTANCE);
 	}
 
 	/**
@@ -108,7 +87,7 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link ElectronicComponentsPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link IdentifierPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -117,11 +96,11 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static ElectronicComponentsPackage init() {
-		if (isInited) return (ElectronicComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(ElectronicComponentsPackage.eNS_URI);
+	public static IdentifierPackage init() {
+		if (isInited) return (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 
 		// Obtain or create and register package
-		ElectronicComponentsPackageImpl theElectronicComponentsPackage = (ElectronicComponentsPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof ElectronicComponentsPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new ElectronicComponentsPackageImpl());
+		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new IdentifierPackageImpl());
 
 		isInited = true;
 
@@ -129,41 +108,41 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		XPPUPackageImpl theXPPUPackage = (XPPUPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(XPPUPackage.eNS_URI) instanceof XPPUPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(XPPUPackage.eNS_URI) : XPPUPackage.eINSTANCE);
 		ComponentRepositoryPackageImpl theComponentRepositoryPackage = (ComponentRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) instanceof ComponentRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) : ComponentRepositoryPackage.eINSTANCE);
 		BusComponentsPackageImpl theBusComponentsPackage = (BusComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI) instanceof BusComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI) : BusComponentsPackage.eINSTANCE);
+		ElectronicComponentsPackageImpl theElectronicComponentsPackage = (ElectronicComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ElectronicComponentsPackage.eNS_URI) instanceof ElectronicComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ElectronicComponentsPackage.eNS_URI) : ElectronicComponentsPackage.eINSTANCE);
 		MechanicalComponentsPackageImpl theMechanicalComponentsPackage = (MechanicalComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) instanceof MechanicalComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) : MechanicalComponentsPackage.eINSTANCE);
 		StructureRepositoryPackageImpl theStructureRepositoryPackage = (StructureRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) instanceof StructureRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) : StructureRepositoryPackage.eINSTANCE);
 		ModuleRepositoryPackageImpl theModuleRepositoryPackage = (ModuleRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) instanceof ModuleRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) : ModuleRepositoryPackage.eINSTANCE);
 		InterfaceRepositoryPackageImpl theInterfaceRepositoryPackage = (InterfaceRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) instanceof InterfaceRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) : InterfaceRepositoryPackage.eINSTANCE);
-		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
-		theElectronicComponentsPackage.createPackageContents();
+		theIdentifierPackage.createPackageContents();
 		theXPPUPackage.createPackageContents();
 		theComponentRepositoryPackage.createPackageContents();
 		theBusComponentsPackage.createPackageContents();
+		theElectronicComponentsPackage.createPackageContents();
 		theMechanicalComponentsPackage.createPackageContents();
 		theStructureRepositoryPackage.createPackageContents();
 		theModuleRepositoryPackage.createPackageContents();
 		theInterfaceRepositoryPackage.createPackageContents();
-		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theElectronicComponentsPackage.initializePackageContents();
+		theIdentifierPackage.initializePackageContents();
 		theXPPUPackage.initializePackageContents();
 		theComponentRepositoryPackage.initializePackageContents();
 		theBusComponentsPackage.initializePackageContents();
+		theElectronicComponentsPackage.initializePackageContents();
 		theMechanicalComponentsPackage.initializePackageContents();
 		theStructureRepositoryPackage.initializePackageContents();
 		theModuleRepositoryPackage.initializePackageContents();
 		theInterfaceRepositoryPackage.initializePackageContents();
-		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theElectronicComponentsPackage.freeze();
+		theIdentifierPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(ElectronicComponentsPackage.eNS_URI, theElectronicComponentsPackage);
-		return theElectronicComponentsPackage;
+		EPackage.Registry.INSTANCE.put(IdentifierPackage.eNS_URI, theIdentifierPackage);
+		return theIdentifierPackage;
 	}
 
 	/**
@@ -171,8 +150,8 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getElectronicPart() {
-		return electronicPartEClass;
+	public EClass getIdentifier() {
+		return identifierEClass;
 	}
 
 	/**
@@ -180,8 +159,8 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElectronicPart_Pin() {
-		return (EReference)electronicPartEClass.getEStructuralFeatures().get(0);
+	public EAttribute getIdentifier_Id() {
+		return (EAttribute)identifierEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -189,44 +168,8 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getElectronicPart_Physicalconnection() {
-		return (EReference)electronicPartEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getSwitch() {
-		return switchEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getLED() {
-		return ledEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getButton() {
-		return buttonEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ElectronicComponentsFactory getElectronicComponentsFactory() {
-		return (ElectronicComponentsFactory)getEFactoryInstance();
+	public IdentifierFactory getIdentifierFactory() {
+		return (IdentifierFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -248,15 +191,8 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		isCreated = true;
 
 		// Create classes and their features
-		electronicPartEClass = createEClass(ELECTRONIC_PART);
-		createEReference(electronicPartEClass, ELECTRONIC_PART__PIN);
-		createEReference(electronicPartEClass, ELECTRONIC_PART__PHYSICALCONNECTION);
-
-		switchEClass = createEClass(SWITCH);
-
-		ledEClass = createEClass(LED);
-
-		buttonEClass = createEClass(BUTTON);
+		identifierEClass = createEClass(IDENTIFIER);
+		createEAttribute(identifierEClass, IDENTIFIER__ID);
 	}
 
 	/**
@@ -282,30 +218,15 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
-		// Obtain other dependent packages
-		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
-		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
-
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		electronicPartEClass.getESuperTypes().add(theComponentRepositoryPackage.getComponent());
-		switchEClass.getESuperTypes().add(this.getElectronicPart());
-		ledEClass.getESuperTypes().add(this.getElectronicPart());
-		buttonEClass.getESuperTypes().add(this.getElectronicPart());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(electronicPartEClass, ElectronicPart.class, "ElectronicPart", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getElectronicPart_Pin(), theInterfaceRepositoryPackage.getSignalInterface(), null, "pin", null, 1, 1, ElectronicPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getElectronicPart_Physicalconnection(), theInterfaceRepositoryPackage.getPhysicalConnection(), null, "physicalconnection", null, 1, 1, ElectronicPart.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(switchEClass, Switch.class, "Switch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(ledEClass, xPPU.ElectronicComponents.LED.class, "LED", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(identifierEClass, Identifier.class, "Identifier", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getIdentifier_Id(), ecorePackage.getEString(), "id", null, 0, 1, Identifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
-} //ElectronicComponentsPackageImpl
+} //IdentifierPackageImpl

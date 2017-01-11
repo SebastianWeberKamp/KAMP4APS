@@ -13,11 +13,10 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
+import xPPU.Identifier.impl.IdentifierImpl;
 import xPPU.ModuleRepository.Module;
 import xPPU.ModuleRepository.ModuleRepositoryPackage;
 
@@ -38,7 +37,7 @@ import xPPU.StructureRepository.StructureRepositoryPackage;
  *
  * @generated
  */
-public class ModuleImpl extends MinimalEObjectImpl.Container implements Module {
+public class ModuleImpl extends IdentifierImpl implements Module {
 	/**
 	 * The cached value of the '{@link #getModules() <em>Modules</em>}' reference list.
 	 * <!-- begin-user-doc -->

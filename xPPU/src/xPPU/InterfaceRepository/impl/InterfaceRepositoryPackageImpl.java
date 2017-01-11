@@ -20,9 +20,12 @@ import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 
 import xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
+import xPPU.Identifier.IdentifierPackage;
+import xPPU.Identifier.impl.IdentifierPackageImpl;
 import xPPU.InterfaceRepository.Clamping;
 import xPPU.InterfaceRepository.Gearing;
 import xPPU.InterfaceRepository.Interface;
+import xPPU.InterfaceRepository.InterfaceRepository;
 import xPPU.InterfaceRepository.InterfaceRepositoryFactory;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 import xPPU.InterfaceRepository.PhysicalConnection;
@@ -191,6 +194,13 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	private EClass transportConnectionEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass interfaceRepositoryEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -244,6 +254,7 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		MechanicalComponentsPackageImpl theMechanicalComponentsPackage = (MechanicalComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) instanceof MechanicalComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) : MechanicalComponentsPackage.eINSTANCE);
 		StructureRepositoryPackageImpl theStructureRepositoryPackage = (StructureRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) instanceof StructureRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) : StructureRepositoryPackage.eINSTANCE);
 		ModuleRepositoryPackageImpl theModuleRepositoryPackage = (ModuleRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) instanceof ModuleRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) : ModuleRepositoryPackage.eINSTANCE);
+		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theInterfaceRepositoryPackage.createPackageContents();
@@ -254,6 +265,7 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		theMechanicalComponentsPackage.createPackageContents();
 		theStructureRepositoryPackage.createPackageContents();
 		theModuleRepositoryPackage.createPackageContents();
+		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theInterfaceRepositoryPackage.initializePackageContents();
@@ -264,6 +276,7 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		theMechanicalComponentsPackage.initializePackageContents();
 		theStructureRepositoryPackage.initializePackageContents();
 		theModuleRepositoryPackage.initializePackageContents();
+		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theInterfaceRepositoryPackage.freeze();
@@ -522,6 +535,24 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getInterfaceRepository() {
+		return interfaceRepositoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInterfaceRepository_AllInterfacesInPlant() {
+		return (EReference)interfaceRepositoryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public InterfaceRepositoryFactory getInterfaceRepositoryFactory() {
 		return (InterfaceRepositoryFactory)getEFactoryInstance();
 	}
@@ -589,6 +620,9 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 
 		transportConnectionEClass = createEClass(TRANSPORT_CONNECTION);
 		createEReference(transportConnectionEClass, TRANSPORT_CONNECTION__INTEFACE_PART);
+
+		interfaceRepositoryEClass = createEClass(INTERFACE_REPOSITORY);
+		createEReference(interfaceRepositoryEClass, INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT);
 	}
 
 	/**
@@ -614,11 +648,15 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		setNsPrefix(eNS_PREFIX);
 		setNsURI(eNS_URI);
 
+		// Obtain other dependent packages
+		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
+
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		interfaceEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 		screwingEClass.getESuperTypes().add(this.getInterface());
 		screwingSplitterEClass.getESuperTypes().add(this.getScrewing());
 		screwingMotorEClass.getESuperTypes().add(this.getScrewing());
@@ -636,6 +674,7 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		waterSupplyEClass.getESuperTypes().add(this.getInterface());
 		physicalConnectionEClass.getESuperTypes().add(this.getInterface());
 		transportConnectionEClass.getESuperTypes().add(this.getInterface());
+		interfaceRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(interfaceEClass, Interface.class, "Interface", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -682,6 +721,9 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 
 		initEClass(transportConnectionEClass, TransportConnection.class, "TransportConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTransportConnection_IntefacePart(), this.getInterface(), null, "intefacePart", null, 1, 1, TransportConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(interfaceRepositoryEClass, InterfaceRepository.class, "InterfaceRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInterfaceRepository_AllInterfacesInPlant(), this.getInterface(), null, "allInterfacesInPlant", null, 0, -1, InterfaceRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //InterfaceRepositoryPackageImpl

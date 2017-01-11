@@ -3,22 +3,19 @@
 package xPPU.ComponentRepository.impl;
 
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
+import xPPU.Identifier.impl.IdentifierImpl;
 import xPPU.InterfaceRepository.Interface;
 
 /**
@@ -34,7 +31,7 @@ import xPPU.InterfaceRepository.Interface;
  *
  * @generated
  */
-public abstract class ComponentImpl extends MinimalEObjectImpl.Container implements Component {
+public abstract class ComponentImpl extends IdentifierImpl implements Component {
 	/**
 	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EReference;
 
 import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 
+import xPPU.Identifier.IdentifierPackage;
 import xPPU.MechanicalComponents.MechanicalComponentsPackage;
 
 /**
@@ -70,13 +71,22 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int COMPONENT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__ID = IdentifierPackage.IDENTIFIER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__INTERFACES = 0;
+	int COMPONENT__INTERFACES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Component</em>' class.
@@ -85,7 +95,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = 1;
+	int COMPONENT_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -94,7 +104,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_OPERATION_COUNT = 0;
+	int COMPONENT_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.PanelImpl <em>Panel</em>}' class.
@@ -107,13 +117,22 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PANEL = 1;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PANEL__ID = IdentifierPackage.IDENTIFIER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Component Repository</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PANEL__COMPONENT_REPOSITORY = 0;
+	int PANEL__COMPONENT_REPOSITORY = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Panel</em>' class.
@@ -122,7 +141,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PANEL_FEATURE_COUNT = 1;
+	int PANEL_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Panel</em>' class.
@@ -131,7 +150,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PANEL_OPERATION_COUNT = 0;
+	int PANEL_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.OperationPanelImpl <em>Operation Panel</em>}' class.
@@ -142,6 +161,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int OPERATION_PANEL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATION_PANEL__ID = PANEL__ID;
 
 	/**
 	 * The feature id for the '<em><b>Component Repository</b></em>' reference.
@@ -208,6 +236,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int MOTOR = 3;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTOR__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -270,6 +307,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int SIMPLE_MOTOR = 4;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MOTOR__ID = MOTOR__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -336,6 +382,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int MECHANICAL_ASSEMBLY = 5;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MECHANICAL_ASSEMBLY__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -371,6 +426,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int RAMP = 37;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAMP__ID = MECHANICAL_ASSEMBLY__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -437,6 +501,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int REGULAR_RAMP = 6;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_RAMP__ID = RAMP__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -499,6 +572,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int SENSOR = 7;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR__ID = COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -565,6 +647,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int OPTICAL_SENSOR = 8;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTICAL_SENSOR__ID = SENSOR__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -627,6 +718,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int INDUCTIVE_SENSOR = 9;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDUCTIVE_SENSOR__ID = SENSOR__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -693,6 +793,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PRESENCE_SENSOR = 10;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESENCE_SENSOR__ID = SENSOR__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -757,6 +866,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PIPE = 11;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPE__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -803,6 +921,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PNEUMATIC_PIPE = 12;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_PIPE__ID = PIPE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -847,6 +974,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int COMPRESSOR = 13;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPRESSOR__ID = COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -931,6 +1067,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CABLE = 14;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CABLE__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -968,6 +1113,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int POWER_CABLE = 15;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_CABLE__ID = CABLE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1003,6 +1157,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int CYLINDER = 16;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYLINDER__ID = COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -1060,6 +1223,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PROPORTIONAL_CYLINDER = 17;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPORTIONAL_CYLINDER__ID = CYLINDER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1113,6 +1285,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int BISTABLE_CYLINDER = 18;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BISTABLE_CYLINDER__ID = CYLINDER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -1170,6 +1351,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int RACK = 19;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RACK__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1216,6 +1406,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CORNER = 20;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORNER__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1251,6 +1450,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int VALVE = 21;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALVE__ID = COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -1317,6 +1525,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int REGULAR_VALVE = 22;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_VALVE__ID = VALVE__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1381,6 +1598,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int TANK = 23;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TANK__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1436,6 +1662,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int DISPENSER = 24;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISPENSER__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1471,6 +1706,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int BOTTLE_SEPERATOR = 25;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOTTLE_SEPERATOR__ID = COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -1546,6 +1790,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int SPLITTER = 26;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPLITTER__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1592,6 +1845,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int POWER_SUPPLY = 27;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_SUPPLY__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1627,6 +1889,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int VACUUM_GRIPPER = 28;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER__ID = COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -1711,6 +1982,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CONVEYOR_BELT = 29;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVEYOR_BELT__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1775,6 +2055,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int FRAME = 30;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAME__ID = MECHANICAL_ASSEMBLY__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1810,6 +2099,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int RUBBER_BAND = 31;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUBBER_BAND__ID = MechanicalComponentsPackage.MECHANICAL_PART__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -1856,6 +2154,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int PUSHER = 32;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUSHER__ID = COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -1938,6 +2245,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int TURNING_TABLE = 33;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_TABLE__ID = COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -2040,6 +2356,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CONTROLLER = 34;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROLLER__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2104,6 +2429,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int LOGICAL_WIRING = 35;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_WIRING__ID = COMPONENT__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2148,6 +2482,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int ARM = 36;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARM__ID = MECHANICAL_ASSEMBLY__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -2196,6 +2539,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int TABLE = 38;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__ID = MECHANICAL_ASSEMBLY__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2233,6 +2585,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int GRIPPER_PART = 39;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRIPPER_PART__ID = MECHANICAL_ASSEMBLY__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2268,6 +2629,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int MICROSWITCH_MODULE = 40;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICROSWITCH_MODULE__ID = ElectronicComponentsPackage.SWITCH__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -2334,6 +2704,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int VACUUM_SWITCH = 41;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_SWITCH__ID = ElectronicComponentsPackage.SWITCH__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2387,6 +2766,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int REED_SWITCH = 42;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REED_SWITCH__ID = ElectronicComponentsPackage.SWITCH__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -2444,6 +2832,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int POWER_SPLITTER = 43;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_SPLITTER__ID = SPLITTER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2497,6 +2894,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int WATER_SPLITTER = 44;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WATER_SPLITTER__ID = SPLITTER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -2554,6 +2960,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PNEUMATIC_SPLITTER = 45;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_SPLITTER__ID = SPLITTER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2609,6 +3024,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CYLINDER_PART = 46;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYLINDER_PART__ID = MechanicalComponentsPackage.MECHANICAL_PART__ID;
+
+	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2653,6 +3077,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	int MONOSTABLE_CYLINDER = 47;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER__ID = CYLINDER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
@@ -2752,6 +3185,53 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int MONOSTABLE_CYLINDER_OPERATION_COUNT = CYLINDER_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.ComponentRepositoryImpl <em>Component Repository</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryImpl
+	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getComponentRepository()
+	 * @generated
+	 */
+	int COMPONENT_REPOSITORY = 48;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_REPOSITORY__ID = IdentifierPackage.IDENTIFIER__ID;
+
+	/**
+	 * The feature id for the '<em><b>All Components In Plant</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_REPOSITORY__ALL_COMPONENTS_IN_PLANT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Component Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_REPOSITORY_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Component Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_REPOSITORY_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 
 	/**
@@ -3983,6 +4463,27 @@ public interface ComponentRepositoryPackage extends EPackage {
 	EReference getMonostableCylinder_BusSlave();
 
 	/**
+	 * Returns the meta object for class '{@link xPPU.ComponentRepository.ComponentRepository <em>Component Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Component Repository</em>'.
+	 * @see xPPU.ComponentRepository.ComponentRepository
+	 * @generated
+	 */
+	EClass getComponentRepository();
+
+	/**
+	 * Returns the meta object for the reference list '{@link xPPU.ComponentRepository.ComponentRepository#getAllComponentsInPlant <em>All Components In Plant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>All Components In Plant</em>'.
+	 * @see xPPU.ComponentRepository.ComponentRepository#getAllComponentsInPlant()
+	 * @see #getComponentRepository()
+	 * @generated
+	 */
+	EReference getComponentRepository_AllComponentsInPlant();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5028,6 +5529,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MONOSTABLE_CYLINDER__BUS_SLAVE = eINSTANCE.getMonostableCylinder_BusSlave();
+
+		/**
+		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.ComponentRepositoryImpl <em>Component Repository</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xPPU.ComponentRepository.impl.ComponentRepositoryImpl
+		 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getComponentRepository()
+		 * @generated
+		 */
+		EClass COMPONENT_REPOSITORY = eINSTANCE.getComponentRepository();
+
+		/**
+		 * The meta object literal for the '<em><b>All Components In Plant</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_REPOSITORY__ALL_COMPONENTS_IN_PLANT = eINSTANCE.getComponentRepository_AllComponentsInPlant();
 
 	}
 
