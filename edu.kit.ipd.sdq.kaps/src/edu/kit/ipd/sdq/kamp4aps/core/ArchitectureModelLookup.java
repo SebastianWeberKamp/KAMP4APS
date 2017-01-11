@@ -73,8 +73,8 @@ public class ArchitectureModelLookup {
 		// remove BusCables that are not connected to the BusBoxes
 		EList<BusCable> cablesToRemove = new BasicEList<BusCable>();
 		for(BusCable bc : busCables){
-			if(!(interfacesOfBusBox.contains(bc.getSignalPlug1()) ||
-					interfacesOfBusBox.contains(bc.getSignalPlug2())))
+			if(interfacesOfBusBox.contains(bc.getSignalPlug1()) ||
+					interfacesOfBusBox.contains(bc.getSignalPlug2()))
 				cablesToRemove.add(bc);
 		}
 		for(BusCable bc : cablesToRemove){
