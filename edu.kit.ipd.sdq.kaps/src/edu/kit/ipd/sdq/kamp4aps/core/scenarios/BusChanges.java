@@ -27,7 +27,7 @@ public class BusChanges {
 		version = v;
 	}
 
-	public Collection<BusBox> getInitialMarkedBusBox() {
+	public Collection<BusBox> getInitialMarkedBusBoxes() {
 		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusBox.class);
 	}
 	public Collection<BusMaster> getInitialMarkedBusMaster() {
@@ -42,7 +42,7 @@ public class BusChanges {
 	}
 
 	public ModifyBusBox<BusBox> createNewModifyBusBox(BusBox busBox) {
-		Collection<BusBox> initialMarkedBusBoxes = getInitialMarkedBusBox();
+		Collection<BusBox> initialMarkedBusBoxes = getInitialMarkedBusBoxes();
 		ModifyBusBox<BusBox> modifyBusBox = modificationmarksFactory.eINSTANCE.createModifyBusBox();
 		modifyBusBox.setToolderived(true);
 		modifyBusBox.setAffectedElement(busBox);
@@ -62,13 +62,21 @@ public class BusChanges {
 		ModifyBusSlave<BusSlave> modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
 		modifyBusSlave.setToolderived(true);
 		modifyBusSlave.setAffectedElement(busSlave);
-		modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusMaster());
+		modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusSlave());
 		return modifyBusSlave;
+	}
+	
+	public ModifyBusCable<BusCable> createNewModifyBusCable(BusCable busCable) {
+		ModifyBusCable<BusCable> modifyBusCable = modificationmarksFactory.eINSTANCE.createModifyBusCable();
+		modifyBusCable.setToolderived(true);
+		modifyBusCable.setAffectedElement(busCable);
+		modifyBusCable.getCausingElements().addAll(getInitialMarkedBusCable());
+		return modifyBusCable;
 	}
 	
 	public void markChangesBasedOnBusBox(BusBox busBox, ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
 		SignalInterface siMaster = busBox.getSignalinterface_master();
-		
+
 		Plant xPPUPlant = version.getXPPUPlant();
 		EList<Component> xppuComponents = xPPUPlant.getComponentRepository().getAllComponentsInPlant();
 		if(siMaster != null){
@@ -81,7 +89,7 @@ public class BusChanges {
 							ModifyBusMaster<BusMaster> modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
 							modifyBusMaster.setToolderived(true);
 							modifyBusMaster.setAffectedElement(bm);
-							modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusBox());
+							modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusBoxes());
 							changePropagationDueToHardwareChange.getBusMasterModifications().add(modifyBusMaster);
 						}
 					}
@@ -100,7 +108,7 @@ public class BusChanges {
 							ModifyBusSlave<BusSlave> modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
 							modifyBusSlave.setToolderived(true);
 							modifyBusSlave.setAffectedElement(bs);
-							modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusBox());
+							modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusBoxes());
 							changePropagationDueToHardwareChange.getBusSlaveModifications().add(modifyBusSlave);
 						}
 					}
@@ -109,7 +117,7 @@ public class BusChanges {
 					ModifyBusCable<BusCable> modifyBusCable = modificationmarksFactory.eINSTANCE.createModifyBusCable();
 					modifyBusCable.setToolderived(true);
 					modifyBusCable.setAffectedElement(busCable);
-					modifyBusCable.getCausingElements().addAll(getInitialMarkedBusBox());
+					modifyBusCable.getCausingElements().addAll(getInitialMarkedBusBoxes());
 					changePropagationDueToHardwareChange.getBusCableModifications().add(modifyBusCable);
 				}
 			}

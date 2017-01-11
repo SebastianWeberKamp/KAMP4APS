@@ -71,10 +71,14 @@ public class ArchitectureModelLookup {
 		}
 		
 		// remove BusCables that are not connected to the BusBoxes
+		EList<BusCable> cablesToRemove = new BasicEList<BusCable>();
 		for(BusCable bc : busCables){
 			if(!(interfacesOfBusBox.contains(bc.getSignalPlug1()) ||
 					interfacesOfBusBox.contains(bc.getSignalPlug2())))
-				busCables.remove(bc);
+				cablesToRemove.add(bc);
+		}
+		for(BusCable bc : cablesToRemove){
+			busCables.remove(bc);
 		}
 		
 		// Getting all Interfaces from the BusCables
@@ -108,13 +112,17 @@ public class ArchitectureModelLookup {
 		}
 		
 		// Get all BusMasters that are connected to the BusBoxes
+		EList<BusMaster> mastersToRemove = new BasicEList<BusMaster>();
 		for(BusMaster bm : busMasters){
 			for(Interface si : bm.getSignalinterfaces()){
 				if(!(interfacesOfBusCables.contains(si) || 
 					interfacesOfBusCables.contains(bm.getSignalinterface_controller()))){
-					busMasters.remove(bm);
+					mastersToRemove.add(bm);
 				}
 			}
+		}
+		for(BusMaster bm : mastersToRemove){
+			busMasters.remove(bm);
 		}
 		
 		// Getting all BusSlaves in the System
@@ -125,11 +133,15 @@ public class ArchitectureModelLookup {
 		}
 		
 		// Get all BusSlaves that are connected to the BusBoxes
+		EList<BusSlave> slavesToRemove = new BasicEList<BusSlave>();
 		for(BusSlave bs : busSlaves){
 			if(!(interfacesOfBusCables.contains(bs.getSignalinterface_master()) || 
 				interfacesOfBusCables.contains(bs.getSignalinterface_slave()))){
-				busSlaves.remove(bs);
+				slavesToRemove.add(bs);
 			}
+		}
+		for(BusSlave bs : slavesToRemove){
+			busSlaves.remove(bs);
 		}
 	
 		BusComponentsParams bcParams = new BusComponentsParams();

@@ -4,13 +4,16 @@ import java.util.ArrayList;
 import java.util.Collection;
 import edu.kit.ipd.sdq.amp.propagation.AbstractChangePropagationAnalysis;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SwitchChanges;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureModelLookup.BusComponentsParams;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.BusChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SensorChanges;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusCable;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
 import xPPU.BusComponents.BusBox;
+import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusMaster;
 import xPPU.BusComponents.BusSlave;
 import xPPU.ComponentRepository.MicroswitchModule;
@@ -79,16 +82,32 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 	 */
 	protected void calculateAndMarkBusBoxChange(S version){
 		scenarioTwo = new BusChanges(version);
-		addBusBoxModifications();
+		addBusBoxModifications(version);
 		addBusMasterModifications();
 		addBusSlaveModifications();
 	}
 	
-		private void addBusBoxModifications() {
-			for(BusBox busBox : scenarioTwo.getInitialMarkedBusBox()){
+		private void addBusBoxModifications(S version) {
+			BusComponentsParams params = ArchitectureModelLookup.lookUpBusCablesBasedOnBusBoxChanges(version, scenarioTwo.getInitialMarkedBusBoxes());
+			for(BusBox busBox : params.busBoxes){
 				ModifyBusBox<BusBox> modifyBusBox = scenarioTwo.createNewModifyBusBox(busBox);
 				changePropagationDueToHardwareChange.getBusBoxModifications().add(modifyBusBox);
-				scenarioTwo.markChangesBasedOnBusBox(busBox, changePropagationDueToHardwareChange);
+//				scenarioTwo.markChangesBasedOnBusBox(busBox, changePropagationDueToHardwareChange);
+			}
+			for(BusMaster busMaster : params.busMasters){
+				ModifyBusMaster<BusMaster> modifyBusMaster = scenarioTwo.createNewModifyBusMaster(busMaster);
+				changePropagationDueToHardwareChange.getBusMasterModifications().add(modifyBusMaster);
+//				scenarioTwo.markChangesBasedOnBusMaster(busMaster, changePropagationDueToHardwareChange);
+			}
+			for(BusSlave busSlave : params.busSlaves){
+				ModifyBusSlave<BusSlave> modifyBusSlave = scenarioTwo.createNewModifyBusSlave(busSlave);
+				changePropagationDueToHardwareChange.getBusSlaveModifications().add(modifyBusSlave);
+//				scenarioTwo.markChangesBasedOnBusSlave(busSlave, changePropagationDueToHardwareChange);
+			}
+			for(BusCable busCable : params.busCables){
+				ModifyBusCable<BusCable> modifyBusCable = scenarioTwo.createNewModifyBusCable(busCable);
+				changePropagationDueToHardwareChange.getBusCableModifications().add(modifyBusCable);
+//				scenarioTwo.markChangesBasedOnBusCable(busCable, changePropagationDueToHardwareChange);
 			}
 		}
 		
