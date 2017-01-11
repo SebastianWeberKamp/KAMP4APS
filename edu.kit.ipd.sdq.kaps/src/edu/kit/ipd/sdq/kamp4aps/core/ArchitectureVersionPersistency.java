@@ -11,8 +11,6 @@ import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion.ArchitectureVersionPara
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
 import xPPU.Plant;
-import xPPU.XPPUPackage;
-import xPPU.InterfaceRepository.InterfaceRepository;
 
 public class ArchitectureVersionPersistency extends AbstractKAPSArchitectureVersionPersistency<ArchitectureVersion> {	
 	

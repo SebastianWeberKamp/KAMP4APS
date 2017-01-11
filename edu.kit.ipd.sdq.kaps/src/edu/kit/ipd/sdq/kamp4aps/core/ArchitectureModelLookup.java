@@ -49,114 +49,168 @@ public class ArchitectureModelLookup {
 		return results;
 	}
 	
-	public static BusComponentsParams lookUpBusCablesBasedOnBusBoxChanges(ArchitectureVersion version,
+	public static BusComponentsParams lookUpChangesBasedOnBusModification(ArchitectureVersion version,
 			Collection<BusBox> initialMarkedBusBoxes){
 		EList<Component> allComponents = version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant();
+		BusComponentsParams bcParams = initBusComponentParams(initialMarkedBusBoxes);
+		setAllBusComponentsInParams(allComponents, bcParams);
 		
-		// Getting all Interfaces from the BusBoxes
-		EList<Interface> interfacesOfBusBox = new BasicEList<Interface>();
-		for(BusBox bb : initialMarkedBusBoxes){
-			interfacesOfBusBox.add(bb.getPowersupply());
-			interfacesOfBusBox.add(bb.getSignalinterface_box());
-			interfacesOfBusBox.add(bb.getSignalinterface_master());
-			for(SignalInterface si : bb.getSignalinterfaces())
-				interfacesOfBusBox.add(si);
-		}
+		EList<Interface> interfacesOfBusBoxes = getAllInterfacesOfMarkedBusBoxes(bcParams.busBoxesToChange);
+		EList<Interface> interfacesOfBusMasters = getAllInterfacesOfMarkedBusMasters(bcParams.busMastersToChange);
+		EList<Interface> interfacesOfBusSlaves = getAllInterfacesOfMarkedBusSlaves(bcParams.busSlavesToChange);
+		EList<Interface> interfacesOfBusCables = getAllInterfacesOfMarkedBusCables(bcParams.busCablesToChange);
 		
-		// Getting all BusCables in the System
-		EList<BusCable> busCables = new BasicEList<BusCable>();
-		for(Component component : allComponents){
-			if(component instanceof BusCable)
-				busCables.add((BusCable)component);
-		}
+		removeAllBusCablesThatAreNotConnectedToBusComponent(bcParams, interfacesOfBusBoxes);
+		removeAllBusCablesThatAreNotConnectedToBusComponent(bcParams, interfacesOfBusMasters);
+		removeAllBusCablesThatAreNotConnectedToBusComponent(bcParams, interfacesOfBusSlaves);
 		
-		// remove BusCables that are not connected to the BusBoxes
-		EList<BusCable> cablesToRemove = new BasicEList<BusCable>();
-		for(BusCable bc : busCables){
-			if(interfacesOfBusBox.contains(bc.getSignalPlug1()) ||
-					interfacesOfBusBox.contains(bc.getSignalPlug2()))
-				cablesToRemove.add(bc);
-		}
-		for(BusCable bc : cablesToRemove){
-			busCables.remove(bc);
-		}
 		
-		// Getting all Interfaces from the BusCables
-		EList<Interface> interfacesOfBusCables = new BasicEList<Interface>();
-		for(BusCable bc : busCables){
-			interfacesOfBusCables.add(bc.getSignalPlug1());
-			interfacesOfBusCables.add(bc.getSignalPlug2());
-		}
+		addAllBusMastersThatAreConnectedToTheBusCables(bcParams, interfacesOfBusCables);
 		
-		// Getting all Interfaces that are connect BusBox with BusCable
-		EList<Interface> doubleInterfaces = new BasicEList<Interface>();
-		for(Interface busBoxInterface : interfacesOfBusBox){
-			for(Interface busCableInterface : interfacesOfBusCables){
-				if(busBoxInterface == busCableInterface)
-					doubleInterfaces.add(busBoxInterface);
+		addAllBusSlavessThatAreConnectedToTheBusCables(bcParams, interfacesOfBusCables);
+		return bcParams;
+	}
+
+	private static void addAllBusSlavessThatAreConnectedToTheBusCables(BusComponentsParams bcParams,
+			EList<Interface> interfacesOfBusCables) {
+		EList<BusSlave> slavesToAdd = new BasicEList<BusSlave>();
+		for(BusSlave bs : bcParams.allBusSlaves){
+			if(!(interfacesOfBusCables.contains(bs.getSignalinterface_master()) || 
+				interfacesOfBusCables.contains(bs.getSignalinterface_slave()))){
+				slavesToAdd.add(bs);
 			}
 		}
-		
-		// Remove connection between BusBox and BusCable
-		// to get the remaining Interfaces which are connected
-		// to BusMasters and BusSlaves
-		for(Interface ifce : doubleInterfaces){
-			interfacesOfBusCables.remove(ifce);
+		for(BusSlave bs : slavesToAdd){
+			bcParams.busSlavesToChange.add(bs);
 		}
-		
-		// Getting all BusMasters in the System
-		EList<BusMaster> busMasters = new BasicEList<BusMaster>();
-		for(Component component : allComponents){
-			if(component instanceof BusMaster)
-				busMasters.add((BusMaster)component);
-		}
-		
-		// Get all BusMasters that are connected to the BusBoxes
-		EList<BusMaster> mastersToRemove = new BasicEList<BusMaster>();
-		for(BusMaster bm : busMasters){
+	}
+
+	private static void addAllBusMastersThatAreConnectedToTheBusCables(BusComponentsParams bcParams,
+			EList<Interface> interfacesOfBusCables) {
+		EList<BusMaster> mastersToAdd = new BasicEList<BusMaster>();
+		for(BusMaster bm : bcParams.allBusMasters){
 			for(Interface si : bm.getSignalinterfaces()){
 				if(!(interfacesOfBusCables.contains(si) || 
 					interfacesOfBusCables.contains(bm.getSignalinterface_controller()))){
-					mastersToRemove.add(bm);
+					mastersToAdd.add(bm);
 				}
 			}
 		}
-		for(BusMaster bm : mastersToRemove){
-			busMasters.remove(bm);
+		for(BusMaster bm : mastersToAdd){
+			bcParams.busMastersToChange.add(bm);
+		}
+	}
+
+	private static void setAllBusComponentsInParams(EList<Component> allComponents, BusComponentsParams bcParams) {
+		getAllBusBoxesInTheSystem(allComponents, bcParams);			
+		getAllBusMastersInTheSystem(allComponents, bcParams);
+		getAllBusSlavesInTheSystem(allComponents, bcParams);
+		getAllBusCablesInTheSystem(allComponents, bcParams);
+	}
+
+		private static BusComponentsParams initBusComponentParams(Collection<BusBox> initialMarkedBusBoxes) {
+			BusComponentsParams bcParams = new BusComponentsParams();
+			bcParams.busBoxesToChange = new HashSet<BusBox>(initialMarkedBusBoxes);
+			bcParams.busMastersToChange = new HashSet<BusMaster>();
+			bcParams.busSlavesToChange = new HashSet<BusSlave>();
+			bcParams.busCablesToChange = new HashSet<BusCable>();
+			bcParams.allBusBoxes = new HashSet<BusBox>();
+			bcParams.allBusMasters = new HashSet<BusMaster>();
+			bcParams.allBusSlaves = new HashSet<BusSlave>();
+			bcParams.allBusCables = new HashSet<BusCable>();
+			return bcParams;
 		}
 		
-		// Getting all BusSlaves in the System
-		EList<BusSlave> busSlaves = new BasicEList<BusSlave>();
-		for(Component component : allComponents){
-			if(component instanceof BusSlave)
-				busSlaves.add((BusSlave)component);
-		}
-		
-		// Get all BusSlaves that are connected to the BusBoxes
-		EList<BusSlave> slavesToRemove = new BasicEList<BusSlave>();
-		for(BusSlave bs : busSlaves){
-			if(!(interfacesOfBusCables.contains(bs.getSignalinterface_master()) || 
-				interfacesOfBusCables.contains(bs.getSignalinterface_slave()))){
-				slavesToRemove.add(bs);
+		private static void removeAllBusCablesThatAreNotConnectedToBusComponent(BusComponentsParams bcParams,
+				EList<Interface> interfacesOfBusComponent) {
+			EList<BusCable> cablesToAdd = new BasicEList<BusCable>();
+			for(BusCable bc : bcParams.allBusCables){
+				if(!(interfacesOfBusComponent.contains(bc.getSignalPlug1()) ||
+						interfacesOfBusComponent.contains(bc.getSignalPlug2())))
+					cablesToAdd.add(bc);
+			}
+			for(BusCable bc : cablesToAdd){
+				bcParams.busCablesToChange.add(bc);
 			}
 		}
-		for(BusSlave bs : slavesToRemove){
-			busSlaves.remove(bs);
+	
+		private static void getAllBusBoxesInTheSystem(EList<Component> allComponents, BusComponentsParams bcParams) {
+			for(Component component : allComponents){
+				if(component instanceof BusBox)
+					bcParams.allBusBoxes.add((BusBox)component);
+			}
+		}
+		
+		private static void getAllBusMastersInTheSystem(EList<Component> allComponents, BusComponentsParams bcParams) {
+			for(Component component : allComponents){
+				if(component instanceof BusMaster)
+					bcParams.allBusMasters.add((BusMaster)component);
+			}
+		}
+		
+		private static void getAllBusSlavesInTheSystem(EList<Component> allComponents, BusComponentsParams bcParams) {
+			for(Component component : allComponents){
+				if(component instanceof BusSlave)
+					bcParams.allBusSlaves.add((BusSlave)component);
+			}
+		}
+		
+		private static void getAllBusCablesInTheSystem(EList<Component> allComponents, BusComponentsParams bcParams) {
+			for(Component component : allComponents){
+				if(component instanceof BusCable)
+					bcParams.allBusCables.add((BusCable)component);
+			}
+		}
+
+		private static EList<Interface> getAllInterfacesOfMarkedBusBoxes(Collection<BusBox> markedBusBoxes) {
+			EList<Interface> interfacesOfBusBox = new BasicEList<Interface>();
+			for(BusBox bb : markedBusBoxes){
+				interfacesOfBusBox.add(bb.getPowersupply());
+				interfacesOfBusBox.add(bb.getSignalinterface_box());
+				interfacesOfBusBox.add(bb.getSignalinterface_master());
+				for(SignalInterface si : bb.getSignalinterfaces())
+					interfacesOfBusBox.add(si);
+			}
+			return interfacesOfBusBox;
+		}
+		
+		private static EList<Interface> getAllInterfacesOfMarkedBusMasters(Collection<BusMaster> markedBusMasters) {
+			EList<Interface> interfacesOfBusMasters = new BasicEList<Interface>();
+			for(BusMaster bm : markedBusMasters){
+				interfacesOfBusMasters.add(bm.getSignalinterface_controller());
+				for(SignalInterface si : bm.getSignalinterfaces())
+					interfacesOfBusMasters.add(si);
+			}
+			return interfacesOfBusMasters;
+		}
+		
+		private static EList<Interface> getAllInterfacesOfMarkedBusSlaves(Collection<BusSlave> markedBusSlaves) {
+			EList<Interface> interfacesOfBusSlaves = new BasicEList<Interface>();
+			for(BusSlave bs : markedBusSlaves){
+				interfacesOfBusSlaves.add(bs.getSignalinterface_master());
+				interfacesOfBusSlaves.add(bs.getSignalinterface_slave());
+			}
+			return interfacesOfBusSlaves;
+		}
+		
+		private static EList<Interface> getAllInterfacesOfMarkedBusCables(Collection<BusCable> markedBusCables) {
+			EList<Interface> interfacesOfBusCables = new BasicEList<Interface>();
+			for(BusCable bc : markedBusCables){
+				interfacesOfBusCables.add(bc.getSignalPlug1());
+				interfacesOfBusCables.add(bc.getSignalPlug2());
+			}
+			return interfacesOfBusCables;
 		}
 	
-		BusComponentsParams bcParams = new BusComponentsParams();
-		bcParams.busBoxes = initialMarkedBusBoxes;
-		bcParams.busMasters = busMasters;
-		bcParams.busSlaves = busSlaves;
-		bcParams.busCables = busCables;
-		
-		return bcParams;
-	}
 	public static class BusComponentsParams{
-		public Collection<BusBox> busBoxes;
-		public Collection<BusMaster> busMasters;
-		public Collection<BusSlave> busSlaves;
-		public Collection<BusCable> busCables;
+		public Set<BusBox> busBoxesToChange;
+		public Set<BusMaster> busMastersToChange;
+		public Set<BusSlave> busSlavesToChange;
+		public Set<BusCable> busCablesToChange;
+		public Set<BusBox> allBusBoxes;
+		public Set<BusMaster> allBusMasters;
+		public Set<BusSlave> allBusSlaves;
+		public Set<BusCable> allBusCables;
 	}
 	
 }
