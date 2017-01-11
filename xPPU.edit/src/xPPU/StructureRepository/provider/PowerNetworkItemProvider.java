@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.StructureRepository.PowerNetwork;
 
 /**
  * This is the item provider adapter for a {@link xPPU.StructureRepository.PowerNetwork} object.
@@ -62,7 +63,10 @@ public class PowerNetworkItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PowerNetwork_type");
+		String label = ((PowerNetwork)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PowerNetwork_type") :
+			getString("_UI_PowerNetwork_type") + " " + label;
 	}
 	
 

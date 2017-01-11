@@ -12,6 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import xPPU.InterfaceRepository.Clamping;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
 /**
@@ -88,7 +89,10 @@ public class ClampingItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Clamping_type");
+		String label = ((Clamping)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Clamping_type") :
+			getString("_UI_Clamping_type") + " " + label;
 	}
 	
 

@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.InterfaceRepository.ScrewingRack;
 
 /**
  * This is the item provider adapter for a {@link xPPU.InterfaceRepository.ScrewingRack} object.
@@ -62,7 +63,10 @@ public class ScrewingRackItemProvider extends ScrewingItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ScrewingRack_type");
+		String label = ((ScrewingRack)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ScrewingRack_type") :
+			getString("_UI_ScrewingRack_type") + " " + label;
 	}
 	
 

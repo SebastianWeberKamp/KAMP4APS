@@ -12,6 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import xPPU.ComponentRepository.Arm;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
 /**
@@ -88,7 +89,10 @@ public class ArmItemProvider extends MechanicalAssemblyItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Arm_type");
+		String label = ((Arm)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Arm_type") :
+			getString("_UI_Arm_type") + " " + label;
 	}
 	
 

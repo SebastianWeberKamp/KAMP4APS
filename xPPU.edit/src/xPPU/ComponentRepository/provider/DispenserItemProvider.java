@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.ComponentRepository.Dispenser;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.Dispenser} object.
@@ -62,7 +63,10 @@ public class DispenserItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Dispenser_type");
+		String label = ((Dispenser)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Dispenser_type") :
+			getString("_UI_Dispenser_type") + " " + label;
 	}
 	
 

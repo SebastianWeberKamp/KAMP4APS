@@ -106,7 +106,10 @@ public class MicroswitchModuleItemProvider extends SwitchItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_MicroswitchModule_type");
+		String label = ((MicroswitchModule)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MicroswitchModule_type") :
+			getString("_UI_MicroswitchModule_type") + " " + label;
 	}
 	
 

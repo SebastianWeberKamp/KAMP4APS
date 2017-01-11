@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.MechanicalComponents.Housing;
 
 /**
  * This is the item provider adapter for a {@link xPPU.MechanicalComponents.Housing} object.
@@ -62,7 +63,10 @@ public class HousingItemProvider extends MechanicalPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Housing_type");
+		String label = ((Housing)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Housing_type") :
+			getString("_UI_Housing_type") + " " + label;
 	}
 	
 

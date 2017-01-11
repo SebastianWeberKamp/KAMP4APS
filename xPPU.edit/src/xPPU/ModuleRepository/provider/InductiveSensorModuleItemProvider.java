@@ -103,7 +103,10 @@ public class InductiveSensorModuleItemProvider extends ModuleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_InductiveSensorModule_type");
+		String label = ((InductiveSensorModule)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_InductiveSensorModule_type") :
+			getString("_UI_InductiveSensorModule_type") + " " + label;
 	}
 	
 

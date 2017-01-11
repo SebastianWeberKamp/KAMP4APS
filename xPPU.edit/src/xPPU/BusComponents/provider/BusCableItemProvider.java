@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusComponentsPackage;
 
 import xPPU.ComponentRepository.provider.CableItemProvider;
@@ -117,7 +118,10 @@ public class BusCableItemProvider extends CableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_BusCable_type");
+		String label = ((BusCable)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_BusCable_type") :
+			getString("_UI_BusCable_type") + " " + label;
 	}
 	
 

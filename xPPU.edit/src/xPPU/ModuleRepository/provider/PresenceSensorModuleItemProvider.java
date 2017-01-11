@@ -103,7 +103,10 @@ public class PresenceSensorModuleItemProvider extends ModuleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PresenceSensorModule_type");
+		String label = ((PresenceSensorModule)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PresenceSensorModule_type") :
+			getString("_UI_PresenceSensorModule_type") + " " + label;
 	}
 	
 

@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
+import xPPU.ComponentRepository.PneumaticSplitter;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.PneumaticSplitter} object.
@@ -77,7 +78,10 @@ public class PneumaticSplitterItemProvider extends SplitterItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PneumaticSplitter_type");
+		String label = ((PneumaticSplitter)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PneumaticSplitter_type") :
+			getString("_UI_PneumaticSplitter_type") + " " + label;
 	}
 	
 

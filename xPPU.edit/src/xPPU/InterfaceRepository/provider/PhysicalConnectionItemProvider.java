@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.InterfaceRepository.PhysicalConnection;
 
 /**
  * This is the item provider adapter for a {@link xPPU.InterfaceRepository.PhysicalConnection} object.
@@ -62,7 +63,10 @@ public class PhysicalConnectionItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PhysicalConnection_type");
+		String label = ((PhysicalConnection)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PhysicalConnection_type") :
+			getString("_UI_PhysicalConnection_type") + " " + label;
 	}
 	
 

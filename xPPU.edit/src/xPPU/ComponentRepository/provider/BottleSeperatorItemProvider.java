@@ -12,6 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import xPPU.ComponentRepository.BottleSeperator;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
 /**
@@ -157,7 +158,10 @@ public class BottleSeperatorItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_BottleSeperator_type");
+		String label = ((BottleSeperator)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_BottleSeperator_type") :
+			getString("_UI_BottleSeperator_type") + " " + label;
 	}
 	
 

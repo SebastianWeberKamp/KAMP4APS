@@ -128,7 +128,10 @@ public class VacuumGripperItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_VacuumGripper_type");
+		String label = ((VacuumGripper)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_VacuumGripper_type") :
+			getString("_UI_VacuumGripper_type") + " " + label;
 	}
 	
 

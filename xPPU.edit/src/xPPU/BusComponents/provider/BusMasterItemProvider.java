@@ -16,6 +16,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import xPPU.BusComponents.BusComponentsPackage;
 
+import xPPU.BusComponents.BusMaster;
 import xPPU.ComponentRepository.provider.ComponentItemProvider;
 
 import xPPU.provider.XPPUEditPlugin;
@@ -117,7 +118,10 @@ public class BusMasterItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_BusMaster_type");
+		String label = ((BusMaster)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_BusMaster_type") :
+			getString("_UI_BusMaster_type") + " " + label;
 	}
 	
 

@@ -18,6 +18,7 @@ import xPPU.ComponentRepository.provider.ComponentItemProvider;
 
 import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 
+import xPPU.ElectronicComponents.ElectronicPart;
 import xPPU.provider.XPPUEditPlugin;
 
 /**
@@ -106,7 +107,10 @@ public class ElectronicPartItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ElectronicPart_type");
+		String label = ((ElectronicPart)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ElectronicPart_type") :
+			getString("_UI_ElectronicPart_type") + " " + label;
 	}
 	
 

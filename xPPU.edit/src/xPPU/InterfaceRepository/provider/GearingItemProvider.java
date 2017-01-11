@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.InterfaceRepository.Gearing;
 
 /**
  * This is the item provider adapter for a {@link xPPU.InterfaceRepository.Gearing} object.
@@ -62,7 +63,10 @@ public class GearingItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Gearing_type");
+		String label = ((Gearing)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Gearing_type") :
+			getString("_UI_Gearing_type") + " " + label;
 	}
 	
 

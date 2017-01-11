@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.ComponentRepository.ProportionalCylinder;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.ProportionalCylinder} object.
@@ -62,7 +63,10 @@ public class ProportionalCylinderItemProvider extends CylinderItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ProportionalCylinder_type");
+		String label = ((ProportionalCylinder)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ProportionalCylinder_type") :
+			getString("_UI_ProportionalCylinder_type") + " " + label;
 	}
 	
 

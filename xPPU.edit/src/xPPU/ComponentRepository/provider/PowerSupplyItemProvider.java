@@ -8,8 +8,8 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.ComponentRepository.PowerSupply;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.PowerSupply} object.
@@ -62,7 +62,10 @@ public class PowerSupplyItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PowerSupply_type");
+		String label = ((PowerSupply)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PowerSupply_type") :
+			getString("_UI_PowerSupply_type") + " " + label;
 	}
 	
 

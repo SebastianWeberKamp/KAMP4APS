@@ -14,6 +14,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import xPPU.BusComponents.BusBox;
 import xPPU.BusComponents.BusComponentsPackage;
 
 import xPPU.ComponentRepository.provider.ComponentItemProvider;
@@ -163,7 +164,10 @@ public class BusBoxItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_BusBox_type");
+		String label = ((BusBox)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_BusBox_type") :
+			getString("_UI_BusBox_type") + " " + label;
 	}
 	
 

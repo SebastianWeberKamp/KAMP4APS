@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.ComponentRepository.GripperPart;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.GripperPart} object.
@@ -62,7 +63,10 @@ public class GripperPartItemProvider extends MechanicalAssemblyItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_GripperPart_type");
+		String label = ((GripperPart)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_GripperPart_type") :
+			getString("_UI_GripperPart_type") + " " + label;
 	}
 	
 

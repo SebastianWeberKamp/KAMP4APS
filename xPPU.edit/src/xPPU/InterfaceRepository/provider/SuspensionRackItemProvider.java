@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.InterfaceRepository.SuspensionRack;
 
 /**
  * This is the item provider adapter for a {@link xPPU.InterfaceRepository.SuspensionRack} object.
@@ -62,7 +63,10 @@ public class SuspensionRackItemProvider extends SuspensionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_SuspensionRack_type");
+		String label = ((SuspensionRack)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_SuspensionRack_type") :
+			getString("_UI_SuspensionRack_type") + " " + label;
 	}
 	
 

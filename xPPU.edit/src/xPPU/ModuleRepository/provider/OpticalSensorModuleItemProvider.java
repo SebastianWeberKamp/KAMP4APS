@@ -103,7 +103,10 @@ public class OpticalSensorModuleItemProvider extends ModuleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_OpticalSensorModule_type");
+		String label = ((OpticalSensorModule)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_OpticalSensorModule_type") :
+			getString("_UI_OpticalSensorModule_type") + " " + label;
 	}
 	
 

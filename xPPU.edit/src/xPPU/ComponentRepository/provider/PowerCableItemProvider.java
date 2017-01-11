@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.ComponentRepository.PowerCable;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.PowerCable} object.
@@ -62,7 +63,10 @@ public class PowerCableItemProvider extends CableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PowerCable_type");
+		String label = ((PowerCable)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PowerCable_type") :
+			getString("_UI_PowerCable_type") + " " + label;
 	}
 	
 

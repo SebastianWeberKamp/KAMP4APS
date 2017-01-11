@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.ComponentRepository.PneumaticPipe;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.PneumaticPipe} object.
@@ -62,7 +63,10 @@ public class PneumaticPipeItemProvider extends PipeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PneumaticPipe_type");
+		String label = ((PneumaticPipe)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PneumaticPipe_type") :
+			getString("_UI_PneumaticPipe_type") + " " + label;
 	}
 	
 

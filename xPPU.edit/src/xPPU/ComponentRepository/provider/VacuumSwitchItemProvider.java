@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import xPPU.ComponentRepository.VacuumSwitch;
 import xPPU.ElectronicComponents.provider.SwitchItemProvider;
 
 import xPPU.provider.XPPUEditPlugin;
@@ -68,7 +69,10 @@ public class VacuumSwitchItemProvider extends SwitchItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_VacuumSwitch_type");
+		String label = ((VacuumSwitch)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_VacuumSwitch_type") :
+			getString("_UI_VacuumSwitch_type") + " " + label;
 	}
 	
 

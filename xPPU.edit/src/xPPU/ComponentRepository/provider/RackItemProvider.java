@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
+import xPPU.ComponentRepository.Rack;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.Rack} object.
@@ -88,7 +89,10 @@ public class RackItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Rack_type");
+		String label = ((Rack)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Rack_type") :
+			getString("_UI_Rack_type") + " " + label;
 	}
 	
 

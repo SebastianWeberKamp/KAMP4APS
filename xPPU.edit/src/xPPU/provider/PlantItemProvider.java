@@ -13,15 +13,14 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
+import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
+import xPPU.ComponentRepository.ComponentRepositoryFactory;
+import xPPU.Identifier.provider.IdentifierItemProvider;
+import xPPU.InterfaceRepository.InterfaceRepositoryFactory;
 import xPPU.Plant;
 
 import xPPU.StructureRepository.StructureRepositoryFactory;
@@ -35,13 +34,7 @@ import xPPU.XPPUPackage;
  * @generated
  */
 public class PlantItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends IdentifierItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -63,8 +56,31 @@ public class PlantItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addPlantNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Plant Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addPlantNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Plant_PlantName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Plant_PlantName_feature", "_UI_Plant_type"),
+				 XPPUPackage.Literals.PLANT__PLANT_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
 	}
 
 	/**
@@ -80,6 +96,8 @@ public class PlantItemProvider
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(XPPUPackage.Literals.PLANT__STRUCTURES);
+			childrenFeatures.add(XPPUPackage.Literals.PLANT__INTERFACE_REPOSITORY);
+			childrenFeatures.add(XPPUPackage.Literals.PLANT__COMPONENT_REPOSITORY);
 		}
 		return childrenFeatures;
 	}
@@ -116,7 +134,10 @@ public class PlantItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Plant_type");
+		String label = ((Plant)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Plant_type") :
+			getString("_UI_Plant_type") + " " + label;
 	}
 	
 
@@ -132,7 +153,12 @@ public class PlantItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Plant.class)) {
+			case XPPUPackage.PLANT__PLANT_NAME:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
 			case XPPUPackage.PLANT__STRUCTURES:
+			case XPPUPackage.PLANT__INTERFACE_REPOSITORY:
+			case XPPUPackage.PLANT__COMPONENT_REPOSITORY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -184,6 +210,16 @@ public class PlantItemProvider
 			(createChildParameter
 				(XPPUPackage.Literals.PLANT__STRUCTURES,
 				 StructureRepositoryFactory.eINSTANCE.createPowerWiring()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(XPPUPackage.Literals.PLANT__INTERFACE_REPOSITORY,
+				 InterfaceRepositoryFactory.eINSTANCE.createInterfaceRepository()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(XPPUPackage.Literals.PLANT__COMPONENT_REPOSITORY,
+				 ComponentRepositoryFactory.eINSTANCE.createComponentRepository()));
 	}
 
 	/**

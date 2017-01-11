@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.ComponentRepository.Corner;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.Corner} object.
@@ -62,7 +63,10 @@ public class CornerItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Corner_type");
+		String label = ((Corner)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Corner_type") :
+			getString("_UI_Corner_type") + " " + label;
 	}
 	
 

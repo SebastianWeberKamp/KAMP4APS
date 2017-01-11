@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
+import xPPU.ComponentRepository.Tank;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.Tank} object.
@@ -111,7 +112,10 @@ public class TankItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Tank_type");
+		String label = ((Tank)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Tank_type") :
+			getString("_UI_Tank_type") + " " + label;
 	}
 	
 

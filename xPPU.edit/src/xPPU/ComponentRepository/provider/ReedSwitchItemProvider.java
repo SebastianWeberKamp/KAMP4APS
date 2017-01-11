@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import xPPU.ComponentRepository.ReedSwitch;
 import xPPU.ElectronicComponents.provider.SwitchItemProvider;
 
 import xPPU.provider.XPPUEditPlugin;
@@ -68,7 +69,10 @@ public class ReedSwitchItemProvider extends SwitchItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ReedSwitch_type");
+		String label = ((ReedSwitch)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ReedSwitch_type") :
+			getString("_UI_ReedSwitch_type") + " " + label;
 	}
 	
 

@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.ElectronicComponents.LED;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ElectronicComponents.LED} object.
@@ -62,7 +63,10 @@ public class LEDItemProvider extends ElectronicPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_LED_type");
+		String label = ((LED)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_LED_type") :
+			getString("_UI_LED_type") + " " + label;
 	}
 	
 

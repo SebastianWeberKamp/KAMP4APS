@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.StructureRepository.CommunicationNetwork;
 
 /**
  * This is the item provider adapter for a {@link xPPU.StructureRepository.CommunicationNetwork} object.
@@ -62,7 +63,10 @@ public class CommunicationNetworkItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_CommunicationNetwork_type");
+		String label = ((CommunicationNetwork)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_CommunicationNetwork_type") :
+			getString("_UI_CommunicationNetwork_type") + " " + label;
 	}
 	
 

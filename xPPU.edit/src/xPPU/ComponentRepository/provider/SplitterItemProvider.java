@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
+import xPPU.ComponentRepository.Splitter;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.Splitter} object.
@@ -77,7 +78,10 @@ public class SplitterItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Splitter_type");
+		String label = ((Splitter)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Splitter_type") :
+			getString("_UI_Splitter_type") + " " + label;
 	}
 	
 

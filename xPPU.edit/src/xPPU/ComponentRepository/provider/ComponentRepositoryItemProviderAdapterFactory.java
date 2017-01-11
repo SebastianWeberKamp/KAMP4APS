@@ -946,6 +946,29 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.ComponentRepository.ComponentRepository} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ComponentRepositoryItemProvider componentRepositoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.ComponentRepository.ComponentRepository}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createComponentRepositoryAdapter() {
+		if (componentRepositoryItemProvider == null) {
+			componentRepositoryItemProvider = new ComponentRepositoryItemProvider(this);
+		}
+
+		return componentRepositoryItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1082,6 +1105,7 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 		if (pneumaticSplitterItemProvider != null) pneumaticSplitterItemProvider.dispose();
 		if (cylinderPartItemProvider != null) cylinderPartItemProvider.dispose();
 		if (monostableCylinderItemProvider != null) monostableCylinderItemProvider.dispose();
+		if (componentRepositoryItemProvider != null) componentRepositoryItemProvider.dispose();
 	}
 
 }

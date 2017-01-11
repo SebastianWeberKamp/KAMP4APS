@@ -18,6 +18,7 @@ import xPPU.ComponentRepository.provider.ComponentItemProvider;
 
 import xPPU.MechanicalComponents.MechanicalComponentsPackage;
 
+import xPPU.MechanicalComponents.MechanicalPart;
 import xPPU.provider.XPPUEditPlugin;
 
 /**
@@ -83,7 +84,10 @@ public class MechanicalPartItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_MechanicalPart_type");
+		String label = ((MechanicalPart)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MechanicalPart_type") :
+			getString("_UI_MechanicalPart_type") + " " + label;
 	}
 	
 

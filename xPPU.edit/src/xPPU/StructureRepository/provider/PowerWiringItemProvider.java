@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.StructureRepository.PowerWiring;
 
 /**
  * This is the item provider adapter for a {@link xPPU.StructureRepository.PowerWiring} object.
@@ -62,7 +63,10 @@ public class PowerWiringItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PowerWiring_type");
+		String label = ((PowerWiring)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PowerWiring_type") :
+			getString("_UI_PowerWiring_type") + " " + label;
 	}
 	
 

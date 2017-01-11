@@ -12,16 +12,11 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
-
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
+import xPPU.ComponentRepository.Panel;
+import xPPU.Identifier.provider.IdentifierItemProvider;
 import xPPU.provider.XPPUEditPlugin;
 
 /**
@@ -31,13 +26,7 @@ import xPPU.provider.XPPUEditPlugin;
  * @generated
  */
 public class PanelItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends IdentifierItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -94,7 +83,10 @@ public class PanelItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Panel_type");
+		String label = ((Panel)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Panel_type") :
+			getString("_UI_Panel_type") + " " + label;
 	}
 	
 

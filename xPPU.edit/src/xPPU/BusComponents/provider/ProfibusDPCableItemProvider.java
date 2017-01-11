@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.BusComponents.ProfibusDPCable;
 
 /**
  * This is the item provider adapter for a {@link xPPU.BusComponents.ProfibusDPCable} object.
@@ -62,7 +63,10 @@ public class ProfibusDPCableItemProvider extends BusCableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ProfibusDPCable_type");
+		String label = ((ProfibusDPCable)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ProfibusDPCable_type") :
+			getString("_UI_ProfibusDPCable_type") + " " + label;
 	}
 	
 

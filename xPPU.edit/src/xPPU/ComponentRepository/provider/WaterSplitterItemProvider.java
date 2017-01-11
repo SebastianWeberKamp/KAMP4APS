@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
+import xPPU.ComponentRepository.WaterSplitter;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.WaterSplitter} object.
@@ -88,7 +89,10 @@ public class WaterSplitterItemProvider extends SplitterItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_WaterSplitter_type");
+		String label = ((WaterSplitter)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_WaterSplitter_type") :
+			getString("_UI_WaterSplitter_type") + " " + label;
 	}
 	
 

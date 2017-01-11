@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import xPPU.ComponentRepository.RubberBand;
 import xPPU.MechanicalComponents.provider.MechanicalPartItemProvider;
 
 import xPPU.provider.XPPUEditPlugin;
@@ -68,7 +69,10 @@ public class RubberBandItemProvider extends MechanicalPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_RubberBand_type");
+		String label = ((RubberBand)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_RubberBand_type") :
+			getString("_UI_RubberBand_type") + " " + label;
 	}
 	
 

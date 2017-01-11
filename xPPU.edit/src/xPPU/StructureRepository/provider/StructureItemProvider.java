@@ -12,14 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
-
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import xPPU.BusComponents.BusComponentsFactory;
@@ -28,6 +21,7 @@ import xPPU.ComponentRepository.ComponentRepositoryFactory;
 
 import xPPU.ElectronicComponents.ElectronicComponentsFactory;
 
+import xPPU.Identifier.provider.IdentifierItemProvider;
 import xPPU.MechanicalComponents.MechanicalComponentsFactory;
 
 import xPPU.ModuleRepository.ModuleRepositoryFactory;
@@ -44,13 +38,7 @@ import xPPU.provider.XPPUEditPlugin;
  * @generated
  */
 public class StructureItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends IdentifierItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -115,7 +103,10 @@ public class StructureItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Structure_type");
+		String label = ((Structure)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Structure_type") :
+			getString("_UI_Structure_type") + " " + label;
 	}
 	
 

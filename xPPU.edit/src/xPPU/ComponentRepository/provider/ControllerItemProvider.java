@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
+import xPPU.ComponentRepository.Controller;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.Controller} object.
@@ -134,7 +135,10 @@ public class ControllerItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Controller_type");
+		String label = ((Controller)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Controller_type") :
+			getString("_UI_Controller_type") + " " + label;
 	}
 	
 

@@ -12,6 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import xPPU.StructureRepository.Crane;
 import xPPU.StructureRepository.StructureRepositoryPackage;
 
 /**
@@ -134,7 +135,10 @@ public class CraneItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Crane_type");
+		String label = ((Crane)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Crane_type") :
+			getString("_UI_Crane_type") + " " + label;
 	}
 	
 

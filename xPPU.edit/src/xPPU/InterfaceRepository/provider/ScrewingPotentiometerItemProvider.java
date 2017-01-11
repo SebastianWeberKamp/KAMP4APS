@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.InterfaceRepository.ScrewingPotentiometer;
 
 /**
  * This is the item provider adapter for a {@link xPPU.InterfaceRepository.ScrewingPotentiometer} object.
@@ -62,7 +63,10 @@ public class ScrewingPotentiometerItemProvider extends ScrewingItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ScrewingPotentiometer_type");
+		String label = ((ScrewingPotentiometer)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ScrewingPotentiometer_type") :
+			getString("_UI_ScrewingPotentiometer_type") + " " + label;
 	}
 	
 

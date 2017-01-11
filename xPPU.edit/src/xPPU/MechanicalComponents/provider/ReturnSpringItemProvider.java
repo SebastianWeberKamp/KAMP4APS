@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.MechanicalComponents.ReturnSpring;
 
 /**
  * This is the item provider adapter for a {@link xPPU.MechanicalComponents.ReturnSpring} object.
@@ -62,7 +63,10 @@ public class ReturnSpringItemProvider extends MechanicalPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ReturnSpring_type");
+		String label = ((ReturnSpring)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ReturnSpring_type") :
+			getString("_UI_ReturnSpring_type") + " " + label;
 	}
 	
 

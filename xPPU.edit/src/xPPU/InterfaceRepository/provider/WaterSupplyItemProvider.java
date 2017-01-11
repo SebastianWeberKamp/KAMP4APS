@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
+import xPPU.InterfaceRepository.WaterSupply;
 
 /**
  * This is the item provider adapter for a {@link xPPU.InterfaceRepository.WaterSupply} object.
@@ -88,7 +89,10 @@ public class WaterSupplyItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_WaterSupply_type");
+		String label = ((WaterSupply)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_WaterSupply_type") :
+			getString("_UI_WaterSupply_type") + " " + label;
 	}
 	
 

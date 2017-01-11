@@ -463,6 +463,29 @@ public class InterfaceRepositoryItemProviderAdapterFactory extends InterfaceRepo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.InterfaceRepository} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InterfaceRepositoryItemProvider interfaceRepositoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.InterfaceRepository.InterfaceRepository}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createInterfaceRepositoryAdapter() {
+		if (interfaceRepositoryItemProvider == null) {
+			interfaceRepositoryItemProvider = new InterfaceRepositoryItemProvider(this);
+		}
+
+		return interfaceRepositoryItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -578,6 +601,7 @@ public class InterfaceRepositoryItemProviderAdapterFactory extends InterfaceRepo
 		if (waterSupplyItemProvider != null) waterSupplyItemProvider.dispose();
 		if (physicalConnectionItemProvider != null) physicalConnectionItemProvider.dispose();
 		if (transportConnectionItemProvider != null) transportConnectionItemProvider.dispose();
+		if (interfaceRepositoryItemProvider != null) interfaceRepositoryItemProvider.dispose();
 	}
 
 }

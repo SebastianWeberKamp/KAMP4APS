@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.ComponentRepository.PresenceSensor;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.PresenceSensor} object.
@@ -62,7 +63,10 @@ public class PresenceSensorItemProvider extends SensorItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_PresenceSensor_type");
+		String label = ((PresenceSensor)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_PresenceSensor_type") :
+			getString("_UI_PresenceSensor_type") + " " + label;
 	}
 	
 

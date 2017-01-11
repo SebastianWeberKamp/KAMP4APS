@@ -12,6 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
+import xPPU.StructureRepository.ControlCabinet;
 import xPPU.StructureRepository.StructureRepositoryPackage;
 
 /**
@@ -88,7 +89,10 @@ public class ControlCabinetItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_ControlCabinet_type");
+		String label = ((ControlCabinet)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_ControlCabinet_type") :
+			getString("_UI_ControlCabinet_type") + " " + label;
 	}
 	
 

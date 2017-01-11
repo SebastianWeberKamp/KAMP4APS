@@ -105,7 +105,10 @@ public class MotorModuleItemProvider extends ModuleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_MotorModule_type");
+		String label = ((MotorModule)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_MotorModule_type") :
+			getString("_UI_MotorModule_type") + " " + label;
 	}
 	
 

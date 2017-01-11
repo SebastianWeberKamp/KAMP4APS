@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import xPPU.ComponentRepository.RegularValve;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.RegularValve} object.
@@ -62,7 +63,10 @@ public class RegularValveItemProvider extends ValveItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_RegularValve_type");
+		String label = ((RegularValve)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_RegularValve_type") :
+			getString("_UI_RegularValve_type") + " " + label;
 	}
 	
 

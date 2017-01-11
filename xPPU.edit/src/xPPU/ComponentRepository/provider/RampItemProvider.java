@@ -13,6 +13,7 @@ import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
+import xPPU.ComponentRepository.Ramp;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.Ramp} object.
@@ -123,7 +124,10 @@ public class RampItemProvider extends MechanicalAssemblyItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Ramp_type");
+		String label = ((Ramp)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Ramp_type") :
+			getString("_UI_Ramp_type") + " " + label;
 	}
 	
 

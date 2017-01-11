@@ -100,7 +100,10 @@ public class LogicalWiringItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_LogicalWiring_type");
+		String label = ((LogicalWiring)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_LogicalWiring_type") :
+			getString("_UI_LogicalWiring_type") + " " + label;
 	}
 	
 

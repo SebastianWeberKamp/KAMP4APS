@@ -100,7 +100,10 @@ public class ConveyorItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Conveyor_type");
+		String label = ((Conveyor)object).getId();
+		return label == null || label.length() == 0 ?
+			getString("_UI_Conveyor_type") :
+			getString("_UI_Conveyor_type") + " " + label;
 	}
 	
 
