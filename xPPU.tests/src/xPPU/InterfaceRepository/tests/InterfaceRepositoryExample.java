@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import xPPU.InterfaceRepository.InterfaceRepository;
 import xPPU.InterfaceRepository.InterfaceRepositoryFactory;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
-import xPPU.InterfaceRepository.Screwing;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class InterfaceRepositoryExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.interfacerepository"));
-				Screwing root = InterfaceRepositoryFactory.eINSTANCE.createScrewing();
+				InterfaceRepository root = InterfaceRepositoryFactory.eINSTANCE.createInterfaceRepository();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}
