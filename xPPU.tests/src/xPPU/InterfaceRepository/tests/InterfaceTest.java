@@ -2,8 +2,7 @@
  */
 package xPPU.InterfaceRepository.tests;
 
-import junit.framework.TestCase;
-
+import xPPU.Identifier.tests.IdentifierTest;
 import xPPU.InterfaceRepository.Interface;
 
 /**
@@ -12,15 +11,7 @@ import xPPU.InterfaceRepository.Interface;
  * <!-- end-user-doc -->
  * @generated
  */
-public abstract class InterfaceTest extends TestCase {
-
-	/**
-	 * The fixture for this Interface test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Interface fixture = null;
+public abstract class InterfaceTest extends IdentifierTest {
 
 	/**
 	 * Constructs a new Interface test case with the given name.
@@ -33,23 +24,14 @@ public abstract class InterfaceTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Interface test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Interface fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Interface test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Interface getFixture() {
-		return fixture;
+		return (Interface)fixture;
 	}
 
 } //InterfaceTest

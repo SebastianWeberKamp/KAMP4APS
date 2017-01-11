@@ -2,9 +2,8 @@
  */
 package xPPU.ComponentRepository.tests;
 
-import junit.framework.TestCase;
-
 import xPPU.ComponentRepository.Panel;
+import xPPU.Identifier.tests.IdentifierTest;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,15 +11,7 @@ import xPPU.ComponentRepository.Panel;
  * <!-- end-user-doc -->
  * @generated
  */
-public abstract class PanelTest extends TestCase {
-
-	/**
-	 * The fixture for this Panel test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Panel fixture = null;
+public abstract class PanelTest extends IdentifierTest {
 
 	/**
 	 * Constructs a new Panel test case with the given name.
@@ -33,23 +24,14 @@ public abstract class PanelTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Panel test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Panel fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Panel test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Panel getFixture() {
-		return fixture;
+		return (Panel)fixture;
 	}
 
 } //PanelTest

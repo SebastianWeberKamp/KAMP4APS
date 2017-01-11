@@ -2,9 +2,8 @@
  */
 package xPPU.ComponentRepository.tests;
 
-import junit.framework.TestCase;
-
 import xPPU.ComponentRepository.Component;
+import xPPU.Identifier.tests.IdentifierTest;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,15 +11,7 @@ import xPPU.ComponentRepository.Component;
  * <!-- end-user-doc -->
  * @generated
  */
-public abstract class ComponentTest extends TestCase {
-
-	/**
-	 * The fixture for this Component test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Component fixture = null;
+public abstract class ComponentTest extends IdentifierTest {
 
 	/**
 	 * Constructs a new Component test case with the given name.
@@ -33,23 +24,14 @@ public abstract class ComponentTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Component test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Component fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Component test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Component getFixture() {
-		return fixture;
+		return (Component)fixture;
 	}
 
 } //ComponentTest

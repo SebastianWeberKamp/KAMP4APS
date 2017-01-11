@@ -3,7 +3,6 @@
 package xPPU.BusComponents.tests;
 
 import junit.textui.TestRunner;
-
 import xPPU.BusComponents.BusComponentsFactory;
 import xPPU.BusComponents.BusSlave;
 

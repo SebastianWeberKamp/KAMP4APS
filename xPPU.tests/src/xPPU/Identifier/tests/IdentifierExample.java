@@ -1,9 +1,8 @@
 /**
  */
-package xPPU.BusComponents.tests;
+package xPPU.Identifier.tests;
 
 import java.io.File;
-import java.io.IOException;
 
 import org.eclipse.emf.common.util.Diagnostic;
 import org.eclipse.emf.common.util.URI;
@@ -18,17 +17,16 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
 
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import xPPU.BusComponents.BusCable;
-import xPPU.BusComponents.BusComponentsFactory;
-import xPPU.BusComponents.BusComponentsPackage;
+
+import xPPU.Identifier.IdentifierPackage;
 
 /**
  * <!-- begin-user-doc -->
- * A sample utility for the '<em><b>BusComponents</b></em>' package.
+ * A sample utility for the '<em><b>Identifier</b></em>' package.
  * <!-- end-user-doc -->
  * @generated
  */
-public class BusComponentsExample {
+public class IdentifierExample {
 	/**
 	 * <!-- begin-user-doc -->
 	 * Load all the argument file paths or URIs as instances of the model.
@@ -50,22 +48,13 @@ public class BusComponentsExample {
 		// Register the package to ensure it is available during loading.
 		//
 		resourceSet.getPackageRegistry().put
-			(BusComponentsPackage.eNS_URI, 
-			 BusComponentsPackage.eINSTANCE);
+			(IdentifierPackage.eNS_URI, 
+			 IdentifierPackage.eINSTANCE);
         
 		// If there are no arguments, emit an appropriate usage message.
 		//
 		if (args.length == 0) {
-			System.out.println("Enter a list of file paths or URIs that have content like this:");
-			try {
-				Resource resource = resourceSet.createResource(URI.createURI("http:///My.buscomponents"));
-				BusCable root = BusComponentsFactory.eINSTANCE.createBusCable();
-				resource.getContents().add(root);
-				resource.save(System.out, null);
-			}
-			catch (IOException exception) {
-				exception.printStackTrace();
-			}
+			System.out.println("Enter a list of file paths or URIs");
 		}
 		else {
 			// Iterate over all the arguments.
@@ -117,4 +106,4 @@ public class BusComponentsExample {
 		}
 	}
 
-} //BusComponentsExample
+} //IdentifierExample

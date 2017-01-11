@@ -1,20 +1,21 @@
 /**
  */
-package xPPU.ModuleRepository.tests;
+package xPPU.ComponentRepository.tests;
 
 import junit.textui.TestRunner;
 
+import xPPU.ComponentRepository.ComponentRepository;
+import xPPU.ComponentRepository.ComponentRepositoryFactory;
+
 import xPPU.Identifier.tests.IdentifierTest;
-import xPPU.ModuleRepository.Module;
-import xPPU.ModuleRepository.ModuleRepositoryFactory;
 
 /**
  * <!-- begin-user-doc -->
- * A test case for the model object '<em><b>Module</b></em>'.
+ * A test case for the model object '<em><b>Component Repository</b></em>'.
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModuleTest extends IdentifierTest {
+public class ComponentRepositoryTest extends IdentifierTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -22,28 +23,28 @@ public class ModuleTest extends IdentifierTest {
 	 * @generated
 	 */
 	public static void main(String[] args) {
-		TestRunner.run(ModuleTest.class);
+		TestRunner.run(ComponentRepositoryTest.class);
 	}
 
 	/**
-	 * Constructs a new Module test case with the given name.
+	 * Constructs a new Component Repository test case with the given name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModuleTest(String name) {
+	public ComponentRepositoryTest(String name) {
 		super(name);
 	}
 
 	/**
-	 * Returns the fixture for this Module test case.
+	 * Returns the fixture for this Component Repository test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	protected Module getFixture() {
-		return (Module)fixture;
+	protected ComponentRepository getFixture() {
+		return (ComponentRepository)fixture;
 	}
 
 	/**
@@ -54,7 +55,7 @@ public class ModuleTest extends IdentifierTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(ModuleRepositoryFactory.eINSTANCE.createModule());
+		setFixture(ComponentRepositoryFactory.eINSTANCE.createComponentRepository());
 	}
 
 	/**
@@ -68,4 +69,4 @@ public class ModuleTest extends IdentifierTest {
 		setFixture(null);
 	}
 
-} //ModuleTest
+} //ComponentRepositoryTest

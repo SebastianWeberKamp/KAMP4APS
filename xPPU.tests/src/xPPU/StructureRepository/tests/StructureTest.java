@@ -2,8 +2,7 @@
  */
 package xPPU.StructureRepository.tests;
 
-import junit.framework.TestCase;
-
+import xPPU.Identifier.tests.IdentifierTest;
 import xPPU.StructureRepository.Structure;
 
 /**
@@ -12,15 +11,7 @@ import xPPU.StructureRepository.Structure;
  * <!-- end-user-doc -->
  * @generated
  */
-public abstract class StructureTest extends TestCase {
-
-	/**
-	 * The fixture for this Structure test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Structure fixture = null;
+public abstract class StructureTest extends IdentifierTest {
 
 	/**
 	 * Constructs a new Structure test case with the given name.
@@ -33,23 +24,14 @@ public abstract class StructureTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Structure test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Structure fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Structure test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Structure getFixture() {
-		return fixture;
+		return (Structure)fixture;
 	}
 
 } //StructureTest

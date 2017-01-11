@@ -2,10 +2,9 @@
  */
 package xPPU.tests;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
+import xPPU.Identifier.tests.IdentifierTest;
 import xPPU.Plant;
 import xPPU.XPPUFactory;
 
@@ -15,15 +14,7 @@ import xPPU.XPPUFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PlantTest extends TestCase {
-
-	/**
-	 * The fixture for this Plant test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Plant fixture = null;
+public class PlantTest extends IdentifierTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +36,14 @@ public class PlantTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Plant test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Plant fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Plant test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Plant getFixture() {
-		return fixture;
+		return (Plant)fixture;
 	}
 
 	/**

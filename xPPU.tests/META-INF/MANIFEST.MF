@@ -10,6 +10,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: xPPU.BusComponents.tests,
  xPPU.ComponentRepository.tests,
  xPPU.ElectronicComponents.tests,
+ xPPU.Identifier.tests,
  xPPU.InterfaceRepository.tests,
  xPPU.MechanicalComponents.tests,
  xPPU.ModuleRepository.tests,

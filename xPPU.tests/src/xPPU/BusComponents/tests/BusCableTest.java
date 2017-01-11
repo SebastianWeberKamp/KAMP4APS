@@ -3,10 +3,8 @@
 package xPPU.BusComponents.tests;
 
 import junit.textui.TestRunner;
-
 import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusComponentsFactory;
-
 import xPPU.ComponentRepository.tests.CableTest;
 
 /**
