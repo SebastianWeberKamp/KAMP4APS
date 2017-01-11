@@ -584,6 +584,7 @@ public class InterfaceRepositoryItemProviderAdapterFactory extends InterfaceRepo
 	 * @generated
 	 */
 	public void dispose() {
+		if (interfaceRepositoryItemProvider != null) interfaceRepositoryItemProvider.dispose();
 		if (screwingItemProvider != null) screwingItemProvider.dispose();
 		if (screwingSplitterItemProvider != null) screwingSplitterItemProvider.dispose();
 		if (screwingMotorItemProvider != null) screwingMotorItemProvider.dispose();
@@ -601,7 +602,6 @@ public class InterfaceRepositoryItemProviderAdapterFactory extends InterfaceRepo
 		if (waterSupplyItemProvider != null) waterSupplyItemProvider.dispose();
 		if (physicalConnectionItemProvider != null) physicalConnectionItemProvider.dispose();
 		if (transportConnectionItemProvider != null) transportConnectionItemProvider.dispose();
-		if (interfaceRepositoryItemProvider != null) interfaceRepositoryItemProvider.dispose();
 	}
 
 }
