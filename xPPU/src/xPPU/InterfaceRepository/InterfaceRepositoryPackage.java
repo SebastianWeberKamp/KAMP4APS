@@ -64,7 +64,223 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getInterface()
 	 * @generated
 	 */
-	int INTERFACE = 0;
+	int INTERFACE = 1;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingImpl <em>Screwing</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.ScrewingImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewing()
+	 * @generated
+	 */
+	int SCREWING = 2;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingSplitterImpl <em>Screwing Splitter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.ScrewingSplitterImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingSplitter()
+	 * @generated
+	 */
+	int SCREWING_SPLITTER = 3;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingMotorImpl <em>Screwing Motor</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.ScrewingMotorImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingMotor()
+	 * @generated
+	 */
+	int SCREWING_MOTOR = 4;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingRackImpl <em>Screwing Rack</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.ScrewingRackImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingRack()
+	 * @generated
+	 */
+	int SCREWING_RACK = 5;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingCylinderImpl <em>Screwing Cylinder</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.ScrewingCylinderImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingCylinder()
+	 * @generated
+	 */
+	int SCREWING_CYLINDER = 6;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingFixtureImpl <em>Screwing Fixture</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.ScrewingFixtureImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingFixture()
+	 * @generated
+	 */
+	int SCREWING_FIXTURE = 7;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingPotentiometerImpl <em>Screwing Potentiometer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.ScrewingPotentiometerImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingPotentiometer()
+	 * @generated
+	 */
+	int SCREWING_POTENTIOMETER = 8;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.SuspensionImpl <em>Suspension</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.SuspensionImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getSuspension()
+	 * @generated
+	 */
+	int SUSPENSION = 9;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.SuspensionRackImpl <em>Suspension Rack</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.SuspensionRackImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getSuspensionRack()
+	 * @generated
+	 */
+	int SUSPENSION_RACK = 10;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.SuspensionArmImpl <em>Suspension Arm</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.SuspensionArmImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getSuspensionArm()
+	 * @generated
+	 */
+	int SUSPENSION_ARM = 11;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.GearingImpl <em>Gearing</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.GearingImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getGearing()
+	 * @generated
+	 */
+	int GEARING = 12;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ClampingImpl <em>Clamping</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.ClampingImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getClamping()
+	 * @generated
+	 */
+	int CLAMPING = 13;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.PneumaticSupplyImpl <em>Pneumatic Supply</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.PneumaticSupplyImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getPneumaticSupply()
+	 * @generated
+	 */
+	int PNEUMATIC_SUPPLY = 14;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.SignalInterfaceImpl <em>Signal Interface</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.SignalInterfaceImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getSignalInterface()
+	 * @generated
+	 */
+	int SIGNAL_INTERFACE = 15;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.WaterSupplyImpl <em>Water Supply</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.WaterSupplyImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getWaterSupply()
+	 * @generated
+	 */
+	int WATER_SUPPLY = 16;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.PhysicalConnectionImpl <em>Physical Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.PhysicalConnectionImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getPhysicalConnection()
+	 * @generated
+	 */
+	int PHYSICAL_CONNECTION = 17;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.TransportConnectionImpl <em>Transport Connection</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.TransportConnectionImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getTransportConnection()
+	 * @generated
+	 */
+	int TRANSPORT_CONNECTION = 18;
+
+	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.InterfaceRepositoryImpl <em>Interface Repository</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getInterfaceRepository()
+	 * @generated
+	 */
+	int INTERFACE_REPOSITORY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_REPOSITORY__ID = IdentifierPackage.IDENTIFIER__ID;
+
+	/**
+	 * The feature id for the '<em><b>All Interfaces In Plant</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Interface Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_REPOSITORY_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Interface Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_REPOSITORY_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -92,16 +308,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int INTERFACE_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingImpl <em>Screwing</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.ScrewingImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewing()
-	 * @generated
-	 */
-	int SCREWING = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -140,16 +346,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_OPERATION_COUNT = INTERFACE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingSplitterImpl <em>Screwing Splitter</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.ScrewingSplitterImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingSplitter()
-	 * @generated
-	 */
-	int SCREWING_SPLITTER = 2;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -184,16 +380,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCREWING_SPLITTER_OPERATION_COUNT = SCREWING_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingMotorImpl <em>Screwing Motor</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.ScrewingMotorImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingMotor()
-	 * @generated
-	 */
-	int SCREWING_MOTOR = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -232,16 +418,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_MOTOR_OPERATION_COUNT = SCREWING_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingRackImpl <em>Screwing Rack</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.ScrewingRackImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingRack()
-	 * @generated
-	 */
-	int SCREWING_RACK = 4;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -276,16 +452,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCREWING_RACK_OPERATION_COUNT = SCREWING_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingCylinderImpl <em>Screwing Cylinder</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.ScrewingCylinderImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingCylinder()
-	 * @generated
-	 */
-	int SCREWING_CYLINDER = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -324,16 +490,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_CYLINDER_OPERATION_COUNT = SCREWING_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingFixtureImpl <em>Screwing Fixture</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.ScrewingFixtureImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingFixture()
-	 * @generated
-	 */
-	int SCREWING_FIXTURE = 6;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -368,16 +524,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCREWING_FIXTURE_OPERATION_COUNT = SCREWING_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingPotentiometerImpl <em>Screwing Potentiometer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.ScrewingPotentiometerImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getScrewingPotentiometer()
-	 * @generated
-	 */
-	int SCREWING_POTENTIOMETER = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -416,16 +562,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_POTENTIOMETER_OPERATION_COUNT = SCREWING_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.SuspensionImpl <em>Suspension</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.SuspensionImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getSuspension()
-	 * @generated
-	 */
-	int SUSPENSION = 8;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -460,16 +596,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUSPENSION_OPERATION_COUNT = INTERFACE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.SuspensionRackImpl <em>Suspension Rack</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.SuspensionRackImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getSuspensionRack()
-	 * @generated
-	 */
-	int SUSPENSION_RACK = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -508,16 +634,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SUSPENSION_RACK_OPERATION_COUNT = SUSPENSION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.SuspensionArmImpl <em>Suspension Arm</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.SuspensionArmImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getSuspensionArm()
-	 * @generated
-	 */
-	int SUSPENSION_ARM = 10;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -552,16 +668,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUSPENSION_ARM_OPERATION_COUNT = SUSPENSION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.GearingImpl <em>Gearing</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.GearingImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getGearing()
-	 * @generated
-	 */
-	int GEARING = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -600,16 +706,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int GEARING_OPERATION_COUNT = INTERFACE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ClampingImpl <em>Clamping</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.ClampingImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getClamping()
-	 * @generated
-	 */
-	int CLAMPING = 12;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -644,16 +740,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLAMPING_OPERATION_COUNT = INTERFACE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.PneumaticSupplyImpl <em>Pneumatic Supply</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.PneumaticSupplyImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getPneumaticSupply()
-	 * @generated
-	 */
-	int PNEUMATIC_SUPPLY = 13;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -692,16 +778,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int PNEUMATIC_SUPPLY_OPERATION_COUNT = INTERFACE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.SignalInterfaceImpl <em>Signal Interface</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.SignalInterfaceImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getSignalInterface()
-	 * @generated
-	 */
-	int SIGNAL_INTERFACE = 14;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -736,16 +812,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIGNAL_INTERFACE_OPERATION_COUNT = INTERFACE_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.WaterSupplyImpl <em>Water Supply</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.WaterSupplyImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getWaterSupply()
-	 * @generated
-	 */
-	int WATER_SUPPLY = 15;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -784,16 +850,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int WATER_SUPPLY_OPERATION_COUNT = INTERFACE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.PhysicalConnectionImpl <em>Physical Connection</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.PhysicalConnectionImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getPhysicalConnection()
-	 * @generated
-	 */
-	int PHYSICAL_CONNECTION = 16;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -830,16 +886,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int PHYSICAL_CONNECTION_OPERATION_COUNT = INTERFACE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.TransportConnectionImpl <em>Transport Connection</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.TransportConnectionImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getTransportConnection()
-	 * @generated
-	 */
-	int TRANSPORT_CONNECTION = 17;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -874,53 +920,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSPORT_CONNECTION_OPERATION_COUNT = INTERFACE_OPERATION_COUNT + 0;
-
-
-	/**
-	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.InterfaceRepositoryImpl <em>Interface Repository</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryImpl
-	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getInterfaceRepository()
-	 * @generated
-	 */
-	int INTERFACE_REPOSITORY = 18;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERFACE_REPOSITORY__ID = IdentifierPackage.IDENTIFIER__ID;
-
-	/**
-	 * The feature id for the '<em><b>All Interfaces In Plant</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Interface Repository</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERFACE_REPOSITORY_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Interface Repository</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INTERFACE_REPOSITORY_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 
 	/**

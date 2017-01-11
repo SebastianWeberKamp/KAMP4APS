@@ -69,6 +69,10 @@ public class InterfaceRepositoryAdapterFactory extends AdapterFactoryImpl {
 	protected InterfaceRepositorySwitch<Adapter> modelSwitch =
 		new InterfaceRepositorySwitch<Adapter>() {
 			@Override
+			public Adapter caseInterfaceRepository(InterfaceRepository object) {
+				return createInterfaceRepositoryAdapter();
+			}
+			@Override
 			public Adapter caseInterface(Interface object) {
 				return createInterfaceAdapter();
 			}
@@ -139,10 +143,6 @@ public class InterfaceRepositoryAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseTransportConnection(TransportConnection object) {
 				return createTransportConnectionAdapter();
-			}
-			@Override
-			public Adapter caseInterfaceRepository(InterfaceRepository object) {
-				return createInterfaceRepositoryAdapter();
 			}
 			@Override
 			public Adapter caseIdentifier(Identifier object) {

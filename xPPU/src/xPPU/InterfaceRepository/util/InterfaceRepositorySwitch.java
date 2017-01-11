@@ -67,6 +67,13 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case InterfaceRepositoryPackage.INTERFACE_REPOSITORY: {
+				InterfaceRepository interfaceRepository = (InterfaceRepository)theEObject;
+				T result = caseInterfaceRepository(interfaceRepository);
+				if (result == null) result = caseIdentifier(interfaceRepository);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case InterfaceRepositoryPackage.INTERFACE: {
 				Interface interface_ = (Interface)theEObject;
 				T result = caseInterface(interface_);
@@ -215,13 +222,6 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 				T result = caseTransportConnection(transportConnection);
 				if (result == null) result = caseInterface(transportConnection);
 				if (result == null) result = caseIdentifier(transportConnection);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case InterfaceRepositoryPackage.INTERFACE_REPOSITORY: {
-				InterfaceRepository interfaceRepository = (InterfaceRepository)theEObject;
-				T result = caseInterfaceRepository(interfaceRepository);
-				if (result == null) result = caseIdentifier(interfaceRepository);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

@@ -576,6 +576,9 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		isCreated = true;
 
 		// Create classes and their features
+		interfaceRepositoryEClass = createEClass(INTERFACE_REPOSITORY);
+		createEReference(interfaceRepositoryEClass, INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT);
+
 		interfaceEClass = createEClass(INTERFACE);
 
 		screwingEClass = createEClass(SCREWING);
@@ -620,9 +623,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 
 		transportConnectionEClass = createEClass(TRANSPORT_CONNECTION);
 		createEReference(transportConnectionEClass, TRANSPORT_CONNECTION__INTEFACE_PART);
-
-		interfaceRepositoryEClass = createEClass(INTERFACE_REPOSITORY);
-		createEReference(interfaceRepositoryEClass, INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT);
 	}
 
 	/**
@@ -656,6 +656,7 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		interfaceRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 		interfaceEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 		screwingEClass.getESuperTypes().add(this.getInterface());
 		screwingSplitterEClass.getESuperTypes().add(this.getScrewing());
@@ -674,9 +675,11 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		waterSupplyEClass.getESuperTypes().add(this.getInterface());
 		physicalConnectionEClass.getESuperTypes().add(this.getInterface());
 		transportConnectionEClass.getESuperTypes().add(this.getInterface());
-		interfaceRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(interfaceRepositoryEClass, InterfaceRepository.class, "InterfaceRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInterfaceRepository_AllInterfacesInPlant(), this.getInterface(), null, "allInterfacesInPlant", null, 0, -1, InterfaceRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(interfaceEClass, Interface.class, "Interface", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(screwingEClass, Screwing.class, "Screwing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -721,9 +724,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 
 		initEClass(transportConnectionEClass, TransportConnection.class, "TransportConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getTransportConnection_IntefacePart(), this.getInterface(), null, "intefacePart", null, 1, 1, TransportConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(interfaceRepositoryEClass, InterfaceRepository.class, "InterfaceRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInterfaceRepository_AllInterfacesInPlant(), this.getInterface(), null, "allInterfacesInPlant", null, 0, -1, InterfaceRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //InterfaceRepositoryPackageImpl

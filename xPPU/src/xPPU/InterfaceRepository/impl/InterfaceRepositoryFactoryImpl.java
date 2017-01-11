@@ -56,6 +56,7 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case InterfaceRepositoryPackage.INTERFACE_REPOSITORY: return createInterfaceRepository();
 			case InterfaceRepositoryPackage.SCREWING: return createScrewing();
 			case InterfaceRepositoryPackage.SCREWING_SPLITTER: return createScrewingSplitter();
 			case InterfaceRepositoryPackage.SCREWING_MOTOR: return createScrewingMotor();
@@ -73,7 +74,6 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 			case InterfaceRepositoryPackage.WATER_SUPPLY: return createWaterSupply();
 			case InterfaceRepositoryPackage.PHYSICAL_CONNECTION: return createPhysicalConnection();
 			case InterfaceRepositoryPackage.TRANSPORT_CONNECTION: return createTransportConnection();
-			case InterfaceRepositoryPackage.INTERFACE_REPOSITORY: return createInterfaceRepository();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
