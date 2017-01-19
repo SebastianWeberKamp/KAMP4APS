@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EFactory;
 import org.palladiosimulator.pcm.repository.Role;
 import xPPU.BusBox;

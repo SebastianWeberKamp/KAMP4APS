@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
 import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 import xPPU.ComponentRepository.MicroswitchModule;

@@ -9,6 +9,7 @@ import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractSeedModifications;
 import edu.kit.ipd.sdq.amp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.*;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 

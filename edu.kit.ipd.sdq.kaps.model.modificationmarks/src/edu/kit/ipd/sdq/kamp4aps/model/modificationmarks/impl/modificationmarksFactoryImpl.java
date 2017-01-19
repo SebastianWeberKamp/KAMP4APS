@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
 import org.palladiosimulator.pcm.repository.Role;
 
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.*;
+import org.eclipse.emf.common.util.EList;
 import xPPU.BusBox;
 import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusMaster;
