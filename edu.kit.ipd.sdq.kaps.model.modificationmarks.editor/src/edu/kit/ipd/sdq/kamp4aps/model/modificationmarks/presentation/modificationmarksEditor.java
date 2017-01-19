@@ -792,6 +792,7 @@ public class modificationmarksEditor
 		adapterFactory.addAdapterFactory(new StructureRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ModuleRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new InterfaceRepositoryItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new xPPU.Identifier.provider.IdentifierItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
