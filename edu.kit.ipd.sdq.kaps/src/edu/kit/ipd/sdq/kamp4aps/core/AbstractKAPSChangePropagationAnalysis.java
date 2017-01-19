@@ -86,9 +86,6 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 	protected void calculateAndMarkBusBoxChange(S version){
 		scenarioTwo = new BusChanges(version);
 		addBusBoxModifications(version);
-//		addBusMasterModifications();
-//		addBusSlaveModifications();
-//		removeDuplicates();
 	}
 
 		private void addBusBoxModifications(S version) {
