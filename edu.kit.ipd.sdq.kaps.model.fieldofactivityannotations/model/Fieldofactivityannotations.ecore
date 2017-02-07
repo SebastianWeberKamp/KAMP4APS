@@ -4,11 +4,11 @@
     nsPrefix="fieldofactivityannotations">
   <eClassifiers xsi:type="ecore:EClass" name="FieldOfActivityAnnotationRepository">
     <eStructuralFeatures xsi:type="ecore:EReference" name="calibrationSpecification"
-        eType="#//CalibrationSpecification" containment="true" eOpposite="#//CalibrationSpecification/parent"/>
+        eType="#//CalibrationSpecification?" containment="true" eOpposite="#//CalibrationSpecification?/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testSpecification" eType="#//TestSpecification"
         containment="true" eOpposite="#//TestSpecification/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="developmentSpecification"
-        eType="#//DevelopmentSpecification" containment="true" eOpposite="#//DevelopmentSpecification/parent"/>
+        eType="#//DevelopmentSpecification?" containment="true" eOpposite="#//DevelopmentSpecification?/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="purchaseSpecification"
         eType="#//PurchaseSpecification" containment="true" eOpposite="#//PurchaseSpecification/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hmiSpecification" eType="#//HMISpecification"
@@ -18,21 +18,13 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="documentationSpecification"
         eType="#//DocumentationSpecification" containment="true" eOpposite="#//DocumentationSpecification/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="componentSpecification"
-        eType="#//ComponentSpecification" containment="true" eOpposite="#//ComponentSpecification/parent"/>
+        eType="#//ComponentSpecification?" containment="true" eOpposite="#//ComponentSpecification?/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="staffSpecification" eType="#//StaffSpecification"
         containment="true" eOpposite="#//StaffSpecification/parent"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="CalibrationSpecification">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/calibrationSpecification"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TestSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/testSpecification"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DevelopmentSpecification">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/developmentSpecification"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PurchaseSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
@@ -50,10 +42,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/documentationSpecification"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ComponentSpecification">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/componentSpecification"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaffSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/staffSpecification"/>
@@ -61,6 +49,18 @@
         eType="#//Base/PersonList" containment="true" eOpposite="#//Base/PersonList/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roleList" lowerBound="1"
         eType="#//Base/RoleList" containment="true" eOpposite="#//Base/RoleList/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CalibrationSpecification?">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/calibrationSpecification"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DevelopmentSpecification?">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/developmentSpecification"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentSpecification?">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/componentSpecification"/>
   </eClassifiers>
   <eSubpackages name="Base" nsURI="Base" nsPrefix="Base">
     <eClassifiers xsi:type="ecore:EClass" name="RoleList">
@@ -89,13 +89,21 @@
           eType="#//Base/Role" eOpposite="#//Base/Role/person"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="File" abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="TestCase" abstract="true"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Documentation" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="File" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="TestCase" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="testName"/>
+    </eClassifiers>
   </eSubpackages>
   <eSubpackages name="Roles">
     <eClassifiers xsi:type="ecore:EClass" name="Engineer" eSuperTypes="#//Base/Role"/>
     <eClassifiers xsi:type="ecore:EClass" name="Purchaser" eSuperTypes="#//Base/Role"/>
     <eClassifiers xsi:type="ecore:EClass" name="Mechanic" eSuperTypes="#//Base/Role"/>
+  </eSubpackages>
+  <eSubpackages name="Files" nsURI="">
+    <eClassifiers xsi:type="ecore:EClass" name="Documentation" eSuperTypes="#//Base/File"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Drawing" eSuperTypes="#//Base/File"/>
+    <eClassifiers xsi:type="ecore:EClass" name="StockList" eSuperTypes="#//Base/File"/>
   </eSubpackages>
 </ecore:EPackage>
