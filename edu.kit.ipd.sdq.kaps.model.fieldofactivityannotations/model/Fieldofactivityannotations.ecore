@@ -10,7 +10,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="developmentSpecification"
         eType="#//DevelopmentSpecification?" containment="true" eOpposite="#//DevelopmentSpecification?/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="purchaseSpecification"
-        eType="#//PurchaseSpecification" containment="true" eOpposite="#//PurchaseSpecification/parent"/>
+        eType="#//StockSpecification" containment="true" eOpposite="#//StockSpecification/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hmiSpecification" eType="#//HMISpecification"
         containment="true" eOpposite="#//HMISpecification/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ecadSpecification" eType="#//ECADSpecification"
@@ -25,10 +25,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="TestSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/testSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemTests" upperBound="-1"
+        eType="#//Tests/SystemTest" containment="true" eOpposite="#//Tests/SystemTest/parent"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PurchaseSpecification">
+  <eClassifiers xsi:type="ecore:EClass" name="StockSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/purchaseSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stockList" upperBound="-1"
+        eType="#//StockList" containment="true" eOpposite="#//StockList/parent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HMISpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
@@ -62,6 +66,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/componentSpecification"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StockList" eSuperTypes="#//Base/File">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//StockSpecification" eOpposite="#//StockSpecification/stockList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+  </eClassifiers>
   <eSubpackages name="Base" nsURI="Base" nsPrefix="Base">
     <eClassifiers xsi:type="ecore:EClass" name="RoleList">
       <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
@@ -93,17 +103,27 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="filename"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="TestCase" abstract="true">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="testName"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="testName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
   </eSubpackages>
-  <eSubpackages name="Roles">
+  <eSubpackages name="Roles" nsURI="r" nsPrefix="r">
     <eClassifiers xsi:type="ecore:EClass" name="Engineer" eSuperTypes="#//Base/Role"/>
     <eClassifiers xsi:type="ecore:EClass" name="Purchaser" eSuperTypes="#//Base/Role"/>
     <eClassifiers xsi:type="ecore:EClass" name="Mechanic" eSuperTypes="#//Base/Role"/>
   </eSubpackages>
-  <eSubpackages name="Files" nsURI="">
+  <eSubpackages name="Files" nsURI="f" nsPrefix="f">
     <eClassifiers xsi:type="ecore:EClass" name="Documentation" eSuperTypes="#//Base/File"/>
     <eClassifiers xsi:type="ecore:EClass" name="Drawing" eSuperTypes="#//Base/File"/>
-    <eClassifiers xsi:type="ecore:EClass" name="StockList" eSuperTypes="#//Base/File"/>
+  </eSubpackages>
+  <eSubpackages name="Documentation" nsURI="doc" nsPrefix="doc">
+    <eClassifiers xsi:type="ecore:EClass" name="MainteneanceDocumentation" eSuperTypes="#//Files/Documentation"/>
+    <eClassifiers xsi:type="ecore:EClass" name="OperatorInstructions" eSuperTypes="#//Files/Documentation"/>
+  </eSubpackages>
+  <eSubpackages name="Tests" nsURI="tests" nsPrefix="tests">
+    <eClassifiers xsi:type="ecore:EClass" name="SystemTest" eSuperTypes="#//Base/TestCase">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+          eType="#//TestSpecification" eOpposite="#//TestSpecification/systemTests"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnderTest" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//Plant"/>
+    </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>
