@@ -37,14 +37,45 @@
   <eClassifiers xsi:type="ecore:EClass" name="HMISpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/hmiSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hmiConfiguration" upperBound="-1"
+        eType="#//HMIConfiguration" eOpposite="#//HMIConfiguration/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HMIConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//HMISpecification" eOpposite="#//HMISpecification/hmiConfiguration"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ECADSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/ecadSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DocumentationSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/documentationSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mainteneance" upperBound="-1"
+        eType="#//Documentation/MainteneanceDocumentation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
+        eType="#//Documentation/OperatorInstructions"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trainingIntern" upperBound="-1"
+        eType="#//Documentation/TrainingDocIntern"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trainingExternal" upperBound="-1"
+        eType="#//Documentation/TrainingDocExternal"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaffSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
@@ -71,6 +102,12 @@
         eType="#//StockSpecification" eOpposite="#//StockSpecification/stockList"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
         eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
   </eClassifiers>
   <eSubpackages name="Base" nsURI="Base" nsPrefix="Base">
     <eClassifiers xsi:type="ecore:EClass" name="RoleList">
@@ -118,6 +155,8 @@
   <eSubpackages name="Documentation" nsURI="doc" nsPrefix="doc">
     <eClassifiers xsi:type="ecore:EClass" name="MainteneanceDocumentation" eSuperTypes="#//Files/Documentation"/>
     <eClassifiers xsi:type="ecore:EClass" name="OperatorInstructions" eSuperTypes="#//Files/Documentation"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TrainingDocIntern" eSuperTypes="#//Files/Documentation"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TrainingDocExternal" eSuperTypes="#//Files/Documentation"/>
   </eSubpackages>
   <eSubpackages name="Tests" nsURI="tests" nsPrefix="tests">
     <eClassifiers xsi:type="ecore:EClass" name="SystemTest" eSuperTypes="#//Base/TestCase">
