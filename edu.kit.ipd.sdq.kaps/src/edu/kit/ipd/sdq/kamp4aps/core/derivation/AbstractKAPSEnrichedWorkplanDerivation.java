@@ -15,13 +15,13 @@ import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureAnnotationLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.BuildConfiguration;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.MetadataFile;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.MetadataFileAggregation;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.SourceFile;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.SourceFileAggregation;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.UnitTestCase;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.UnitTestCaseAggregation;
+import fieldofactivityannotations.BuildConfiguration;
+import fieldofactivityannotations.MetadataFile;
+import fieldofactivityannotations.MetadataFileAggregation;
+import fieldofactivityannotations.SourceFile;
+import fieldofactivityannotations.SourceFileAggregation;
+import fieldofactivityannotations.UnitTestCase;
+import fieldofactivityannotations.UnitTestCaseAggregation;
 
 public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends ArchitectureVersion> 
 		implements AbstractEnrichedWorkplanDerivation<T> {

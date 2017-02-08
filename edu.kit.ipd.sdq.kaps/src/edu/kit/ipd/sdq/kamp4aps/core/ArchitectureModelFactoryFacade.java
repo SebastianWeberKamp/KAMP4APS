@@ -4,14 +4,14 @@ import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencie
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
 
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion.ArchitectureVersionParams;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.BuildSpecification;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.DeploymentSpecification;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.DevelopmentArtefactSpecification;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ReleaseSpecification;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StaffSpecification;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.TestSpecification;
+import fieldofactivityannotations.BuildSpecification;
+import fieldofactivityannotations.DeploymentSpecification;
+import fieldofactivityannotations.DevelopmentArtefactSpecification;
+import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
+import fieldofactivityannotations.FieldofactivityannotationsFactory;
+import fieldofactivityannotations.ReleaseSpecification;
+import fieldofactivityannotations.StaffSpecification;
+import fieldofactivityannotations.TestSpecification;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSModificationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;

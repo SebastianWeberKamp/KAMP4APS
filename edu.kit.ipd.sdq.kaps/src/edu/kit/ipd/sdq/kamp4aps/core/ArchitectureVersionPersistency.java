@@ -8,7 +8,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
 import edu.kit.ipd.sdq.amp.util.FileAndFolderManagement;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion.ArchitectureVersionParams;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
+import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
 import xPPU.Plant;
 

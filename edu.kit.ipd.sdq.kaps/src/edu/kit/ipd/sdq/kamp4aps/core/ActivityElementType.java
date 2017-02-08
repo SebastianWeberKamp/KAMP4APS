@@ -12,12 +12,12 @@ import org.palladiosimulator.pcm.repository.RequiredRole;
 import org.palladiosimulator.pcm.repository.Signature;
 
 import edu.kit.ipd.sdq.amp.workplan.AbstractActivityElementType;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.BuildConfiguration;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.DeploymentSpecification;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.MetadataFile;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ReleaseConfiguration;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.SourceFile;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.TestCase;
+import fieldofactivityannotations.BuildConfiguration;
+import fieldofactivityannotations.DeploymentSpecification;
+import fieldofactivityannotations.MetadataFile;
+import fieldofactivityannotations.ReleaseConfiguration;
+import fieldofactivityannotations.SourceFile;
+import fieldofactivityannotations.TestCase;
 import xPPU.BusComponents.BusBox;
 
 public enum ActivityElementType implements AbstractActivityElementType {

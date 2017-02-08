@@ -4,8 +4,8 @@ import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencie
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
 
 import edu.kit.ipd.sdq.amp.architecture.AbstractArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
+import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
+import fieldofactivityannotations.FieldofactivityannotationsFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
 import xPPU.Plant;
 

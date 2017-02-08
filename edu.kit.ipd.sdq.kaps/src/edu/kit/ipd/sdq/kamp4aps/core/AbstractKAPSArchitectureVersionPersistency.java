@@ -7,7 +7,8 @@ import org.palladiosimulator.pcm.system.SystemPackage;
 
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesPackage;
 import edu.kit.ipd.sdq.amp.architecture.AbstractArchitectureVersionPersistency;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsPackage;
+import fieldofactivityannotations.FieldofactivityannotationsPackage;
+import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 
 public abstract class AbstractKAPSArchitectureVersionPersistency<T extends ArchitectureVersion> 
