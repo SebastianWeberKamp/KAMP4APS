@@ -10,13 +10,21 @@
       <package
             uri="http://sdq.ipd.kit.edu/KAPSFieldofactivityannotations/1.0"
             class="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsPackage"
-            genModel="model/Fieldofactivityannotations.genmodel"/>
+            genModel="model/Fieldofactivityannotations2.genmodel"/>
    </extension>
 
    <extension point="org.eclipse.emf.ecore.extension_parser">
       <parser
             type="fieldofactivityannotations"
             class="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.util.FieldofactivityannotationsResourceFactoryImpl"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated Fieldofactivityannotations -->
+      <package
+            uri="http://sdq.ipd.kit.edu/KAPSFieldofactivityannotations/1.0"
+            class="fieldofactivityannotations.FieldofactivityannotationsPackage"
+            genModel="model/Fieldofactivityannotations.genmodel"/>
    </extension>
 
 </plugin>

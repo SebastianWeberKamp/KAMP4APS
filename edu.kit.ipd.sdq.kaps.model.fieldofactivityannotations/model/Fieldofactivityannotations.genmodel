@@ -1,134 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations/src"
-    modelPluginID="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations" modelName="KAPS Fieldofactivity Annotations"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
-    tableProviders="true" usedGenPackages="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units">
+    modelPluginID="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations" modelName="Fieldofactivityannotations"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../xPPU/model/xPPU.genmodel#//xPPU"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>Fieldofactivityannotations.ecore</foreignModel>
-  <genPackages prefix="Fieldofactivityannotations" basePackage="edu.kit.ipd.sdq.kamp4aps.model"
-      resource="XMI" disposableProviderFactory="true" ecorePackage="Fieldofactivityannotations.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fieldofactivityannotations.ecore#//TechnologicalCorrespondenceTypes">
-      <genEnumLiterals ecoreEnumLiteral="Fieldofactivityannotations.ecore#//TechnologicalCorrespondenceTypes/SetOfClasses"/>
-      <genEnumLiterals ecoreEnumLiteral="Fieldofactivityannotations.ecore#//TechnologicalCorrespondenceTypes/JavaPackages"/>
-      <genEnumLiterals ecoreEnumLiteral="Fieldofactivityannotations.ecore#//TechnologicalCorrespondenceTypes/Plugins"/>
-      <genEnumLiterals ecoreEnumLiteral="Fieldofactivityannotations.ecore#//TechnologicalCorrespondenceTypes/EclipsePlugins"/>
-      <genEnumLiterals ecoreEnumLiteral="Fieldofactivityannotations.ecore#//TechnologicalCorrespondenceTypes/EJB"/>
-      <genEnumLiterals ecoreEnumLiteral="Fieldofactivityannotations.ecore#//TechnologicalCorrespondenceTypes/Packages"/>
-      <genEnumLiterals ecoreEnumLiteral="Fieldofactivityannotations.ecore#//TechnologicalCorrespondenceTypes/Namespaces"/>
-      <genEnumLiterals ecoreEnumLiteral="Fieldofactivityannotations.ecore#//TechnologicalCorrespondenceTypes/Directories"/>
-    </genEnums>
+  <genPackages prefix="Fieldofactivityannotations" disposableProviderFactory="true"
+      ecorePackage="Fieldofactivityannotations.ecore#/">
     <genClasses ecoreClass="Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/developmentArtefactSpecification"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/buildSpecification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/calibrationSpecification"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/testSpecification"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/releaseSpecification"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/deploymentSpecification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/developmentSpecification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/purchaseSpecification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/hmiSpecification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/ecadSpecification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/documentationSpecification"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/componentSpecification"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/staffSpecification"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/technologySpecification"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/designPatternSpecification"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//DevelopmentArtefactSpecification">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DevelopmentArtefactSpecification/parent"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DevelopmentArtefactSpecification/sourceFiles"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DevelopmentArtefactSpecification/sourceFileAggregations"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DevelopmentArtefactSpecification/metadataFiles"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DevelopmentArtefactSpecification/metadataFileAggregations"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//SourceFile">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//SourceFile/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//SourceFile/component"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//SourceFileAggregation">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//SourceFileAggregation/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//SourceFileAggregation/component"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//MetadataFile">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//MetadataFile/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//MetadataFile/component"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//MetadataFileAggregation">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//MetadataFileAggregation/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//MetadataFileAggregation/component"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//BuildSpecification">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//BuildSpecification/parent"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//BuildSpecification/buildConfigurations"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//BuildSpecification/thirdPartyComponentOrLibraries"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//BuildConfiguration">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//BuildConfiguration/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//BuildConfiguration/component"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//ThirdPartyComponentOrLibrary">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ThirdPartyComponentOrLibrary/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ThirdPartyComponentOrLibrary/component"/>
     </genClasses>
     <genClasses ecoreClass="Fieldofactivityannotations.ecore#//TestSpecification">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//TestSpecification/parent"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//TestSpecification/unitTestCases"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//TestSpecification/acceptanceTestCases"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//TestSpecification/integrationTestCases"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//TestSpecification/unitTestCaseAggregations"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//TestSpecification/acceptanceTestCaseAggregations"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//TestSpecification/integrationTestCaseAggregations"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//TestSpecification/systemTests"/>
     </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//ReleaseSpecification">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ReleaseSpecification/releaseConfigurations"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ReleaseSpecification/parent"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//StockSpecification">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StockSpecification/parent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StockSpecification/stockList"/>
     </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//ReleaseConfiguration">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ReleaseConfiguration/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ReleaseConfiguration/components"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//ReleaseConfiguration/pathname"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//ReleaseConfiguration/description"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//HMISpecification">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//HMISpecification/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//HMISpecification/hmiConfiguration"/>
     </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//DeploymentSpecification">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DeploymentSpecification/runtimeInstances"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DeploymentSpecification/runtimeInstanceAggregations"/>
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DeploymentSpecification/parent"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//HMIConfiguration">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//HMIConfiguration/parent"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//HMIConfiguration/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//HMIConfiguration/components"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//HMIConfiguration/modules"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//HMIConfiguration/interfaces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//HMIConfiguration/structures"/>
     </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//RuntimeInstance">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//RuntimeInstance/parent"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//RuntimeInstance/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//RuntimeInstance/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//RuntimeInstance/components"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//ECADSpecification">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ECADSpecification/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ECADSpecification/components"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ECADSpecification/modules"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ECADSpecification/interfaces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ECADSpecification/structures"/>
     </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//RuntimeInstanceAggregation">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//RuntimeInstanceAggregation/parent"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//RuntimeInstanceAggregation/numberOfInstances"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//RuntimeInstanceAggregation/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//RuntimeInstanceAggregation/components"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//UnitTestCase">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//UnitTestCase/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//UnitTestCase/providedrole"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//AcceptanceTestCase">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//AcceptanceTestCase/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//AcceptanceTestCase/providedrole"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//IntegrationTestCase">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//IntegrationTestCase/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//IntegrationTestCase/providedrole"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//IntegrationTestCase/assemblyConnector"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//UnitTestCaseAggregation">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//UnitTestCaseAggregation/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//UnitTestCaseAggregation/providedrole"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//AcceptanceTestCaseAggregation">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//AcceptanceTestCaseAggregation/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//AcceptanceTestCaseAggregation/providedrole"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//IntegrationTestCaseAggregation">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//IntegrationTestCaseAggregation/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//IntegrationTestCaseAggregation/providedrole"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//IntegrationTestCaseAggregation/assemblyConnector"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//DocumentationSpecification">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DocumentationSpecification/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DocumentationSpecification/mainteneance"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DocumentationSpecification/instructions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DocumentationSpecification/trainingIntern"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DocumentationSpecification/trainingExternal"/>
     </genClasses>
     <genClasses ecoreClass="Fieldofactivityannotations.ecore#//StaffSpecification">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StaffSpecification/parent"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StaffSpecification/personList"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StaffSpecification/roleList"/>
+    </genClasses>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//CalibrationSpecification">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//CalibrationSpecification/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//DevelopmentSpecification">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DevelopmentSpecification/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//ComponentSpecification">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//ComponentSpecification/parent"/>
+    </genClasses>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//StockList">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StockList/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StockList/components"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StockList/modules"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StockList/interfaces"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StockList/structures"/>
+    </genClasses>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//RoleList">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//RoleList/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//RoleList/roles"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="Fieldofactivityannotations.ecore#//Role">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//Role/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//Role/person"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//Role/description"/>
     </genClasses>
     <genClasses ecoreClass="Fieldofactivityannotations.ecore#//PersonList">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//PersonList/parent"/>
@@ -139,52 +92,24 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//Person/roles"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//Person/name"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="Fieldofactivityannotations.ecore#//Role">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//Role/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//Role/person"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//Role/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//Role/components"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//RoleList">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//RoleList/parent"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//RoleList/roles"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//Developer"/>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//BuildConfigurator"/>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//TestDeveloper"/>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//Tester"/>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//ReleaseConfigurator"/>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//Deployer"/>
     <genClasses image="false" ecoreClass="Fieldofactivityannotations.ecore#//File">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//File/filename"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//File/technology"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="Fieldofactivityannotations.ecore#//FileAggregation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//FileAggregation/numberOfFiles"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//FileAggregation/technology"/>
     </genClasses>
     <genClasses image="false" ecoreClass="Fieldofactivityannotations.ecore#//TestCase">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//TestCase/nameOfTest"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//TestCase/testName"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="Fieldofactivityannotations.ecore#//TestCaseAggregation">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//TestCaseAggregation/numberOfTestcases"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//TestCaseAggregation/nameOfTestSuite"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//DesignPatternSpecification">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DesignPatternSpecification/parent"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DesignPatternSpecification/designPatternRoles"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//DesignPatternRole">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DesignPatternRole/providedRole"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//DesignPatternRole/component"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//TechnologySpecification">
-      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//TechnologySpecification/parent"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//TechnologySpecification/technologicalCorrespondences"/>
-    </genClasses>
-    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//TechnologicalCorrespondence">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//TechnologicalCorrespondence/technologicalCorrespondenceType"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//TechnologicalCorrespondence/component"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//Engineer"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//Purchaser"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//Mechanic"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//Documentation"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//Drawing"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//MainteneanceDocumentation"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//OperatorInstructions"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//TrainingDocIntern"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//TrainingDocExternal"/>
+    <genClasses ecoreClass="Fieldofactivityannotations.ecore#//SystemTest">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//SystemTest/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//SystemTest/systemUnderTest"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

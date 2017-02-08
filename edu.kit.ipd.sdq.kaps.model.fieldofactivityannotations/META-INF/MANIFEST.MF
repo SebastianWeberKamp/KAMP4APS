@@ -6,16 +6,11 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations,
- edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.impl,
- edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.util
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: fieldofactivityannotations,
+ fieldofactivityannotations.impl,
+ fieldofactivityannotations.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- org.eclipse.emf.ecore.xmi;visibility:=reexport,
- de.uka.ipd.sdq.identifier;visibility:=reexport,
- org.palladiosimulator.pcm;visibility:=reexport,
- de.uka.ipd.sdq.probfunction;visibility:=reexport,
- de.uka.ipd.sdq.stoex;visibility:=reexport,
- de.uka.ipd.sdq.units;visibility:=reexport
+ xPPU;visibility:=reexport
 Bundle-ActivationPolicy: lazy
