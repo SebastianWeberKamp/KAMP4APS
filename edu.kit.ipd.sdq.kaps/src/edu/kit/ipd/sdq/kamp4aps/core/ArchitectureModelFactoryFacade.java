@@ -4,13 +4,16 @@ import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencie
 import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
 
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion.ArchitectureVersionParams;
-import fieldofactivityannotations.BuildSpecification;
-import fieldofactivityannotations.DeploymentSpecification;
-import fieldofactivityannotations.DevelopmentArtefactSpecification;
+import fieldofactivityannotations.CalibrationSpecification;
+import fieldofactivityannotations.ComponentSpecification;
+import fieldofactivityannotations.DevelopmentSpecification;
+import fieldofactivityannotations.DocumentationSpecification;
+import fieldofactivityannotations.ECADSpecification;
 import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import fieldofactivityannotations.FieldofactivityannotationsFactory;
-import fieldofactivityannotations.ReleaseSpecification;
+import fieldofactivityannotations.HMISpecification;
 import fieldofactivityannotations.StaffSpecification;
+import fieldofactivityannotations.StockSpecification;
 import fieldofactivityannotations.TestSpecification;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSModificationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
@@ -43,20 +46,34 @@ public class ArchitectureModelFactoryFacade {
 	public static FieldOfActivityAnnotationRepository createFieldOfActivityAnnotationsRepository() {
 		FieldOfActivityAnnotationRepository repository =  FieldofactivityannotationsFactory.eINSTANCE.createFieldOfActivityAnnotationRepository();
 		
-		DevelopmentArtefactSpecification devSpec = FieldofactivityannotationsFactory.eINSTANCE.createDevelopmentArtefactSpecification();
-		repository.setDevelopmentArtefactSpecification(devSpec);
-		DeploymentSpecification deploymentSpec = FieldofactivityannotationsFactory.eINSTANCE.createDeploymentSpecification();
-		repository.setDeploymentSpecification(deploymentSpec);
 		TestSpecification testSpec = FieldofactivityannotationsFactory.eINSTANCE.createTestSpecification();
 		repository.setTestSpecification(testSpec);
-		ReleaseSpecification releaseSpec = FieldofactivityannotationsFactory.eINSTANCE.createReleaseSpecification();
-		repository.setReleaseSpecification(releaseSpec);
-		BuildSpecification buildSpec = FieldofactivityannotationsFactory.eINSTANCE.createBuildSpecification();
-		repository.setBuildSpecification(buildSpec);
+		
+		StockSpecification stockSpec = FieldofactivityannotationsFactory.eINSTANCE.createStockSpecification();
+		repository.setPurchaseSpecification(stockSpec);
+		
+		HMISpecification hmiSpec = FieldofactivityannotationsFactory.eINSTANCE.createHMISpecification();
+		repository.setHmiSpecification(hmiSpec);
+		
+		ECADSpecification ecadSpec = FieldofactivityannotationsFactory.eINSTANCE.createECADSpecification();
+		repository.setEcadSpecification(ecadSpec);
+		
+		DocumentationSpecification docSpec = FieldofactivityannotationsFactory.eINSTANCE.createDocumentationSpecification();
+		repository.setDocumentationSpecification(docSpec);
+
 		StaffSpecification staffSpec = FieldofactivityannotationsFactory.eINSTANCE.createStaffSpecification();
 		repository.setStaffSpecification(staffSpec);
 		staffSpec.setPersonList(FieldofactivityannotationsFactory.eINSTANCE.createPersonList());
 		staffSpec.setRoleList(FieldofactivityannotationsFactory.eINSTANCE.createRoleList());
+		
+		CalibrationSpecification calSpec = FieldofactivityannotationsFactory.eINSTANCE.createCalibrationSpecification();
+		repository.setCalibrationSpecification(calSpec);
+		
+		DevelopmentSpecification devSpec = FieldofactivityannotationsFactory.eINSTANCE.createDevelopmentSpecification();
+		repository.setDevelopmentSpecification(devSpec);
+		
+		ComponentSpecification comSpec = FieldofactivityannotationsFactory.eINSTANCE.createComponentSpecification();
+		repository.setComponentSpecification(comSpec);
 		
 		return repository;
 	}
