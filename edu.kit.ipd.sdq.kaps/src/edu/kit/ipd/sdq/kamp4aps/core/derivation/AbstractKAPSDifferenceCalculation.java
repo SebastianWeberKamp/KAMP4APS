@@ -5,8 +5,6 @@ import java.util.List;
 
 import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
-import org.palladiosimulator.pcm.core.entity.NamedElement;
-import org.palladiosimulator.pcm.repository.DataType;
 
 import edu.kit.ipd.sdq.amp.workplan.AbstractWorkplanDerivation;
 import edu.kit.ipd.sdq.amp.workplan.Activity;
@@ -15,51 +13,28 @@ import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.LabelCustomizing;
-import xPPU.ComponentRepository.Component;
+import xPPU.Identifier.Identifier;
 
-public abstract class AbstractKAPSDifferenceCalculation<T extends ArchitectureVersion> 
+public abstract class AbstractKAPSDifferenceCalculation<T extends ArchitectureVersion>
 		extends AbstractWorkplanDerivation<T> {
 
-	private final InternalModificationDerivation architectureInternalModificationDerivation = 
-			new InternalModificationDerivation();
-	private final SubactivityDerivation architectureSubactivityDerivation =
-			new SubactivityDerivation();
+	private final InternalModificationDerivation architectureInternalModificationDerivation = new InternalModificationDerivation();
+	private final SubactivityDerivation architectureSubactivityDerivation = new SubactivityDerivation();
 
 	@Override
 	protected void checkForDifferencesAndAddToWorkplan(Diff diffElement, List<Activity> workplan) {
-		for (ActivityElementType elementType: ActivityElementType.topLevelAPSActivityElementTypes()) {
+		for (ActivityElementType elementType : ActivityElementType.topLevelAPSActivityElementTypes()) {
 			if (detectionRuleAdded(diffElement, elementType.getElementClass())) {
-				if (elementType == ActivityElementType.COMPONENT) {
-					Component architectureElement = (Component)(((ReferenceChange)diffElement).getValue());
-					workplan.add(new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, 
-							architectureElement, LabelCustomizing.getDataTypeName(architectureElement), 
-							null, BasicActivity.ADD, createAddElementDescription(architectureElement)));
-				} else { //all other supported elements (including CompositeDataType and 
-					// CollectionDataType are Entities -> NamedElements
-					NamedElement architectureElement = (NamedElement)(((ReferenceChange)diffElement).getValue());
-					Activity newActivity = new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, 
-							architectureElement, architectureElement.getEntityName(), null,
-							BasicActivity.ADD, createAddElementDescription(architectureElement));
-					workplan.add(newActivity);
-					this.architectureSubactivityDerivation.deriveSubactivities(
-							architectureElement, newActivity);
-				}
+				Identifier architectureElement = (Identifier) (((ReferenceChange) diffElement).getValue());
+				workplan.add(new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, architectureElement,
+						LabelCustomizing.getIdentifierName(architectureElement), null, BasicActivity.ADD,
+						createAddElementDescription(architectureElement)));
 				return;
 			} else if (detectionRuleDeleted(diffElement, elementType.getElementClass())) {
-				if (elementType == ActivityElementType.DATATYPE) {
-					DataType architectureElement = (DataType)(((ReferenceChange)diffElement).getValue());
-					workplan.add(new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, 
-							architectureElement, LabelCustomizing.getDataTypeName(architectureElement), 
-							null, BasicActivity.REMOVE, createRemoveElementDescription(architectureElement)));
-				} else {
-					NamedElement architectureElement = (NamedElement)(((ReferenceChange)diffElement).getValue());
-					Activity newActivity = new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType,
-							architectureElement, architectureElement.getEntityName(), null,
-							BasicActivity.REMOVE, createRemoveElementDescription(architectureElement));
-					workplan.add(newActivity);
-					this.architectureSubactivityDerivation.deriveSubactivities(
-							architectureElement, newActivity);
-				}
+				Identifier architectureElement = (Identifier) (((ReferenceChange) diffElement).getValue());
+				workplan.add(new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, architectureElement,
+						LabelCustomizing.getIdentifierName(architectureElement), null, BasicActivity.REMOVE,
+						createRemoveElementDescription(architectureElement)));
 				return;
 			}
 		}
@@ -67,28 +42,20 @@ public abstract class AbstractKAPSDifferenceCalculation<T extends ArchitectureVe
 
 	@Override
 	public List<Activity> deriveWorkplan(T baseVersion, T targetVersion) {
-		List<Activity> activityList = new ArrayList<Activity>();		
-		List<Activity> internalModificationActivities = this.architectureInternalModificationDerivation.
-				deriveInternalModifications(targetVersion);
+		List<Activity> activityList = new ArrayList<Activity>();
+		List<Activity> internalModificationActivities = this.architectureInternalModificationDerivation
+				.deriveInternalModifications(targetVersion);
 		activityList.addAll(internalModificationActivities);
-		
+
 		return activityList;
 	}
-	
-	public static String createAddElementDescription(NamedElement element) {
-		return "Add " + element.eClass().getName() + " " + element.getEntityName() + ".";
+
+	public static String createAddElementDescription(Identifier element) {
+		return "Add " + element.eClass().getName() + " " + element.getId() + ".";
 	}
-	
-	public static String createAddElementDescription(DataType element) {
-		return "Add " + element.eClass().getName() + " " + element.toString() + ".";
+
+	public static String createRemoveElementDescription(Identifier element) {
+		return "Remove " + element.eClass().getName() + " " + element.getId() + ".";
 	}
-	
-	public static String createRemoveElementDescription(NamedElement element) {
-		return "Remove " + element.eClass().getName() + " " + element.getEntityName() + ".";
-	}
-	
-	public static String createRemoveElementDescription(DataType element) {
-		return "Remove " + element.eClass().getName() + " " + LabelCustomizing.
-				getDataTypeName(element) + ".";
-	}
+
 }

@@ -26,7 +26,7 @@ import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 
 public class SubactivityDerivation {
-	
+//TODO: Are there any subactivities?	
 	public static Activity addSubActivity(NamedElement entity, 
 			AbstractActivityElementType activityElementType, 
 			NamedElement parentElement, Activity parentActivity) {
