@@ -8,8 +8,7 @@ Bundle-Activator: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation,
- xPPU.presentation
+Export-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.edit;visibility:=reexport,
