@@ -31,14 +31,14 @@ public class SensorChanges {
 			Collection<PhysicalConnection> physicalConnectionToChange) {
 		signalInterfaceToChange.add(sensor.getSignalinterface());
 		physicalConnectionToChange.add(sensor.getPhysicalconnection());
-		ModifySensor<Sensor> modifySensor = modificationmarksFactory.eINSTANCE.createModifySensor();
+		ModifySensor modifySensor = modificationmarksFactory.eINSTANCE.createModifySensor();
 		modifySensor.setToolderived(true);
 		modifySensor.setAffectedElement(sensor);
 		modifySensor.getCausingElements().addAll(getInitialMarkedSensors());
 	
 		for(SignalInterface signalInterface : signalInterfaceToChange){
 			if(signalInterface != null){
-				ModifySignalinterface<SignalInterface> msi = modificationmarksFactory.eINSTANCE.createModifySignalinterface();
+				ModifySignalinterface msi = modificationmarksFactory.eINSTANCE.createModifySignalinterface();
 				msi.setToolderived(true);
 				msi.setAffectedElement(signalInterface);
 				msi.getCausingElements().add(sensor);
@@ -48,7 +48,7 @@ public class SensorChanges {
 		
 		for(PhysicalConnection physicalConnection : physicalConnectionToChange){
 			if(physicalConnection != null){
-				ModifyPhysicalConnection<PhysicalConnection> mpc = modificationmarksFactory.eINSTANCE.createModifyPhysicalConnection();
+				ModifyPhysicalConnection mpc = modificationmarksFactory.eINSTANCE.createModifyPhysicalConnection();
 				mpc.setToolderived(true);
 				mpc.setAffectedElement(physicalConnection);
 				mpc.getCausingElements().add(sensor);

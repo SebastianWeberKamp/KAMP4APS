@@ -91,22 +91,22 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 		private void addBusBoxModifications(S version) {
 			BusComponentsParams params = ArchitectureModelLookup.lookUpChangesBasedOnBusModification(version, scenarioTwo.getInitialMarkedBusBoxes());
 			for(BusBox busBox : params.busBoxesToChange){
-				ModifyBusBox<BusBox> modifyBusBox = scenarioTwo.createNewModifyBusBox(busBox);
+				ModifyBusBox modifyBusBox = scenarioTwo.createNewModifyBusBox(busBox);
 				changePropagationDueToHardwareChange.getBusBoxModifications().add(modifyBusBox);
 //				scenarioTwo.markChangesBasedOnBusBox(busBox, changePropagationDueToHardwareChange);
 			}
 			for(BusMaster busMaster : params.busMastersToChange){
-				ModifyBusMaster<BusMaster> modifyBusMaster = scenarioTwo.createNewModifyBusMaster(busMaster);
+				ModifyBusMaster modifyBusMaster = scenarioTwo.createNewModifyBusMaster(busMaster);
 				changePropagationDueToHardwareChange.getBusMasterModifications().add(modifyBusMaster);
 //				scenarioTwo.markChangesBasedOnBusMaster(busMaster, changePropagationDueToHardwareChange);
 			}
 			for(BusSlave busSlave : params.busSlavesToChange){
-				ModifyBusSlave<BusSlave> modifyBusSlave = scenarioTwo.createNewModifyBusSlave(busSlave);
+				ModifyBusSlave modifyBusSlave = scenarioTwo.createNewModifyBusSlave(busSlave);
 				changePropagationDueToHardwareChange.getBusSlaveModifications().add(modifyBusSlave);
 //				scenarioTwo.markChangesBasedOnBusSlave(busSlave, changePropagationDueToHardwareChange);
 			}
 			for(BusCable busCable : params.busCablesToChange){
-				ModifyBusCable<BusCable> modifyBusCable = scenarioTwo.createNewModifyBusCable(busCable);
+				ModifyBusCable modifyBusCable = scenarioTwo.createNewModifyBusCable(busCable);
 				changePropagationDueToHardwareChange.getBusCableModifications().add(modifyBusCable);
 //				scenarioTwo.markChangesBasedOnBusCable(busCable, changePropagationDueToHardwareChange);
 			}
@@ -114,7 +114,7 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 		
 		private void addBusMasterModifications() {
 			for(BusMaster busMaster : scenarioTwo.getInitialMarkedBusMaster()){
-				ModifyBusMaster<BusMaster> modifyBusMaster = scenarioTwo.createNewModifyBusMaster(busMaster);
+				ModifyBusMaster modifyBusMaster = scenarioTwo.createNewModifyBusMaster(busMaster);
 				changePropagationDueToHardwareChange.getBusMasterModifications().add(modifyBusMaster);
 				scenarioTwo.markChangesBasedOnBusMaster(busMaster, changePropagationDueToHardwareChange);
 			}
@@ -122,7 +122,7 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 
 		private void addBusSlaveModifications() {
 			for(BusSlave busSlave : scenarioTwo.getInitialMarkedBusSlave()){
-				ModifyBusSlave<BusSlave> modifyBusSlave = scenarioTwo.createNewModifyBusSlave(busSlave);
+				ModifyBusSlave modifyBusSlave = scenarioTwo.createNewModifyBusSlave(busSlave);
 				changePropagationDueToHardwareChange.getBusSlaveModifications().add(modifyBusSlave);
 				scenarioTwo.markChangesBasedOnBusSlave(busSlave, changePropagationDueToHardwareChange);
 			}
@@ -136,10 +136,10 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 		}
 
 			private void removeModifyBusBoxDuplicates() {
-				EList<ModifyBusBox<?>> tmpMods = new BasicEList<ModifyBusBox<?>>();
-				for(ModifyBusBox<?> mod : changePropagationDueToHardwareChange.getBusBoxModifications()){
+				EList<ModifyBusBox> tmpMods = new BasicEList<ModifyBusBox>();
+				for(ModifyBusBox mod : changePropagationDueToHardwareChange.getBusBoxModifications()){
 					boolean isDuplicate = false;
-					for(ModifyBusBox<?> tmpMod : tmpMods){
+					for(ModifyBusBox tmpMod : tmpMods){
 						if(mod.getId() == tmpMod.getId()){
 							isDuplicate = true;
 						}						
@@ -150,16 +150,16 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 				System.out.println(changePropagationDueToHardwareChange.getBusBoxModifications().size());
 				changePropagationDueToHardwareChange.getBusBoxModifications().clear();
 				System.out.println(changePropagationDueToHardwareChange.getBusBoxModifications().size());
-				for(ModifyBusBox<?> mod : tmpMods){
+				for(ModifyBusBox mod : tmpMods){
 					changePropagationDueToHardwareChange.getBusBoxModifications().add(mod);
 				}
 			}
 			
 			private void removeModifyBusMasterDuplicates() {
-				EList<ModifyBusMaster<?>> tmpMods = new BasicEList<ModifyBusMaster<?>>();
-				for(ModifyBusMaster<?> mod : changePropagationDueToHardwareChange.getBusMasterModifications()){
+				EList<ModifyBusMaster> tmpMods = new BasicEList<ModifyBusMaster>();
+				for(ModifyBusMaster mod : changePropagationDueToHardwareChange.getBusMasterModifications()){
 					boolean isDuplicate = false;
-					for(ModifyBusMaster<?> tmpMod : tmpMods){
+					for(ModifyBusMaster tmpMod : tmpMods){
 						if(mod.getId() == tmpMod.getId()){
 							isDuplicate = true;
 						}						
@@ -170,16 +170,16 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 				System.out.println(changePropagationDueToHardwareChange.getBusMasterModifications().size());
 				changePropagationDueToHardwareChange.getBusMasterModifications().clear();
 				System.out.println(changePropagationDueToHardwareChange.getBusMasterModifications().size());
-				for(ModifyBusMaster<?> mod : tmpMods){
+				for(ModifyBusMaster mod : tmpMods){
 					changePropagationDueToHardwareChange.getBusMasterModifications().add(mod);
 				}
 			}
 			
 			private void removeModifyBusSlaveDuplicates() {
-				EList<ModifyBusSlave<?>> tmpMods = new BasicEList<ModifyBusSlave<?>>();
-				for(ModifyBusSlave<?> mod : changePropagationDueToHardwareChange.getBusSlaveModifications()){
+				EList<ModifyBusSlave> tmpMods = new BasicEList<ModifyBusSlave>();
+				for(ModifyBusSlave mod : changePropagationDueToHardwareChange.getBusSlaveModifications()){
 					boolean isDuplicate = false;
-					for(ModifyBusSlave<?> tmpMod : tmpMods){
+					for(ModifyBusSlave tmpMod : tmpMods){
 						if(mod.getId() == tmpMod.getId()){
 							isDuplicate = true;
 						}						
@@ -190,16 +190,16 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 				System.out.println(changePropagationDueToHardwareChange.getBusSlaveModifications().size());
 				changePropagationDueToHardwareChange.getBusSlaveModifications().clear();
 				System.out.println(changePropagationDueToHardwareChange.getBusSlaveModifications().size());
-				for(ModifyBusSlave<?> mod : tmpMods){
+				for(ModifyBusSlave mod : tmpMods){
 					changePropagationDueToHardwareChange.getBusSlaveModifications().add(mod);
 				}
 			}
 			
 			private void removeModifyBusCableDuplicates() {
-				EList<ModifyBusCable<?>> tmpMods = new BasicEList<ModifyBusCable<?>>();
-				for(ModifyBusCable<?> mod : changePropagationDueToHardwareChange.getBusCableModifications()){
+				EList<ModifyBusCable> tmpMods = new BasicEList<ModifyBusCable>();
+				for(ModifyBusCable mod : changePropagationDueToHardwareChange.getBusCableModifications()){
 					boolean isDuplicate = false;
-					for(ModifyBusCable<?> tmpMod : tmpMods){
+					for(ModifyBusCable tmpMod : tmpMods){
 						if(mod.getId() == tmpMod.getId()){
 							isDuplicate = true;
 						}						
@@ -210,7 +210,7 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 				System.out.println(changePropagationDueToHardwareChange.getBusCableModifications().size());
 				changePropagationDueToHardwareChange.getBusCableModifications().clear();
 				System.out.println(changePropagationDueToHardwareChange.getBusCableModifications().size());
-				for(ModifyBusCable<?> mod : tmpMods){
+				for(ModifyBusCable mod : tmpMods){
 					changePropagationDueToHardwareChange.getBusCableModifications().add(mod);
 				}
 			}

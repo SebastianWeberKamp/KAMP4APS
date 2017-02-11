@@ -30,21 +30,21 @@ public class SwitchChanges {
 		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, MicroswitchModule.class);
 	}
 
-	public ModifyMicroSwitchModule<MicroswitchModule> generateModifyMicroswitchModule(
+	public ModifyMicroSwitchModule generateModifyMicroswitchModule(
 			MicroswitchModule microswitchModule, ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
 		
 		PhysicalConnection physicalConnectionSwitch = microswitchModule.getPhysicalconnection();
 
 		Collection<MicroswitchModule> initialMarkedMicroswitches = getInitialMarkedMicroswitchModules();
 		
-		ModifyMicroSwitchModule<MicroswitchModule> modifyMicroSwitchModule = modificationmarksFactory.eINSTANCE
+		ModifyMicroSwitchModule modifyMicroSwitchModule = modificationmarksFactory.eINSTANCE
 				.createModifyMicroSwitchModule();
 		modifyMicroSwitchModule.setToolderived(true);
 		modifyMicroSwitchModule.setAffectedElement(microswitchModule);
 		modifyMicroSwitchModule.getCausingElements().addAll(initialMarkedMicroswitches);
 		modifyMicroSwitchModule.setIsReplaced(true);
 		
-		ModifyPhysicalConnection<PhysicalConnection> modifyPhysicalConnection = modificationmarksFactory.eINSTANCE.createModifyPhysicalConnection();
+		ModifyPhysicalConnection modifyPhysicalConnection = modificationmarksFactory.eINSTANCE.createModifyPhysicalConnection();
 		modifyPhysicalConnection.setToolderived(true);
 		modifyPhysicalConnection.setAffectedElement(physicalConnectionSwitch);
 		modifyPhysicalConnection.getCausingElements().add(modifyMicroSwitchModule);

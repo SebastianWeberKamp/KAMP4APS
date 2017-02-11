@@ -16,13 +16,7 @@ import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyDataType;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyEntity;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyProvidedRole;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyRequiredRole;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignature;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.LabelCustomizing;
 
 public class InternalModificationDerivation {
 	

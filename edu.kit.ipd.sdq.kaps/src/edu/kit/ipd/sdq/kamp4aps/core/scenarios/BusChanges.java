@@ -41,33 +41,33 @@ public class BusChanges {
 		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusCable.class);
 	}
 
-	public ModifyBusBox<BusBox> createNewModifyBusBox(BusBox busBox) {
+	public ModifyBusBox createNewModifyBusBox(BusBox busBox) {
 		Collection<BusBox> initialMarkedBusBoxes = getInitialMarkedBusBoxes();
-		ModifyBusBox<BusBox> modifyBusBox = modificationmarksFactory.eINSTANCE.createModifyBusBox();
+		ModifyBusBox modifyBusBox = modificationmarksFactory.eINSTANCE.createModifyBusBox();
 		modifyBusBox.setToolderived(true);
 		modifyBusBox.setAffectedElement(busBox);
 		modifyBusBox.getCausingElements().addAll(initialMarkedBusBoxes);
 		return modifyBusBox;
 	}
 	
-	public ModifyBusMaster<BusMaster> createNewModifyBusMaster(BusMaster busMaster) {
-		ModifyBusMaster<BusMaster> modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
+	public ModifyBusMaster createNewModifyBusMaster(BusMaster busMaster) {
+		ModifyBusMaster modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
 		modifyBusMaster.setToolderived(true);
 		modifyBusMaster.setAffectedElement(busMaster);
 		modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusMaster());
 		return modifyBusMaster;
 	}
 	
-	public ModifyBusSlave<BusSlave> createNewModifyBusSlave(BusSlave busSlave) {
-		ModifyBusSlave<BusSlave> modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
+	public ModifyBusSlave createNewModifyBusSlave(BusSlave busSlave) {
+		ModifyBusSlave modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
 		modifyBusSlave.setToolderived(true);
 		modifyBusSlave.setAffectedElement(busSlave);
 		modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusSlave());
 		return modifyBusSlave;
 	}
 	
-	public ModifyBusCable<BusCable> createNewModifyBusCable(BusCable busCable) {
-		ModifyBusCable<BusCable> modifyBusCable = modificationmarksFactory.eINSTANCE.createModifyBusCable();
+	public ModifyBusCable createNewModifyBusCable(BusCable busCable) {
+		ModifyBusCable modifyBusCable = modificationmarksFactory.eINSTANCE.createModifyBusCable();
 		modifyBusCable.setToolderived(true);
 		modifyBusCable.setAffectedElement(busCable);
 		modifyBusCable.getCausingElements().addAll(getInitialMarkedBusCable());
@@ -86,7 +86,7 @@ public class BusChanges {
 					for(SignalInterface si : sis){
 						if(si == siMaster){
 							BusMaster bm = (BusMaster) component;
-							ModifyBusMaster<BusMaster> modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
+							ModifyBusMaster modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
 							modifyBusMaster.setToolderived(true);
 							modifyBusMaster.setAffectedElement(bm);
 							modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusBoxes());
@@ -105,7 +105,7 @@ public class BusChanges {
 					for(SignalInterface si : siSlaves){
 						if(si == slaveSignalInterface){
 							BusSlave bs = (BusSlave) component;
-							ModifyBusSlave<BusSlave> modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
+							ModifyBusSlave modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
 							modifyBusSlave.setToolderived(true);
 							modifyBusSlave.setAffectedElement(bs);
 							modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusBoxes());
@@ -114,7 +114,7 @@ public class BusChanges {
 					}
 				} else if (component instanceof BusCable){
 					BusCable busCable = ((BusCable)component);
-					ModifyBusCable<BusCable> modifyBusCable = modificationmarksFactory.eINSTANCE.createModifyBusCable();
+					ModifyBusCable modifyBusCable = modificationmarksFactory.eINSTANCE.createModifyBusCable();
 					modifyBusCable.setToolderived(true);
 					modifyBusCable.setAffectedElement(busCable);
 					modifyBusCable.getCausingElements().addAll(getInitialMarkedBusBoxes());
@@ -137,7 +137,7 @@ public class BusChanges {
 					for(SignalInterface si : sis){
 						if(si == siController){
 							BusMaster bm = (BusMaster) component;
-							ModifyBusMaster<BusMaster> modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
+							ModifyBusMaster modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
 							modifyBusMaster.setToolderived(true);
 							modifyBusMaster.setAffectedElement(bm);
 							modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusMaster());
@@ -156,7 +156,7 @@ public class BusChanges {
 					for(SignalInterface si : siSlaves){
 						if(si == slaveSignalInterface){
 							BusSlave bs = (BusSlave) component;
-							ModifyBusSlave<BusSlave> modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
+							ModifyBusSlave modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
 							modifyBusSlave.setToolderived(true);
 							modifyBusSlave.setAffectedElement(bs);
 							modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusSlave());
@@ -165,7 +165,7 @@ public class BusChanges {
 					}
 				} else if (component instanceof BusCable){
 					BusCable busCable = ((BusCable)component);
-					ModifyBusCable<BusCable> modifyBusCable = modificationmarksFactory.eINSTANCE.createModifyBusCable();
+					ModifyBusCable modifyBusCable = modificationmarksFactory.eINSTANCE.createModifyBusCable();
 					modifyBusCable.setToolderived(true);
 					modifyBusCable.setAffectedElement(busCable);
 					modifyBusCable.getCausingElements().addAll(getInitialMarkedBusCable());
@@ -187,7 +187,7 @@ public class BusChanges {
 					for(SignalInterface si : sis){
 						if(si == siMaster){
 							BusMaster bm = (BusMaster) component;
-							ModifyBusMaster<BusMaster> modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
+							ModifyBusMaster modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
 							modifyBusMaster.setToolderived(true);
 							modifyBusMaster.setAffectedElement(bm);
 							modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusMaster());
@@ -204,7 +204,7 @@ public class BusChanges {
         		if(component instanceof BusSlave){
                     if(component == siSlave){
                         BusSlave bs = (BusSlave) component;
-                        ModifyBusSlave<BusSlave> modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
+                        ModifyBusSlave modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
                         modifyBusSlave.setToolderived(true);
                         modifyBusSlave.setAffectedElement(bs);
                         modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusSlave());
