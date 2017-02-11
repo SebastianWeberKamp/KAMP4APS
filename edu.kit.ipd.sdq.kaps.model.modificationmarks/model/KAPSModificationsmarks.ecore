@@ -19,183 +19,125 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KAPSSeedModifications" eSuperTypes="../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractSeedModifications">
     <eStructuralFeatures xsi:type="ecore:EReference" name="busBoxModifications" upperBound="-1"
-        containment="true">
-      <eGenericType eClassifier="#//ModifyBusBox">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
+        eType="#//ModifyBusBox" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sensorModifications" upperBound="-1"
-        containment="true">
-      <eGenericType eClassifier="#//ModifySensor">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
+        eType="#//ModifySensor" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="busMasterModifications"
-        upperBound="-1" containment="true">
-      <eGenericType eClassifier="#//ModifyBusMaster">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
+        upperBound="-1" eType="#//ModifyBusMaster" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="busSlaveModifications"
-        upperBound="-1" containment="true">
-      <eGenericType eClassifier="#//ModifyBusSlave">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
+        upperBound="-1" eType="#//ModifyBusSlave" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="microswitchModuleModifications"
-        upperBound="-1" containment="true">
-      <eGenericType eClassifier="#//ModifyMicroSwitchModule">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
+        upperBound="-1" eType="#//ModifyMicroSwitchModule" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ChangePropagationDueToHardwareChange"
+      eSuperTypes="../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//ChangePropagationStep">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sensorModifications" upperBound="-1"
+        eType="#//ModifySensor" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="signalinterfaceModifications"
+        upperBound="-1" eType="#//ModifySignalinterface" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="physicalConnectionModifications"
+        upperBound="-1" eType="#//ModifyPhysicalConnection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="microSwitchModuleModifications"
+        upperBound="-1" eType="#//ModifyMicroSwitchModule" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="busBoxModifications" upperBound="-1"
+        eType="#//ModifyBusBox" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="busMasterModifications"
+        upperBound="-1" eType="#//ModifyBusMaster" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="busSlaveModifications"
+        upperBound="-1" eType="#//ModifyBusSlave" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="busCableModifications"
+        upperBound="-1" eType="#//ModifyBusCable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyComponent" abstract="true">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
+      <eTypeArguments eTypeParameter="#//ModifyComponent/T"/>
+      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyModule" abstract="true">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
+      <eTypeArguments eTypeParameter="#//ModifyModule/T"/>
+      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyStucture" abstract="true">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
+      <eTypeArguments eTypeParameter="#//ModifyStucture/T"/>
+      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyInterface" abstract="true">
+    <eTypeParameters name="T">
+      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
+    </eTypeParameters>
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
+      <eTypeArguments eTypeParameter="#//ModifyInterface/T"/>
+      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyPowerSupply">
+    <eGenericSuperTypes eClassifier="#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/PowerSupply"/>
+    </eGenericSuperTypes>
+    <eGenericSuperTypes eClassifier="#//ModifyInterface">
+      <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/PowerSupply"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifySignalinterface">
+    <eGenericSuperTypes eClassifier="#//ModifyInterface">
+      <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/SignalInterface"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyPhysicalConnection">
+    <eGenericSuperTypes eClassifier="#//ModifyInterface">
+      <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/PhysicalConnection"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyMicroSwitchModule">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReplaced" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eGenericSuperTypes eClassifier="#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/MicroswitchModule"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusBox">
+    <eGenericSuperTypes eClassifier="#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//BusComponents/BusBox"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusMaster">
+    <eGenericSuperTypes eClassifier="#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//BusComponents/BusMaster"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusSlave">
+    <eGenericSuperTypes eClassifier="#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//BusComponents/BusSlave"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusCable">
+    <eGenericSuperTypes eClassifier="#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//BusComponents/BusCable"/>
+    </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModifySensor">
-    <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Sensor"/>
-    </eTypeParameters>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modifySignalInterfaces"
         upperBound="-1" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/SignalInterface"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modifyPhysicalConnections"
         upperBound="-1" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/PhysicalConnection"
         containment="true"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
-      <eTypeArguments eTypeParameter="#//ModifySensor/T"/>
-      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-    </eGenericSuperTypes>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ChangePropagationDueToHardwareChange"
-      eSuperTypes="../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//ChangePropagationStep">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sensorModifications" upperBound="-1"
-        containment="true">
-      <eGenericType eClassifier="#//ModifySensor">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="signalinterfaceModifications"
-        upperBound="-1" containment="true">
-      <eGenericType eClassifier="#//ModifySignalinterface">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="physicalConnectionModifications"
-        upperBound="-1" containment="true">
-      <eGenericType eClassifier="#//ModifyPhysicalConnection">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="microSwitchModuleModifications"
-        upperBound="-1" containment="true">
-      <eGenericType eClassifier="#//ModifyMicroSwitchModule">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="busBoxModifications" upperBound="-1"
-        containment="true">
-      <eGenericType eClassifier="#//ModifyBusBox">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="busMasterModifications"
-        upperBound="-1" containment="true">
-      <eGenericType eClassifier="#//ModifyBusMaster">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="busSlaveModifications"
-        upperBound="-1" containment="true">
-      <eGenericType eClassifier="#//ModifyBusSlave">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="busCableModifications"
-        upperBound="-1" containment="true">
-      <eGenericType eClassifier="#//ModifyBusCable">
-        <eTypeArguments/>
-      </eGenericType>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModifyEntity" abstract="true">
-    <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass platform:/plugin/org.palladiosimulator.pcm/model/pcm.ecore#//core/entity/Entity"/>
-    </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
-      <eTypeArguments eTypeParameter="#//ModifyEntity/T"/>
-      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-    </eGenericSuperTypes>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusBox">
-    <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//BusComponents/BusBox"/>
-    </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
-      <eTypeArguments eTypeParameter="#//ModifyBusBox/T"/>
-      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-    </eGenericSuperTypes>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModifyPowerSupply">
-    <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/PowerSupply"/>
-    </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
-      <eTypeArguments eTypeParameter="#//ModifyPowerSupply/T"/>
-      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-    </eGenericSuperTypes>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModifySignalinterface">
-    <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/SignalInterface"/>
-    </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
-      <eTypeArguments eTypeParameter="#//ModifySignalinterface/T"/>
-      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-    </eGenericSuperTypes>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModifyPhysicalConnection">
-    <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/PhysicalConnection"/>
-    </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
-      <eTypeArguments eTypeParameter="#//ModifyPhysicalConnection/T"/>
-      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-    </eGenericSuperTypes>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModifyMicroSwitchModule">
-    <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/MicroswitchModule"/>
-    </eTypeParameters>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReplaced" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
-      <eTypeArguments eTypeParameter="#//ModifyMicroSwitchModule/T"/>
-      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-    </eGenericSuperTypes>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusMaster">
-    <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//BusComponents/BusMaster"/>
-    </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
-      <eTypeArguments eTypeParameter="#//ModifyBusMaster/T"/>
-      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-    </eGenericSuperTypes>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusSlave">
-    <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//BusComponents/BusSlave"/>
-    </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
-      <eTypeArguments eTypeParameter="#//ModifyBusSlave/T"/>
-      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
-    </eGenericSuperTypes>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModifyBusCable">
-    <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//BusComponents/BusCable"/>
-    </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
-      <eTypeArguments eTypeParameter="#//ModifyBusCable/T"/>
-      <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
+    <eGenericSuperTypes eClassifier="#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Sensor"/>
     </eGenericSuperTypes>
   </eClassifiers>
 </ecore:EPackage>
