@@ -15,13 +15,6 @@ import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureAnnotationLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
-import fieldofactivityannotations.BuildConfiguration;
-import fieldofactivityannotations.MetadataFile;
-import fieldofactivityannotations.MetadataFileAggregation;
-import fieldofactivityannotations.SourceFile;
-import fieldofactivityannotations.SourceFileAggregation;
-import fieldofactivityannotations.UnitTestCase;
-import fieldofactivityannotations.UnitTestCaseAggregation;
 
 public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends ArchitectureVersion> 
 		implements AbstractEnrichedWorkplanDerivation<T> {
@@ -37,15 +30,8 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 		deriveBuildExecutionActivities(subVersion, result);		
 		deriveTestDevelopmentActivities(baseArchitectureVersion, subVersion, result);
 		deriveTestExecutionActivities(subVersion, result);
-		//TODO integration tests
-		//TODO acceptance tests
-//		deriveReleaseConfigurationActivities(calculateFlattenendActivityList(result));		
 		deriveReleaseExecutionActivities(subVersion, result);		
-//		deriveDeploymentConfigurationActivities(calculateFlattenendActivityList(result));		
 		deriveDeploymentExecutionActivities(subVersion, result);		
-		//TODO staff
-		//TODO technology specification
-		//TODO design patterns
 
 		return result;
 	}

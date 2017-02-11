@@ -15,6 +15,7 @@ import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.LabelCustomizing;
+import xPPU.ComponentRepository.Component;
 
 public abstract class AbstractKAPSDifferenceCalculation<T extends ArchitectureVersion> 
 		extends AbstractWorkplanDerivation<T> {
@@ -26,10 +27,10 @@ public abstract class AbstractKAPSDifferenceCalculation<T extends ArchitectureVe
 
 	@Override
 	protected void checkForDifferencesAndAddToWorkplan(Diff diffElement, List<Activity> workplan) {
-		for (ActivityElementType elementType: ActivityElementType.topLevelPCMActivityElementTypes()) {
+		for (ActivityElementType elementType: ActivityElementType.topLevelAPSActivityElementTypes()) {
 			if (detectionRuleAdded(diffElement, elementType.getElementClass())) {
-				if (elementType == ActivityElementType.DATATYPE) {
-					DataType architectureElement = (DataType)(((ReferenceChange)diffElement).getValue());
+				if (elementType == ActivityElementType.COMPONENT) {
+					Component architectureElement = (Component)(((ReferenceChange)diffElement).getValue());
 					workplan.add(new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, 
 							architectureElement, LabelCustomizing.getDataTypeName(architectureElement), 
 							null, BasicActivity.ADD, createAddElementDescription(architectureElement)));
