@@ -11,11 +11,7 @@ import org.palladiosimulator.pcm.repository.PrimitiveDataType;
 import org.palladiosimulator.pcm.repository.SinkRole;
 import org.palladiosimulator.pcm.repository.SourceRole;
 
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyDataType;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyEntity;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyProvidedRole;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyRequiredRole;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignature;
 
 public class LabelCustomizing {
 	
@@ -26,7 +22,7 @@ public class LabelCustomizing {
 			return "\"" + modifyEntity.getAffectedElement().getEntityName() + "\"";
 		}
 	}
-
+	
 	public static String customize(ModifyProvidedRole modification) {
 		if (modification.getAffectedElement() == null) {
 			return "(Please select a provided role!)";
