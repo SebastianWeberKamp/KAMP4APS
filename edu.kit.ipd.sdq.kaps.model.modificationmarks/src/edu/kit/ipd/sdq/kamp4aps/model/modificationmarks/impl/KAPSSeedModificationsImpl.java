@@ -7,12 +7,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyDataType;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignature;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 
 import java.util.Collection;
