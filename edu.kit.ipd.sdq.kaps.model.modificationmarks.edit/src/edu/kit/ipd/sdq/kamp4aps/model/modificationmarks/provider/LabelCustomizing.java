@@ -10,6 +10,7 @@ import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.MicroswitchModule;
 import xPPU.ComponentRepository.PowerSupply;
 import xPPU.ComponentRepository.Sensor;
+import xPPU.Identifier.Identifier;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.SignalInterface;
@@ -142,6 +143,10 @@ public class LabelCustomizing {
 
 	private static boolean hasAffectedElement(ModifyInterface<Interface> modification) {
 		return modification.getAffectedElement() != null;
+	}
+
+	public static String getIdentifierName(Identifier architectureElement) {
+		return architectureElement.getId();
 	}
 
 }
