@@ -9,10 +9,7 @@ Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks,
  edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl,
- edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.util,
- xPPU,
- xPPU.impl,
- xPPU.util
+ edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

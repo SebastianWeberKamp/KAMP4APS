@@ -11,13 +11,15 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusCable;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyEntity;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPhysicalConnection;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPlantInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPowerSupply;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignalinterface;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 
@@ -32,15 +34,12 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 
 import org.palladiosimulator.pcm.PcmPackage;
 
-import org.palladiosimulator.pcm.core.composition.CompositionPackage;
-
-import org.palladiosimulator.pcm.core.entity.EntityPackage;
-import org.palladiosimulator.pcm.repository.RepositoryPackage;
 import xPPU.BusComponents.BusComponentsPackage;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
+import xPPU.ModuleRepository.ModuleRepositoryPackage;
+import xPPU.StructureRepository.StructureRepositoryPackage;
 import xPPU.XPPUPackage;
-import xPPU.impl.XPPUPackageImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -89,7 +88,28 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass modifyEntityEClass = null;
+	private EClass modifyComponentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modifyModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modifyStuctureEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modifyInterfaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -398,8 +418,35 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getModifyEntity() {
-		return modifyEntityEClass;
+	public EClass getModifyComponent() {
+		return modifyComponentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModifyModule() {
+		return modifyModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModifyStucture() {
+		return modifyStuctureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModifyInterface() {
+		return modifyInterfaceEClass;
 	}
 
 	/**
@@ -522,10 +569,6 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		createEReference(kapsSeedModificationsEClass, KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS);
 		createEReference(kapsSeedModificationsEClass, KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS);
 
-		modifySensorEClass = createEClass(MODIFY_SENSOR);
-		createEReference(modifySensorEClass, MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES);
-		createEReference(modifySensorEClass, MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS);
-
 		changePropagationDueToHardwareChangeEClass = createEClass(CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE);
 		createEReference(changePropagationDueToHardwareChangeEClass, CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__SENSOR_MODIFICATIONS);
 		createEReference(changePropagationDueToHardwareChangeEClass, CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__SIGNALINTERFACE_MODIFICATIONS);
@@ -536,9 +579,13 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		createEReference(changePropagationDueToHardwareChangeEClass, CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_SLAVE_MODIFICATIONS);
 		createEReference(changePropagationDueToHardwareChangeEClass, CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS);
 
-		modifyEntityEClass = createEClass(MODIFY_ENTITY);
+		modifyComponentEClass = createEClass(MODIFY_COMPONENT);
 
-		modifyBusBoxEClass = createEClass(MODIFY_BUS_BOX);
+		modifyModuleEClass = createEClass(MODIFY_MODULE);
+
+		modifyStuctureEClass = createEClass(MODIFY_STUCTURE);
+
+		modifyInterfaceEClass = createEClass(MODIFY_INTERFACE);
 
 		modifyPowerSupplyEClass = createEClass(MODIFY_POWER_SUPPLY);
 
@@ -549,11 +596,17 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		modifyMicroSwitchModuleEClass = createEClass(MODIFY_MICRO_SWITCH_MODULE);
 		createEAttribute(modifyMicroSwitchModuleEClass, MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED);
 
+		modifyBusBoxEClass = createEClass(MODIFY_BUS_BOX);
+
 		modifyBusMasterEClass = createEClass(MODIFY_BUS_MASTER);
 
 		modifyBusSlaveEClass = createEClass(MODIFY_BUS_SLAVE);
 
 		modifyBusCableEClass = createEClass(MODIFY_BUS_CABLE);
+
+		modifySensorEClass = createEClass(MODIFY_SENSOR);
+		createEReference(modifySensorEClass, MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES);
+		createEReference(modifySensorEClass, MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS);
 	}
 
 	/**
@@ -582,46 +635,29 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		// Obtain other dependent packages
 		ModificationmarksPackage theModificationmarksPackage = (ModificationmarksPackage)EPackage.Registry.INSTANCE.getEPackage(ModificationmarksPackage.eNS_URI);
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
+		ModuleRepositoryPackage theModuleRepositoryPackage = (ModuleRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI);
+		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
-		EntityPackage theEntityPackage = (EntityPackage)EPackage.Registry.INSTANCE.getEPackage(EntityPackage.eNS_URI);
 		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
 
 		// Create type parameters
 		ETypeParameter abstractKAPSModificationRepositoryEClass_T = addETypeParameter(abstractKAPSModificationRepositoryEClass, "T");
-		ETypeParameter modifySensorEClass_T = addETypeParameter(modifySensorEClass, "T");
-		ETypeParameter modifyEntityEClass_T = addETypeParameter(modifyEntityEClass, "T");
-		ETypeParameter modifyBusBoxEClass_T = addETypeParameter(modifyBusBoxEClass, "T");
-		ETypeParameter modifyPowerSupplyEClass_T = addETypeParameter(modifyPowerSupplyEClass, "T");
-		ETypeParameter modifySignalinterfaceEClass_T = addETypeParameter(modifySignalinterfaceEClass, "T");
-		ETypeParameter modifyPhysicalConnectionEClass_T = addETypeParameter(modifyPhysicalConnectionEClass, "T");
-		ETypeParameter modifyMicroSwitchModuleEClass_T = addETypeParameter(modifyMicroSwitchModuleEClass, "T");
-		ETypeParameter modifyBusMasterEClass_T = addETypeParameter(modifyBusMasterEClass, "T");
-		ETypeParameter modifyBusSlaveEClass_T = addETypeParameter(modifyBusSlaveEClass, "T");
-		ETypeParameter modifyBusCableEClass_T = addETypeParameter(modifyBusCableEClass, "T");
+		ETypeParameter modifyComponentEClass_T = addETypeParameter(modifyComponentEClass, "T");
+		ETypeParameter modifyModuleEClass_T = addETypeParameter(modifyModuleEClass, "T");
+		ETypeParameter modifyStuctureEClass_T = addETypeParameter(modifyStuctureEClass, "T");
+		ETypeParameter modifyInterfaceEClass_T = addETypeParameter(modifyInterfaceEClass, "T");
 
 		// Set bounds for type parameters
 		EGenericType g1 = createEGenericType(this.getKAPSSeedModifications());
 		abstractKAPSModificationRepositoryEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theComponentRepositoryPackage.getSensor());
-		modifySensorEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theEntityPackage.getEntity());
-		modifyEntityEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theBusComponentsPackage.getBusBox());
-		modifyBusBoxEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theComponentRepositoryPackage.getPowerSupply());
-		modifyPowerSupplyEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theInterfaceRepositoryPackage.getSignalInterface());
-		modifySignalinterfaceEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theInterfaceRepositoryPackage.getPhysicalConnection());
-		modifyPhysicalConnectionEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theComponentRepositoryPackage.getMicroswitchModule());
-		modifyMicroSwitchModuleEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theBusComponentsPackage.getBusMaster());
-		modifyBusMasterEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theBusComponentsPackage.getBusSlave());
-		modifyBusSlaveEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theBusComponentsPackage.getBusCable());
-		modifyBusCableEClass_T.getEBounds().add(g1);
+		g1 = createEGenericType(theComponentRepositoryPackage.getComponent());
+		modifyComponentEClass_T.getEBounds().add(g1);
+		g1 = createEGenericType(theModuleRepositoryPackage.getModule());
+		modifyModuleEClass_T.getEBounds().add(g1);
+		g1 = createEGenericType(theStructureRepositoryPackage.getStructure());
+		modifyStuctureEClass_T.getEBounds().add(g1);
+		g1 = createEGenericType(theInterfaceRepositoryPackage.getInterface());
+		modifyInterfaceEClass_T.getEBounds().add(g1);
 
 		// Add supertypes to classes
 		g1 = createEGenericType(theModificationmarksPackage.getAbstractModificationRepository());
@@ -635,67 +671,71 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		g1.getETypeArguments().add(g2);
 		kapsModificationRepositoryEClass.getEGenericSuperTypes().add(g1);
 		kapsSeedModificationsEClass.getESuperTypes().add(theModificationmarksPackage.getAbstractSeedModifications());
-		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(modifySensorEClass_T);
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEObject());
-		g1.getETypeArguments().add(g2);
-		modifySensorEClass.getEGenericSuperTypes().add(g1);
 		changePropagationDueToHardwareChangeEClass.getESuperTypes().add(theModificationmarksPackage.getChangePropagationStep());
 		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(modifyEntityEClass_T);
+		g2 = createEGenericType(modifyComponentEClass_T);
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(ecorePackage.getEObject());
 		g1.getETypeArguments().add(g2);
-		modifyEntityEClass.getEGenericSuperTypes().add(g1);
+		modifyComponentEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(modifyBusBoxEClass_T);
+		g2 = createEGenericType(modifyModuleEClass_T);
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(ecorePackage.getEObject());
 		g1.getETypeArguments().add(g2);
-		modifyBusBoxEClass.getEGenericSuperTypes().add(g1);
+		modifyModuleEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(modifyPowerSupplyEClass_T);
+		g2 = createEGenericType(modifyStuctureEClass_T);
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(ecorePackage.getEObject());
+		g1.getETypeArguments().add(g2);
+		modifyStuctureEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
+		g2 = createEGenericType(modifyInterfaceEClass_T);
+		g1.getETypeArguments().add(g2);
+		g2 = createEGenericType(ecorePackage.getEObject());
+		g1.getETypeArguments().add(g2);
+		modifyInterfaceEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getModifyComponent());
+		g2 = createEGenericType(theComponentRepositoryPackage.getPowerSupply());
 		g1.getETypeArguments().add(g2);
 		modifyPowerSupplyEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(modifySignalinterfaceEClass_T);
+		g1 = createEGenericType(this.getModifyInterface());
+		g2 = createEGenericType(theComponentRepositoryPackage.getPowerSupply());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEObject());
+		modifyPowerSupplyEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getModifyInterface());
+		g2 = createEGenericType(theInterfaceRepositoryPackage.getSignalInterface());
 		g1.getETypeArguments().add(g2);
 		modifySignalinterfaceEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(modifyPhysicalConnectionEClass_T);
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEObject());
+		g1 = createEGenericType(this.getModifyInterface());
+		g2 = createEGenericType(theInterfaceRepositoryPackage.getPhysicalConnection());
 		g1.getETypeArguments().add(g2);
 		modifyPhysicalConnectionEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(modifyMicroSwitchModuleEClass_T);
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEObject());
+		g1 = createEGenericType(this.getModifyComponent());
+		g2 = createEGenericType(theComponentRepositoryPackage.getMicroswitchModule());
 		g1.getETypeArguments().add(g2);
 		modifyMicroSwitchModuleEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(modifyBusMasterEClass_T);
+		g1 = createEGenericType(this.getModifyComponent());
+		g2 = createEGenericType(theBusComponentsPackage.getBusBox());
 		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEObject());
+		modifyBusBoxEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getModifyComponent());
+		g2 = createEGenericType(theBusComponentsPackage.getBusMaster());
 		g1.getETypeArguments().add(g2);
 		modifyBusMasterEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(modifyBusSlaveEClass_T);
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEObject());
+		g1 = createEGenericType(this.getModifyComponent());
+		g2 = createEGenericType(theBusComponentsPackage.getBusSlave());
 		g1.getETypeArguments().add(g2);
 		modifyBusSlaveEClass.getEGenericSuperTypes().add(g1);
-		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(modifyBusCableEClass_T);
-		g1.getETypeArguments().add(g2);
-		g2 = createEGenericType(ecorePackage.getEObject());
+		g1 = createEGenericType(this.getModifyComponent());
+		g2 = createEGenericType(theBusComponentsPackage.getBusCable());
 		g1.getETypeArguments().add(g2);
 		modifyBusCableEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getModifyComponent());
+		g2 = createEGenericType(theComponentRepositoryPackage.getSensor());
+		g1.getETypeArguments().add(g2);
+		modifySensorEClass.getEGenericSuperTypes().add(g1);
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(abstractKAPSModificationRepositoryEClass, AbstractKAPSModificationRepository.class, "AbstractKAPSModificationRepository", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -703,68 +743,29 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		initEClass(kapsModificationRepositoryEClass, KAPSModificationRepository.class, "KAPSModificationRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(kapsSeedModificationsEClass, KAPSSeedModifications.class, "KAPSSeedModifications", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		g1 = createEGenericType(this.getModifyBusBox());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getKAPSSeedModifications_BusBoxModifications(), g1, null, "busBoxModifications", null, 0, -1, KAPSSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		g1 = createEGenericType(this.getModifySensor());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getKAPSSeedModifications_SensorModifications(), g1, null, "sensorModifications", null, 0, -1, KAPSSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		g1 = createEGenericType(this.getModifyBusMaster());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getKAPSSeedModifications_BusMasterModifications(), g1, null, "busMasterModifications", null, 0, -1, KAPSSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		g1 = createEGenericType(this.getModifyBusSlave());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getKAPSSeedModifications_BusSlaveModifications(), g1, null, "busSlaveModifications", null, 0, -1, KAPSSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		g1 = createEGenericType(this.getModifyMicroSwitchModule());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getKAPSSeedModifications_MicroswitchModuleModifications(), g1, null, "microswitchModuleModifications", null, 0, -1, KAPSSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(modifySensorEClass, ModifySensor.class, "ModifySensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModifySensor_ModifySignalInterfaces(), theInterfaceRepositoryPackage.getSignalInterface(), null, "modifySignalInterfaces", null, 0, -1, ModifySensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModifySensor_ModifyPhysicalConnections(), theInterfaceRepositoryPackage.getPhysicalConnection(), null, "modifyPhysicalConnections", null, 0, -1, ModifySensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKAPSSeedModifications_BusBoxModifications(), this.getModifyBusBox(), null, "busBoxModifications", null, 0, -1, KAPSSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKAPSSeedModifications_SensorModifications(), this.getModifySensor(), null, "sensorModifications", null, 0, -1, KAPSSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKAPSSeedModifications_BusMasterModifications(), this.getModifyBusMaster(), null, "busMasterModifications", null, 0, -1, KAPSSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKAPSSeedModifications_BusSlaveModifications(), this.getModifyBusSlave(), null, "busSlaveModifications", null, 0, -1, KAPSSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getKAPSSeedModifications_MicroswitchModuleModifications(), this.getModifyMicroSwitchModule(), null, "microswitchModuleModifications", null, 0, -1, KAPSSeedModifications.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(changePropagationDueToHardwareChangeEClass, ChangePropagationDueToHardwareChange.class, "ChangePropagationDueToHardwareChange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		g1 = createEGenericType(this.getModifySensor());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getChangePropagationDueToHardwareChange_SensorModifications(), g1, null, "sensorModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		g1 = createEGenericType(this.getModifySignalinterface());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getChangePropagationDueToHardwareChange_SignalinterfaceModifications(), g1, null, "signalinterfaceModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		g1 = createEGenericType(this.getModifyPhysicalConnection());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getChangePropagationDueToHardwareChange_PhysicalConnectionModifications(), g1, null, "physicalConnectionModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		g1 = createEGenericType(this.getModifyMicroSwitchModule());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getChangePropagationDueToHardwareChange_MicroSwitchModuleModifications(), g1, null, "microSwitchModuleModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		g1 = createEGenericType(this.getModifyBusBox());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getChangePropagationDueToHardwareChange_BusBoxModifications(), g1, null, "busBoxModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		g1 = createEGenericType(this.getModifyBusMaster());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getChangePropagationDueToHardwareChange_BusMasterModifications(), g1, null, "busMasterModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		g1 = createEGenericType(this.getModifyBusSlave());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getChangePropagationDueToHardwareChange_BusSlaveModifications(), g1, null, "busSlaveModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		g1 = createEGenericType(this.getModifyBusCable());
-		g2 = createEGenericType();
-		g1.getETypeArguments().add(g2);
-		initEReference(getChangePropagationDueToHardwareChange_BusCableModifications(), g1, null, "busCableModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChangePropagationDueToHardwareChange_SensorModifications(), this.getModifySensor(), null, "sensorModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChangePropagationDueToHardwareChange_SignalinterfaceModifications(), this.getModifySignalinterface(), null, "signalinterfaceModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChangePropagationDueToHardwareChange_PhysicalConnectionModifications(), this.getModifyPhysicalConnection(), null, "physicalConnectionModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChangePropagationDueToHardwareChange_MicroSwitchModuleModifications(), this.getModifyMicroSwitchModule(), null, "microSwitchModuleModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChangePropagationDueToHardwareChange_BusBoxModifications(), this.getModifyBusBox(), null, "busBoxModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChangePropagationDueToHardwareChange_BusMasterModifications(), this.getModifyBusMaster(), null, "busMasterModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChangePropagationDueToHardwareChange_BusSlaveModifications(), this.getModifyBusSlave(), null, "busSlaveModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getChangePropagationDueToHardwareChange_BusCableModifications(), this.getModifyBusCable(), null, "busCableModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(modifyEntityEClass, ModifyEntity.class, "ModifyEntity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(modifyComponentEClass, ModifyComponent.class, "ModifyComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(modifyBusBoxEClass, ModifyBusBox.class, "ModifyBusBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(modifyModuleEClass, ModifyModule.class, "ModifyModule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(modifyStuctureEClass, ModifyStucture.class, "ModifyStucture", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(modifyInterfaceEClass, ModifyInterface.class, "ModifyInterface", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(modifyPowerSupplyEClass, ModifyPowerSupply.class, "ModifyPowerSupply", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -775,11 +776,17 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		initEClass(modifyMicroSwitchModuleEClass, ModifyMicroSwitchModule.class, "ModifyMicroSwitchModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getModifyMicroSwitchModule_IsReplaced(), ecorePackage.getEBoolean(), "isReplaced", null, 1, 1, ModifyMicroSwitchModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(modifyBusBoxEClass, ModifyBusBox.class, "ModifyBusBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(modifyBusMasterEClass, ModifyBusMaster.class, "ModifyBusMaster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(modifyBusSlaveEClass, ModifyBusSlave.class, "ModifyBusSlave", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(modifyBusCableEClass, ModifyBusCable.class, "ModifyBusCable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(modifySensorEClass, ModifySensor.class, "ModifySensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModifySensor_ModifySignalInterfaces(), theInterfaceRepositoryPackage.getSignalInterface(), null, "modifySignalInterfaces", null, 0, -1, ModifySensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModifySensor_ModifyPhysicalConnections(), theInterfaceRepositoryPackage.getPhysicalConnection(), null, "modifyPhysicalConnections", null, 0, -1, ModifySensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

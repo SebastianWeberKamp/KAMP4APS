@@ -6,8 +6,6 @@ import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
 
 import org.eclipse.emf.ecore.EObject;
 
-import xPPU.Interface;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Modify Plant Interface</b></em>'.

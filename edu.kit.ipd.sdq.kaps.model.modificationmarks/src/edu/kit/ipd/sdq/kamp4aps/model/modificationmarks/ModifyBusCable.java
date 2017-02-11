@@ -2,10 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
-
-import org.eclipse.emf.ecore.EObject;
-
 import xPPU.BusComponents.BusCable;
 
 /**
@@ -18,5 +14,5 @@ import xPPU.BusComponents.BusCable;
  * @model
  * @generated
  */
-public interface ModifyBusCable<T extends BusCable> extends AbstractModification<T, EObject> {
+public interface ModifyBusCable extends ModifyComponent<BusCable> {
 } // ModifyBusCable

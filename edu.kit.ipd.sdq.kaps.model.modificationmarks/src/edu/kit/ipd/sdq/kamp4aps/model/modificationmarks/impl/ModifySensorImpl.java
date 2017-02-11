@@ -2,22 +2,17 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.impl.AbstractModificationImpl;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
-
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
-
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.SignalInterface;
-import xPPU.Sensor;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +28,7 @@ import xPPU.Sensor;
  *
  * @generated
  */
-public class ModifySensorImpl<T extends xPPU.ComponentRepository.Sensor> extends AbstractModificationImpl<T, EObject> implements ModifySensor<T> {
+public class ModifySensorImpl extends ModifyComponentImpl<xPPU.ComponentRepository.Sensor> implements ModifySensor {
 	/**
 	 * The cached value of the '{@link #getModifySignalInterfaces() <em>Modify Signal Interfaces</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -70,17 +65,6 @@ public class ModifySensorImpl<T extends xPPU.ComponentRepository.Sensor> extends
 	@Override
 	protected EClass eStaticClass() {
 		return modificationmarksPackage.Literals.MODIFY_SENSOR;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * This is specialized for the more specific type known in this context.
-	 * @generated
-	 */
-	@Override
-	public void setAffectedElement(T newAffectedElement) {
-		super.setAffectedElement(newAffectedElement);
 	}
 
 	/**

@@ -49,7 +49,7 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyBusBox<?>> busBoxModifications;
+	protected EList<ModifyBusBox> busBoxModifications;
 
 	/**
 	 * The cached value of the '{@link #getSensorModifications() <em>Sensor Modifications</em>}' containment reference list.
@@ -59,7 +59,7 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifySensor<?>> sensorModifications;
+	protected EList<ModifySensor> sensorModifications;
 
 	/**
 	 * The cached value of the '{@link #getBusMasterModifications() <em>Bus Master Modifications</em>}' containment reference list.
@@ -69,7 +69,7 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyBusMaster<?>> busMasterModifications;
+	protected EList<ModifyBusMaster> busMasterModifications;
 
 	/**
 	 * The cached value of the '{@link #getBusSlaveModifications() <em>Bus Slave Modifications</em>}' containment reference list.
@@ -79,7 +79,7 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyBusSlave<?>> busSlaveModifications;
+	protected EList<ModifyBusSlave> busSlaveModifications;
 
 	/**
 	 * The cached value of the '{@link #getMicroswitchModuleModifications() <em>Microswitch Module Modifications</em>}' containment reference list.
@@ -89,7 +89,7 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyMicroSwitchModule<?>> microswitchModuleModifications;
+	protected EList<ModifyMicroSwitchModule> microswitchModuleModifications;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,9 +115,9 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyBusBox<?>> getBusBoxModifications() {
+	public EList<ModifyBusBox> getBusBoxModifications() {
 		if (busBoxModifications == null) {
-			busBoxModifications = new EObjectContainmentEList<ModifyBusBox<?>>(ModifyBusBox.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS);
+			busBoxModifications = new EObjectContainmentEList<ModifyBusBox>(ModifyBusBox.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS);
 		}
 		return busBoxModifications;
 	}
@@ -127,9 +127,9 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifySensor<?>> getSensorModifications() {
+	public EList<ModifySensor> getSensorModifications() {
 		if (sensorModifications == null) {
-			sensorModifications = new EObjectContainmentEList<ModifySensor<?>>(ModifySensor.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS);
+			sensorModifications = new EObjectContainmentEList<ModifySensor>(ModifySensor.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS);
 		}
 		return sensorModifications;
 	}
@@ -139,9 +139,9 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyBusMaster<?>> getBusMasterModifications() {
+	public EList<ModifyBusMaster> getBusMasterModifications() {
 		if (busMasterModifications == null) {
-			busMasterModifications = new EObjectContainmentEList<ModifyBusMaster<?>>(ModifyBusMaster.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS);
+			busMasterModifications = new EObjectContainmentEList<ModifyBusMaster>(ModifyBusMaster.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS);
 		}
 		return busMasterModifications;
 	}
@@ -151,9 +151,9 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyBusSlave<?>> getBusSlaveModifications() {
+	public EList<ModifyBusSlave> getBusSlaveModifications() {
 		if (busSlaveModifications == null) {
-			busSlaveModifications = new EObjectContainmentEList<ModifyBusSlave<?>>(ModifyBusSlave.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS);
+			busSlaveModifications = new EObjectContainmentEList<ModifyBusSlave>(ModifyBusSlave.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS);
 		}
 		return busSlaveModifications;
 	}
@@ -163,9 +163,9 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyMicroSwitchModule<?>> getMicroswitchModuleModifications() {
+	public EList<ModifyMicroSwitchModule> getMicroswitchModuleModifications() {
 		if (microswitchModuleModifications == null) {
-			microswitchModuleModifications = new EObjectContainmentEList<ModifyMicroSwitchModule<?>>(ModifyMicroSwitchModule.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS);
+			microswitchModuleModifications = new EObjectContainmentEList<ModifyMicroSwitchModule>(ModifyMicroSwitchModule.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS);
 		}
 		return microswitchModuleModifications;
 	}
@@ -225,23 +225,23 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 		switch (featureID) {
 			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS:
 				getBusBoxModifications().clear();
-				getBusBoxModifications().addAll((Collection<? extends ModifyBusBox<?>>)newValue);
+				getBusBoxModifications().addAll((Collection<? extends ModifyBusBox>)newValue);
 				return;
 			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS:
 				getSensorModifications().clear();
-				getSensorModifications().addAll((Collection<? extends ModifySensor<?>>)newValue);
+				getSensorModifications().addAll((Collection<? extends ModifySensor>)newValue);
 				return;
 			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS:
 				getBusMasterModifications().clear();
-				getBusMasterModifications().addAll((Collection<? extends ModifyBusMaster<?>>)newValue);
+				getBusMasterModifications().addAll((Collection<? extends ModifyBusMaster>)newValue);
 				return;
 			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS:
 				getBusSlaveModifications().clear();
-				getBusSlaveModifications().addAll((Collection<? extends ModifyBusSlave<?>>)newValue);
+				getBusSlaveModifications().addAll((Collection<? extends ModifyBusSlave>)newValue);
 				return;
 			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS:
 				getMicroswitchModuleModifications().clear();
-				getMicroswitchModuleModifications().addAll((Collection<? extends ModifyMicroSwitchModule<?>>)newValue);
+				getMicroswitchModuleModifications().addAll((Collection<? extends ModifyMicroSwitchModule>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

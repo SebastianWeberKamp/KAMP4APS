@@ -2,19 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EFactory;
-import org.palladiosimulator.pcm.repository.Role;
-import xPPU.BusBox;
-import xPPU.BusComponents.BusCable;
-import xPPU.BusComponents.BusMaster;
-import xPPU.BusComponents.BusSlave;
-import xPPU.ComponentRepository.MicroswitchModule;
-import xPPU.Interface;
-import xPPU.InterfaceRepository.PhysicalConnection;
-import xPPU.InterfaceRepository.SignalInterface;
-import xPPU.PowerSupply;
-import xPPU.Sensor;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,7 +46,7 @@ public interface modificationmarksFactory extends EFactory {
 	 * @return a new object of class '<em>Modify Sensor</em>'.
 	 * @generated
 	 */
-	<T extends xPPU.ComponentRepository.Sensor> ModifySensor<T> createModifySensor();
+	ModifySensor createModifySensor();
 
 	/**
 	 * Returns a new object of class '<em>Change Propagation Due To Hardware Change</em>'.
@@ -76,7 +64,7 @@ public interface modificationmarksFactory extends EFactory {
 	 * @return a new object of class '<em>Modify Bus Box</em>'.
 	 * @generated
 	 */
-	<T extends xPPU.BusComponents.BusBox> ModifyBusBox<T> createModifyBusBox();
+	ModifyBusBox createModifyBusBox();
 
 	/**
 	 * Returns a new object of class '<em>Modify Power Supply</em>'.
@@ -85,7 +73,7 @@ public interface modificationmarksFactory extends EFactory {
 	 * @return a new object of class '<em>Modify Power Supply</em>'.
 	 * @generated
 	 */
-	<T extends xPPU.ComponentRepository.PowerSupply> ModifyPowerSupply<T> createModifyPowerSupply();
+	ModifyPowerSupply createModifyPowerSupply();
 
 	/**
 	 * Returns a new object of class '<em>Modify Signalinterface</em>'.
@@ -94,7 +82,7 @@ public interface modificationmarksFactory extends EFactory {
 	 * @return a new object of class '<em>Modify Signalinterface</em>'.
 	 * @generated
 	 */
-	<T extends SignalInterface> ModifySignalinterface<T> createModifySignalinterface();
+	ModifySignalinterface createModifySignalinterface();
 
 	/**
 	 * Returns a new object of class '<em>Modify Physical Connection</em>'.
@@ -103,7 +91,7 @@ public interface modificationmarksFactory extends EFactory {
 	 * @return a new object of class '<em>Modify Physical Connection</em>'.
 	 * @generated
 	 */
-	<T extends PhysicalConnection> ModifyPhysicalConnection<T> createModifyPhysicalConnection();
+	ModifyPhysicalConnection createModifyPhysicalConnection();
 
 	/**
 	 * Returns a new object of class '<em>Modify Micro Switch Module</em>'.
@@ -112,7 +100,7 @@ public interface modificationmarksFactory extends EFactory {
 	 * @return a new object of class '<em>Modify Micro Switch Module</em>'.
 	 * @generated
 	 */
-	<T extends MicroswitchModule> ModifyMicroSwitchModule<T> createModifyMicroSwitchModule();
+	ModifyMicroSwitchModule createModifyMicroSwitchModule();
 
 	/**
 	 * Returns a new object of class '<em>Modify Bus Master</em>'.
@@ -121,7 +109,7 @@ public interface modificationmarksFactory extends EFactory {
 	 * @return a new object of class '<em>Modify Bus Master</em>'.
 	 * @generated
 	 */
-	<T extends BusMaster> ModifyBusMaster<T> createModifyBusMaster();
+	ModifyBusMaster createModifyBusMaster();
 
 	/**
 	 * Returns a new object of class '<em>Modify Bus Slave</em>'.
@@ -130,7 +118,7 @@ public interface modificationmarksFactory extends EFactory {
 	 * @return a new object of class '<em>Modify Bus Slave</em>'.
 	 * @generated
 	 */
-	<T extends BusSlave> ModifyBusSlave<T> createModifyBusSlave();
+	ModifyBusSlave createModifyBusSlave();
 
 	/**
 	 * Returns a new object of class '<em>Modify Bus Cable</em>'.
@@ -139,7 +127,7 @@ public interface modificationmarksFactory extends EFactory {
 	 * @return a new object of class '<em>Modify Bus Cable</em>'.
 	 * @generated
 	 */
-	<T extends BusCable> ModifyBusCable<T> createModifyBusCable();
+	ModifyBusCable createModifyBusCable();
 
 	/**
 	 * Returns the package supported by this factory.

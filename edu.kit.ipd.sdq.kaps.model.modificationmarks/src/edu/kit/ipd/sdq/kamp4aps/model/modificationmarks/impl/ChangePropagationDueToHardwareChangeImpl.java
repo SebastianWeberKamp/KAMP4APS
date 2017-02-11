@@ -13,17 +13,12 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPhysicalConnection
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignalinterface;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
-
 import java.util.Collection;
-
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -55,7 +50,7 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifySensor<?>> sensorModifications;
+	protected EList<ModifySensor> sensorModifications;
 
 	/**
 	 * The cached value of the '{@link #getSignalinterfaceModifications() <em>Signalinterface Modifications</em>}' containment reference list.
@@ -65,7 +60,7 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifySignalinterface<?>> signalinterfaceModifications;
+	protected EList<ModifySignalinterface> signalinterfaceModifications;
 
 	/**
 	 * The cached value of the '{@link #getPhysicalConnectionModifications() <em>Physical Connection Modifications</em>}' containment reference list.
@@ -75,7 +70,7 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyPhysicalConnection<?>> physicalConnectionModifications;
+	protected EList<ModifyPhysicalConnection> physicalConnectionModifications;
 
 	/**
 	 * The cached value of the '{@link #getMicroSwitchModuleModifications() <em>Micro Switch Module Modifications</em>}' containment reference list.
@@ -85,7 +80,7 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyMicroSwitchModule<?>> microSwitchModuleModifications;
+	protected EList<ModifyMicroSwitchModule> microSwitchModuleModifications;
 
 	/**
 	 * The cached value of the '{@link #getBusBoxModifications() <em>Bus Box Modifications</em>}' containment reference list.
@@ -95,7 +90,7 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyBusBox<?>> busBoxModifications;
+	protected EList<ModifyBusBox> busBoxModifications;
 
 	/**
 	 * The cached value of the '{@link #getBusMasterModifications() <em>Bus Master Modifications</em>}' containment reference list.
@@ -105,7 +100,7 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyBusMaster<?>> busMasterModifications;
+	protected EList<ModifyBusMaster> busMasterModifications;
 
 	/**
 	 * The cached value of the '{@link #getBusSlaveModifications() <em>Bus Slave Modifications</em>}' containment reference list.
@@ -115,7 +110,7 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyBusSlave<?>> busSlaveModifications;
+	protected EList<ModifyBusSlave> busSlaveModifications;
 
 	/**
 	 * The cached value of the '{@link #getBusCableModifications() <em>Bus Cable Modifications</em>}' containment reference list.
@@ -125,7 +120,7 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyBusCable<?>> busCableModifications;
+	protected EList<ModifyBusCable> busCableModifications;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -151,9 +146,9 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifySensor<?>> getSensorModifications() {
+	public EList<ModifySensor> getSensorModifications() {
 		if (sensorModifications == null) {
-			sensorModifications = new EObjectContainmentEList<ModifySensor<?>>(ModifySensor.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__SENSOR_MODIFICATIONS);
+			sensorModifications = new EObjectContainmentEList<ModifySensor>(ModifySensor.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__SENSOR_MODIFICATIONS);
 		}
 		return sensorModifications;
 	}
@@ -163,9 +158,9 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifySignalinterface<?>> getSignalinterfaceModifications() {
+	public EList<ModifySignalinterface> getSignalinterfaceModifications() {
 		if (signalinterfaceModifications == null) {
-			signalinterfaceModifications = new EObjectContainmentEList<ModifySignalinterface<?>>(ModifySignalinterface.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__SIGNALINTERFACE_MODIFICATIONS);
+			signalinterfaceModifications = new EObjectContainmentEList<ModifySignalinterface>(ModifySignalinterface.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__SIGNALINTERFACE_MODIFICATIONS);
 		}
 		return signalinterfaceModifications;
 	}
@@ -175,9 +170,9 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyPhysicalConnection<?>> getPhysicalConnectionModifications() {
+	public EList<ModifyPhysicalConnection> getPhysicalConnectionModifications() {
 		if (physicalConnectionModifications == null) {
-			physicalConnectionModifications = new EObjectContainmentEList<ModifyPhysicalConnection<?>>(ModifyPhysicalConnection.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__PHYSICAL_CONNECTION_MODIFICATIONS);
+			physicalConnectionModifications = new EObjectContainmentEList<ModifyPhysicalConnection>(ModifyPhysicalConnection.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__PHYSICAL_CONNECTION_MODIFICATIONS);
 		}
 		return physicalConnectionModifications;
 	}
@@ -187,9 +182,9 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyMicroSwitchModule<?>> getMicroSwitchModuleModifications() {
+	public EList<ModifyMicroSwitchModule> getMicroSwitchModuleModifications() {
 		if (microSwitchModuleModifications == null) {
-			microSwitchModuleModifications = new EObjectContainmentEList<ModifyMicroSwitchModule<?>>(ModifyMicroSwitchModule.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__MICRO_SWITCH_MODULE_MODIFICATIONS);
+			microSwitchModuleModifications = new EObjectContainmentEList<ModifyMicroSwitchModule>(ModifyMicroSwitchModule.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__MICRO_SWITCH_MODULE_MODIFICATIONS);
 		}
 		return microSwitchModuleModifications;
 	}
@@ -199,9 +194,9 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyBusBox<?>> getBusBoxModifications() {
+	public EList<ModifyBusBox> getBusBoxModifications() {
 		if (busBoxModifications == null) {
-			busBoxModifications = new EObjectContainmentEList<ModifyBusBox<?>>(ModifyBusBox.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_BOX_MODIFICATIONS);
+			busBoxModifications = new EObjectContainmentEList<ModifyBusBox>(ModifyBusBox.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_BOX_MODIFICATIONS);
 		}
 		return busBoxModifications;
 	}
@@ -211,9 +206,9 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyBusMaster<?>> getBusMasterModifications() {
+	public EList<ModifyBusMaster> getBusMasterModifications() {
 		if (busMasterModifications == null) {
-			busMasterModifications = new EObjectContainmentEList<ModifyBusMaster<?>>(ModifyBusMaster.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_MASTER_MODIFICATIONS);
+			busMasterModifications = new EObjectContainmentEList<ModifyBusMaster>(ModifyBusMaster.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_MASTER_MODIFICATIONS);
 		}
 		return busMasterModifications;
 	}
@@ -223,9 +218,9 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyBusSlave<?>> getBusSlaveModifications() {
+	public EList<ModifyBusSlave> getBusSlaveModifications() {
 		if (busSlaveModifications == null) {
-			busSlaveModifications = new EObjectContainmentEList<ModifyBusSlave<?>>(ModifyBusSlave.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_SLAVE_MODIFICATIONS);
+			busSlaveModifications = new EObjectContainmentEList<ModifyBusSlave>(ModifyBusSlave.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_SLAVE_MODIFICATIONS);
 		}
 		return busSlaveModifications;
 	}
@@ -235,9 +230,9 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyBusCable<?>> getBusCableModifications() {
+	public EList<ModifyBusCable> getBusCableModifications() {
 		if (busCableModifications == null) {
-			busCableModifications = new EObjectContainmentEList<ModifyBusCable<?>>(ModifyBusCable.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS);
+			busCableModifications = new EObjectContainmentEList<ModifyBusCable>(ModifyBusCable.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS);
 		}
 		return busCableModifications;
 	}
@@ -309,35 +304,35 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 		switch (featureID) {
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__SENSOR_MODIFICATIONS:
 				getSensorModifications().clear();
-				getSensorModifications().addAll((Collection<? extends ModifySensor<?>>)newValue);
+				getSensorModifications().addAll((Collection<? extends ModifySensor>)newValue);
 				return;
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__SIGNALINTERFACE_MODIFICATIONS:
 				getSignalinterfaceModifications().clear();
-				getSignalinterfaceModifications().addAll((Collection<? extends ModifySignalinterface<?>>)newValue);
+				getSignalinterfaceModifications().addAll((Collection<? extends ModifySignalinterface>)newValue);
 				return;
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__PHYSICAL_CONNECTION_MODIFICATIONS:
 				getPhysicalConnectionModifications().clear();
-				getPhysicalConnectionModifications().addAll((Collection<? extends ModifyPhysicalConnection<?>>)newValue);
+				getPhysicalConnectionModifications().addAll((Collection<? extends ModifyPhysicalConnection>)newValue);
 				return;
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__MICRO_SWITCH_MODULE_MODIFICATIONS:
 				getMicroSwitchModuleModifications().clear();
-				getMicroSwitchModuleModifications().addAll((Collection<? extends ModifyMicroSwitchModule<?>>)newValue);
+				getMicroSwitchModuleModifications().addAll((Collection<? extends ModifyMicroSwitchModule>)newValue);
 				return;
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_BOX_MODIFICATIONS:
 				getBusBoxModifications().clear();
-				getBusBoxModifications().addAll((Collection<? extends ModifyBusBox<?>>)newValue);
+				getBusBoxModifications().addAll((Collection<? extends ModifyBusBox>)newValue);
 				return;
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_MASTER_MODIFICATIONS:
 				getBusMasterModifications().clear();
-				getBusMasterModifications().addAll((Collection<? extends ModifyBusMaster<?>>)newValue);
+				getBusMasterModifications().addAll((Collection<? extends ModifyBusMaster>)newValue);
 				return;
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_SLAVE_MODIFICATIONS:
 				getBusSlaveModifications().clear();
-				getBusSlaveModifications().addAll((Collection<? extends ModifyBusSlave<?>>)newValue);
+				getBusSlaveModifications().addAll((Collection<? extends ModifyBusSlave>)newValue);
 				return;
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS:
 				getBusCableModifications().clear();
-				getBusCableModifications().addAll((Collection<? extends ModifyBusCable<?>>)newValue);
+				getBusCableModifications().addAll((Collection<? extends ModifyBusCable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

@@ -2,10 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
-
-import org.eclipse.emf.ecore.EObject;
-
 import xPPU.InterfaceRepository.SignalInterface;
 
 /**
@@ -18,5 +14,5 @@ import xPPU.InterfaceRepository.SignalInterface;
  * @model
  * @generated
  */
-public interface ModifySignalinterface<T extends SignalInterface> extends AbstractModification<T, EObject> {
+public interface ModifySignalinterface extends ModifyInterface<SignalInterface> {
 } // ModifySignalinterface

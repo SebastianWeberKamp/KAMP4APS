@@ -2,15 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.impl.AbstractModificationImpl;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
-
 import org.eclipse.emf.ecore.EClass;
-
-import org.eclipse.emf.ecore.EObject;
-import org.palladiosimulator.pcm.repository.ComponentType;
-import xPPU.BusBox;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,7 +13,7 @@ import xPPU.BusBox;
  *
  * @generated
  */
-public class ModifyBusBoxImpl<T extends xPPU.BusComponents.BusBox> extends AbstractModificationImpl<T, EObject> implements ModifyBusBox<T> {
+public class ModifyBusBoxImpl extends ModifyComponentImpl<xPPU.BusComponents.BusBox> implements ModifyBusBox {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -37,17 +31,6 @@ public class ModifyBusBoxImpl<T extends xPPU.BusComponents.BusBox> extends Abstr
 	@Override
 	protected EClass eStaticClass() {
 		return modificationmarksPackage.Literals.MODIFY_BUS_BOX;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * This is specialized for the more specific type known in this context.
-	 * @generated
-	 */
-	@Override
-	public void setAffectedElement(T newAffectedElement) {
-		super.setAffectedElement(newAffectedElement);
 	}
 
 } //ModifyBusBoxImpl

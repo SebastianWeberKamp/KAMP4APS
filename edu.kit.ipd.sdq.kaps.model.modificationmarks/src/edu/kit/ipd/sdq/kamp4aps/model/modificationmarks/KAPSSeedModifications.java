@@ -29,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
 public interface KAPSSeedModifications extends AbstractSeedModifications {
 	/**
 	 * Returns the value of the '<em><b>Bus Box Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox}&lt;?>.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Bus Box Modifications</em>' containment reference list isn't clear,
@@ -41,11 +41,11 @@ public interface KAPSSeedModifications extends AbstractSeedModifications {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ModifyBusBox<?>> getBusBoxModifications();
+	EList<ModifyBusBox> getBusBoxModifications();
 
 	/**
 	 * Returns the value of the '<em><b>Sensor Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor}&lt;?>.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sensor Modifications</em>' containment reference list isn't clear,
@@ -57,11 +57,11 @@ public interface KAPSSeedModifications extends AbstractSeedModifications {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ModifySensor<?>> getSensorModifications();
+	EList<ModifySensor> getSensorModifications();
 
 	/**
 	 * Returns the value of the '<em><b>Bus Master Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster}&lt;?>.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Bus Master Modifications</em>' containment reference list isn't clear,
@@ -73,11 +73,11 @@ public interface KAPSSeedModifications extends AbstractSeedModifications {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ModifyBusMaster<?>> getBusMasterModifications();
+	EList<ModifyBusMaster> getBusMasterModifications();
 
 	/**
 	 * Returns the value of the '<em><b>Bus Slave Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave}&lt;?>.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Bus Slave Modifications</em>' containment reference list isn't clear,
@@ -89,11 +89,11 @@ public interface KAPSSeedModifications extends AbstractSeedModifications {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ModifyBusSlave<?>> getBusSlaveModifications();
+	EList<ModifyBusSlave> getBusSlaveModifications();
 
 	/**
 	 * Returns the value of the '<em><b>Microswitch Module Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule}&lt;?>.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Microswitch Module Modifications</em>' containment reference list isn't clear,
@@ -105,6 +105,6 @@ public interface KAPSSeedModifications extends AbstractSeedModifications {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ModifyMicroSwitchModule<?>> getMicroswitchModuleModifications();
+	EList<ModifyMicroSwitchModule> getMicroswitchModuleModifications();
 
 } // KAPSSeedModifications

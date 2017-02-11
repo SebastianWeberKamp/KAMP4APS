@@ -2,10 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
-
-import org.eclipse.emf.ecore.EObject;
-
 import xPPU.InterfaceRepository.PhysicalConnection;
 
 /**
@@ -18,5 +14,5 @@ import xPPU.InterfaceRepository.PhysicalConnection;
  * @model
  * @generated
  */
-public interface ModifyPhysicalConnection<T extends PhysicalConnection> extends AbstractModification<T, EObject> {
+public interface ModifyPhysicalConnection extends ModifyInterface<PhysicalConnection> {
 } // ModifyPhysicalConnection

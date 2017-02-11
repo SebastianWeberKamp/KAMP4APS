@@ -8,26 +8,13 @@ import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModificationRepositor
 import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractSeedModifications;
 import edu.kit.ipd.sdq.amp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.*;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
-
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.palladiosimulator.pcm.core.entity.Entity;
-import org.palladiosimulator.pcm.repository.Role;
-import xPPU.BusBox;
-import xPPU.BusComponents.BusCable;
-import xPPU.BusComponents.BusMaster;
-import xPPU.BusComponents.BusSlave;
-import xPPU.ComponentRepository.MicroswitchModule;
-import xPPU.Interface;
-import xPPU.InterfaceRepository.PhysicalConnection;
-import xPPU.InterfaceRepository.SignalInterface;
-import xPPU.PowerSupply;
-import xPPU.Sensor;
+import xPPU.ComponentRepository.Component;
+import xPPU.ModuleRepository.Module;
+import xPPU.StructureRepository.Structure;
 
 /**
  * <!-- begin-user-doc -->
@@ -98,48 +85,60 @@ public class modificationmarksAdapterFactory extends AdapterFactoryImpl {
 				return createKAPSSeedModificationsAdapter();
 			}
 			@Override
-			public <T extends xPPU.ComponentRepository.Sensor> Adapter caseModifySensor(ModifySensor<T> object) {
-				return createModifySensorAdapter();
-			}
-			@Override
 			public Adapter caseChangePropagationDueToHardwareChange(ChangePropagationDueToHardwareChange object) {
 				return createChangePropagationDueToHardwareChangeAdapter();
 			}
 			@Override
-			public <T extends Entity> Adapter caseModifyEntity(ModifyEntity<T> object) {
-				return createModifyEntityAdapter();
+			public <T extends Component> Adapter caseModifyComponent(ModifyComponent<T> object) {
+				return createModifyComponentAdapter();
 			}
 			@Override
-			public <T extends xPPU.BusComponents.BusBox> Adapter caseModifyBusBox(ModifyBusBox<T> object) {
-				return createModifyBusBoxAdapter();
+			public <T extends Module> Adapter caseModifyModule(ModifyModule<T> object) {
+				return createModifyModuleAdapter();
 			}
 			@Override
-			public <T extends xPPU.ComponentRepository.PowerSupply> Adapter caseModifyPowerSupply(ModifyPowerSupply<T> object) {
+			public <T extends Structure> Adapter caseModifyStucture(ModifyStucture<T> object) {
+				return createModifyStuctureAdapter();
+			}
+			@Override
+			public <T extends xPPU.InterfaceRepository.Interface> Adapter caseModifyInterface(ModifyInterface<T> object) {
+				return createModifyInterfaceAdapter();
+			}
+			@Override
+			public Adapter caseModifyPowerSupply(ModifyPowerSupply object) {
 				return createModifyPowerSupplyAdapter();
 			}
 			@Override
-			public <T extends SignalInterface> Adapter caseModifySignalinterface(ModifySignalinterface<T> object) {
+			public Adapter caseModifySignalinterface(ModifySignalinterface object) {
 				return createModifySignalinterfaceAdapter();
 			}
 			@Override
-			public <T extends PhysicalConnection> Adapter caseModifyPhysicalConnection(ModifyPhysicalConnection<T> object) {
+			public Adapter caseModifyPhysicalConnection(ModifyPhysicalConnection object) {
 				return createModifyPhysicalConnectionAdapter();
 			}
 			@Override
-			public <T extends MicroswitchModule> Adapter caseModifyMicroSwitchModule(ModifyMicroSwitchModule<T> object) {
+			public Adapter caseModifyMicroSwitchModule(ModifyMicroSwitchModule object) {
 				return createModifyMicroSwitchModuleAdapter();
 			}
 			@Override
-			public <T extends BusMaster> Adapter caseModifyBusMaster(ModifyBusMaster<T> object) {
+			public Adapter caseModifyBusBox(ModifyBusBox object) {
+				return createModifyBusBoxAdapter();
+			}
+			@Override
+			public Adapter caseModifyBusMaster(ModifyBusMaster object) {
 				return createModifyBusMasterAdapter();
 			}
 			@Override
-			public <T extends BusSlave> Adapter caseModifyBusSlave(ModifyBusSlave<T> object) {
+			public Adapter caseModifyBusSlave(ModifyBusSlave object) {
 				return createModifyBusSlaveAdapter();
 			}
 			@Override
-			public <T extends BusCable> Adapter caseModifyBusCable(ModifyBusCable<T> object) {
+			public Adapter caseModifyBusCable(ModifyBusCable object) {
 				return createModifyBusCableAdapter();
+			}
+			@Override
+			public Adapter caseModifySensor(ModifySensor object) {
+				return createModifySensorAdapter();
 			}
 			@Override
 			public <S extends AbstractSeedModifications, T extends AbstractChangePropagationStep> Adapter caseAbstractModificationRepository(AbstractModificationRepository<S, T> object) {
@@ -150,16 +149,16 @@ public class modificationmarksAdapterFactory extends AdapterFactoryImpl {
 				return createAbstractSeedModificationsAdapter();
 			}
 			@Override
-			public <S, T> Adapter caseAbstractModification(AbstractModification<S, T> object) {
-				return createAbstractModificationAdapter();
-			}
-			@Override
 			public Adapter caseAbstractChangePropagationStep(AbstractChangePropagationStep object) {
 				return createAbstractChangePropagationStepAdapter();
 			}
 			@Override
 			public Adapter caseChangePropagationStep(ChangePropagationStep object) {
 				return createChangePropagationStepAdapter();
+			}
+			@Override
+			public <S, T> Adapter caseAbstractModification(AbstractModification<S, T> object) {
+				return createAbstractModificationAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -252,16 +251,58 @@ public class modificationmarksAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyEntity <em>Modify Entity</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent <em>Modify Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyEntity
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent
 	 * @generated
 	 */
-	public Adapter createModifyEntityAdapter() {
+	public Adapter createModifyComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule <em>Modify Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule
+	 * @generated
+	 */
+	public Adapter createModifyModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture <em>Modify Stucture</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture
+	 * @generated
+	 */
+	public Adapter createModifyStuctureAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface <em>Modify Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface
+	 * @generated
+	 */
+	public Adapter createModifyInterfaceAdapter() {
 		return null;
 	}
 

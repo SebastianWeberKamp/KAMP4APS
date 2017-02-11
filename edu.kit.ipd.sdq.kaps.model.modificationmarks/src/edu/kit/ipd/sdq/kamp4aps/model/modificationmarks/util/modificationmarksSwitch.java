@@ -8,24 +8,12 @@ import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModificationRepositor
 import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractSeedModifications;
 import edu.kit.ipd.sdq.amp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.*;
-
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
 import org.eclipse.emf.ecore.util.Switch;
-import org.palladiosimulator.pcm.core.entity.Entity;
-import org.palladiosimulator.pcm.repository.Role;
-import xPPU.BusBox;
-import xPPU.BusComponents.BusCable;
-import xPPU.BusComponents.BusMaster;
-import xPPU.BusComponents.BusSlave;
-import xPPU.ComponentRepository.MicroswitchModule;
-import xPPU.Interface;
-import xPPU.InterfaceRepository.PhysicalConnection;
-import xPPU.InterfaceRepository.SignalInterface;
-import xPPU.PowerSupply;
-import xPPU.Sensor;
+import xPPU.ComponentRepository.Component;
+import xPPU.ModuleRepository.Module;
+import xPPU.StructureRepository.Structure;
 
 /**
  * <!-- begin-user-doc -->
@@ -106,13 +94,6 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case modificationmarksPackage.MODIFY_SENSOR: {
-				ModifySensor<?> modifySensor = (ModifySensor<?>)theEObject;
-				T1 result = caseModifySensor(modifySensor);
-				if (result == null) result = caseAbstractModification(modifySensor);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE: {
 				ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange = (ChangePropagationDueToHardwareChange)theEObject;
 				T1 result = caseChangePropagationDueToHardwareChange(changePropagationDueToHardwareChange);
@@ -121,66 +102,104 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case modificationmarksPackage.MODIFY_ENTITY: {
-				ModifyEntity<?> modifyEntity = (ModifyEntity<?>)theEObject;
-				T1 result = caseModifyEntity(modifyEntity);
-				if (result == null) result = caseAbstractModification(modifyEntity);
+			case modificationmarksPackage.MODIFY_COMPONENT: {
+				ModifyComponent<?> modifyComponent = (ModifyComponent<?>)theEObject;
+				T1 result = caseModifyComponent(modifyComponent);
+				if (result == null) result = caseAbstractModification(modifyComponent);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case modificationmarksPackage.MODIFY_BUS_BOX: {
-				ModifyBusBox<?> modifyBusBox = (ModifyBusBox<?>)theEObject;
-				T1 result = caseModifyBusBox(modifyBusBox);
-				if (result == null) result = caseAbstractModification(modifyBusBox);
+			case modificationmarksPackage.MODIFY_MODULE: {
+				ModifyModule<?> modifyModule = (ModifyModule<?>)theEObject;
+				T1 result = caseModifyModule(modifyModule);
+				if (result == null) result = caseAbstractModification(modifyModule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case modificationmarksPackage.MODIFY_STUCTURE: {
+				ModifyStucture<?> modifyStucture = (ModifyStucture<?>)theEObject;
+				T1 result = caseModifyStucture(modifyStucture);
+				if (result == null) result = caseAbstractModification(modifyStucture);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case modificationmarksPackage.MODIFY_INTERFACE: {
+				ModifyInterface<?> modifyInterface = (ModifyInterface<?>)theEObject;
+				T1 result = caseModifyInterface(modifyInterface);
+				if (result == null) result = caseAbstractModification(modifyInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case modificationmarksPackage.MODIFY_POWER_SUPPLY: {
-				ModifyPowerSupply<?> modifyPowerSupply = (ModifyPowerSupply<?>)theEObject;
+				ModifyPowerSupply modifyPowerSupply = (ModifyPowerSupply)theEObject;
 				T1 result = caseModifyPowerSupply(modifyPowerSupply);
+				if (result == null) result = caseModifyComponent(modifyPowerSupply);
+				if (result == null) result = caseModifyInterface(modifyPowerSupply);
 				if (result == null) result = caseAbstractModification(modifyPowerSupply);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case modificationmarksPackage.MODIFY_SIGNALINTERFACE: {
-				ModifySignalinterface<?> modifySignalinterface = (ModifySignalinterface<?>)theEObject;
+				ModifySignalinterface modifySignalinterface = (ModifySignalinterface)theEObject;
 				T1 result = caseModifySignalinterface(modifySignalinterface);
+				if (result == null) result = caseModifyInterface(modifySignalinterface);
 				if (result == null) result = caseAbstractModification(modifySignalinterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case modificationmarksPackage.MODIFY_PHYSICAL_CONNECTION: {
-				ModifyPhysicalConnection<?> modifyPhysicalConnection = (ModifyPhysicalConnection<?>)theEObject;
+				ModifyPhysicalConnection modifyPhysicalConnection = (ModifyPhysicalConnection)theEObject;
 				T1 result = caseModifyPhysicalConnection(modifyPhysicalConnection);
+				if (result == null) result = caseModifyInterface(modifyPhysicalConnection);
 				if (result == null) result = caseAbstractModification(modifyPhysicalConnection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case modificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE: {
-				ModifyMicroSwitchModule<?> modifyMicroSwitchModule = (ModifyMicroSwitchModule<?>)theEObject;
+				ModifyMicroSwitchModule modifyMicroSwitchModule = (ModifyMicroSwitchModule)theEObject;
 				T1 result = caseModifyMicroSwitchModule(modifyMicroSwitchModule);
+				if (result == null) result = caseModifyComponent(modifyMicroSwitchModule);
 				if (result == null) result = caseAbstractModification(modifyMicroSwitchModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case modificationmarksPackage.MODIFY_BUS_BOX: {
+				ModifyBusBox modifyBusBox = (ModifyBusBox)theEObject;
+				T1 result = caseModifyBusBox(modifyBusBox);
+				if (result == null) result = caseModifyComponent(modifyBusBox);
+				if (result == null) result = caseAbstractModification(modifyBusBox);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case modificationmarksPackage.MODIFY_BUS_MASTER: {
-				ModifyBusMaster<?> modifyBusMaster = (ModifyBusMaster<?>)theEObject;
+				ModifyBusMaster modifyBusMaster = (ModifyBusMaster)theEObject;
 				T1 result = caseModifyBusMaster(modifyBusMaster);
+				if (result == null) result = caseModifyComponent(modifyBusMaster);
 				if (result == null) result = caseAbstractModification(modifyBusMaster);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case modificationmarksPackage.MODIFY_BUS_SLAVE: {
-				ModifyBusSlave<?> modifyBusSlave = (ModifyBusSlave<?>)theEObject;
+				ModifyBusSlave modifyBusSlave = (ModifyBusSlave)theEObject;
 				T1 result = caseModifyBusSlave(modifyBusSlave);
+				if (result == null) result = caseModifyComponent(modifyBusSlave);
 				if (result == null) result = caseAbstractModification(modifyBusSlave);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case modificationmarksPackage.MODIFY_BUS_CABLE: {
-				ModifyBusCable<?> modifyBusCable = (ModifyBusCable<?>)theEObject;
+				ModifyBusCable modifyBusCable = (ModifyBusCable)theEObject;
 				T1 result = caseModifyBusCable(modifyBusCable);
+				if (result == null) result = caseModifyComponent(modifyBusCable);
 				if (result == null) result = caseAbstractModification(modifyBusCable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case modificationmarksPackage.MODIFY_SENSOR: {
+				ModifySensor modifySensor = (ModifySensor)theEObject;
+				T1 result = caseModifySensor(modifySensor);
+				if (result == null) result = caseModifyComponent(modifySensor);
+				if (result == null) result = caseAbstractModification(modifySensor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -244,7 +263,7 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends xPPU.ComponentRepository.Sensor> T1 caseModifySensor(ModifySensor<T> object) {
+	public T1 caseModifySensor(ModifySensor object) {
 		return null;
 	}
 
@@ -264,17 +283,62 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Modify Entity</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Modify Component</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Modify Entity</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Modify Component</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends Entity> T1 caseModifyEntity(ModifyEntity<T> object) {
+	public <T extends Component> T1 caseModifyComponent(ModifyComponent<T> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Modify Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Modify Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public <T extends Module> T1 caseModifyModule(ModifyModule<T> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Modify Stucture</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Modify Stucture</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public <T extends Structure> T1 caseModifyStucture(ModifyStucture<T> object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Modify Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Modify Interface</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public <T extends xPPU.InterfaceRepository.Interface> T1 caseModifyInterface(ModifyInterface<T> object) {
 		return null;
 	}
 
@@ -319,7 +383,7 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends xPPU.BusComponents.BusBox> T1 caseModifyBusBox(ModifyBusBox<T> object) {
+	public T1 caseModifyBusBox(ModifyBusBox object) {
 		return null;
 	}
 
@@ -334,7 +398,7 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends xPPU.ComponentRepository.PowerSupply> T1 caseModifyPowerSupply(ModifyPowerSupply<T> object) {
+	public T1 caseModifyPowerSupply(ModifyPowerSupply object) {
 		return null;
 	}
 
@@ -349,7 +413,7 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends SignalInterface> T1 caseModifySignalinterface(ModifySignalinterface<T> object) {
+	public T1 caseModifySignalinterface(ModifySignalinterface object) {
 		return null;
 	}
 
@@ -364,7 +428,7 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends PhysicalConnection> T1 caseModifyPhysicalConnection(ModifyPhysicalConnection<T> object) {
+	public T1 caseModifyPhysicalConnection(ModifyPhysicalConnection object) {
 		return null;
 	}
 
@@ -379,7 +443,7 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends MicroswitchModule> T1 caseModifyMicroSwitchModule(ModifyMicroSwitchModule<T> object) {
+	public T1 caseModifyMicroSwitchModule(ModifyMicroSwitchModule object) {
 		return null;
 	}
 
@@ -394,7 +458,7 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends BusMaster> T1 caseModifyBusMaster(ModifyBusMaster<T> object) {
+	public T1 caseModifyBusMaster(ModifyBusMaster object) {
 		return null;
 	}
 
@@ -409,7 +473,7 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends BusSlave> T1 caseModifyBusSlave(ModifyBusSlave<T> object) {
+	public T1 caseModifyBusSlave(ModifyBusSlave object) {
 		return null;
 	}
 
@@ -424,7 +488,7 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends BusCable> T1 caseModifyBusCable(ModifyBusCable<T> object) {
+	public T1 caseModifyBusCable(ModifyBusCable object) {
 		return null;
 	}
 

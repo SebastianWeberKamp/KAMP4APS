@@ -2,10 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
-
-import org.eclipse.emf.ecore.EObject;
-
 import xPPU.BusComponents.BusMaster;
 
 /**
@@ -18,5 +14,5 @@ import xPPU.BusComponents.BusMaster;
  * @model
  * @generated
  */
-public interface ModifyBusMaster<T extends BusMaster> extends AbstractModification<T, EObject> {
+public interface ModifyBusMaster extends ModifyComponent<BusMaster> {
 } // ModifyBusMaster

@@ -2,11 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
-
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
-
 import xPPU.ComponentRepository.MicroswitchModule;
 
 /**
@@ -25,7 +20,7 @@ import xPPU.ComponentRepository.MicroswitchModule;
  * @model
  * @generated
  */
-public interface ModifyMicroSwitchModule<T extends MicroswitchModule> extends AbstractModification<T, EObject> {
+public interface ModifyMicroSwitchModule extends ModifyComponent<MicroswitchModule> {
 	/**
 	 * Returns the value of the '<em><b>Is Replaced</b></em>' attribute.
 	 * <!-- begin-user-doc -->

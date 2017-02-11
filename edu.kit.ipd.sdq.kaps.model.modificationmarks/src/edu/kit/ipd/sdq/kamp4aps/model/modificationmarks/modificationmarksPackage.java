@@ -202,79 +202,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifySensor()
 	 * @generated
 	 */
-	int MODIFY_SENSOR = 3;
-
-	/**
-	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_SENSOR__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_SENSOR__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_SENSOR__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
-
-	/**
-	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_SENSOR__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
-
-	/**
-	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_SENSOR__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
-
-	/**
-	 * The feature id for the '<em><b>Modify Signal Interfaces</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Modify Physical Connections</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Modify Sensor</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_SENSOR_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 2;
+	int MODIFY_SENSOR = 16;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ChangePropagationDueToHardwareChangeImpl <em>Change Propagation Due To Hardware Change</em>}' class.
@@ -284,7 +212,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getChangePropagationDueToHardwareChange()
 	 * @generated
 	 */
-	int CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE = 4;
+	int CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Sensor Modifications</b></em>' containment reference list.
@@ -368,14 +296,14 @@ public interface modificationmarksPackage extends EPackage {
 	int CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE_FEATURE_COUNT = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 8;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyEntityImpl <em>Modify Entity</em>}' class.
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyComponentImpl <em>Modify Component</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyEntityImpl
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyEntity()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyComponentImpl
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyComponent()
 	 * @generated
 	 */
-	int MODIFY_ENTITY = 5;
+	int MODIFY_COMPONENT = 4;
 
 	/**
 	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
@@ -384,7 +312,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_ENTITY__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+	int MODIFY_COMPONENT__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
@@ -393,7 +321,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_ENTITY__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+	int MODIFY_COMPONENT__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -402,7 +330,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_ENTITY__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+	int MODIFY_COMPONENT__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
 
 	/**
 	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
@@ -411,7 +339,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_ENTITY__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+	int MODIFY_COMPONENT__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
 
 	/**
 	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
@@ -420,16 +348,208 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_ENTITY__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+	int MODIFY_COMPONENT__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
 
 	/**
-	 * The number of structural features of the '<em>Modify Entity</em>' class.
+	 * The number of structural features of the '<em>Modify Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_ENTITY_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+	int MODIFY_COMPONENT_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyModuleImpl <em>Modify Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyModuleImpl
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyModule()
+	 * @generated
+	 */
+	int MODIFY_MODULE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_MODULE__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_MODULE__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_MODULE__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_MODULE__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_MODULE__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>Modify Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_MODULE_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStuctureImpl <em>Modify Stucture</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStuctureImpl
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyStucture()
+	 * @generated
+	 */
+	int MODIFY_STUCTURE = 6;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_STUCTURE__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_STUCTURE__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_STUCTURE__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_STUCTURE__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_STUCTURE__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>Modify Stucture</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_STUCTURE_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyInterfaceImpl <em>Modify Interface</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyInterfaceImpl
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyInterface()
+	 * @generated
+	 */
+	int MODIFY_INTERFACE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_INTERFACE__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_INTERFACE__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_INTERFACE__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_INTERFACE__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_INTERFACE__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>Modify Interface</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_INTERFACE_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyBusBoxImpl <em>Modify Bus Box</em>}' class.
@@ -439,61 +559,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyBusBox()
 	 * @generated
 	 */
-	int MODIFY_BUS_BOX = 6;
-
-	/**
-	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_BUS_BOX__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
-
-	/**
-	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_BUS_BOX__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_BUS_BOX__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
-
-	/**
-	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_BUS_BOX__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
-
-	/**
-	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_BUS_BOX__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
-
-	/**
-	 * The number of structural features of the '<em>Modify Bus Box</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODIFY_BUS_BOX_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+	int MODIFY_BUS_BOX = 12;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyPowerSupplyImpl <em>Modify Power Supply</em>}' class.
@@ -503,7 +569,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyPowerSupply()
 	 * @generated
 	 */
-	int MODIFY_POWER_SUPPLY = 7;
+	int MODIFY_POWER_SUPPLY = 8;
 
 	/**
 	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
@@ -512,7 +578,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_POWER_SUPPLY__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+	int MODIFY_POWER_SUPPLY__AFFECTED_ELEMENT = MODIFY_COMPONENT__AFFECTED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
@@ -521,7 +587,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_POWER_SUPPLY__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+	int MODIFY_POWER_SUPPLY__CAUSING_ELEMENTS = MODIFY_COMPONENT__CAUSING_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -530,7 +596,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_POWER_SUPPLY__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+	int MODIFY_POWER_SUPPLY__ID = MODIFY_COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
@@ -539,7 +605,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_POWER_SUPPLY__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+	int MODIFY_POWER_SUPPLY__TOOLDERIVED = MODIFY_COMPONENT__TOOLDERIVED;
 
 	/**
 	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
@@ -548,7 +614,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_POWER_SUPPLY__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+	int MODIFY_POWER_SUPPLY__USER_DECISION = MODIFY_COMPONENT__USER_DECISION;
 
 	/**
 	 * The number of structural features of the '<em>Modify Power Supply</em>' class.
@@ -557,7 +623,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_POWER_SUPPLY_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+	int MODIFY_POWER_SUPPLY_FEATURE_COUNT = MODIFY_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifySignalinterfaceImpl <em>Modify Signalinterface</em>}' class.
@@ -567,7 +633,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifySignalinterface()
 	 * @generated
 	 */
-	int MODIFY_SIGNALINTERFACE = 8;
+	int MODIFY_SIGNALINTERFACE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
@@ -576,7 +642,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_SIGNALINTERFACE__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+	int MODIFY_SIGNALINTERFACE__AFFECTED_ELEMENT = MODIFY_INTERFACE__AFFECTED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
@@ -585,7 +651,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_SIGNALINTERFACE__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+	int MODIFY_SIGNALINTERFACE__CAUSING_ELEMENTS = MODIFY_INTERFACE__CAUSING_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -594,7 +660,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_SIGNALINTERFACE__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+	int MODIFY_SIGNALINTERFACE__ID = MODIFY_INTERFACE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
@@ -603,7 +669,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_SIGNALINTERFACE__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+	int MODIFY_SIGNALINTERFACE__TOOLDERIVED = MODIFY_INTERFACE__TOOLDERIVED;
 
 	/**
 	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
@@ -612,7 +678,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_SIGNALINTERFACE__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+	int MODIFY_SIGNALINTERFACE__USER_DECISION = MODIFY_INTERFACE__USER_DECISION;
 
 	/**
 	 * The number of structural features of the '<em>Modify Signalinterface</em>' class.
@@ -621,7 +687,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_SIGNALINTERFACE_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+	int MODIFY_SIGNALINTERFACE_FEATURE_COUNT = MODIFY_INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyPhysicalConnectionImpl <em>Modify Physical Connection</em>}' class.
@@ -631,7 +697,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyPhysicalConnection()
 	 * @generated
 	 */
-	int MODIFY_PHYSICAL_CONNECTION = 9;
+	int MODIFY_PHYSICAL_CONNECTION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
@@ -640,7 +706,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_PHYSICAL_CONNECTION__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+	int MODIFY_PHYSICAL_CONNECTION__AFFECTED_ELEMENT = MODIFY_INTERFACE__AFFECTED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
@@ -649,7 +715,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_PHYSICAL_CONNECTION__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+	int MODIFY_PHYSICAL_CONNECTION__CAUSING_ELEMENTS = MODIFY_INTERFACE__CAUSING_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -658,7 +724,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_PHYSICAL_CONNECTION__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+	int MODIFY_PHYSICAL_CONNECTION__ID = MODIFY_INTERFACE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
@@ -667,7 +733,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_PHYSICAL_CONNECTION__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+	int MODIFY_PHYSICAL_CONNECTION__TOOLDERIVED = MODIFY_INTERFACE__TOOLDERIVED;
 
 	/**
 	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
@@ -676,7 +742,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_PHYSICAL_CONNECTION__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+	int MODIFY_PHYSICAL_CONNECTION__USER_DECISION = MODIFY_INTERFACE__USER_DECISION;
 
 	/**
 	 * The number of structural features of the '<em>Modify Physical Connection</em>' class.
@@ -685,7 +751,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_PHYSICAL_CONNECTION_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+	int MODIFY_PHYSICAL_CONNECTION_FEATURE_COUNT = MODIFY_INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyMicroSwitchModuleImpl <em>Modify Micro Switch Module</em>}' class.
@@ -695,7 +761,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyMicroSwitchModule()
 	 * @generated
 	 */
-	int MODIFY_MICRO_SWITCH_MODULE = 10;
+	int MODIFY_MICRO_SWITCH_MODULE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
@@ -704,7 +770,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_MICRO_SWITCH_MODULE__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+	int MODIFY_MICRO_SWITCH_MODULE__AFFECTED_ELEMENT = MODIFY_COMPONENT__AFFECTED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
@@ -713,7 +779,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_MICRO_SWITCH_MODULE__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+	int MODIFY_MICRO_SWITCH_MODULE__CAUSING_ELEMENTS = MODIFY_COMPONENT__CAUSING_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -722,7 +788,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_MICRO_SWITCH_MODULE__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+	int MODIFY_MICRO_SWITCH_MODULE__ID = MODIFY_COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
@@ -731,7 +797,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_MICRO_SWITCH_MODULE__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+	int MODIFY_MICRO_SWITCH_MODULE__TOOLDERIVED = MODIFY_COMPONENT__TOOLDERIVED;
 
 	/**
 	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
@@ -740,7 +806,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_MICRO_SWITCH_MODULE__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+	int MODIFY_MICRO_SWITCH_MODULE__USER_DECISION = MODIFY_COMPONENT__USER_DECISION;
 
 	/**
 	 * The feature id for the '<em><b>Is Replaced</b></em>' attribute.
@@ -749,7 +815,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+	int MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED = MODIFY_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Modify Micro Switch Module</em>' class.
@@ -758,7 +824,61 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_MICRO_SWITCH_MODULE_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 1;
+	int MODIFY_MICRO_SWITCH_MODULE_FEATURE_COUNT = MODIFY_COMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_BUS_BOX__AFFECTED_ELEMENT = MODIFY_COMPONENT__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_BUS_BOX__CAUSING_ELEMENTS = MODIFY_COMPONENT__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_BUS_BOX__ID = MODIFY_COMPONENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_BUS_BOX__TOOLDERIVED = MODIFY_COMPONENT__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_BUS_BOX__USER_DECISION = MODIFY_COMPONENT__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>Modify Bus Box</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_BUS_BOX_FEATURE_COUNT = MODIFY_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyBusMasterImpl <em>Modify Bus Master</em>}' class.
@@ -768,7 +888,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyBusMaster()
 	 * @generated
 	 */
-	int MODIFY_BUS_MASTER = 11;
+	int MODIFY_BUS_MASTER = 13;
 
 	/**
 	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
@@ -777,7 +897,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_MASTER__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+	int MODIFY_BUS_MASTER__AFFECTED_ELEMENT = MODIFY_COMPONENT__AFFECTED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
@@ -786,7 +906,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_MASTER__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+	int MODIFY_BUS_MASTER__CAUSING_ELEMENTS = MODIFY_COMPONENT__CAUSING_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -795,7 +915,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_MASTER__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+	int MODIFY_BUS_MASTER__ID = MODIFY_COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
@@ -804,7 +924,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_MASTER__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+	int MODIFY_BUS_MASTER__TOOLDERIVED = MODIFY_COMPONENT__TOOLDERIVED;
 
 	/**
 	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
@@ -813,7 +933,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_MASTER__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+	int MODIFY_BUS_MASTER__USER_DECISION = MODIFY_COMPONENT__USER_DECISION;
 
 	/**
 	 * The number of structural features of the '<em>Modify Bus Master</em>' class.
@@ -822,7 +942,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_MASTER_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+	int MODIFY_BUS_MASTER_FEATURE_COUNT = MODIFY_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyBusSlaveImpl <em>Modify Bus Slave</em>}' class.
@@ -832,7 +952,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyBusSlave()
 	 * @generated
 	 */
-	int MODIFY_BUS_SLAVE = 12;
+	int MODIFY_BUS_SLAVE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
@@ -841,7 +961,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_SLAVE__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+	int MODIFY_BUS_SLAVE__AFFECTED_ELEMENT = MODIFY_COMPONENT__AFFECTED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
@@ -850,7 +970,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_SLAVE__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+	int MODIFY_BUS_SLAVE__CAUSING_ELEMENTS = MODIFY_COMPONENT__CAUSING_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -859,7 +979,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_SLAVE__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+	int MODIFY_BUS_SLAVE__ID = MODIFY_COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
@@ -868,7 +988,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_SLAVE__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+	int MODIFY_BUS_SLAVE__TOOLDERIVED = MODIFY_COMPONENT__TOOLDERIVED;
 
 	/**
 	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
@@ -877,7 +997,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_SLAVE__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+	int MODIFY_BUS_SLAVE__USER_DECISION = MODIFY_COMPONENT__USER_DECISION;
 
 	/**
 	 * The number of structural features of the '<em>Modify Bus Slave</em>' class.
@@ -886,7 +1006,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_SLAVE_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+	int MODIFY_BUS_SLAVE_FEATURE_COUNT = MODIFY_COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyBusCableImpl <em>Modify Bus Cable</em>}' class.
@@ -896,7 +1016,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyBusCable()
 	 * @generated
 	 */
-	int MODIFY_BUS_CABLE = 13;
+	int MODIFY_BUS_CABLE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
@@ -905,7 +1025,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_CABLE__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+	int MODIFY_BUS_CABLE__AFFECTED_ELEMENT = MODIFY_COMPONENT__AFFECTED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
@@ -914,7 +1034,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_CABLE__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+	int MODIFY_BUS_CABLE__CAUSING_ELEMENTS = MODIFY_COMPONENT__CAUSING_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -923,7 +1043,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_CABLE__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+	int MODIFY_BUS_CABLE__ID = MODIFY_COMPONENT__ID;
 
 	/**
 	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
@@ -932,7 +1052,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_CABLE__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+	int MODIFY_BUS_CABLE__TOOLDERIVED = MODIFY_COMPONENT__TOOLDERIVED;
 
 	/**
 	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
@@ -941,7 +1061,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_CABLE__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+	int MODIFY_BUS_CABLE__USER_DECISION = MODIFY_COMPONENT__USER_DECISION;
 
 	/**
 	 * The number of structural features of the '<em>Modify Bus Cable</em>' class.
@@ -950,7 +1070,79 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_BUS_CABLE_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+	int MODIFY_BUS_CABLE_FEATURE_COUNT = MODIFY_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_SENSOR__AFFECTED_ELEMENT = MODIFY_COMPONENT__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_SENSOR__CAUSING_ELEMENTS = MODIFY_COMPONENT__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_SENSOR__ID = MODIFY_COMPONENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_SENSOR__TOOLDERIVED = MODIFY_COMPONENT__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_SENSOR__USER_DECISION = MODIFY_COMPONENT__USER_DECISION;
+
+	/**
+	 * The feature id for the '<em><b>Modify Signal Interfaces</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES = MODIFY_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Modify Physical Connections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS = MODIFY_COMPONENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>Modify Sensor</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_SENSOR_FEATURE_COUNT = MODIFY_COMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository <em>Abstract KAPS Modification Repository</em>}'.
@@ -1168,14 +1360,44 @@ public interface modificationmarksPackage extends EPackage {
 	EReference getChangePropagationDueToHardwareChange_BusCableModifications();
 
 	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyEntity <em>Modify Entity</em>}'.
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent <em>Modify Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Modify Entity</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyEntity
+	 * @return the meta object for class '<em>Modify Component</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent
 	 * @generated
 	 */
-	EClass getModifyEntity();
+	EClass getModifyComponent();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule <em>Modify Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Modify Module</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule
+	 * @generated
+	 */
+	EClass getModifyModule();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture <em>Modify Stucture</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Modify Stucture</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture
+	 * @generated
+	 */
+	EClass getModifyStucture();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface <em>Modify Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Modify Interface</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface
+	 * @generated
+	 */
+	EClass getModifyInterface();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox <em>Modify Bus Box</em>}'.
@@ -1461,14 +1683,44 @@ public interface modificationmarksPackage extends EPackage {
 		EReference CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS = eINSTANCE.getChangePropagationDueToHardwareChange_BusCableModifications();
 
 		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyEntityImpl <em>Modify Entity</em>}' class.
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyComponentImpl <em>Modify Component</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyEntityImpl
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyEntity()
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyComponentImpl
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyComponent()
 		 * @generated
 		 */
-		EClass MODIFY_ENTITY = eINSTANCE.getModifyEntity();
+		EClass MODIFY_COMPONENT = eINSTANCE.getModifyComponent();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyModuleImpl <em>Modify Module</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyModuleImpl
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyModule()
+		 * @generated
+		 */
+		EClass MODIFY_MODULE = eINSTANCE.getModifyModule();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStuctureImpl <em>Modify Stucture</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStuctureImpl
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyStucture()
+		 * @generated
+		 */
+		EClass MODIFY_STUCTURE = eINSTANCE.getModifyStucture();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyInterfaceImpl <em>Modify Interface</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyInterfaceImpl
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyInterface()
+		 * @generated
+		 */
+		EClass MODIFY_INTERFACE = eINSTANCE.getModifyInterface();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyBusBoxImpl <em>Modify Bus Box</em>}' class.

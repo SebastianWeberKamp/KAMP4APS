@@ -2,14 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
-
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
-
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.SignalInterface;
-import xPPU.Sensor;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +23,7 @@ import xPPU.Sensor;
  * @model
  * @generated
  */
-public interface ModifySensor<T extends xPPU.ComponentRepository.Sensor> extends AbstractModification<T, EObject> {
+public interface ModifySensor extends ModifyComponent<xPPU.ComponentRepository.Sensor> {
 
 	/**
 	 * Returns the value of the '<em><b>Modify Signal Interfaces</b></em>' containment reference list.
