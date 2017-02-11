@@ -14,15 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyBusCableTest extends TestCase {
-
-	/**
-	 * The fixture for this Modify Bus Cable test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModifyBusCable<?> fixture = null;
+public class ModifyBusCableTest extends ModifyComponentTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,23 +36,14 @@ public class ModifyBusCableTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Modify Bus Cable test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ModifyBusCable<?> fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Modify Bus Cable test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModifyBusCable<?> getFixture() {
-		return fixture;
+	@Override
+	protected ModifyBusCable getFixture() {
+		return (ModifyBusCable)fixture;
 	}
 
 	/**

@@ -14,15 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyPowerSupplyTest extends TestCase {
-
-	/**
-	 * The fixture for this Modify Power Supply test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModifyPowerSupply<?> fixture = null;
+public class ModifyPowerSupplyTest extends ModifyComponentTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,23 +36,14 @@ public class ModifyPowerSupplyTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Modify Power Supply test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ModifyPowerSupply<?> fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Modify Power Supply test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModifyPowerSupply<?> getFixture() {
-		return fixture;
+	@Override
+	protected ModifyPowerSupply getFixture() {
+		return (ModifyPowerSupply)fixture;
 	}
 
 	/**

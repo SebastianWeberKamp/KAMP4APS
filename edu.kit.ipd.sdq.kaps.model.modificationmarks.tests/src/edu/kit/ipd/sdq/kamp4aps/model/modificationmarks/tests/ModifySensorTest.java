@@ -14,15 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifySensorTest extends TestCase {
-
-	/**
-	 * The fixture for this Modify Sensor test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModifySensor<?> fixture = null;
+public class ModifySensorTest extends ModifyComponentTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,23 +36,14 @@ public class ModifySensorTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Modify Sensor test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ModifySensor<?> fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Modify Sensor test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModifySensor<?> getFixture() {
-		return fixture;
+	@Override
+	protected ModifySensor getFixture() {
+		return (ModifySensor)fixture;
 	}
 
 	/**

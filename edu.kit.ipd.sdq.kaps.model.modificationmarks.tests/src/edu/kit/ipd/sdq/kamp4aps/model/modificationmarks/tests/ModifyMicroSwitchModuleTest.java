@@ -14,15 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyMicroSwitchModuleTest extends TestCase {
-
-	/**
-	 * The fixture for this Modify Micro Switch Module test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModifyMicroSwitchModule<?> fixture = null;
+public class ModifyMicroSwitchModuleTest extends ModifyComponentTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,23 +36,14 @@ public class ModifyMicroSwitchModuleTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Modify Micro Switch Module test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ModifyMicroSwitchModule<?> fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Modify Micro Switch Module test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModifyMicroSwitchModule<?> getFixture() {
-		return fixture;
+	@Override
+	protected ModifyMicroSwitchModule getFixture() {
+		return (ModifyMicroSwitchModule)fixture;
 	}
 
 	/**

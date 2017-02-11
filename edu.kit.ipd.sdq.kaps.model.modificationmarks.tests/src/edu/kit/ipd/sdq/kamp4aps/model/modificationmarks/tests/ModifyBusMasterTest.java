@@ -14,15 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyBusMasterTest extends TestCase {
-
-	/**
-	 * The fixture for this Modify Bus Master test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModifyBusMaster<?> fixture = null;
+public class ModifyBusMasterTest extends ModifyComponentTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,23 +36,14 @@ public class ModifyBusMasterTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Modify Bus Master test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ModifyBusMaster<?> fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Modify Bus Master test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModifyBusMaster<?> getFixture() {
-		return fixture;
+	@Override
+	protected ModifyBusMaster getFixture() {
+		return (ModifyBusMaster)fixture;
 	}
 
 	/**

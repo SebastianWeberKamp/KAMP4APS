@@ -14,15 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifySignalinterfaceTest extends TestCase {
-
-	/**
-	 * The fixture for this Modify Signalinterface test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModifySignalinterface<?> fixture = null;
+public class ModifySignalinterfaceTest extends ModifyInterfaceTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,23 +36,14 @@ public class ModifySignalinterfaceTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Modify Signalinterface test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ModifySignalinterface<?> fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Modify Signalinterface test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModifySignalinterface<?> getFixture() {
-		return fixture;
+	@Override
+	protected ModifySignalinterface getFixture() {
+		return (ModifySignalinterface)fixture;
 	}
 
 	/**

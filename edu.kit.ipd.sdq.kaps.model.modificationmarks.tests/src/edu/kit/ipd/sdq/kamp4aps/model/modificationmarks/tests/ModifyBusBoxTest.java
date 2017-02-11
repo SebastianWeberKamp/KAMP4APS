@@ -13,15 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyBusBoxTest extends TestCase {
-
-	/**
-	 * The fixture for this Modify Bus Box test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModifyBusBox<?> fixture = null;
+public class ModifyBusBoxTest extends ModifyComponentTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -43,23 +35,14 @@ public class ModifyBusBoxTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Modify Bus Box test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ModifyBusBox<?> fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Modify Bus Box test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModifyBusBox<?> getFixture() {
-		return fixture;
+	@Override
+	protected ModifyBusBox getFixture() {
+		return (ModifyBusBox)fixture;
 	}
 
 	/**

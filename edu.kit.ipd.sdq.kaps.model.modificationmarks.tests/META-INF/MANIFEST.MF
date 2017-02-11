@@ -7,8 +7,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Export-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests,
- xPPU.tests
+Export-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests
 Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;visibility:=reexport,
  de.uka.ipd.sdq.identifier;visibility:=reexport,

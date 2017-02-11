@@ -14,15 +14,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyPhysicalConnectionTest extends TestCase {
-
-	/**
-	 * The fixture for this Modify Physical Connection test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModifyPhysicalConnection<?> fixture = null;
+public class ModifyPhysicalConnectionTest extends ModifyInterfaceTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,23 +36,14 @@ public class ModifyPhysicalConnectionTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Modify Physical Connection test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ModifyPhysicalConnection<?> fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Modify Physical Connection test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModifyPhysicalConnection<?> getFixture() {
-		return fixture;
+	@Override
+	protected ModifyPhysicalConnection getFixture() {
+		return (ModifyPhysicalConnection)fixture;
 	}
 
 	/**
