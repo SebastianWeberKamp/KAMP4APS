@@ -1,112 +1,147 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
-import org.palladiosimulator.pcm.core.entity.NamedElement;
-import org.palladiosimulator.pcm.repository.DataType;
-import org.palladiosimulator.pcm.repository.EventType;
-import org.palladiosimulator.pcm.repository.OperationProvidedRole;
-import org.palladiosimulator.pcm.repository.OperationRequiredRole;
-import org.palladiosimulator.pcm.repository.OperationSignature;
-import org.palladiosimulator.pcm.repository.Parameter;
-import org.palladiosimulator.pcm.repository.PrimitiveDataType;
-import org.palladiosimulator.pcm.repository.SinkRole;
-import org.palladiosimulator.pcm.repository.SourceRole;
-
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyEntity;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
+import xPPU.BusComponents.BusBox;
+import xPPU.BusComponents.BusCable;
+import xPPU.BusComponents.BusMaster;
+import xPPU.BusComponents.BusSlave;
+import xPPU.ComponentRepository.Component;
+import xPPU.ComponentRepository.MicroswitchModule;
+import xPPU.ComponentRepository.PowerSupply;
+import xPPU.ComponentRepository.Sensor;
+import xPPU.InterfaceRepository.Interface;
+import xPPU.InterfaceRepository.PhysicalConnection;
+import xPPU.InterfaceRepository.SignalInterface;
 
 public class LabelCustomizing {
-	
-	public static String customize(ModifyEntity<?> modifyEntity) {
-		if (modifyEntity.getAffectedElement() == null) {
-			return "(Please select an element!)";
+
+	public static String customize(ModifyComponent<Component> modification) {
+		if (hasAffectedElement(modification)) {
+			String custom = "";
+			custom += customizeBusComponent(modification);
+			if (custom.isEmpty())
+				custom += customizeSensor(modification);
+			else if (custom.isEmpty())
+				custom += customizeMicroswitchModule(modification);
+			else if (custom.isEmpty())
+				custom += customizePowerSupply(modification);
+			if (custom.isEmpty())
+				return modification.getAffectedElement().getId();
+			else
+				return custom;
 		} else {
-			return "\"" + modifyEntity.getAffectedElement().getEntityName() + "\"";
+			return "(Please select a component!)";
 		}
 	}
-	
-	public static String customize(ModifyProvidedRole modification) {
-		if (modification.getAffectedElement() == null) {
-			return "(Please select a provided role!)";
-		} else if (modification.getAffectedElement() instanceof OperationProvidedRole) {
-			OperationProvidedRole role = (OperationProvidedRole) modification.getAffectedElement();
-			return "\"" + role.getProvidingEntity_ProvidedRole().getEntityName() + "->" 
-					+ role.getProvidedInterface__OperationProvidedRole().getEntityName() + "\"";
-		} else if (modification.getAffectedElement() instanceof SinkRole) {
-			SinkRole role = (SinkRole) modification.getAffectedElement();
-			return "\"" + role.getProvidingEntity_ProvidedRole().getEntityName() + "->" 
-					+ role.getEventGroup__SinkRole().getEntityName() + "\"";
-		}  else {
-			return modification.getAffectedElement().getEntityName();
-		}
-	}
-	
-	public static String customize(ModifyRequiredRole modification) {
-		if (modification.getAffectedElement() == null) {
-			return "(Please select a required role!)";
-		} else if (modification.getAffectedElement() instanceof OperationRequiredRole) {
-			OperationRequiredRole role = (OperationRequiredRole) modification.getAffectedElement();
-			return "\"" + role.getRequiringEntity_RequiredRole().getEntityName() + "->" 
-					+ role.getRequiredInterface__OperationRequiredRole().getEntityName() + "\"";
-		} else if (modification.getAffectedElement() instanceof SourceRole) {
-			SourceRole role = (SourceRole) modification.getAffectedElement();
-			return "\"" + role.getRequiringEntity_RequiredRole().getEntityName() + "->" 
-					+ role.getEventGroup__SourceRole().getEntityName() + "\"";
-		}  else {
-			return modification.getAffectedElement().getEntityName();
-		}
-	}
-	
-	public static String customize(ModifyDataType modification) {
-		if (modification.getAffectedElement() == null) {
-			return "(Please select a DataType!)";
+
+	public static String customize(ModifyInterface<Interface> modification) {
+		if (hasAffectedElement(modification)) {
+			String custom = "";
+			if (custom.isEmpty())
+				custom += customizePhysicalConnection(modification);
+			else if (custom.isEmpty())
+				custom += customizeSignalInterface(modification);
+			else if (custom.isEmpty())
+				custom += customizePowerSupply(modification);
+			if (custom.isEmpty())
+				return modification.getAffectedElement().getId();
+			return custom;
 		} else {
-			return "\"" + getDataTypeName(modification.getAffectedElement()) + "\"";
+			return "(Please select a interface)";
 		}
+
 	}
-	
-	public static String getDataTypeName(DataType dataType) {
-		if (dataType == null) {
-			return null;
-		} else if (dataType instanceof NamedElement) {
-			return ((NamedElement)dataType).getEntityName();
-		} else if (dataType instanceof PrimitiveDataType) {
-			return ((PrimitiveDataType) dataType).getType().toString();
-		} else {
-			return dataType.toString();
+
+	private static String customizeSignalInterface(ModifyInterface<Interface> modification) {
+		if (modification.getAffectedElement() instanceof SignalInterface) {
+			SignalInterface si = (SignalInterface) modification.getAffectedElement();
+			return getOutputString(si.getId());
 		}
+		return "";
 	}
-	
-	public static String customize(ModifySignature modification) {
-		if (modification.getAffectedElement() == null) {
-			return "(Please select a signature!)";
-		} else if (modification.getAffectedElement() instanceof OperationSignature) {
-			OperationSignature signature = (OperationSignature) modification.getAffectedElement();
-			String result = "\"" + signature.getEntityName() + "(";
-			for (Parameter parameter: signature.getParameters__OperationSignature()) {
-				result += parameter.getParameterName() + ": " + getDataTypeName(
-						parameter.getDataType__Parameter()) + ", ";
+
+	private static String customizePhysicalConnection(ModifyInterface<Interface> modification) {
+		if (modification.getAffectedElement() instanceof PhysicalConnection) {
+			PhysicalConnection physicalConn = (PhysicalConnection) modification.getAffectedElement();
+			return getOutputString(physicalConn.getId());
+		}
+		return "";
+	}
+
+	private static String customizeMicroswitchModule(ModifyComponent<Component> modification) {
+		if (modification.getAffectedElement() instanceof MicroswitchModule) {
+			MicroswitchModule microSwitch = (MicroswitchModule) modification.getAffectedElement();
+			return getOutputString(microSwitch.getId());
+		}
+		return "";
+	}
+
+	private static String customizeSensor(ModifyComponent<Component> modification) {
+		if (modification.getAffectedElement() instanceof Sensor) {
+			Sensor sensor = (Sensor) modification.getAffectedElement();
+			return getOutputString(sensor.getId());
+		}
+		return "";
+	}
+
+	private static String getOutputString(String from, String to) {
+		return "\"" + from + "->" + to + "\"";
+	}
+
+	private static String getOutputString(String affectedElement) {
+		return "\"" + affectedElement + "\"";
+	}
+
+	private static String customizeBusComponent(ModifyComponent<Component> modification) {
+		if (modification.getAffectedElement() instanceof BusBox) {
+			BusBox busBox = (BusBox) modification.getAffectedElement();
+			String custom = "";
+			for (SignalInterface si : busBox.getSignalinterfaces()) {
+				custom += getOutputString(busBox.getSignalinterface_box().getId(), si.getId());
 			}
-			if (signature.getParameters__OperationSignature().size() > 0) {
-				result = result.substring(0, result.length() - 2); // Remove ", "
+			return custom += getOutputString(busBox.getSignalinterface_box().getId(),
+					busBox.getSignalinterface_master().getId());
+		} else if (modification.getAffectedElement() instanceof BusMaster) {
+			BusMaster busMaster = (BusMaster) modification.getAffectedElement();
+			String custom = "";
+			for (SignalInterface si : busMaster.getSignalinterfaces()) {
+				custom += getOutputString(busMaster.getSignalinterface_controller().getId(), si.getId()) + "\n";
 			}
-			String returnName = getDataTypeName(signature.getReturnType__OperationSignature());
-			returnName = returnName == null ? "void" : returnName;
-			result += ") : " + returnName + "\" [Interface: " 
-					+ signature.getInterface__OperationSignature().getEntityName() + "]";
-			return result;
-		} else if (modification.getAffectedElement() instanceof EventType) {
-			EventType signature = (EventType) modification.getAffectedElement();
-			String result = "\"" + signature.getEntityName() + "(";
-			if (signature.getParameter__EventType() != null) {
-				Parameter parameter = signature.getParameter__EventType();
-				result += parameter.getParameterName() + ": " + getDataTypeName(
-						parameter.getDataType__Parameter());
-			}
-			result += ")\" [EventGroup: " + signature.getEventGroup__EventType().
-					getEntityName() + "]";
-			return result;
-		} else {
-			return modification.getAffectedElement().getEntityName();
+			return custom;
+		} else if (modification.getAffectedElement() instanceof BusSlave) {
+			BusSlave busSlave = (BusSlave) modification.getAffectedElement();
+			return getOutputString(busSlave.getSignalinterface_slave().getId(),
+					busSlave.getSignalinterface_master().getId());
+		} else if (modification.getAffectedElement() instanceof BusCable) {
+			BusCable busCable = (BusCable) modification.getAffectedElement();
+			return getOutputString(busCable.getSignalPlug1().getId(), busCable.getSignalPlug2().getId());
 		}
+		return "";
+	}
+
+	private static String customizePowerSupply(ModifyComponent<Component> modification) {
+		if (modification.getAffectedElement() instanceof PowerSupply) {
+			PowerSupply powerSupply = (PowerSupply) modification.getAffectedElement();
+			return getOutputString(powerSupply.getId());
+		}
+		return "";
+	}
+
+	private static String customizePowerSupply(ModifyInterface<Interface> modification) {
+		if (modification.getAffectedElement() instanceof PowerSupply) {
+			PowerSupply powerSupply = (PowerSupply) modification.getAffectedElement();
+			return getOutputString(powerSupply.getId());
+		}
+		return "";
+	}
+
+	private static boolean hasAffectedElement(ModifyComponent<Component> modification) {
+		return modification.getAffectedElement() != null;
+	}
+
+	private static boolean hasAffectedElement(ModifyInterface<Interface> modification) {
+		return modification.getAffectedElement() != null;
 	}
 
 }

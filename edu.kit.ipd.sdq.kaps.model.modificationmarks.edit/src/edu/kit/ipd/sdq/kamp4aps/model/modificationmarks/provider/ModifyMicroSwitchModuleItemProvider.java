@@ -26,7 +26,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyMicroSwitchModuleItemProvider extends AbstractModificationItemProvider {
+public class ModifyMicroSwitchModuleItemProvider extends ModifyComponentItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -94,7 +94,7 @@ public class ModifyMicroSwitchModuleItemProvider extends AbstractModificationIte
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ModifyMicroSwitchModule<?>)object).getId();
+		String label = ((ModifyMicroSwitchModule)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ModifyMicroSwitchModule_type") :
 			getString("_UI_ModifyMicroSwitchModule_type") + " " + label;
@@ -130,17 +130,6 @@ public class ModifyMicroSwitchModuleItemProvider extends AbstractModificationIte
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return KAPSModificationmarksEditPlugin.INSTANCE;
 	}
 
 }

@@ -22,7 +22,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyBusMasterItemProvider extends AbstractModificationItemProvider {
+public class ModifyBusMasterItemProvider extends ModifyComponentItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -67,7 +67,7 @@ public class ModifyBusMasterItemProvider extends AbstractModificationItemProvide
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ModifyBusMaster<?>)object).getId();
+		String label = ((ModifyBusMaster)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ModifyBusMaster_type") :
 			getString("_UI_ModifyBusMaster_type") + " " + label;
@@ -97,17 +97,6 @@ public class ModifyBusMasterItemProvider extends AbstractModificationItemProvide
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return KAPSModificationmarksEditPlugin.INSTANCE;
 	}
 
 }

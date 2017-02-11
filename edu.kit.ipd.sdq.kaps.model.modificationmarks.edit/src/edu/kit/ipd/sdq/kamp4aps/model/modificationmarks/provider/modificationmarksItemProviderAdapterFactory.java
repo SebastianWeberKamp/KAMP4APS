@@ -448,16 +448,16 @@ public class modificationmarksItemProviderAdapterFactory extends modificationmar
 	public void dispose() {
 		if (kapsModificationRepositoryItemProvider != null) kapsModificationRepositoryItemProvider.dispose();
 		if (kapsSeedModificationsItemProvider != null) kapsSeedModificationsItemProvider.dispose();
-		if (modifySensorItemProvider != null) modifySensorItemProvider.dispose();
 		if (changePropagationDueToHardwareChangeItemProvider != null) changePropagationDueToHardwareChangeItemProvider.dispose();
-		if (modifyBusBoxItemProvider != null) modifyBusBoxItemProvider.dispose();
 		if (modifyPowerSupplyItemProvider != null) modifyPowerSupplyItemProvider.dispose();
 		if (modifySignalinterfaceItemProvider != null) modifySignalinterfaceItemProvider.dispose();
 		if (modifyPhysicalConnectionItemProvider != null) modifyPhysicalConnectionItemProvider.dispose();
 		if (modifyMicroSwitchModuleItemProvider != null) modifyMicroSwitchModuleItemProvider.dispose();
+		if (modifyBusBoxItemProvider != null) modifyBusBoxItemProvider.dispose();
 		if (modifyBusMasterItemProvider != null) modifyBusMasterItemProvider.dispose();
 		if (modifyBusSlaveItemProvider != null) modifyBusSlaveItemProvider.dispose();
 		if (modifyBusCableItemProvider != null) modifyBusCableItemProvider.dispose();
+		if (modifySensorItemProvider != null) modifySensorItemProvider.dispose();
 	}
 
 }

@@ -26,7 +26,7 @@ import xPPU.InterfaceRepository.InterfaceRepositoryFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifySensorItemProvider extends AbstractModificationItemProvider {
+public class ModifySensorItemProvider extends ModifyComponentItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -102,7 +102,7 @@ public class ModifySensorItemProvider extends AbstractModificationItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ModifySensor<?>)object).getId();
+		String label = ((ModifySensor)object).getId();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ModifySensor_type") :
 			getString("_UI_ModifySensor_type") + " " + label;
@@ -149,17 +149,6 @@ public class ModifySensorItemProvider extends AbstractModificationItemProvider {
 			(createChildParameter
 				(modificationmarksPackage.Literals.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS,
 				 InterfaceRepositoryFactory.eINSTANCE.createPhysicalConnection()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return KAPSModificationmarksEditPlugin.INSTANCE;
 	}
 
 }
