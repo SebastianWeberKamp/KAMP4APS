@@ -4,7 +4,11 @@ import edu.kit.ipd.sdq.amp.workplan.AbstractActivityElementType;
 import fieldofactivityannotations.Documentation;
 import fieldofactivityannotations.Drawing;
 import fieldofactivityannotations.HMIConfiguration;
+import fieldofactivityannotations.MainteneanceDocumentation;
+import fieldofactivityannotations.OperatorInstructions;
 import fieldofactivityannotations.TestCase;
+import fieldofactivityannotations.TrainingDocExternal;
+import fieldofactivityannotations.TrainingDocIntern;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
@@ -19,7 +23,11 @@ public enum ActivityElementType implements AbstractActivityElementType {
 	
 	// annotation-related
 	TESTCASE(TestCase.class),
-	DOCUMENTATION(Documentation.class),
+//	DOCUMENTATION(Documentation.class),
+	MAINTENEANCE_DOCUMENTATION(MainteneanceDocumentation.class),
+	OPERATOR_INSTRUCTIONS(OperatorInstructions.class),
+	TRAINING_DOCUMENTATION_INTERNAL(TrainingDocIntern.class),
+	TRAINING_DOCUMENTATION_EXTERNAL(TrainingDocExternal.class),
 	DRAWING(Drawing.class),
 	HMI_CONFIG(HMIConfiguration.class);
 	
