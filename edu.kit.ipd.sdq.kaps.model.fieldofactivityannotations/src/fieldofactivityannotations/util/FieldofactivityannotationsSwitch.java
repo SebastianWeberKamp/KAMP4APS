@@ -210,6 +210,38 @@ public class FieldofactivityannotationsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case FieldofactivityannotationsPackage.COMPONENT_DRAWING: {
+				ComponentDrawing componentDrawing = (ComponentDrawing)theEObject;
+				T result = caseComponentDrawing(componentDrawing);
+				if (result == null) result = caseDrawing(componentDrawing);
+				if (result == null) result = caseFile(componentDrawing);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.MODULE_DRAWING: {
+				ModuleDrawing moduleDrawing = (ModuleDrawing)theEObject;
+				T result = caseModuleDrawing(moduleDrawing);
+				if (result == null) result = caseDrawing(moduleDrawing);
+				if (result == null) result = caseFile(moduleDrawing);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.INTERFACE_DRAWING: {
+				InterfaceDrawing interfaceDrawing = (InterfaceDrawing)theEObject;
+				T result = caseInterfaceDrawing(interfaceDrawing);
+				if (result == null) result = caseDrawing(interfaceDrawing);
+				if (result == null) result = caseFile(interfaceDrawing);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.STRUCTURE_DRAWING: {
+				StructureDrawing structureDrawing = (StructureDrawing)theEObject;
+				T result = caseStructureDrawing(structureDrawing);
+				if (result == null) result = caseDrawing(structureDrawing);
+				if (result == null) result = caseFile(structureDrawing);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case FieldofactivityannotationsPackage.MAINTENEANCE_DOCUMENTATION: {
 				MainteneanceDocumentation mainteneanceDocumentation = (MainteneanceDocumentation)theEObject;
 				T result = caseMainteneanceDocumentation(mainteneanceDocumentation);
@@ -246,6 +278,40 @@ public class FieldofactivityannotationsSwitch<T> extends Switch<T> {
 				SystemTest systemTest = (SystemTest)theEObject;
 				T result = caseSystemTest(systemTest);
 				if (result == null) result = caseTestCase(systemTest);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.DOCUMENTATION_FILES: {
+				DocumentationFiles documentationFiles = (DocumentationFiles)theEObject;
+				T result = caseDocumentationFiles(documentationFiles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.COMPONENT_DOCUMENTATION_FILES: {
+				ComponentDocumentationFiles componentDocumentationFiles = (ComponentDocumentationFiles)theEObject;
+				T result = caseComponentDocumentationFiles(componentDocumentationFiles);
+				if (result == null) result = caseDocumentationFiles(componentDocumentationFiles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.MODULE_DOCUMENTATION_FILES: {
+				ModuleDocumentationFiles moduleDocumentationFiles = (ModuleDocumentationFiles)theEObject;
+				T result = caseModuleDocumentationFiles(moduleDocumentationFiles);
+				if (result == null) result = caseDocumentationFiles(moduleDocumentationFiles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.INTERFACE_DOCUMENTATION_FILES: {
+				InterfaceDocumentationFiles interfaceDocumentationFiles = (InterfaceDocumentationFiles)theEObject;
+				T result = caseInterfaceDocumentationFiles(interfaceDocumentationFiles);
+				if (result == null) result = caseDocumentationFiles(interfaceDocumentationFiles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.STRUCTURE_DOCUMENTATION_FILES: {
+				StructureDocumentationFiles structureDocumentationFiles = (StructureDocumentationFiles)theEObject;
+				T result = caseStructureDocumentationFiles(structureDocumentationFiles);
+				if (result == null) result = caseDocumentationFiles(structureDocumentationFiles);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -599,6 +665,66 @@ public class FieldofactivityannotationsSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Component Drawing</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Component Drawing</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComponentDrawing(ComponentDrawing object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Module Drawing</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Module Drawing</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModuleDrawing(ModuleDrawing object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interface Drawing</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interface Drawing</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInterfaceDrawing(InterfaceDrawing object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Structure Drawing</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Structure Drawing</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStructureDrawing(StructureDrawing object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Mainteneance Documentation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -670,6 +796,81 @@ public class FieldofactivityannotationsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseSystemTest(SystemTest object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Documentation Files</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Documentation Files</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDocumentationFiles(DocumentationFiles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Component Documentation Files</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Component Documentation Files</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComponentDocumentationFiles(ComponentDocumentationFiles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Module Documentation Files</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Module Documentation Files</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModuleDocumentationFiles(ModuleDocumentationFiles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interface Documentation Files</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interface Documentation Files</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInterfaceDocumentationFiles(InterfaceDocumentationFiles object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Structure Documentation Files</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Structure Documentation Files</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStructureDocumentationFiles(StructureDocumentationFiles object) {
 		return null;
 	}
 

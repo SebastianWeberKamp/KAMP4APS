@@ -3,9 +3,12 @@
 package fieldofactivityannotations.impl;
 
 import fieldofactivityannotations.CalibrationSpecification;
+import fieldofactivityannotations.ComponentDocumentationFiles;
+import fieldofactivityannotations.ComponentDrawing;
 import fieldofactivityannotations.ComponentSpecification;
 import fieldofactivityannotations.DevelopmentSpecification;
 import fieldofactivityannotations.Documentation;
+import fieldofactivityannotations.DocumentationFiles;
 import fieldofactivityannotations.DocumentationSpecification;
 import fieldofactivityannotations.Drawing;
 import fieldofactivityannotations.ECADSpecification;
@@ -16,8 +19,12 @@ import fieldofactivityannotations.FieldofactivityannotationsPackage;
 import fieldofactivityannotations.File;
 import fieldofactivityannotations.HMIConfiguration;
 import fieldofactivityannotations.HMISpecification;
+import fieldofactivityannotations.InterfaceDocumentationFiles;
+import fieldofactivityannotations.InterfaceDrawing;
 import fieldofactivityannotations.MainteneanceDocumentation;
 import fieldofactivityannotations.Mechanic;
+import fieldofactivityannotations.ModuleDocumentationFiles;
+import fieldofactivityannotations.ModuleDrawing;
 import fieldofactivityannotations.OperatorInstructions;
 import fieldofactivityannotations.Person;
 import fieldofactivityannotations.PersonList;
@@ -27,6 +34,8 @@ import fieldofactivityannotations.RoleList;
 import fieldofactivityannotations.StaffSpecification;
 import fieldofactivityannotations.StockList;
 import fieldofactivityannotations.StockSpecification;
+import fieldofactivityannotations.StructureDocumentationFiles;
+import fieldofactivityannotations.StructureDrawing;
 import fieldofactivityannotations.SystemTest;
 import fieldofactivityannotations.TestCase;
 import fieldofactivityannotations.TestSpecification;
@@ -223,6 +232,34 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass componentDrawingEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moduleDrawingEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass interfaceDrawingEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass structureDrawingEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass mainteneanceDocumentationEClass = null;
 
 	/**
@@ -252,6 +289,41 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	private EClass systemTestEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass documentationFilesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass componentDocumentationFilesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moduleDocumentationFilesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass interfaceDocumentationFilesEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass structureDocumentationFilesEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -610,6 +682,15 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getECADSpecification_Drawings() {
+		return (EReference)ecadSpecificationEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getDocumentationSpecification() {
 		return documentationSpecificationEClass;
 	}
@@ -628,7 +709,7 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDocumentationSpecification_Mainteneance() {
+	public EReference getDocumentationSpecification_ComponentDocumentation() {
 		return (EReference)documentationSpecificationEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -637,7 +718,7 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDocumentationSpecification_Instructions() {
+	public EReference getDocumentationSpecification_ModuleDocumentation() {
 		return (EReference)documentationSpecificationEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -646,7 +727,7 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDocumentationSpecification_TrainingIntern() {
+	public EReference getDocumentationSpecification_InterfaceDocumentation() {
 		return (EReference)documentationSpecificationEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -655,7 +736,7 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getDocumentationSpecification_TrainingExternal() {
+	public EReference getDocumentationSpecification_StructureDocumentation() {
 		return (EReference)documentationSpecificationEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -1015,8 +1096,98 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getDrawing_Parent() {
+		return (EReference)drawingEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getComponentDrawing() {
+		return componentDrawingEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponentDrawing_Drawn_component() {
+		return (EReference)componentDrawingEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModuleDrawing() {
+		return moduleDrawingEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModuleDrawing_Drawn_module() {
+		return (EReference)moduleDrawingEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInterfaceDrawing() {
+		return interfaceDrawingEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInterfaceDrawing_Drawn_interface() {
+		return (EReference)interfaceDrawingEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStructureDrawing() {
+		return structureDrawingEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStructureDrawing_Drawn_structure() {
+		return (EReference)structureDrawingEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getMainteneanceDocumentation() {
 		return mainteneanceDocumentationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMainteneanceDocumentation_Parent() {
+		return (EReference)mainteneanceDocumentationEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1033,6 +1204,15 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getOperatorInstructions_Parent() {
+		return (EReference)operatorInstructionsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTrainingDocIntern() {
 		return trainingDocInternEClass;
 	}
@@ -1042,8 +1222,26 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getTrainingDocIntern_Parent() {
+		return (EReference)trainingDocInternEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTrainingDocExternal() {
 		return trainingDocExternalEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTrainingDocExternal_Parent() {
+		return (EReference)trainingDocExternalEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1071,6 +1269,123 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 */
 	public EReference getSystemTest_SystemUnderTest() {
 		return (EReference)systemTestEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getDocumentationFiles() {
+		return documentationFilesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDocumentationFiles_Mainteneance() {
+		return (EReference)documentationFilesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDocumentationFiles_Instructions() {
+		return (EReference)documentationFilesEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDocumentationFiles_TrainingIntern() {
+		return (EReference)documentationFilesEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getDocumentationFiles_TrainingExternal() {
+		return (EReference)documentationFilesEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getComponentDocumentationFiles() {
+		return componentDocumentationFilesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponentDocumentationFiles_Parent() {
+		return (EReference)componentDocumentationFilesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModuleDocumentationFiles() {
+		return moduleDocumentationFilesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModuleDocumentationFiles_Parent() {
+		return (EReference)moduleDocumentationFilesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInterfaceDocumentationFiles() {
+		return interfaceDocumentationFilesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInterfaceDocumentationFiles_Parent() {
+		return (EReference)interfaceDocumentationFilesEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStructureDocumentationFiles() {
+		return structureDocumentationFilesEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStructureDocumentationFiles_Parent() {
+		return (EReference)structureDocumentationFilesEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1138,13 +1453,14 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 		createEReference(ecadSpecificationEClass, ECAD_SPECIFICATION__MODULES);
 		createEReference(ecadSpecificationEClass, ECAD_SPECIFICATION__INTERFACES);
 		createEReference(ecadSpecificationEClass, ECAD_SPECIFICATION__STRUCTURES);
+		createEReference(ecadSpecificationEClass, ECAD_SPECIFICATION__DRAWINGS);
 
 		documentationSpecificationEClass = createEClass(DOCUMENTATION_SPECIFICATION);
 		createEReference(documentationSpecificationEClass, DOCUMENTATION_SPECIFICATION__PARENT);
-		createEReference(documentationSpecificationEClass, DOCUMENTATION_SPECIFICATION__MAINTENEANCE);
-		createEReference(documentationSpecificationEClass, DOCUMENTATION_SPECIFICATION__INSTRUCTIONS);
-		createEReference(documentationSpecificationEClass, DOCUMENTATION_SPECIFICATION__TRAINING_INTERN);
-		createEReference(documentationSpecificationEClass, DOCUMENTATION_SPECIFICATION__TRAINING_EXTERNAL);
+		createEReference(documentationSpecificationEClass, DOCUMENTATION_SPECIFICATION__COMPONENT_DOCUMENTATION);
+		createEReference(documentationSpecificationEClass, DOCUMENTATION_SPECIFICATION__MODULE_DOCUMENTATION);
+		createEReference(documentationSpecificationEClass, DOCUMENTATION_SPECIFICATION__INTERFACE_DOCUMENTATION);
+		createEReference(documentationSpecificationEClass, DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION);
 
 		staffSpecificationEClass = createEClass(STAFF_SPECIFICATION);
 		createEReference(staffSpecificationEClass, STAFF_SPECIFICATION__PARENT);
@@ -1200,18 +1516,53 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 		documentationEClass = createEClass(DOCUMENTATION);
 
 		drawingEClass = createEClass(DRAWING);
+		createEReference(drawingEClass, DRAWING__PARENT);
+
+		componentDrawingEClass = createEClass(COMPONENT_DRAWING);
+		createEReference(componentDrawingEClass, COMPONENT_DRAWING__DRAWN_COMPONENT);
+
+		moduleDrawingEClass = createEClass(MODULE_DRAWING);
+		createEReference(moduleDrawingEClass, MODULE_DRAWING__DRAWN_MODULE);
+
+		interfaceDrawingEClass = createEClass(INTERFACE_DRAWING);
+		createEReference(interfaceDrawingEClass, INTERFACE_DRAWING__DRAWN_INTERFACE);
+
+		structureDrawingEClass = createEClass(STRUCTURE_DRAWING);
+		createEReference(structureDrawingEClass, STRUCTURE_DRAWING__DRAWN_STRUCTURE);
 
 		mainteneanceDocumentationEClass = createEClass(MAINTENEANCE_DOCUMENTATION);
+		createEReference(mainteneanceDocumentationEClass, MAINTENEANCE_DOCUMENTATION__PARENT);
 
 		operatorInstructionsEClass = createEClass(OPERATOR_INSTRUCTIONS);
+		createEReference(operatorInstructionsEClass, OPERATOR_INSTRUCTIONS__PARENT);
 
 		trainingDocInternEClass = createEClass(TRAINING_DOC_INTERN);
+		createEReference(trainingDocInternEClass, TRAINING_DOC_INTERN__PARENT);
 
 		trainingDocExternalEClass = createEClass(TRAINING_DOC_EXTERNAL);
+		createEReference(trainingDocExternalEClass, TRAINING_DOC_EXTERNAL__PARENT);
 
 		systemTestEClass = createEClass(SYSTEM_TEST);
 		createEReference(systemTestEClass, SYSTEM_TEST__PARENT);
 		createEReference(systemTestEClass, SYSTEM_TEST__SYSTEM_UNDER_TEST);
+
+		documentationFilesEClass = createEClass(DOCUMENTATION_FILES);
+		createEReference(documentationFilesEClass, DOCUMENTATION_FILES__MAINTENEANCE);
+		createEReference(documentationFilesEClass, DOCUMENTATION_FILES__INSTRUCTIONS);
+		createEReference(documentationFilesEClass, DOCUMENTATION_FILES__TRAINING_INTERN);
+		createEReference(documentationFilesEClass, DOCUMENTATION_FILES__TRAINING_EXTERNAL);
+
+		componentDocumentationFilesEClass = createEClass(COMPONENT_DOCUMENTATION_FILES);
+		createEReference(componentDocumentationFilesEClass, COMPONENT_DOCUMENTATION_FILES__PARENT);
+
+		moduleDocumentationFilesEClass = createEClass(MODULE_DOCUMENTATION_FILES);
+		createEReference(moduleDocumentationFilesEClass, MODULE_DOCUMENTATION_FILES__PARENT);
+
+		interfaceDocumentationFilesEClass = createEClass(INTERFACE_DOCUMENTATION_FILES);
+		createEReference(interfaceDocumentationFilesEClass, INTERFACE_DOCUMENTATION_FILES__PARENT);
+
+		structureDocumentationFilesEClass = createEClass(STRUCTURE_DOCUMENTATION_FILES);
+		createEReference(structureDocumentationFilesEClass, STRUCTURE_DOCUMENTATION_FILES__PARENT);
 	}
 
 	/**
@@ -1255,11 +1606,19 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 		mechanicEClass.getESuperTypes().add(this.getRole());
 		documentationEClass.getESuperTypes().add(this.getFile());
 		drawingEClass.getESuperTypes().add(this.getFile());
+		componentDrawingEClass.getESuperTypes().add(this.getDrawing());
+		moduleDrawingEClass.getESuperTypes().add(this.getDrawing());
+		interfaceDrawingEClass.getESuperTypes().add(this.getDrawing());
+		structureDrawingEClass.getESuperTypes().add(this.getDrawing());
 		mainteneanceDocumentationEClass.getESuperTypes().add(this.getDocumentation());
 		operatorInstructionsEClass.getESuperTypes().add(this.getDocumentation());
 		trainingDocInternEClass.getESuperTypes().add(this.getDocumentation());
 		trainingDocExternalEClass.getESuperTypes().add(this.getDocumentation());
 		systemTestEClass.getESuperTypes().add(this.getTestCase());
+		componentDocumentationFilesEClass.getESuperTypes().add(this.getDocumentationFiles());
+		moduleDocumentationFilesEClass.getESuperTypes().add(this.getDocumentationFiles());
+		interfaceDocumentationFilesEClass.getESuperTypes().add(this.getDocumentationFiles());
+		structureDocumentationFilesEClass.getESuperTypes().add(this.getDocumentationFiles());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(fieldOfActivityAnnotationRepositoryEClass, FieldOfActivityAnnotationRepository.class, "FieldOfActivityAnnotationRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1299,13 +1658,14 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 		initEReference(getECADSpecification_Modules(), theModuleRepositoryPackage.getModule(), null, "modules", null, 0, -1, ECADSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getECADSpecification_Interfaces(), theInterfaceRepositoryPackage.getInterface(), null, "interfaces", null, 0, -1, ECADSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getECADSpecification_Structures(), theStructureRepositoryPackage.getStructure(), null, "structures", null, 0, -1, ECADSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getECADSpecification_Drawings(), this.getDrawing(), this.getDrawing_Parent(), "drawings", null, 0, -1, ECADSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(documentationSpecificationEClass, DocumentationSpecification.class, "DocumentationSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getDocumentationSpecification_Parent(), this.getFieldOfActivityAnnotationRepository(), this.getFieldOfActivityAnnotationRepository_DocumentationSpecification(), "parent", null, 1, 1, DocumentationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDocumentationSpecification_Mainteneance(), this.getMainteneanceDocumentation(), null, "mainteneance", null, 0, -1, DocumentationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDocumentationSpecification_Instructions(), this.getOperatorInstructions(), null, "instructions", null, 0, -1, DocumentationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDocumentationSpecification_TrainingIntern(), this.getTrainingDocIntern(), null, "trainingIntern", null, 0, -1, DocumentationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getDocumentationSpecification_TrainingExternal(), this.getTrainingDocExternal(), null, "trainingExternal", null, 0, -1, DocumentationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentationSpecification_ComponentDocumentation(), this.getComponentDocumentationFiles(), this.getComponentDocumentationFiles_Parent(), "componentDocumentation", null, 0, -1, DocumentationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentationSpecification_ModuleDocumentation(), this.getModuleDocumentationFiles(), this.getModuleDocumentationFiles_Parent(), "moduleDocumentation", null, 0, -1, DocumentationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentationSpecification_InterfaceDocumentation(), this.getInterfaceDocumentationFiles(), this.getInterfaceDocumentationFiles_Parent(), "interfaceDocumentation", null, 0, -1, DocumentationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentationSpecification_StructureDocumentation(), this.getStructureDocumentationFiles(), this.getStructureDocumentationFiles_Parent(), "structureDocumentation", null, 0, -1, DocumentationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(staffSpecificationEClass, StaffSpecification.class, "StaffSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStaffSpecification_Parent(), this.getFieldOfActivityAnnotationRepository(), this.getFieldOfActivityAnnotationRepository_StaffSpecification(), "parent", null, 1, 1, StaffSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1361,18 +1721,53 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 		initEClass(documentationEClass, Documentation.class, "Documentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(drawingEClass, Drawing.class, "Drawing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDrawing_Parent(), this.getECADSpecification(), this.getECADSpecification_Drawings(), "parent", null, 1, 1, Drawing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(componentDrawingEClass, ComponentDrawing.class, "ComponentDrawing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComponentDrawing_Drawn_component(), theComponentRepositoryPackage.getComponent(), null, "drawn_component", null, 0, 1, ComponentDrawing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(moduleDrawingEClass, ModuleDrawing.class, "ModuleDrawing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModuleDrawing_Drawn_module(), theModuleRepositoryPackage.getModule(), null, "drawn_module", null, 0, 1, ModuleDrawing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(interfaceDrawingEClass, InterfaceDrawing.class, "InterfaceDrawing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInterfaceDrawing_Drawn_interface(), theInterfaceRepositoryPackage.getInterface(), null, "drawn_interface", null, 0, 1, InterfaceDrawing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(structureDrawingEClass, StructureDrawing.class, "StructureDrawing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStructureDrawing_Drawn_structure(), theStructureRepositoryPackage.getStructure(), null, "drawn_structure", null, 0, 1, StructureDrawing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mainteneanceDocumentationEClass, MainteneanceDocumentation.class, "MainteneanceDocumentation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMainteneanceDocumentation_Parent(), this.getDocumentationFiles(), this.getDocumentationFiles_Mainteneance(), "parent", null, 1, 1, MainteneanceDocumentation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(operatorInstructionsEClass, OperatorInstructions.class, "OperatorInstructions", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getOperatorInstructions_Parent(), this.getDocumentationFiles(), this.getDocumentationFiles_Instructions(), "parent", null, 1, 1, OperatorInstructions.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trainingDocInternEClass, TrainingDocIntern.class, "TrainingDocIntern", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTrainingDocIntern_Parent(), this.getDocumentationFiles(), this.getDocumentationFiles_TrainingIntern(), "parent", null, 1, 1, TrainingDocIntern.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trainingDocExternalEClass, TrainingDocExternal.class, "TrainingDocExternal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getTrainingDocExternal_Parent(), this.getDocumentationFiles(), this.getDocumentationFiles_TrainingExternal(), "parent", null, 1, 1, TrainingDocExternal.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(systemTestEClass, SystemTest.class, "SystemTest", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getSystemTest_Parent(), this.getTestSpecification(), this.getTestSpecification_SystemTests(), "parent", null, 1, 1, SystemTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getSystemTest_SystemUnderTest(), theXPPUPackage.getPlant(), null, "systemUnderTest", null, 0, 1, SystemTest.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(documentationFilesEClass, DocumentationFiles.class, "DocumentationFiles", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getDocumentationFiles_Mainteneance(), this.getMainteneanceDocumentation(), this.getMainteneanceDocumentation_Parent(), "mainteneance", null, 0, -1, DocumentationFiles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentationFiles_Instructions(), this.getOperatorInstructions(), this.getOperatorInstructions_Parent(), "instructions", null, 0, -1, DocumentationFiles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentationFiles_TrainingIntern(), this.getTrainingDocIntern(), this.getTrainingDocIntern_Parent(), "trainingIntern", null, 0, -1, DocumentationFiles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getDocumentationFiles_TrainingExternal(), this.getTrainingDocExternal(), this.getTrainingDocExternal_Parent(), "trainingExternal", null, 0, -1, DocumentationFiles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(componentDocumentationFilesEClass, ComponentDocumentationFiles.class, "ComponentDocumentationFiles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComponentDocumentationFiles_Parent(), this.getDocumentationSpecification(), this.getDocumentationSpecification_ComponentDocumentation(), "parent", null, 1, 1, ComponentDocumentationFiles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(moduleDocumentationFilesEClass, ModuleDocumentationFiles.class, "ModuleDocumentationFiles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModuleDocumentationFiles_Parent(), this.getDocumentationSpecification(), this.getDocumentationSpecification_ModuleDocumentation(), "parent", null, 1, 1, ModuleDocumentationFiles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(interfaceDocumentationFilesEClass, InterfaceDocumentationFiles.class, "InterfaceDocumentationFiles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInterfaceDocumentationFiles_Parent(), this.getDocumentationSpecification(), this.getDocumentationSpecification_InterfaceDocumentation(), "parent", null, 1, 1, InterfaceDocumentationFiles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(structureDocumentationFilesEClass, StructureDocumentationFiles.class, "StructureDocumentationFiles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStructureDocumentationFiles_Parent(), this.getDocumentationSpecification(), this.getDocumentationSpecification_StructureDocumentation(), "parent", null, 1, 1, StructureDocumentationFiles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

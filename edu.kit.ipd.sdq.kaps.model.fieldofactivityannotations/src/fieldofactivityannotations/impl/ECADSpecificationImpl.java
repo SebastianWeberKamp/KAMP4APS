@@ -2,6 +2,7 @@
  */
 package fieldofactivityannotations.impl;
 
+import fieldofactivityannotations.Drawing;
 import fieldofactivityannotations.ECADSpecification;
 import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import fieldofactivityannotations.FieldofactivityannotationsPackage;
@@ -19,9 +20,11 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
+import org.eclipse.emf.ecore.util.InternalEList;
 import xPPU.ComponentRepository.Component;
 
 import xPPU.InterfaceRepository.Interface;
@@ -43,6 +46,7 @@ import xPPU.StructureRepository.Structure;
  *   <li>{@link fieldofactivityannotations.impl.ECADSpecificationImpl#getModules <em>Modules</em>}</li>
  *   <li>{@link fieldofactivityannotations.impl.ECADSpecificationImpl#getInterfaces <em>Interfaces</em>}</li>
  *   <li>{@link fieldofactivityannotations.impl.ECADSpecificationImpl#getStructures <em>Structures</em>}</li>
+ *   <li>{@link fieldofactivityannotations.impl.ECADSpecificationImpl#getDrawings <em>Drawings</em>}</li>
  * </ul>
  *
  * @generated
@@ -87,6 +91,16 @@ public class ECADSpecificationImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected EList<Structure> structures;
+
+	/**
+	 * The cached value of the '{@link #getDrawings() <em>Drawings</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDrawings()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Drawing> drawings;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -201,6 +215,19 @@ public class ECADSpecificationImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Drawing> getDrawings() {
+		if (drawings == null) {
+			drawings = new EObjectContainmentWithInverseEList<Drawing>(Drawing.class, this, FieldofactivityannotationsPackage.ECAD_SPECIFICATION__DRAWINGS, FieldofactivityannotationsPackage.DRAWING__PARENT);
+		}
+		return drawings;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -208,6 +235,8 @@ public class ECADSpecificationImpl extends MinimalEObjectImpl.Container implemen
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetParent((FieldOfActivityAnnotationRepository)otherEnd, msgs);
+			case FieldofactivityannotationsPackage.ECAD_SPECIFICATION__DRAWINGS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getDrawings()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -222,6 +251,8 @@ public class ECADSpecificationImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case FieldofactivityannotationsPackage.ECAD_SPECIFICATION__PARENT:
 				return basicSetParent(null, msgs);
+			case FieldofactivityannotationsPackage.ECAD_SPECIFICATION__DRAWINGS:
+				return ((InternalEList<?>)getDrawings()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -258,6 +289,8 @@ public class ECADSpecificationImpl extends MinimalEObjectImpl.Container implemen
 				return getInterfaces();
 			case FieldofactivityannotationsPackage.ECAD_SPECIFICATION__STRUCTURES:
 				return getStructures();
+			case FieldofactivityannotationsPackage.ECAD_SPECIFICATION__DRAWINGS:
+				return getDrawings();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -290,6 +323,10 @@ public class ECADSpecificationImpl extends MinimalEObjectImpl.Container implemen
 				getStructures().clear();
 				getStructures().addAll((Collection<? extends Structure>)newValue);
 				return;
+			case FieldofactivityannotationsPackage.ECAD_SPECIFICATION__DRAWINGS:
+				getDrawings().clear();
+				getDrawings().addAll((Collection<? extends Drawing>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -317,6 +354,9 @@ public class ECADSpecificationImpl extends MinimalEObjectImpl.Container implemen
 			case FieldofactivityannotationsPackage.ECAD_SPECIFICATION__STRUCTURES:
 				getStructures().clear();
 				return;
+			case FieldofactivityannotationsPackage.ECAD_SPECIFICATION__DRAWINGS:
+				getDrawings().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -339,6 +379,8 @@ public class ECADSpecificationImpl extends MinimalEObjectImpl.Container implemen
 				return interfaces != null && !interfaces.isEmpty();
 			case FieldofactivityannotationsPackage.ECAD_SPECIFICATION__STRUCTURES:
 				return structures != null && !structures.isEmpty();
+			case FieldofactivityannotationsPackage.ECAD_SPECIFICATION__DRAWINGS:
+				return drawings != null && !drawings.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

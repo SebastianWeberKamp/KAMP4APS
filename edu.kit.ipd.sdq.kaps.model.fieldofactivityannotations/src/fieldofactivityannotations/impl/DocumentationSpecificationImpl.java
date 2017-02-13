@@ -2,14 +2,13 @@
  */
 package fieldofactivityannotations.impl;
 
+import fieldofactivityannotations.ComponentDocumentationFiles;
 import fieldofactivityannotations.DocumentationSpecification;
 import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import fieldofactivityannotations.FieldofactivityannotationsPackage;
-import fieldofactivityannotations.MainteneanceDocumentation;
-import fieldofactivityannotations.OperatorInstructions;
-import fieldofactivityannotations.TrainingDocExternal;
-import fieldofactivityannotations.TrainingDocIntern;
-
+import fieldofactivityannotations.InterfaceDocumentationFiles;
+import fieldofactivityannotations.ModuleDocumentationFiles;
+import fieldofactivityannotations.StructureDocumentationFiles;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -23,8 +22,9 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,54 +35,54 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * </p>
  * <ul>
  *   <li>{@link fieldofactivityannotations.impl.DocumentationSpecificationImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link fieldofactivityannotations.impl.DocumentationSpecificationImpl#getMainteneance <em>Mainteneance</em>}</li>
- *   <li>{@link fieldofactivityannotations.impl.DocumentationSpecificationImpl#getInstructions <em>Instructions</em>}</li>
- *   <li>{@link fieldofactivityannotations.impl.DocumentationSpecificationImpl#getTrainingIntern <em>Training Intern</em>}</li>
- *   <li>{@link fieldofactivityannotations.impl.DocumentationSpecificationImpl#getTrainingExternal <em>Training External</em>}</li>
+ *   <li>{@link fieldofactivityannotations.impl.DocumentationSpecificationImpl#getComponentDocumentation <em>Component Documentation</em>}</li>
+ *   <li>{@link fieldofactivityannotations.impl.DocumentationSpecificationImpl#getModuleDocumentation <em>Module Documentation</em>}</li>
+ *   <li>{@link fieldofactivityannotations.impl.DocumentationSpecificationImpl#getInterfaceDocumentation <em>Interface Documentation</em>}</li>
+ *   <li>{@link fieldofactivityannotations.impl.DocumentationSpecificationImpl#getStructureDocumentation <em>Structure Documentation</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container implements DocumentationSpecification {
 	/**
-	 * The cached value of the '{@link #getMainteneance() <em>Mainteneance</em>}' reference list.
+	 * The cached value of the '{@link #getComponentDocumentation() <em>Component Documentation</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getMainteneance()
+	 * @see #getComponentDocumentation()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<MainteneanceDocumentation> mainteneance;
+	protected EList<ComponentDocumentationFiles> componentDocumentation;
 
 	/**
-	 * The cached value of the '{@link #getInstructions() <em>Instructions</em>}' reference list.
+	 * The cached value of the '{@link #getModuleDocumentation() <em>Module Documentation</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInstructions()
+	 * @see #getModuleDocumentation()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<OperatorInstructions> instructions;
+	protected EList<ModuleDocumentationFiles> moduleDocumentation;
 
 	/**
-	 * The cached value of the '{@link #getTrainingIntern() <em>Training Intern</em>}' reference list.
+	 * The cached value of the '{@link #getInterfaceDocumentation() <em>Interface Documentation</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTrainingIntern()
+	 * @see #getInterfaceDocumentation()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TrainingDocIntern> trainingIntern;
+	protected EList<InterfaceDocumentationFiles> interfaceDocumentation;
 
 	/**
-	 * The cached value of the '{@link #getTrainingExternal() <em>Training External</em>}' reference list.
+	 * The cached value of the '{@link #getStructureDocumentation() <em>Structure Documentation</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTrainingExternal()
+	 * @see #getStructureDocumentation()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<TrainingDocExternal> trainingExternal;
+	protected EList<StructureDocumentationFiles> structureDocumentation;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -149,11 +149,11 @@ public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<MainteneanceDocumentation> getMainteneance() {
-		if (mainteneance == null) {
-			mainteneance = new EObjectResolvingEList<MainteneanceDocumentation>(MainteneanceDocumentation.class, this, FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MAINTENEANCE);
+	public EList<ComponentDocumentationFiles> getComponentDocumentation() {
+		if (componentDocumentation == null) {
+			componentDocumentation = new EObjectContainmentWithInverseEList<ComponentDocumentationFiles>(ComponentDocumentationFiles.class, this, FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__COMPONENT_DOCUMENTATION, FieldofactivityannotationsPackage.COMPONENT_DOCUMENTATION_FILES__PARENT);
 		}
-		return mainteneance;
+		return componentDocumentation;
 	}
 
 	/**
@@ -161,11 +161,11 @@ public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<OperatorInstructions> getInstructions() {
-		if (instructions == null) {
-			instructions = new EObjectResolvingEList<OperatorInstructions>(OperatorInstructions.class, this, FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INSTRUCTIONS);
+	public EList<ModuleDocumentationFiles> getModuleDocumentation() {
+		if (moduleDocumentation == null) {
+			moduleDocumentation = new EObjectContainmentWithInverseEList<ModuleDocumentationFiles>(ModuleDocumentationFiles.class, this, FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MODULE_DOCUMENTATION, FieldofactivityannotationsPackage.MODULE_DOCUMENTATION_FILES__PARENT);
 		}
-		return instructions;
+		return moduleDocumentation;
 	}
 
 	/**
@@ -173,11 +173,11 @@ public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TrainingDocIntern> getTrainingIntern() {
-		if (trainingIntern == null) {
-			trainingIntern = new EObjectResolvingEList<TrainingDocIntern>(TrainingDocIntern.class, this, FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__TRAINING_INTERN);
+	public EList<InterfaceDocumentationFiles> getInterfaceDocumentation() {
+		if (interfaceDocumentation == null) {
+			interfaceDocumentation = new EObjectContainmentWithInverseEList<InterfaceDocumentationFiles>(InterfaceDocumentationFiles.class, this, FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INTERFACE_DOCUMENTATION, FieldofactivityannotationsPackage.INTERFACE_DOCUMENTATION_FILES__PARENT);
 		}
-		return trainingIntern;
+		return interfaceDocumentation;
 	}
 
 	/**
@@ -185,11 +185,11 @@ public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<TrainingDocExternal> getTrainingExternal() {
-		if (trainingExternal == null) {
-			trainingExternal = new EObjectResolvingEList<TrainingDocExternal>(TrainingDocExternal.class, this, FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__TRAINING_EXTERNAL);
+	public EList<StructureDocumentationFiles> getStructureDocumentation() {
+		if (structureDocumentation == null) {
+			structureDocumentation = new EObjectContainmentWithInverseEList<StructureDocumentationFiles>(StructureDocumentationFiles.class, this, FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION, FieldofactivityannotationsPackage.STRUCTURE_DOCUMENTATION_FILES__PARENT);
 		}
-		return trainingExternal;
+		return structureDocumentation;
 	}
 
 	/**
@@ -197,6 +197,7 @@ public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -204,6 +205,14 @@ public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetParent((FieldOfActivityAnnotationRepository)otherEnd, msgs);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__COMPONENT_DOCUMENTATION:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComponentDocumentation()).basicAdd(otherEnd, msgs);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MODULE_DOCUMENTATION:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getModuleDocumentation()).basicAdd(otherEnd, msgs);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INTERFACE_DOCUMENTATION:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getInterfaceDocumentation()).basicAdd(otherEnd, msgs);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getStructureDocumentation()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -218,6 +227,14 @@ public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container
 		switch (featureID) {
 			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__PARENT:
 				return basicSetParent(null, msgs);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__COMPONENT_DOCUMENTATION:
+				return ((InternalEList<?>)getComponentDocumentation()).basicRemove(otherEnd, msgs);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MODULE_DOCUMENTATION:
+				return ((InternalEList<?>)getModuleDocumentation()).basicRemove(otherEnd, msgs);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INTERFACE_DOCUMENTATION:
+				return ((InternalEList<?>)getInterfaceDocumentation()).basicRemove(otherEnd, msgs);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION:
+				return ((InternalEList<?>)getStructureDocumentation()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -246,14 +263,14 @@ public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container
 		switch (featureID) {
 			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__PARENT:
 				return getParent();
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MAINTENEANCE:
-				return getMainteneance();
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INSTRUCTIONS:
-				return getInstructions();
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__TRAINING_INTERN:
-				return getTrainingIntern();
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__TRAINING_EXTERNAL:
-				return getTrainingExternal();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__COMPONENT_DOCUMENTATION:
+				return getComponentDocumentation();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MODULE_DOCUMENTATION:
+				return getModuleDocumentation();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INTERFACE_DOCUMENTATION:
+				return getInterfaceDocumentation();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION:
+				return getStructureDocumentation();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -270,21 +287,21 @@ public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container
 			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__PARENT:
 				setParent((FieldOfActivityAnnotationRepository)newValue);
 				return;
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MAINTENEANCE:
-				getMainteneance().clear();
-				getMainteneance().addAll((Collection<? extends MainteneanceDocumentation>)newValue);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__COMPONENT_DOCUMENTATION:
+				getComponentDocumentation().clear();
+				getComponentDocumentation().addAll((Collection<? extends ComponentDocumentationFiles>)newValue);
 				return;
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INSTRUCTIONS:
-				getInstructions().clear();
-				getInstructions().addAll((Collection<? extends OperatorInstructions>)newValue);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MODULE_DOCUMENTATION:
+				getModuleDocumentation().clear();
+				getModuleDocumentation().addAll((Collection<? extends ModuleDocumentationFiles>)newValue);
 				return;
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__TRAINING_INTERN:
-				getTrainingIntern().clear();
-				getTrainingIntern().addAll((Collection<? extends TrainingDocIntern>)newValue);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INTERFACE_DOCUMENTATION:
+				getInterfaceDocumentation().clear();
+				getInterfaceDocumentation().addAll((Collection<? extends InterfaceDocumentationFiles>)newValue);
 				return;
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__TRAINING_EXTERNAL:
-				getTrainingExternal().clear();
-				getTrainingExternal().addAll((Collection<? extends TrainingDocExternal>)newValue);
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION:
+				getStructureDocumentation().clear();
+				getStructureDocumentation().addAll((Collection<? extends StructureDocumentationFiles>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -301,17 +318,17 @@ public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container
 			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__PARENT:
 				setParent((FieldOfActivityAnnotationRepository)null);
 				return;
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MAINTENEANCE:
-				getMainteneance().clear();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__COMPONENT_DOCUMENTATION:
+				getComponentDocumentation().clear();
 				return;
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INSTRUCTIONS:
-				getInstructions().clear();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MODULE_DOCUMENTATION:
+				getModuleDocumentation().clear();
 				return;
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__TRAINING_INTERN:
-				getTrainingIntern().clear();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INTERFACE_DOCUMENTATION:
+				getInterfaceDocumentation().clear();
 				return;
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__TRAINING_EXTERNAL:
-				getTrainingExternal().clear();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION:
+				getStructureDocumentation().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -327,14 +344,14 @@ public class DocumentationSpecificationImpl extends MinimalEObjectImpl.Container
 		switch (featureID) {
 			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__PARENT:
 				return getParent() != null;
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MAINTENEANCE:
-				return mainteneance != null && !mainteneance.isEmpty();
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INSTRUCTIONS:
-				return instructions != null && !instructions.isEmpty();
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__TRAINING_INTERN:
-				return trainingIntern != null && !trainingIntern.isEmpty();
-			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__TRAINING_EXTERNAL:
-				return trainingExternal != null && !trainingExternal.isEmpty();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__COMPONENT_DOCUMENTATION:
+				return componentDocumentation != null && !componentDocumentation.isEmpty();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__MODULE_DOCUMENTATION:
+				return moduleDocumentation != null && !moduleDocumentation.isEmpty();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__INTERFACE_DOCUMENTATION:
+				return interfaceDocumentation != null && !interfaceDocumentation.isEmpty();
+			case FieldofactivityannotationsPackage.DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION:
+				return structureDocumentation != null && !structureDocumentation.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

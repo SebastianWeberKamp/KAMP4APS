@@ -160,6 +160,22 @@ public class FieldofactivityannotationsAdapterFactory extends AdapterFactoryImpl
 				return createDrawingAdapter();
 			}
 			@Override
+			public Adapter caseComponentDrawing(ComponentDrawing object) {
+				return createComponentDrawingAdapter();
+			}
+			@Override
+			public Adapter caseModuleDrawing(ModuleDrawing object) {
+				return createModuleDrawingAdapter();
+			}
+			@Override
+			public Adapter caseInterfaceDrawing(InterfaceDrawing object) {
+				return createInterfaceDrawingAdapter();
+			}
+			@Override
+			public Adapter caseStructureDrawing(StructureDrawing object) {
+				return createStructureDrawingAdapter();
+			}
+			@Override
 			public Adapter caseMainteneanceDocumentation(MainteneanceDocumentation object) {
 				return createMainteneanceDocumentationAdapter();
 			}
@@ -178,6 +194,26 @@ public class FieldofactivityannotationsAdapterFactory extends AdapterFactoryImpl
 			@Override
 			public Adapter caseSystemTest(SystemTest object) {
 				return createSystemTestAdapter();
+			}
+			@Override
+			public Adapter caseDocumentationFiles(DocumentationFiles object) {
+				return createDocumentationFilesAdapter();
+			}
+			@Override
+			public Adapter caseComponentDocumentationFiles(ComponentDocumentationFiles object) {
+				return createComponentDocumentationFilesAdapter();
+			}
+			@Override
+			public Adapter caseModuleDocumentationFiles(ModuleDocumentationFiles object) {
+				return createModuleDocumentationFilesAdapter();
+			}
+			@Override
+			public Adapter caseInterfaceDocumentationFiles(InterfaceDocumentationFiles object) {
+				return createInterfaceDocumentationFilesAdapter();
+			}
+			@Override
+			public Adapter caseStructureDocumentationFiles(StructureDocumentationFiles object) {
+				return createStructureDocumentationFilesAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -522,6 +558,62 @@ public class FieldofactivityannotationsAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.ComponentDrawing <em>Component Drawing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.ComponentDrawing
+	 * @generated
+	 */
+	public Adapter createComponentDrawingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.ModuleDrawing <em>Module Drawing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.ModuleDrawing
+	 * @generated
+	 */
+	public Adapter createModuleDrawingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.InterfaceDrawing <em>Interface Drawing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.InterfaceDrawing
+	 * @generated
+	 */
+	public Adapter createInterfaceDrawingAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.StructureDrawing <em>Structure Drawing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.StructureDrawing
+	 * @generated
+	 */
+	public Adapter createStructureDrawingAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.MainteneanceDocumentation <em>Mainteneance Documentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -588,6 +680,76 @@ public class FieldofactivityannotationsAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createSystemTestAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.DocumentationFiles <em>Documentation Files</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.DocumentationFiles
+	 * @generated
+	 */
+	public Adapter createDocumentationFilesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.ComponentDocumentationFiles <em>Component Documentation Files</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.ComponentDocumentationFiles
+	 * @generated
+	 */
+	public Adapter createComponentDocumentationFilesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.ModuleDocumentationFiles <em>Module Documentation Files</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.ModuleDocumentationFiles
+	 * @generated
+	 */
+	public Adapter createModuleDocumentationFilesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.InterfaceDocumentationFiles <em>Interface Documentation Files</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.InterfaceDocumentationFiles
+	 * @generated
+	 */
+	public Adapter createInterfaceDocumentationFilesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.StructureDocumentationFiles <em>Structure Documentation Files</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.StructureDocumentationFiles
+	 * @generated
+	 */
+	public Adapter createStructureDocumentationFilesAdapter() {
 		return null;
 	}
 

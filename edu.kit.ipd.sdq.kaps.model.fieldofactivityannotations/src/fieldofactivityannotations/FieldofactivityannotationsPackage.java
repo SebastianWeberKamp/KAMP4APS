@@ -441,13 +441,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int ECAD_SPECIFICATION__STRUCTURES = 4;
 
 	/**
+	 * The feature id for the '<em><b>Drawings</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECAD_SPECIFICATION__DRAWINGS = 5;
+
+	/**
 	 * The number of structural features of the '<em>ECAD Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECAD_SPECIFICATION_FEATURE_COUNT = 5;
+	int ECAD_SPECIFICATION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>ECAD Specification</em>' class.
@@ -478,40 +487,40 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int DOCUMENTATION_SPECIFICATION__PARENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Mainteneance</b></em>' reference list.
+	 * The feature id for the '<em><b>Component Documentation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENTATION_SPECIFICATION__MAINTENEANCE = 1;
+	int DOCUMENTATION_SPECIFICATION__COMPONENT_DOCUMENTATION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Instructions</b></em>' reference list.
+	 * The feature id for the '<em><b>Module Documentation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENTATION_SPECIFICATION__INSTRUCTIONS = 2;
+	int DOCUMENTATION_SPECIFICATION__MODULE_DOCUMENTATION = 2;
 
 	/**
-	 * The feature id for the '<em><b>Training Intern</b></em>' reference list.
+	 * The feature id for the '<em><b>Interface Documentation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENTATION_SPECIFICATION__TRAINING_INTERN = 3;
+	int DOCUMENTATION_SPECIFICATION__INTERFACE_DOCUMENTATION = 3;
 
 	/**
-	 * The feature id for the '<em><b>Training External</b></em>' reference list.
+	 * The feature id for the '<em><b>Structure Documentation</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENTATION_SPECIFICATION__TRAINING_EXTERNAL = 4;
+	int DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION = 4;
 
 	/**
 	 * The number of structural features of the '<em>Documentation Specification</em>' class.
@@ -1277,13 +1286,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int DRAWING__FILENAME = FILE__FILENAME;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DRAWING__PARENT = FILE_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Drawing</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DRAWING_FEATURE_COUNT = FILE_FEATURE_COUNT + 0;
+	int DRAWING_FEATURE_COUNT = FILE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Drawing</em>' class.
@@ -1295,6 +1313,226 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int DRAWING_OPERATION_COUNT = FILE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.ComponentDrawingImpl <em>Component Drawing</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.ComponentDrawingImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentDrawing()
+	 * @generated
+	 */
+	int COMPONENT_DRAWING = 23;
+
+	/**
+	 * The feature id for the '<em><b>Filename</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DRAWING__FILENAME = DRAWING__FILENAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DRAWING__PARENT = DRAWING__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Drawn component</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DRAWING__DRAWN_COMPONENT = DRAWING_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Component Drawing</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DRAWING_FEATURE_COUNT = DRAWING_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Component Drawing</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DRAWING_OPERATION_COUNT = DRAWING_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.ModuleDrawingImpl <em>Module Drawing</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.ModuleDrawingImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getModuleDrawing()
+	 * @generated
+	 */
+	int MODULE_DRAWING = 24;
+
+	/**
+	 * The feature id for the '<em><b>Filename</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DRAWING__FILENAME = DRAWING__FILENAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DRAWING__PARENT = DRAWING__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Drawn module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DRAWING__DRAWN_MODULE = DRAWING_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Module Drawing</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DRAWING_FEATURE_COUNT = DRAWING_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Module Drawing</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DRAWING_OPERATION_COUNT = DRAWING_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.InterfaceDrawingImpl <em>Interface Drawing</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.InterfaceDrawingImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getInterfaceDrawing()
+	 * @generated
+	 */
+	int INTERFACE_DRAWING = 25;
+
+	/**
+	 * The feature id for the '<em><b>Filename</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DRAWING__FILENAME = DRAWING__FILENAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DRAWING__PARENT = DRAWING__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Drawn interface</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DRAWING__DRAWN_INTERFACE = DRAWING_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Interface Drawing</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DRAWING_FEATURE_COUNT = DRAWING_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Interface Drawing</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DRAWING_OPERATION_COUNT = DRAWING_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.StructureDrawingImpl <em>Structure Drawing</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.StructureDrawingImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStructureDrawing()
+	 * @generated
+	 */
+	int STRUCTURE_DRAWING = 26;
+
+	/**
+	 * The feature id for the '<em><b>Filename</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DRAWING__FILENAME = DRAWING__FILENAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DRAWING__PARENT = DRAWING__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Drawn structure</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DRAWING__DRAWN_STRUCTURE = DRAWING_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Structure Drawing</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DRAWING_FEATURE_COUNT = DRAWING_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Structure Drawing</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DRAWING_OPERATION_COUNT = DRAWING_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link fieldofactivityannotations.impl.MainteneanceDocumentationImpl <em>Mainteneance Documentation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1302,7 +1540,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getMainteneanceDocumentation()
 	 * @generated
 	 */
-	int MAINTENEANCE_DOCUMENTATION = 23;
+	int MAINTENEANCE_DOCUMENTATION = 27;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -1314,13 +1552,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int MAINTENEANCE_DOCUMENTATION__FILENAME = DOCUMENTATION__FILENAME;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAINTENEANCE_DOCUMENTATION__PARENT = DOCUMENTATION_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Mainteneance Documentation</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAINTENEANCE_DOCUMENTATION_FEATURE_COUNT = DOCUMENTATION_FEATURE_COUNT + 0;
+	int MAINTENEANCE_DOCUMENTATION_FEATURE_COUNT = DOCUMENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Mainteneance Documentation</em>' class.
@@ -1339,7 +1586,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getOperatorInstructions()
 	 * @generated
 	 */
-	int OPERATOR_INSTRUCTIONS = 24;
+	int OPERATOR_INSTRUCTIONS = 28;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -1351,13 +1598,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int OPERATOR_INSTRUCTIONS__FILENAME = DOCUMENTATION__FILENAME;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPERATOR_INSTRUCTIONS__PARENT = DOCUMENTATION_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Operator Instructions</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPERATOR_INSTRUCTIONS_FEATURE_COUNT = DOCUMENTATION_FEATURE_COUNT + 0;
+	int OPERATOR_INSTRUCTIONS_FEATURE_COUNT = DOCUMENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Operator Instructions</em>' class.
@@ -1376,7 +1632,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getTrainingDocIntern()
 	 * @generated
 	 */
-	int TRAINING_DOC_INTERN = 25;
+	int TRAINING_DOC_INTERN = 29;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -1388,13 +1644,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int TRAINING_DOC_INTERN__FILENAME = DOCUMENTATION__FILENAME;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAINING_DOC_INTERN__PARENT = DOCUMENTATION_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Training Doc Intern</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAINING_DOC_INTERN_FEATURE_COUNT = DOCUMENTATION_FEATURE_COUNT + 0;
+	int TRAINING_DOC_INTERN_FEATURE_COUNT = DOCUMENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Training Doc Intern</em>' class.
@@ -1413,7 +1678,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getTrainingDocExternal()
 	 * @generated
 	 */
-	int TRAINING_DOC_EXTERNAL = 26;
+	int TRAINING_DOC_EXTERNAL = 30;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -1425,13 +1690,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int TRAINING_DOC_EXTERNAL__FILENAME = DOCUMENTATION__FILENAME;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRAINING_DOC_EXTERNAL__PARENT = DOCUMENTATION_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Training Doc External</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRAINING_DOC_EXTERNAL_FEATURE_COUNT = DOCUMENTATION_FEATURE_COUNT + 0;
+	int TRAINING_DOC_EXTERNAL_FEATURE_COUNT = DOCUMENTATION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Training Doc External</em>' class.
@@ -1450,7 +1724,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getSystemTest()
 	 * @generated
 	 */
-	int SYSTEM_TEST = 27;
+	int SYSTEM_TEST = 31;
 
 	/**
 	 * The feature id for the '<em><b>Test Name</b></em>' attribute.
@@ -1496,6 +1770,363 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SYSTEM_TEST_OPERATION_COUNT = TEST_CASE_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.DocumentationFilesImpl <em>Documentation Files</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.DocumentationFilesImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getDocumentationFiles()
+	 * @generated
+	 */
+	int DOCUMENTATION_FILES = 32;
+
+	/**
+	 * The feature id for the '<em><b>Mainteneance</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION_FILES__MAINTENEANCE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Instructions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION_FILES__INSTRUCTIONS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Training Intern</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION_FILES__TRAINING_INTERN = 2;
+
+	/**
+	 * The feature id for the '<em><b>Training External</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION_FILES__TRAINING_EXTERNAL = 3;
+
+	/**
+	 * The number of structural features of the '<em>Documentation Files</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION_FILES_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Documentation Files</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION_FILES_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.ComponentDocumentationFilesImpl <em>Component Documentation Files</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.ComponentDocumentationFilesImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentDocumentationFiles()
+	 * @generated
+	 */
+	int COMPONENT_DOCUMENTATION_FILES = 33;
+
+	/**
+	 * The feature id for the '<em><b>Mainteneance</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DOCUMENTATION_FILES__MAINTENEANCE = DOCUMENTATION_FILES__MAINTENEANCE;
+
+	/**
+	 * The feature id for the '<em><b>Instructions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DOCUMENTATION_FILES__INSTRUCTIONS = DOCUMENTATION_FILES__INSTRUCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Training Intern</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DOCUMENTATION_FILES__TRAINING_INTERN = DOCUMENTATION_FILES__TRAINING_INTERN;
+
+	/**
+	 * The feature id for the '<em><b>Training External</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DOCUMENTATION_FILES__TRAINING_EXTERNAL = DOCUMENTATION_FILES__TRAINING_EXTERNAL;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DOCUMENTATION_FILES__PARENT = DOCUMENTATION_FILES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Component Documentation Files</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Component Documentation Files</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DOCUMENTATION_FILES_OPERATION_COUNT = DOCUMENTATION_FILES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.ModuleDocumentationFilesImpl <em>Module Documentation Files</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.ModuleDocumentationFilesImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getModuleDocumentationFiles()
+	 * @generated
+	 */
+	int MODULE_DOCUMENTATION_FILES = 34;
+
+	/**
+	 * The feature id for the '<em><b>Mainteneance</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DOCUMENTATION_FILES__MAINTENEANCE = DOCUMENTATION_FILES__MAINTENEANCE;
+
+	/**
+	 * The feature id for the '<em><b>Instructions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DOCUMENTATION_FILES__INSTRUCTIONS = DOCUMENTATION_FILES__INSTRUCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Training Intern</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DOCUMENTATION_FILES__TRAINING_INTERN = DOCUMENTATION_FILES__TRAINING_INTERN;
+
+	/**
+	 * The feature id for the '<em><b>Training External</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DOCUMENTATION_FILES__TRAINING_EXTERNAL = DOCUMENTATION_FILES__TRAINING_EXTERNAL;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DOCUMENTATION_FILES__PARENT = DOCUMENTATION_FILES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Module Documentation Files</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Module Documentation Files</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DOCUMENTATION_FILES_OPERATION_COUNT = DOCUMENTATION_FILES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.InterfaceDocumentationFilesImpl <em>Interface Documentation Files</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.InterfaceDocumentationFilesImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getInterfaceDocumentationFiles()
+	 * @generated
+	 */
+	int INTERFACE_DOCUMENTATION_FILES = 35;
+
+	/**
+	 * The feature id for the '<em><b>Mainteneance</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DOCUMENTATION_FILES__MAINTENEANCE = DOCUMENTATION_FILES__MAINTENEANCE;
+
+	/**
+	 * The feature id for the '<em><b>Instructions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DOCUMENTATION_FILES__INSTRUCTIONS = DOCUMENTATION_FILES__INSTRUCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Training Intern</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DOCUMENTATION_FILES__TRAINING_INTERN = DOCUMENTATION_FILES__TRAINING_INTERN;
+
+	/**
+	 * The feature id for the '<em><b>Training External</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DOCUMENTATION_FILES__TRAINING_EXTERNAL = DOCUMENTATION_FILES__TRAINING_EXTERNAL;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DOCUMENTATION_FILES__PARENT = DOCUMENTATION_FILES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Interface Documentation Files</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Interface Documentation Files</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DOCUMENTATION_FILES_OPERATION_COUNT = DOCUMENTATION_FILES_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.StructureDocumentationFilesImpl <em>Structure Documentation Files</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.StructureDocumentationFilesImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStructureDocumentationFiles()
+	 * @generated
+	 */
+	int STRUCTURE_DOCUMENTATION_FILES = 36;
+
+	/**
+	 * The feature id for the '<em><b>Mainteneance</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DOCUMENTATION_FILES__MAINTENEANCE = DOCUMENTATION_FILES__MAINTENEANCE;
+
+	/**
+	 * The feature id for the '<em><b>Instructions</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DOCUMENTATION_FILES__INSTRUCTIONS = DOCUMENTATION_FILES__INSTRUCTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Training Intern</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DOCUMENTATION_FILES__TRAINING_INTERN = DOCUMENTATION_FILES__TRAINING_INTERN;
+
+	/**
+	 * The feature id for the '<em><b>Training External</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DOCUMENTATION_FILES__TRAINING_EXTERNAL = DOCUMENTATION_FILES__TRAINING_EXTERNAL;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DOCUMENTATION_FILES__PARENT = DOCUMENTATION_FILES_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Structure Documentation Files</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Structure Documentation Files</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DOCUMENTATION_FILES_OPERATION_COUNT = DOCUMENTATION_FILES_OPERATION_COUNT + 0;
 
 
 	/**
@@ -1845,6 +2476,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getECADSpecification_Structures();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.ECADSpecification#getDrawings <em>Drawings</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Drawings</em>'.
+	 * @see fieldofactivityannotations.ECADSpecification#getDrawings()
+	 * @see #getECADSpecification()
+	 * @generated
+	 */
+	EReference getECADSpecification_Drawings();
+
+	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.DocumentationSpecification <em>Documentation Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1866,48 +2508,48 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getDocumentationSpecification_Parent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.DocumentationSpecification#getMainteneance <em>Mainteneance</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.DocumentationSpecification#getComponentDocumentation <em>Component Documentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Mainteneance</em>'.
-	 * @see fieldofactivityannotations.DocumentationSpecification#getMainteneance()
+	 * @return the meta object for the containment reference list '<em>Component Documentation</em>'.
+	 * @see fieldofactivityannotations.DocumentationSpecification#getComponentDocumentation()
 	 * @see #getDocumentationSpecification()
 	 * @generated
 	 */
-	EReference getDocumentationSpecification_Mainteneance();
+	EReference getDocumentationSpecification_ComponentDocumentation();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.DocumentationSpecification#getInstructions <em>Instructions</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.DocumentationSpecification#getModuleDocumentation <em>Module Documentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Instructions</em>'.
-	 * @see fieldofactivityannotations.DocumentationSpecification#getInstructions()
+	 * @return the meta object for the containment reference list '<em>Module Documentation</em>'.
+	 * @see fieldofactivityannotations.DocumentationSpecification#getModuleDocumentation()
 	 * @see #getDocumentationSpecification()
 	 * @generated
 	 */
-	EReference getDocumentationSpecification_Instructions();
+	EReference getDocumentationSpecification_ModuleDocumentation();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.DocumentationSpecification#getTrainingIntern <em>Training Intern</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.DocumentationSpecification#getInterfaceDocumentation <em>Interface Documentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Training Intern</em>'.
-	 * @see fieldofactivityannotations.DocumentationSpecification#getTrainingIntern()
+	 * @return the meta object for the containment reference list '<em>Interface Documentation</em>'.
+	 * @see fieldofactivityannotations.DocumentationSpecification#getInterfaceDocumentation()
 	 * @see #getDocumentationSpecification()
 	 * @generated
 	 */
-	EReference getDocumentationSpecification_TrainingIntern();
+	EReference getDocumentationSpecification_InterfaceDocumentation();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.DocumentationSpecification#getTrainingExternal <em>Training External</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.DocumentationSpecification#getStructureDocumentation <em>Structure Documentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Training External</em>'.
-	 * @see fieldofactivityannotations.DocumentationSpecification#getTrainingExternal()
+	 * @return the meta object for the containment reference list '<em>Structure Documentation</em>'.
+	 * @see fieldofactivityannotations.DocumentationSpecification#getStructureDocumentation()
 	 * @see #getDocumentationSpecification()
 	 * @generated
 	 */
-	EReference getDocumentationSpecification_TrainingExternal();
+	EReference getDocumentationSpecification_StructureDocumentation();
 
 	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.StaffSpecification <em>Staff Specification</em>}'.
@@ -2323,6 +2965,101 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EClass getDrawing();
 
 	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.Drawing#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.Drawing#getParent()
+	 * @see #getDrawing()
+	 * @generated
+	 */
+	EReference getDrawing_Parent();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.ComponentDrawing <em>Component Drawing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Component Drawing</em>'.
+	 * @see fieldofactivityannotations.ComponentDrawing
+	 * @generated
+	 */
+	EClass getComponentDrawing();
+
+	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.ComponentDrawing#getDrawn_component <em>Drawn component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Drawn component</em>'.
+	 * @see fieldofactivityannotations.ComponentDrawing#getDrawn_component()
+	 * @see #getComponentDrawing()
+	 * @generated
+	 */
+	EReference getComponentDrawing_Drawn_component();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.ModuleDrawing <em>Module Drawing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Module Drawing</em>'.
+	 * @see fieldofactivityannotations.ModuleDrawing
+	 * @generated
+	 */
+	EClass getModuleDrawing();
+
+	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.ModuleDrawing#getDrawn_module <em>Drawn module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Drawn module</em>'.
+	 * @see fieldofactivityannotations.ModuleDrawing#getDrawn_module()
+	 * @see #getModuleDrawing()
+	 * @generated
+	 */
+	EReference getModuleDrawing_Drawn_module();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.InterfaceDrawing <em>Interface Drawing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Interface Drawing</em>'.
+	 * @see fieldofactivityannotations.InterfaceDrawing
+	 * @generated
+	 */
+	EClass getInterfaceDrawing();
+
+	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.InterfaceDrawing#getDrawn_interface <em>Drawn interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Drawn interface</em>'.
+	 * @see fieldofactivityannotations.InterfaceDrawing#getDrawn_interface()
+	 * @see #getInterfaceDrawing()
+	 * @generated
+	 */
+	EReference getInterfaceDrawing_Drawn_interface();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.StructureDrawing <em>Structure Drawing</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Structure Drawing</em>'.
+	 * @see fieldofactivityannotations.StructureDrawing
+	 * @generated
+	 */
+	EClass getStructureDrawing();
+
+	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.StructureDrawing#getDrawn_structure <em>Drawn structure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Drawn structure</em>'.
+	 * @see fieldofactivityannotations.StructureDrawing#getDrawn_structure()
+	 * @see #getStructureDrawing()
+	 * @generated
+	 */
+	EReference getStructureDrawing_Drawn_structure();
+
+	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.MainteneanceDocumentation <em>Mainteneance Documentation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2331,6 +3068,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getMainteneanceDocumentation();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.MainteneanceDocumentation#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.MainteneanceDocumentation#getParent()
+	 * @see #getMainteneanceDocumentation()
+	 * @generated
+	 */
+	EReference getMainteneanceDocumentation_Parent();
 
 	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.OperatorInstructions <em>Operator Instructions</em>}'.
@@ -2343,6 +3091,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EClass getOperatorInstructions();
 
 	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.OperatorInstructions#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.OperatorInstructions#getParent()
+	 * @see #getOperatorInstructions()
+	 * @generated
+	 */
+	EReference getOperatorInstructions_Parent();
+
+	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.TrainingDocIntern <em>Training Doc Intern</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2353,6 +3112,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EClass getTrainingDocIntern();
 
 	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.TrainingDocIntern#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.TrainingDocIntern#getParent()
+	 * @see #getTrainingDocIntern()
+	 * @generated
+	 */
+	EReference getTrainingDocIntern_Parent();
+
+	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.TrainingDocExternal <em>Training Doc External</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2361,6 +3131,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTrainingDocExternal();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.TrainingDocExternal#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.TrainingDocExternal#getParent()
+	 * @see #getTrainingDocExternal()
+	 * @generated
+	 */
+	EReference getTrainingDocExternal_Parent();
 
 	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.SystemTest <em>System Test</em>}'.
@@ -2393,6 +3174,144 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getSystemTest_SystemUnderTest();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.DocumentationFiles <em>Documentation Files</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Documentation Files</em>'.
+	 * @see fieldofactivityannotations.DocumentationFiles
+	 * @generated
+	 */
+	EClass getDocumentationFiles();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.DocumentationFiles#getMainteneance <em>Mainteneance</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Mainteneance</em>'.
+	 * @see fieldofactivityannotations.DocumentationFiles#getMainteneance()
+	 * @see #getDocumentationFiles()
+	 * @generated
+	 */
+	EReference getDocumentationFiles_Mainteneance();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.DocumentationFiles#getInstructions <em>Instructions</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Instructions</em>'.
+	 * @see fieldofactivityannotations.DocumentationFiles#getInstructions()
+	 * @see #getDocumentationFiles()
+	 * @generated
+	 */
+	EReference getDocumentationFiles_Instructions();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.DocumentationFiles#getTrainingIntern <em>Training Intern</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Training Intern</em>'.
+	 * @see fieldofactivityannotations.DocumentationFiles#getTrainingIntern()
+	 * @see #getDocumentationFiles()
+	 * @generated
+	 */
+	EReference getDocumentationFiles_TrainingIntern();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.DocumentationFiles#getTrainingExternal <em>Training External</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Training External</em>'.
+	 * @see fieldofactivityannotations.DocumentationFiles#getTrainingExternal()
+	 * @see #getDocumentationFiles()
+	 * @generated
+	 */
+	EReference getDocumentationFiles_TrainingExternal();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.ComponentDocumentationFiles <em>Component Documentation Files</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Component Documentation Files</em>'.
+	 * @see fieldofactivityannotations.ComponentDocumentationFiles
+	 * @generated
+	 */
+	EClass getComponentDocumentationFiles();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.ComponentDocumentationFiles#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.ComponentDocumentationFiles#getParent()
+	 * @see #getComponentDocumentationFiles()
+	 * @generated
+	 */
+	EReference getComponentDocumentationFiles_Parent();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.ModuleDocumentationFiles <em>Module Documentation Files</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Module Documentation Files</em>'.
+	 * @see fieldofactivityannotations.ModuleDocumentationFiles
+	 * @generated
+	 */
+	EClass getModuleDocumentationFiles();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.ModuleDocumentationFiles#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.ModuleDocumentationFiles#getParent()
+	 * @see #getModuleDocumentationFiles()
+	 * @generated
+	 */
+	EReference getModuleDocumentationFiles_Parent();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.InterfaceDocumentationFiles <em>Interface Documentation Files</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Interface Documentation Files</em>'.
+	 * @see fieldofactivityannotations.InterfaceDocumentationFiles
+	 * @generated
+	 */
+	EClass getInterfaceDocumentationFiles();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.InterfaceDocumentationFiles#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.InterfaceDocumentationFiles#getParent()
+	 * @see #getInterfaceDocumentationFiles()
+	 * @generated
+	 */
+	EReference getInterfaceDocumentationFiles_Parent();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.StructureDocumentationFiles <em>Structure Documentation Files</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Structure Documentation Files</em>'.
+	 * @see fieldofactivityannotations.StructureDocumentationFiles
+	 * @generated
+	 */
+	EClass getStructureDocumentationFiles();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.StructureDocumentationFiles#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.StructureDocumentationFiles#getParent()
+	 * @see #getStructureDocumentationFiles()
+	 * @generated
+	 */
+	EReference getStructureDocumentationFiles_Parent();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -2686,6 +3605,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference ECAD_SPECIFICATION__STRUCTURES = eINSTANCE.getECADSpecification_Structures();
 
 		/**
+		 * The meta object literal for the '<em><b>Drawings</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ECAD_SPECIFICATION__DRAWINGS = eINSTANCE.getECADSpecification_Drawings();
+
+		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.DocumentationSpecificationImpl <em>Documentation Specification</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2704,36 +3631,36 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference DOCUMENTATION_SPECIFICATION__PARENT = eINSTANCE.getDocumentationSpecification_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Mainteneance</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Component Documentation</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOCUMENTATION_SPECIFICATION__MAINTENEANCE = eINSTANCE.getDocumentationSpecification_Mainteneance();
+		EReference DOCUMENTATION_SPECIFICATION__COMPONENT_DOCUMENTATION = eINSTANCE.getDocumentationSpecification_ComponentDocumentation();
 
 		/**
-		 * The meta object literal for the '<em><b>Instructions</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Module Documentation</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOCUMENTATION_SPECIFICATION__INSTRUCTIONS = eINSTANCE.getDocumentationSpecification_Instructions();
+		EReference DOCUMENTATION_SPECIFICATION__MODULE_DOCUMENTATION = eINSTANCE.getDocumentationSpecification_ModuleDocumentation();
 
 		/**
-		 * The meta object literal for the '<em><b>Training Intern</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Interface Documentation</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOCUMENTATION_SPECIFICATION__TRAINING_INTERN = eINSTANCE.getDocumentationSpecification_TrainingIntern();
+		EReference DOCUMENTATION_SPECIFICATION__INTERFACE_DOCUMENTATION = eINSTANCE.getDocumentationSpecification_InterfaceDocumentation();
 
 		/**
-		 * The meta object literal for the '<em><b>Training External</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Structure Documentation</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DOCUMENTATION_SPECIFICATION__TRAINING_EXTERNAL = eINSTANCE.getDocumentationSpecification_TrainingExternal();
+		EReference DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION = eINSTANCE.getDocumentationSpecification_StructureDocumentation();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.StaffSpecificationImpl <em>Staff Specification</em>}' class.
@@ -3080,6 +4007,86 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EClass DRAWING = eINSTANCE.getDrawing();
 
 		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DRAWING__PARENT = eINSTANCE.getDrawing_Parent();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.ComponentDrawingImpl <em>Component Drawing</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.ComponentDrawingImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentDrawing()
+		 * @generated
+		 */
+		EClass COMPONENT_DRAWING = eINSTANCE.getComponentDrawing();
+
+		/**
+		 * The meta object literal for the '<em><b>Drawn component</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_DRAWING__DRAWN_COMPONENT = eINSTANCE.getComponentDrawing_Drawn_component();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.ModuleDrawingImpl <em>Module Drawing</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.ModuleDrawingImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getModuleDrawing()
+		 * @generated
+		 */
+		EClass MODULE_DRAWING = eINSTANCE.getModuleDrawing();
+
+		/**
+		 * The meta object literal for the '<em><b>Drawn module</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE_DRAWING__DRAWN_MODULE = eINSTANCE.getModuleDrawing_Drawn_module();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.InterfaceDrawingImpl <em>Interface Drawing</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.InterfaceDrawingImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getInterfaceDrawing()
+		 * @generated
+		 */
+		EClass INTERFACE_DRAWING = eINSTANCE.getInterfaceDrawing();
+
+		/**
+		 * The meta object literal for the '<em><b>Drawn interface</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERFACE_DRAWING__DRAWN_INTERFACE = eINSTANCE.getInterfaceDrawing_Drawn_interface();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.StructureDrawingImpl <em>Structure Drawing</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.StructureDrawingImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStructureDrawing()
+		 * @generated
+		 */
+		EClass STRUCTURE_DRAWING = eINSTANCE.getStructureDrawing();
+
+		/**
+		 * The meta object literal for the '<em><b>Drawn structure</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUCTURE_DRAWING__DRAWN_STRUCTURE = eINSTANCE.getStructureDrawing_Drawn_structure();
+
+		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.MainteneanceDocumentationImpl <em>Mainteneance Documentation</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3088,6 +4095,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass MAINTENEANCE_DOCUMENTATION = eINSTANCE.getMainteneanceDocumentation();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MAINTENEANCE_DOCUMENTATION__PARENT = eINSTANCE.getMainteneanceDocumentation_Parent();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.OperatorInstructionsImpl <em>Operator Instructions</em>}' class.
@@ -3100,6 +4115,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EClass OPERATOR_INSTRUCTIONS = eINSTANCE.getOperatorInstructions();
 
 		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference OPERATOR_INSTRUCTIONS__PARENT = eINSTANCE.getOperatorInstructions_Parent();
+
+		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.TrainingDocInternImpl <em>Training Doc Intern</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3110,6 +4133,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EClass TRAINING_DOC_INTERN = eINSTANCE.getTrainingDocIntern();
 
 		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAINING_DOC_INTERN__PARENT = eINSTANCE.getTrainingDocIntern_Parent();
+
+		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.TrainingDocExternalImpl <em>Training Doc External</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3118,6 +4149,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRAINING_DOC_EXTERNAL = eINSTANCE.getTrainingDocExternal();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRAINING_DOC_EXTERNAL__PARENT = eINSTANCE.getTrainingDocExternal_Parent();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.SystemTestImpl <em>System Test</em>}' class.
@@ -3144,6 +4183,120 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference SYSTEM_TEST__SYSTEM_UNDER_TEST = eINSTANCE.getSystemTest_SystemUnderTest();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.DocumentationFilesImpl <em>Documentation Files</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.DocumentationFilesImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getDocumentationFiles()
+		 * @generated
+		 */
+		EClass DOCUMENTATION_FILES = eINSTANCE.getDocumentationFiles();
+
+		/**
+		 * The meta object literal for the '<em><b>Mainteneance</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOCUMENTATION_FILES__MAINTENEANCE = eINSTANCE.getDocumentationFiles_Mainteneance();
+
+		/**
+		 * The meta object literal for the '<em><b>Instructions</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOCUMENTATION_FILES__INSTRUCTIONS = eINSTANCE.getDocumentationFiles_Instructions();
+
+		/**
+		 * The meta object literal for the '<em><b>Training Intern</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOCUMENTATION_FILES__TRAINING_INTERN = eINSTANCE.getDocumentationFiles_TrainingIntern();
+
+		/**
+		 * The meta object literal for the '<em><b>Training External</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOCUMENTATION_FILES__TRAINING_EXTERNAL = eINSTANCE.getDocumentationFiles_TrainingExternal();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.ComponentDocumentationFilesImpl <em>Component Documentation Files</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.ComponentDocumentationFilesImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentDocumentationFiles()
+		 * @generated
+		 */
+		EClass COMPONENT_DOCUMENTATION_FILES = eINSTANCE.getComponentDocumentationFiles();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_DOCUMENTATION_FILES__PARENT = eINSTANCE.getComponentDocumentationFiles_Parent();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.ModuleDocumentationFilesImpl <em>Module Documentation Files</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.ModuleDocumentationFilesImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getModuleDocumentationFiles()
+		 * @generated
+		 */
+		EClass MODULE_DOCUMENTATION_FILES = eINSTANCE.getModuleDocumentationFiles();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE_DOCUMENTATION_FILES__PARENT = eINSTANCE.getModuleDocumentationFiles_Parent();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.InterfaceDocumentationFilesImpl <em>Interface Documentation Files</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.InterfaceDocumentationFilesImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getInterfaceDocumentationFiles()
+		 * @generated
+		 */
+		EClass INTERFACE_DOCUMENTATION_FILES = eINSTANCE.getInterfaceDocumentationFiles();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERFACE_DOCUMENTATION_FILES__PARENT = eINSTANCE.getInterfaceDocumentationFiles_Parent();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.StructureDocumentationFilesImpl <em>Structure Documentation Files</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.StructureDocumentationFilesImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStructureDocumentationFiles()
+		 * @generated
+		 */
+		EClass STRUCTURE_DOCUMENTATION_FILES = eINSTANCE.getStructureDocumentationFiles();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUCTURE_DOCUMENTATION_FILES__PARENT = eINSTANCE.getStructureDocumentationFiles_Parent();
 
 	}
 

@@ -64,18 +64,23 @@
         eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
         eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawings" upperBound="-1"
+        eType="#//Drawing" containment="true" eOpposite="#//Drawing/parent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DocumentationSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/documentationSpecification"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="mainteneance" upperBound="-1"
-        eType="#//MainteneanceDocumentation"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
-        eType="#//OperatorInstructions"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="trainingIntern" upperBound="-1"
-        eType="#//TrainingDocIntern"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="trainingExternal" upperBound="-1"
-        eType="#//TrainingDocExternal"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentDocumentation"
+        upperBound="-1" eType="#//ComponentDocumentationFiles" containment="true"
+        eOpposite="#//ComponentDocumentationFiles/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleDocumentation" upperBound="-1"
+        eType="#//ModuleDocumentationFiles" containment="true" eOpposite="#//ModuleDocumentationFiles/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceDocumentation"
+        upperBound="-1" eType="#//InterfaceDocumentationFiles" containment="true"
+        eOpposite="#//InterfaceDocumentationFiles/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structureDocumentation"
+        upperBound="-1" eType="#//StructureDocumentationFiles" containment="true"
+        eOpposite="#//StructureDocumentationFiles/parent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StaffSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
@@ -145,14 +150,67 @@
   <eClassifiers xsi:type="ecore:EClass" name="Purchaser" eSuperTypes="#//Role"/>
   <eClassifiers xsi:type="ecore:EClass" name="Mechanic" eSuperTypes="#//Role"/>
   <eClassifiers xsi:type="ecore:EClass" name="Documentation" eSuperTypes="#//File"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Drawing" eSuperTypes="#//File"/>
-  <eClassifiers xsi:type="ecore:EClass" name="MainteneanceDocumentation" eSuperTypes="#//Documentation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="OperatorInstructions" eSuperTypes="#//Documentation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TrainingDocIntern" eSuperTypes="#//Documentation"/>
-  <eClassifiers xsi:type="ecore:EClass" name="TrainingDocExternal" eSuperTypes="#//Documentation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Drawing" eSuperTypes="#//File">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//ECADSpecification" eOpposite="#//ECADSpecification/drawings"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentDrawing" eSuperTypes="#//Drawing">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_component" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleDrawing" eSuperTypes="#//Drawing">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_module" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceDrawing" eSuperTypes="#//Drawing">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_interface" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StructureDrawing" eSuperTypes="#//Drawing">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_structure" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MainteneanceDocumentation" eSuperTypes="#//Documentation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationFiles" eOpposite="#//DocumentationFiles/mainteneance"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OperatorInstructions" eSuperTypes="#//Documentation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationFiles" eOpposite="#//DocumentationFiles/instructions"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrainingDocIntern" eSuperTypes="#//Documentation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationFiles" eOpposite="#//DocumentationFiles/trainingIntern"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TrainingDocExternal" eSuperTypes="#//Documentation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationFiles" eOpposite="#//DocumentationFiles/trainingExternal"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SystemTest" eSuperTypes="#//TestCase">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//TestSpecification" eOpposite="#//TestSpecification/systemTests"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnderTest" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//Plant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentationFiles" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mainteneance" upperBound="-1"
+        eType="#//MainteneanceDocumentation" containment="true" eOpposite="#//MainteneanceDocumentation/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
+        eType="#//OperatorInstructions" containment="true" eOpposite="#//OperatorInstructions/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trainingIntern" upperBound="-1"
+        eType="#//TrainingDocIntern" containment="true" eOpposite="#//TrainingDocIntern/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="trainingExternal" upperBound="-1"
+        eType="#//TrainingDocExternal" containment="true" eOpposite="#//TrainingDocExternal/parent"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentDocumentationFiles" eSuperTypes="#//DocumentationFiles">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/componentDocumentation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleDocumentationFiles" eSuperTypes="#//DocumentationFiles">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/moduleDocumentation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceDocumentationFiles" eSuperTypes="#//DocumentationFiles">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/interfaceDocumentation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StructureDocumentationFiles" eSuperTypes="#//DocumentationFiles">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/structureDocumentation"/>
   </eClassifiers>
 </ecore:EPackage>

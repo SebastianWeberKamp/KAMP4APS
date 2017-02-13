@@ -28,6 +28,7 @@ import xPPU.StructureRepository.Structure;
  *   <li>{@link fieldofactivityannotations.ECADSpecification#getModules <em>Modules</em>}</li>
  *   <li>{@link fieldofactivityannotations.ECADSpecification#getInterfaces <em>Interfaces</em>}</li>
  *   <li>{@link fieldofactivityannotations.ECADSpecification#getStructures <em>Structures</em>}</li>
+ *   <li>{@link fieldofactivityannotations.ECADSpecification#getDrawings <em>Drawings</em>}</li>
  * </ul>
  *
  * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getECADSpecification()
@@ -126,5 +127,23 @@ public interface ECADSpecification extends EObject {
 	 * @generated
 	 */
 	EList<Structure> getStructures();
+
+	/**
+	 * Returns the value of the '<em><b>Drawings</b></em>' containment reference list.
+	 * The list contents are of type {@link fieldofactivityannotations.Drawing}.
+	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.Drawing#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Drawings</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Drawings</em>' containment reference list.
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getECADSpecification_Drawings()
+	 * @see fieldofactivityannotations.Drawing#getParent
+	 * @model opposite="parent" containment="true"
+	 * @generated
+	 */
+	EList<Drawing> getDrawings();
 
 } // ECADSpecification

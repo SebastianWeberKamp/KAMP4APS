@@ -76,11 +76,19 @@ public class FieldofactivityannotationsFactoryImpl extends EFactoryImpl implemen
 			case FieldofactivityannotationsPackage.MECHANIC: return createMechanic();
 			case FieldofactivityannotationsPackage.DOCUMENTATION: return createDocumentation();
 			case FieldofactivityannotationsPackage.DRAWING: return createDrawing();
+			case FieldofactivityannotationsPackage.COMPONENT_DRAWING: return createComponentDrawing();
+			case FieldofactivityannotationsPackage.MODULE_DRAWING: return createModuleDrawing();
+			case FieldofactivityannotationsPackage.INTERFACE_DRAWING: return createInterfaceDrawing();
+			case FieldofactivityannotationsPackage.STRUCTURE_DRAWING: return createStructureDrawing();
 			case FieldofactivityannotationsPackage.MAINTENEANCE_DOCUMENTATION: return createMainteneanceDocumentation();
 			case FieldofactivityannotationsPackage.OPERATOR_INSTRUCTIONS: return createOperatorInstructions();
 			case FieldofactivityannotationsPackage.TRAINING_DOC_INTERN: return createTrainingDocIntern();
 			case FieldofactivityannotationsPackage.TRAINING_DOC_EXTERNAL: return createTrainingDocExternal();
 			case FieldofactivityannotationsPackage.SYSTEM_TEST: return createSystemTest();
+			case FieldofactivityannotationsPackage.COMPONENT_DOCUMENTATION_FILES: return createComponentDocumentationFiles();
+			case FieldofactivityannotationsPackage.MODULE_DOCUMENTATION_FILES: return createModuleDocumentationFiles();
+			case FieldofactivityannotationsPackage.INTERFACE_DOCUMENTATION_FILES: return createInterfaceDocumentationFiles();
+			case FieldofactivityannotationsPackage.STRUCTURE_DOCUMENTATION_FILES: return createStructureDocumentationFiles();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -291,6 +299,46 @@ public class FieldofactivityannotationsFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ComponentDrawing createComponentDrawing() {
+		ComponentDrawingImpl componentDrawing = new ComponentDrawingImpl();
+		return componentDrawing;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModuleDrawing createModuleDrawing() {
+		ModuleDrawingImpl moduleDrawing = new ModuleDrawingImpl();
+		return moduleDrawing;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InterfaceDrawing createInterfaceDrawing() {
+		InterfaceDrawingImpl interfaceDrawing = new InterfaceDrawingImpl();
+		return interfaceDrawing;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StructureDrawing createStructureDrawing() {
+		StructureDrawingImpl structureDrawing = new StructureDrawingImpl();
+		return structureDrawing;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MainteneanceDocumentation createMainteneanceDocumentation() {
 		MainteneanceDocumentationImpl mainteneanceDocumentation = new MainteneanceDocumentationImpl();
 		return mainteneanceDocumentation;
@@ -334,6 +382,46 @@ public class FieldofactivityannotationsFactoryImpl extends EFactoryImpl implemen
 	public SystemTest createSystemTest() {
 		SystemTestImpl systemTest = new SystemTestImpl();
 		return systemTest;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComponentDocumentationFiles createComponentDocumentationFiles() {
+		ComponentDocumentationFilesImpl componentDocumentationFiles = new ComponentDocumentationFilesImpl();
+		return componentDocumentationFiles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModuleDocumentationFiles createModuleDocumentationFiles() {
+		ModuleDocumentationFilesImpl moduleDocumentationFiles = new ModuleDocumentationFilesImpl();
+		return moduleDocumentationFiles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InterfaceDocumentationFiles createInterfaceDocumentationFiles() {
+		InterfaceDocumentationFilesImpl interfaceDocumentationFiles = new InterfaceDocumentationFilesImpl();
+		return interfaceDocumentationFiles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StructureDocumentationFiles createStructureDocumentationFiles() {
+		StructureDocumentationFilesImpl structureDocumentationFiles = new StructureDocumentationFilesImpl();
+		return structureDocumentationFiles;
 	}
 
 	/**

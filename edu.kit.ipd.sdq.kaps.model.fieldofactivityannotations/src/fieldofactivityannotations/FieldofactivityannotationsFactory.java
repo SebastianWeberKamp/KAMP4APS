@@ -202,6 +202,42 @@ public interface FieldofactivityannotationsFactory extends EFactory {
 	Drawing createDrawing();
 
 	/**
+	 * Returns a new object of class '<em>Component Drawing</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component Drawing</em>'.
+	 * @generated
+	 */
+	ComponentDrawing createComponentDrawing();
+
+	/**
+	 * Returns a new object of class '<em>Module Drawing</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module Drawing</em>'.
+	 * @generated
+	 */
+	ModuleDrawing createModuleDrawing();
+
+	/**
+	 * Returns a new object of class '<em>Interface Drawing</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Interface Drawing</em>'.
+	 * @generated
+	 */
+	InterfaceDrawing createInterfaceDrawing();
+
+	/**
+	 * Returns a new object of class '<em>Structure Drawing</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Structure Drawing</em>'.
+	 * @generated
+	 */
+	StructureDrawing createStructureDrawing();
+
+	/**
 	 * Returns a new object of class '<em>Mainteneance Documentation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -245,6 +281,42 @@ public interface FieldofactivityannotationsFactory extends EFactory {
 	 * @generated
 	 */
 	SystemTest createSystemTest();
+
+	/**
+	 * Returns a new object of class '<em>Component Documentation Files</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component Documentation Files</em>'.
+	 * @generated
+	 */
+	ComponentDocumentationFiles createComponentDocumentationFiles();
+
+	/**
+	 * Returns a new object of class '<em>Module Documentation Files</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module Documentation Files</em>'.
+	 * @generated
+	 */
+	ModuleDocumentationFiles createModuleDocumentationFiles();
+
+	/**
+	 * Returns a new object of class '<em>Interface Documentation Files</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Interface Documentation Files</em>'.
+	 * @generated
+	 */
+	InterfaceDocumentationFiles createInterfaceDocumentationFiles();
+
+	/**
+	 * Returns a new object of class '<em>Structure Documentation Files</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Structure Documentation Files</em>'.
+	 * @generated
+	 */
+	StructureDocumentationFiles createStructureDocumentationFiles();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -16,10 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getParent <em>Parent</em>}</li>
- *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getMainteneance <em>Mainteneance</em>}</li>
- *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getInstructions <em>Instructions</em>}</li>
- *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getTrainingIntern <em>Training Intern</em>}</li>
- *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getTrainingExternal <em>Training External</em>}</li>
+ *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getComponentDocumentation <em>Component Documentation</em>}</li>
+ *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getModuleDocumentation <em>Module Documentation</em>}</li>
+ *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getInterfaceDocumentation <em>Interface Documentation</em>}</li>
+ *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getStructureDocumentation <em>Structure Documentation</em>}</li>
  * </ul>
  *
  * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationSpecification()
@@ -56,67 +56,75 @@ public interface DocumentationSpecification extends EObject {
 	void setParent(FieldOfActivityAnnotationRepository value);
 
 	/**
-	 * Returns the value of the '<em><b>Mainteneance</b></em>' reference list.
-	 * The list contents are of type {@link fieldofactivityannotations.MainteneanceDocumentation}.
+	 * Returns the value of the '<em><b>Component Documentation</b></em>' containment reference list.
+	 * The list contents are of type {@link fieldofactivityannotations.ComponentDocumentationFiles}.
+	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.ComponentDocumentationFiles#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Mainteneance</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Component Documentation</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mainteneance</em>' reference list.
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationSpecification_Mainteneance()
-	 * @model
+	 * @return the value of the '<em>Component Documentation</em>' containment reference list.
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationSpecification_ComponentDocumentation()
+	 * @see fieldofactivityannotations.ComponentDocumentationFiles#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<MainteneanceDocumentation> getMainteneance();
+	EList<ComponentDocumentationFiles> getComponentDocumentation();
 
 	/**
-	 * Returns the value of the '<em><b>Instructions</b></em>' reference list.
-	 * The list contents are of type {@link fieldofactivityannotations.OperatorInstructions}.
+	 * Returns the value of the '<em><b>Module Documentation</b></em>' containment reference list.
+	 * The list contents are of type {@link fieldofactivityannotations.ModuleDocumentationFiles}.
+	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.ModuleDocumentationFiles#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Instructions</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Module Documentation</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Instructions</em>' reference list.
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationSpecification_Instructions()
-	 * @model
+	 * @return the value of the '<em>Module Documentation</em>' containment reference list.
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationSpecification_ModuleDocumentation()
+	 * @see fieldofactivityannotations.ModuleDocumentationFiles#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<OperatorInstructions> getInstructions();
+	EList<ModuleDocumentationFiles> getModuleDocumentation();
 
 	/**
-	 * Returns the value of the '<em><b>Training Intern</b></em>' reference list.
-	 * The list contents are of type {@link fieldofactivityannotations.TrainingDocIntern}.
+	 * Returns the value of the '<em><b>Interface Documentation</b></em>' containment reference list.
+	 * The list contents are of type {@link fieldofactivityannotations.InterfaceDocumentationFiles}.
+	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.InterfaceDocumentationFiles#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Training Intern</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Interface Documentation</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Training Intern</em>' reference list.
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationSpecification_TrainingIntern()
-	 * @model
+	 * @return the value of the '<em>Interface Documentation</em>' containment reference list.
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationSpecification_InterfaceDocumentation()
+	 * @see fieldofactivityannotations.InterfaceDocumentationFiles#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<TrainingDocIntern> getTrainingIntern();
+	EList<InterfaceDocumentationFiles> getInterfaceDocumentation();
 
 	/**
-	 * Returns the value of the '<em><b>Training External</b></em>' reference list.
-	 * The list contents are of type {@link fieldofactivityannotations.TrainingDocExternal}.
+	 * Returns the value of the '<em><b>Structure Documentation</b></em>' containment reference list.
+	 * The list contents are of type {@link fieldofactivityannotations.StructureDocumentationFiles}.
+	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.StructureDocumentationFiles#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Training External</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Structure Documentation</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Training External</em>' reference list.
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationSpecification_TrainingExternal()
-	 * @model
+	 * @return the value of the '<em>Structure Documentation</em>' containment reference list.
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationSpecification_StructureDocumentation()
+	 * @see fieldofactivityannotations.StructureDocumentationFiles#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<TrainingDocExternal> getTrainingExternal();
+	EList<StructureDocumentationFiles> getStructureDocumentation();
 
 } // DocumentationSpecification
