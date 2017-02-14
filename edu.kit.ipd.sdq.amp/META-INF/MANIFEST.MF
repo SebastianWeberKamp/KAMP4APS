@@ -19,5 +19,6 @@ Export-Package: edu.kit.ipd.sdq.amp.architecture,
  edu.kit.ipd.sdq.amp.util,
  edu.kit.ipd.sdq.amp.workplan
 Bundle-ClassPath: ., libs/jxl.jar
-Import-Package: org.palladiosimulator.pcm.repository,
+Import-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks,
+ org.palladiosimulator.pcm.repository,
  xPPU
