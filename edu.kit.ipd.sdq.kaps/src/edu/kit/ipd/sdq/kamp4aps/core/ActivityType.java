@@ -5,7 +5,7 @@ import edu.kit.ipd.sdq.amp.workplan.AbstractActivityType;
 public enum ActivityType implements AbstractActivityType {
 	//TODO Update for aPS
 	ARCHITECTUREMODELDIFF("Architecture-related activity"),
-//	INTERNALMODIFICATIONMARK("Modification mark"),
+	INTERNALMODIFICATIONMARK("Modification mark"),
 //	IMPLEMENTATION_SOURCECODE("Source code implementation"),
 //	IMPLEMENTATION_METADATA("Meta data implementation"),
 //	BUILDCONFIGURATION("Build configuration"),

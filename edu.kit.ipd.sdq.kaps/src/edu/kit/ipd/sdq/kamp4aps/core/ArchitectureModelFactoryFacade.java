@@ -1,7 +1,7 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
-import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesFactory;
-import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
+//import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesFactory;
+//import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
 
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion.ArchitectureVersionParams;
 import fieldofactivityannotations.CalibrationSpecification;
@@ -39,9 +39,9 @@ public class ArchitectureModelFactoryFacade {
 		return repository;
 	}
 
-	public static ComponentInternalDependencyRepository createComponentInternalDependencyRepository() {
-		return ComponentInternalDependenciesFactory.eINSTANCE.createComponentInternalDependencyRepository();
-	}
+//	public static ComponentInternalDependencyRepository createComponentInternalDependencyRepository() {
+//		return ComponentInternalDependenciesFactory.eINSTANCE.createComponentInternalDependencyRepository();
+//	}
 
 	public static FieldOfActivityAnnotationRepository createFieldOfActivityAnnotationsRepository() {
 		FieldOfActivityAnnotationRepository repository =  FieldofactivityannotationsFactory.eINSTANCE.createFieldOfActivityAnnotationRepository();

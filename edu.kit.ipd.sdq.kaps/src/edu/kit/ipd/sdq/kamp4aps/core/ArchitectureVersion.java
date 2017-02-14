@@ -1,7 +1,7 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
-import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesFactory;
-import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
+//import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesFactory;
+//import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
 
 import edu.kit.ipd.sdq.amp.architecture.AbstractArchitectureVersion;
 import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
@@ -11,14 +11,14 @@ import xPPU.Plant;
 
 public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAPSModificationRepository<?>> {
 	private FieldOfActivityAnnotationRepository _fieldOfActivityRepository;
-	private ComponentInternalDependencyRepository _componentInternalDependencyRepository;
+//	private ComponentInternalDependencyRepository _componentInternalDependencyRepository;
 	private Plant _xppuPlant;
 	
 	public static class ArchitectureVersionParams{
 		public String name;
 		public FieldOfActivityAnnotationRepository fieldOfActivityRepository;
 		public AbstractKAPSModificationRepository<?> modificationMarkRepository;
-		public ComponentInternalDependencyRepository componentInternalDependencyRepository;
+//		public ComponentInternalDependencyRepository componentInternalDependencyRepository;
 		public Plant xPPUPlant;
 	}
 	
@@ -33,11 +33,11 @@ public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAP
 					createFieldOfActivityAnnotationRepository();
 		}
 		this._fieldOfActivityRepository = params.fieldOfActivityRepository;
-		if (_componentInternalDependencyRepository == null) {
-			_componentInternalDependencyRepository = ComponentInternalDependenciesFactory.eINSTANCE.
-					createComponentInternalDependencyRepository();
-		}
-		this._componentInternalDependencyRepository = params.componentInternalDependencyRepository;
+//		if (_componentInternalDependencyRepository == null) {
+//			_componentInternalDependencyRepository = ComponentInternalDependenciesFactory.eINSTANCE.
+//					createComponentInternalDependencyRepository();
+//		}
+//		this._componentInternalDependencyRepository = params.componentInternalDependencyRepository;
 		
 		this._xppuPlant = params.xPPUPlant;
 	}
@@ -51,14 +51,14 @@ public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAP
 		this._fieldOfActivityRepository = fieldOfActivityRepository;
 	}
 
-	public ComponentInternalDependencyRepository getComponentInternalDependencyRepository() {
-		return _componentInternalDependencyRepository;
-	}
-
-	public void setComponentInternalDependencyRepository(
-			ComponentInternalDependencyRepository componentInternalDependencyRepository) {
-		this._componentInternalDependencyRepository = componentInternalDependencyRepository;
-	}
+//	public ComponentInternalDependencyRepository getComponentInternalDependencyRepository() {
+//		return _componentInternalDependencyRepository;
+//	}
+//
+//	public void setComponentInternalDependencyRepository(
+//			ComponentInternalDependencyRepository componentInternalDependencyRepository) {
+//		this._componentInternalDependencyRepository = componentInternalDependencyRepository;
+//	}
 	
 	public Plant getXPPUPlant(){
 		return _xppuPlant;
