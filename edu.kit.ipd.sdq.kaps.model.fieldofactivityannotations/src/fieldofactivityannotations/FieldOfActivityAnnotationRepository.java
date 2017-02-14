@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getCalibrationSpecification <em>Calibration Specification</em>}</li>
  *   <li>{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getTestSpecification <em>Test Specification</em>}</li>
  *   <li>{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getDevelopmentSpecification <em>Development Specification</em>}</li>
- *   <li>{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getPurchaseSpecification <em>Purchase Specification</em>}</li>
+ *   <li>{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getStockSpecification <em>Stock Specification</em>}</li>
  *   <li>{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getHmiSpecification <em>Hmi Specification</em>}</li>
  *   <li>{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getEcadSpecification <em>Ecad Specification</em>}</li>
  *   <li>{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getDocumentationSpecification <em>Documentation Specification</em>}</li>
@@ -114,32 +114,32 @@ public interface FieldOfActivityAnnotationRepository extends EObject {
 	void setDevelopmentSpecification(DevelopmentSpecification value);
 
 	/**
-	 * Returns the value of the '<em><b>Purchase Specification</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Stock Specification</b></em>' containment reference.
 	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.StockSpecification#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Purchase Specification</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Stock Specification</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Purchase Specification</em>' containment reference.
-	 * @see #setPurchaseSpecification(StockSpecification)
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getFieldOfActivityAnnotationRepository_PurchaseSpecification()
+	 * @return the value of the '<em>Stock Specification</em>' containment reference.
+	 * @see #setStockSpecification(StockSpecification)
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getFieldOfActivityAnnotationRepository_StockSpecification()
 	 * @see fieldofactivityannotations.StockSpecification#getParent
 	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	StockSpecification getPurchaseSpecification();
+	StockSpecification getStockSpecification();
 
 	/**
-	 * Sets the value of the '{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getPurchaseSpecification <em>Purchase Specification</em>}' containment reference.
+	 * Sets the value of the '{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getStockSpecification <em>Stock Specification</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Purchase Specification</em>' containment reference.
-	 * @see #getPurchaseSpecification()
+	 * @param value the new value of the '<em>Stock Specification</em>' containment reference.
+	 * @see #getStockSpecification()
 	 * @generated
 	 */
-	void setPurchaseSpecification(StockSpecification value);
+	void setStockSpecification(StockSpecification value);
 
 	/**
 	 * Returns the value of the '<em><b>Hmi Specification</b></em>' containment reference.

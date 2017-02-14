@@ -132,13 +132,6 @@ public class FieldofactivityannotationsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case FieldofactivityannotationsPackage.STOCK_LIST: {
-				StockList stockList = (StockList)theEObject;
-				T result = caseStockList(stockList);
-				if (result == null) result = caseFile(stockList);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case FieldofactivityannotationsPackage.ROLE_LIST: {
 				RoleList roleList = (RoleList)theEObject;
 				T result = caseRoleList(roleList);
@@ -312,6 +305,45 @@ public class FieldofactivityannotationsSwitch<T> extends Switch<T> {
 				StructureDocumentationFiles structureDocumentationFiles = (StructureDocumentationFiles)theEObject;
 				T result = caseStructureDocumentationFiles(structureDocumentationFiles);
 				if (result == null) result = caseDocumentationFiles(structureDocumentationFiles);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.STOCK_LIST: {
+				StockList stockList = (StockList)theEObject;
+				T result = caseStockList(stockList);
+				if (result == null) result = caseFile(stockList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.COMPONENT_STOCK_LIST: {
+				ComponentStockList componentStockList = (ComponentStockList)theEObject;
+				T result = caseComponentStockList(componentStockList);
+				if (result == null) result = caseStockList(componentStockList);
+				if (result == null) result = caseFile(componentStockList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.INTERFACE_STOCK_LIST: {
+				InterfaceStockList interfaceStockList = (InterfaceStockList)theEObject;
+				T result = caseInterfaceStockList(interfaceStockList);
+				if (result == null) result = caseStockList(interfaceStockList);
+				if (result == null) result = caseFile(interfaceStockList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.MODULE_STOCK_LIST: {
+				ModuleStockList moduleStockList = (ModuleStockList)theEObject;
+				T result = caseModuleStockList(moduleStockList);
+				if (result == null) result = caseStockList(moduleStockList);
+				if (result == null) result = caseFile(moduleStockList);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case FieldofactivityannotationsPackage.STRUCTURE_STOCK_LIST: {
+				StructureStockList structureStockList = (StructureStockList)theEObject;
+				T result = caseStructureStockList(structureStockList);
+				if (result == null) result = caseStockList(structureStockList);
+				if (result == null) result = caseFile(structureStockList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -496,6 +528,66 @@ public class FieldofactivityannotationsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseStockList(StockList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Component Stock List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Component Stock List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseComponentStockList(ComponentStockList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Interface Stock List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Interface Stock List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseInterfaceStockList(InterfaceStockList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Module Stock List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Module Stock List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModuleStockList(ModuleStockList object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Structure Stock List</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Structure Stock List</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseStructureStockList(StructureStockList object) {
 		return null;
 	}
 

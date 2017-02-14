@@ -6,6 +6,7 @@ import fieldofactivityannotations.CalibrationSpecification;
 import fieldofactivityannotations.ComponentDocumentationFiles;
 import fieldofactivityannotations.ComponentDrawing;
 import fieldofactivityannotations.ComponentSpecification;
+import fieldofactivityannotations.ComponentStockList;
 import fieldofactivityannotations.DevelopmentSpecification;
 import fieldofactivityannotations.Documentation;
 import fieldofactivityannotations.DocumentationFiles;
@@ -21,10 +22,12 @@ import fieldofactivityannotations.HMIConfiguration;
 import fieldofactivityannotations.HMISpecification;
 import fieldofactivityannotations.InterfaceDocumentationFiles;
 import fieldofactivityannotations.InterfaceDrawing;
+import fieldofactivityannotations.InterfaceStockList;
 import fieldofactivityannotations.MainteneanceDocumentation;
 import fieldofactivityannotations.Mechanic;
 import fieldofactivityannotations.ModuleDocumentationFiles;
 import fieldofactivityannotations.ModuleDrawing;
+import fieldofactivityannotations.ModuleStockList;
 import fieldofactivityannotations.OperatorInstructions;
 import fieldofactivityannotations.Person;
 import fieldofactivityannotations.PersonList;
@@ -36,6 +39,7 @@ import fieldofactivityannotations.StockList;
 import fieldofactivityannotations.StockSpecification;
 import fieldofactivityannotations.StructureDocumentationFiles;
 import fieldofactivityannotations.StructureDrawing;
+import fieldofactivityannotations.StructureStockList;
 import fieldofactivityannotations.SystemTest;
 import fieldofactivityannotations.TestCase;
 import fieldofactivityannotations.TestSpecification;
@@ -149,6 +153,34 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * @generated
 	 */
 	private EClass stockListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass componentStockListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass interfaceStockListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moduleStockListEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass structureStockListEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -430,7 +462,7 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getFieldOfActivityAnnotationRepository_PurchaseSpecification() {
+	public EReference getFieldOfActivityAnnotationRepository_StockSpecification() {
 		return (EReference)fieldOfActivityAnnotationRepositoryEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -529,8 +561,35 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStockSpecification_StockList() {
+	public EReference getStockSpecification_ComponentStockList() {
 		return (EReference)stockSpecificationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStockSpecification_InterfaceStockList() {
+		return (EReference)stockSpecificationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStockSpecification_ModuleStockList() {
+		return (EReference)stockSpecificationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStockSpecification_StructureStockList() {
+		return (EReference)stockSpecificationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -844,8 +903,8 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStockList_Parent() {
-		return (EReference)stockListEClass.getEStructuralFeatures().get(0);
+	public EClass getComponentStockList() {
+		return componentStockListEClass;
 	}
 
 	/**
@@ -853,8 +912,8 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStockList_Components() {
-		return (EReference)stockListEClass.getEStructuralFeatures().get(1);
+	public EReference getComponentStockList_Parent() {
+		return (EReference)componentStockListEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -862,8 +921,8 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStockList_Modules() {
-		return (EReference)stockListEClass.getEStructuralFeatures().get(2);
+	public EReference getComponentStockList_Components() {
+		return (EReference)componentStockListEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -871,8 +930,8 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStockList_Interfaces() {
-		return (EReference)stockListEClass.getEStructuralFeatures().get(3);
+	public EClass getInterfaceStockList() {
+		return interfaceStockListEClass;
 	}
 
 	/**
@@ -880,8 +939,71 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStockList_Structures() {
-		return (EReference)stockListEClass.getEStructuralFeatures().get(4);
+	public EReference getInterfaceStockList_Parent() {
+		return (EReference)interfaceStockListEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInterfaceStockList_Interfaces() {
+		return (EReference)interfaceStockListEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getModuleStockList() {
+		return moduleStockListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModuleStockList_Parent() {
+		return (EReference)moduleStockListEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModuleStockList_Modules() {
+		return (EReference)moduleStockListEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getStructureStockList() {
+		return structureStockListEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStructureStockList_Parent() {
+		return (EReference)structureStockListEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getStructureStockList_Structures() {
+		return (EReference)structureStockListEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1420,7 +1542,7 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 		createEReference(fieldOfActivityAnnotationRepositoryEClass, FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__CALIBRATION_SPECIFICATION);
 		createEReference(fieldOfActivityAnnotationRepositoryEClass, FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__TEST_SPECIFICATION);
 		createEReference(fieldOfActivityAnnotationRepositoryEClass, FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DEVELOPMENT_SPECIFICATION);
-		createEReference(fieldOfActivityAnnotationRepositoryEClass, FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__PURCHASE_SPECIFICATION);
+		createEReference(fieldOfActivityAnnotationRepositoryEClass, FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION);
 		createEReference(fieldOfActivityAnnotationRepositoryEClass, FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__HMI_SPECIFICATION);
 		createEReference(fieldOfActivityAnnotationRepositoryEClass, FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__ECAD_SPECIFICATION);
 		createEReference(fieldOfActivityAnnotationRepositoryEClass, FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DOCUMENTATION_SPECIFICATION);
@@ -1433,7 +1555,10 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 
 		stockSpecificationEClass = createEClass(STOCK_SPECIFICATION);
 		createEReference(stockSpecificationEClass, STOCK_SPECIFICATION__PARENT);
-		createEReference(stockSpecificationEClass, STOCK_SPECIFICATION__STOCK_LIST);
+		createEReference(stockSpecificationEClass, STOCK_SPECIFICATION__COMPONENT_STOCK_LIST);
+		createEReference(stockSpecificationEClass, STOCK_SPECIFICATION__INTERFACE_STOCK_LIST);
+		createEReference(stockSpecificationEClass, STOCK_SPECIFICATION__MODULE_STOCK_LIST);
+		createEReference(stockSpecificationEClass, STOCK_SPECIFICATION__STRUCTURE_STOCK_LIST);
 
 		hmiSpecificationEClass = createEClass(HMI_SPECIFICATION);
 		createEReference(hmiSpecificationEClass, HMI_SPECIFICATION__PARENT);
@@ -1475,13 +1600,6 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 
 		componentSpecificationEClass = createEClass(COMPONENT_SPECIFICATION);
 		createEReference(componentSpecificationEClass, COMPONENT_SPECIFICATION__PARENT);
-
-		stockListEClass = createEClass(STOCK_LIST);
-		createEReference(stockListEClass, STOCK_LIST__PARENT);
-		createEReference(stockListEClass, STOCK_LIST__COMPONENTS);
-		createEReference(stockListEClass, STOCK_LIST__MODULES);
-		createEReference(stockListEClass, STOCK_LIST__INTERFACES);
-		createEReference(stockListEClass, STOCK_LIST__STRUCTURES);
 
 		roleListEClass = createEClass(ROLE_LIST);
 		createEReference(roleListEClass, ROLE_LIST__PARENT);
@@ -1563,6 +1681,24 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 
 		structureDocumentationFilesEClass = createEClass(STRUCTURE_DOCUMENTATION_FILES);
 		createEReference(structureDocumentationFilesEClass, STRUCTURE_DOCUMENTATION_FILES__PARENT);
+
+		stockListEClass = createEClass(STOCK_LIST);
+
+		componentStockListEClass = createEClass(COMPONENT_STOCK_LIST);
+		createEReference(componentStockListEClass, COMPONENT_STOCK_LIST__PARENT);
+		createEReference(componentStockListEClass, COMPONENT_STOCK_LIST__COMPONENTS);
+
+		interfaceStockListEClass = createEClass(INTERFACE_STOCK_LIST);
+		createEReference(interfaceStockListEClass, INTERFACE_STOCK_LIST__PARENT);
+		createEReference(interfaceStockListEClass, INTERFACE_STOCK_LIST__INTERFACES);
+
+		moduleStockListEClass = createEClass(MODULE_STOCK_LIST);
+		createEReference(moduleStockListEClass, MODULE_STOCK_LIST__PARENT);
+		createEReference(moduleStockListEClass, MODULE_STOCK_LIST__MODULES);
+
+		structureStockListEClass = createEClass(STRUCTURE_STOCK_LIST);
+		createEReference(structureStockListEClass, STRUCTURE_STOCK_LIST__PARENT);
+		createEReference(structureStockListEClass, STRUCTURE_STOCK_LIST__STRUCTURES);
 	}
 
 	/**
@@ -1600,7 +1736,6 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		stockListEClass.getESuperTypes().add(this.getFile());
 		engineerEClass.getESuperTypes().add(this.getRole());
 		purchaserEClass.getESuperTypes().add(this.getRole());
 		mechanicEClass.getESuperTypes().add(this.getRole());
@@ -1619,13 +1754,18 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 		moduleDocumentationFilesEClass.getESuperTypes().add(this.getDocumentationFiles());
 		interfaceDocumentationFilesEClass.getESuperTypes().add(this.getDocumentationFiles());
 		structureDocumentationFilesEClass.getESuperTypes().add(this.getDocumentationFiles());
+		stockListEClass.getESuperTypes().add(this.getFile());
+		componentStockListEClass.getESuperTypes().add(this.getStockList());
+		interfaceStockListEClass.getESuperTypes().add(this.getStockList());
+		moduleStockListEClass.getESuperTypes().add(this.getStockList());
+		structureStockListEClass.getESuperTypes().add(this.getStockList());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(fieldOfActivityAnnotationRepositoryEClass, FieldOfActivityAnnotationRepository.class, "FieldOfActivityAnnotationRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getFieldOfActivityAnnotationRepository_CalibrationSpecification(), this.getCalibrationSpecification(), this.getCalibrationSpecification_Parent(), "calibrationSpecification", null, 0, 1, FieldOfActivityAnnotationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFieldOfActivityAnnotationRepository_TestSpecification(), this.getTestSpecification(), this.getTestSpecification_Parent(), "testSpecification", null, 0, 1, FieldOfActivityAnnotationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFieldOfActivityAnnotationRepository_DevelopmentSpecification(), this.getDevelopmentSpecification(), this.getDevelopmentSpecification_Parent(), "developmentSpecification", null, 0, 1, FieldOfActivityAnnotationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFieldOfActivityAnnotationRepository_PurchaseSpecification(), this.getStockSpecification(), this.getStockSpecification_Parent(), "purchaseSpecification", null, 0, 1, FieldOfActivityAnnotationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFieldOfActivityAnnotationRepository_StockSpecification(), this.getStockSpecification(), this.getStockSpecification_Parent(), "stockSpecification", null, 0, 1, FieldOfActivityAnnotationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFieldOfActivityAnnotationRepository_HmiSpecification(), this.getHMISpecification(), this.getHMISpecification_Parent(), "hmiSpecification", null, 0, 1, FieldOfActivityAnnotationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFieldOfActivityAnnotationRepository_EcadSpecification(), this.getECADSpecification(), this.getECADSpecification_Parent(), "ecadSpecification", null, 0, 1, FieldOfActivityAnnotationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFieldOfActivityAnnotationRepository_DocumentationSpecification(), this.getDocumentationSpecification(), this.getDocumentationSpecification_Parent(), "documentationSpecification", null, 0, 1, FieldOfActivityAnnotationRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1637,8 +1777,11 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 		initEReference(getTestSpecification_SystemTests(), this.getSystemTest(), this.getSystemTest_Parent(), "systemTests", null, 0, -1, TestSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(stockSpecificationEClass, StockSpecification.class, "StockSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStockSpecification_Parent(), this.getFieldOfActivityAnnotationRepository(), this.getFieldOfActivityAnnotationRepository_PurchaseSpecification(), "parent", null, 1, 1, StockSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStockSpecification_StockList(), this.getStockList(), this.getStockList_Parent(), "stockList", null, 0, -1, StockSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStockSpecification_Parent(), this.getFieldOfActivityAnnotationRepository(), this.getFieldOfActivityAnnotationRepository_StockSpecification(), "parent", null, 1, 1, StockSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStockSpecification_ComponentStockList(), this.getComponentStockList(), this.getComponentStockList_Parent(), "componentStockList", null, 0, -1, StockSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStockSpecification_InterfaceStockList(), this.getInterfaceStockList(), this.getInterfaceStockList_Parent(), "interfaceStockList", null, 0, -1, StockSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStockSpecification_ModuleStockList(), this.getModuleStockList(), this.getModuleStockList_Parent(), "moduleStockList", null, 0, -1, StockSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStockSpecification_StructureStockList(), this.getStructureStockList(), this.getStructureStockList_Parent(), "structureStockList", null, 0, -1, StockSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(hmiSpecificationEClass, HMISpecification.class, "HMISpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getHMISpecification_Parent(), this.getFieldOfActivityAnnotationRepository(), this.getFieldOfActivityAnnotationRepository_HmiSpecification(), "parent", null, 1, 1, HMISpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1680,13 +1823,6 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 
 		initEClass(componentSpecificationEClass, ComponentSpecification.class, "ComponentSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponentSpecification_Parent(), this.getFieldOfActivityAnnotationRepository(), this.getFieldOfActivityAnnotationRepository_ComponentSpecification(), "parent", null, 1, 1, ComponentSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(stockListEClass, StockList.class, "StockList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getStockList_Parent(), this.getStockSpecification(), this.getStockSpecification_StockList(), "parent", null, 1, 1, StockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStockList_Components(), theComponentRepositoryPackage.getComponent(), null, "components", null, 0, -1, StockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStockList_Modules(), theModuleRepositoryPackage.getModule(), null, "modules", null, 0, -1, StockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStockList_Interfaces(), theInterfaceRepositoryPackage.getInterface(), null, "interfaces", null, 0, -1, StockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStockList_Structures(), theStructureRepositoryPackage.getStructure(), null, "structures", null, 0, -1, StockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(roleListEClass, RoleList.class, "RoleList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getRoleList_Parent(), this.getStaffSpecification(), this.getStaffSpecification_RoleList(), "parent", null, 1, 1, RoleList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1768,6 +1904,24 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 
 		initEClass(structureDocumentationFilesEClass, StructureDocumentationFiles.class, "StructureDocumentationFiles", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStructureDocumentationFiles_Parent(), this.getDocumentationSpecification(), this.getDocumentationSpecification_StructureDocumentation(), "parent", null, 1, 1, StructureDocumentationFiles.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(stockListEClass, StockList.class, "StockList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(componentStockListEClass, ComponentStockList.class, "ComponentStockList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComponentStockList_Parent(), this.getStockSpecification(), this.getStockSpecification_ComponentStockList(), "parent", null, 1, 1, ComponentStockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponentStockList_Components(), theComponentRepositoryPackage.getComponent(), null, "components", null, 0, -1, ComponentStockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(interfaceStockListEClass, InterfaceStockList.class, "InterfaceStockList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInterfaceStockList_Parent(), this.getStockSpecification(), this.getStockSpecification_InterfaceStockList(), "parent", null, 1, 1, InterfaceStockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInterfaceStockList_Interfaces(), theInterfaceRepositoryPackage.getInterface(), null, "interfaces", null, 0, -1, InterfaceStockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(moduleStockListEClass, ModuleStockList.class, "ModuleStockList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModuleStockList_Parent(), this.getStockSpecification(), this.getStockSpecification_ModuleStockList(), "parent", null, 1, 1, ModuleStockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModuleStockList_Modules(), theModuleRepositoryPackage.getModule(), null, "modules", null, 0, -1, ModuleStockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(structureStockListEClass, StructureStockList.class, "StructureStockList", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getStructureStockList_Parent(), this.getStockSpecification(), this.getStockSpecification_StructureStockList(), "parent", null, 1, 1, StructureStockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStructureStockList_Structures(), theStructureRepositoryPackage.getStructure(), null, "structures", null, 0, -1, StructureStockList.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

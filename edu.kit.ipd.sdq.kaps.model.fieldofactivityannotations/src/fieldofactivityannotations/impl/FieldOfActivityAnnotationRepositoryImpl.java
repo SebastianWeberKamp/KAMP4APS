@@ -34,7 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link fieldofactivityannotations.impl.FieldOfActivityAnnotationRepositoryImpl#getCalibrationSpecification <em>Calibration Specification</em>}</li>
  *   <li>{@link fieldofactivityannotations.impl.FieldOfActivityAnnotationRepositoryImpl#getTestSpecification <em>Test Specification</em>}</li>
  *   <li>{@link fieldofactivityannotations.impl.FieldOfActivityAnnotationRepositoryImpl#getDevelopmentSpecification <em>Development Specification</em>}</li>
- *   <li>{@link fieldofactivityannotations.impl.FieldOfActivityAnnotationRepositoryImpl#getPurchaseSpecification <em>Purchase Specification</em>}</li>
+ *   <li>{@link fieldofactivityannotations.impl.FieldOfActivityAnnotationRepositoryImpl#getStockSpecification <em>Stock Specification</em>}</li>
  *   <li>{@link fieldofactivityannotations.impl.FieldOfActivityAnnotationRepositoryImpl#getHmiSpecification <em>Hmi Specification</em>}</li>
  *   <li>{@link fieldofactivityannotations.impl.FieldOfActivityAnnotationRepositoryImpl#getEcadSpecification <em>Ecad Specification</em>}</li>
  *   <li>{@link fieldofactivityannotations.impl.FieldOfActivityAnnotationRepositoryImpl#getDocumentationSpecification <em>Documentation Specification</em>}</li>
@@ -76,14 +76,14 @@ public class FieldOfActivityAnnotationRepositoryImpl extends MinimalEObjectImpl.
 	protected DevelopmentSpecification developmentSpecification;
 
 	/**
-	 * The cached value of the '{@link #getPurchaseSpecification() <em>Purchase Specification</em>}' containment reference.
+	 * The cached value of the '{@link #getStockSpecification() <em>Stock Specification</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPurchaseSpecification()
+	 * @see #getStockSpecification()
 	 * @generated
 	 * @ordered
 	 */
-	protected StockSpecification purchaseSpecification;
+	protected StockSpecification stockSpecification;
 
 	/**
 	 * The cached value of the '{@link #getHmiSpecification() <em>Hmi Specification</em>}' containment reference.
@@ -288,8 +288,8 @@ public class FieldOfActivityAnnotationRepositoryImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StockSpecification getPurchaseSpecification() {
-		return purchaseSpecification;
+	public StockSpecification getStockSpecification() {
+		return stockSpecification;
 	}
 
 	/**
@@ -297,11 +297,11 @@ public class FieldOfActivityAnnotationRepositoryImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPurchaseSpecification(StockSpecification newPurchaseSpecification, NotificationChain msgs) {
-		StockSpecification oldPurchaseSpecification = purchaseSpecification;
-		purchaseSpecification = newPurchaseSpecification;
+	public NotificationChain basicSetStockSpecification(StockSpecification newStockSpecification, NotificationChain msgs) {
+		StockSpecification oldStockSpecification = stockSpecification;
+		stockSpecification = newStockSpecification;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__PURCHASE_SPECIFICATION, oldPurchaseSpecification, newPurchaseSpecification);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION, oldStockSpecification, newStockSpecification);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -312,18 +312,18 @@ public class FieldOfActivityAnnotationRepositoryImpl extends MinimalEObjectImpl.
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPurchaseSpecification(StockSpecification newPurchaseSpecification) {
-		if (newPurchaseSpecification != purchaseSpecification) {
+	public void setStockSpecification(StockSpecification newStockSpecification) {
+		if (newStockSpecification != stockSpecification) {
 			NotificationChain msgs = null;
-			if (purchaseSpecification != null)
-				msgs = ((InternalEObject)purchaseSpecification).eInverseRemove(this, FieldofactivityannotationsPackage.STOCK_SPECIFICATION__PARENT, StockSpecification.class, msgs);
-			if (newPurchaseSpecification != null)
-				msgs = ((InternalEObject)newPurchaseSpecification).eInverseAdd(this, FieldofactivityannotationsPackage.STOCK_SPECIFICATION__PARENT, StockSpecification.class, msgs);
-			msgs = basicSetPurchaseSpecification(newPurchaseSpecification, msgs);
+			if (stockSpecification != null)
+				msgs = ((InternalEObject)stockSpecification).eInverseRemove(this, FieldofactivityannotationsPackage.STOCK_SPECIFICATION__PARENT, StockSpecification.class, msgs);
+			if (newStockSpecification != null)
+				msgs = ((InternalEObject)newStockSpecification).eInverseAdd(this, FieldofactivityannotationsPackage.STOCK_SPECIFICATION__PARENT, StockSpecification.class, msgs);
+			msgs = basicSetStockSpecification(newStockSpecification, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__PURCHASE_SPECIFICATION, newPurchaseSpecification, newPurchaseSpecification));
+			eNotify(new ENotificationImpl(this, Notification.SET, FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION, newStockSpecification, newStockSpecification));
 	}
 
 	/**
@@ -561,10 +561,10 @@ public class FieldOfActivityAnnotationRepositoryImpl extends MinimalEObjectImpl.
 				if (developmentSpecification != null)
 					msgs = ((InternalEObject)developmentSpecification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DEVELOPMENT_SPECIFICATION, null, msgs);
 				return basicSetDevelopmentSpecification((DevelopmentSpecification)otherEnd, msgs);
-			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__PURCHASE_SPECIFICATION:
-				if (purchaseSpecification != null)
-					msgs = ((InternalEObject)purchaseSpecification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__PURCHASE_SPECIFICATION, null, msgs);
-				return basicSetPurchaseSpecification((StockSpecification)otherEnd, msgs);
+			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION:
+				if (stockSpecification != null)
+					msgs = ((InternalEObject)stockSpecification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION, null, msgs);
+				return basicSetStockSpecification((StockSpecification)otherEnd, msgs);
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__HMI_SPECIFICATION:
 				if (hmiSpecification != null)
 					msgs = ((InternalEObject)hmiSpecification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__HMI_SPECIFICATION, null, msgs);
@@ -603,8 +603,8 @@ public class FieldOfActivityAnnotationRepositoryImpl extends MinimalEObjectImpl.
 				return basicSetTestSpecification(null, msgs);
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DEVELOPMENT_SPECIFICATION:
 				return basicSetDevelopmentSpecification(null, msgs);
-			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__PURCHASE_SPECIFICATION:
-				return basicSetPurchaseSpecification(null, msgs);
+			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION:
+				return basicSetStockSpecification(null, msgs);
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__HMI_SPECIFICATION:
 				return basicSetHmiSpecification(null, msgs);
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__ECAD_SPECIFICATION:
@@ -633,8 +633,8 @@ public class FieldOfActivityAnnotationRepositoryImpl extends MinimalEObjectImpl.
 				return getTestSpecification();
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DEVELOPMENT_SPECIFICATION:
 				return getDevelopmentSpecification();
-			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__PURCHASE_SPECIFICATION:
-				return getPurchaseSpecification();
+			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION:
+				return getStockSpecification();
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__HMI_SPECIFICATION:
 				return getHmiSpecification();
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__ECAD_SPECIFICATION:
@@ -666,8 +666,8 @@ public class FieldOfActivityAnnotationRepositoryImpl extends MinimalEObjectImpl.
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DEVELOPMENT_SPECIFICATION:
 				setDevelopmentSpecification((DevelopmentSpecification)newValue);
 				return;
-			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__PURCHASE_SPECIFICATION:
-				setPurchaseSpecification((StockSpecification)newValue);
+			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION:
+				setStockSpecification((StockSpecification)newValue);
 				return;
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__HMI_SPECIFICATION:
 				setHmiSpecification((HMISpecification)newValue);
@@ -705,8 +705,8 @@ public class FieldOfActivityAnnotationRepositoryImpl extends MinimalEObjectImpl.
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DEVELOPMENT_SPECIFICATION:
 				setDevelopmentSpecification((DevelopmentSpecification)null);
 				return;
-			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__PURCHASE_SPECIFICATION:
-				setPurchaseSpecification((StockSpecification)null);
+			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION:
+				setStockSpecification((StockSpecification)null);
 				return;
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__HMI_SPECIFICATION:
 				setHmiSpecification((HMISpecification)null);
@@ -741,8 +741,8 @@ public class FieldOfActivityAnnotationRepositoryImpl extends MinimalEObjectImpl.
 				return testSpecification != null;
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DEVELOPMENT_SPECIFICATION:
 				return developmentSpecification != null;
-			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__PURCHASE_SPECIFICATION:
-				return purchaseSpecification != null;
+			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION:
+				return stockSpecification != null;
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__HMI_SPECIFICATION:
 				return hmiSpecification != null;
 			case FieldofactivityannotationsPackage.FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__ECAD_SPECIFICATION:

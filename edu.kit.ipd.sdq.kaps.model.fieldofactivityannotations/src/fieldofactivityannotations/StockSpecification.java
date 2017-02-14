@@ -16,7 +16,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link fieldofactivityannotations.StockSpecification#getParent <em>Parent</em>}</li>
- *   <li>{@link fieldofactivityannotations.StockSpecification#getStockList <em>Stock List</em>}</li>
+ *   <li>{@link fieldofactivityannotations.StockSpecification#getComponentStockList <em>Component Stock List</em>}</li>
+ *   <li>{@link fieldofactivityannotations.StockSpecification#getInterfaceStockList <em>Interface Stock List</em>}</li>
+ *   <li>{@link fieldofactivityannotations.StockSpecification#getModuleStockList <em>Module Stock List</em>}</li>
+ *   <li>{@link fieldofactivityannotations.StockSpecification#getStructureStockList <em>Structure Stock List</em>}</li>
  * </ul>
  *
  * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getStockSpecification()
@@ -26,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface StockSpecification extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getPurchaseSpecification <em>Purchase Specification</em>}'.
+	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getStockSpecification <em>Stock Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parent</em>' container reference isn't clear,
@@ -36,8 +39,8 @@ public interface StockSpecification extends EObject {
 	 * @return the value of the '<em>Parent</em>' container reference.
 	 * @see #setParent(FieldOfActivityAnnotationRepository)
 	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getStockSpecification_Parent()
-	 * @see fieldofactivityannotations.FieldOfActivityAnnotationRepository#getPurchaseSpecification
-	 * @model opposite="purchaseSpecification" required="true" transient="false"
+	 * @see fieldofactivityannotations.FieldOfActivityAnnotationRepository#getStockSpecification
+	 * @model opposite="stockSpecification" required="true" transient="false"
 	 * @generated
 	 */
 	FieldOfActivityAnnotationRepository getParent();
@@ -53,21 +56,75 @@ public interface StockSpecification extends EObject {
 	void setParent(FieldOfActivityAnnotationRepository value);
 
 	/**
-	 * Returns the value of the '<em><b>Stock List</b></em>' containment reference list.
-	 * The list contents are of type {@link fieldofactivityannotations.StockList}.
-	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.StockList#getParent <em>Parent</em>}'.
+	 * Returns the value of the '<em><b>Component Stock List</b></em>' containment reference list.
+	 * The list contents are of type {@link fieldofactivityannotations.ComponentStockList}.
+	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.ComponentStockList#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Stock List</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Component Stock List</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Stock List</em>' containment reference list.
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getStockSpecification_StockList()
-	 * @see fieldofactivityannotations.StockList#getParent
+	 * @return the value of the '<em>Component Stock List</em>' containment reference list.
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getStockSpecification_ComponentStockList()
+	 * @see fieldofactivityannotations.ComponentStockList#getParent
 	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<StockList> getStockList();
+	EList<ComponentStockList> getComponentStockList();
+
+	/**
+	 * Returns the value of the '<em><b>Interface Stock List</b></em>' containment reference list.
+	 * The list contents are of type {@link fieldofactivityannotations.InterfaceStockList}.
+	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.InterfaceStockList#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Interface Stock List</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Interface Stock List</em>' containment reference list.
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getStockSpecification_InterfaceStockList()
+	 * @see fieldofactivityannotations.InterfaceStockList#getParent
+	 * @model opposite="parent" containment="true"
+	 * @generated
+	 */
+	EList<InterfaceStockList> getInterfaceStockList();
+
+	/**
+	 * Returns the value of the '<em><b>Module Stock List</b></em>' containment reference list.
+	 * The list contents are of type {@link fieldofactivityannotations.ModuleStockList}.
+	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.ModuleStockList#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Module Stock List</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Module Stock List</em>' containment reference list.
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getStockSpecification_ModuleStockList()
+	 * @see fieldofactivityannotations.ModuleStockList#getParent
+	 * @model opposite="parent" containment="true"
+	 * @generated
+	 */
+	EList<ModuleStockList> getModuleStockList();
+
+	/**
+	 * Returns the value of the '<em><b>Structure Stock List</b></em>' containment reference list.
+	 * The list contents are of type {@link fieldofactivityannotations.StructureStockList}.
+	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.StructureStockList#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Structure Stock List</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Structure Stock List</em>' containment reference list.
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getStockSpecification_StructureStockList()
+	 * @see fieldofactivityannotations.StructureStockList#getParent
+	 * @model opposite="parent" containment="true"
+	 * @generated
+	 */
+	EList<StructureStockList> getStructureStockList();
 
 } // StockSpecification

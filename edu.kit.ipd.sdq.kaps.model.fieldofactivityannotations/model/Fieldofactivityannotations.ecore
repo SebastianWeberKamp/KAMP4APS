@@ -9,8 +9,8 @@
         containment="true" eOpposite="#//TestSpecification/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="developmentSpecification"
         eType="#//DevelopmentSpecification" containment="true" eOpposite="#//DevelopmentSpecification/parent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="purchaseSpecification"
-        eType="#//StockSpecification" containment="true" eOpposite="#//StockSpecification/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stockSpecification" eType="#//StockSpecification"
+        containment="true" eOpposite="#//StockSpecification/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="hmiSpecification" eType="#//HMISpecification"
         containment="true" eOpposite="#//HMISpecification/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ecadSpecification" eType="#//ECADSpecification"
@@ -30,9 +30,15 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StockSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/purchaseSpecification"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="stockList" upperBound="-1"
-        eType="#//StockList" containment="true" eOpposite="#//StockList/parent"/>
+        eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/stockSpecification"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="componentStockList" upperBound="-1"
+        eType="#//ComponentStockList" containment="true" eOpposite="#//ComponentStockList/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceStockList" upperBound="-1"
+        eType="#//InterfaceStockList" containment="true" eOpposite="#//InterfaceStockList/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleStockList" upperBound="-1"
+        eType="#//ModuleStockList" containment="true" eOpposite="#//ModuleStockList/parent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structureStockList" upperBound="-1"
+        eType="#//StructureStockList" containment="true" eOpposite="#//StructureStockList/parent"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HMISpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
@@ -101,18 +107,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="ComponentSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//FieldOfActivityAnnotationRepository" eOpposite="#//FieldOfActivityAnnotationRepository/componentSpecification"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StockList" eSuperTypes="#//File">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-        eType="#//StockSpecification" eOpposite="#//StockSpecification/stockList"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
-        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
-        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
-        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RoleList">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
@@ -212,5 +206,30 @@
   <eClassifiers xsi:type="ecore:EClass" name="StructureDocumentationFiles" eSuperTypes="#//DocumentationFiles">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/structureDocumentation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StockList" eSuperTypes="#//File"/>
+  <eClassifiers xsi:type="ecore:EClass" name="ComponentStockList" eSuperTypes="#//StockList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//StockSpecification" eOpposite="#//StockSpecification/componentStockList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="InterfaceStockList" eSuperTypes="#//StockList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//StockSpecification" eOpposite="#//StockSpecification/interfaceStockList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModuleStockList" eSuperTypes="#//StockList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//StockSpecification" eOpposite="#//StockSpecification/moduleStockList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StructureStockList" eSuperTypes="#//StockList">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+        eType="#//StockSpecification" eOpposite="#//StockSpecification/structureStockList"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
   </eClassifiers>
 </ecore:EPackage>

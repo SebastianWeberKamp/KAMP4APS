@@ -67,7 +67,6 @@ public class FieldofactivityannotationsFactoryImpl extends EFactoryImpl implemen
 			case FieldofactivityannotationsPackage.CALIBRATION_SPECIFICATION: return createCalibrationSpecification();
 			case FieldofactivityannotationsPackage.DEVELOPMENT_SPECIFICATION: return createDevelopmentSpecification();
 			case FieldofactivityannotationsPackage.COMPONENT_SPECIFICATION: return createComponentSpecification();
-			case FieldofactivityannotationsPackage.STOCK_LIST: return createStockList();
 			case FieldofactivityannotationsPackage.ROLE_LIST: return createRoleList();
 			case FieldofactivityannotationsPackage.PERSON_LIST: return createPersonList();
 			case FieldofactivityannotationsPackage.PERSON: return createPerson();
@@ -89,6 +88,11 @@ public class FieldofactivityannotationsFactoryImpl extends EFactoryImpl implemen
 			case FieldofactivityannotationsPackage.MODULE_DOCUMENTATION_FILES: return createModuleDocumentationFiles();
 			case FieldofactivityannotationsPackage.INTERFACE_DOCUMENTATION_FILES: return createInterfaceDocumentationFiles();
 			case FieldofactivityannotationsPackage.STRUCTURE_DOCUMENTATION_FILES: return createStructureDocumentationFiles();
+			case FieldofactivityannotationsPackage.STOCK_LIST: return createStockList();
+			case FieldofactivityannotationsPackage.COMPONENT_STOCK_LIST: return createComponentStockList();
+			case FieldofactivityannotationsPackage.INTERFACE_STOCK_LIST: return createInterfaceStockList();
+			case FieldofactivityannotationsPackage.MODULE_STOCK_LIST: return createModuleStockList();
+			case FieldofactivityannotationsPackage.STRUCTURE_STOCK_LIST: return createStructureStockList();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -212,6 +216,46 @@ public class FieldofactivityannotationsFactoryImpl extends EFactoryImpl implemen
 	public StockList createStockList() {
 		StockListImpl stockList = new StockListImpl();
 		return stockList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComponentStockList createComponentStockList() {
+		ComponentStockListImpl componentStockList = new ComponentStockListImpl();
+		return componentStockList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InterfaceStockList createInterfaceStockList() {
+		InterfaceStockListImpl interfaceStockList = new InterfaceStockListImpl();
+		return interfaceStockList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModuleStockList createModuleStockList() {
+		ModuleStockListImpl moduleStockList = new ModuleStockListImpl();
+		return moduleStockList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StructureStockList createStructureStockList() {
+		StructureStockListImpl structureStockList = new StructureStockListImpl();
+		return structureStockList;
 	}
 
 	/**
