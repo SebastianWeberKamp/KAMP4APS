@@ -66,12 +66,12 @@
       <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     </eGenericSuperTypes>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ModifyStucture" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyStructure" abstract="true">
     <eTypeParameters name="T">
       <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
     </eTypeParameters>
     <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
-      <eTypeArguments eTypeParameter="#//ModifyStucture/T"/>
+      <eTypeArguments eTypeParameter="#//ModifyStructure/T"/>
       <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     </eGenericSuperTypes>
   </eClassifiers>

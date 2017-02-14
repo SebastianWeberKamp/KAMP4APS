@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 import xPPU.ComponentRepository.Component;
+import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
 import xPPU.StructureRepository.Structure;
 
@@ -116,10 +117,10 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case modificationmarksPackage.MODIFY_STUCTURE: {
-				ModifyStucture<?> modifyStucture = (ModifyStucture<?>)theEObject;
-				T1 result = caseModifyStucture(modifyStucture);
-				if (result == null) result = caseAbstractModification(modifyStucture);
+			case modificationmarksPackage.MODIFY_STRUCTURE: {
+				ModifyStructure<?> modifyStructure = (ModifyStructure<?>)theEObject;
+				T1 result = caseModifyStructure(modifyStructure);
+				if (result == null) result = caseAbstractModification(modifyStructure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -313,17 +314,17 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Modify Stucture</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Modify Structure</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Modify Stucture</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Modify Structure</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends Structure> T1 caseModifyStucture(ModifyStucture<T> object) {
+	public <T extends Structure> T1 caseModifyStructure(ModifyStructure<T> object) {
 		return null;
 	}
 
@@ -338,7 +339,7 @@ public class modificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends xPPU.InterfaceRepository.Interface> T1 caseModifyInterface(ModifyInterface<T> object) {
+	public <T extends Interface> T1 caseModifyInterface(ModifyInterface<T> object) {
 		return null;
 	}
 

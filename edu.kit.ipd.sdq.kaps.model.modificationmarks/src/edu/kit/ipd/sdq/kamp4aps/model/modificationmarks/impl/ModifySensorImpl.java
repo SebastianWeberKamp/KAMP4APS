@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import xPPU.ComponentRepository.Sensor;
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.SignalInterface;
 
@@ -28,7 +29,7 @@ import xPPU.InterfaceRepository.SignalInterface;
  *
  * @generated
  */
-public class ModifySensorImpl extends ModifyComponentImpl<xPPU.ComponentRepository.Sensor> implements ModifySensor {
+public class ModifySensorImpl extends ModifyComponentImpl<Sensor> implements ModifySensor {
 	/**
 	 * The cached value of the '{@link #getModifySignalInterfaces() <em>Modify Signal Interfaces</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

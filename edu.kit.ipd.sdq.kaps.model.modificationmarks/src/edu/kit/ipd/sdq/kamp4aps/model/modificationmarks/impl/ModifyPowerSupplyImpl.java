@@ -5,6 +5,7 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPowerSupply;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 import org.eclipse.emf.ecore.EClass;
+import xPPU.ComponentRepository.PowerSupply;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ModifyPowerSupplyImpl extends ModifyComponentImpl<xPPU.ComponentRepository.PowerSupply> implements ModifyPowerSupply {
+public class ModifyPowerSupplyImpl extends ModifyComponentImpl<PowerSupply> implements ModifyPowerSupply {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

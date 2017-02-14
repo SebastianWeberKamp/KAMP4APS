@@ -19,7 +19,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPhysicalConnection
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPowerSupply;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignalinterface;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 
@@ -102,7 +102,7 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass modifyStuctureEClass = null;
+	private EClass modifyStructureEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -436,8 +436,8 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getModifyStucture() {
-		return modifyStuctureEClass;
+	public EClass getModifyStructure() {
+		return modifyStructureEClass;
 	}
 
 	/**
@@ -583,7 +583,7 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 
 		modifyModuleEClass = createEClass(MODIFY_MODULE);
 
-		modifyStuctureEClass = createEClass(MODIFY_STUCTURE);
+		modifyStructureEClass = createEClass(MODIFY_STRUCTURE);
 
 		modifyInterfaceEClass = createEClass(MODIFY_INTERFACE);
 
@@ -644,7 +644,7 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		ETypeParameter abstractKAPSModificationRepositoryEClass_T = addETypeParameter(abstractKAPSModificationRepositoryEClass, "T");
 		ETypeParameter modifyComponentEClass_T = addETypeParameter(modifyComponentEClass, "T");
 		ETypeParameter modifyModuleEClass_T = addETypeParameter(modifyModuleEClass, "T");
-		ETypeParameter modifyStuctureEClass_T = addETypeParameter(modifyStuctureEClass, "T");
+		ETypeParameter modifyStructureEClass_T = addETypeParameter(modifyStructureEClass, "T");
 		ETypeParameter modifyInterfaceEClass_T = addETypeParameter(modifyInterfaceEClass, "T");
 
 		// Set bounds for type parameters
@@ -655,7 +655,7 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		g1 = createEGenericType(theModuleRepositoryPackage.getModule());
 		modifyModuleEClass_T.getEBounds().add(g1);
 		g1 = createEGenericType(theStructureRepositoryPackage.getStructure());
-		modifyStuctureEClass_T.getEBounds().add(g1);
+		modifyStructureEClass_T.getEBounds().add(g1);
 		g1 = createEGenericType(theInterfaceRepositoryPackage.getInterface());
 		modifyInterfaceEClass_T.getEBounds().add(g1);
 
@@ -685,11 +685,11 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		g1.getETypeArguments().add(g2);
 		modifyModuleEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
-		g2 = createEGenericType(modifyStuctureEClass_T);
+		g2 = createEGenericType(modifyStructureEClass_T);
 		g1.getETypeArguments().add(g2);
 		g2 = createEGenericType(ecorePackage.getEObject());
 		g1.getETypeArguments().add(g2);
-		modifyStuctureEClass.getEGenericSuperTypes().add(g1);
+		modifyStructureEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(theModificationmarksPackage.getAbstractModification());
 		g2 = createEGenericType(modifyInterfaceEClass_T);
 		g1.getETypeArguments().add(g2);
@@ -763,7 +763,7 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 
 		initEClass(modifyModuleEClass, ModifyModule.class, "ModifyModule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(modifyStuctureEClass, ModifyStucture.class, "ModifyStucture", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(modifyStructureEClass, ModifyStructure.class, "ModifyStructure", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(modifyInterfaceEClass, ModifyInterface.class, "ModifyInterface", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -10,13 +10,13 @@ import xPPU.StructureRepository.Structure;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Modify Stucture</b></em>'.
+ * A representation of the model object '<em><b>Modify Structure</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyStucture()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyStructure()
  * @model abstract="true"
  * @generated
  */
-public interface ModifyStucture<T extends Structure> extends AbstractModification<T, EObject> {
-} // ModifyStucture
+public interface ModifyStructure<T extends Structure> extends AbstractModification<T, EObject> {
+} // ModifyStructure

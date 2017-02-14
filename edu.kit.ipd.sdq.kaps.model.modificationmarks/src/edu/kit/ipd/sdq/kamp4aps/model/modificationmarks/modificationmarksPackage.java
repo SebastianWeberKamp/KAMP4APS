@@ -424,14 +424,14 @@ public interface modificationmarksPackage extends EPackage {
 	int MODIFY_MODULE_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStuctureImpl <em>Modify Stucture</em>}' class.
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStructureImpl <em>Modify Structure</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStuctureImpl
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyStucture()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStructureImpl
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyStructure()
 	 * @generated
 	 */
-	int MODIFY_STUCTURE = 6;
+	int MODIFY_STRUCTURE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
@@ -440,7 +440,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_STUCTURE__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
+	int MODIFY_STRUCTURE__AFFECTED_ELEMENT = ModificationmarksPackage.ABSTRACT_MODIFICATION__AFFECTED_ELEMENT;
 
 	/**
 	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
@@ -449,7 +449,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_STUCTURE__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
+	int MODIFY_STRUCTURE__CAUSING_ELEMENTS = ModificationmarksPackage.ABSTRACT_MODIFICATION__CAUSING_ELEMENTS;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -458,7 +458,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_STUCTURE__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
+	int MODIFY_STRUCTURE__ID = ModificationmarksPackage.ABSTRACT_MODIFICATION__ID;
 
 	/**
 	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
@@ -467,7 +467,7 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_STUCTURE__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
+	int MODIFY_STRUCTURE__TOOLDERIVED = ModificationmarksPackage.ABSTRACT_MODIFICATION__TOOLDERIVED;
 
 	/**
 	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
@@ -476,16 +476,16 @@ public interface modificationmarksPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_STUCTURE__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
+	int MODIFY_STRUCTURE__USER_DECISION = ModificationmarksPackage.ABSTRACT_MODIFICATION__USER_DECISION;
 
 	/**
-	 * The number of structural features of the '<em>Modify Stucture</em>' class.
+	 * The number of structural features of the '<em>Modify Structure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODIFY_STUCTURE_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
+	int MODIFY_STRUCTURE_FEATURE_COUNT = ModificationmarksPackage.ABSTRACT_MODIFICATION_FEATURE_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyInterfaceImpl <em>Modify Interface</em>}' class.
@@ -1380,14 +1380,14 @@ public interface modificationmarksPackage extends EPackage {
 	EClass getModifyModule();
 
 	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture <em>Modify Stucture</em>}'.
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure <em>Modify Structure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Modify Stucture</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture
+	 * @return the meta object for class '<em>Modify Structure</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure
 	 * @generated
 	 */
-	EClass getModifyStucture();
+	EClass getModifyStructure();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface <em>Modify Interface</em>}'.
@@ -1703,14 +1703,14 @@ public interface modificationmarksPackage extends EPackage {
 		EClass MODIFY_MODULE = eINSTANCE.getModifyModule();
 
 		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStuctureImpl <em>Modify Stucture</em>}' class.
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStructureImpl <em>Modify Structure</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStuctureImpl
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyStucture()
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyStructureImpl
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.modificationmarksPackageImpl#getModifyStructure()
 		 * @generated
 		 */
-		EClass MODIFY_STUCTURE = eINSTANCE.getModifyStucture();
+		EClass MODIFY_STRUCTURE = eINSTANCE.getModifyStructure();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyInterfaceImpl <em>Modify Interface</em>}' class.

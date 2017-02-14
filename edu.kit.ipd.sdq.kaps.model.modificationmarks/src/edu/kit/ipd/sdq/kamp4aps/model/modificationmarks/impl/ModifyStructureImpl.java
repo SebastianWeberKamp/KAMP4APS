@@ -4,7 +4,7 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
 import edu.kit.ipd.sdq.amp.model.modificationmarks.impl.AbstractModificationImpl;
 
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -14,18 +14,18 @@ import xPPU.StructureRepository.Structure;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Modify Stucture</b></em>'.
+ * An implementation of the model object '<em><b>Modify Structure</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public abstract class ModifyStuctureImpl<T extends Structure> extends AbstractModificationImpl<T, EObject> implements ModifyStucture<T> {
+public abstract class ModifyStructureImpl<T extends Structure> extends AbstractModificationImpl<T, EObject> implements ModifyStructure<T> {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ModifyStuctureImpl() {
+	protected ModifyStructureImpl() {
 		super();
 	}
 
@@ -36,7 +36,7 @@ public abstract class ModifyStuctureImpl<T extends Structure> extends AbstractMo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return modificationmarksPackage.Literals.MODIFY_STUCTURE;
+		return modificationmarksPackage.Literals.MODIFY_STRUCTURE;
 	}
 
 	/**
@@ -50,4 +50,4 @@ public abstract class ModifyStuctureImpl<T extends Structure> extends AbstractMo
 		super.setAffectedElement(newAffectedElement);
 	}
 
-} //ModifyStuctureImpl
+} //ModifyStructureImpl

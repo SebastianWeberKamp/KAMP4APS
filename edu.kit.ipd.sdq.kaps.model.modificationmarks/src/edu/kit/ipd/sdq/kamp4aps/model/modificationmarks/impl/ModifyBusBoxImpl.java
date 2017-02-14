@@ -5,6 +5,7 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 import org.eclipse.emf.ecore.EClass;
+import xPPU.BusComponents.BusBox;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,7 +14,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class ModifyBusBoxImpl extends ModifyComponentImpl<xPPU.BusComponents.BusBox> implements ModifyBusBox {
+public class ModifyBusBoxImpl extends ModifyComponentImpl<BusBox> implements ModifyBusBox {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

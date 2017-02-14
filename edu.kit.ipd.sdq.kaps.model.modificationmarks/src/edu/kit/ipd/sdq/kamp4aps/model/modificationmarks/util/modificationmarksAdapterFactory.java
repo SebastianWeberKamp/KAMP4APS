@@ -13,6 +13,7 @@ import org.eclipse.emf.common.notify.Notifier;
 import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 import xPPU.ComponentRepository.Component;
+import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
 import xPPU.StructureRepository.Structure;
 
@@ -97,11 +98,11 @@ public class modificationmarksAdapterFactory extends AdapterFactoryImpl {
 				return createModifyModuleAdapter();
 			}
 			@Override
-			public <T extends Structure> Adapter caseModifyStucture(ModifyStucture<T> object) {
-				return createModifyStuctureAdapter();
+			public <T extends Structure> Adapter caseModifyStructure(ModifyStructure<T> object) {
+				return createModifyStructureAdapter();
 			}
 			@Override
-			public <T extends xPPU.InterfaceRepository.Interface> Adapter caseModifyInterface(ModifyInterface<T> object) {
+			public <T extends Interface> Adapter caseModifyInterface(ModifyInterface<T> object) {
 				return createModifyInterfaceAdapter();
 			}
 			@Override
@@ -279,16 +280,16 @@ public class modificationmarksAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture <em>Modify Stucture</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure <em>Modify Structure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure
 	 * @generated
 	 */
-	public Adapter createModifyStuctureAdapter() {
+	public Adapter createModifyStructureAdapter() {
 		return null;
 	}
 
