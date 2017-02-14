@@ -5,7 +5,7 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
 import edu.kit.ipd.sdq.amp.model.modificationmarks.provider.AbstractModificationItemProvider;
 
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
 
 import java.util.Collection;
 import java.util.List;
@@ -18,19 +18,19 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStucture} object.
+ * This is the item provider adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyStuctureItemProvider extends AbstractModificationItemProvider {
+public class ModifyStructureItemProvider extends AbstractModificationItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ModifyStuctureItemProvider(AdapterFactory adapterFactory) {
+	public ModifyStructureItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -57,10 +57,10 @@ public class ModifyStuctureItemProvider extends AbstractModificationItemProvider
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ModifyStucture<?>)object).getId();
+		String label = ((ModifyStructure<?>)object).getId();
 		return label == null || label.length() == 0 ?
-			getString("_UI_ModifyStucture_type") :
-			getString("_UI_ModifyStucture_type") + " " + label;
+			getString("_UI_ModifyStructure_type") :
+			getString("_UI_ModifyStructure_type") + " " + label;
 	}
 	
 
