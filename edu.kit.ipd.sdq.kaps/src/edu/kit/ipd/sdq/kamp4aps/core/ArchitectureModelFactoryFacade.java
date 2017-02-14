@@ -50,7 +50,7 @@ public class ArchitectureModelFactoryFacade {
 		repository.setTestSpecification(testSpec);
 		
 		StockSpecification stockSpec = FieldofactivityannotationsFactory.eINSTANCE.createStockSpecification();
-		repository.setPurchaseSpecification(stockSpec);
+		repository.setStockSpecification(stockSpec);
 		
 		HMISpecification hmiSpec = FieldofactivityannotationsFactory.eINSTANCE.createHMISpecification();
 		repository.setHmiSpecification(hmiSpec);
