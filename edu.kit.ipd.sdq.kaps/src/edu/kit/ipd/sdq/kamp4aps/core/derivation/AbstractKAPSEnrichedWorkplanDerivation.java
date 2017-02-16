@@ -21,10 +21,8 @@ import fieldofactivityannotations.InterfaceDrawing;
 import fieldofactivityannotations.InterfaceStockList;
 import fieldofactivityannotations.ModuleDrawing;
 import fieldofactivityannotations.ModuleStockList;
-import fieldofactivityannotations.StockList;
 import fieldofactivityannotations.StructureDrawing;
 import fieldofactivityannotations.StructureStockList;
-import fieldofactivityannotations.SystemTest;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
@@ -61,6 +59,11 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 			private Map<ActivityElementType, Integer> determineNumberOfCADFiles(ArchitectureVersion version,
 					Activity activity) {
 				Map<ActivityElementType, Integer> numberOfDrawings = new HashMap<ActivityElementType, Integer>();
+				numberOfDrawings.put(ActivityElementType.COMPONENT, 0);
+				numberOfDrawings.put(ActivityElementType.MODULE, 0);
+				numberOfDrawings.put(ActivityElementType.INTERFACE, 0);
+				numberOfDrawings.put(ActivityElementType.STRUCTURE, 0);
+				
 				if (activity.getElement() instanceof Component) {
 					Component component = (Component) activity.getElement();
 					List<ComponentDrawing> drawings = ArchitectureAnnotationLookup.lookUpDrawingsForComponent(version,
@@ -142,6 +145,11 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 			private Map<ActivityElementType, Integer> determineNumberOfDocumentationFiles(ArchitectureVersion version,
 					Activity activity) {
 				Map<ActivityElementType, Integer> numberOfFiles = new HashMap<ActivityElementType, Integer>();
+				numberOfFiles.put(ActivityElementType.MAINTENEANCE_DOCUMENTATION, 0);
+				numberOfFiles.put(ActivityElementType.OPERATOR_INSTRUCTIONS, 0);
+				numberOfFiles.put(ActivityElementType.TRAINING_DOCUMENTATION_INTERNAL, 0);
+				numberOfFiles.put(ActivityElementType.TRAINING_DOCUMENTATION_EXTERNAL, 0);
+				
 				EObject activityElement = activity.getElement();
 				if (activityElement instanceof Component) {
 					Component component = (Component) activityElement;
@@ -269,38 +277,32 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 									+ numberOfFiles.get(ActivityElementType.COMPONENT_STOCKLIST) + " files) of component "
 									+ activity.getElementName() + "."));
 				}
-				if (numberOfFiles.get(ActivityElementType.MODULE) > 0) {
-					if (numberOfFiles.get(ActivityElementType.MODULE_STOCKLIST) > 0) {
-						activity.addFollowupActivity(new Activity(ActivityType.UPDATE_STOCKLIST,
-								ActivityElementType.MODULE_STOCKLIST, activity.getElement(),
-								numberOfFiles.get(ActivityElementType.MODULE_STOCKLIST) + " module stocklist ", null,
-								activity.getBasicActivity(),
-								"StockList: " + activity.getBasicActivity().getName() + " stocklist ("
-										+ numberOfFiles.get(ActivityElementType.MODULE_STOCKLIST)
-										+ " files) of module " + activity.getElementName() + "."));
-					}
+				if (numberOfFiles.get(ActivityElementType.MODULE_STOCKLIST) > 0) {
+					activity.addFollowupActivity(new Activity(ActivityType.UPDATE_STOCKLIST,
+							ActivityElementType.MODULE_STOCKLIST, activity.getElement(),
+							numberOfFiles.get(ActivityElementType.MODULE_STOCKLIST) + " module stocklist ", null,
+							activity.getBasicActivity(),
+							"StockList: " + activity.getBasicActivity().getName() + " stocklist ("
+									+ numberOfFiles.get(ActivityElementType.MODULE_STOCKLIST)
+									+ " files) of module " + activity.getElementName() + "."));
 				}
-				if (numberOfFiles.get(ActivityElementType.INTERFACE) > 0) {
-					if (numberOfFiles.get(ActivityElementType.INTERFACE_STOCKLIST) > 0) {
-						activity.addFollowupActivity(new Activity(ActivityType.UPDATE_STOCKLIST,
-								ActivityElementType.INTERFACE_STOCKLIST, activity.getElement(),
-								numberOfFiles.get(ActivityElementType.INTERFACE_STOCKLIST) + " interface stocklist ", null,
-								activity.getBasicActivity(),
-								"StockList: " + activity.getBasicActivity().getName() + " stocklist ("
-										+ numberOfFiles.get(ActivityElementType.INTERFACE_STOCKLIST)
-										+ " files) of interface " + activity.getElementName() + "."));
-					}
+				if (numberOfFiles.get(ActivityElementType.INTERFACE_STOCKLIST) > 0) {
+					activity.addFollowupActivity(new Activity(ActivityType.UPDATE_STOCKLIST,
+							ActivityElementType.INTERFACE_STOCKLIST, activity.getElement(),
+							numberOfFiles.get(ActivityElementType.INTERFACE_STOCKLIST) + " interface stocklist ", null,
+							activity.getBasicActivity(),
+							"StockList: " + activity.getBasicActivity().getName() + " stocklist ("
+									+ numberOfFiles.get(ActivityElementType.INTERFACE_STOCKLIST)
+									+ " files) of interface " + activity.getElementName() + "."));
 				}
-				if (numberOfFiles.get(ActivityElementType.STRUCTURE) > 0) {
-					if (numberOfFiles.get(ActivityElementType.STRUCTURE_STOCKLIST) > 0) {
-						activity.addFollowupActivity(new Activity(ActivityType.UPDATE_STOCKLIST,
-								ActivityElementType.STRUCTURE_STOCKLIST, activity.getElement(),
-								numberOfFiles.get(ActivityElementType.STRUCTURE_STOCKLIST) + " structure stocklist ", null,
-								activity.getBasicActivity(),
-								"StockList: " + activity.getBasicActivity().getName() + " stocklist ("
-										+ numberOfFiles.get(ActivityElementType.STRUCTURE_STOCKLIST)
-										+ " files) of structure " + activity.getElementName() + "."));
-					}
+				if (numberOfFiles.get(ActivityElementType.STRUCTURE_STOCKLIST) > 0) {
+					activity.addFollowupActivity(new Activity(ActivityType.UPDATE_STOCKLIST,
+							ActivityElementType.STRUCTURE_STOCKLIST, activity.getElement(),
+							numberOfFiles.get(ActivityElementType.STRUCTURE_STOCKLIST) + " structure stocklist ", null,
+							activity.getBasicActivity(),
+							"StockList: " + activity.getBasicActivity().getName() + " stocklist ("
+									+ numberOfFiles.get(ActivityElementType.STRUCTURE_STOCKLIST)
+									+ " files) of structure " + activity.getElementName() + "."));
 				}
 			}
 	

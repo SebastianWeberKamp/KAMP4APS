@@ -149,10 +149,12 @@ public class ArchitectureAnnotationLookup {
 	public static List<ComponentStockList> lookUpStockListForComponent(ArchitectureVersion version,
 			Component component) {
 		List<ComponentStockList> componentStockList = new ArrayList<ComponentStockList>();
-		for (ComponentStockList stock : version.getFieldOfActivityRepository().getStockSpecification()
-				.getComponentStockList()) {
-			if (stock.getComponents().contains(component))
-				componentStockList.add(stock);
+		if(version.getFieldOfActivityRepository().getStockSpecification() != null){
+			for (ComponentStockList stock : version.getFieldOfActivityRepository().getStockSpecification()
+					.getComponentStockList()) {
+				if (stock.getComponents().contains(component))
+					componentStockList.add(stock);
+			}
 		}
 		return componentStockList;
 	}
@@ -170,10 +172,12 @@ public class ArchitectureAnnotationLookup {
 	public static List<StructureStockList> lookUpStockListForStructure(ArchitectureVersion version,
 			Structure structure) {
 		List<StructureStockList> structureStockList = new ArrayList<StructureStockList>();
-		for (StructureStockList stock : version.getFieldOfActivityRepository().getStockSpecification()
-				.getStructureStockList()) {
-			if (stock.getStructures().contains(structure))
-				structureStockList.add(stock);
+		if(version.getFieldOfActivityRepository().getStockSpecification() != null){
+			for (StructureStockList stock : version.getFieldOfActivityRepository().getStockSpecification()
+					.getStructureStockList()) {
+				if (stock.getStructures().contains(structure))
+					structureStockList.add(stock);
+			}
 		}
 		return structureStockList;
 	}
@@ -181,10 +185,12 @@ public class ArchitectureAnnotationLookup {
 	public static List<InterfaceStockList> lookUpStockListForInterface(ArchitectureVersion version,
 			Interface interfaceElement) {
 		List<InterfaceStockList> interfaceStockList = new ArrayList<InterfaceStockList>();
-		for (InterfaceStockList stock : version.getFieldOfActivityRepository().getStockSpecification()
-				.getInterfaceStockList()) {
-			if (stock.getInterfaces().contains(interfaceElement))
-				interfaceStockList.add(stock);
+		if(version.getFieldOfActivityRepository().getStockSpecification() != null){
+			for (InterfaceStockList stock : version.getFieldOfActivityRepository().getStockSpecification()
+					.getInterfaceStockList()) {
+				if (stock.getInterfaces().contains(interfaceElement))
+					interfaceStockList.add(stock);
+			}
 		}
 		return interfaceStockList;
 	}
