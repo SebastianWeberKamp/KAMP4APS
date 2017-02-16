@@ -4,6 +4,7 @@ package fieldofactivityannotations.impl;
 
 import fieldofactivityannotations.FieldofactivityannotationsPackage;
 import fieldofactivityannotations.StockList;
+
 import org.eclipse.emf.ecore.EClass;
 
 /**

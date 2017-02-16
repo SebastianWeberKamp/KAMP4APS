@@ -213,56 +213,6 @@ public class FieldofactivityannotationsFactoryImpl extends EFactoryImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StockList createStockList() {
-		StockListImpl stockList = new StockListImpl();
-		return stockList;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ComponentStockList createComponentStockList() {
-		ComponentStockListImpl componentStockList = new ComponentStockListImpl();
-		return componentStockList;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InterfaceStockList createInterfaceStockList() {
-		InterfaceStockListImpl interfaceStockList = new InterfaceStockListImpl();
-		return interfaceStockList;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ModuleStockList createModuleStockList() {
-		ModuleStockListImpl moduleStockList = new ModuleStockListImpl();
-		return moduleStockList;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public StructureStockList createStructureStockList() {
-		StructureStockListImpl structureStockList = new StructureStockListImpl();
-		return structureStockList;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public RoleList createRoleList() {
 		RoleListImpl roleList = new RoleListImpl();
 		return roleList;
@@ -466,6 +416,56 @@ public class FieldofactivityannotationsFactoryImpl extends EFactoryImpl implemen
 	public StructureDocumentationFiles createStructureDocumentationFiles() {
 		StructureDocumentationFilesImpl structureDocumentationFiles = new StructureDocumentationFilesImpl();
 		return structureDocumentationFiles;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StockList createStockList() {
+		StockListImpl stockList = new StockListImpl();
+		return stockList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ComponentStockList createComponentStockList() {
+		ComponentStockListImpl componentStockList = new ComponentStockListImpl();
+		return componentStockList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public InterfaceStockList createInterfaceStockList() {
+		InterfaceStockListImpl interfaceStockList = new InterfaceStockListImpl();
+		return interfaceStockList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModuleStockList createModuleStockList() {
+		ModuleStockListImpl moduleStockList = new ModuleStockListImpl();
+		return moduleStockList;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public StructureStockList createStructureStockList() {
+		StructureStockListImpl structureStockList = new StructureStockListImpl();
+		return structureStockList;
 	}
 
 	/**

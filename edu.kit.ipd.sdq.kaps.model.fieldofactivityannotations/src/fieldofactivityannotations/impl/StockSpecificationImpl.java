@@ -8,8 +8,8 @@ import fieldofactivityannotations.FieldofactivityannotationsPackage;
 import fieldofactivityannotations.InterfaceStockList;
 import fieldofactivityannotations.ModuleStockList;
 import fieldofactivityannotations.StockSpecification;
-
 import fieldofactivityannotations.StructureStockList;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -54,6 +54,7 @@ public class StockSpecificationImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected EList<ComponentStockList> componentStockList;
+
 	/**
 	 * The cached value of the '{@link #getInterfaceStockList() <em>Interface Stock List</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -63,6 +64,7 @@ public class StockSpecificationImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected EList<InterfaceStockList> interfaceStockList;
+
 	/**
 	 * The cached value of the '{@link #getModuleStockList() <em>Module Stock List</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -72,6 +74,7 @@ public class StockSpecificationImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected EList<ModuleStockList> moduleStockList;
+
 	/**
 	 * The cached value of the '{@link #getStructureStockList() <em>Structure Stock List</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -81,6 +84,7 @@ public class StockSpecificationImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected EList<StructureStockList> structureStockList;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

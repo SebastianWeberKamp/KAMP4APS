@@ -121,51 +121,6 @@ public interface FieldofactivityannotationsFactory extends EFactory {
 	ComponentSpecification createComponentSpecification();
 
 	/**
-	 * Returns a new object of class '<em>Stock List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Stock List</em>'.
-	 * @generated
-	 */
-	StockList createStockList();
-
-	/**
-	 * Returns a new object of class '<em>Component Stock List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Component Stock List</em>'.
-	 * @generated
-	 */
-	ComponentStockList createComponentStockList();
-
-	/**
-	 * Returns a new object of class '<em>Interface Stock List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Interface Stock List</em>'.
-	 * @generated
-	 */
-	InterfaceStockList createInterfaceStockList();
-
-	/**
-	 * Returns a new object of class '<em>Module Stock List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Module Stock List</em>'.
-	 * @generated
-	 */
-	ModuleStockList createModuleStockList();
-
-	/**
-	 * Returns a new object of class '<em>Structure Stock List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Structure Stock List</em>'.
-	 * @generated
-	 */
-	StructureStockList createStructureStockList();
-
-	/**
 	 * Returns a new object of class '<em>Role List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -353,6 +308,51 @@ public interface FieldofactivityannotationsFactory extends EFactory {
 	 * @generated
 	 */
 	StructureDocumentationFiles createStructureDocumentationFiles();
+
+	/**
+	 * Returns a new object of class '<em>Stock List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Stock List</em>'.
+	 * @generated
+	 */
+	StockList createStockList();
+
+	/**
+	 * Returns a new object of class '<em>Component Stock List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component Stock List</em>'.
+	 * @generated
+	 */
+	ComponentStockList createComponentStockList();
+
+	/**
+	 * Returns a new object of class '<em>Interface Stock List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Interface Stock List</em>'.
+	 * @generated
+	 */
+	InterfaceStockList createInterfaceStockList();
+
+	/**
+	 * Returns a new object of class '<em>Module Stock List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module Stock List</em>'.
+	 * @generated
+	 */
+	ModuleStockList createModuleStockList();
+
+	/**
+	 * Returns a new object of class '<em>Structure Stock List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Structure Stock List</em>'.
+	 * @generated
+	 */
+	StructureStockList createStructureStockList();
 
 	/**
 	 * Returns the package supported by this factory.

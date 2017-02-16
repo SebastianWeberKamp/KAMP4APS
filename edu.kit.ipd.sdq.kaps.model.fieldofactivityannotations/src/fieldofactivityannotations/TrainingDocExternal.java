@@ -20,7 +20,6 @@ package fieldofactivityannotations;
  * @generated
  */
 public interface TrainingDocExternal extends Documentation {
-
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.DocumentationFiles#getTrainingExternal <em>Training External</em>}'.
@@ -48,4 +47,5 @@ public interface TrainingDocExternal extends Documentation {
 	 * @generated
 	 */
 	void setParent(DocumentationFiles value);
+
 } // TrainingDocExternal

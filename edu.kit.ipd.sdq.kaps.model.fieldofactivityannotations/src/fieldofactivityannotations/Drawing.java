@@ -20,7 +20,6 @@ package fieldofactivityannotations;
  * @generated
  */
 public interface Drawing extends File {
-
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.ECADSpecification#getDrawings <em>Drawings</em>}'.
@@ -48,4 +47,5 @@ public interface Drawing extends File {
 	 * @generated
 	 */
 	void setParent(ECADSpecification value);
+
 } // Drawing

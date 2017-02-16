@@ -406,76 +406,6 @@ public class FieldofactivityannotationsAdapterFactory extends AdapterFactoryImpl
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.StockList <em>Stock List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fieldofactivityannotations.StockList
-	 * @generated
-	 */
-	public Adapter createStockListAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.ComponentStockList <em>Component Stock List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fieldofactivityannotations.ComponentStockList
-	 * @generated
-	 */
-	public Adapter createComponentStockListAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.InterfaceStockList <em>Interface Stock List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fieldofactivityannotations.InterfaceStockList
-	 * @generated
-	 */
-	public Adapter createInterfaceStockListAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.ModuleStockList <em>Module Stock List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fieldofactivityannotations.ModuleStockList
-	 * @generated
-	 */
-	public Adapter createModuleStockListAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.StructureStockList <em>Structure Stock List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see fieldofactivityannotations.StructureStockList
-	 * @generated
-	 */
-	public Adapter createStructureStockListAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.RoleList <em>Role List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -822,6 +752,76 @@ public class FieldofactivityannotationsAdapterFactory extends AdapterFactoryImpl
 	 * @generated
 	 */
 	public Adapter createStructureDocumentationFilesAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.StockList <em>Stock List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.StockList
+	 * @generated
+	 */
+	public Adapter createStockListAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.ComponentStockList <em>Component Stock List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.ComponentStockList
+	 * @generated
+	 */
+	public Adapter createComponentStockListAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.InterfaceStockList <em>Interface Stock List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.InterfaceStockList
+	 * @generated
+	 */
+	public Adapter createInterfaceStockListAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.ModuleStockList <em>Module Stock List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.ModuleStockList
+	 * @generated
+	 */
+	public Adapter createModuleStockListAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link fieldofactivityannotations.StructureStockList <em>Structure Stock List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see fieldofactivityannotations.StructureStockList
+	 * @generated
+	 */
+	public Adapter createStructureStockListAdapter() {
 		return null;
 	}
 

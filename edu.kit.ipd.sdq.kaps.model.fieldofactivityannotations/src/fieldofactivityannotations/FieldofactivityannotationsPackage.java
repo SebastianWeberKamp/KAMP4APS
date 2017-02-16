@@ -38,7 +38,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://sdq.ipd.kit.edu/KAPSFieldofactivityannotations/1.0";
+	String eNS_URI = "http://sdq.ipd.kit.edu/KAPSFieldofactivityannotations/0.1";
 
 	/**
 	 * The package namespace name.
@@ -734,66 +734,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int COMPONENT_SPECIFICATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.FileImpl <em>File</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.FileImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getFile()
-	 * @generated
-	 */
-	int FILE = 15;
-
-	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.StockListImpl <em>Stock List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.StockListImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStockList()
-	 * @generated
-	 */
-	int STOCK_LIST = 36;
-
-	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.ComponentStockListImpl <em>Component Stock List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.ComponentStockListImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentStockList()
-	 * @generated
-	 */
-	int COMPONENT_STOCK_LIST = 37;
-
-	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.InterfaceStockListImpl <em>Interface Stock List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.InterfaceStockListImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getInterfaceStockList()
-	 * @generated
-	 */
-	int INTERFACE_STOCK_LIST = 38;
-
-	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.ModuleStockListImpl <em>Module Stock List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.ModuleStockListImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getModuleStockList()
-	 * @generated
-	 */
-	int MODULE_STOCK_LIST = 39;
-
-	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.StructureStockListImpl <em>Structure Stock List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.StructureStockListImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStructureStockList()
-	 * @generated
-	 */
-	int STRUCTURE_STOCK_LIST = 40;
-
-	/**
 	 * The meta object id for the '{@link fieldofactivityannotations.impl.RoleListImpl <em>Role List</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -994,6 +934,16 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int PERSON_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.FileImpl <em>File</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.FileImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getFile()
+	 * @generated
+	 */
+	int FILE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -1766,7 +1716,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 */
 	int SYSTEM_TEST_OPERATION_COUNT = TEST_CASE_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link fieldofactivityannotations.impl.DocumentationFilesImpl <em>Documentation Files</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -2124,6 +2073,16 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int STRUCTURE_DOCUMENTATION_FILES_OPERATION_COUNT = DOCUMENTATION_FILES_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.StockListImpl <em>Stock List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.StockListImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStockList()
+	 * @generated
+	 */
+	int STOCK_LIST = 36;
+
+	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2149,6 +2108,16 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int STOCK_LIST_OPERATION_COUNT = FILE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.ComponentStockListImpl <em>Component Stock List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.ComponentStockListImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentStockList()
+	 * @generated
+	 */
+	int COMPONENT_STOCK_LIST = 37;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -2196,6 +2165,16 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int COMPONENT_STOCK_LIST_OPERATION_COUNT = STOCK_LIST_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.InterfaceStockListImpl <em>Interface Stock List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.InterfaceStockListImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getInterfaceStockList()
+	 * @generated
+	 */
+	int INTERFACE_STOCK_LIST = 38;
+
+	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2241,6 +2220,16 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int INTERFACE_STOCK_LIST_OPERATION_COUNT = STOCK_LIST_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.ModuleStockListImpl <em>Module Stock List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.ModuleStockListImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getModuleStockList()
+	 * @generated
+	 */
+	int MODULE_STOCK_LIST = 39;
+
+	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2284,6 +2273,16 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @ordered
 	 */
 	int MODULE_STOCK_LIST_OPERATION_COUNT = STOCK_LIST_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.StructureStockListImpl <em>Structure Stock List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.StructureStockListImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStructureStockList()
+	 * @generated
+	 */
+	int STRUCTURE_STOCK_LIST = 40;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -2893,144 +2892,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getComponentSpecification_Parent();
 
 	/**
-	 * Returns the meta object for class '{@link fieldofactivityannotations.StockList <em>Stock List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Stock List</em>'.
-	 * @see fieldofactivityannotations.StockList
-	 * @generated
-	 */
-	EClass getStockList();
-
-	/**
-	 * Returns the meta object for class '{@link fieldofactivityannotations.ComponentStockList <em>Component Stock List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Component Stock List</em>'.
-	 * @see fieldofactivityannotations.ComponentStockList
-	 * @generated
-	 */
-	EClass getComponentStockList();
-
-	/**
-	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.ComponentStockList#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see fieldofactivityannotations.ComponentStockList#getParent()
-	 * @see #getComponentStockList()
-	 * @generated
-	 */
-	EReference getComponentStockList_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.ComponentStockList#getComponents <em>Components</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Components</em>'.
-	 * @see fieldofactivityannotations.ComponentStockList#getComponents()
-	 * @see #getComponentStockList()
-	 * @generated
-	 */
-	EReference getComponentStockList_Components();
-
-	/**
-	 * Returns the meta object for class '{@link fieldofactivityannotations.InterfaceStockList <em>Interface Stock List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Interface Stock List</em>'.
-	 * @see fieldofactivityannotations.InterfaceStockList
-	 * @generated
-	 */
-	EClass getInterfaceStockList();
-
-	/**
-	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.InterfaceStockList#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see fieldofactivityannotations.InterfaceStockList#getParent()
-	 * @see #getInterfaceStockList()
-	 * @generated
-	 */
-	EReference getInterfaceStockList_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.InterfaceStockList#getInterfaces <em>Interfaces</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interfaces</em>'.
-	 * @see fieldofactivityannotations.InterfaceStockList#getInterfaces()
-	 * @see #getInterfaceStockList()
-	 * @generated
-	 */
-	EReference getInterfaceStockList_Interfaces();
-
-	/**
-	 * Returns the meta object for class '{@link fieldofactivityannotations.ModuleStockList <em>Module Stock List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Module Stock List</em>'.
-	 * @see fieldofactivityannotations.ModuleStockList
-	 * @generated
-	 */
-	EClass getModuleStockList();
-
-	/**
-	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.ModuleStockList#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see fieldofactivityannotations.ModuleStockList#getParent()
-	 * @see #getModuleStockList()
-	 * @generated
-	 */
-	EReference getModuleStockList_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.ModuleStockList#getModules <em>Modules</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Modules</em>'.
-	 * @see fieldofactivityannotations.ModuleStockList#getModules()
-	 * @see #getModuleStockList()
-	 * @generated
-	 */
-	EReference getModuleStockList_Modules();
-
-	/**
-	 * Returns the meta object for class '{@link fieldofactivityannotations.StructureStockList <em>Structure Stock List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Structure Stock List</em>'.
-	 * @see fieldofactivityannotations.StructureStockList
-	 * @generated
-	 */
-	EClass getStructureStockList();
-
-	/**
-	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.StructureStockList#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see fieldofactivityannotations.StructureStockList#getParent()
-	 * @see #getStructureStockList()
-	 * @generated
-	 */
-	EReference getStructureStockList_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.StructureStockList#getStructures <em>Structures</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Structures</em>'.
-	 * @see fieldofactivityannotations.StructureStockList#getStructures()
-	 * @see #getStructureStockList()
-	 * @generated
-	 */
-	EReference getStructureStockList_Structures();
-
-	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.RoleList <em>Role List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3622,6 +3483,144 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getStructureDocumentationFiles_Parent();
 
 	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.StockList <em>Stock List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Stock List</em>'.
+	 * @see fieldofactivityannotations.StockList
+	 * @generated
+	 */
+	EClass getStockList();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.ComponentStockList <em>Component Stock List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Component Stock List</em>'.
+	 * @see fieldofactivityannotations.ComponentStockList
+	 * @generated
+	 */
+	EClass getComponentStockList();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.ComponentStockList#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.ComponentStockList#getParent()
+	 * @see #getComponentStockList()
+	 * @generated
+	 */
+	EReference getComponentStockList_Parent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.ComponentStockList#getComponents <em>Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Components</em>'.
+	 * @see fieldofactivityannotations.ComponentStockList#getComponents()
+	 * @see #getComponentStockList()
+	 * @generated
+	 */
+	EReference getComponentStockList_Components();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.InterfaceStockList <em>Interface Stock List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Interface Stock List</em>'.
+	 * @see fieldofactivityannotations.InterfaceStockList
+	 * @generated
+	 */
+	EClass getInterfaceStockList();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.InterfaceStockList#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.InterfaceStockList#getParent()
+	 * @see #getInterfaceStockList()
+	 * @generated
+	 */
+	EReference getInterfaceStockList_Parent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.InterfaceStockList#getInterfaces <em>Interfaces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Interfaces</em>'.
+	 * @see fieldofactivityannotations.InterfaceStockList#getInterfaces()
+	 * @see #getInterfaceStockList()
+	 * @generated
+	 */
+	EReference getInterfaceStockList_Interfaces();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.ModuleStockList <em>Module Stock List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Module Stock List</em>'.
+	 * @see fieldofactivityannotations.ModuleStockList
+	 * @generated
+	 */
+	EClass getModuleStockList();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.ModuleStockList#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.ModuleStockList#getParent()
+	 * @see #getModuleStockList()
+	 * @generated
+	 */
+	EReference getModuleStockList_Parent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.ModuleStockList#getModules <em>Modules</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Modules</em>'.
+	 * @see fieldofactivityannotations.ModuleStockList#getModules()
+	 * @see #getModuleStockList()
+	 * @generated
+	 */
+	EReference getModuleStockList_Modules();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.StructureStockList <em>Structure Stock List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Structure Stock List</em>'.
+	 * @see fieldofactivityannotations.StructureStockList
+	 * @generated
+	 */
+	EClass getStructureStockList();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.StructureStockList#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.StructureStockList#getParent()
+	 * @see #getStructureStockList()
+	 * @generated
+	 */
+	EReference getStructureStockList_Parent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.StructureStockList#getStructures <em>Structures</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Structures</em>'.
+	 * @see fieldofactivityannotations.StructureStockList#getStructures()
+	 * @see #getStructureStockList()
+	 * @generated
+	 */
+	EReference getStructureStockList_Structures();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4081,120 +4080,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT_SPECIFICATION__PARENT = eINSTANCE.getComponentSpecification_Parent();
-
-		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.StockListImpl <em>Stock List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.StockListImpl
-		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStockList()
-		 * @generated
-		 */
-		EClass STOCK_LIST = eINSTANCE.getStockList();
-
-		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.ComponentStockListImpl <em>Component Stock List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.ComponentStockListImpl
-		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentStockList()
-		 * @generated
-		 */
-		EClass COMPONENT_STOCK_LIST = eINSTANCE.getComponentStockList();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPONENT_STOCK_LIST__PARENT = eINSTANCE.getComponentStockList_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPONENT_STOCK_LIST__COMPONENTS = eINSTANCE.getComponentStockList_Components();
-
-		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.InterfaceStockListImpl <em>Interface Stock List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.InterfaceStockListImpl
-		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getInterfaceStockList()
-		 * @generated
-		 */
-		EClass INTERFACE_STOCK_LIST = eINSTANCE.getInterfaceStockList();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INTERFACE_STOCK_LIST__PARENT = eINSTANCE.getInterfaceStockList_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference INTERFACE_STOCK_LIST__INTERFACES = eINSTANCE.getInterfaceStockList_Interfaces();
-
-		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.ModuleStockListImpl <em>Module Stock List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.ModuleStockListImpl
-		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getModuleStockList()
-		 * @generated
-		 */
-		EClass MODULE_STOCK_LIST = eINSTANCE.getModuleStockList();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MODULE_STOCK_LIST__PARENT = eINSTANCE.getModuleStockList_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Modules</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MODULE_STOCK_LIST__MODULES = eINSTANCE.getModuleStockList_Modules();
-
-		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.StructureStockListImpl <em>Structure Stock List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.StructureStockListImpl
-		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStructureStockList()
-		 * @generated
-		 */
-		EClass STRUCTURE_STOCK_LIST = eINSTANCE.getStructureStockList();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STRUCTURE_STOCK_LIST__PARENT = eINSTANCE.getStructureStockList_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Structures</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STRUCTURE_STOCK_LIST__STRUCTURES = eINSTANCE.getStructureStockList_Structures();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.RoleListImpl <em>Role List</em>}' class.
@@ -4693,6 +4578,120 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference STRUCTURE_DOCUMENTATION_FILES__PARENT = eINSTANCE.getStructureDocumentationFiles_Parent();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.StockListImpl <em>Stock List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.StockListImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStockList()
+		 * @generated
+		 */
+		EClass STOCK_LIST = eINSTANCE.getStockList();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.ComponentStockListImpl <em>Component Stock List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.ComponentStockListImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentStockList()
+		 * @generated
+		 */
+		EClass COMPONENT_STOCK_LIST = eINSTANCE.getComponentStockList();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_STOCK_LIST__PARENT = eINSTANCE.getComponentStockList_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_STOCK_LIST__COMPONENTS = eINSTANCE.getComponentStockList_Components();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.InterfaceStockListImpl <em>Interface Stock List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.InterfaceStockListImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getInterfaceStockList()
+		 * @generated
+		 */
+		EClass INTERFACE_STOCK_LIST = eINSTANCE.getInterfaceStockList();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERFACE_STOCK_LIST__PARENT = eINSTANCE.getInterfaceStockList_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERFACE_STOCK_LIST__INTERFACES = eINSTANCE.getInterfaceStockList_Interfaces();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.ModuleStockListImpl <em>Module Stock List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.ModuleStockListImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getModuleStockList()
+		 * @generated
+		 */
+		EClass MODULE_STOCK_LIST = eINSTANCE.getModuleStockList();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE_STOCK_LIST__PARENT = eINSTANCE.getModuleStockList_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Modules</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE_STOCK_LIST__MODULES = eINSTANCE.getModuleStockList_Modules();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.StructureStockListImpl <em>Structure Stock List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.StructureStockListImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStructureStockList()
+		 * @generated
+		 */
+		EClass STRUCTURE_STOCK_LIST = eINSTANCE.getStructureStockList();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUCTURE_STOCK_LIST__PARENT = eINSTANCE.getStructureStockList_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Structures</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUCTURE_STOCK_LIST__STRUCTURES = eINSTANCE.getStructureStockList_Structures();
 
 	}
 

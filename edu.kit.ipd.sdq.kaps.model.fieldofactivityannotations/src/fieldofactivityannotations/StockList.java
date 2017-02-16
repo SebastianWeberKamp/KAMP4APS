@@ -2,6 +2,7 @@
  */
 package fieldofactivityannotations;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Stock List</b></em>'.
@@ -13,5 +14,4 @@ package fieldofactivityannotations;
  * @generated
  */
 public interface StockList extends File {
-
 } // StockList

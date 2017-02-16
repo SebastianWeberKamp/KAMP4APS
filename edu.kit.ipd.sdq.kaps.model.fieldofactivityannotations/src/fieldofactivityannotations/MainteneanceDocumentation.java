@@ -20,7 +20,6 @@ package fieldofactivityannotations;
  * @generated
  */
 public interface MainteneanceDocumentation extends Documentation {
-
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.DocumentationFiles#getMainteneance <em>Mainteneance</em>}'.
@@ -48,4 +47,5 @@ public interface MainteneanceDocumentation extends Documentation {
 	 * @generated
 	 */
 	void setParent(DocumentationFiles value);
+
 } // MainteneanceDocumentation

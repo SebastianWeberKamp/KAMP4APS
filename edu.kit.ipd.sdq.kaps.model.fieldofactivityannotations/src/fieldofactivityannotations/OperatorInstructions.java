@@ -20,7 +20,6 @@ package fieldofactivityannotations;
  * @generated
  */
 public interface OperatorInstructions extends Documentation {
-
 	/**
 	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.DocumentationFiles#getInstructions <em>Instructions</em>}'.
@@ -48,4 +47,5 @@ public interface OperatorInstructions extends Documentation {
 	 * @generated
 	 */
 	void setParent(DocumentationFiles value);
+
 } // OperatorInstructions

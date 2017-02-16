@@ -37,6 +37,7 @@ public class ComponentDrawingImpl extends DrawingImpl implements ComponentDrawin
 	 * @ordered
 	 */
 	protected Component drawn_component;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

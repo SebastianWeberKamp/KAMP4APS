@@ -37,6 +37,7 @@ public class ModuleDrawingImpl extends DrawingImpl implements ModuleDrawing {
 	 * @ordered
 	 */
 	protected Module drawn_module;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

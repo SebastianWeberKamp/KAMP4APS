@@ -9,6 +9,7 @@ import fieldofactivityannotations.FieldofactivityannotationsPackage;
 import fieldofactivityannotations.InterfaceDocumentationFiles;
 import fieldofactivityannotations.ModuleDocumentationFiles;
 import fieldofactivityannotations.StructureDocumentationFiles;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
