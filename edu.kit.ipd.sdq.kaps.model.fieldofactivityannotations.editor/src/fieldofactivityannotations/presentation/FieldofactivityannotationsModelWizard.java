@@ -1,6 +1,6 @@
 /**
  */
-package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation;
+package fieldofactivityannotations.presentation;
 
 
 import java.util.ArrayList;
@@ -69,9 +69,10 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsPackage;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.provider.KAPSFieldofactivityAnnotationsEditPlugin;
+import fieldofactivityannotations.FieldofactivityannotationsFactory;
+import fieldofactivityannotations.FieldofactivityannotationsPackage;
+import fieldofactivityannotations.provider.FieldofactivityannotationsEditPlugin;
+
 
 import org.eclipse.core.runtime.Path;
 
@@ -98,7 +99,7 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 	 * @generated
 	 */
 	public static final List<String> FILE_EXTENSIONS =
-		Collections.unmodifiableList(Arrays.asList(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditorFilenameExtensions").split("\\s*,\\s*")));
+		Collections.unmodifiableList(Arrays.asList(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -107,7 +108,7 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 	 * @generated
 	 */
 	public static final String FORMATTED_FILE_EXTENSIONS =
-		KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+		FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.
@@ -174,8 +175,8 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		this.workbench = workbench;
 		this.selection = selection;
-		setWindowTitle(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getImage("full/wizban/NewFieldofactivityannotations")));
+		setWindowTitle(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(FieldofactivityannotationsEditorPlugin.INSTANCE.getImage("full/wizban/NewFieldofactivityannotations")));
 	}
 
 	/**
@@ -258,7 +259,7 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 							resource.save(options);
 						}
 						catch (Exception exception) {
-							KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.log(exception);
+							FieldofactivityannotationsEditorPlugin.INSTANCE.log(exception);
 						}
 						finally {
 							progressMonitor.done();
@@ -291,14 +292,14 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 					 workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());					 	 
 			}
 			catch (PartInitException exception) {
-				MessageDialog.openError(workbenchWindow.getShell(), KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
+				MessageDialog.openError(workbenchWindow.getShell(), FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
 				return false;
 			}
 
 			return true;
 		}
 		catch (Exception exception) {
-			KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.log(exception);
+			FieldofactivityannotationsEditorPlugin.INSTANCE.log(exception);
 			return false;
 		}
 	}
@@ -332,7 +333,7 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 				String extension = new Path(getFileName()).getFileExtension();
 				if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
 					String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension";
-					setErrorMessage(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
+					setErrorMessage(FieldofactivityannotationsEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
 					return false;
 				}
 				return true;
@@ -394,8 +395,7 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 		 * @generated
 		 */
 		public void createControl(Composite parent) {
-			Composite composite = new Composite(parent, SWT.NONE);
-			{
+			Composite composite = new Composite(parent, SWT.NONE); {
 				GridLayout layout = new GridLayout();
 				layout.numColumns = 1;
 				layout.verticalSpacing = 12;
@@ -410,7 +410,7 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 
 			Label containerLabel = new Label(composite, SWT.LEFT);
 			{
-				containerLabel.setText(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
+				containerLabel.setText(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -436,7 +436,7 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 
 			Label encodingLabel = new Label(composite, SWT.LEFT);
 			{
-				encodingLabel.setText(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
+				encodingLabel.setText(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -535,10 +535,10 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 		 */
 		protected String getLabel(String typeName) {
 			try {
-				return KAPSFieldofactivityAnnotationsEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
+				return FieldofactivityannotationsEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
 			}
 			catch(MissingResourceException mre) {
-				KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.log(mre);
+				FieldofactivityannotationsEditorPlugin.INSTANCE.log(mre);
 			}
 			return typeName;
 		}
@@ -551,7 +551,7 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 		protected Collection<String> getEncodings() {
 			if (encodings == null) {
 				encodings = new ArrayList<String>();
-				for (StringTokenizer stringTokenizer = new StringTokenizer(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
+				for (StringTokenizer stringTokenizer = new StringTokenizer(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
 					encodings.add(stringTokenizer.nextToken());
 				}
 			}
@@ -570,9 +570,9 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 		// Create a page, set the title, and the initial model file name.
 		//
 		newFileCreationPage = new FieldofactivityannotationsModelWizardNewFileCreationPage("Whatever", selection);
-		newFileCreationPage.setTitle(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsModelWizard_label"));
-		newFileCreationPage.setDescription(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsModelWizard_description"));
-		newFileCreationPage.setFileName(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+		newFileCreationPage.setTitle(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsModelWizard_label"));
+		newFileCreationPage.setDescription(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsModelWizard_description"));
+		newFileCreationPage.setFileName(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -598,7 +598,7 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditorFilenameDefaultBase");
+					String defaultModelBaseFilename = FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditorFilenameDefaultBase");
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
 					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
@@ -609,8 +609,8 @@ public class FieldofactivityannotationsModelWizard extends Wizard implements INe
 			}
 		}
 		initialObjectCreationPage = new FieldofactivityannotationsModelWizardInitialObjectCreationPage("Whatever2");
-		initialObjectCreationPage.setTitle(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsModelWizard_label"));
-		initialObjectCreationPage.setDescription(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
+		initialObjectCreationPage.setTitle(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsModelWizard_label"));
+		initialObjectCreationPage.setDescription(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
 		addPage(initialObjectCreationPage);
 	}
 

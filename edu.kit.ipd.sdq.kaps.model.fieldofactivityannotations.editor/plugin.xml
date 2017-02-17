@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsModelWizardID"
+            id="fieldofactivityannotations.presentation.FieldofactivityannotationsModelWizardID"
             name="%_UI_FieldofactivityannotationsModelWizard_label"
-            class="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsModelWizard"
+            class="fieldofactivityannotations.presentation.FieldofactivityannotationsModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/FieldofactivityannotationsModelFile.gif">
          <description>%_UI_FieldofactivityannotationsModelWizard_description</description>
@@ -25,13 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated Fieldofactivityannotations -->
       <editor
-            id="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsEditorID"
+            id="fieldofactivityannotations.presentation.FieldofactivityannotationsEditorID"
             name="%_UI_FieldofactivityannotationsEditor_label"
             icon="icons/full/obj16/FieldofactivityannotationsModelFile.gif"
             extensions="fieldofactivityannotations"
-            class="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsEditor"
-            contributorClass="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation.FieldofactivityannotationsActionBarContributor">
+            class="fieldofactivityannotations.presentation.FieldofactivityannotationsEditor"
+            contributorClass="fieldofactivityannotations.presentation.FieldofactivityannotationsActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

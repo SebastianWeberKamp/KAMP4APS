@@ -1,14 +1,6 @@
 /**
  */
-package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation;
-
-import de.uka.ipd.sdq.identifier.provider.IdentifierEditPlugin;
-
-import de.uka.ipd.sdq.probfunction.provider.ProbabilityFunctionEditPlugin;
-
-import de.uka.ipd.sdq.stoex.provider.StoexEditPlugin;
-
-import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
+package fieldofactivityannotations.presentation;
 
 import org.eclipse.emf.common.EMFPlugin;
 
@@ -16,22 +8,22 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.palladiosimulator.pcm.core.provider.PalladioComponentModelEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
- * This is the central singleton for the KAPS Fieldofactivity Annotations editor plugin.
+ * This is the central singleton for the Fieldofactivityannotations editor plugin.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public final class KAPSFieldofactivityAnnotationsEditorPlugin extends EMFPlugin {
+public final class FieldofactivityannotationsEditorPlugin extends EMFPlugin {
 	/**
 	 * Keep track of the singleton.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final KAPSFieldofactivityAnnotationsEditorPlugin INSTANCE = new KAPSFieldofactivityAnnotationsEditorPlugin();
+	public static final FieldofactivityannotationsEditorPlugin INSTANCE = new FieldofactivityannotationsEditorPlugin();
 	
 	/**
 	 * Keep track of the singleton.
@@ -47,14 +39,10 @@ public final class KAPSFieldofactivityAnnotationsEditorPlugin extends EMFPlugin 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public KAPSFieldofactivityAnnotationsEditorPlugin() {
+	public FieldofactivityannotationsEditorPlugin() {
 		super
 			(new ResourceLocator [] {
-				IdentifierEditPlugin.INSTANCE,
-				PalladioComponentModelEditPlugin.INSTANCE,
-				ProbabilityFunctionEditPlugin.INSTANCE,
-				StoexEditPlugin.INSTANCE,
-				UnitsEditPlugin.INSTANCE,
+				XPPUEditPlugin.INSTANCE,
 			});
 	}
 

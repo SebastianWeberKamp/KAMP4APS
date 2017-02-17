@@ -1,6 +1,6 @@
 /**
  */
-package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation;
+package fieldofactivityannotations.presentation;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -71,14 +71,14 @@ public class FieldofactivityannotationsActionBarContributor
 	 * @generated
 	 */
 	protected IAction showPropertiesViewAction =
-		new Action(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
+		new Action(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_ShowPropertiesView_menu_item")) {
 			@Override
 			public void run() {
 				try {
 					getPage().showView("org.eclipse.ui.views.PropertySheet");
 				}
 				catch (PartInitException exception) {
-					KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.log(exception);
+					FieldofactivityannotationsEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -91,7 +91,7 @@ public class FieldofactivityannotationsActionBarContributor
 	 * @generated
 	 */
 	protected IAction refreshViewerAction =
-		new Action(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
+		new Action(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_RefreshViewer_menu_item")) {
 			@Override
 			public boolean isEnabled() {
 				return activeEditorPart instanceof IViewerProvider;
@@ -178,7 +178,7 @@ public class FieldofactivityannotationsActionBarContributor
 	public void contributeToMenu(IMenuManager menuManager) {
 		super.contributeToMenu(menuManager);
 
-		IMenuManager submenuManager = new MenuManager(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditor_menu"), "edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotationsMenuID");
+		IMenuManager submenuManager = new MenuManager(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_FieldofactivityannotationsEditor_menu"), "fieldofactivityannotationsMenuID");
 		menuManager.insertAfter("additions", submenuManager);
 		submenuManager.add(new Separator("settings"));
 		submenuManager.add(new Separator("actions"));
@@ -187,12 +187,12 @@ public class FieldofactivityannotationsActionBarContributor
 
 		// Prepare for CreateChild item addition or removal.
 		//
-		createChildMenuManager = new MenuManager(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		createChildMenuManager = new MenuManager(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		submenuManager.insertBefore("additions", createChildMenuManager);
 
 		// Prepare for CreateSibling item addition or removal.
 		//
-		createSiblingMenuManager = new MenuManager(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		createSiblingMenuManager = new MenuManager(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		submenuManager.insertBefore("additions", createSiblingMenuManager);
 
 		// Force an update because Eclipse hides empty menus now.
@@ -383,11 +383,11 @@ public class FieldofactivityannotationsActionBarContributor
 		super.menuAboutToShow(menuManager);
 		MenuManager submenuManager = null;
 
-		submenuManager = new MenuManager(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
+		submenuManager = new MenuManager(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_CreateChild_menu_item"));
 		populateManager(submenuManager, createChildActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 
-		submenuManager = new MenuManager(KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
+		submenuManager = new MenuManager(FieldofactivityannotationsEditorPlugin.INSTANCE.getString("_UI_CreateSibling_menu_item"));
 		populateManager(submenuManager, createSiblingActions, null);
 		menuManager.insertBefore("edit", submenuManager);
 	}

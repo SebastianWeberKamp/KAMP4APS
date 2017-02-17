@@ -1,6 +1,6 @@
 /**
  */
-package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation;
+package fieldofactivityannotations.presentation;
 
 
 import java.io.IOException;
@@ -154,56 +154,27 @@ import org.eclipse.emf.edit.ui.util.EditUIUtil;
 
 import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
-import de.uka.ipd.sdq.identifier.provider.IdentifierItemProviderAdapterFactory;
-
-import de.uka.ipd.sdq.probfunction.provider.ProbfunctionItemProviderAdapterFactory;
-
-import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
-
-import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.provider.FieldofactivityannotationsItemProviderAdapterFactory;
+import fieldofactivityannotations.provider.FieldofactivityannotationsItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
-import org.palladiosimulator.pcm.allocation.provider.AllocationItemProviderAdapterFactory;
+import xPPU.BusComponents.provider.BusComponentsItemProviderAdapterFactory;
 
-import org.palladiosimulator.pcm.core.composition.provider.CompositionItemProviderAdapterFactory;
+import xPPU.ComponentRepository.provider.ComponentRepositoryItemProviderAdapterFactory;
 
-import org.palladiosimulator.pcm.core.entity.provider.EntityItemProviderAdapterFactory;
+import xPPU.ElectronicComponents.provider.ElectronicComponentsItemProviderAdapterFactory;
 
-import org.palladiosimulator.pcm.core.provider.CoreItemProviderAdapterFactory;
+import xPPU.Identifier.provider.IdentifierItemProviderAdapterFactory;
 
-import org.palladiosimulator.pcm.parameter.provider.ParameterItemProviderAdapterFactory;
+import xPPU.InterfaceRepository.provider.InterfaceRepositoryItemProviderAdapterFactory;
 
-import org.palladiosimulator.pcm.protocol.provider.ProtocolItemProviderAdapterFactory;
+import xPPU.MechanicalComponents.provider.MechanicalComponentsItemProviderAdapterFactory;
 
-import org.palladiosimulator.pcm.provider.PcmItemProviderAdapterFactory;
+import xPPU.ModuleRepository.provider.ModuleRepositoryItemProviderAdapterFactory;
 
-import org.palladiosimulator.pcm.qosannotations.provider.QosannotationsItemProviderAdapterFactory;
+import xPPU.StructureRepository.provider.StructureRepositoryItemProviderAdapterFactory;
 
-import org.palladiosimulator.pcm.qosannotations.qos_performance.provider.QosPerformanceItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.qosannotations.qos_reliability.provider.QosReliabilityItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.reliability.provider.ReliabilityItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.repository.provider.RepositoryItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.resourceenvironment.provider.ResourceenvironmentItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.resourcetype.provider.ResourcetypeItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.seff.provider.SeffItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.seff.seff_performance.provider.SeffPerformanceItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.seff.seff_reliability.provider.SeffReliabilityItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.subsystem.provider.SubsystemItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.system.provider.SystemItemProviderAdapterFactory;
-
-import org.palladiosimulator.pcm.usagemodel.provider.UsagemodelItemProviderAdapterFactory;
+import xPPU.provider.XPPUItemProviderAdapterFactory;
 
 
 /**
@@ -577,7 +548,7 @@ public class FieldofactivityannotationsEditor
 					}
 				}
 				catch (CoreException exception) {
-					KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.log(exception);
+					FieldofactivityannotationsEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -693,7 +664,7 @@ public class FieldofactivityannotationsEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.log(exception);
+					FieldofactivityannotationsEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -704,7 +675,7 @@ public class FieldofactivityannotationsEditor
 						markerHelper.createMarkers(diagnostic);
 					}
 					catch (CoreException exception) {
-						KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.log(exception);
+						FieldofactivityannotationsEditorPlugin.INSTANCE.log(exception);
 					}
 				}
 			}
@@ -749,30 +720,15 @@ public class FieldofactivityannotationsEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new FieldofactivityannotationsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new XPPUItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ComponentRepositoryItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new BusComponentsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ElectronicComponentsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new MechanicalComponentsItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new StructureRepositoryItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ModuleRepositoryItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new InterfaceRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new PcmItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new CoreItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new EntityItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new CompositionItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new UsagemodelItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new RepositoryItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ResourcetypeItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ProtocolItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ParameterItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ReliabilityItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SeffItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SeffPerformanceItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SeffReliabilityItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new QosannotationsItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new QosPerformanceItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new QosReliabilityItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SystemItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ResourceenvironmentItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new AllocationItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SubsystemItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ProbfunctionItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new StoexItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new UnitsItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.
@@ -1594,7 +1550,7 @@ public class FieldofactivityannotationsEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.log(exception);
+			FieldofactivityannotationsEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1798,7 +1754,7 @@ public class FieldofactivityannotationsEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString(key);
+		return FieldofactivityannotationsEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1808,7 +1764,7 @@ public class FieldofactivityannotationsEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return KAPSFieldofactivityAnnotationsEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return FieldofactivityannotationsEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**
