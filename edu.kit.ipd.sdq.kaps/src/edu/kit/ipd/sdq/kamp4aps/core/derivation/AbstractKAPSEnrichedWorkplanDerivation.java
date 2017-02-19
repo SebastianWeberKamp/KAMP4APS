@@ -23,6 +23,7 @@ import fieldofactivityannotations.ModuleDrawing;
 import fieldofactivityannotations.ModuleStockList;
 import fieldofactivityannotations.StructureDrawing;
 import fieldofactivityannotations.StructureStockList;
+import xPPU.Plant;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
@@ -95,9 +96,8 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 				ActivityElementType componentType = ActivityElementType.COMPONENT;
 				if (activity.getElementType() == componentType && numberOfFiles.get(componentType) > 0) {
 					activity.addFollowupActivity(new Activity(ActivityType.UPDATE_CAD, ActivityElementType.DRAWING,
-							activity.getElement(), numberOfFiles + " drawings", null, activity.getBasicActivity(),
-							"ECAD: " + activity.getBasicActivity().getName() + " drawings (" + numberOfFiles
-									+ " files) of component " + activity.getElementName() + "."));
+							activity.getElement(), "Component drawings of " + activity.getElementName(), null, activity.getBasicActivity(),
+							"ECAD: " + activity.getBasicActivity().getName() + " drawings (Component files) of component " + activity.getElementName() + "."));
 				}
 			}
 	
@@ -105,9 +105,8 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 				ActivityElementType moduleType = ActivityElementType.MODULE;
 				if (activity.getElementType() == moduleType && numberOfFiles.get(moduleType) > 0) {
 					activity.addFollowupActivity(new Activity(ActivityType.UPDATE_CAD, ActivityElementType.DRAWING,
-							activity.getElement(), numberOfFiles + " drawings", null, activity.getBasicActivity(),
-							"ECAD: " + activity.getBasicActivity().getName() + " drawings (" + numberOfFiles
-									+ " files) of module " + activity.getElementName() + "."));
+							activity.getElement(), "Module drawings of " + activity.getElementName(), null, activity.getBasicActivity(),
+							"ECAD: " + activity.getBasicActivity().getName() + " drawings (Module files) of module " + activity.getElementName() + "."));
 				}
 			}
 	
@@ -115,9 +114,8 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 				ActivityElementType interfaceType = ActivityElementType.INTERFACE;
 				if (activity.getElementType() == interfaceType && numberOfFiles.get(interfaceType) > 0) {
 					activity.addFollowupActivity(new Activity(ActivityType.UPDATE_CAD, ActivityElementType.DRAWING,
-							activity.getElement(), numberOfFiles + " drawings", null, activity.getBasicActivity(),
-							"ECAD: " + activity.getBasicActivity().getName() + " drawings (" + numberOfFiles
-									+ " files) of interface " + activity.getElementName() + "."));
+							activity.getElement(), "Interface drawings of " + activity.getElementName(), null, activity.getBasicActivity(),
+							"ECAD: " + activity.getBasicActivity().getName() + " drawings (Interface files) of interface " + activity.getElementName() + "."));
 				}
 			}
 	
@@ -125,9 +123,8 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 				ActivityElementType structureType = ActivityElementType.STRUCTURE;
 				if (activity.getElementType() == structureType && numberOfFiles.get(structureType) > 0) {
 					activity.addFollowupActivity(new Activity(ActivityType.UPDATE_CAD, ActivityElementType.DRAWING,
-							activity.getElement(), numberOfFiles + " drawings", null, activity.getBasicActivity(),
-							"ECAD: " + activity.getBasicActivity().getName() + " drawings (" + numberOfFiles
-									+ " files) of interface " + activity.getElementName() + "."));
+							activity.getElement(), "Structure drawings of " + activity.getElementName() , null, activity.getBasicActivity(),
+							"ECAD: " + activity.getBasicActivity().getName() + " drawings (Structure files) of interface " + activity.getElementName() + "."));
 				}
 			}
 
@@ -217,7 +214,6 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 
 				private void addDocumentation(Activity activity, Map<ActivityElementType, Integer> numberOfFiles, String type) {
 					if (numberOfFiles.get(ActivityElementType.MAINTENEANCE_DOCUMENTATION) > 0) {
-//						activity.get
 						activity.addFollowupActivity(new Activity(ActivityType.UPDATE_DOCUMENTATION,
 								ActivityElementType.MAINTENEANCE_DOCUMENTATION, activity.getElement(),
 								numberOfFiles.get(ActivityElementType.MAINTENEANCE_DOCUMENTATION) + " mainteneance documentation",
@@ -346,25 +342,28 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 	
 		private void deriveTestExecutionActivities(ArchitectureVersion baseVersion, ArchitectureVersion targetVersion,
 				List<Activity> baseActivityList) {
+			List<Plant> plantsToTest = new ArrayList<Plant>();
+			Activity lastActivity = null;
 			for (Activity activity : baseActivityList) {
-				int numberOfFiles = ArchitectureAnnotationLookup.
-						lookUpNumberOfTests(determineRelevantArchitectureVersion(activity, baseVersion, targetVersion), 
-						activity);
-				if(numberOfFiles > 0){
-					activity.addFollowupActivity(new Activity(ActivityType.TEST_EXECUTION,
-							ActivityElementType.TESTCASE, activity.getElement(),
-							numberOfFiles + " test ", null,
-							activity.getBasicActivity(),
-							"Test: " + activity.getBasicActivity().getName() + " test ("
-									+ numberOfFiles
-									+ " testcases) of  " + activity.getElementName() + "."));
-				}
-			}			
+				ArchitectureAnnotationLookup.lookUpNumberOfTests(determineRelevantArchitectureVersion(activity, baseVersion, targetVersion), 
+						activity, plantsToTest);
+				lastActivity = activity;
+			}	
+			addTestsForPlants(plantsToTest, lastActivity);
 		}
 
-		
-
-
+			private void addTestsForPlants(List<Plant> plantsToTest, Activity lastActivity) {
+				if(lastActivity != null){
+					for(Plant plant : plantsToTest)
+						lastActivity.addFollowupActivity(new Activity(ActivityType.TEST_EXECUTION,
+								ActivityElementType.TESTCASE, lastActivity.getElement(),
+								plant.getId() + " test ", null,
+								lastActivity.getBasicActivity(),
+								"Test: " + lastActivity.getBasicActivity().getName() + " test ("
+										+ plant.getId()
+										+ " testcases)."));
+				}
+			}
 
 	public static List<Activity> calculateFlattenendActivityList(List<Activity> activityList) {
 		List<Activity> flatActivityList = new ArrayList<Activity>();

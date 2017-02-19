@@ -1,7 +1,9 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import edu.kit.ipd.sdq.amp.workplan.Activity;
 import fieldofactivityannotations.ComponentDocumentationFiles;
@@ -203,12 +205,13 @@ public class ArchitectureAnnotationLookup {
 		return interfaceStockList;
 	}
 
-	public static int lookUpNumberOfTests(ArchitectureVersion version, Activity activity) {
-		int numberOfTests = 0;
+	public static void lookUpNumberOfTests(ArchitectureVersion version, Activity activity, List<Plant> plantsToTest) {
 		if(version.getFieldOfActivityRepository().getTestSpecification() != null){
 			List<SystemTest> tests = version.getFieldOfActivityRepository().getTestSpecification().getSystemTests();
-			numberOfTests += tests.size();
+			for(SystemTest test : tests){
+				if(!plantsToTest.contains(test.getSystemUnderTest()))
+					plantsToTest.add(test.getSystemUnderTest());
+			}
 		}
-		return numberOfTests;
 	}
 }
