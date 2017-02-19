@@ -181,7 +181,8 @@
         eType="#//TestSpecification" eOpposite="#//TestSpecification/systemTests"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnderTest" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//Plant"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DocumentationFiles" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="DocumentationFiles" abstract="true"
+      interface="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="mainteneance" upperBound="-1"
         eType="#//MainteneanceDocumentation" containment="true" eOpposite="#//MainteneanceDocumentation/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="instructions" upperBound="-1"
@@ -194,18 +195,26 @@
   <eClassifiers xsi:type="ecore:EClass" name="ComponentDocumentationFiles" eSuperTypes="#//DocumentationFiles">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/componentDocumentation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentedComponent" lowerBound="1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModuleDocumentationFiles" eSuperTypes="#//DocumentationFiles">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/moduleDocumentation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentedModule" lowerBound="1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceDocumentationFiles" eSuperTypes="#//DocumentationFiles">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/interfaceDocumentation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentedInterface" lowerBound="1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StructureDocumentationFiles" eSuperTypes="#//DocumentationFiles">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/structureDocumentation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="documentedStructure" lowerBound="1"
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StockList" eSuperTypes="#//File"/>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentStockList" eSuperTypes="#//StockList">
