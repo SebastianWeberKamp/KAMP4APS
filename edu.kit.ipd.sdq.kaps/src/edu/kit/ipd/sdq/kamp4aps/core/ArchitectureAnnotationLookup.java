@@ -3,9 +3,6 @@ package edu.kit.ipd.sdq.kamp4aps.core;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
-import org.palladiosimulator.pcm.repository.RepositoryComponent;
-
 import edu.kit.ipd.sdq.amp.workplan.Activity;
 import fieldofactivityannotations.ComponentDocumentationFiles;
 import fieldofactivityannotations.ComponentDrawing;
@@ -18,7 +15,6 @@ import fieldofactivityannotations.InterfaceStockList;
 import fieldofactivityannotations.ModuleDocumentationFiles;
 import fieldofactivityannotations.ModuleDrawing;
 import fieldofactivityannotations.ModuleStockList;
-import fieldofactivityannotations.StockList;
 import fieldofactivityannotations.StructureDocumentationFiles;
 import fieldofactivityannotations.StructureDrawing;
 import fieldofactivityannotations.StructureStockList;
@@ -114,7 +110,10 @@ public class ArchitectureAnnotationLookup {
 			Component component) {
 		List<ComponentDocumentationFiles> doc = new ArrayList<ComponentDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
-			return version.getFieldOfActivityRepository().getDocumentationSpecification().getComponentDocumentation();
+			for(ComponentDocumentationFiles cdf : version.getFieldOfActivityRepository().getDocumentationSpecification().getComponentDocumentation()){
+				if(cdf.getDocumentedComponent() == component)
+					doc.add(cdf);
+			}
 		}
 		return doc;
 	}
@@ -123,7 +122,10 @@ public class ArchitectureAnnotationLookup {
 			Module module) {
 		List<ModuleDocumentationFiles> doc = new ArrayList<ModuleDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
-			return version.getFieldOfActivityRepository().getDocumentationSpecification().getModuleDocumentation();
+			for(ModuleDocumentationFiles mdf : version.getFieldOfActivityRepository().getDocumentationSpecification().getModuleDocumentation()){
+				if(mdf.getDocumentedModule() == module)
+					doc.add(mdf);
+			}
 		}
 		return doc;
 	}
@@ -132,7 +134,10 @@ public class ArchitectureAnnotationLookup {
 			Interface interfaceElement) {
 		List<InterfaceDocumentationFiles> doc = new ArrayList<InterfaceDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
-			return version.getFieldOfActivityRepository().getDocumentationSpecification().getInterfaceDocumentation();
+			for(InterfaceDocumentationFiles idf : version.getFieldOfActivityRepository().getDocumentationSpecification().getInterfaceDocumentation()){
+				if(idf.getDocumentedInterface() == interfaceElement)
+					doc.add(idf);
+			}
 		}
 		return doc;
 	}
@@ -141,7 +146,10 @@ public class ArchitectureAnnotationLookup {
 			Structure structure) {
 		List<StructureDocumentationFiles> doc = new ArrayList<StructureDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
-			return version.getFieldOfActivityRepository().getDocumentationSpecification().getStructureDocumentation();
+			for(StructureDocumentationFiles sdf : version.getFieldOfActivityRepository().getDocumentationSpecification().getStructureDocumentation()){
+				if(sdf.getDocumentedStructure() == structure)
+					doc.add(sdf);
+			}
 		}
 		return doc;
 	}

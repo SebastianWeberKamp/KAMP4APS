@@ -217,6 +217,7 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 
 				private void addDocumentation(Activity activity, Map<ActivityElementType, Integer> numberOfFiles, String type) {
 					if (numberOfFiles.get(ActivityElementType.MAINTENEANCE_DOCUMENTATION) > 0) {
+//						activity.get
 						activity.addFollowupActivity(new Activity(ActivityType.UPDATE_DOCUMENTATION,
 								ActivityElementType.MAINTENEANCE_DOCUMENTATION, activity.getElement(),
 								numberOfFiles.get(ActivityElementType.MAINTENEANCE_DOCUMENTATION) + " mainteneance documentation",
