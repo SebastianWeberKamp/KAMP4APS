@@ -1717,10 +1717,10 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int SYSTEM_TEST_OPERATION_COUNT = TEST_CASE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.DocumentationFilesImpl <em>Documentation Files</em>}' class.
+	 * The meta object id for the '{@link fieldofactivityannotations.DocumentationFiles <em>Documentation Files</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.DocumentationFilesImpl
+	 * @see fieldofactivityannotations.DocumentationFiles
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getDocumentationFiles()
 	 * @generated
 	 */
@@ -1836,13 +1836,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int COMPONENT_DOCUMENTATION_FILES__PARENT = DOCUMENTATION_FILES_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Documented Component</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_DOCUMENTATION_FILES__DOCUMENTED_COMPONENT = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Component Documentation Files</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+	int COMPONENT_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Component Documentation Files</em>' class.
@@ -1909,13 +1918,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int MODULE_DOCUMENTATION_FILES__PARENT = DOCUMENTATION_FILES_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Documented Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_DOCUMENTATION_FILES__DOCUMENTED_MODULE = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Module Documentation Files</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+	int MODULE_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Module Documentation Files</em>' class.
@@ -1982,13 +2000,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int INTERFACE_DOCUMENTATION_FILES__PARENT = DOCUMENTATION_FILES_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Documented Interface</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_DOCUMENTATION_FILES__DOCUMENTED_INTERFACE = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Interface Documentation Files</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+	int INTERFACE_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Interface Documentation Files</em>' class.
@@ -2055,13 +2082,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int STRUCTURE_DOCUMENTATION_FILES__PARENT = DOCUMENTATION_FILES_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Documented Structure</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE_DOCUMENTATION_FILES__DOCUMENTED_STRUCTURE = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Structure Documentation Files</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 1;
+	int STRUCTURE_DOCUMENTATION_FILES_FEATURE_COUNT = DOCUMENTATION_FILES_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Structure Documentation Files</em>' class.
@@ -3420,6 +3456,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getComponentDocumentationFiles_Parent();
 
 	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.ComponentDocumentationFiles#getDocumentedComponent <em>Documented Component</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Documented Component</em>'.
+	 * @see fieldofactivityannotations.ComponentDocumentationFiles#getDocumentedComponent()
+	 * @see #getComponentDocumentationFiles()
+	 * @generated
+	 */
+	EReference getComponentDocumentationFiles_DocumentedComponent();
+
+	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.ModuleDocumentationFiles <em>Module Documentation Files</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3439,6 +3486,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getModuleDocumentationFiles_Parent();
+
+	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.ModuleDocumentationFiles#getDocumentedModule <em>Documented Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Documented Module</em>'.
+	 * @see fieldofactivityannotations.ModuleDocumentationFiles#getDocumentedModule()
+	 * @see #getModuleDocumentationFiles()
+	 * @generated
+	 */
+	EReference getModuleDocumentationFiles_DocumentedModule();
 
 	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.InterfaceDocumentationFiles <em>Interface Documentation Files</em>}'.
@@ -3462,6 +3520,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getInterfaceDocumentationFiles_Parent();
 
 	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.InterfaceDocumentationFiles#getDocumentedInterface <em>Documented Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Documented Interface</em>'.
+	 * @see fieldofactivityannotations.InterfaceDocumentationFiles#getDocumentedInterface()
+	 * @see #getInterfaceDocumentationFiles()
+	 * @generated
+	 */
+	EReference getInterfaceDocumentationFiles_DocumentedInterface();
+
+	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.StructureDocumentationFiles <em>Structure Documentation Files</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3481,6 +3550,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getStructureDocumentationFiles_Parent();
+
+	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.StructureDocumentationFiles#getDocumentedStructure <em>Documented Structure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Documented Structure</em>'.
+	 * @see fieldofactivityannotations.StructureDocumentationFiles#getDocumentedStructure()
+	 * @see #getStructureDocumentationFiles()
+	 * @generated
+	 */
+	EReference getStructureDocumentationFiles_DocumentedStructure();
 
 	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.StockList <em>Stock List</em>}'.
@@ -4466,10 +4546,10 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference SYSTEM_TEST__SYSTEM_UNDER_TEST = eINSTANCE.getSystemTest_SystemUnderTest();
 
 		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.DocumentationFilesImpl <em>Documentation Files</em>}' class.
+		 * The meta object literal for the '{@link fieldofactivityannotations.DocumentationFiles <em>Documentation Files</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.DocumentationFilesImpl
+		 * @see fieldofactivityannotations.DocumentationFiles
 		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getDocumentationFiles()
 		 * @generated
 		 */
@@ -4526,6 +4606,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference COMPONENT_DOCUMENTATION_FILES__PARENT = eINSTANCE.getComponentDocumentationFiles_Parent();
 
 		/**
+		 * The meta object literal for the '<em><b>Documented Component</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT_DOCUMENTATION_FILES__DOCUMENTED_COMPONENT = eINSTANCE.getComponentDocumentationFiles_DocumentedComponent();
+
+		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.ModuleDocumentationFilesImpl <em>Module Documentation Files</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4542,6 +4630,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MODULE_DOCUMENTATION_FILES__PARENT = eINSTANCE.getModuleDocumentationFiles_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Documented Module</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE_DOCUMENTATION_FILES__DOCUMENTED_MODULE = eINSTANCE.getModuleDocumentationFiles_DocumentedModule();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.InterfaceDocumentationFilesImpl <em>Interface Documentation Files</em>}' class.
@@ -4562,6 +4658,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference INTERFACE_DOCUMENTATION_FILES__PARENT = eINSTANCE.getInterfaceDocumentationFiles_Parent();
 
 		/**
+		 * The meta object literal for the '<em><b>Documented Interface</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERFACE_DOCUMENTATION_FILES__DOCUMENTED_INTERFACE = eINSTANCE.getInterfaceDocumentationFiles_DocumentedInterface();
+
+		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.StructureDocumentationFilesImpl <em>Structure Documentation Files</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4578,6 +4682,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference STRUCTURE_DOCUMENTATION_FILES__PARENT = eINSTANCE.getStructureDocumentationFiles_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Documented Structure</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STRUCTURE_DOCUMENTATION_FILES__DOCUMENTED_STRUCTURE = eINSTANCE.getStructureDocumentationFiles_DocumentedStructure();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.StockListImpl <em>Stock List</em>}' class.

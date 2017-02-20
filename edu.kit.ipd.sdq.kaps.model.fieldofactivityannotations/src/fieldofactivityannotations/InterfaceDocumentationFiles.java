@@ -2,6 +2,8 @@
  */
 package fieldofactivityannotations;
 
+import xPPU.InterfaceRepository.Interface;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +15,7 @@ package fieldofactivityannotations;
  * </p>
  * <ul>
  *   <li>{@link fieldofactivityannotations.InterfaceDocumentationFiles#getParent <em>Parent</em>}</li>
+ *   <li>{@link fieldofactivityannotations.InterfaceDocumentationFiles#getDocumentedInterface <em>Documented Interface</em>}</li>
  * </ul>
  *
  * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getInterfaceDocumentationFiles()
@@ -47,5 +50,31 @@ public interface InterfaceDocumentationFiles extends DocumentationFiles {
 	 * @generated
 	 */
 	void setParent(DocumentationSpecification value);
+
+	/**
+	 * Returns the value of the '<em><b>Documented Interface</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Documented Interface</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Documented Interface</em>' reference.
+	 * @see #setDocumentedInterface(Interface)
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getInterfaceDocumentationFiles_DocumentedInterface()
+	 * @model required="true"
+	 * @generated
+	 */
+	Interface getDocumentedInterface();
+
+	/**
+	 * Sets the value of the '{@link fieldofactivityannotations.InterfaceDocumentationFiles#getDocumentedInterface <em>Documented Interface</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Documented Interface</em>' reference.
+	 * @see #getDocumentedInterface()
+	 * @generated
+	 */
+	void setDocumentedInterface(Interface value);
 
 } // InterfaceDocumentationFiles

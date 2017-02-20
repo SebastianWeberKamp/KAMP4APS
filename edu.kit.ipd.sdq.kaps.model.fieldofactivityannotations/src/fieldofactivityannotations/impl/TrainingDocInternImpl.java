@@ -5,15 +5,12 @@ package fieldofactivityannotations.impl;
 import fieldofactivityannotations.DocumentationFiles;
 import fieldofactivityannotations.FieldofactivityannotationsPackage;
 import fieldofactivityannotations.TrainingDocIntern;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -153,6 +150,7 @@ public class TrainingDocInternImpl extends DocumentationImpl implements Training
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

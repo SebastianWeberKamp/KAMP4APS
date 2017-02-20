@@ -2,6 +2,8 @@
  */
 package fieldofactivityannotations;
 
+import xPPU.ModuleRepository.Module;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -13,6 +15,7 @@ package fieldofactivityannotations;
  * </p>
  * <ul>
  *   <li>{@link fieldofactivityannotations.ModuleDocumentationFiles#getParent <em>Parent</em>}</li>
+ *   <li>{@link fieldofactivityannotations.ModuleDocumentationFiles#getDocumentedModule <em>Documented Module</em>}</li>
  * </ul>
  *
  * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getModuleDocumentationFiles()
@@ -47,5 +50,31 @@ public interface ModuleDocumentationFiles extends DocumentationFiles {
 	 * @generated
 	 */
 	void setParent(DocumentationSpecification value);
+
+	/**
+	 * Returns the value of the '<em><b>Documented Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Documented Module</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Documented Module</em>' reference.
+	 * @see #setDocumentedModule(Module)
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getModuleDocumentationFiles_DocumentedModule()
+	 * @model required="true"
+	 * @generated
+	 */
+	Module getDocumentedModule();
+
+	/**
+	 * Sets the value of the '{@link fieldofactivityannotations.ModuleDocumentationFiles#getDocumentedModule <em>Documented Module</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Documented Module</em>' reference.
+	 * @see #getDocumentedModule()
+	 * @generated
+	 */
+	void setDocumentedModule(Module value);
 
 } // ModuleDocumentationFiles

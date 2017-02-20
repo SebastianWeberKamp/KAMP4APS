@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationFiles()
- * @model abstract="true"
+ * @model interface="true" abstract="true"
  * @generated
  */
 public interface DocumentationFiles extends EObject {
