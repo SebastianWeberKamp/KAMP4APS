@@ -5,12 +5,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.emf.ecore.EObject;
+
 import edu.kit.ipd.sdq.amp.workplan.Activity;
 import fieldofactivityannotations.ComponentDocumentationFiles;
 import fieldofactivityannotations.ComponentDrawing;
 import fieldofactivityannotations.ComponentStockList;
 import fieldofactivityannotations.DocumentationFiles;
 import fieldofactivityannotations.Drawing;
+import fieldofactivityannotations.HMIConfiguration;
 import fieldofactivityannotations.InterfaceDocumentationFiles;
 import fieldofactivityannotations.InterfaceDrawing;
 import fieldofactivityannotations.InterfaceStockList;
@@ -21,6 +24,7 @@ import fieldofactivityannotations.StructureDocumentationFiles;
 import fieldofactivityannotations.StructureDrawing;
 import fieldofactivityannotations.StructureStockList;
 import fieldofactivityannotations.SystemTest;
+import junit.runner.Version;
 import xPPU.Plant;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
@@ -112,8 +116,9 @@ public class ArchitectureAnnotationLookup {
 			Component component) {
 		List<ComponentDocumentationFiles> doc = new ArrayList<ComponentDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
-			for(ComponentDocumentationFiles cdf : version.getFieldOfActivityRepository().getDocumentationSpecification().getComponentDocumentation()){
-				if(cdf.getDocumentedComponent() == component)
+			for (ComponentDocumentationFiles cdf : version.getFieldOfActivityRepository()
+					.getDocumentationSpecification().getComponentDocumentation()) {
+				if (cdf.getDocumentedComponent() == component)
 					doc.add(cdf);
 			}
 		}
@@ -124,8 +129,9 @@ public class ArchitectureAnnotationLookup {
 			Module module) {
 		List<ModuleDocumentationFiles> doc = new ArrayList<ModuleDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
-			for(ModuleDocumentationFiles mdf : version.getFieldOfActivityRepository().getDocumentationSpecification().getModuleDocumentation()){
-				if(mdf.getDocumentedModule() == module)
+			for (ModuleDocumentationFiles mdf : version.getFieldOfActivityRepository().getDocumentationSpecification()
+					.getModuleDocumentation()) {
+				if (mdf.getDocumentedModule() == module)
 					doc.add(mdf);
 			}
 		}
@@ -136,8 +142,9 @@ public class ArchitectureAnnotationLookup {
 			Interface interfaceElement) {
 		List<InterfaceDocumentationFiles> doc = new ArrayList<InterfaceDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
-			for(InterfaceDocumentationFiles idf : version.getFieldOfActivityRepository().getDocumentationSpecification().getInterfaceDocumentation()){
-				if(idf.getDocumentedInterface() == interfaceElement)
+			for (InterfaceDocumentationFiles idf : version.getFieldOfActivityRepository()
+					.getDocumentationSpecification().getInterfaceDocumentation()) {
+				if (idf.getDocumentedInterface() == interfaceElement)
 					doc.add(idf);
 			}
 		}
@@ -148,8 +155,9 @@ public class ArchitectureAnnotationLookup {
 			Structure structure) {
 		List<StructureDocumentationFiles> doc = new ArrayList<StructureDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
-			for(StructureDocumentationFiles sdf : version.getFieldOfActivityRepository().getDocumentationSpecification().getStructureDocumentation()){
-				if(sdf.getDocumentedStructure() == structure)
+			for (StructureDocumentationFiles sdf : version.getFieldOfActivityRepository()
+					.getDocumentationSpecification().getStructureDocumentation()) {
+				if (sdf.getDocumentedStructure() == structure)
 					doc.add(sdf);
 			}
 		}
@@ -159,7 +167,7 @@ public class ArchitectureAnnotationLookup {
 	public static List<ComponentStockList> lookUpStockListForComponent(ArchitectureVersion version,
 			Component component) {
 		List<ComponentStockList> componentStockList = new ArrayList<ComponentStockList>();
-		if(version.getFieldOfActivityRepository().getStockSpecification() != null){
+		if (version.getFieldOfActivityRepository().getStockSpecification() != null) {
 			for (ComponentStockList stock : version.getFieldOfActivityRepository().getStockSpecification()
 					.getComponentStockList()) {
 				if (stock.getComponents().contains(component))
@@ -182,7 +190,7 @@ public class ArchitectureAnnotationLookup {
 	public static List<StructureStockList> lookUpStockListForStructure(ArchitectureVersion version,
 			Structure structure) {
 		List<StructureStockList> structureStockList = new ArrayList<StructureStockList>();
-		if(version.getFieldOfActivityRepository().getStockSpecification() != null){
+		if (version.getFieldOfActivityRepository().getStockSpecification() != null) {
 			for (StructureStockList stock : version.getFieldOfActivityRepository().getStockSpecification()
 					.getStructureStockList()) {
 				if (stock.getStructures().contains(structure))
@@ -195,7 +203,7 @@ public class ArchitectureAnnotationLookup {
 	public static List<InterfaceStockList> lookUpStockListForInterface(ArchitectureVersion version,
 			Interface interfaceElement) {
 		List<InterfaceStockList> interfaceStockList = new ArrayList<InterfaceStockList>();
-		if(version.getFieldOfActivityRepository().getStockSpecification() != null){
+		if (version.getFieldOfActivityRepository().getStockSpecification() != null) {
 			for (InterfaceStockList stock : version.getFieldOfActivityRepository().getStockSpecification()
 					.getInterfaceStockList()) {
 				if (stock.getInterfaces().contains(interfaceElement))
@@ -206,11 +214,45 @@ public class ArchitectureAnnotationLookup {
 	}
 
 	public static void lookUpNumberOfTests(ArchitectureVersion version, Activity activity, List<Plant> plantsToTest) {
-		if(version.getFieldOfActivityRepository().getTestSpecification() != null){
+		if (version.getFieldOfActivityRepository().getTestSpecification() != null) {
 			List<SystemTest> tests = version.getFieldOfActivityRepository().getTestSpecification().getSystemTests();
-			for(SystemTest test : tests){
-				if(!plantsToTest.contains(test.getSystemUnderTest()))
+			for (SystemTest test : tests) {
+				if (!plantsToTest.contains(test.getSystemUnderTest()))
 					plantsToTest.add(test.getSystemUnderTest());
+			}
+		}
+	}
+
+	public static void lookUpNumberOfHmiChanges(ArchitectureVersion version, Activity activity,
+			Map<ActivityElementType, List<? extends EObject>> hmiAffectingParts) {
+		if (version.getFieldOfActivityRepository().getHmiSpecification() != null) {
+			List<HMIConfiguration> hmiConfigs = version.getFieldOfActivityRepository().getHmiSpecification()
+					.getHmiConfig();
+			for (HMIConfiguration hmiConfig : hmiConfigs) {
+				if (activity.getElement() instanceof Component) {
+					if (!hmiConfig.getComponents().isEmpty()
+							&& !hmiAffectingParts.containsValue(hmiConfig.getComponents())
+							&& hmiConfig.getComponents().contains((Component) activity.getElement()))
+						hmiAffectingParts.put(ActivityElementType.COMPONENT, hmiConfig.getComponents());
+				}
+				if (activity.getElement() instanceof Interface) {
+					if (!hmiConfig.getInterfaces().isEmpty()
+							&& !hmiAffectingParts.containsValue(hmiConfig.getInterfaces())
+							&& hmiConfig.getInterfaces().contains((Interface) activity.getElement()))
+						hmiAffectingParts.put(ActivityElementType.INTERFACE, hmiConfig.getInterfaces());
+				}
+				if (activity.getElement() instanceof Structure) {
+					if (!hmiConfig.getStructures().isEmpty()
+							&& !hmiAffectingParts.containsValue(hmiConfig.getStructures())
+							&& hmiConfig.getStructures().contains((Structure) activity.getElement()))
+						hmiAffectingParts.put(ActivityElementType.STRUCTURE, hmiConfig.getStructures());
+				}
+				if (activity.getElement() instanceof Module) {
+					if (!hmiConfig.getModules().isEmpty() 
+							&& !hmiAffectingParts.containsValue(hmiConfig.getModules())
+							&& hmiConfig.getModules().contains((Module) activity.getElement()))
+						hmiAffectingParts.put(ActivityElementType.MODULE, hmiConfig.getModules());
+				}
 			}
 		}
 	}
