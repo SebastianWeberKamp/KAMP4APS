@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 
+import DeploymentContext.ComponentCorrelation;
 import edu.kit.ipd.sdq.amp.workplan.AbstractEnrichedWorkplanDerivation;
 import edu.kit.ipd.sdq.amp.workplan.Activity;
 import edu.kit.ipd.sdq.amp.workplan.BasicActivity;
@@ -24,6 +25,8 @@ import fieldofactivityannotations.ModuleStockList;
 import fieldofactivityannotations.Role;
 import fieldofactivityannotations.StructureDrawing;
 import fieldofactivityannotations.StructureStockList;
+import iec611313Specification.common.pous.programs.ProgramType;
+import iec611313Specification.common.variables.VariableDeclaration;
 import xPPU.Plant;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
@@ -42,9 +45,62 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 		deriveDocumentationActivities(baseArchitectureVersion, subVersion, result);
 		derivePurchaseActivities(baseArchitectureVersion, subVersion, result);
 		deriveHMIActivities(baseArchitectureVersion, subVersion, result);
+		deriveCalibrationActivities(baseArchitectureVersion, subVersion, result);
 		deriveTestExecutionActivities(baseArchitectureVersion, subVersion, result);
-
+		
+		deriveSoftwareChangeActivities(baseArchitectureVersion, subVersion, result);
 		return result;
+	}
+
+	private void deriveSoftwareChangeActivities(ArchitectureVersion baseVersion, ArchitectureVersion targetVersion, 
+			List<Activity> baseActivityList) {
+		Map<Component, ProgramType> softwareSeedChanges = new HashMap<Component, ProgramType>();
+		Map<Interface, VariableDeclaration> variableChanges = new HashMap<Interface, VariableDeclaration>();
+		for(Activity activity : baseActivityList){
+			ArchitectureVersion version = determineRelevantArchitectureVersion(activity, baseVersion, targetVersion);
+			softwareSeedChanges.putAll(ArchitectureAnnotationLookup.lookUpToChangeSoftware(
+					version, activity));
+			variableChanges.putAll(ArchitectureAnnotationLookup.lookUpInterfacesOfSoftwareChanges(
+					version, activity));
+			addSoftwareChanges(softwareSeedChanges, variableChanges, activity);
+		}
+	}
+
+	private void addSoftwareChanges(Map<Component, ProgramType> softwareChangeAffectedParts, 
+									Map<Interface, VariableDeclaration> variableChanges, Activity activity) {
+		for(Component component : softwareChangeAffectedParts.keySet()){
+			if(component == activity.getElement()){
+				activity.addFollowupActivity(new Activity(ActivityType.UPDATE_SOFTWARE, ActivityElementType.PROGRAM_TYPE,
+						activity.getElement(), component.getId() , null, activity.getBasicActivity(), "Firmware of Element " + component.getId() +" in ProgramType "+ softwareChangeAffectedParts.get(component).getTypeName()));
+				
+				for(Interface interfaceElement : variableChanges.keySet()){
+						if(component.getInterfaces().contains(interfaceElement)){
+							activity.addFollowupActivity(new Activity(ActivityType.UPDATE_SOFTWARE, ActivityElementType.PROGRAM_TYPE,
+									activity.getElement(), "Variable: " + variableChanges.get(interfaceElement).getVariableType() + " " + variableChanges.get(interfaceElement).getName(), 
+									null, activity.getBasicActivity(), "Firmware of Element " + interfaceElement.getId() +": Variable "+ variableChanges.get(interfaceElement).getVariableType()
+									+ " " + variableChanges.get(interfaceElement).getName()));			
+						}
+					}
+			}
+		}
+	}
+
+	private void deriveCalibrationActivities(ArchitectureVersion baseVersion, ArchitectureVersion targetVersion,
+			List<Activity> baseActivityList) {
+		Map<ActivityElementType, List<? extends EObject>> calibrationAffectingParts = new HashMap<ActivityElementType, List<? extends EObject>>();
+		for(Activity activity : baseActivityList){
+			ArchitectureAnnotationLookup.lookUpNumberOfCalibrationChanges(
+					determineRelevantArchitectureVersion(activity, baseVersion, targetVersion), activity,
+					calibrationAffectingParts);
+			addCalibrationChanges(calibrationAffectingParts, activity);
+		}
+	}
+
+	private void addCalibrationChanges(Map<ActivityElementType, List<? extends EObject>> calibrationAffectingParts,
+			Activity activity) {
+		if (!calibrationAffectingParts.isEmpty())
+			activity.addFollowupActivity(new Activity(ActivityType.UPDATE_CALIBRATION, ActivityElementType.CALIBRATION_CONFIG,
+					activity.getElement(), "Calibration", null, activity.getBasicActivity(), "Calibrate Plant(s)"));
 	}
 
 	private void deriveHMIActivities(ArchitectureVersion baseVersion, ArchitectureVersion targetVersion,
@@ -58,9 +114,8 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 		}
 	}
 
-	private void addHmiChanges(Map<ActivityElementType, List<? extends EObject>> hmiAffectingParts,
-			Activity activity) {
-		if(!hmiAffectingParts.isEmpty())
+	private void addHmiChanges(Map<ActivityElementType, List<? extends EObject>> hmiAffectingParts, Activity activity) {
+		if (!hmiAffectingParts.isEmpty())
 			activity.addFollowupActivity(new Activity(ActivityType.UPDATE_HMI, ActivityElementType.HMI_CONFIG,
 					activity.getElement(), "HMI", null, activity.getBasicActivity(), "Update HMI"));
 	}
@@ -164,23 +219,6 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 							"ECAD: " + activity.getBasicActivity().getName()
 									+ " drawings (Structure files) of interface " + activity.getElementName() + ". "
 									+ role.getDescription()));
-		}
-	}
-
-	private String getRolesOfActivity(List<Role> roles) {
-		String activityRoles = "";
-		for (int i = 0; i < roles.size(); i++) {
-			Role role = roles.get(i);
-			setRoleDescription(roles, activityRoles, i, role);
-		}
-		return activityRoles;
-	}
-
-	private void setRoleDescription(List<Role> roles, String activityRoles, int i, Role role) {
-		if ((i + 1) == roles.size()) {
-			activityRoles += role.getDescription();
-		} else {
-			activityRoles += role.getDescription() + ", ";
 		}
 	}
 

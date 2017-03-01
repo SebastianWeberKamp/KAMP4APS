@@ -2,8 +2,6 @@ package edu.kit.ipd.sdq.kamp4aps.core;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
 
 import edu.kit.ipd.sdq.amp.propagation.AbstractChangePropagationAnalysis;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SwitchChanges;
@@ -96,125 +94,21 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 //				scenarioTwo.markChangesBasedOnBusBox(busBox, changePropagationDueToHardwareChange);
 			}
 			for(BusMaster busMaster : params.busMastersToChange){
-				ModifyBusMaster modifyBusMaster = scenarioTwo.createNewModifyBusMaster(busMaster);
+				ModifyBusMaster modifyBusMaster = scenarioTwo.createNewModifyBusMaster(busMaster, params.causingElementsOfBusMaster.get(busMaster));
 				changePropagationDueToHardwareChange.getBusMasterModifications().add(modifyBusMaster);
 //				scenarioTwo.markChangesBasedOnBusMaster(busMaster, changePropagationDueToHardwareChange);
 			}
 			for(BusSlave busSlave : params.busSlavesToChange){
-				ModifyBusSlave modifyBusSlave = scenarioTwo.createNewModifyBusSlave(busSlave);
+				ModifyBusSlave modifyBusSlave = scenarioTwo.createNewModifyBusSlave(busSlave, params.causingElementsOfBusSlave.get(busSlave));
 				changePropagationDueToHardwareChange.getBusSlaveModifications().add(modifyBusSlave);
 //				scenarioTwo.markChangesBasedOnBusSlave(busSlave, changePropagationDueToHardwareChange);
 			}
 			for(BusCable busCable : params.busCablesToChange){
-				ModifyBusCable modifyBusCable = scenarioTwo.createNewModifyBusCable(busCable);
+				ModifyBusCable modifyBusCable = scenarioTwo.createNewModifyBusCable(busCable, params.causingElementsOfBusCable.get(busCable));
 				changePropagationDueToHardwareChange.getBusCableModifications().add(modifyBusCable);
 //				scenarioTwo.markChangesBasedOnBusCable(busCable, changePropagationDueToHardwareChange);
 			}
 		}
-		
-		private void addBusMasterModifications() {
-			for(BusMaster busMaster : scenarioTwo.getInitialMarkedBusMaster()){
-				ModifyBusMaster modifyBusMaster = scenarioTwo.createNewModifyBusMaster(busMaster);
-				changePropagationDueToHardwareChange.getBusMasterModifications().add(modifyBusMaster);
-				scenarioTwo.markChangesBasedOnBusMaster(busMaster, changePropagationDueToHardwareChange);
-			}
-		}
-
-		private void addBusSlaveModifications() {
-			for(BusSlave busSlave : scenarioTwo.getInitialMarkedBusSlave()){
-				ModifyBusSlave modifyBusSlave = scenarioTwo.createNewModifyBusSlave(busSlave);
-				changePropagationDueToHardwareChange.getBusSlaveModifications().add(modifyBusSlave);
-				scenarioTwo.markChangesBasedOnBusSlave(busSlave, changePropagationDueToHardwareChange);
-			}
-		}
-		
-		private void removeDuplicates() {
-			removeModifyBusBoxDuplicates();
-			removeModifyBusMasterDuplicates();
-			removeModifyBusSlaveDuplicates();
-			removeModifyBusCableDuplicates();
-		}
-
-			private void removeModifyBusBoxDuplicates() {
-				EList<ModifyBusBox> tmpMods = new BasicEList<ModifyBusBox>();
-				for(ModifyBusBox mod : changePropagationDueToHardwareChange.getBusBoxModifications()){
-					boolean isDuplicate = false;
-					for(ModifyBusBox tmpMod : tmpMods){
-						if(mod.getId() == tmpMod.getId()){
-							isDuplicate = true;
-						}						
-					}
-					if(!isDuplicate)
-						tmpMods.add(mod);
-				}
-				System.out.println(changePropagationDueToHardwareChange.getBusBoxModifications().size());
-				changePropagationDueToHardwareChange.getBusBoxModifications().clear();
-				System.out.println(changePropagationDueToHardwareChange.getBusBoxModifications().size());
-				for(ModifyBusBox mod : tmpMods){
-					changePropagationDueToHardwareChange.getBusBoxModifications().add(mod);
-				}
-			}
-			
-			private void removeModifyBusMasterDuplicates() {
-				EList<ModifyBusMaster> tmpMods = new BasicEList<ModifyBusMaster>();
-				for(ModifyBusMaster mod : changePropagationDueToHardwareChange.getBusMasterModifications()){
-					boolean isDuplicate = false;
-					for(ModifyBusMaster tmpMod : tmpMods){
-						if(mod.getId() == tmpMod.getId()){
-							isDuplicate = true;
-						}						
-					}
-					if(!isDuplicate)
-						tmpMods.add(mod);
-				}
-				System.out.println(changePropagationDueToHardwareChange.getBusMasterModifications().size());
-				changePropagationDueToHardwareChange.getBusMasterModifications().clear();
-				System.out.println(changePropagationDueToHardwareChange.getBusMasterModifications().size());
-				for(ModifyBusMaster mod : tmpMods){
-					changePropagationDueToHardwareChange.getBusMasterModifications().add(mod);
-				}
-			}
-			
-			private void removeModifyBusSlaveDuplicates() {
-				EList<ModifyBusSlave> tmpMods = new BasicEList<ModifyBusSlave>();
-				for(ModifyBusSlave mod : changePropagationDueToHardwareChange.getBusSlaveModifications()){
-					boolean isDuplicate = false;
-					for(ModifyBusSlave tmpMod : tmpMods){
-						if(mod.getId() == tmpMod.getId()){
-							isDuplicate = true;
-						}						
-					}
-					if(!isDuplicate)
-						tmpMods.add(mod);
-				}
-				System.out.println(changePropagationDueToHardwareChange.getBusSlaveModifications().size());
-				changePropagationDueToHardwareChange.getBusSlaveModifications().clear();
-				System.out.println(changePropagationDueToHardwareChange.getBusSlaveModifications().size());
-				for(ModifyBusSlave mod : tmpMods){
-					changePropagationDueToHardwareChange.getBusSlaveModifications().add(mod);
-				}
-			}
-			
-			private void removeModifyBusCableDuplicates() {
-				EList<ModifyBusCable> tmpMods = new BasicEList<ModifyBusCable>();
-				for(ModifyBusCable mod : changePropagationDueToHardwareChange.getBusCableModifications()){
-					boolean isDuplicate = false;
-					for(ModifyBusCable tmpMod : tmpMods){
-						if(mod.getId() == tmpMod.getId()){
-							isDuplicate = true;
-						}						
-					}
-					if(!isDuplicate)
-						tmpMods.add(mod);
-				}
-				System.out.println(changePropagationDueToHardwareChange.getBusCableModifications().size());
-				changePropagationDueToHardwareChange.getBusCableModifications().clear();
-				System.out.println(changePropagationDueToHardwareChange.getBusCableModifications().size());
-				for(ModifyBusCable mod : tmpMods){
-					changePropagationDueToHardwareChange.getBusCableModifications().add(mod);
-				}
-			}
-
 			
 	protected void addAllChangePropagations(S version){
 		version.getModificationMarkRepository().getChangePropagationSteps().add(changePropagationDueToHardwareChange);

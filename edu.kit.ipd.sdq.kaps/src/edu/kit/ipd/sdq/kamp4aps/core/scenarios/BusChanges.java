@@ -1,6 +1,7 @@
 package edu.kit.ipd.sdq.kamp4aps.core.scenarios;
 
 import java.util.Collection;
+import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
 import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
@@ -17,6 +18,7 @@ import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusMaster;
 import xPPU.BusComponents.BusSlave;
 import xPPU.ComponentRepository.Component;
+import xPPU.Identifier.Identifier;
 import xPPU.InterfaceRepository.SignalInterface;
 
 public class BusChanges {
@@ -50,27 +52,30 @@ public class BusChanges {
 		return modifyBusBox;
 	}
 	
-	public ModifyBusMaster createNewModifyBusMaster(BusMaster busMaster) {
+	public ModifyBusMaster createNewModifyBusMaster(BusMaster busMaster, Set<Identifier> causingElements) {
 		ModifyBusMaster modifyBusMaster = modificationmarksFactory.eINSTANCE.createModifyBusMaster();
 		modifyBusMaster.setToolderived(true);
 		modifyBusMaster.setAffectedElement(busMaster);
 		modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusMaster());
+		modifyBusMaster.getCausingElements().addAll(causingElements);
 		return modifyBusMaster;
 	}
 	
-	public ModifyBusSlave createNewModifyBusSlave(BusSlave busSlave) {
+	public ModifyBusSlave createNewModifyBusSlave(BusSlave busSlave, Set<Identifier> causingElements) {
 		ModifyBusSlave modifyBusSlave = modificationmarksFactory.eINSTANCE.createModifyBusSlave();
 		modifyBusSlave.setToolderived(true);
 		modifyBusSlave.setAffectedElement(busSlave);
 		modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusSlave());
+		modifyBusSlave.getCausingElements().addAll(causingElements);
 		return modifyBusSlave;
 	}
 	
-	public ModifyBusCable createNewModifyBusCable(BusCable busCable) {
+	public ModifyBusCable createNewModifyBusCable(BusCable busCable, Set<Identifier> causingElements) {
 		ModifyBusCable modifyBusCable = modificationmarksFactory.eINSTANCE.createModifyBusCable();
 		modifyBusCable.setToolderived(true);
 		modifyBusCable.setAffectedElement(busCable);
 		modifyBusCable.getCausingElements().addAll(getInitialMarkedBusCable());
+		modifyBusCable.getCausingElements().addAll(causingElements);
 		return modifyBusCable;
 	}
 	

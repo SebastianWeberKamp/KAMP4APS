@@ -1,12 +1,10 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
-//import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesFactory;
-//import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependencyRepository;
+import DeploymentContext.DeploymentContextFactory;
+import DeploymentContext.DeploymentContextRepository;
 
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion.ArchitectureVersionParams;
 import fieldofactivityannotations.CalibrationSpecification;
-import fieldofactivityannotations.ComponentSpecification;
-import fieldofactivityannotations.DevelopmentSpecification;
 import fieldofactivityannotations.DocumentationSpecification;
 import fieldofactivityannotations.ECADSpecification;
 import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
@@ -27,6 +25,7 @@ public class ArchitectureModelFactoryFacade {
 		archParams.name = name;
 		archParams.fieldOfActivityRepository = ArchitectureModelFactoryFacade.createFieldOfActivityAnnotationsRepository();
 		archParams.modificationMarkRepository = ArchitectureModelFactoryFacade.createKAPSModificationMarkRepository();
+		archParams.deploymentContextRepository = ArchitectureModelFactoryFacade.createDeploymentContextRepository();
 		return new ArchitectureVersion(archParams);
 	}
 	
@@ -38,10 +37,11 @@ public class ArchitectureModelFactoryFacade {
 		
 		return repository;
 	}
-
-//	public static ComponentInternalDependencyRepository createComponentInternalDependencyRepository() {
-//		return ComponentInternalDependenciesFactory.eINSTANCE.createComponentInternalDependencyRepository();
-//	}
+	
+	public static DeploymentContextRepository createDeploymentContextRepository() {
+		DeploymentContextRepository repository = DeploymentContextFactory.eINSTANCE.createDeploymentContextRepository();
+		return repository;
+	}
 
 	public static FieldOfActivityAnnotationRepository createFieldOfActivityAnnotationsRepository() {
 		FieldOfActivityAnnotationRepository repository =  FieldofactivityannotationsFactory.eINSTANCE.createFieldOfActivityAnnotationRepository();
@@ -68,12 +68,6 @@ public class ArchitectureModelFactoryFacade {
 		
 		CalibrationSpecification calSpec = FieldofactivityannotationsFactory.eINSTANCE.createCalibrationSpecification();
 		repository.setCalibrationSpecification(calSpec);
-		
-		DevelopmentSpecification devSpec = FieldofactivityannotationsFactory.eINSTANCE.createDevelopmentSpecification();
-		repository.setDevelopmentSpecification(devSpec);
-		
-		ComponentSpecification comSpec = FieldofactivityannotationsFactory.eINSTANCE.createComponentSpecification();
-		repository.setComponentSpecification(comSpec);
 		
 		return repository;
 	}

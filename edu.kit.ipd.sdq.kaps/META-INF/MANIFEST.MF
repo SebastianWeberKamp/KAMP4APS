@@ -23,5 +23,8 @@ Export-Package: edu.kit.ipd.sdq.kamp4aps.activator,
  edu.kit.ipd.sdq.kamp4aps.core,
  edu.kit.ipd.sdq.kamp4aps.core.derivation,
  edu.kit.ipd.sdq.kamp4aps.ui
-Import-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider,
+Import-Package: DeploymentContext,
+ edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider,
+ iec611313Specification.common.pous.programs,
+ iec611313Specification.common.variables,
  xPPU

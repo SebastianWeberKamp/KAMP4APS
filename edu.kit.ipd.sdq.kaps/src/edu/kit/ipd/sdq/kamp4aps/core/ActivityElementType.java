@@ -1,6 +1,7 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
 import edu.kit.ipd.sdq.amp.workplan.AbstractActivityElementType;
+import fieldofactivityannotations.CalibrationConfiguration;
 import fieldofactivityannotations.ComponentStockList;
 import fieldofactivityannotations.Documentation;
 import fieldofactivityannotations.Drawing;
@@ -13,6 +14,7 @@ import fieldofactivityannotations.StructureStockList;
 import fieldofactivityannotations.TestCase;
 import fieldofactivityannotations.TrainingDocExternal;
 import fieldofactivityannotations.TrainingDocIntern;
+import iec611313Specification.common.pous.programs.ProgramType;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
@@ -34,12 +36,14 @@ public enum ActivityElementType implements AbstractActivityElementType {
 	TRAINING_DOCUMENTATION_EXTERNAL(TrainingDocExternal.class),
 	DRAWING(Drawing.class),
 	HMI_CONFIG(HMIConfiguration.class),
+	CALIBRATION_CONFIG(CalibrationConfiguration.class),
 	
 	COMPONENT_STOCKLIST(ComponentStockList.class),
 	MODULE_STOCKLIST(ModuleStockList.class),
 	INTERFACE_STOCKLIST(InterfaceStockList.class),
-	STRUCTURE_STOCKLIST(StructureStockList.class);
-	
+	STRUCTURE_STOCKLIST(StructureStockList.class),
+
+	PROGRAM_TYPE(ProgramType.class);
 	
 	private final Class<?> clazz;
 	private final String name;

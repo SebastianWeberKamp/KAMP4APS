@@ -5,9 +5,13 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
+import DeploymentContext.ComponentCorrelation;
+import DeploymentContext.VariableMapping;
 import edu.kit.ipd.sdq.amp.workplan.Activity;
+import fieldofactivityannotations.CalibrationConfiguration;
 import fieldofactivityannotations.ComponentDocumentationFiles;
 import fieldofactivityannotations.ComponentDrawing;
 import fieldofactivityannotations.ComponentStockList;
@@ -24,7 +28,8 @@ import fieldofactivityannotations.StructureDocumentationFiles;
 import fieldofactivityannotations.StructureDrawing;
 import fieldofactivityannotations.StructureStockList;
 import fieldofactivityannotations.SystemTest;
-import junit.runner.Version;
+import iec611313Specification.common.pous.programs.ProgramType;
+import iec611313Specification.common.variables.VariableDeclaration;
 import xPPU.Plant;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
@@ -255,5 +260,70 @@ public class ArchitectureAnnotationLookup {
 				}
 			}
 		}
+	}
+
+	public static void lookUpNumberOfCalibrationChanges(ArchitectureVersion version,
+			Activity activity, Map<ActivityElementType, List<? extends EObject>> calibrationAffectingParts) {
+		if (version.getFieldOfActivityRepository().getHmiSpecification() != null) {
+			List<CalibrationConfiguration> calibrationConfigs = version.getFieldOfActivityRepository().getCalibrationSpecification()
+					.getCalibrationConfig();
+			for (CalibrationConfiguration calibrationConfig : calibrationConfigs) {
+				if (activity.getElement() instanceof Component) {
+					if (!calibrationConfig.getComponents().isEmpty()
+							&& !calibrationAffectingParts.containsValue(calibrationConfig.getComponents())
+							&& calibrationConfig.getComponents().contains((Component) activity.getElement()))
+						calibrationAffectingParts.put(ActivityElementType.COMPONENT, calibrationConfig.getComponents());
+				}
+				if (activity.getElement() instanceof Interface) {
+					if (!calibrationConfig.getInterfaces().isEmpty()
+							&& !calibrationAffectingParts.containsValue(calibrationConfig.getInterfaces())
+							&& calibrationConfig.getInterfaces().contains((Interface) activity.getElement()))
+						calibrationAffectingParts.put(ActivityElementType.INTERFACE, calibrationConfig.getInterfaces());
+				}
+				if (activity.getElement() instanceof Structure) {
+					if (!calibrationConfig.getStructures().isEmpty()
+							&& !calibrationAffectingParts.containsValue(calibrationConfig.getStructures())
+							&& calibrationConfig.getStructures().contains((Structure) activity.getElement()))
+						calibrationAffectingParts.put(ActivityElementType.STRUCTURE, calibrationConfig.getStructures());
+				}
+				if (activity.getElement() instanceof Module) {
+					if (!calibrationConfig.getModules().isEmpty() 
+							&& !calibrationAffectingParts.containsValue(calibrationConfig.getModules())
+							&& calibrationConfig.getModules().contains((Module) activity.getElement()))
+						calibrationAffectingParts.put(ActivityElementType.MODULE, calibrationConfig.getModules());
+				}
+			}
+		}
+	}
+
+	public static Map<Component, ProgramType> lookUpToChangeSoftware(ArchitectureVersion version,
+			Activity activity) {
+		Map<Component, ProgramType> softwareChangeAffectedParts = new HashMap<Component, ProgramType>();
+		if(activity.getElement() instanceof Component){
+			Component component = (Component)activity.getElement();
+			for(ComponentCorrelation cc : version.getDeploymentContextRepository().getComponentCorrelation()){
+				if(cc.getComponent() == component)
+					softwareChangeAffectedParts.put(component, cc.getProgram());
+			}
+		}
+		return softwareChangeAffectedParts;
+	}
+
+	public static Map<Interface, VariableDeclaration> lookUpInterfacesOfSoftwareChanges(ArchitectureVersion version,
+			Activity activity) {
+		Map<Interface, VariableDeclaration> variableChanges = new HashMap<Interface, VariableDeclaration>();
+		if(activity.getElement() instanceof Component){
+			Component component = (Component)activity.getElement();
+			for(ComponentCorrelation cc : version.getDeploymentContextRepository().getComponentCorrelation()){
+				if(cc.getComponent() == component){
+					List<VariableMapping> mappings = cc.getVariableMapping();
+					for(VariableMapping mapping : mappings){
+						variableChanges.put(mapping.getInterfaceDeclaration(), mapping.getProgramVariable());
+					}
+				}
+			}
+			
+		}
+		return variableChanges;
 	}
 }

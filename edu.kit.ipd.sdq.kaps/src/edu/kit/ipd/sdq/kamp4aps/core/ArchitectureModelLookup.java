@@ -1,13 +1,16 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
 import edu.kit.ipd.sdq.amp.util.MapUtil;
 import xPPU.BusComponents.BusBox;
@@ -17,6 +20,7 @@ import xPPU.BusComponents.BusSlave;
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.PowerSupply;
 import xPPU.ComponentRepository.Sensor;
+import xPPU.Identifier.Identifier;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.SignalInterface;
 
@@ -75,7 +79,79 @@ public class ArchitectureModelLookup {
 			addAllBusMastersThatAreConnectedToTheBusCables(interfacesOfBusCables);
 			addAllBusSlavessThatAreConnectedToTheBusCables(interfacesOfBusCables);
 		}
+		
+		updateBusCableCausingsByBusMasters();
+		updateBusCableCausingsByBusSlaves();
+		updateBusCableCausingsByBusBoxes();
+		
+//		
+//		for(BusCable key : bcParams.causingElementsOfBusCable.keySet()){
+//			Set<Identifier> identifiers = bcParams.causingElementsOfBusCable.get(key);
+//			for(Identifier i : identifiers){
+//				for(BusBox box : bcParams.busBoxesToChange){
+//					if(box.getSignalinterface_master() != null && box.getSignalinterface_master().getId().equals(i.getId()))
+//						bcParams.causingElementsOfBusCable.get(key).add((Identifier)box);
+//				}
+//			}
+//		}
 		return bcParams;
+	}
+
+	private static void updateBusCableCausingsByBusBoxes() {
+		for(BusBox key : bcParams.causingElementsOfBusBox.keySet()){
+			for(BusCable cable : bcParams.busCablesToChange){
+				if(bcParams.causingElementsOfBusCable.get(cable) == null){
+					bcParams.causingElementsOfBusCable.put(cable, new HashSet<Identifier>());
+				}
+				if(bcParams.causingElementsOfBusBox.get(key).contains(cable.getSignalPlug1())){
+					Set<Identifier> causingElement = bcParams.causingElementsOfBusCable.get(cable);
+					causingElement.add((Identifier)cable.getSignalPlug1());
+					bcParams.causingElementsOfBusCable.put(cable, causingElement);
+				} else if(bcParams.causingElementsOfBusBox.get(key).contains(cable.getSignalPlug2())){
+					Set<Identifier> causingElement = bcParams.causingElementsOfBusCable.get(cable);
+					causingElement.add((Identifier)cable.getSignalPlug2());
+					bcParams.causingElementsOfBusCable.put(cable, causingElement);
+				}
+			}
+		}
+	}
+
+	private static void updateBusCableCausingsByBusSlaves() {
+		for(BusSlave key : bcParams.causingElementsOfBusSlave.keySet()){
+			for(BusCable cable : bcParams.busCablesToChange){
+				if(bcParams.causingElementsOfBusCable.get(cable) == null){
+					bcParams.causingElementsOfBusCable.put(cable, new HashSet<Identifier>());
+				}
+				if(bcParams.causingElementsOfBusSlave.get(key).contains(cable.getSignalPlug1())){
+					Set<Identifier> causingElement = bcParams.causingElementsOfBusCable.get(cable);
+					causingElement.add((Identifier)cable.getSignalPlug1());
+					bcParams.causingElementsOfBusCable.put(cable, causingElement);
+				} else if(bcParams.causingElementsOfBusSlave.get(key).contains(cable.getSignalPlug2())){
+					Set<Identifier> causingElement = bcParams.causingElementsOfBusCable.get(cable);
+					causingElement.add((Identifier)cable.getSignalPlug2());
+					bcParams.causingElementsOfBusCable.put(cable, causingElement);
+				}
+			}
+		}
+	}
+
+	private static void updateBusCableCausingsByBusMasters() {
+		for(BusMaster key : bcParams.causingElementsOfBusMaster.keySet()){
+			for(BusCable cable : bcParams.busCablesToChange){
+				if(bcParams.causingElementsOfBusCable.get(cable) == null){
+					bcParams.causingElementsOfBusCable.put(cable, new HashSet<Identifier>());
+				}
+				if(bcParams.causingElementsOfBusMaster.get(key).contains(cable.getSignalPlug1())){
+					Set<Identifier> causingElement = bcParams.causingElementsOfBusCable.get(cable);
+					causingElement.add((Identifier)cable.getSignalPlug1());
+					bcParams.causingElementsOfBusCable.put(cable, causingElement);
+				} else if(bcParams.causingElementsOfBusMaster.get(key).contains(cable.getSignalPlug2())){
+					Set<Identifier> causingElement = bcParams.causingElementsOfBusCable.get(cable);
+					causingElement.add((Identifier)cable.getSignalPlug2());
+					bcParams.causingElementsOfBusCable.put(cable, causingElement);
+				}
+			}
+		}
 	}
 
 	private static void addAllBusSlavessThatAreConnectedToTheBusCables(EList<Interface> interfacesOfBusCables) {
@@ -84,13 +160,12 @@ public class ArchitectureModelLookup {
 			for(Interface bcInterface : interfacesOfBusCables){
 				if(bs.getSignalinterface_master() != null){
 					if(bcInterface.getId() == bs.getSignalinterface_master().getId()){
-						slavesToAdd.add(bs);
-
+						updateSlavesToAdd(slavesToAdd, bs, bcInterface);
 					}
 				} 
 				if (bs.getSignalinterface_slave() != null){
 					if(bcInterface.getId() == bs.getSignalinterface_slave().getId()){
-						slavesToAdd.add(bs);
+						updateSlavesToAdd(slavesToAdd, bs, bcInterface);
 					}
 				}
 					
@@ -103,18 +178,25 @@ public class ArchitectureModelLookup {
 			}
 		}
 	}
-
+	
+	private static void updateSlavesToAdd(EList<BusSlave> slavesToAdd, BusSlave bs, Interface bcInterface) {
+		slavesToAdd.add(bs);
+		if(bcParams.causingElementsOfBusSlave.get(bs) == null)
+			bcParams.causingElementsOfBusSlave.put(bs, new HashSet<Identifier>());
+		Set<Identifier> causingElements = bcParams.causingElementsOfBusSlave.get(bs);
+		causingElements.add((Identifier)bcInterface);
+	}
 	private static void addAllBusMastersThatAreConnectedToTheBusCables(EList<Interface> interfacesOfBusCables) {
 		EList<BusMaster> mastersToAdd = new BasicEList<BusMaster>();
 		for(BusMaster bm : bcParams.allBusMasters){
 			for(Interface bcInterface : interfacesOfBusCables){
 				for(Interface si : bm.getSignalinterfaces()){
 					if(bcInterface.getId().equals(si.getId())){
-						mastersToAdd.add(bm);
+						updateMastersToAdd(mastersToAdd, bm, bcInterface);
 					}
 				}
 				if(bm.getSignalinterface_controller().getId() == bcInterface.getId()){
-					mastersToAdd.add(bm);
+					updateMastersToAdd(mastersToAdd, bm, bcInterface);
 				}
 			}
 			
@@ -125,6 +207,14 @@ public class ArchitectureModelLookup {
 				bcParams.hasChanged = true;
 			}
 		}
+	}
+
+	private static void updateMastersToAdd(EList<BusMaster> mastersToAdd, BusMaster bm, Interface bcInterface) {
+		mastersToAdd.add(bm);
+		if(bcParams.causingElementsOfBusMaster.get(bm) == null)
+			bcParams.causingElementsOfBusMaster.put(bm, new HashSet<Identifier>());
+		Set<Identifier> causingElements = bcParams.causingElementsOfBusMaster.get(bm);
+		causingElements.add((Identifier)bcInterface);
 	}
 
 	private static void setAllBusComponentsInParams(EList<Component> allComponents) {
@@ -144,6 +234,10 @@ public class ArchitectureModelLookup {
 			bcParams.allBusMasters = new HashSet<BusMaster>();
 			bcParams.allBusSlaves = new HashSet<BusSlave>();
 			bcParams.allBusCables = new HashSet<BusCable>();
+			bcParams.causingElementsOfBusBox = new HashMap<BusBox, Set<Identifier>>();
+			bcParams.causingElementsOfBusMaster = new HashMap<BusMaster, Set<Identifier>>();
+			bcParams.causingElementsOfBusSlave = new HashMap<BusSlave, Set<Identifier>>();
+			bcParams.causingElementsOfBusCable = new HashMap<BusCable, Set<Identifier>>();
 			bcParams.hasChanged = true;
 			return bcParams;
 		}
@@ -245,6 +339,10 @@ public class ArchitectureModelLookup {
 		public Set<BusMaster> allBusMasters;
 		public Set<BusSlave> allBusSlaves;
 		public Set<BusCable> allBusCables;
+		public Map<BusBox, Set<Identifier>> causingElementsOfBusBox;
+		public Map<BusMaster, Set<Identifier>> causingElementsOfBusMaster;
+		public Map<BusSlave, Set<Identifier>> causingElementsOfBusSlave;
+		public Map<BusCable, Set<Identifier>> causingElementsOfBusCable;
 		public boolean hasChanged;
 	}
 	
