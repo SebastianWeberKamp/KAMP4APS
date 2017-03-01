@@ -26,28 +26,28 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface Role extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Parent</b></em>' reference.
+	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.RoleList#getRoles <em>Roles</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Parent</em>' reference isn't clear,
+	 * If the meaning of the '<em>Parent</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parent</em>' reference.
+	 * @return the value of the '<em>Parent</em>' container reference.
 	 * @see #setParent(RoleList)
 	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getRole_Parent()
 	 * @see fieldofactivityannotations.RoleList#getRoles
-	 * @model opposite="roles" required="true"
+	 * @model opposite="roles" required="true" transient="false"
 	 * @generated
 	 */
 	RoleList getParent();
 
 	/**
-	 * Sets the value of the '{@link fieldofactivityannotations.Role#getParent <em>Parent</em>}' reference.
+	 * Sets the value of the '{@link fieldofactivityannotations.Role#getParent <em>Parent</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent</em>' reference.
+	 * @param value the new value of the '<em>Parent</em>' container reference.
 	 * @see #getParent()
 	 * @generated
 	 */

@@ -53,19 +53,19 @@ public interface RoleList extends EObject {
 	void setParent(StaffSpecification value);
 
 	/**
-	 * Returns the value of the '<em><b>Roles</b></em>' reference list.
+	 * Returns the value of the '<em><b>Roles</b></em>' containment reference list.
 	 * The list contents are of type {@link fieldofactivityannotations.Role}.
 	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.Role#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Roles</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Roles</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Roles</em>' reference list.
+	 * @return the value of the '<em>Roles</em>' containment reference list.
 	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getRoleList_Roles()
 	 * @see fieldofactivityannotations.Role#getParent
-	 * @model opposite="parent"
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
 	EList<Role> getRoles();

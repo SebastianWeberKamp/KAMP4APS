@@ -16,7 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link fieldofactivityannotations.HMISpecification#getParent <em>Parent</em>}</li>
- *   <li>{@link fieldofactivityannotations.HMISpecification#getHmiConfiguration <em>Hmi Configuration</em>}</li>
+ *   <li>{@link fieldofactivityannotations.HMISpecification#getRole <em>Role</em>}</li>
+ *   <li>{@link fieldofactivityannotations.HMISpecification#getHmiConfig <em>Hmi Config</em>}</li>
  * </ul>
  *
  * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getHMISpecification()
@@ -53,21 +54,47 @@ public interface HMISpecification extends EObject {
 	void setParent(FieldOfActivityAnnotationRepository value);
 
 	/**
-	 * Returns the value of the '<em><b>Hmi Configuration</b></em>' reference list.
+	 * Returns the value of the '<em><b>Role</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Role</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Role</em>' reference.
+	 * @see #setRole(Role)
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getHMISpecification_Role()
+	 * @model
+	 * @generated
+	 */
+	Role getRole();
+
+	/**
+	 * Sets the value of the '{@link fieldofactivityannotations.HMISpecification#getRole <em>Role</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Role</em>' reference.
+	 * @see #getRole()
+	 * @generated
+	 */
+	void setRole(Role value);
+
+	/**
+	 * Returns the value of the '<em><b>Hmi Config</b></em>' containment reference list.
 	 * The list contents are of type {@link fieldofactivityannotations.HMIConfiguration}.
 	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.HMIConfiguration#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Hmi Configuration</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Hmi Config</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Hmi Configuration</em>' reference list.
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getHMISpecification_HmiConfiguration()
+	 * @return the value of the '<em>Hmi Config</em>' containment reference list.
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getHMISpecification_HmiConfig()
 	 * @see fieldofactivityannotations.HMIConfiguration#getParent
-	 * @model opposite="parent"
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
-	EList<HMIConfiguration> getHmiConfiguration();
+	EList<HMIConfiguration> getHmiConfig();
 
 } // HMISpecification

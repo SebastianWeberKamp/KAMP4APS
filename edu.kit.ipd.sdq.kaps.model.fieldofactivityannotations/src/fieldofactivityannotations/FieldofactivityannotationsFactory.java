@@ -58,15 +58,6 @@ public interface FieldofactivityannotationsFactory extends EFactory {
 	HMISpecification createHMISpecification();
 
 	/**
-	 * Returns a new object of class '<em>HMI Configuration</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>HMI Configuration</em>'.
-	 * @generated
-	 */
-	HMIConfiguration createHMIConfiguration();
-
-	/**
 	 * Returns a new object of class '<em>ECAD Specification</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -103,31 +94,22 @@ public interface FieldofactivityannotationsFactory extends EFactory {
 	CalibrationSpecification createCalibrationSpecification();
 
 	/**
-	 * Returns a new object of class '<em>Development Specification</em>'.
+	 * Returns a new object of class '<em>Calibration Configuration</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Development Specification</em>'.
+	 * @return a new object of class '<em>Calibration Configuration</em>'.
 	 * @generated
 	 */
-	DevelopmentSpecification createDevelopmentSpecification();
+	CalibrationConfiguration createCalibrationConfiguration();
 
 	/**
-	 * Returns a new object of class '<em>Component Specification</em>'.
+	 * Returns a new object of class '<em>HMI Configuration</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Component Specification</em>'.
+	 * @return a new object of class '<em>HMI Configuration</em>'.
 	 * @generated
 	 */
-	ComponentSpecification createComponentSpecification();
-
-	/**
-	 * Returns a new object of class '<em>Role List</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Role List</em>'.
-	 * @generated
-	 */
-	RoleList createRoleList();
+	HMIConfiguration createHMIConfiguration();
 
 	/**
 	 * Returns a new object of class '<em>Person List</em>'.
@@ -146,6 +128,24 @@ public interface FieldofactivityannotationsFactory extends EFactory {
 	 * @generated
 	 */
 	Person createPerson();
+
+	/**
+	 * Returns a new object of class '<em>Role List</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Role List</em>'.
+	 * @generated
+	 */
+	RoleList createRoleList();
+
+	/**
+	 * Returns a new object of class '<em>System Test</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>System Test</em>'.
+	 * @generated
+	 */
+	SystemTest createSystemTest();
 
 	/**
 	 * Returns a new object of class '<em>Engineer</em>'.
@@ -263,15 +263,6 @@ public interface FieldofactivityannotationsFactory extends EFactory {
 	 * @generated
 	 */
 	TrainingDocExternal createTrainingDocExternal();
-
-	/**
-	 * Returns a new object of class '<em>System Test</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>System Test</em>'.
-	 * @generated
-	 */
-	SystemTest createSystemTest();
 
 	/**
 	 * Returns a new object of class '<em>Component Documentation Files</em>'.

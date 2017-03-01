@@ -4,7 +4,6 @@ package fieldofactivityannotations;
 
 import xPPU.ComponentRepository.Component;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Component Documentation Files</b></em>'.

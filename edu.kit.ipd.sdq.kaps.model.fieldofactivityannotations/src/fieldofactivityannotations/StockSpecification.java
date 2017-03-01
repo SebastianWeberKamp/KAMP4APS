@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fieldofactivityannotations.StockSpecification#getInterfaceStockList <em>Interface Stock List</em>}</li>
  *   <li>{@link fieldofactivityannotations.StockSpecification#getModuleStockList <em>Module Stock List</em>}</li>
  *   <li>{@link fieldofactivityannotations.StockSpecification#getStructureStockList <em>Structure Stock List</em>}</li>
+ *   <li>{@link fieldofactivityannotations.StockSpecification#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getStockSpecification()
@@ -126,5 +127,31 @@ public interface StockSpecification extends EObject {
 	 * @generated
 	 */
 	EList<StructureStockList> getStructureStockList();
+
+	/**
+	 * Returns the value of the '<em><b>Role</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Role</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Role</em>' reference.
+	 * @see #setRole(Role)
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getStockSpecification_Role()
+	 * @model
+	 * @generated
+	 */
+	Role getRole();
+
+	/**
+	 * Sets the value of the '{@link fieldofactivityannotations.StockSpecification#getRole <em>Role</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Role</em>' reference.
+	 * @see #getRole()
+	 * @generated
+	 */
+	void setRole(Role value);
 
 } // StockSpecification

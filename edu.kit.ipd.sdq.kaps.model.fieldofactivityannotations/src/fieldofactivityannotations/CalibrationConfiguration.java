@@ -16,26 +16,26 @@ import xPPU.StructureRepository.Structure;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>HMI Configuration</b></em>'.
+ * A representation of the model object '<em><b>Calibration Configuration</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fieldofactivityannotations.HMIConfiguration#getName <em>Name</em>}</li>
- *   <li>{@link fieldofactivityannotations.HMIConfiguration#getComponents <em>Components</em>}</li>
- *   <li>{@link fieldofactivityannotations.HMIConfiguration#getModules <em>Modules</em>}</li>
- *   <li>{@link fieldofactivityannotations.HMIConfiguration#getInterfaces <em>Interfaces</em>}</li>
- *   <li>{@link fieldofactivityannotations.HMIConfiguration#getStructures <em>Structures</em>}</li>
- *   <li>{@link fieldofactivityannotations.HMIConfiguration#getParent <em>Parent</em>}</li>
+ *   <li>{@link fieldofactivityannotations.CalibrationConfiguration#getName <em>Name</em>}</li>
+ *   <li>{@link fieldofactivityannotations.CalibrationConfiguration#getParent <em>Parent</em>}</li>
+ *   <li>{@link fieldofactivityannotations.CalibrationConfiguration#getComponents <em>Components</em>}</li>
+ *   <li>{@link fieldofactivityannotations.CalibrationConfiguration#getModules <em>Modules</em>}</li>
+ *   <li>{@link fieldofactivityannotations.CalibrationConfiguration#getInterfaces <em>Interfaces</em>}</li>
+ *   <li>{@link fieldofactivityannotations.CalibrationConfiguration#getStructures <em>Structures</em>}</li>
  * </ul>
  *
- * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getHMIConfiguration()
+ * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getCalibrationConfiguration()
  * @model
  * @generated
  */
-public interface HMIConfiguration extends EObject {
+public interface CalibrationConfiguration extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -46,14 +46,14 @@ public interface HMIConfiguration extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getHMIConfiguration_Name()
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getCalibrationConfiguration_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link fieldofactivityannotations.HMIConfiguration#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link fieldofactivityannotations.CalibrationConfiguration#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -61,6 +61,34 @@ public interface HMIConfiguration extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
+	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.CalibrationSpecification#getCalibrationConfig <em>Calibration Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent</em>' container reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent</em>' container reference.
+	 * @see #setParent(CalibrationSpecification)
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getCalibrationConfiguration_Parent()
+	 * @see fieldofactivityannotations.CalibrationSpecification#getCalibrationConfig
+	 * @model opposite="calibrationConfig" required="true" transient="false"
+	 * @generated
+	 */
+	CalibrationSpecification getParent();
+
+	/**
+	 * Sets the value of the '{@link fieldofactivityannotations.CalibrationConfiguration#getParent <em>Parent</em>}' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Parent</em>' container reference.
+	 * @see #getParent()
+	 * @generated
+	 */
+	void setParent(CalibrationSpecification value);
 
 	/**
 	 * Returns the value of the '<em><b>Components</b></em>' reference list.
@@ -72,7 +100,7 @@ public interface HMIConfiguration extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Components</em>' reference list.
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getHMIConfiguration_Components()
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getCalibrationConfiguration_Components()
 	 * @model
 	 * @generated
 	 */
@@ -88,7 +116,7 @@ public interface HMIConfiguration extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modules</em>' reference list.
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getHMIConfiguration_Modules()
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getCalibrationConfiguration_Modules()
 	 * @model
 	 * @generated
 	 */
@@ -104,7 +132,7 @@ public interface HMIConfiguration extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interfaces</em>' reference list.
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getHMIConfiguration_Interfaces()
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getCalibrationConfiguration_Interfaces()
 	 * @model
 	 * @generated
 	 */
@@ -120,38 +148,10 @@ public interface HMIConfiguration extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Structures</em>' reference list.
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getHMIConfiguration_Structures()
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getCalibrationConfiguration_Structures()
 	 * @model
 	 * @generated
 	 */
 	EList<Structure> getStructures();
 
-	/**
-	 * Returns the value of the '<em><b>Parent</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link fieldofactivityannotations.HMISpecification#getHmiConfig <em>Hmi Config</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parent</em>' container reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parent</em>' container reference.
-	 * @see #setParent(HMISpecification)
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getHMIConfiguration_Parent()
-	 * @see fieldofactivityannotations.HMISpecification#getHmiConfig
-	 * @model opposite="hmiConfig" required="true" transient="false"
-	 * @generated
-	 */
-	HMISpecification getParent();
-
-	/**
-	 * Sets the value of the '{@link fieldofactivityannotations.HMIConfiguration#getParent <em>Parent</em>}' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent</em>' container reference.
-	 * @see #getParent()
-	 * @generated
-	 */
-	void setParent(HMISpecification value);
-
-} // HMIConfiguration
+} // CalibrationConfiguration

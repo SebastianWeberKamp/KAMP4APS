@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getModuleDocumentation <em>Module Documentation</em>}</li>
  *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getInterfaceDocumentation <em>Interface Documentation</em>}</li>
  *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getStructureDocumentation <em>Structure Documentation</em>}</li>
+ *   <li>{@link fieldofactivityannotations.DocumentationSpecification#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationSpecification()
@@ -126,5 +127,31 @@ public interface DocumentationSpecification extends EObject {
 	 * @generated
 	 */
 	EList<StructureDocumentationFiles> getStructureDocumentation();
+
+	/**
+	 * Returns the value of the '<em><b>Role</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Role</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Role</em>' reference.
+	 * @see #setRole(Role)
+	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getDocumentationSpecification_Role()
+	 * @model
+	 * @generated
+	 */
+	Role getRole();
+
+	/**
+	 * Sets the value of the '{@link fieldofactivityannotations.DocumentationSpecification#getRole <em>Role</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Role</em>' reference.
+	 * @see #getRole()
+	 * @generated
+	 */
+	void setRole(Role value);
 
 } // DocumentationSpecification

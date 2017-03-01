@@ -2,6 +2,7 @@
  */
 package fieldofactivityannotations;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Training Doc Intern</b></em>'.

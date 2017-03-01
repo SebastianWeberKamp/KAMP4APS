@@ -85,22 +85,13 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__TEST_SPECIFICATION = 1;
 
 	/**
-	 * The feature id for the '<em><b>Development Specification</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DEVELOPMENT_SPECIFICATION = 2;
-
-	/**
 	 * The feature id for the '<em><b>Stock Specification</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION = 3;
+	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STOCK_SPECIFICATION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Hmi Specification</b></em>' containment reference.
@@ -109,7 +100,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__HMI_SPECIFICATION = 4;
+	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__HMI_SPECIFICATION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Ecad Specification</b></em>' containment reference.
@@ -118,7 +109,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__ECAD_SPECIFICATION = 5;
+	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__ECAD_SPECIFICATION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Documentation Specification</b></em>' containment reference.
@@ -127,16 +118,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DOCUMENTATION_SPECIFICATION = 6;
-
-	/**
-	 * The feature id for the '<em><b>Component Specification</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__COMPONENT_SPECIFICATION = 7;
+	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DOCUMENTATION_SPECIFICATION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Staff Specification</b></em>' containment reference.
@@ -145,7 +127,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STAFF_SPECIFICATION = 8;
+	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__STAFF_SPECIFICATION = 6;
 
 	/**
 	 * The number of structural features of the '<em>Field Of Activity Annotation Repository</em>' class.
@@ -154,7 +136,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY_FEATURE_COUNT = 9;
+	int FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY_FEATURE_COUNT = 7;
 
 	/**
 	 * The number of operations of the '<em>Field Of Activity Annotation Repository</em>' class.
@@ -194,13 +176,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int TEST_SPECIFICATION__SYSTEM_TESTS = 1;
 
 	/**
+	 * The feature id for the '<em><b>Role</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEST_SPECIFICATION__ROLE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Test Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEST_SPECIFICATION_FEATURE_COUNT = 2;
+	int TEST_SPECIFICATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Test Specification</em>' class.
@@ -267,13 +258,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int STOCK_SPECIFICATION__STRUCTURE_STOCK_LIST = 4;
 
 	/**
+	 * The feature id for the '<em><b>Role</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STOCK_SPECIFICATION__ROLE = 5;
+
+	/**
 	 * The number of structural features of the '<em>Stock Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STOCK_SPECIFICATION_FEATURE_COUNT = 5;
+	int STOCK_SPECIFICATION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Stock Specification</em>' class.
@@ -304,13 +304,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int HMI_SPECIFICATION__PARENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Hmi Configuration</b></em>' reference list.
+	 * The feature id for the '<em><b>Role</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int HMI_SPECIFICATION__HMI_CONFIGURATION = 1;
+	int HMI_SPECIFICATION__ROLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Hmi Config</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HMI_SPECIFICATION__HMI_CONFIG = 2;
 
 	/**
 	 * The number of structural features of the '<em>HMI Specification</em>' class.
@@ -319,7 +328,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int HMI_SPECIFICATION_FEATURE_COUNT = 2;
+	int HMI_SPECIFICATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>HMI Specification</em>' class.
@@ -331,88 +340,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int HMI_SPECIFICATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.HMIConfigurationImpl <em>HMI Configuration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.HMIConfigurationImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getHMIConfiguration()
-	 * @generated
-	 */
-	int HMI_CONFIGURATION = 4;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HMI_CONFIGURATION__PARENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HMI_CONFIGURATION__NAME = 1;
-
-	/**
-	 * The feature id for the '<em><b>Components</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HMI_CONFIGURATION__COMPONENTS = 2;
-
-	/**
-	 * The feature id for the '<em><b>Modules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HMI_CONFIGURATION__MODULES = 3;
-
-	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HMI_CONFIGURATION__INTERFACES = 4;
-
-	/**
-	 * The feature id for the '<em><b>Structures</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HMI_CONFIGURATION__STRUCTURES = 5;
-
-	/**
-	 * The number of structural features of the '<em>HMI Configuration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HMI_CONFIGURATION_FEATURE_COUNT = 6;
-
-	/**
-	 * The number of operations of the '<em>HMI Configuration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int HMI_CONFIGURATION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link fieldofactivityannotations.impl.ECADSpecificationImpl <em>ECAD Specification</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -420,7 +347,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getECADSpecification()
 	 * @generated
 	 */
-	int ECAD_SPECIFICATION = 5;
+	int ECAD_SPECIFICATION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -432,49 +359,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int ECAD_SPECIFICATION__PARENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Components</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECAD_SPECIFICATION__COMPONENTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Modules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECAD_SPECIFICATION__MODULES = 2;
-
-	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECAD_SPECIFICATION__INTERFACES = 3;
-
-	/**
-	 * The feature id for the '<em><b>Structures</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ECAD_SPECIFICATION__STRUCTURES = 4;
-
-	/**
 	 * The feature id for the '<em><b>Drawings</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ECAD_SPECIFICATION__DRAWINGS = 5;
+	int ECAD_SPECIFICATION__DRAWINGS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Role</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ECAD_SPECIFICATION__ROLE = 2;
 
 	/**
 	 * The number of structural features of the '<em>ECAD Specification</em>' class.
@@ -483,7 +383,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ECAD_SPECIFICATION_FEATURE_COUNT = 6;
+	int ECAD_SPECIFICATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>ECAD Specification</em>' class.
@@ -502,7 +402,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getDocumentationSpecification()
 	 * @generated
 	 */
-	int DOCUMENTATION_SPECIFICATION = 6;
+	int DOCUMENTATION_SPECIFICATION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -550,13 +450,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION = 4;
 
 	/**
+	 * The feature id for the '<em><b>Role</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DOCUMENTATION_SPECIFICATION__ROLE = 5;
+
+	/**
 	 * The number of structural features of the '<em>Documentation Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DOCUMENTATION_SPECIFICATION_FEATURE_COUNT = 5;
+	int DOCUMENTATION_SPECIFICATION_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>Documentation Specification</em>' class.
@@ -575,7 +484,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStaffSpecification()
 	 * @generated
 	 */
-	int STAFF_SPECIFICATION = 7;
+	int STAFF_SPECIFICATION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -605,13 +514,22 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int STAFF_SPECIFICATION__ROLE_LIST = 2;
 
 	/**
+	 * The feature id for the '<em><b>Role</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STAFF_SPECIFICATION__ROLE = 3;
+
+	/**
 	 * The number of structural features of the '<em>Staff Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_SPECIFICATION_FEATURE_COUNT = 3;
+	int STAFF_SPECIFICATION_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Staff Specification</em>' class.
@@ -630,7 +548,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getCalibrationSpecification()
 	 * @generated
 	 */
-	int CALIBRATION_SPECIFICATION = 8;
+	int CALIBRATION_SPECIFICATION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -642,13 +560,31 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int CALIBRATION_SPECIFICATION__PARENT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Role</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALIBRATION_SPECIFICATION__ROLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Calibration Config</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALIBRATION_SPECIFICATION__CALIBRATION_CONFIG = 2;
+
+	/**
 	 * The number of structural features of the '<em>Calibration Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CALIBRATION_SPECIFICATION_FEATURE_COUNT = 1;
+	int CALIBRATION_SPECIFICATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Calibration Specification</em>' class.
@@ -660,14 +596,23 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int CALIBRATION_SPECIFICATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.DevelopmentSpecificationImpl <em>Development Specification</em>}' class.
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.CalibrationConfigurationImpl <em>Calibration Configuration</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.DevelopmentSpecificationImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getDevelopmentSpecification()
+	 * @see fieldofactivityannotations.impl.CalibrationConfigurationImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getCalibrationConfiguration()
 	 * @generated
 	 */
-	int DEVELOPMENT_SPECIFICATION = 9;
+	int CALIBRATION_CONFIGURATION = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALIBRATION_CONFIGURATION__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -676,35 +621,116 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int DEVELOPMENT_SPECIFICATION__PARENT = 0;
+	int CALIBRATION_CONFIGURATION__PARENT = 1;
 
 	/**
-	 * The number of structural features of the '<em>Development Specification</em>' class.
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVELOPMENT_SPECIFICATION_FEATURE_COUNT = 1;
+	int CALIBRATION_CONFIGURATION__COMPONENTS = 2;
 
 	/**
-	 * The number of operations of the '<em>Development Specification</em>' class.
+	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int DEVELOPMENT_SPECIFICATION_OPERATION_COUNT = 0;
+	int CALIBRATION_CONFIGURATION__MODULES = 3;
 
 	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.ComponentSpecificationImpl <em>Component Specification</em>}' class.
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.ComponentSpecificationImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentSpecification()
+	 * @generated
+	 * @ordered
+	 */
+	int CALIBRATION_CONFIGURATION__INTERFACES = 4;
+
+	/**
+	 * The feature id for the '<em><b>Structures</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALIBRATION_CONFIGURATION__STRUCTURES = 5;
+
+	/**
+	 * The number of structural features of the '<em>Calibration Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALIBRATION_CONFIGURATION_FEATURE_COUNT = 6;
+
+	/**
+	 * The number of operations of the '<em>Calibration Configuration</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CALIBRATION_CONFIGURATION_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.HMIConfigurationImpl <em>HMI Configuration</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.HMIConfigurationImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getHMIConfiguration()
 	 * @generated
 	 */
-	int COMPONENT_SPECIFICATION = 10;
+	int HMI_CONFIGURATION = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HMI_CONFIGURATION__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HMI_CONFIGURATION__COMPONENTS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Modules</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HMI_CONFIGURATION__MODULES = 2;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HMI_CONFIGURATION__INTERFACES = 3;
+
+	/**
+	 * The feature id for the '<em><b>Structures</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HMI_CONFIGURATION__STRUCTURES = 4;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -713,126 +739,25 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_SPECIFICATION__PARENT = 0;
+	int HMI_CONFIGURATION__PARENT = 5;
 
 	/**
-	 * The number of structural features of the '<em>Component Specification</em>' class.
+	 * The number of structural features of the '<em>HMI Configuration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_SPECIFICATION_FEATURE_COUNT = 1;
+	int HMI_CONFIGURATION_FEATURE_COUNT = 6;
 
 	/**
-	 * The number of operations of the '<em>Component Specification</em>' class.
+	 * The number of operations of the '<em>HMI Configuration</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_SPECIFICATION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.RoleListImpl <em>Role List</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.RoleListImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getRoleList()
-	 * @generated
-	 */
-	int ROLE_LIST = 11;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_LIST__PARENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Roles</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_LIST__ROLES = 1;
-
-	/**
-	 * The number of structural features of the '<em>Role List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_LIST_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Role List</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_LIST_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.RoleImpl <em>Role</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.RoleImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getRole()
-	 * @generated
-	 */
-	int ROLE = 12;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE__PARENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Person</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE__PERSON = 1;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE__DESCRIPTION = 2;
-
-	/**
-	 * The number of structural features of the '<em>Role</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>Role</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ROLE_OPERATION_COUNT = 0;
+	int HMI_CONFIGURATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link fieldofactivityannotations.impl.PersonListImpl <em>Person List</em>}' class.
@@ -842,7 +767,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getPersonList()
 	 * @generated
 	 */
-	int PERSON_LIST = 13;
+	int PERSON_LIST = 10;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -888,7 +813,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getPerson()
 	 * @generated
 	 */
-	int PERSON = 14;
+	int PERSON = 11;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -936,6 +861,107 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int PERSON_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.RoleImpl <em>Role</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.RoleImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getRole()
+	 * @generated
+	 */
+	int ROLE = 12;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__PARENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Person</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__PERSON = 1;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE__DESCRIPTION = 2;
+
+	/**
+	 * The number of structural features of the '<em>Role</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>Role</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.RoleListImpl <em>Role List</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.RoleListImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getRoleList()
+	 * @generated
+	 */
+	int ROLE_LIST = 13;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE_LIST__PARENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Roles</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE_LIST__ROLES = 1;
+
+	/**
+	 * The number of structural features of the '<em>Role List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE_LIST_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Role List</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ROLE_LIST_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link fieldofactivityannotations.impl.FileImpl <em>File</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -943,7 +969,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getFile()
 	 * @generated
 	 */
-	int FILE = 15;
+	int FILE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -980,7 +1006,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getTestCase()
 	 * @generated
 	 */
-	int TEST_CASE = 16;
+	int TEST_CASE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Test Name</b></em>' attribute.
@@ -1010,6 +1036,61 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int TEST_CASE_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link fieldofactivityannotations.impl.SystemTestImpl <em>System Test</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fieldofactivityannotations.impl.SystemTestImpl
+	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getSystemTest()
+	 * @generated
+	 */
+	int SYSTEM_TEST = 16;
+
+	/**
+	 * The feature id for the '<em><b>Test Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_TEST__TEST_NAME = TEST_CASE__TEST_NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_TEST__PARENT = TEST_CASE_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>System Under Test</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_TEST__SYSTEM_UNDER_TEST = TEST_CASE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>System Test</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_TEST_FEATURE_COUNT = TEST_CASE_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>System Test</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SYSTEM_TEST_OPERATION_COUNT = TEST_CASE_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link fieldofactivityannotations.impl.EngineerImpl <em>Engineer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1020,7 +1101,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int ENGINEER = 17;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1075,7 +1156,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int PURCHASER = 18;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1130,7 +1211,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int MECHANIC = 19;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1662,61 +1743,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int TRAINING_DOC_EXTERNAL_OPERATION_COUNT = DOCUMENTATION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link fieldofactivityannotations.impl.SystemTestImpl <em>System Test</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fieldofactivityannotations.impl.SystemTestImpl
-	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getSystemTest()
-	 * @generated
-	 */
-	int SYSTEM_TEST = 30;
-
-	/**
-	 * The feature id for the '<em><b>Test Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYSTEM_TEST__TEST_NAME = TEST_CASE__TEST_NAME;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYSTEM_TEST__PARENT = TEST_CASE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>System Under Test</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYSTEM_TEST__SYSTEM_UNDER_TEST = TEST_CASE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>System Test</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYSTEM_TEST_FEATURE_COUNT = TEST_CASE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>System Test</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SYSTEM_TEST_OPERATION_COUNT = TEST_CASE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link fieldofactivityannotations.DocumentationFiles <em>Documentation Files</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1724,7 +1750,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getDocumentationFiles()
 	 * @generated
 	 */
-	int DOCUMENTATION_FILES = 31;
+	int DOCUMENTATION_FILES = 30;
 
 	/**
 	 * The feature id for the '<em><b>Mainteneance</b></em>' containment reference list.
@@ -1788,7 +1814,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentDocumentationFiles()
 	 * @generated
 	 */
-	int COMPONENT_DOCUMENTATION_FILES = 32;
+	int COMPONENT_DOCUMENTATION_FILES = 31;
 
 	/**
 	 * The feature id for the '<em><b>Mainteneance</b></em>' containment reference list.
@@ -1870,7 +1896,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getModuleDocumentationFiles()
 	 * @generated
 	 */
-	int MODULE_DOCUMENTATION_FILES = 33;
+	int MODULE_DOCUMENTATION_FILES = 32;
 
 	/**
 	 * The feature id for the '<em><b>Mainteneance</b></em>' containment reference list.
@@ -1952,7 +1978,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getInterfaceDocumentationFiles()
 	 * @generated
 	 */
-	int INTERFACE_DOCUMENTATION_FILES = 34;
+	int INTERFACE_DOCUMENTATION_FILES = 33;
 
 	/**
 	 * The feature id for the '<em><b>Mainteneance</b></em>' containment reference list.
@@ -2034,7 +2060,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStructureDocumentationFiles()
 	 * @generated
 	 */
-	int STRUCTURE_DOCUMENTATION_FILES = 35;
+	int STRUCTURE_DOCUMENTATION_FILES = 34;
 
 	/**
 	 * The feature id for the '<em><b>Mainteneance</b></em>' containment reference list.
@@ -2116,7 +2142,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStockList()
 	 * @generated
 	 */
-	int STOCK_LIST = 36;
+	int STOCK_LIST = 35;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -2153,7 +2179,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentStockList()
 	 * @generated
 	 */
-	int COMPONENT_STOCK_LIST = 37;
+	int COMPONENT_STOCK_LIST = 36;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -2208,7 +2234,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getInterfaceStockList()
 	 * @generated
 	 */
-	int INTERFACE_STOCK_LIST = 38;
+	int INTERFACE_STOCK_LIST = 37;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -2263,7 +2289,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getModuleStockList()
 	 * @generated
 	 */
-	int MODULE_STOCK_LIST = 39;
+	int MODULE_STOCK_LIST = 38;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -2318,7 +2344,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getStructureStockList()
 	 * @generated
 	 */
-	int STRUCTURE_STOCK_LIST = 40;
+	int STRUCTURE_STOCK_LIST = 39;
 
 	/**
 	 * The feature id for the '<em><b>Filename</b></em>' attribute.
@@ -2399,17 +2425,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getFieldOfActivityAnnotationRepository_TestSpecification();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getDevelopmentSpecification <em>Development Specification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Development Specification</em>'.
-	 * @see fieldofactivityannotations.FieldOfActivityAnnotationRepository#getDevelopmentSpecification()
-	 * @see #getFieldOfActivityAnnotationRepository()
-	 * @generated
-	 */
-	EReference getFieldOfActivityAnnotationRepository_DevelopmentSpecification();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getStockSpecification <em>Stock Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2454,17 +2469,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getFieldOfActivityAnnotationRepository_DocumentationSpecification();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getComponentSpecification <em>Component Specification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Component Specification</em>'.
-	 * @see fieldofactivityannotations.FieldOfActivityAnnotationRepository#getComponentSpecification()
-	 * @see #getFieldOfActivityAnnotationRepository()
-	 * @generated
-	 */
-	EReference getFieldOfActivityAnnotationRepository_ComponentSpecification();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link fieldofactivityannotations.FieldOfActivityAnnotationRepository#getStaffSpecification <em>Staff Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2506,6 +2510,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTestSpecification_SystemTests();
+
+	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.TestSpecification#getRole <em>Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Role</em>'.
+	 * @see fieldofactivityannotations.TestSpecification#getRole()
+	 * @see #getTestSpecification()
+	 * @generated
+	 */
+	EReference getTestSpecification_Role();
 
 	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.StockSpecification <em>Stock Specification</em>}'.
@@ -2573,6 +2588,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getStockSpecification_StructureStockList();
 
 	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.StockSpecification#getRole <em>Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Role</em>'.
+	 * @see fieldofactivityannotations.StockSpecification#getRole()
+	 * @see #getStockSpecification()
+	 * @generated
+	 */
+	EReference getStockSpecification_Role();
+
+	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.HMISpecification <em>HMI Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2594,91 +2620,26 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getHMISpecification_Parent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.HMISpecification#getHmiConfiguration <em>Hmi Configuration</em>}'.
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.HMISpecification#getRole <em>Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Hmi Configuration</em>'.
-	 * @see fieldofactivityannotations.HMISpecification#getHmiConfiguration()
+	 * @return the meta object for the reference '<em>Role</em>'.
+	 * @see fieldofactivityannotations.HMISpecification#getRole()
 	 * @see #getHMISpecification()
 	 * @generated
 	 */
-	EReference getHMISpecification_HmiConfiguration();
+	EReference getHMISpecification_Role();
 
 	/**
-	 * Returns the meta object for class '{@link fieldofactivityannotations.HMIConfiguration <em>HMI Configuration</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.HMISpecification#getHmiConfig <em>Hmi Config</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>HMI Configuration</em>'.
-	 * @see fieldofactivityannotations.HMIConfiguration
+	 * @return the meta object for the containment reference list '<em>Hmi Config</em>'.
+	 * @see fieldofactivityannotations.HMISpecification#getHmiConfig()
+	 * @see #getHMISpecification()
 	 * @generated
 	 */
-	EClass getHMIConfiguration();
-
-	/**
-	 * Returns the meta object for the reference '{@link fieldofactivityannotations.HMIConfiguration#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent</em>'.
-	 * @see fieldofactivityannotations.HMIConfiguration#getParent()
-	 * @see #getHMIConfiguration()
-	 * @generated
-	 */
-	EReference getHMIConfiguration_Parent();
-
-	/**
-	 * Returns the meta object for the attribute '{@link fieldofactivityannotations.HMIConfiguration#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see fieldofactivityannotations.HMIConfiguration#getName()
-	 * @see #getHMIConfiguration()
-	 * @generated
-	 */
-	EAttribute getHMIConfiguration_Name();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.HMIConfiguration#getComponents <em>Components</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Components</em>'.
-	 * @see fieldofactivityannotations.HMIConfiguration#getComponents()
-	 * @see #getHMIConfiguration()
-	 * @generated
-	 */
-	EReference getHMIConfiguration_Components();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.HMIConfiguration#getModules <em>Modules</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Modules</em>'.
-	 * @see fieldofactivityannotations.HMIConfiguration#getModules()
-	 * @see #getHMIConfiguration()
-	 * @generated
-	 */
-	EReference getHMIConfiguration_Modules();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.HMIConfiguration#getInterfaces <em>Interfaces</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interfaces</em>'.
-	 * @see fieldofactivityannotations.HMIConfiguration#getInterfaces()
-	 * @see #getHMIConfiguration()
-	 * @generated
-	 */
-	EReference getHMIConfiguration_Interfaces();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.HMIConfiguration#getStructures <em>Structures</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Structures</em>'.
-	 * @see fieldofactivityannotations.HMIConfiguration#getStructures()
-	 * @see #getHMIConfiguration()
-	 * @generated
-	 */
-	EReference getHMIConfiguration_Structures();
+	EReference getHMISpecification_HmiConfig();
 
 	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.ECADSpecification <em>ECAD Specification</em>}'.
@@ -2702,50 +2663,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getECADSpecification_Parent();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.ECADSpecification#getComponents <em>Components</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Components</em>'.
-	 * @see fieldofactivityannotations.ECADSpecification#getComponents()
-	 * @see #getECADSpecification()
-	 * @generated
-	 */
-	EReference getECADSpecification_Components();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.ECADSpecification#getModules <em>Modules</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Modules</em>'.
-	 * @see fieldofactivityannotations.ECADSpecification#getModules()
-	 * @see #getECADSpecification()
-	 * @generated
-	 */
-	EReference getECADSpecification_Modules();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.ECADSpecification#getInterfaces <em>Interfaces</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Interfaces</em>'.
-	 * @see fieldofactivityannotations.ECADSpecification#getInterfaces()
-	 * @see #getECADSpecification()
-	 * @generated
-	 */
-	EReference getECADSpecification_Interfaces();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.ECADSpecification#getStructures <em>Structures</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Structures</em>'.
-	 * @see fieldofactivityannotations.ECADSpecification#getStructures()
-	 * @see #getECADSpecification()
-	 * @generated
-	 */
-	EReference getECADSpecification_Structures();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.ECADSpecification#getDrawings <em>Drawings</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2755,6 +2672,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getECADSpecification_Drawings();
+
+	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.ECADSpecification#getRole <em>Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Role</em>'.
+	 * @see fieldofactivityannotations.ECADSpecification#getRole()
+	 * @see #getECADSpecification()
+	 * @generated
+	 */
+	EReference getECADSpecification_Role();
 
 	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.DocumentationSpecification <em>Documentation Specification</em>}'.
@@ -2822,6 +2750,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getDocumentationSpecification_StructureDocumentation();
 
 	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.DocumentationSpecification#getRole <em>Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Role</em>'.
+	 * @see fieldofactivityannotations.DocumentationSpecification#getRole()
+	 * @see #getDocumentationSpecification()
+	 * @generated
+	 */
+	EReference getDocumentationSpecification_Role();
+
+	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.StaffSpecification <em>Staff Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2865,6 +2804,17 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getStaffSpecification_RoleList();
 
 	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.StaffSpecification#getRole <em>Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Role</em>'.
+	 * @see fieldofactivityannotations.StaffSpecification#getRole()
+	 * @see #getStaffSpecification()
+	 * @generated
+	 */
+	EReference getStaffSpecification_Role();
+
+	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.CalibrationSpecification <em>Calibration Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2886,121 +2836,178 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getCalibrationSpecification_Parent();
 
 	/**
-	 * Returns the meta object for class '{@link fieldofactivityannotations.DevelopmentSpecification <em>Development Specification</em>}'.
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.CalibrationSpecification#getRole <em>Role</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Development Specification</em>'.
-	 * @see fieldofactivityannotations.DevelopmentSpecification
+	 * @return the meta object for the reference '<em>Role</em>'.
+	 * @see fieldofactivityannotations.CalibrationSpecification#getRole()
+	 * @see #getCalibrationSpecification()
 	 * @generated
 	 */
-	EClass getDevelopmentSpecification();
+	EReference getCalibrationSpecification_Role();
 
 	/**
-	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.DevelopmentSpecification#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.CalibrationSpecification#getCalibrationConfig <em>Calibration Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Calibration Config</em>'.
+	 * @see fieldofactivityannotations.CalibrationSpecification#getCalibrationConfig()
+	 * @see #getCalibrationSpecification()
+	 * @generated
+	 */
+	EReference getCalibrationSpecification_CalibrationConfig();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.CalibrationConfiguration <em>Calibration Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Calibration Configuration</em>'.
+	 * @see fieldofactivityannotations.CalibrationConfiguration
+	 * @generated
+	 */
+	EClass getCalibrationConfiguration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fieldofactivityannotations.CalibrationConfiguration#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see fieldofactivityannotations.CalibrationConfiguration#getName()
+	 * @see #getCalibrationConfiguration()
+	 * @generated
+	 */
+	EAttribute getCalibrationConfiguration_Name();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.CalibrationConfiguration#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see fieldofactivityannotations.DevelopmentSpecification#getParent()
-	 * @see #getDevelopmentSpecification()
+	 * @see fieldofactivityannotations.CalibrationConfiguration#getParent()
+	 * @see #getCalibrationConfiguration()
 	 * @generated
 	 */
-	EReference getDevelopmentSpecification_Parent();
+	EReference getCalibrationConfiguration_Parent();
 
 	/**
-	 * Returns the meta object for class '{@link fieldofactivityannotations.ComponentSpecification <em>Component Specification</em>}'.
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.CalibrationConfiguration#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Component Specification</em>'.
-	 * @see fieldofactivityannotations.ComponentSpecification
+	 * @return the meta object for the reference list '<em>Components</em>'.
+	 * @see fieldofactivityannotations.CalibrationConfiguration#getComponents()
+	 * @see #getCalibrationConfiguration()
 	 * @generated
 	 */
-	EClass getComponentSpecification();
+	EReference getCalibrationConfiguration_Components();
 
 	/**
-	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.ComponentSpecification#getParent <em>Parent</em>}'.
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.CalibrationConfiguration#getModules <em>Modules</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Modules</em>'.
+	 * @see fieldofactivityannotations.CalibrationConfiguration#getModules()
+	 * @see #getCalibrationConfiguration()
+	 * @generated
+	 */
+	EReference getCalibrationConfiguration_Modules();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.CalibrationConfiguration#getInterfaces <em>Interfaces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Interfaces</em>'.
+	 * @see fieldofactivityannotations.CalibrationConfiguration#getInterfaces()
+	 * @see #getCalibrationConfiguration()
+	 * @generated
+	 */
+	EReference getCalibrationConfiguration_Interfaces();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.CalibrationConfiguration#getStructures <em>Structures</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Structures</em>'.
+	 * @see fieldofactivityannotations.CalibrationConfiguration#getStructures()
+	 * @see #getCalibrationConfiguration()
+	 * @generated
+	 */
+	EReference getCalibrationConfiguration_Structures();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.HMIConfiguration <em>HMI Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>HMI Configuration</em>'.
+	 * @see fieldofactivityannotations.HMIConfiguration
+	 * @generated
+	 */
+	EClass getHMIConfiguration();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fieldofactivityannotations.HMIConfiguration#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see fieldofactivityannotations.HMIConfiguration#getName()
+	 * @see #getHMIConfiguration()
+	 * @generated
+	 */
+	EAttribute getHMIConfiguration_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.HMIConfiguration#getComponents <em>Components</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Components</em>'.
+	 * @see fieldofactivityannotations.HMIConfiguration#getComponents()
+	 * @see #getHMIConfiguration()
+	 * @generated
+	 */
+	EReference getHMIConfiguration_Components();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.HMIConfiguration#getModules <em>Modules</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Modules</em>'.
+	 * @see fieldofactivityannotations.HMIConfiguration#getModules()
+	 * @see #getHMIConfiguration()
+	 * @generated
+	 */
+	EReference getHMIConfiguration_Modules();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.HMIConfiguration#getInterfaces <em>Interfaces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Interfaces</em>'.
+	 * @see fieldofactivityannotations.HMIConfiguration#getInterfaces()
+	 * @see #getHMIConfiguration()
+	 * @generated
+	 */
+	EReference getHMIConfiguration_Interfaces();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.HMIConfiguration#getStructures <em>Structures</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Structures</em>'.
+	 * @see fieldofactivityannotations.HMIConfiguration#getStructures()
+	 * @see #getHMIConfiguration()
+	 * @generated
+	 */
+	EReference getHMIConfiguration_Structures();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.HMIConfiguration#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see fieldofactivityannotations.ComponentSpecification#getParent()
-	 * @see #getComponentSpecification()
+	 * @see fieldofactivityannotations.HMIConfiguration#getParent()
+	 * @see #getHMIConfiguration()
 	 * @generated
 	 */
-	EReference getComponentSpecification_Parent();
-
-	/**
-	 * Returns the meta object for class '{@link fieldofactivityannotations.RoleList <em>Role List</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Role List</em>'.
-	 * @see fieldofactivityannotations.RoleList
-	 * @generated
-	 */
-	EClass getRoleList();
-
-	/**
-	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.RoleList#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see fieldofactivityannotations.RoleList#getParent()
-	 * @see #getRoleList()
-	 * @generated
-	 */
-	EReference getRoleList_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.RoleList#getRoles <em>Roles</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Roles</em>'.
-	 * @see fieldofactivityannotations.RoleList#getRoles()
-	 * @see #getRoleList()
-	 * @generated
-	 */
-	EReference getRoleList_Roles();
-
-	/**
-	 * Returns the meta object for class '{@link fieldofactivityannotations.Role <em>Role</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Role</em>'.
-	 * @see fieldofactivityannotations.Role
-	 * @generated
-	 */
-	EClass getRole();
-
-	/**
-	 * Returns the meta object for the reference '{@link fieldofactivityannotations.Role#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent</em>'.
-	 * @see fieldofactivityannotations.Role#getParent()
-	 * @see #getRole()
-	 * @generated
-	 */
-	EReference getRole_Parent();
-
-	/**
-	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.Role#getPerson <em>Person</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Person</em>'.
-	 * @see fieldofactivityannotations.Role#getPerson()
-	 * @see #getRole()
-	 * @generated
-	 */
-	EReference getRole_Person();
-
-	/**
-	 * Returns the meta object for the attribute '{@link fieldofactivityannotations.Role#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see fieldofactivityannotations.Role#getDescription()
-	 * @see #getRole()
-	 * @generated
-	 */
-	EAttribute getRole_Description();
+	EReference getHMIConfiguration_Parent();
 
 	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.PersonList <em>Person List</em>}'.
@@ -3078,6 +3085,81 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EAttribute getPerson_Name();
 
 	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.Role <em>Role</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Role</em>'.
+	 * @see fieldofactivityannotations.Role
+	 * @generated
+	 */
+	EClass getRole();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.Role#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.Role#getParent()
+	 * @see #getRole()
+	 * @generated
+	 */
+	EReference getRole_Parent();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fieldofactivityannotations.Role#getPerson <em>Person</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Person</em>'.
+	 * @see fieldofactivityannotations.Role#getPerson()
+	 * @see #getRole()
+	 * @generated
+	 */
+	EReference getRole_Person();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fieldofactivityannotations.Role#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see fieldofactivityannotations.Role#getDescription()
+	 * @see #getRole()
+	 * @generated
+	 */
+	EAttribute getRole_Description();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.RoleList <em>Role List</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Role List</em>'.
+	 * @see fieldofactivityannotations.RoleList
+	 * @generated
+	 */
+	EClass getRoleList();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.RoleList#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.RoleList#getParent()
+	 * @see #getRoleList()
+	 * @generated
+	 */
+	EReference getRoleList_Parent();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link fieldofactivityannotations.RoleList#getRoles <em>Roles</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Roles</em>'.
+	 * @see fieldofactivityannotations.RoleList#getRoles()
+	 * @see #getRoleList()
+	 * @generated
+	 */
+	EReference getRoleList_Roles();
+
+	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.File <em>File</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3118,6 +3200,38 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getTestCase_TestName();
+
+	/**
+	 * Returns the meta object for class '{@link fieldofactivityannotations.SystemTest <em>System Test</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>System Test</em>'.
+	 * @see fieldofactivityannotations.SystemTest
+	 * @generated
+	 */
+	EClass getSystemTest();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.SystemTest#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fieldofactivityannotations.SystemTest#getParent()
+	 * @see #getSystemTest()
+	 * @generated
+	 */
+	EReference getSystemTest_Parent();
+
+	/**
+	 * Returns the meta object for the reference '{@link fieldofactivityannotations.SystemTest#getSystemUnderTest <em>System Under Test</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>System Under Test</em>'.
+	 * @see fieldofactivityannotations.SystemTest#getSystemUnderTest()
+	 * @see #getSystemTest()
+	 * @generated
+	 */
+	EReference getSystemTest_SystemUnderTest();
 
 	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.Engineer <em>Engineer</em>}'.
@@ -3347,38 +3461,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getTrainingDocExternal_Parent();
-
-	/**
-	 * Returns the meta object for class '{@link fieldofactivityannotations.SystemTest <em>System Test</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>System Test</em>'.
-	 * @see fieldofactivityannotations.SystemTest
-	 * @generated
-	 */
-	EClass getSystemTest();
-
-	/**
-	 * Returns the meta object for the container reference '{@link fieldofactivityannotations.SystemTest#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent</em>'.
-	 * @see fieldofactivityannotations.SystemTest#getParent()
-	 * @see #getSystemTest()
-	 * @generated
-	 */
-	EReference getSystemTest_Parent();
-
-	/**
-	 * Returns the meta object for the reference '{@link fieldofactivityannotations.SystemTest#getSystemUnderTest <em>System Under Test</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>System Under Test</em>'.
-	 * @see fieldofactivityannotations.SystemTest#getSystemUnderTest()
-	 * @see #getSystemTest()
-	 * @generated
-	 */
-	EReference getSystemTest_SystemUnderTest();
 
 	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.DocumentationFiles <em>Documentation Files</em>}'.
@@ -3750,14 +3832,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__TEST_SPECIFICATION = eINSTANCE.getFieldOfActivityAnnotationRepository_TestSpecification();
 
 		/**
-		 * The meta object literal for the '<em><b>Development Specification</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DEVELOPMENT_SPECIFICATION = eINSTANCE.getFieldOfActivityAnnotationRepository_DevelopmentSpecification();
-
-		/**
 		 * The meta object literal for the '<em><b>Stock Specification</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3788,14 +3862,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__DOCUMENTATION_SPECIFICATION = eINSTANCE.getFieldOfActivityAnnotationRepository_DocumentationSpecification();
-
-		/**
-		 * The meta object literal for the '<em><b>Component Specification</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference FIELD_OF_ACTIVITY_ANNOTATION_REPOSITORY__COMPONENT_SPECIFICATION = eINSTANCE.getFieldOfActivityAnnotationRepository_ComponentSpecification();
 
 		/**
 		 * The meta object literal for the '<em><b>Staff Specification</b></em>' containment reference feature.
@@ -3830,6 +3896,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TEST_SPECIFICATION__SYSTEM_TESTS = eINSTANCE.getTestSpecification_SystemTests();
+
+		/**
+		 * The meta object literal for the '<em><b>Role</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TEST_SPECIFICATION__ROLE = eINSTANCE.getTestSpecification_Role();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.StockSpecificationImpl <em>Stock Specification</em>}' class.
@@ -3882,6 +3956,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference STOCK_SPECIFICATION__STRUCTURE_STOCK_LIST = eINSTANCE.getStockSpecification_StructureStockList();
 
 		/**
+		 * The meta object literal for the '<em><b>Role</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STOCK_SPECIFICATION__ROLE = eINSTANCE.getStockSpecification_Role();
+
+		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.HMISpecificationImpl <em>HMI Specification</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3900,70 +3982,20 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference HMI_SPECIFICATION__PARENT = eINSTANCE.getHMISpecification_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Hmi Configuration</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Role</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference HMI_SPECIFICATION__HMI_CONFIGURATION = eINSTANCE.getHMISpecification_HmiConfiguration();
+		EReference HMI_SPECIFICATION__ROLE = eINSTANCE.getHMISpecification_Role();
 
 		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.HMIConfigurationImpl <em>HMI Configuration</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.HMIConfigurationImpl
-		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getHMIConfiguration()
-		 * @generated
-		 */
-		EClass HMI_CONFIGURATION = eINSTANCE.getHMIConfiguration();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Hmi Config</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference HMI_CONFIGURATION__PARENT = eINSTANCE.getHMIConfiguration_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute HMI_CONFIGURATION__NAME = eINSTANCE.getHMIConfiguration_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HMI_CONFIGURATION__COMPONENTS = eINSTANCE.getHMIConfiguration_Components();
-
-		/**
-		 * The meta object literal for the '<em><b>Modules</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HMI_CONFIGURATION__MODULES = eINSTANCE.getHMIConfiguration_Modules();
-
-		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HMI_CONFIGURATION__INTERFACES = eINSTANCE.getHMIConfiguration_Interfaces();
-
-		/**
-		 * The meta object literal for the '<em><b>Structures</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference HMI_CONFIGURATION__STRUCTURES = eINSTANCE.getHMIConfiguration_Structures();
+		EReference HMI_SPECIFICATION__HMI_CONFIG = eINSTANCE.getHMISpecification_HmiConfig();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.ECADSpecificationImpl <em>ECAD Specification</em>}' class.
@@ -3984,44 +4016,20 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference ECAD_SPECIFICATION__PARENT = eINSTANCE.getECADSpecification_Parent();
 
 		/**
-		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ECAD_SPECIFICATION__COMPONENTS = eINSTANCE.getECADSpecification_Components();
-
-		/**
-		 * The meta object literal for the '<em><b>Modules</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ECAD_SPECIFICATION__MODULES = eINSTANCE.getECADSpecification_Modules();
-
-		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ECAD_SPECIFICATION__INTERFACES = eINSTANCE.getECADSpecification_Interfaces();
-
-		/**
-		 * The meta object literal for the '<em><b>Structures</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ECAD_SPECIFICATION__STRUCTURES = eINSTANCE.getECADSpecification_Structures();
-
-		/**
 		 * The meta object literal for the '<em><b>Drawings</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference ECAD_SPECIFICATION__DRAWINGS = eINSTANCE.getECADSpecification_Drawings();
+
+		/**
+		 * The meta object literal for the '<em><b>Role</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ECAD_SPECIFICATION__ROLE = eINSTANCE.getECADSpecification_Role();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.DocumentationSpecificationImpl <em>Documentation Specification</em>}' class.
@@ -4074,6 +4082,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference DOCUMENTATION_SPECIFICATION__STRUCTURE_DOCUMENTATION = eINSTANCE.getDocumentationSpecification_StructureDocumentation();
 
 		/**
+		 * The meta object literal for the '<em><b>Role</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference DOCUMENTATION_SPECIFICATION__ROLE = eINSTANCE.getDocumentationSpecification_Role();
+
+		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.StaffSpecificationImpl <em>Staff Specification</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4108,6 +4124,14 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference STAFF_SPECIFICATION__ROLE_LIST = eINSTANCE.getStaffSpecification_RoleList();
 
 		/**
+		 * The meta object literal for the '<em><b>Role</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference STAFF_SPECIFICATION__ROLE = eINSTANCE.getStaffSpecification_Role();
+
+		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.CalibrationSpecificationImpl <em>Calibration Specification</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4126,14 +4150,38 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EReference CALIBRATION_SPECIFICATION__PARENT = eINSTANCE.getCalibrationSpecification_Parent();
 
 		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.DevelopmentSpecificationImpl <em>Development Specification</em>}' class.
+		 * The meta object literal for the '<em><b>Role</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.DevelopmentSpecificationImpl
-		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getDevelopmentSpecification()
 		 * @generated
 		 */
-		EClass DEVELOPMENT_SPECIFICATION = eINSTANCE.getDevelopmentSpecification();
+		EReference CALIBRATION_SPECIFICATION__ROLE = eINSTANCE.getCalibrationSpecification_Role();
+
+		/**
+		 * The meta object literal for the '<em><b>Calibration Config</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALIBRATION_SPECIFICATION__CALIBRATION_CONFIG = eINSTANCE.getCalibrationSpecification_CalibrationConfig();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.CalibrationConfigurationImpl <em>Calibration Configuration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.CalibrationConfigurationImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getCalibrationConfiguration()
+		 * @generated
+		 */
+		EClass CALIBRATION_CONFIGURATION = eINSTANCE.getCalibrationConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CALIBRATION_CONFIGURATION__NAME = eINSTANCE.getCalibrationConfiguration_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
@@ -4141,17 +4189,89 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference DEVELOPMENT_SPECIFICATION__PARENT = eINSTANCE.getDevelopmentSpecification_Parent();
+		EReference CALIBRATION_CONFIGURATION__PARENT = eINSTANCE.getCalibrationConfiguration_Parent();
 
 		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.ComponentSpecificationImpl <em>Component Specification</em>}' class.
+		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.ComponentSpecificationImpl
-		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getComponentSpecification()
 		 * @generated
 		 */
-		EClass COMPONENT_SPECIFICATION = eINSTANCE.getComponentSpecification();
+		EReference CALIBRATION_CONFIGURATION__COMPONENTS = eINSTANCE.getCalibrationConfiguration_Components();
+
+		/**
+		 * The meta object literal for the '<em><b>Modules</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALIBRATION_CONFIGURATION__MODULES = eINSTANCE.getCalibrationConfiguration_Modules();
+
+		/**
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALIBRATION_CONFIGURATION__INTERFACES = eINSTANCE.getCalibrationConfiguration_Interfaces();
+
+		/**
+		 * The meta object literal for the '<em><b>Structures</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CALIBRATION_CONFIGURATION__STRUCTURES = eINSTANCE.getCalibrationConfiguration_Structures();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.HMIConfigurationImpl <em>HMI Configuration</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.HMIConfigurationImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getHMIConfiguration()
+		 * @generated
+		 */
+		EClass HMI_CONFIGURATION = eINSTANCE.getHMIConfiguration();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute HMI_CONFIGURATION__NAME = eINSTANCE.getHMIConfiguration_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HMI_CONFIGURATION__COMPONENTS = eINSTANCE.getHMIConfiguration_Components();
+
+		/**
+		 * The meta object literal for the '<em><b>Modules</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HMI_CONFIGURATION__MODULES = eINSTANCE.getHMIConfiguration_Modules();
+
+		/**
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HMI_CONFIGURATION__INTERFACES = eINSTANCE.getHMIConfiguration_Interfaces();
+
+		/**
+		 * The meta object literal for the '<em><b>Structures</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference HMI_CONFIGURATION__STRUCTURES = eINSTANCE.getHMIConfiguration_Structures();
 
 		/**
 		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
@@ -4159,67 +4279,7 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference COMPONENT_SPECIFICATION__PARENT = eINSTANCE.getComponentSpecification_Parent();
-
-		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.RoleListImpl <em>Role List</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.RoleListImpl
-		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getRoleList()
-		 * @generated
-		 */
-		EClass ROLE_LIST = eINSTANCE.getRoleList();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROLE_LIST__PARENT = eINSTANCE.getRoleList_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Roles</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROLE_LIST__ROLES = eINSTANCE.getRoleList_Roles();
-
-		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.RoleImpl <em>Role</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.RoleImpl
-		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getRole()
-		 * @generated
-		 */
-		EClass ROLE = eINSTANCE.getRole();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROLE__PARENT = eINSTANCE.getRole_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Person</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ROLE__PERSON = eINSTANCE.getRole_Person();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ROLE__DESCRIPTION = eINSTANCE.getRole_Description();
+		EReference HMI_CONFIGURATION__PARENT = eINSTANCE.getHMIConfiguration_Parent();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.PersonListImpl <em>Person List</em>}' class.
@@ -4282,6 +4342,66 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		EAttribute PERSON__NAME = eINSTANCE.getPerson_Name();
 
 		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.RoleImpl <em>Role</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.RoleImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getRole()
+		 * @generated
+		 */
+		EClass ROLE = eINSTANCE.getRole();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROLE__PARENT = eINSTANCE.getRole_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Person</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROLE__PERSON = eINSTANCE.getRole_Person();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ROLE__DESCRIPTION = eINSTANCE.getRole_Description();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.RoleListImpl <em>Role List</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.RoleListImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getRoleList()
+		 * @generated
+		 */
+		EClass ROLE_LIST = eINSTANCE.getRoleList();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROLE_LIST__PARENT = eINSTANCE.getRoleList_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Roles</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference ROLE_LIST__ROLES = eINSTANCE.getRoleList_Roles();
+
+		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.FileImpl <em>File</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4316,6 +4436,32 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TEST_CASE__TEST_NAME = eINSTANCE.getTestCase_TestName();
+
+		/**
+		 * The meta object literal for the '{@link fieldofactivityannotations.impl.SystemTestImpl <em>System Test</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fieldofactivityannotations.impl.SystemTestImpl
+		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getSystemTest()
+		 * @generated
+		 */
+		EClass SYSTEM_TEST = eINSTANCE.getSystemTest();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_TEST__PARENT = eINSTANCE.getSystemTest_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>System Under Test</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference SYSTEM_TEST__SYSTEM_UNDER_TEST = eINSTANCE.getSystemTest_SystemUnderTest();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.EngineerImpl <em>Engineer</em>}' class.
@@ -4518,32 +4664,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRAINING_DOC_EXTERNAL__PARENT = eINSTANCE.getTrainingDocExternal_Parent();
-
-		/**
-		 * The meta object literal for the '{@link fieldofactivityannotations.impl.SystemTestImpl <em>System Test</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see fieldofactivityannotations.impl.SystemTestImpl
-		 * @see fieldofactivityannotations.impl.FieldofactivityannotationsPackageImpl#getSystemTest()
-		 * @generated
-		 */
-		EClass SYSTEM_TEST = eINSTANCE.getSystemTest();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SYSTEM_TEST__PARENT = eINSTANCE.getSystemTest_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>System Under Test</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SYSTEM_TEST__SYSTEM_UNDER_TEST = eINSTANCE.getSystemTest_SystemUnderTest();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.DocumentationFiles <em>Documentation Files</em>}' class.

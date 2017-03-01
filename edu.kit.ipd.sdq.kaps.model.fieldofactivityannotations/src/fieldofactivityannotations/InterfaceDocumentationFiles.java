@@ -4,7 +4,6 @@ package fieldofactivityannotations;
 
 import xPPU.InterfaceRepository.Interface;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Interface Documentation Files</b></em>'.
