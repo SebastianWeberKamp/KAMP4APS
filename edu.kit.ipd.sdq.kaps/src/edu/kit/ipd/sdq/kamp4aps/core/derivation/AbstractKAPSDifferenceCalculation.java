@@ -43,6 +43,11 @@ public abstract class AbstractKAPSDifferenceCalculation<T extends ArchitectureVe
 	@Override
 	public List<Activity> deriveWorkplan(T baseVersion, T targetVersion) {
 		List<Activity> activityList = new ArrayList<Activity>();
+		List<Diff> plantDiff = calculateDiffModel(baseVersion.getXPPUPlant(), targetVersion.getXPPUPlant());
+		
+		List<Activity> plantActivities = deriveAddAndRemoveActivities(plantDiff);
+		activityList.addAll(plantActivities);		
+		
 		List<Activity> internalModificationActivities = this.architectureInternalModificationDerivation
 				.deriveInternalModifications(targetVersion);
 		activityList.addAll(internalModificationActivities);

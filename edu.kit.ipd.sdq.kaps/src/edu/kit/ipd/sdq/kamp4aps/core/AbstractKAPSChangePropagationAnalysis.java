@@ -91,22 +91,18 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 			for(BusBox busBox : params.busBoxesToChange){
 				ModifyBusBox modifyBusBox = scenarioTwo.createNewModifyBusBox(busBox);
 				changePropagationDueToHardwareChange.getBusBoxModifications().add(modifyBusBox);
-//				scenarioTwo.markChangesBasedOnBusBox(busBox, changePropagationDueToHardwareChange);
 			}
 			for(BusMaster busMaster : params.busMastersToChange){
 				ModifyBusMaster modifyBusMaster = scenarioTwo.createNewModifyBusMaster(busMaster, params.causingElementsOfBusMaster.get(busMaster));
 				changePropagationDueToHardwareChange.getBusMasterModifications().add(modifyBusMaster);
-//				scenarioTwo.markChangesBasedOnBusMaster(busMaster, changePropagationDueToHardwareChange);
 			}
 			for(BusSlave busSlave : params.busSlavesToChange){
 				ModifyBusSlave modifyBusSlave = scenarioTwo.createNewModifyBusSlave(busSlave, params.causingElementsOfBusSlave.get(busSlave));
 				changePropagationDueToHardwareChange.getBusSlaveModifications().add(modifyBusSlave);
-//				scenarioTwo.markChangesBasedOnBusSlave(busSlave, changePropagationDueToHardwareChange);
 			}
 			for(BusCable busCable : params.busCablesToChange){
 				ModifyBusCable modifyBusCable = scenarioTwo.createNewModifyBusCable(busCable, params.causingElementsOfBusCable.get(busCable));
 				changePropagationDueToHardwareChange.getBusCableModifications().add(modifyBusCable);
-//				scenarioTwo.markChangesBasedOnBusCable(busCable, changePropagationDueToHardwareChange);
 			}
 		}
 			
@@ -117,5 +113,4 @@ public abstract class AbstractKAPSChangePropagationAnalysis<S extends Architectu
 	protected void setChangePropagationDueToHardwareChange(T changePropagationDueToDataDependencies) {
 		this.changePropagationDueToHardwareChange = changePropagationDueToDataDependencies;
 	}
-	
 }
