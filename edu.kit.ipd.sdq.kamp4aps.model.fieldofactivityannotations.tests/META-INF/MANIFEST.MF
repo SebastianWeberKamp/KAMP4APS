@@ -10,7 +10,7 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: fieldofactivityannotations.tests
 Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations;visibility:=reexport,
- xPPU;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.xPPU;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
