@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: Iec61131_3.tests;singleton:=true
+Bundle-SymbolicName: edu.kit.ipd.sdq.kamp4aps.Iec61131_3.tests;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -22,7 +22,7 @@ Export-Package: iec611313Specification.common.oop.tests,
  iec611313Specification.language.sfc.tests,
  iec611313Specification.language.st.tests
 Require-Bundle: org.eclipse.core.runtime,
- Iec61131_3;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.Iec61131_3;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
