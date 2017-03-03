@@ -12,6 +12,6 @@ Export-Package: DeploymentContext,
  DeploymentContext.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- Iec61131_3;visibility:=reexport,
- xPPU;visibility:=reexport
+ edu.kit.ipd.sdq.kamp4aps.Iec61131_3;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.xPPU;visibility:=reexport
 Bundle-ActivationPolicy: lazy
