@@ -12,5 +12,5 @@ Export-Package: fieldofactivityannotations,
  fieldofactivityannotations.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- xPPU;visibility:=reexport
+ edu.kit.ipd.sdq.kamp4aps.xPPU;visibility:=reexport
 Bundle-ActivationPolicy: lazy
