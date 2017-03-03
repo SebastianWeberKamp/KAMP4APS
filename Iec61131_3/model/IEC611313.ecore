@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="iec611313Specification" nsURI="http://sdq.ipd.kit.edu/iec611313"
+    nsPrefix="ipd4ice">
+  <eSubpackages name="common" nsURI="http://sdq.ipd.kit.edu/iec611313/common" nsPrefix="common">
+    <eClassifiers xsi:type="ecore:EClass" name="Assignment" eSuperTypes="#//common/pous/programs/ProgramConfigElement #//language/st/Statement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="HasAssignmentExpression"
+          lowerBound="1" eType="#//common/Expression"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="HasAssignmentVariable"
+          lowerBound="1" eType="#//common/variables/VariableAccess"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Expression" abstract="true" eSuperTypes="#//language/st/Statement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="HasType" lowerBound="1"
+          eType="#//common/types/ANY" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="FormalParameterList" eSuperTypes="#//common/ParameterList">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsFormalParamAssignment"
+          lowerBound="1" upperBound="-1" eType="#//common/Assignment" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Jump" eSuperTypes="#//language/fbd/SignalSink #//language/ld/LDElement">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="HasJumpTarget" lowerBound="1"
+          eType="#//common/Label"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Label">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Literal" eSuperTypes="#//common/Expression #//language/ld/LDElement">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="ParameterList" abstract="true"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PositionalParameterList" eSuperTypes="#//common/ParameterList">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsParamExpression"
+          upperBound="-1" eType="#//common/Expression"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Range">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="HasLowerBound" lowerBound="1"
+          eType="#//common/Literal" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="HasUpperBound" lowerBound="1"
+          eType="#//common/Literal" containment="true"/>
+    </eClassifiers>
+    <eSubpackages name="pous" nsURI="http://sdq.ipd.kit.edu/iec611313/common/pous"
+        nsPrefix="pous">
+      <eSubpackages name="function_blocks" nsURI="http://sdq.ipd.kit.edu/iec611313/common/pous/function_blocks"
+          nsPrefix="function_blocks">
+        <eClassifiers xsi:type="ecore:EClass" name="FunctionBlockBodySpecification"
+            abstract="true"/>
+        <eClassifiers xsi:type="ecore:EClass" name="FunctionBlockInvocation" eSuperTypes="#//language/st/Statement #//language/il/Instruction #//language/fbd/FBDElement">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="InvokesFunBlockInstance"
+              lowerBound="1" eType="#//common/variables/VariableAccess"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="HasFunBlockInvocationParamList"
+              lowerBound="1" eType="#//common/ParameterList"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="FunctionBlockType" eSuperTypes="#//common/types/ANY_DERIVED">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+            <details key="constraints" value="hasValidVariableDeclarations"/>
+          </eAnnotations>
+          <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+            <details key="constraints" value="hasValidVariableAccess"/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="HasFunBlockBodySpec"
+              lowerBound="1" eType="#//common/pous/function_blocks/FunctionBlockBodySpecification"
+              containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsFunctionBlockVarDecl"
+              lowerBound="1" upperBound="-1" eType="#//common/variables/VariableDeclaration"
+              containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="HasInterfaceImplementations"
+              upperBound="-1" eType="#//common/oop/Interface"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="HasExtensions" eType="#//common/oop/Inheritance"
+              containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsMethods"
+              upperBound="-1" eType="#//common/oop/Method" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsProperties"
+              upperBound="-1" eType="#//common/oop/Property" containment="true"/>
+        </eClassifiers>
+      </eSubpackages>
+      <eSubpackages name="programs" nsURI="http://sdq.ipd.kit.edu/iec611313/common/pous/programs"
+          nsPrefix="programs">
+        <eClassifiers xsi:type="ecore:EClass" name="FunctionBlockInstanceTaskAssignment"
+            eSuperTypes="#//common/pous/programs/ProgramConfigElement">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="AssignsFunBlockInstance"
+              lowerBound="1" eType="#//common/variables/VariableAccess"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="HasFunBlockAssignTask"
+              lowerBound="1" eType="#//configuration/Task"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ProgramConfigElement" abstract="true"/>
+        <eClassifiers xsi:type="ecore:EClass" name="ProgramConfiguration">
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+              eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="retentive" lowerBound="1"
+              eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="HasProgramType" lowerBound="1"
+              eType="#//common/pous/programs/ProgramType" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsProgConfigElement"
+              upperBound="-1" eType="#//common/pous/programs/ProgramConfigElement"
+              containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="IsAssignedTo" upperBound="-1"
+              eType="#//configuration/Task"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="ProgramType">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+            <details key="constraints" value="hasValidVariableDeclaration"/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" lowerBound="1"
+              eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="HasProgramBodySpec"
+              lowerBound="1" eType="#//common/pous/function_blocks/FunctionBlockBodySpecification"
+              containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsProgramVarDecl"
+              upperBound="-1" eType="#//common/variables/VariableDeclaration" containment="true"/>
+        </eClassifiers>
+      </eSubpackages>
+      <eSubpackages name="functions" nsURI="http://sdq.ipd.kit.edu/iec611313/common/pous/functions"
+          nsPrefix="functions">
+        <eClassifiers xsi:type="ecore:EClass" name="Function">
+          <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+            <details key="constraints" value="hasValidVariableDeclarations"/>
+          </eAnnotations>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="HasFunctionBodySpec"
+              lowerBound="1" eType="#//common/pous/functions/FunctionBodySpecification"
+              containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsFunctionVarDecl"
+              eType="#//common/variables/VariableDeclaration" containment="true" eOpposite="#//common/variables/VariableDeclaration/IsPartOf"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="HasFunctionReturnType"
+              lowerBound="1" eType="#//common/types/ANY" containment="true"/>
+          <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+              eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        </eClassifiers>
+        <eClassifiers xsi:type="ecore:EClass" name="FunctionBodySpecification"/>
+        <eClassifiers xsi:type="ecore:EClass" name="FunctionCall" eSuperTypes="#//common/Expression #//language/il/Instruction #//language/fbd/FBDElement #//language/ld/LDElement">
+          <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunction" lowerBound="1"
+              eType="#//common/pous/functions/Function"/>
+          <eStructuralFeatures xsi:type="ecore:EReference" name="HasFunCallParamList"
+              lowerBound="1" eType="#//common/ParameterList"/>
+        </eClassifiers>
+      </eSubpackages>
+    </eSubpackages>
+    <eSubpackages name="variables" nsURI="http://sdq.ipd.kit.edu/iec611313/common/variables"
+        nsPrefix="variables">
+      <eClassifiers xsi:type="ecore:EClass" name="LocationSpecification">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" lowerBound="1"
+            eType="#//common/variables/Location"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="size" lowerBound="1"
+            eType="#//common/variables/Size"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="address" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EIntegerObject"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="VariableAccess" eSuperTypes="#//common/Expression #//language/fbd/SignalSink #//language/fbd/FBDElement #//language/ld/LDElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasVariableDeclaration"
+            lowerBound="1" eType="#//common/variables/VariableDeclaration"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="VariableDeclaration">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="variableType" lowerBound="1"
+            eType="#//common/variables/VariableType"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="variableModifier" eType="#//common/variables/VariableModifier"
+            defaultValueLiteral="NONE"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="DeclaresVariableType"
+            eType="#//common/types/ANY" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="hasVariableLocation"
+            eType="#//common/variables/LocationSpecification" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasInitialVariableValue"
+            eType="#//common/Literal" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="IsPartOf" eType="#//common/pous/functions/Function"
+            eOpposite="#//common/pous/functions/Function/ContainsFunctionVarDecl"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="Size">
+        <eLiterals name="BIT"/>
+        <eLiterals name="BYTE" value="1"/>
+        <eLiterals name="WORD" value="2"/>
+        <eLiterals name="DOUBLE_WORD" value="3"/>
+        <eLiterals name="LONG_WORD" value="4"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="VariableModifier">
+        <eLiterals name="NONE"/>
+        <eLiterals name="RETAIN" value="1"/>
+        <eLiterals name="NON_RETAIN" value="2"/>
+        <eLiterals name="CONSTANT" value="3"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="Location">
+        <eLiterals name="INPUT"/>
+        <eLiterals name="OUTPUT" value="1"/>
+        <eLiterals name="MEMORY" value="2"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="VariableType">
+        <eLiterals name="INPUT"/>
+        <eLiterals name="OUTPUT" value="1"/>
+        <eLiterals name="IN_OUT" value="2"/>
+        <eLiterals name="LOCAL" value="3"/>
+        <eLiterals name="TEMP" value="4"/>
+        <eLiterals name="GLOBAL" value="5"/>
+        <eLiterals name="EXTERNAL" value="6"/>
+        <eLiterals name="CONFIG" value="7"/>
+        <eLiterals name="ACCESS" value="8"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="types" nsURI="http://sdq.ipd.kit.edu/iec611313/common/types"
+        nsPrefix="types">
+      <eClassifiers xsi:type="ecore:EClass" name="ANY" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ANY_ELEMENTARY" abstract="true"
+          eSuperTypes="#//common/types/ANY"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ANY_DERIVED" abstract="true" eSuperTypes="#//common/types/ANY">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="typeName" unique="false"
+            lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+            defaultValueLiteral=""/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ANY_MAGNITUDE" abstract="true" eSuperTypes="#//common/types/ANY_ELEMENTARY"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ANY_DATE" abstract="true" eSuperTypes="#//common/types/ANY_ELEMENTARY"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ANY_BIT" abstract="true" eSuperTypes="#//common/types/ANY_ELEMENTARY"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ANY_STRING" abstract="true" eSuperTypes="#//common/types/ANY_ELEMENTARY"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TIME" eSuperTypes="#//common/types/ANY_MAGNITUDE"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ANY_NUM" abstract="true" eSuperTypes="#//common/types/ANY_MAGNITUDE"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ANY_REAL" abstract="true" eSuperTypes="#//common/types/ANY_NUM"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ANY_INT" abstract="true" eSuperTypes="#//common/types/ANY_NUM"/>
+      <eClassifiers xsi:type="ecore:EClass" name="REAL" eSuperTypes="#//common/types/ANY_REAL"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LREAL" eSuperTypes="#//common/types/ANY_REAL"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SINT" eSuperTypes="#//common/types/ANY_INT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="INT" eSuperTypes="#//common/types/ANY_INT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="DINT" eSuperTypes="#//common/types/ANY_INT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LINT" eSuperTypes="#//common/types/ANY_INT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="USINT" eSuperTypes="#//common/types/ANY_INT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="UINT" eSuperTypes="#//common/types/ANY_INT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="UDINT" eSuperTypes="#//common/types/ANY_INT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ULINT" eSuperTypes="#//common/types/ANY_INT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="DATE" eSuperTypes="#//common/types/ANY_DATE"/>
+      <eClassifiers xsi:type="ecore:EClass" name="DATE_AND_TIME" eSuperTypes="#//common/types/ANY_DATE"/>
+      <eClassifiers xsi:type="ecore:EClass" name="TIME_OF_DAY" eSuperTypes="#//common/types/DATE #//common/types/DATE_AND_TIME"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BOOL" eSuperTypes="#//common/types/ANY_BIT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="BYTE" eSuperTypes="#//common/types/ANY_BIT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="WORD" eSuperTypes="#//common/types/ANY_BIT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="DWORD" eSuperTypes="#//common/types/ANY_BIT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LWORD" eSuperTypes="#//common/types/ANY_BIT"/>
+      <eClassifiers xsi:type="ecore:EClass" name="STRING" eSuperTypes="#//common/types/ANY_STRING"/>
+      <eClassifiers xsi:type="ecore:EClass" name="WSTRING" eSuperTypes="#//common/types/ANY_STRING"/>
+      <eClassifiers xsi:type="ecore:EClass" name="ENUMERATION" eSuperTypes="#//common/types/ANY_DERIVED">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsEnumValue"
+            lowerBound="1" upperBound="-1" eType="#//common/Literal" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasInitialEnumValue"
+            eType="#//common/Literal" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="DERIVED" eSuperTypes="#//common/types/ANY_DERIVED">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasInitialDerivedValue"
+            eType="#//common/Literal" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasSubrangeRange" eType="#//common/Range"
+            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasDerivedBaseType"
+            lowerBound="1" eType="#//common/types/ANY" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ARRAY" eSuperTypes="#//common/types/ANY_DERIVED">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasArrayDimension"
+            lowerBound="1" upperBound="-1" eType="#//common/Range" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasInitialArrayValue"
+            upperBound="-1" eType="#//common/Literal" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasArrayBaseType" lowerBound="1"
+            eType="#//common/types/ANY" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="STRUCTURE" eSuperTypes="#//common/types/ANY_DERIVED">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsStructVarDecl"
+            lowerBound="1" upperBound="-1" eType="#//common/variables/VariableDeclaration"
+            containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="POINTER" eSuperTypes="#//common/types/ANY_DERIVED">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasDerivedBaseType"
+            lowerBound="1" eType="#//common/types/ANY" containment="true"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="oop" nsURI="http://sdq.ipd.kit.edu/iec611313/common/oop" nsPrefix="oop">
+      <eClassifiers xsi:type="ecore:EClass" name="Interface" abstract="true" eSuperTypes="#//common/types/ANY_DERIVED">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasBaseType" eType="#//common/oop/Interface"
+            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasPropertySignatures"
+            upperBound="-1" eType="#//common/oop/PropertySignature" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasMethodSignatures"
+            upperBound="-1" eType="#//common/oop/MethodSignature" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Inheritance">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasSuperType" lowerBound="1"
+            eType="#//common/pous/function_blocks/FunctionBlockType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Property">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsGetter" eType="#//common/oop/GetAccessor"
+            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsSetter" eType="#//common/oop/SetAccessor"
+            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasSignature" lowerBound="1"
+            eType="#//common/oop/PropertySignature" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PropertySignature">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="HasSetter" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+            defaultValueLiteral="false"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="HasGetter" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+            defaultValueLiteral="false"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasReturnType" lowerBound="1"
+            eType="#//common/types/ANY" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="SetAccessor">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasBody" lowerBound="1"
+            eType="#//common/pous/functions/FunctionBodySpecification" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="GetAccessor">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasBody" lowerBound="1"
+            eType="#//common/pous/functions/FunctionBodySpecification" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Method">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="AccessType" lowerBound="1"
+            eType="#//common/oop/AccessType"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="isOverridden" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+            defaultValueLiteral="false"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="isFinal" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+            defaultValueLiteral="false"/>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="isAbstract" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+            defaultValueLiteral="false"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasBody" lowerBound="1"
+            eType="#//common/pous/function_blocks/FunctionBlockBodySpecification"
+            containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasMethodSignature"
+            lowerBound="1" eType="#//common/oop/MethodSignature" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsLocalVarDecl"
+            upperBound="-1" eType="#//common/variables/VariableDeclaration" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="MethodSignature">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasReturnType" lowerBound="1"
+            eType="#//common/types/ANY" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="AccessType">
+        <eLiterals name="DEFAULT" literal="DEFAULT"/>
+        <eLiterals name="PUBLIC" value="1"/>
+        <eLiterals name="PROTECTED" value="2"/>
+        <eLiterals name="PRIVATE" value="3" literal="PRIVATE"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+  <eSubpackages name="configuration" nsURI="http://sdq.ipd.kit.edu/iec611313/configuration"
+      nsPrefix="configuration">
+    <eClassifiers xsi:type="ecore:EClass" name="Configuration">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="hasValidVariableDeclarations"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsTypeDefinition"
+          upperBound="-1" eType="#//common/types/ANY_DERIVED" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsConfigVarDecl"
+          upperBound="-1" eType="#//common/variables/VariableDeclaration" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsResource" lowerBound="1"
+          upperBound="-1" eType="#//configuration/Resource" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Resource">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="hasValidVariableDeclarations"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceTypeName" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsProgramConfigs"
+          lowerBound="1" upperBound="-1" eType="#//common/pous/programs/ProgramConfiguration"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsResourceVarDecl"
+          upperBound="-1" eType="#//common/variables/VariableDeclaration" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsTaskConfigs"
+          upperBound="-1" eType="#//configuration/TaskConfiguration" containment="true"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Task"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TaskConfiguration">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+        <details key="constraints" value="hasOnlyOneExecutionMechanism"/>
+      </eAnnotations>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="ConfiguresTask" lowerBound="1"
+          eType="#//configuration/Task" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="HasPriority" lowerBound="1"
+          eType="#//common/Expression" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="HasSingleExecution" lowerBound="1"
+          eType="#//common/Expression" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="HasIntervalExecution"
+          lowerBound="1" eType="#//common/Expression" containment="true"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="language" nsURI="http://sdq.ipd.kit.edu/iec611313/language"
+      nsPrefix="language">
+    <eSubpackages name="il" nsURI="http://sdq.ipd.kit.edu/iec611313/language/il" nsPrefix="il">
+      <eClassifiers xsi:type="ecore:EClass" name="ComplexInstruction" eSuperTypes="#//language/il/Instruction">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasComplexOperand"
+            lowerBound="1" eType="#//language/il/InstructionList"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Instruction" abstract="true">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasInstructionLabel"
+            eType="#//common/Label"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="InstructionList" eSuperTypes="#//common/pous/functions/FunctionBodySpecification #//common/pous/function_blocks/FunctionBlockBodySpecification">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsInstruction"
+            upperBound="-1" eType="#//language/il/Instruction" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="JumpInstruction" eSuperTypes="#//language/il/Instruction">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasJumpInstructionTarget"
+            lowerBound="1" eType="#//common/Label"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ReturnInstruction" eSuperTypes="#//language/il/Instruction"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SimpleInstruction" eSuperTypes="#//language/il/Instruction">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="hasValidOperand"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="operator" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasOperand" lowerBound="1"
+            eType="#//common/Expression"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="st" nsURI="http://sdq.ipd.kit.edu/iec611313/language/st" nsPrefix="st">
+      <eClassifiers xsi:type="ecore:EClass" name="Case" eSuperTypes="#//language/st/Statement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasCaseExpression"
+            lowerBound="1" eType="#//common/Expression"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsCaseElement"
+            upperBound="-1" eType="#//language/st/CaseElement" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasDefaultPart" lowerBound="1"
+            eType="#//language/st/StatementList"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="CaseElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasCaseElementMatchesPart"
+            lowerBound="1" eType="#//language/st/StatementList"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasCaseValue" lowerBound="1"
+            upperBound="-1" eType="#//common/Literal" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Exit" eSuperTypes="#//language/st/Statement"/>
+      <eClassifiers xsi:type="ecore:EClass" name="For" eSuperTypes="#//language/st/Iteration">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasToExpression" lowerBound="1"
+            eType="#//common/Expression"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasStepExpression"
+            lowerBound="1" eType="#//common/Expression"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasControlVariableAssignment"
+            lowerBound="1" eType="#//common/Assignment"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="If" eSuperTypes="#//language/st/Statement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasIfCondition" lowerBound="1"
+            eType="#//common/Expression"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasElseIf" eType="#//language/st/If"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasElse" lowerBound="1"
+            eType="#//language/st/StatementList"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasThen" lowerBound="1"
+            eType="#//language/st/StatementList"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Iteration" abstract="true" eSuperTypes="#//language/st/Statement"/>
+      <eClassifiers xsi:type="ecore:EClass" name="NilValue" eSuperTypes="#//language/st/Statement"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Repeat" eSuperTypes="#//language/st/SimpleIteration"/>
+      <eClassifiers xsi:type="ecore:EClass" name="Return" eSuperTypes="#//language/st/Statement"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SimpleIteration" abstract="true"
+          eSuperTypes="#//language/st/Iteration">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasIterationCondition"
+            lowerBound="1" eType="#//common/Expression"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Statement" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="StatementList" eSuperTypes="#//common/pous/functions/FunctionBodySpecification #//common/pous/function_blocks/FunctionBlockBodySpecification">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsStatement"
+            upperBound="-1" eType="#//language/st/Statement" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="While" eSuperTypes="#//language/st/SimpleIteration"/>
+    </eSubpackages>
+    <eSubpackages name="fbd" nsURI="http://sdq.ipd.kit.edu/iec611313/language/fbd"
+        nsPrefix="fbd">
+      <eClassifiers xsi:type="ecore:EClass" name="FBDElement" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="FunctionBlockDiagram" eSuperTypes="#//common/pous/functions/FunctionBodySpecification #//common/pous/function_blocks/FunctionBlockBodySpecification">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsFBDNetwork"
+            lowerBound="1" upperBound="-1" eType="#//language/fbd/FunctionBlockNetwork"
+            containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="FunctionBlockNetwork">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasFBDNetworkLabel"
+            eType="#//common/Label"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsFBDElement"
+            lowerBound="1" upperBound="-1" eType="#//language/fbd/FBDElement" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsSignalFlowLine"
+            lowerBound="1" upperBound="-1" eType="#//language/fbd/SignalFlowLine"
+            containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="SignalFlowLine">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasSignalSink" lowerBound="1"
+            upperBound="-1" eType="#//language/fbd/SignalSink"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasSignalSource" lowerBound="1"
+            eType="#//common/Expression"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="SignalSink" abstract="true"/>
+    </eSubpackages>
+    <eSubpackages name="ld" nsURI="http://sdq.ipd.kit.edu/iec611313/language/ld" nsPrefix="ld">
+      <eClassifiers xsi:type="ecore:EClass" name="Coil" eSuperTypes="#//language/ld/LDNode">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="coilType" lowerBound="1"
+            eType="#//language/ld/CoilType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Contact" eSuperTypes="#//language/ld/LDNode">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="contactType" lowerBound="1"
+            eType="#//language/ld/ContactType"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LadderDiagram" eSuperTypes="#//common/pous/functions/FunctionBodySpecification #//common/pous/function_blocks/FunctionBlockBodySpecification">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsLadderNetwork"
+            lowerBound="1" upperBound="-1" eType="#//language/ld/LadderNetwork" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LadderNetwork">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasLDNetworkLabel"
+            eType="#//common/Label"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsPowerFlowLine"
+            lowerBound="1" upperBound="-1" eType="#//language/ld/PowerFlowLine" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsLDElement"
+            upperBound="-1" eType="#//language/ld/LDElement" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="LDElement" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="LDNode" abstract="true" eSuperTypes="#//language/ld/LDElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasLDNodeVariable"
+            lowerBound="1" eType="#//common/variables/VariableAccess"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PowerFlowLine">
+        <eAnnotations source="http://www.eclipse.org/emf/2002/Ecore">
+          <details key="constraints" value="hasValidPowerSink"/>
+        </eAnnotations>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasPowerSource" lowerBound="1"
+            upperBound="-1" eType="#//language/ld/LDElement"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasPowerSink" lowerBound="1"
+            upperBound="-1" eType="#//language/ld/LDElement"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="PowerRail" eSuperTypes="#//language/ld/LDElement">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasLeftPowerRail" lowerBound="1"
+            eType="#//language/ld/LadderNetwork"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasRightPowerRail"
+            lowerBound="1" eType="#//language/ld/LadderNetwork"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="ContactType">
+        <eLiterals name="NORMALLY_OPEN"/>
+        <eLiterals name="NORMALLY_CLOSED" value="1"/>
+        <eLiterals name="POSITIVE_TRANSITION" value="2"/>
+        <eLiterals name="NEGATIVE_TRANSITION" value="3"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="CoilType">
+        <eLiterals name="COIL"/>
+        <eLiterals name="NEGATED" value="1"/>
+        <eLiterals name="SET" value="2"/>
+        <eLiterals name="RESET" value="3"/>
+        <eLiterals name="POSITIVE_TRANSITION" value="4"/>
+        <eLiterals name="NEGATIVE_TRANSITION" value="5"/>
+      </eClassifiers>
+    </eSubpackages>
+    <eSubpackages name="sfc" nsURI="http://sdq.ipd.kit.edu/iec611313/language/sfc"
+        nsPrefix="sfc">
+      <eClassifiers xsi:type="ecore:EClass" name="Action">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasActionSpec" lowerBound="1"
+            eType="#//common/pous/function_blocks/FunctionBlockBodySpecification"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ActionAssociation">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasAction" lowerBound="1"
+            eType="#//language/sfc/Action"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasIndicatorVariable"
+            eType="#//common/variables/VariableAccess"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasActionQualifier"
+            lowerBound="1" eType="#//language/sfc/ActionQualifier"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="ActionQualifier" abstract="true"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SequentialFunctionChart" eSuperTypes="#//common/pous/function_blocks/FunctionBlockBodySpecification">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasInitialStep" lowerBound="1"
+            eType="#//language/sfc/Step"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="SimpleActionQualifier" eSuperTypes="#//language/sfc/ActionQualifier"/>
+      <eClassifiers xsi:type="ecore:EClass" name="SimpleQualifier">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="qualifier" lowerBound="1"
+            eType="#//language/sfc/SimpleQualifier"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Step">
+        <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1"
+            eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="ContainsActionAssociation"
+            upperBound="-1" eType="#//language/sfc/ActionAssociation" containment="true"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="TimedActionQualifier" eSuperTypes="#//language/sfc/ActionQualifier">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasDuration" lowerBound="1"
+            eType="#//common/Literal" containment="true"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="qualifier" lowerBound="1"
+            eType="#//language/sfc/SimpleQualifier"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EClass" name="Transition">
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasSourceStep" lowerBound="1"
+            upperBound="-1" eType="#//language/sfc/Step"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasTargetStep" lowerBound="1"
+            upperBound="-1" eType="#//language/sfc/Step"/>
+        <eStructuralFeatures xsi:type="ecore:EReference" name="HasTransitionCondition"
+            lowerBound="1" eType="#//common/Expression"/>
+      </eClassifiers>
+      <eClassifiers xsi:type="ecore:EEnum" name="TimedQualifier">
+        <eLiterals name="TIME_LIMITED"/>
+        <eLiterals name="TIME_DELAYED" value="1"/>
+        <eLiterals name="STORED_TIME_DELAYED" value="2"/>
+        <eLiterals name="TIME_DELAYED_STORED" value="3"/>
+        <eLiterals name="STORED_TIME_LIMITED" value="4"/>
+      </eClassifiers>
+    </eSubpackages>
+  </eSubpackages>
+  <eSubpackages name="dummy" nsURI="http://sdq.ipd.kit.edu/iec611313/dummy" nsPrefix="dummy">
+    <eClassifiers xsi:type="ecore:EClass" name="CodeBodyDummy" eSuperTypes="#//common/pous/function_blocks/FunctionBlockBodySpecification #//common/pous/functions/FunctionBodySpecification">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" lowerBound="1"
+          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+  </eSubpackages>
+</ecore:EPackage>

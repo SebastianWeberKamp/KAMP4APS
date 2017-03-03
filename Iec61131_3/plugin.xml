@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/common"
+            class="iec611313Specification.common.CommonPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/common/pous/function_blocks"
+            class="iec611313Specification.common.pous.function_blocks.Function_blocksPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/common/pous/programs"
+            class="iec611313Specification.common.pous.programs.ProgramsPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/common/pous/functions"
+            class="iec611313Specification.common.pous.functions.FunctionsPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/common/variables"
+            class="iec611313Specification.common.variables.VariablesPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/common/types"
+            class="iec611313Specification.common.types.TypesPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC611313 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/common/oop"
+            class="iec611313Specification.common.oop.OopPackage"
+            genModel="model/IEC611313.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/configuration"
+            class="iec611313Specification.configuration.ConfigurationPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/language/il"
+            class="iec611313Specification.language.il.IlPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/language/st"
+            class="iec611313Specification.language.st.StPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/language/fbd"
+            class="iec611313Specification.language.fbd.FbdPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/language/ld"
+            class="iec611313Specification.language.ld.LdPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC61131 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/language/sfc"
+            class="iec611313Specification.language.sfc.SfcPackage"
+            genModel="model/IEC61131.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated IEC611313 -->
+      <package
+            uri="http://sdq.ipd.kit.edu/iec611313/dummy"
+            class="iec611313Specification.dummy.DummyPackage"
+            genModel="model/IEC611313.genmodel"/>
+   </extension>
+</plugin>
