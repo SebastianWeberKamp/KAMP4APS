@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: xPPU.editor;singleton:=true
+Bundle-SymbolicName: edu.kit.ipd.sdq.kamp4aps.xPPU.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Activator: xPPU.presentation.XPPUEditorPlugin$Implementation
@@ -18,7 +18,7 @@ Export-Package: xPPU.BusComponents.presentation,
  xPPU.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
- xPPU.edit;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.xPPU.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport
