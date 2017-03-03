@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: xPPU.tests;singleton:=true
+Bundle-SymbolicName: edu.kit.ipd.sdq.kamp4aps.xPPU.tests;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
@@ -17,7 +17,7 @@ Export-Package: xPPU.BusComponents.tests,
  xPPU.StructureRepository.tests,
  xPPU.tests
 Require-Bundle: org.eclipse.core.runtime,
- xPPU;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.xPPU;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
