@@ -164,6 +164,98 @@ public class modificationmarksItemProviderAdapterFactory extends modificationmar
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModifyComponentItemProvider modifyComponentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModifyComponentAdapter() {
+		if (modifyComponentItemProvider == null) {
+			modifyComponentItemProvider = new ModifyComponentItemProvider(this);
+		}
+
+		return modifyComponentItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModifyModuleItemProvider modifyModuleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModifyModuleAdapter() {
+		if (modifyModuleItemProvider == null) {
+			modifyModuleItemProvider = new ModifyModuleItemProvider(this);
+		}
+
+		return modifyModuleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModifyStructureItemProvider modifyStructureItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModifyStructureAdapter() {
+		if (modifyStructureItemProvider == null) {
+			modifyStructureItemProvider = new ModifyStructureItemProvider(this);
+		}
+
+		return modifyStructureItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModifyInterfaceItemProvider modifyInterfaceItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModifyInterfaceAdapter() {
+		if (modifyInterfaceItemProvider == null) {
+			modifyInterfaceItemProvider = new ModifyInterfaceItemProvider(this);
+		}
+
+		return modifyInterfaceItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -449,6 +541,10 @@ public class modificationmarksItemProviderAdapterFactory extends modificationmar
 		if (kapsModificationRepositoryItemProvider != null) kapsModificationRepositoryItemProvider.dispose();
 		if (kapsSeedModificationsItemProvider != null) kapsSeedModificationsItemProvider.dispose();
 		if (changePropagationDueToHardwareChangeItemProvider != null) changePropagationDueToHardwareChangeItemProvider.dispose();
+		if (modifyComponentItemProvider != null) modifyComponentItemProvider.dispose();
+		if (modifyModuleItemProvider != null) modifyModuleItemProvider.dispose();
+		if (modifyStructureItemProvider != null) modifyStructureItemProvider.dispose();
+		if (modifyInterfaceItemProvider != null) modifyInterfaceItemProvider.dispose();
 		if (modifyPowerSupplyItemProvider != null) modifyPowerSupplyItemProvider.dispose();
 		if (modifySignalinterfaceItemProvider != null) modifySignalinterfaceItemProvider.dispose();
 		if (modifyPhysicalConnectionItemProvider != null) modifyPhysicalConnectionItemProvider.dispose();

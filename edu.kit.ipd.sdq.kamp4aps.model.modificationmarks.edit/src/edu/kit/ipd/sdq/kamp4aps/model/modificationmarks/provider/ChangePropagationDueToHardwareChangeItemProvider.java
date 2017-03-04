@@ -73,6 +73,8 @@ public class ChangePropagationDueToHardwareChangeItemProvider extends ChangeProp
 			childrenFeatures.add(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_MASTER_MODIFICATIONS);
 			childrenFeatures.add(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_SLAVE_MODIFICATIONS);
 			childrenFeatures.add(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS);
+			childrenFeatures.add(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS);
+			childrenFeatures.add(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -133,6 +135,8 @@ public class ChangePropagationDueToHardwareChangeItemProvider extends ChangeProp
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_MASTER_MODIFICATIONS:
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_SLAVE_MODIFICATIONS:
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS:
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS:
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -189,6 +193,97 @@ public class ChangePropagationDueToHardwareChangeItemProvider extends ChangeProp
 			(createChildParameter
 				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS,
 				 modificationmarksFactory.eINSTANCE.createModifyBusCable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifyInterface()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifyPowerSupply()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifySignalinterface()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifyPhysicalConnection()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifyComponent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifyPowerSupply()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifyMicroSwitchModule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifyBusBox()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifyBusMaster()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifyBusSlave()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifyBusCable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifySensor()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__SENSOR_MODIFICATIONS ||
+			childFeature == modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS ||
+			childFeature == modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__SIGNALINTERFACE_MODIFICATIONS ||
+			childFeature == modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS ||
+			childFeature == modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__PHYSICAL_CONNECTION_MODIFICATIONS ||
+			childFeature == modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__MICRO_SWITCH_MODULE_MODIFICATIONS ||
+			childFeature == modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_BOX_MODIFICATIONS ||
+			childFeature == modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_MASTER_MODIFICATIONS ||
+			childFeature == modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_SLAVE_MODIFICATIONS ||
+			childFeature == modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**
