@@ -19,7 +19,7 @@ import xPPU.ModuleRepository.Module;
  *
  * @generated
  */
-public abstract class ModifyModuleImpl<T extends Module> extends AbstractModificationImpl<T, EObject> implements ModifyModule<T> {
+public class ModifyModuleImpl<T extends Module> extends AbstractModificationImpl<T, EObject> implements ModifyModule<T> {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

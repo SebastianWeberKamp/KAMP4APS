@@ -215,7 +215,6 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 
 		// Initialize simple dependencies
 		ModificationmarksPackage.eINSTANCE.eClass();
-		PcmPackage.eINSTANCE.eClass();
 		XPPUPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -418,6 +417,24 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getChangePropagationDueToHardwareChange_InterfaceModifications() {
+		return (EReference)changePropagationDueToHardwareChangeEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getChangePropagationDueToHardwareChange_ComponentModifications() {
+		return (EReference)changePropagationDueToHardwareChangeEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getModifyComponent() {
 		return modifyComponentEClass;
 	}
@@ -578,6 +595,8 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		createEReference(changePropagationDueToHardwareChangeEClass, CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_MASTER_MODIFICATIONS);
 		createEReference(changePropagationDueToHardwareChangeEClass, CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_SLAVE_MODIFICATIONS);
 		createEReference(changePropagationDueToHardwareChangeEClass, CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS);
+		createEReference(changePropagationDueToHardwareChangeEClass, CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS);
+		createEReference(changePropagationDueToHardwareChangeEClass, CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS);
 
 		modifyComponentEClass = createEClass(MODIFY_COMPONENT);
 
@@ -634,10 +653,10 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 
 		// Obtain other dependent packages
 		ModificationmarksPackage theModificationmarksPackage = (ModificationmarksPackage)EPackage.Registry.INSTANCE.getEPackage(ModificationmarksPackage.eNS_URI);
+		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
 		ModuleRepositoryPackage theModuleRepositoryPackage = (ModuleRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI);
 		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
-		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
 		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
 
 		// Create type parameters
@@ -758,14 +777,22 @@ public class modificationmarksPackageImpl extends EPackageImpl implements modifi
 		initEReference(getChangePropagationDueToHardwareChange_BusMasterModifications(), this.getModifyBusMaster(), null, "busMasterModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getChangePropagationDueToHardwareChange_BusSlaveModifications(), this.getModifyBusSlave(), null, "busSlaveModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getChangePropagationDueToHardwareChange_BusCableModifications(), this.getModifyBusCable(), null, "busCableModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(this.getModifyInterface());
+		g2 = createEGenericType(theInterfaceRepositoryPackage.getInterface());
+		g1.getETypeArguments().add(g2);
+		initEReference(getChangePropagationDueToHardwareChange_InterfaceModifications(), g1, null, "interfaceModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		g1 = createEGenericType(this.getModifyComponent());
+		g2 = createEGenericType(theComponentRepositoryPackage.getComponent());
+		g1.getETypeArguments().add(g2);
+		initEReference(getChangePropagationDueToHardwareChange_ComponentModifications(), g1, null, "componentModifications", null, 0, -1, ChangePropagationDueToHardwareChange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(modifyComponentEClass, ModifyComponent.class, "ModifyComponent", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(modifyComponentEClass, ModifyComponent.class, "ModifyComponent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(modifyModuleEClass, ModifyModule.class, "ModifyModule", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(modifyModuleEClass, ModifyModule.class, "ModifyModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(modifyStructureEClass, ModifyStructure.class, "ModifyStructure", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(modifyStructureEClass, ModifyStructure.class, "ModifyStructure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(modifyInterfaceEClass, ModifyInterface.class, "ModifyInterface", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(modifyInterfaceEClass, ModifyInterface.class, "ModifyInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(modifyPowerSupplyEClass, ModifyPowerSupply.class, "ModifyPowerSupply", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

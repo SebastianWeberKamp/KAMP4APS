@@ -8,7 +8,7 @@
     testSuiteClass="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests.KAPSModificationmarksAllTests"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
     editPluginID="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.edit" editorPluginID="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor"
-    usedGenPackages="platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.genmodel#//modificationmarks platform:/plugin/org.palladiosimulator.pcm/model/pcm.genmodel#//pcm platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex platform:/plugin/de.uka.ipd.sdq.units/model/Units.genmodel#//units ../../xPPU/model/xPPU.genmodel#//xPPU">
+    usedGenPackages="../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.genmodel#//modificationmarks ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.genmodel#//xPPU">
   <foreignModel>KAPSModificationsmarks.ecore</foreignModel>
   <genPackages prefix="modificationmarks" basePackage="edu.kit.ipd.sdq.kamp4aps.model"
       resource="XMI" disposableProviderFactory="true" ecorePackage="KAPSModificationsmarks.ecore#/">
@@ -19,32 +19,47 @@
     <genClasses ecoreClass="KAPSModificationsmarks.ecore#//KAPSSeedModifications">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//KAPSSeedModifications/busBoxModifications"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//KAPSSeedModifications/sensorModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//KAPSSeedModifications/busMasterModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//KAPSSeedModifications/busSlaveModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//KAPSSeedModifications/microswitchModuleModifications"/>
     </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ChangePropagationDueToHardwareChange">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToHardwareChange/sensorModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToHardwareChange/signalinterfaceModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToHardwareChange/physicalConnectionModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToHardwareChange/microSwitchModuleModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToHardwareChange/busBoxModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToHardwareChange/busMasterModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToHardwareChange/busSlaveModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToHardwareChange/busCableModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToHardwareChange/interfaceModifications"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToHardwareChange/componentModifications"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyComponent">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyComponent/T"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KAPSModificationsmarks.ecore#//ModifyModule">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyModule/T"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KAPSModificationsmarks.ecore#//ModifyStructure">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyStructure/T"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="KAPSModificationsmarks.ecore#//ModifyInterface">
+      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyInterface/T"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyPowerSupply"/>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifySignalinterface"/>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyPhysicalConnection"/>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyMicroSwitchModule">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute KAPSModificationsmarks.ecore#//ModifyMicroSwitchModule/isReplaced"/>
+    </genClasses>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyBusBox"/>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyBusMaster"/>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyBusSlave"/>
+    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyBusCable"/>
     <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifySensor">
-      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifySensor/T"/>
-    </genClasses>
-    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyPlantInterface">
-      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyPlantInterface/T"/>
-    </genClasses>
-    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ChangePropagationDueToSensorChange">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToSensorChange/sensorModifications"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToSensorChange/signalinterfaceModifications"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ChangePropagationDueToSensorChange/physicalConnectionModifications"/>
-    </genClasses>
-    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyEntity">
-      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyEntity/T"/>
-    </genClasses>
-    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyBusBox">
-      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyBusBox/T"/>
-    </genClasses>
-    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyPowerSupply">
-      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyPowerSupply/T"/>
-    </genClasses>
-    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifySignalinterface">
-      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifySignalinterface/T"/>
-    </genClasses>
-    <genClasses ecoreClass="KAPSModificationsmarks.ecore#//ModifyPhysicalConnection">
-      <genTypeParameters ecoreTypeParameter="KAPSModificationsmarks.ecore#//ModifyPhysicalConnection/T"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ModifySensor/modifySignalInterfaces"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAPSModificationsmarks.ecore#//ModifySensor/modifyPhysicalConnections"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

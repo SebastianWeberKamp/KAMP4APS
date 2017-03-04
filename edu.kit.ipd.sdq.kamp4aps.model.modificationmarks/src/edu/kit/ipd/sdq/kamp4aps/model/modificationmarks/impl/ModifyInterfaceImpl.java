@@ -19,7 +19,7 @@ import xPPU.InterfaceRepository.Interface;
  *
  * @generated
  */
-public abstract class ModifyInterfaceImpl<T extends Interface> extends AbstractModificationImpl<T, EObject> implements ModifyInterface<T> {
+public class ModifyInterfaceImpl<T extends Interface> extends AbstractModificationImpl<T, EObject> implements ModifyInterface<T> {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

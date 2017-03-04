@@ -287,13 +287,31 @@ public interface modificationmarksPackage extends EPackage {
 	int CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Interface Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Component Modifications</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 9;
+
+	/**
 	 * The number of structural features of the '<em>Change Propagation Due To Hardware Change</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE_FEATURE_COUNT = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 8;
+	int CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE_FEATURE_COUNT = ModificationmarksPackage.CHANGE_PROPAGATION_STEP_FEATURE_COUNT + 10;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyComponentImpl <em>Modify Component</em>}' class.
@@ -1360,6 +1378,28 @@ public interface modificationmarksPackage extends EPackage {
 	EReference getChangePropagationDueToHardwareChange_BusCableModifications();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getInterfaceModifications <em>Interface Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Interface Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getInterfaceModifications()
+	 * @see #getChangePropagationDueToHardwareChange()
+	 * @generated
+	 */
+	EReference getChangePropagationDueToHardwareChange_InterfaceModifications();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getComponentModifications <em>Component Modifications</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Component Modifications</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getComponentModifications()
+	 * @see #getChangePropagationDueToHardwareChange()
+	 * @generated
+	 */
+	EReference getChangePropagationDueToHardwareChange_ComponentModifications();
+
+	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent <em>Modify Component</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1681,6 +1721,22 @@ public interface modificationmarksPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS = eINSTANCE.getChangePropagationDueToHardwareChange_BusCableModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Interface Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS = eINSTANCE.getChangePropagationDueToHardwareChange_InterfaceModifications();
+
+		/**
+		 * The meta object literal for the '<em><b>Component Modifications</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS = eINSTANCE.getChangePropagationDueToHardwareChange_ComponentModifications();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ModifyComponentImpl <em>Modify Component</em>}' class.

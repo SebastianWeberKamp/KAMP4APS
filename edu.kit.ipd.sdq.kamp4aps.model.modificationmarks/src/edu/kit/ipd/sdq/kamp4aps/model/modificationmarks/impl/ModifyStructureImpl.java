@@ -19,7 +19,7 @@ import xPPU.StructureRepository.Structure;
  *
  * @generated
  */
-public abstract class ModifyStructureImpl<T extends Structure> extends AbstractModificationImpl<T, EObject> implements ModifyStructure<T> {
+public class ModifyStructureImpl<T extends Structure> extends AbstractModificationImpl<T, EObject> implements ModifyStructure<T> {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -15,7 +15,7 @@ import xPPU.ModuleRepository.Module;
  *
  *
  * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyModule()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface ModifyModule<T extends Module> extends AbstractModification<T, EObject> {

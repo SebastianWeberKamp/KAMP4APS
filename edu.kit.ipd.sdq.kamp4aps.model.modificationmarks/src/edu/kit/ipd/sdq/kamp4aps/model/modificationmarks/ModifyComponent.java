@@ -15,7 +15,7 @@ import xPPU.ComponentRepository.Component;
  *
  *
  * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyComponent()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface ModifyComponent<T extends Component> extends AbstractModification<T, EObject> {

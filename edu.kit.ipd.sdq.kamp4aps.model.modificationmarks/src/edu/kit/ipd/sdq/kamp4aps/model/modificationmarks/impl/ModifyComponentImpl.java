@@ -19,7 +19,7 @@ import xPPU.ComponentRepository.Component;
  *
  * @generated
  */
-public abstract class ModifyComponentImpl<T extends Component> extends AbstractModificationImpl<T, EObject> implements ModifyComponent<T> {
+public class ModifyComponentImpl<T extends Component> extends AbstractModificationImpl<T, EObject> implements ModifyComponent<T> {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

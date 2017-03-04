@@ -8,6 +8,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusCable;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPhysicalConnection;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
@@ -19,7 +21,10 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+import xPPU.ComponentRepository.Component;
+import xPPU.InterfaceRepository.Interface;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,6 +42,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ChangePropagationDueToHardwareChangeImpl#getBusMasterModifications <em>Bus Master Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ChangePropagationDueToHardwareChangeImpl#getBusSlaveModifications <em>Bus Slave Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ChangePropagationDueToHardwareChangeImpl#getBusCableModifications <em>Bus Cable Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ChangePropagationDueToHardwareChangeImpl#getInterfaceModifications <em>Interface Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ChangePropagationDueToHardwareChangeImpl#getComponentModifications <em>Component Modifications</em>}</li>
  * </ul>
  *
  * @generated
@@ -121,6 +128,26 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * @ordered
 	 */
 	protected EList<ModifyBusCable> busCableModifications;
+
+	/**
+	 * The cached value of the '{@link #getInterfaceModifications() <em>Interface Modifications</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInterfaceModifications()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ModifyInterface<Interface>> interfaceModifications;
+
+	/**
+	 * The cached value of the '{@link #getComponentModifications() <em>Component Modifications</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getComponentModifications()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ModifyComponent<Component>> componentModifications;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -242,6 +269,30 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ModifyInterface<Interface>> getInterfaceModifications() {
+		if (interfaceModifications == null) {
+			interfaceModifications = new EObjectContainmentEList<ModifyInterface<Interface>>(ModifyInterface.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS);
+		}
+		return interfaceModifications;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<ModifyComponent<Component>> getComponentModifications() {
+		if (componentModifications == null) {
+			componentModifications = new EObjectContainmentEList<ModifyComponent<Component>>(ModifyComponent.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS);
+		}
+		return componentModifications;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -261,6 +312,10 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 				return ((InternalEList<?>)getBusSlaveModifications()).basicRemove(otherEnd, msgs);
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS:
 				return ((InternalEList<?>)getBusCableModifications()).basicRemove(otherEnd, msgs);
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS:
+				return ((InternalEList<?>)getInterfaceModifications()).basicRemove(otherEnd, msgs);
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS:
+				return ((InternalEList<?>)getComponentModifications()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -289,6 +344,10 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 				return getBusSlaveModifications();
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS:
 				return getBusCableModifications();
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS:
+				return getInterfaceModifications();
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS:
+				return getComponentModifications();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -334,6 +393,14 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 				getBusCableModifications().clear();
 				getBusCableModifications().addAll((Collection<? extends ModifyBusCable>)newValue);
 				return;
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS:
+				getInterfaceModifications().clear();
+				getInterfaceModifications().addAll((Collection<? extends ModifyInterface<Interface>>)newValue);
+				return;
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS:
+				getComponentModifications().clear();
+				getComponentModifications().addAll((Collection<? extends ModifyComponent<Component>>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -370,6 +437,12 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS:
 				getBusCableModifications().clear();
 				return;
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS:
+				getInterfaceModifications().clear();
+				return;
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS:
+				getComponentModifications().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -398,6 +471,10 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 				return busSlaveModifications != null && !busSlaveModifications.isEmpty();
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS:
 				return busCableModifications != null && !busCableModifications.isEmpty();
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS:
+				return interfaceModifications != null && !interfaceModifications.isEmpty();
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS:
+				return componentModifications != null && !componentModifications.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

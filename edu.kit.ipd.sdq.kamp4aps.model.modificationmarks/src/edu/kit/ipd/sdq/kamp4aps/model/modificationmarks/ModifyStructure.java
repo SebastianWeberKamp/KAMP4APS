@@ -15,7 +15,7 @@ import xPPU.StructureRepository.Structure;
  *
  *
  * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyStructure()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface ModifyStructure<T extends Structure> extends AbstractModification<T, EObject> {

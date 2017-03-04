@@ -5,6 +5,8 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 import edu.kit.ipd.sdq.amp.model.modificationmarks.ChangePropagationStep;
 
 import org.eclipse.emf.common.util.EList;
+import xPPU.ComponentRepository.Component;
+import xPPU.InterfaceRepository.Interface;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,6 +25,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getBusMasterModifications <em>Bus Master Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getBusSlaveModifications <em>Bus Slave Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getBusCableModifications <em>Bus Cable Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getInterfaceModifications <em>Interface Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getComponentModifications <em>Component Modifications</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange()
@@ -157,5 +161,37 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * @generated
 	 */
 	EList<ModifyBusCable> getBusCableModifications();
+
+	/**
+	 * Returns the value of the '<em><b>Interface Modifications</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface}&lt;xPPU.InterfaceRepository.Interface>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Interface Modifications</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Interface Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_InterfaceModifications()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ModifyInterface<Interface>> getInterfaceModifications();
+
+	/**
+	 * Returns the value of the '<em><b>Component Modifications</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent}&lt;xPPU.ComponentRepository.Component>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Component Modifications</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Component Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_ComponentModifications()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ModifyComponent<Component>> getComponentModifications();
 
 } // ChangePropagationDueToHardwareChange

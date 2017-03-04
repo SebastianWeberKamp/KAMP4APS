@@ -7,6 +7,10 @@ import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.impl.EFactoryImpl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
+import xPPU.ComponentRepository.Component;
+import xPPU.InterfaceRepository.Interface;
+import xPPU.ModuleRepository.Module;
+import xPPU.StructureRepository.Structure;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.*;
 
 /**
@@ -56,6 +60,10 @@ public class modificationmarksFactoryImpl extends EFactoryImpl implements modifi
 			case modificationmarksPackage.KAPS_MODIFICATION_REPOSITORY: return createKAPSModificationRepository();
 			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS: return createKAPSSeedModifications();
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE: return createChangePropagationDueToHardwareChange();
+			case modificationmarksPackage.MODIFY_COMPONENT: return createModifyComponent();
+			case modificationmarksPackage.MODIFY_MODULE: return createModifyModule();
+			case modificationmarksPackage.MODIFY_STRUCTURE: return createModifyStructure();
+			case modificationmarksPackage.MODIFY_INTERFACE: return createModifyInterface();
 			case modificationmarksPackage.MODIFY_POWER_SUPPLY: return createModifyPowerSupply();
 			case modificationmarksPackage.MODIFY_SIGNALINTERFACE: return createModifySignalinterface();
 			case modificationmarksPackage.MODIFY_PHYSICAL_CONNECTION: return createModifyPhysicalConnection();
@@ -108,6 +116,46 @@ public class modificationmarksFactoryImpl extends EFactoryImpl implements modifi
 	public ChangePropagationDueToHardwareChange createChangePropagationDueToHardwareChange() {
 		ChangePropagationDueToHardwareChangeImpl changePropagationDueToHardwareChange = new ChangePropagationDueToHardwareChangeImpl();
 		return changePropagationDueToHardwareChange;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public <T extends Component> ModifyComponent<T> createModifyComponent() {
+		ModifyComponentImpl<T> modifyComponent = new ModifyComponentImpl<T>();
+		return modifyComponent;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public <T extends Module> ModifyModule<T> createModifyModule() {
+		ModifyModuleImpl<T> modifyModule = new ModifyModuleImpl<T>();
+		return modifyModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public <T extends Structure> ModifyStructure<T> createModifyStructure() {
+		ModifyStructureImpl<T> modifyStructure = new ModifyStructureImpl<T>();
+		return modifyStructure;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public <T extends Interface> ModifyInterface<T> createModifyInterface() {
+		ModifyInterfaceImpl<T> modifyInterface = new ModifyInterfaceImpl<T>();
+		return modifyInterface;
 	}
 
 	/**
