@@ -18,8 +18,7 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.palladiosimulator.pcm.core.provider.PalladioComponentModelEditPlugin;
-import xPPU.provider.XPPUEditPlugin;
+import edu.kit.ipd.sdq.kamp4aps.xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the central singleton for the KAPSModificationmarks editor plugin.
@@ -53,12 +52,7 @@ public final class KAPSModificationmarksEditorPlugin extends EMFPlugin {
 	public KAPSModificationmarksEditorPlugin() {
 		super
 			(new ResourceLocator [] {
-				IdentifierEditPlugin.INSTANCE,
 				ModificationmarksEditPlugin.INSTANCE,
-				PalladioComponentModelEditPlugin.INSTANCE,
-				ProbabilityFunctionEditPlugin.INSTANCE,
-				StoexEditPlugin.INSTANCE,
-				UnitsEditPlugin.INSTANCE,
 				XPPUEditPlugin.INSTANCE,
 			});
 	}
