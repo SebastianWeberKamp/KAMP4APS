@@ -166,7 +166,6 @@ public interface DeploymentContextPackage extends EPackage {
 	 */
 	int COMPONENT_CORRELATION_OPERATION_COUNT = 0;
 
-
 	/**
 	 * The meta object id for the '{@link DeploymentContext.impl.VariableMappingImpl <em>Variable Mapping</em>}' class.
 	 * <!-- begin-user-doc -->

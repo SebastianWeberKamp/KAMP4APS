@@ -5,15 +5,17 @@ package DeploymentContext.impl;
 import DeploymentContext.ComponentCorrelation;
 import DeploymentContext.DeploymentContextPackage;
 import DeploymentContext.DeploymentContextRepository;
-
 import DeploymentContext.VariableMapping;
+
 import iec611313Specification.common.pous.programs.ProgramType;
 
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -22,8 +24,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import xPPU.ComponentRepository.Component;
 
 /**

@@ -6,13 +6,14 @@ import DeploymentContext.ComponentCorrelation;
 import DeploymentContext.DeploymentContextFactory;
 import DeploymentContext.DeploymentContextPackage;
 import DeploymentContext.DeploymentContextRepository;
-
 import DeploymentContext.VariableMapping;
+
 import iec611313Specification.common.CommonPackage;
 
 import iec611313Specification.common.pous.programs.ProgramsPackage;
 
 import iec611313Specification.common.variables.VariablesPackage;
+
 import iec611313Specification.configuration.ConfigurationPackage;
 
 import iec611313Specification.dummy.DummyPackage;
@@ -37,6 +38,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
+
 import xPPU.XPPUPackage;
 
 /**
