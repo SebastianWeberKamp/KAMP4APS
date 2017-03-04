@@ -4,7 +4,9 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests;
 
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
 
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 import junit.framework.TestCase;
+import junit.textui.TestRunner;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +14,7 @@ import junit.framework.TestCase;
  * <!-- end-user-doc -->
  * @generated
  */
-public abstract class ModifyComponentTest extends TestCase {
+public class ModifyComponentTest extends TestCase {
 
 	/**
 	 * The fixture for this Modify Component test case.
@@ -21,6 +23,15 @@ public abstract class ModifyComponentTest extends TestCase {
 	 * @generated
 	 */
 	protected ModifyComponent<?> fixture = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static void main(String[] args) {
+		TestRunner.run(ModifyComponentTest.class);
+	}
 
 	/**
 	 * Constructs a new Modify Component test case with the given name.
@@ -50,6 +61,28 @@ public abstract class ModifyComponentTest extends TestCase {
 	 */
 	protected ModifyComponent<?> getFixture() {
 		return fixture;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#setUp()
+	 * @generated
+	 */
+	@Override
+	protected void setUp() throws Exception {
+		setFixture(modificationmarksFactory.eINSTANCE.createModifyComponent());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#tearDown()
+	 * @generated
+	 */
+	@Override
+	protected void tearDown() throws Exception {
+		setFixture(null);
 	}
 
 } //ModifyComponentTest
