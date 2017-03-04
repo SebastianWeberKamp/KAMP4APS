@@ -1,23 +1,22 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EObject;
 
 import edu.kit.ipd.sdq.amp.util.MapUtil;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
 import xPPU.BusComponents.BusBox;
 import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusMaster;
 import xPPU.BusComponents.BusSlave;
 import xPPU.ComponentRepository.Component;
+import xPPU.ComponentRepository.Controller;
 import xPPU.ComponentRepository.PowerSupply;
 import xPPU.ComponentRepository.Sensor;
 import xPPU.Identifier.Identifier;
@@ -51,6 +50,28 @@ public class ArchitectureModelLookup {
 		for(Sensor s : seedSensors){
 			sensors.add(s);
 			results.put((Interface)s.getPhysicalconnection(), sensors);
+		}
+		return results;
+	}
+	
+	public static Map<Component, Set<ModifyInterface<Interface>>> lookUpChangesBasedOnSignalInterfaces(ArchitectureVersion version,
+			Collection<ModifyInterface<Interface>> initialMarkedInterfaces){
+		Map<Component, Set<ModifyInterface<Interface>>> results = new HashMap<Component, Set<ModifyInterface<Interface>>>();
+		for(ModifyInterface<Interface> modifyInterface : initialMarkedInterfaces){
+			for(Component component : version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant()){
+				if(component instanceof Controller){
+					int i = 0;
+				}
+				if(modifyInterface.getAffectedElement() instanceof Interface){
+					for(Interface componentInterface : component.getConnectedInterfaces()){
+						if(componentInterface.getId() == modifyInterface.getAffectedElement().getId()){
+							if(results.get(component) == null)
+								results.put(component, new HashSet<ModifyInterface<Interface>>());
+							results.get(component).add(modifyInterface);
+						}
+					}
+				}
+			}
 		}
 		return results;
 	}

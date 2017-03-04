@@ -28,9 +28,12 @@ public class ChangePropagationAnalysis  extends AbstractKAPSChangePropagationAna
 		calculateAndMarkFromSensorPropagration(version);
 		calculateAndMarkReplacementOfMicroSwitch(version);
 		calculateAndMarkBusBoxChange(version);
+		calculateAndMarkSignalInterfaceChangen(version);
 		
+			
 		// Update
 		addAllChangePropagations(version);
 	}
+
 
 }

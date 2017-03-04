@@ -74,7 +74,7 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 						activity.getElement(), component.getId() , null, activity.getBasicActivity(), "Firmware of Element " + component.getId() +" in ProgramType "+ softwareChangeAffectedParts.get(component).getTypeName()));
 				
 				for(Interface interfaceElement : variableChanges.keySet()){
-						if(component.getInterfaces().contains(interfaceElement)){
+						if(component.getInterfaces().contains(interfaceElement) || component.getConnectedInterfaces().contains(interfaceElement)){
 							activity.addFollowupActivity(new Activity(ActivityType.UPDATE_SOFTWARE, ActivityElementType.PROGRAM_TYPE,
 									activity.getElement(), "Variable: " + variableChanges.get(interfaceElement).getVariableType() + " " + variableChanges.get(interfaceElement).getName(), 
 									null, activity.getBasicActivity(), "Firmware of Element " + interfaceElement.getId() +": Variable "+ variableChanges.get(interfaceElement).getVariableType()
