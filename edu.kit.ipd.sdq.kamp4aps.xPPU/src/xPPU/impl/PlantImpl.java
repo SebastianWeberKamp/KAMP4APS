@@ -13,12 +13,16 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import xPPU.ComponentRepository.ComponentRepository;
+
 import xPPU.Identifier.impl.IdentifierImpl;
+
 import xPPU.InterfaceRepository.InterfaceRepository;
+
 import xPPU.Plant;
 
 import xPPU.StructureRepository.Structure;
@@ -52,6 +56,7 @@ public class PlantImpl extends IdentifierImpl implements Plant {
 	 * @ordered
 	 */
 	protected static final String PLANT_NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getPlantName() <em>Plant Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,6 +66,7 @@ public class PlantImpl extends IdentifierImpl implements Plant {
 	 * @ordered
 	 */
 	protected String plantName = PLANT_NAME_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getStructures() <em>Structures</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -84,6 +84,16 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public InterfaceRepository createInterfaceRepository() {
+		InterfaceRepositoryImpl interfaceRepository = new InterfaceRepositoryImpl();
+		return interfaceRepository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public Screwing createScrewing() {
 		ScrewingImpl screwing = new ScrewingImpl();
 		return screwing;
@@ -247,16 +257,6 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 	public TransportConnection createTransportConnection() {
 		TransportConnectionImpl transportConnection = new TransportConnectionImpl();
 		return transportConnection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public InterfaceRepository createInterfaceRepository() {
-		InterfaceRepositoryImpl interfaceRepository = new InterfaceRepositoryImpl();
-		return interfaceRepository;
 	}
 
 	/**

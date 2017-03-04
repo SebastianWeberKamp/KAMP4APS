@@ -86,6 +86,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int ELECTRONIC_PART__INTERFACES = ComponentRepositoryPackage.COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELECTRONIC_PART__CONNECTED_INTERFACES = ComponentRepositoryPackage.COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Pin</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,6 +157,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SWITCH__INTERFACES = ELECTRONIC_PART__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SWITCH__CONNECTED_INTERFACES = ELECTRONIC_PART__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Pin</b></em>' reference.
@@ -214,6 +232,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int LED__INTERFACES = ELECTRONIC_PART__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LED__CONNECTED_INTERFACES = ELECTRONIC_PART__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Pin</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -276,6 +303,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUTTON__INTERFACES = ELECTRONIC_PART__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__CONNECTED_INTERFACES = ELECTRONIC_PART__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Pin</b></em>' reference.

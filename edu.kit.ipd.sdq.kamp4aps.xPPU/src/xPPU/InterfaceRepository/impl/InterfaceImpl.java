@@ -3,7 +3,9 @@
 package xPPU.InterfaceRepository.impl;
 
 import org.eclipse.emf.ecore.EClass;
+
 import xPPU.Identifier.impl.IdentifierImpl;
+
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 

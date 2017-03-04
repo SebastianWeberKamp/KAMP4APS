@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
@@ -21,6 +22,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import xPPU.ComponentRepository.Component;
 
 import xPPU.Identifier.impl.IdentifierImpl;
+
 import xPPU.ModuleRepository.Module;
 import xPPU.ModuleRepository.ModuleRepositoryPackage;
 

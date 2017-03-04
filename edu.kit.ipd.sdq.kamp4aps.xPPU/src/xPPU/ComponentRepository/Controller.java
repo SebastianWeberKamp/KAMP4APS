@@ -2,8 +2,6 @@
  */
 package xPPU.ComponentRepository;
 
-import xPPU.InterfaceRepository.SignalInterface;
-
 import xPPU.StructureRepository.ControlCabinet;
 
 /**
@@ -15,7 +13,6 @@ import xPPU.StructureRepository.ControlCabinet;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xPPU.ComponentRepository.Controller#getSignalinterface <em>Signalinterface</em>}</li>
  *   <li>{@link xPPU.ComponentRepository.Controller#getPowersupply <em>Powersupply</em>}</li>
  *   <li>{@link xPPU.ComponentRepository.Controller#getControllerOf <em>Controller Of</em>}</li>
  * </ul>
@@ -25,32 +22,6 @@ import xPPU.StructureRepository.ControlCabinet;
  * @generated
  */
 public interface Controller extends Component {
-	/**
-	 * Returns the value of the '<em><b>Signalinterface</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Signalinterface</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Signalinterface</em>' reference.
-	 * @see #setSignalinterface(SignalInterface)
-	 * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getController_Signalinterface()
-	 * @model required="true"
-	 * @generated
-	 */
-	SignalInterface getSignalinterface();
-
-	/**
-	 * Sets the value of the '{@link xPPU.ComponentRepository.Controller#getSignalinterface <em>Signalinterface</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Signalinterface</em>' reference.
-	 * @see #getSignalinterface()
-	 * @generated
-	 */
-	void setSignalinterface(SignalInterface value);
-
 	/**
 	 * Returns the value of the '<em><b>Powersupply</b></em>' reference.
 	 * <!-- begin-user-doc -->

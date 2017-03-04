@@ -13,6 +13,7 @@ import xPPU.BusComponents.*;
 
 import xPPU.ComponentRepository.Cable;
 import xPPU.ComponentRepository.Component;
+
 import xPPU.Identifier.Identifier;
 
 /**
@@ -72,36 +73,52 @@ public class BusComponentsAdapterFactory extends AdapterFactoryImpl {
 	protected BusComponentsSwitch<Adapter> modelSwitch =
 		new BusComponentsSwitch<Adapter>() {
 			@Override
-			public Adapter caseBusCable(BusCable object) {
-				return createBusCableAdapter();
+			public Adapter caseBusBox(BusBox object) {
+				return createBusBoxAdapter();
 			}
 			@Override
 			public Adapter caseBusMaster(BusMaster object) {
 				return createBusMasterAdapter();
 			}
 			@Override
-			public Adapter caseProfibusDPMaster(ProfibusDPMaster object) {
-				return createProfibusDPMasterAdapter();
-			}
-			@Override
 			public Adapter caseBusSlave(BusSlave object) {
 				return createBusSlaveAdapter();
 			}
 			@Override
-			public Adapter caseProfibusDPSlave(ProfibusDPSlave object) {
-				return createProfibusDPSlaveAdapter();
-			}
-			@Override
-			public Adapter caseBusBox(BusBox object) {
-				return createBusBoxAdapter();
+			public Adapter caseBusCable(BusCable object) {
+				return createBusCableAdapter();
 			}
 			@Override
 			public Adapter caseProfibusDPBox(ProfibusDPBox object) {
 				return createProfibusDPBoxAdapter();
 			}
 			@Override
+			public Adapter caseProfibusDPMaster(ProfibusDPMaster object) {
+				return createProfibusDPMasterAdapter();
+			}
+			@Override
+			public Adapter caseProfibusDPSlave(ProfibusDPSlave object) {
+				return createProfibusDPSlaveAdapter();
+			}
+			@Override
 			public Adapter caseProfibusDPCable(ProfibusDPCable object) {
 				return createProfibusDPCableAdapter();
+			}
+			@Override
+			public Adapter caseEtherCATBox(EtherCATBox object) {
+				return createEtherCATBoxAdapter();
+			}
+			@Override
+			public Adapter caseEtherCATMaster(EtherCATMaster object) {
+				return createEtherCATMasterAdapter();
+			}
+			@Override
+			public Adapter caseEtherCATSlave(EtherCATSlave object) {
+				return createEtherCATSlaveAdapter();
+			}
+			@Override
+			public Adapter caseEtherCATCable(EtherCATCable object) {
+				return createEtherCATCableAdapter();
 			}
 			@Override
 			public Adapter caseIdentifier(Identifier object) {
@@ -136,16 +153,16 @@ public class BusComponentsAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.BusCable <em>Bus Cable</em>}'.
+	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.BusBox <em>Bus Box</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see xPPU.BusComponents.BusCable
+	 * @see xPPU.BusComponents.BusBox
 	 * @generated
 	 */
-	public Adapter createBusCableAdapter() {
+	public Adapter createBusBoxAdapter() {
 		return null;
 	}
 
@@ -164,20 +181,6 @@ public class BusComponentsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.ProfibusDPMaster <em>Profibus DP Master</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see xPPU.BusComponents.ProfibusDPMaster
-	 * @generated
-	 */
-	public Adapter createProfibusDPMasterAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.BusSlave <em>Bus Slave</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -192,30 +195,16 @@ public class BusComponentsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.ProfibusDPSlave <em>Profibus DP Slave</em>}'.
+	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.BusCable <em>Bus Cable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see xPPU.BusComponents.ProfibusDPSlave
+	 * @see xPPU.BusComponents.BusCable
 	 * @generated
 	 */
-	public Adapter createProfibusDPSlaveAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.BusBox <em>Bus Box</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see xPPU.BusComponents.BusBox
-	 * @generated
-	 */
-	public Adapter createBusBoxAdapter() {
+	public Adapter createBusCableAdapter() {
 		return null;
 	}
 
@@ -234,6 +223,34 @@ public class BusComponentsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.ProfibusDPMaster <em>Profibus DP Master</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.BusComponents.ProfibusDPMaster
+	 * @generated
+	 */
+	public Adapter createProfibusDPMasterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.ProfibusDPSlave <em>Profibus DP Slave</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.BusComponents.ProfibusDPSlave
+	 * @generated
+	 */
+	public Adapter createProfibusDPSlaveAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.ProfibusDPCable <em>Profibus DP Cable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -244,6 +261,62 @@ public class BusComponentsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createProfibusDPCableAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.EtherCATBox <em>Ether CAT Box</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.BusComponents.EtherCATBox
+	 * @generated
+	 */
+	public Adapter createEtherCATBoxAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.EtherCATMaster <em>Ether CAT Master</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.BusComponents.EtherCATMaster
+	 * @generated
+	 */
+	public Adapter createEtherCATMasterAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.EtherCATSlave <em>Ether CAT Slave</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.BusComponents.EtherCATSlave
+	 * @generated
+	 */
+	public Adapter createEtherCATSlaveAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.BusComponents.EtherCATCable <em>Ether CAT Cable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.BusComponents.EtherCATCable
+	 * @generated
+	 */
+	public Adapter createEtherCATCableAdapter() {
 		return null;
 	}
 

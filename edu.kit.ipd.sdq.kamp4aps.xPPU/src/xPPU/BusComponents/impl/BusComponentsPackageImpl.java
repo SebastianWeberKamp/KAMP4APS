@@ -14,6 +14,10 @@ import xPPU.BusComponents.BusComponentsFactory;
 import xPPU.BusComponents.BusComponentsPackage;
 import xPPU.BusComponents.BusMaster;
 import xPPU.BusComponents.BusSlave;
+import xPPU.BusComponents.EtherCATBox;
+import xPPU.BusComponents.EtherCATCable;
+import xPPU.BusComponents.EtherCATMaster;
+import xPPU.BusComponents.EtherCATSlave;
 import xPPU.BusComponents.ProfibusDPBox;
 import xPPU.BusComponents.ProfibusDPCable;
 import xPPU.BusComponents.ProfibusDPMaster;
@@ -28,7 +32,9 @@ import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 import xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
 import xPPU.Identifier.IdentifierPackage;
+
 import xPPU.Identifier.impl.IdentifierPackageImpl;
+
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
 import xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl;
@@ -61,7 +67,7 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass busCableEClass = null;
+	private EClass busBoxEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -75,13 +81,6 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass profibusDPMasterEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass busSlaveEClass = null;
 
 	/**
@@ -89,14 +88,7 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass profibusDPSlaveEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass busBoxEClass = null;
+	private EClass busCableEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -110,7 +102,49 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass profibusDPMasterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass profibusDPSlaveEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass profibusDPCableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass etherCATBoxEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass etherCATMasterEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass etherCATSlaveEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass etherCATCableEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -204,105 +238,6 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getBusCable() {
-		return busCableEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBusCable_SignalPlug1() {
-		return (EReference)busCableEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBusCable_SignalPlug2() {
-		return (EReference)busCableEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getBusMaster() {
-		return busMasterEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBusMaster_Signalinterfaces() {
-		return (EReference)busMasterEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBusMaster_Signalinterface_controller() {
-		return (EReference)busMasterEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getProfibusDPMaster() {
-		return profibusDPMasterEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getBusSlave() {
-		return busSlaveEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBusSlave_Signalinterface_master() {
-		return (EReference)busSlaveEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBusSlave_Signalinterface_slave() {
-		return (EReference)busSlaveEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getProfibusDPSlave() {
-		return profibusDPSlaveEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getBusBox() {
 		return busBoxEClass;
 	}
@@ -348,6 +283,87 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getBusMaster() {
+		return busMasterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBusMaster_Signalinterfaces() {
+		return (EReference)busMasterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBusMaster_Signalinterface_controller() {
+		return (EReference)busMasterEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBusSlave() {
+		return busSlaveEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBusSlave_Signalinterface_master() {
+		return (EReference)busSlaveEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBusSlave_Signalinterface_slave() {
+		return (EReference)busSlaveEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getBusCable() {
+		return busCableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBusCable_SignalPlug1() {
+		return (EReference)busCableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getBusCable_SignalPlug2() {
+		return (EReference)busCableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getProfibusDPBox() {
 		return profibusDPBoxEClass;
 	}
@@ -357,8 +373,62 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getProfibusDPMaster() {
+		return profibusDPMasterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getProfibusDPSlave() {
+		return profibusDPSlaveEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getProfibusDPCable() {
 		return profibusDPCableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEtherCATBox() {
+		return etherCATBoxEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEtherCATMaster() {
+		return etherCATMasterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEtherCATSlave() {
+		return etherCATSlaveEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getEtherCATCable() {
+		return etherCATCableEClass;
 	}
 
 	/**
@@ -389,31 +459,39 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 		isCreated = true;
 
 		// Create classes and their features
-		busCableEClass = createEClass(BUS_CABLE);
-		createEReference(busCableEClass, BUS_CABLE__SIGNAL_PLUG1);
-		createEReference(busCableEClass, BUS_CABLE__SIGNAL_PLUG2);
-
-		busMasterEClass = createEClass(BUS_MASTER);
-		createEReference(busMasterEClass, BUS_MASTER__SIGNALINTERFACES);
-		createEReference(busMasterEClass, BUS_MASTER__SIGNALINTERFACE_CONTROLLER);
-
-		profibusDPMasterEClass = createEClass(PROFIBUS_DP_MASTER);
-
-		busSlaveEClass = createEClass(BUS_SLAVE);
-		createEReference(busSlaveEClass, BUS_SLAVE__SIGNALINTERFACE_MASTER);
-		createEReference(busSlaveEClass, BUS_SLAVE__SIGNALINTERFACE_SLAVE);
-
-		profibusDPSlaveEClass = createEClass(PROFIBUS_DP_SLAVE);
-
 		busBoxEClass = createEClass(BUS_BOX);
 		createEReference(busBoxEClass, BUS_BOX__SIGNALINTERFACES);
 		createEReference(busBoxEClass, BUS_BOX__SIGNALINTERFACE_MASTER);
 		createEReference(busBoxEClass, BUS_BOX__SIGNALINTERFACE_BOX);
 		createEReference(busBoxEClass, BUS_BOX__POWERSUPPLY);
 
+		busMasterEClass = createEClass(BUS_MASTER);
+		createEReference(busMasterEClass, BUS_MASTER__SIGNALINTERFACES);
+		createEReference(busMasterEClass, BUS_MASTER__SIGNALINTERFACE_CONTROLLER);
+
+		busSlaveEClass = createEClass(BUS_SLAVE);
+		createEReference(busSlaveEClass, BUS_SLAVE__SIGNALINTERFACE_MASTER);
+		createEReference(busSlaveEClass, BUS_SLAVE__SIGNALINTERFACE_SLAVE);
+
+		busCableEClass = createEClass(BUS_CABLE);
+		createEReference(busCableEClass, BUS_CABLE__SIGNAL_PLUG1);
+		createEReference(busCableEClass, BUS_CABLE__SIGNAL_PLUG2);
+
 		profibusDPBoxEClass = createEClass(PROFIBUS_DP_BOX);
 
+		profibusDPMasterEClass = createEClass(PROFIBUS_DP_MASTER);
+
+		profibusDPSlaveEClass = createEClass(PROFIBUS_DP_SLAVE);
+
 		profibusDPCableEClass = createEClass(PROFIBUS_DP_CABLE);
+
+		etherCATBoxEClass = createEClass(ETHER_CAT_BOX);
+
+		etherCATMasterEClass = createEClass(ETHER_CAT_MASTER);
+
+		etherCATSlaveEClass = createEClass(ETHER_CAT_SLAVE);
+
+		etherCATCableEClass = createEClass(ETHER_CAT_CABLE);
 	}
 
 	/**
@@ -448,41 +526,53 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		busCableEClass.getESuperTypes().add(theComponentRepositoryPackage.getCable());
-		busMasterEClass.getESuperTypes().add(theComponentRepositoryPackage.getComponent());
-		profibusDPMasterEClass.getESuperTypes().add(this.getBusMaster());
-		busSlaveEClass.getESuperTypes().add(theComponentRepositoryPackage.getComponent());
-		profibusDPSlaveEClass.getESuperTypes().add(this.getBusSlave());
 		busBoxEClass.getESuperTypes().add(theComponentRepositoryPackage.getComponent());
+		busMasterEClass.getESuperTypes().add(theComponentRepositoryPackage.getComponent());
+		busSlaveEClass.getESuperTypes().add(theComponentRepositoryPackage.getComponent());
+		busCableEClass.getESuperTypes().add(theComponentRepositoryPackage.getCable());
 		profibusDPBoxEClass.getESuperTypes().add(this.getBusBox());
+		profibusDPMasterEClass.getESuperTypes().add(this.getBusMaster());
+		profibusDPSlaveEClass.getESuperTypes().add(this.getBusSlave());
 		profibusDPCableEClass.getESuperTypes().add(this.getBusCable());
+		etherCATBoxEClass.getESuperTypes().add(this.getBusBox());
+		etherCATMasterEClass.getESuperTypes().add(this.getBusMaster());
+		etherCATSlaveEClass.getESuperTypes().add(this.getBusSlave());
+		etherCATCableEClass.getESuperTypes().add(this.getBusCable());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(busCableEClass, BusCable.class, "BusCable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBusCable_SignalPlug1(), theInterfaceRepositoryPackage.getSignalInterface(), null, "SignalPlug1", null, 1, 1, BusCable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBusCable_SignalPlug2(), theInterfaceRepositoryPackage.getSignalInterface(), null, "SignalPlug2", null, 1, 1, BusCable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(busMasterEClass, BusMaster.class, "BusMaster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBusMaster_Signalinterfaces(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterfaces", null, 0, -1, BusMaster.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBusMaster_Signalinterface_controller(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterface_controller", null, 1, 1, BusMaster.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(profibusDPMasterEClass, ProfibusDPMaster.class, "ProfibusDPMaster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(busSlaveEClass, BusSlave.class, "BusSlave", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBusSlave_Signalinterface_master(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterface_master", null, 1, 1, BusSlave.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBusSlave_Signalinterface_slave(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterface_slave", null, 1, 1, BusSlave.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(profibusDPSlaveEClass, ProfibusDPSlave.class, "ProfibusDPSlave", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
 		initEClass(busBoxEClass, BusBox.class, "BusBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getBusBox_Signalinterfaces(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterfaces", null, 0, -1, BusBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBusBox_Signalinterface_master(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterface_master", null, 1, 1, BusBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBusBox_Signalinterface_box(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterface_box", null, 1, 1, BusBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBusBox_Powersupply(), theComponentRepositoryPackage.getPowerSupply(), null, "powersupply", null, 1, 1, BusBox.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(busMasterEClass, BusMaster.class, "BusMaster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBusMaster_Signalinterfaces(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterfaces", null, 0, -1, BusMaster.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBusMaster_Signalinterface_controller(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterface_controller", null, 1, 1, BusMaster.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(busSlaveEClass, BusSlave.class, "BusSlave", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBusSlave_Signalinterface_master(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterface_master", null, 1, 1, BusSlave.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBusSlave_Signalinterface_slave(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterface_slave", null, 1, 1, BusSlave.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(busCableEClass, BusCable.class, "BusCable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getBusCable_SignalPlug1(), theInterfaceRepositoryPackage.getSignalInterface(), null, "SignalPlug1", null, 1, 1, BusCable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBusCable_SignalPlug2(), theInterfaceRepositoryPackage.getSignalInterface(), null, "SignalPlug2", null, 1, 1, BusCable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(profibusDPBoxEClass, ProfibusDPBox.class, "ProfibusDPBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
+		initEClass(profibusDPMasterEClass, ProfibusDPMaster.class, "ProfibusDPMaster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(profibusDPSlaveEClass, ProfibusDPSlave.class, "ProfibusDPSlave", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
 		initEClass(profibusDPCableEClass, ProfibusDPCable.class, "ProfibusDPCable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(etherCATBoxEClass, EtherCATBox.class, "EtherCATBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(etherCATMasterEClass, EtherCATMaster.class, "EtherCATMaster", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(etherCATSlaveEClass, EtherCATSlave.class, "EtherCATSlave", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(etherCATCableEClass, EtherCATCable.class, "EtherCATCable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //BusComponentsPackageImpl

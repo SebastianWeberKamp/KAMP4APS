@@ -22,6 +22,15 @@ public interface InterfaceRepositoryFactory extends EFactory {
 	InterfaceRepositoryFactory eINSTANCE = xPPU.InterfaceRepository.impl.InterfaceRepositoryFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Interface Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Interface Repository</em>'.
+	 * @generated
+	 */
+	InterfaceRepository createInterfaceRepository();
+
+	/**
 	 * Returns a new object of class '<em>Screwing</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -173,15 +182,6 @@ public interface InterfaceRepositoryFactory extends EFactory {
 	 * @generated
 	 */
 	TransportConnection createTransportConnection();
-
-	/**
-	 * Returns a new object of class '<em>Interface Repository</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Interface Repository</em>'.
-	 * @generated
-	 */
-	InterfaceRepository createInterfaceRepository();
 
 	/**
 	 * Returns the package supported by this factory.

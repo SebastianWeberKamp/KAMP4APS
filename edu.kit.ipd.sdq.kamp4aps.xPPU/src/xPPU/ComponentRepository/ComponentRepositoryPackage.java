@@ -9,6 +9,7 @@ import org.eclipse.emf.ecore.EReference;
 import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 
 import xPPU.Identifier.IdentifierPackage;
+
 import xPPU.MechanicalComponents.MechanicalComponentsPackage;
 
 /**
@@ -89,13 +90,22 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int COMPONENT__INTERFACES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__CONNECTED_INTERFACES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int COMPONENT_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -254,6 +264,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int MOTOR__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTOR__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Gearing</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -325,6 +344,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_MOTOR__INTERFACES = MOTOR__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MOTOR__CONNECTED_INTERFACES = MOTOR__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Gearing</b></em>' reference.
@@ -400,6 +428,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int MECHANICAL_ASSEMBLY__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The number of structural features of the '<em>Mechanical Assembly</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -444,6 +481,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int RAMP__INTERFACES = MECHANICAL_ASSEMBLY__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAMP__CONNECTED_INTERFACES = MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Screwing base</b></em>' reference.
@@ -519,6 +565,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int REGULAR_RAMP__INTERFACES = RAMP__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_RAMP__CONNECTED_INTERFACES = RAMP__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Screwing base</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -590,6 +645,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SENSOR__INTERFACES = COMPONENT__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Physicalconnection</b></em>' reference.
@@ -665,6 +729,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int OPTICAL_SENSOR__INTERFACES = SENSOR__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTICAL_SENSOR__CONNECTED_INTERFACES = SENSOR__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Physicalconnection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -736,6 +809,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int INDUCTIVE_SENSOR__INTERFACES = SENSOR__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDUCTIVE_SENSOR__CONNECTED_INTERFACES = SENSOR__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Physicalconnection</b></em>' reference.
@@ -811,6 +893,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PRESENCE_SENSOR__INTERFACES = SENSOR__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESENCE_SENSOR__CONNECTED_INTERFACES = SENSOR__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Physicalconnection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -884,6 +975,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PIPE__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPE__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Plugs</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -939,6 +1039,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PNEUMATIC_PIPE__INTERFACES = PIPE__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_PIPE__CONNECTED_INTERFACES = PIPE__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Plugs</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -992,6 +1101,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPRESSOR__INTERFACES = COMPONENT__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPRESSOR__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Powersupply</b></em>' containment reference.
@@ -1085,6 +1203,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CABLE__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CABLE__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The number of structural features of the '<em>Cable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1131,6 +1258,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int POWER_CABLE__INTERFACES = CABLE__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_CABLE__CONNECTED_INTERFACES = CABLE__CONNECTED_INTERFACES;
+
+	/**
 	 * The number of structural features of the '<em>Power Cable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1175,6 +1311,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int CYLINDER__INTERFACES = COMPONENT__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYLINDER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
@@ -1241,6 +1386,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PROPORTIONAL_CYLINDER__INTERFACES = CYLINDER__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPORTIONAL_CYLINDER__CONNECTED_INTERFACES = CYLINDER__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1303,6 +1457,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int BISTABLE_CYLINDER__INTERFACES = CYLINDER__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BISTABLE_CYLINDER__CONNECTED_INTERFACES = CYLINDER__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
@@ -1369,6 +1532,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int RACK__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RACK__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Screwing to base</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1424,6 +1596,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CORNER__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORNER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The number of structural features of the '<em>Corner</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1468,6 +1649,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int VALVE__INTERFACES = COMPONENT__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALVE__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
@@ -1543,6 +1733,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int REGULAR_VALVE__INTERFACES = VALVE__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_VALVE__CONNECTED_INTERFACES = VALVE__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1616,6 +1815,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int TANK__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TANK__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Watersupply</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1680,6 +1888,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int DISPENSER__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISPENSER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The number of structural features of the '<em>Dispenser</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1724,6 +1941,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOTTLE_SEPERATOR__INTERFACES = COMPONENT__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOTTLE_SEPERATOR__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Signalinterface</b></em>' reference.
@@ -1808,6 +2034,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int SPLITTER__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPLITTER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1863,6 +2098,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int POWER_SUPPLY__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_SUPPLY__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The number of structural features of the '<em>Power Supply</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1907,6 +2151,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int VACUUM_GRIPPER__INTERFACES = COMPONENT__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Mounted To</b></em>' reference.
@@ -2000,6 +2253,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CONVEYOR_BELT__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVEYOR_BELT__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Mounted To</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2073,6 +2335,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int FRAME__INTERFACES = MECHANICAL_ASSEMBLY__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAME__CONNECTED_INTERFACES = MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES;
+
+	/**
 	 * The number of structural features of the '<em>Frame</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2117,6 +2388,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int RUBBER_BAND__INTERFACES = MechanicalComponentsPackage.MECHANICAL_PART__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUBBER_BAND__CONNECTED_INTERFACES = MechanicalComponentsPackage.MECHANICAL_PART__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
@@ -2172,6 +2452,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int PUSHER__INTERFACES = COMPONENT__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUSHER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Components Repository</b></em>' reference.
@@ -2263,6 +2552,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int TURNING_TABLE__INTERFACES = COMPONENT__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_TABLE__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Rack for turningtable</b></em>' containment reference.
@@ -2374,13 +2672,13 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CONTROLLER__INTERFACES = COMPONENT__INTERFACES;
 
 	/**
-	 * The feature id for the '<em><b>Signalinterface</b></em>' reference.
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__SIGNALINTERFACE = COMPONENT_FEATURE_COUNT + 0;
+	int CONTROLLER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Powersupply</b></em>' reference.
@@ -2389,7 +2687,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__POWERSUPPLY = COMPONENT_FEATURE_COUNT + 1;
+	int CONTROLLER__POWERSUPPLY = COMPONENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Controller Of</b></em>' reference.
@@ -2398,7 +2696,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER__CONTROLLER_OF = COMPONENT_FEATURE_COUNT + 2;
+	int CONTROLLER__CONTROLLER_OF = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Controller</em>' class.
@@ -2407,7 +2705,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int CONTROLLER_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 3;
+	int CONTROLLER_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Controller</em>' class.
@@ -2445,6 +2743,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int LOGICAL_WIRING__INTERFACES = COMPONENT__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_WIRING__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Bus Cable</b></em>' containment reference list.
@@ -2502,6 +2809,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int ARM__INTERFACES = MECHANICAL_ASSEMBLY__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARM__CONNECTED_INTERFACES = MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Mounted To</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2557,6 +2873,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int TABLE__INTERFACES = MECHANICAL_ASSEMBLY__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__CONNECTED_INTERFACES = MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES;
+
+	/**
 	 * The number of structural features of the '<em>Table</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2603,6 +2928,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int GRIPPER_PART__INTERFACES = MECHANICAL_ASSEMBLY__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRIPPER_PART__CONNECTED_INTERFACES = MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES;
+
+	/**
 	 * The number of structural features of the '<em>Gripper Part</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2647,6 +2981,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int MICROSWITCH_MODULE__INTERFACES = ElectronicComponentsPackage.SWITCH__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICROSWITCH_MODULE__CONNECTED_INTERFACES = ElectronicComponentsPackage.SWITCH__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Pin</b></em>' reference.
@@ -2722,6 +3065,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int VACUUM_SWITCH__INTERFACES = ElectronicComponentsPackage.SWITCH__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_SWITCH__CONNECTED_INTERFACES = ElectronicComponentsPackage.SWITCH__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Pin</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2784,6 +3136,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int REED_SWITCH__INTERFACES = ElectronicComponentsPackage.SWITCH__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REED_SWITCH__CONNECTED_INTERFACES = ElectronicComponentsPackage.SWITCH__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Pin</b></em>' reference.
@@ -2850,6 +3211,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int POWER_SPLITTER__INTERFACES = SPLITTER__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_SPLITTER__CONNECTED_INTERFACES = SPLITTER__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2912,6 +3282,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int WATER_SPLITTER__INTERFACES = SPLITTER__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WATER_SPLITTER__CONNECTED_INTERFACES = SPLITTER__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
@@ -2978,6 +3357,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PNEUMATIC_SPLITTER__INTERFACES = SPLITTER__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_SPLITTER__CONNECTED_INTERFACES = SPLITTER__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3042,6 +3430,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CYLINDER_PART__INTERFACES = MechanicalComponentsPackage.MECHANICAL_PART__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYLINDER_PART__CONNECTED_INTERFACES = MechanicalComponentsPackage.MECHANICAL_PART__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3095,6 +3492,15 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int MONOSTABLE_CYLINDER__INTERFACES = CYLINDER__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER__CONNECTED_INTERFACES = CYLINDER__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
@@ -3186,7 +3592,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 */
 	int MONOSTABLE_CYLINDER_OPERATION_COUNT = CYLINDER_OPERATION_COUNT + 0;
 
-
 	/**
 	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.ComponentRepositoryImpl <em>Component Repository</em>}' class.
 	 * <!-- begin-user-doc -->
@@ -3254,6 +3659,17 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComponent_Interfaces();
+
+	/**
+	 * Returns the meta object for the reference list '{@link xPPU.ComponentRepository.Component#getConnectedInterfaces <em>Connected Interfaces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Connected Interfaces</em>'.
+	 * @see xPPU.ComponentRepository.Component#getConnectedInterfaces()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_ConnectedInterfaces();
 
 	/**
 	 * Returns the meta object for class '{@link xPPU.ComponentRepository.Panel <em>Panel</em>}'.
@@ -4135,17 +4551,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	EClass getController();
 
 	/**
-	 * Returns the meta object for the reference '{@link xPPU.ComponentRepository.Controller#getSignalinterface <em>Signalinterface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Signalinterface</em>'.
-	 * @see xPPU.ComponentRepository.Controller#getSignalinterface()
-	 * @see #getController()
-	 * @generated
-	 */
-	EReference getController_Signalinterface();
-
-	/**
 	 * Returns the meta object for the reference '{@link xPPU.ComponentRepository.Controller#getPowersupply <em>Powersupply</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4523,6 +4928,14 @@ public interface ComponentRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT__INTERFACES = eINSTANCE.getComponent_Interfaces();
+
+		/**
+		 * The meta object literal for the '<em><b>Connected Interfaces</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__CONNECTED_INTERFACES = eINSTANCE.getComponent_ConnectedInterfaces();
 
 		/**
 		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.PanelImpl <em>Panel</em>}' class.
@@ -5255,14 +5668,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CONTROLLER = eINSTANCE.getController();
-
-		/**
-		 * The meta object literal for the '<em><b>Signalinterface</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CONTROLLER__SIGNALINTERFACE = eINSTANCE.getController_Signalinterface();
 
 		/**
 		 * The meta object literal for the '<em><b>Powersupply</b></em>' reference feature.

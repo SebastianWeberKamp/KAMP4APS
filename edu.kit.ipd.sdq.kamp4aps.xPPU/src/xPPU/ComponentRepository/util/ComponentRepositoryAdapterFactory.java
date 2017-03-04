@@ -13,8 +13,11 @@ import xPPU.ComponentRepository.*;
 
 import xPPU.ElectronicComponents.ElectronicPart;
 import xPPU.ElectronicComponents.Switch;
+
 import xPPU.Identifier.Identifier;
+
 import xPPU.InterfaceRepository.Interface;
+
 import xPPU.MechanicalComponents.MechanicalPart;
 
 /**

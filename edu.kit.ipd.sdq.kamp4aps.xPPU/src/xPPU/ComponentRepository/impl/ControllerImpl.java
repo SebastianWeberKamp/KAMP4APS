@@ -4,18 +4,13 @@ package xPPU.ComponentRepository.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 import xPPU.ComponentRepository.Controller;
 import xPPU.ComponentRepository.PowerSupply;
-
-import xPPU.InterfaceRepository.SignalInterface;
-
 import xPPU.StructureRepository.ControlCabinet;
 import xPPU.StructureRepository.StructureRepositoryPackage;
 
@@ -27,7 +22,6 @@ import xPPU.StructureRepository.StructureRepositoryPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xPPU.ComponentRepository.impl.ControllerImpl#getSignalinterface <em>Signalinterface</em>}</li>
  *   <li>{@link xPPU.ComponentRepository.impl.ControllerImpl#getPowersupply <em>Powersupply</em>}</li>
  *   <li>{@link xPPU.ComponentRepository.impl.ControllerImpl#getControllerOf <em>Controller Of</em>}</li>
  * </ul>
@@ -35,16 +29,6 @@ import xPPU.StructureRepository.StructureRepositoryPackage;
  * @generated
  */
 public class ControllerImpl extends ComponentImpl implements Controller {
-	/**
-	 * The cached value of the '{@link #getSignalinterface() <em>Signalinterface</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSignalinterface()
-	 * @generated
-	 * @ordered
-	 */
-	protected SignalInterface signalinterface;
-
 	/**
 	 * The cached value of the '{@link #getPowersupply() <em>Powersupply</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -82,44 +66,6 @@ public class ControllerImpl extends ComponentImpl implements Controller {
 	@Override
 	protected EClass eStaticClass() {
 		return ComponentRepositoryPackage.Literals.CONTROLLER;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SignalInterface getSignalinterface() {
-		if (signalinterface != null && signalinterface.eIsProxy()) {
-			InternalEObject oldSignalinterface = (InternalEObject)signalinterface;
-			signalinterface = (SignalInterface)eResolveProxy(oldSignalinterface);
-			if (signalinterface != oldSignalinterface) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentRepositoryPackage.CONTROLLER__SIGNALINTERFACE, oldSignalinterface, signalinterface));
-			}
-		}
-		return signalinterface;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SignalInterface basicGetSignalinterface() {
-		return signalinterface;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSignalinterface(SignalInterface newSignalinterface) {
-		SignalInterface oldSignalinterface = signalinterface;
-		signalinterface = newSignalinterface;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.CONTROLLER__SIGNALINTERFACE, oldSignalinterface, signalinterface));
 	}
 
 	/**
@@ -258,9 +204,6 @@ public class ControllerImpl extends ComponentImpl implements Controller {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.CONTROLLER__SIGNALINTERFACE:
-				if (resolve) return getSignalinterface();
-				return basicGetSignalinterface();
 			case ComponentRepositoryPackage.CONTROLLER__POWERSUPPLY:
 				if (resolve) return getPowersupply();
 				return basicGetPowersupply();
@@ -276,12 +219,10 @@ public class ControllerImpl extends ComponentImpl implements Controller {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.CONTROLLER__SIGNALINTERFACE:
-				setSignalinterface((SignalInterface)newValue);
-				return;
 			case ComponentRepositoryPackage.CONTROLLER__POWERSUPPLY:
 				setPowersupply((PowerSupply)newValue);
 				return;
@@ -300,9 +241,6 @@ public class ControllerImpl extends ComponentImpl implements Controller {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.CONTROLLER__SIGNALINTERFACE:
-				setSignalinterface((SignalInterface)null);
-				return;
 			case ComponentRepositoryPackage.CONTROLLER__POWERSUPPLY:
 				setPowersupply((PowerSupply)null);
 				return;
@@ -321,8 +259,6 @@ public class ControllerImpl extends ComponentImpl implements Controller {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.CONTROLLER__SIGNALINTERFACE:
-				return signalinterface != null;
 			case ComponentRepositoryPackage.CONTROLLER__POWERSUPPLY:
 				return powersupply != null;
 			case ComponentRepositoryPackage.CONTROLLER__CONTROLLER_OF:

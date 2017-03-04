@@ -86,6 +86,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int MECHANICAL_PART__INTERFACES = ComponentRepositoryPackage.COMPONENT__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MECHANICAL_PART__CONNECTED_INTERFACES = ComponentRepositoryPackage.COMPONENT__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -139,6 +148,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int PUSHHEAD__INTERFACES = MECHANICAL_PART__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUSHHEAD__CONNECTED_INTERFACES = MECHANICAL_PART__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
@@ -196,6 +214,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int HOUSING__INTERFACES = MECHANICAL_PART__INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOUSING__CONNECTED_INTERFACES = MECHANICAL_PART__CONNECTED_INTERFACES;
+
+	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -249,6 +276,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int RETURN_SPRING__INTERFACES = MECHANICAL_PART__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_SPRING__CONNECTED_INTERFACES = MECHANICAL_PART__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.

@@ -4,18 +4,18 @@ package xPPU.ComponentRepository.impl;
 
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
-
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
 import xPPU.Identifier.impl.IdentifierImpl;
+
 import xPPU.InterfaceRepository.Interface;
 
 /**
@@ -27,6 +27,7 @@ import xPPU.InterfaceRepository.Interface;
  * </p>
  * <ul>
  *   <li>{@link xPPU.ComponentRepository.impl.ComponentImpl#getInterfaces <em>Interfaces</em>}</li>
+ *   <li>{@link xPPU.ComponentRepository.impl.ComponentImpl#getConnectedInterfaces <em>Connected Interfaces</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,6 +42,16 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 	 * @ordered
 	 */
 	protected EList<Interface> interfaces;
+
+	/**
+	 * The cached value of the '{@link #getConnectedInterfaces() <em>Connected Interfaces</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConnectedInterfaces()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Interface> connectedInterfaces;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,6 +89,18 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Interface> getConnectedInterfaces() {
+		if (connectedInterfaces == null) {
+			connectedInterfaces = new EObjectResolvingEList<Interface>(Interface.class, this, ComponentRepositoryPackage.COMPONENT__CONNECTED_INTERFACES);
+		}
+		return connectedInterfaces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -97,6 +120,8 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 		switch (featureID) {
 			case ComponentRepositoryPackage.COMPONENT__INTERFACES:
 				return getInterfaces();
+			case ComponentRepositoryPackage.COMPONENT__CONNECTED_INTERFACES:
+				return getConnectedInterfaces();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -114,6 +139,10 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 				getInterfaces().clear();
 				getInterfaces().addAll((Collection<? extends Interface>)newValue);
 				return;
+			case ComponentRepositoryPackage.COMPONENT__CONNECTED_INTERFACES:
+				getConnectedInterfaces().clear();
+				getConnectedInterfaces().addAll((Collection<? extends Interface>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -129,6 +158,9 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 			case ComponentRepositoryPackage.COMPONENT__INTERFACES:
 				getInterfaces().clear();
 				return;
+			case ComponentRepositoryPackage.COMPONENT__CONNECTED_INTERFACES:
+				getConnectedInterfaces().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -143,6 +175,8 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 		switch (featureID) {
 			case ComponentRepositoryPackage.COMPONENT__INTERFACES:
 				return interfaces != null && !interfaces.isEmpty();
+			case ComponentRepositoryPackage.COMPONENT__CONNECTED_INTERFACES:
+				return connectedInterfaces != null && !connectedInterfaces.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -21,7 +21,9 @@ import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 import xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
 import xPPU.Identifier.IdentifierPackage;
+
 import xPPU.Identifier.impl.IdentifierPackageImpl;
+
 import xPPU.InterfaceRepository.Clamping;
 import xPPU.InterfaceRepository.Gearing;
 import xPPU.InterfaceRepository.Interface;
@@ -67,6 +69,13 @@ import xPPU.impl.XPPUPackageImpl;
  * @generated
  */
 public class InterfaceRepositoryPackageImpl extends EPackageImpl implements InterfaceRepositoryPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass interfaceRepositoryEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -194,13 +203,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	private EClass transportConnectionEClass = null;
 
 	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass interfaceRepositoryEClass = null;
-
-	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -285,6 +287,24 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(InterfaceRepositoryPackage.eNS_URI, theInterfaceRepositoryPackage);
 		return theInterfaceRepositoryPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getInterfaceRepository() {
+		return interfaceRepositoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getInterfaceRepository_AllInterfacesInPlant() {
+		return (EReference)interfaceRepositoryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -528,24 +548,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	 */
 	public EReference getTransportConnection_IntefacePart() {
 		return (EReference)transportConnectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getInterfaceRepository() {
-		return interfaceRepositoryEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getInterfaceRepository_AllInterfacesInPlant() {
-		return (EReference)interfaceRepositoryEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**

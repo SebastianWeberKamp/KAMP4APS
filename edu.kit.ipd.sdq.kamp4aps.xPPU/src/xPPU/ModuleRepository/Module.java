@@ -3,7 +3,9 @@
 package xPPU.ModuleRepository;
 
 import org.eclipse.emf.common.util.EList;
+
 import xPPU.Identifier.Identifier;
+
 import xPPU.StructureRepository.Structure;
 
 /**

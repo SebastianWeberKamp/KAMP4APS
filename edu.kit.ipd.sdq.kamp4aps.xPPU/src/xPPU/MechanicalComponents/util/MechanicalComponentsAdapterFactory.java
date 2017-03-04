@@ -12,6 +12,7 @@ import org.eclipse.emf.ecore.EObject;
 import xPPU.ComponentRepository.Component;
 
 import xPPU.Identifier.Identifier;
+
 import xPPU.MechanicalComponents.*;
 
 /**

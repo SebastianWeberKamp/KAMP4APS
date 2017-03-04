@@ -10,8 +10,11 @@ import org.eclipse.emf.ecore.util.Switch;
 import xPPU.ComponentRepository.*;
 
 import xPPU.ElectronicComponents.ElectronicPart;
+
 import xPPU.Identifier.Identifier;
+
 import xPPU.InterfaceRepository.Interface;
+
 import xPPU.MechanicalComponents.MechanicalPart;
 
 /**
