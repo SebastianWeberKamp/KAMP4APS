@@ -460,9 +460,9 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		initEReference(getConveyor_Belts(), theComponentRepositoryPackage.getConveyorBelt(), theComponentRepositoryPackage.getConveyorBelt_MountedTo(), "belts", null, 0, -1, Conveyor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(craneEClass, Crane.class, "Crane", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getCrane_Arm(), theComponentRepositoryPackage.getArm(), theComponentRepositoryPackage.getArm_MountedTo(), "arm", null, 0, -1, Crane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCrane_MountedOn(), theComponentRepositoryPackage.getTurningTable(), null, "mountedOn", null, 0, -1, Crane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCrane_Vacuumgripper(), theComponentRepositoryPackage.getVacuumGripper(), theComponentRepositoryPackage.getVacuumGripper_MountedTo(), "vacuumgripper", null, 0, -1, Crane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCrane_Arm(), theComponentRepositoryPackage.getArm(), theComponentRepositoryPackage.getArm_MountedTo(), "arm", null, 1, 1, Crane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCrane_MountedOn(), theComponentRepositoryPackage.getTurningTable(), null, "mountedOn", null, 1, 1, Crane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCrane_Vacuumgripper(), theComponentRepositoryPackage.getVacuumGripper(), theComponentRepositoryPackage.getVacuumGripper_MountedTo(), "vacuumgripper", null, 1, 1, Crane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(powerWiringEClass, PowerWiring.class, "PowerWiring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}

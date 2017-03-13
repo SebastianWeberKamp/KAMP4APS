@@ -160,22 +160,13 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCREWING__INTEFACE_PART = INTERFACE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Screwing</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SCREWING_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 1;
+	int SCREWING_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Screwing</em>' class.
@@ -204,15 +195,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCREWING_SPLITTER__ID = SCREWING__ID;
-
-	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCREWING_SPLITTER__INTEFACE_PART = SCREWING__INTEFACE_PART;
 
 	/**
 	 * The number of structural features of the '<em>Screwing Splitter</em>' class.
@@ -252,15 +234,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_MOTOR__ID = SCREWING__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCREWING_MOTOR__INTEFACE_PART = SCREWING__INTEFACE_PART;
-
-	/**
 	 * The number of structural features of the '<em>Screwing Motor</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -296,15 +269,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCREWING_RACK__ID = SCREWING__ID;
-
-	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCREWING_RACK__INTEFACE_PART = SCREWING__INTEFACE_PART;
 
 	/**
 	 * The number of structural features of the '<em>Screwing Rack</em>' class.
@@ -344,15 +308,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_CYLINDER__ID = SCREWING__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCREWING_CYLINDER__INTEFACE_PART = SCREWING__INTEFACE_PART;
-
-	/**
 	 * The number of structural features of the '<em>Screwing Cylinder</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -388,15 +343,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCREWING_FIXTURE__ID = SCREWING__ID;
-
-	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCREWING_FIXTURE__INTEFACE_PART = SCREWING__INTEFACE_PART;
 
 	/**
 	 * The number of structural features of the '<em>Screwing Fixture</em>' class.
@@ -436,15 +382,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_POTENTIOMETER__ID = SCREWING__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SCREWING_POTENTIOMETER__INTEFACE_PART = SCREWING__INTEFACE_PART;
-
-	/**
 	 * The number of structural features of the '<em>Screwing Potentiometer</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -482,22 +419,13 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SUSPENSION__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUSPENSION__INTEFACE_PART = INTERFACE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Suspension</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SUSPENSION_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 1;
+	int SUSPENSION_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Suspension</em>' class.
@@ -526,15 +454,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUSPENSION_RACK__ID = SUSPENSION__ID;
-
-	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUSPENSION_RACK__INTEFACE_PART = SUSPENSION__INTEFACE_PART;
 
 	/**
 	 * The number of structural features of the '<em>Suspension Rack</em>' class.
@@ -574,15 +493,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SUSPENSION_ARM__ID = SUSPENSION__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SUSPENSION_ARM__INTEFACE_PART = SUSPENSION__INTEFACE_PART;
-
-	/**
 	 * The number of structural features of the '<em>Suspension Arm</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -620,22 +530,13 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int GEARING__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GEARING__INTEFACE_PART = INTERFACE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Gearing</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GEARING_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 1;
+	int GEARING_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Gearing</em>' class.
@@ -666,22 +567,13 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int CLAMPING__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CLAMPING__INTEFACE_PART = INTERFACE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Clamping</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLAMPING_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 1;
+	int CLAMPING_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Clamping</em>' class.
@@ -712,22 +604,13 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int PNEUMATIC_SUPPLY__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PNEUMATIC_SUPPLY__INTEFACE_PART = INTERFACE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Pneumatic Supply</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PNEUMATIC_SUPPLY_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 1;
+	int PNEUMATIC_SUPPLY_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Pneumatic Supply</em>' class.
@@ -758,22 +641,13 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SIGNAL_INTERFACE__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SIGNAL_INTERFACE__INTEFACE_PART = INTERFACE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Signal Interface</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SIGNAL_INTERFACE_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 1;
+	int SIGNAL_INTERFACE_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Signal Interface</em>' class.
@@ -804,22 +678,13 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int WATER_SUPPLY__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int WATER_SUPPLY__INTEFACE_PART = INTERFACE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Water Supply</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int WATER_SUPPLY_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 1;
+	int WATER_SUPPLY_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Water Supply</em>' class.
@@ -850,22 +715,13 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int PHYSICAL_CONNECTION__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PHYSICAL_CONNECTION__INTEFACE_PART = INTERFACE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Physical Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PHYSICAL_CONNECTION_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 1;
+	int PHYSICAL_CONNECTION_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Physical Connection</em>' class.
@@ -896,22 +752,13 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int TRANSPORT_CONNECTION__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Inteface Part</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TRANSPORT_CONNECTION__INTEFACE_PART = INTERFACE_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>Transport Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSPORT_CONNECTION_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 1;
+	int TRANSPORT_CONNECTION_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Transport Connection</em>' class.
@@ -963,17 +810,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getScrewing();
-
-	/**
-	 * Returns the meta object for the reference '{@link xPPU.InterfaceRepository.Screwing#getIntefacePart <em>Inteface Part</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Inteface Part</em>'.
-	 * @see xPPU.InterfaceRepository.Screwing#getIntefacePart()
-	 * @see #getScrewing()
-	 * @generated
-	 */
-	EReference getScrewing_IntefacePart();
 
 	/**
 	 * Returns the meta object for class '{@link xPPU.InterfaceRepository.ScrewingSplitter <em>Screwing Splitter</em>}'.
@@ -1046,17 +882,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	EClass getSuspension();
 
 	/**
-	 * Returns the meta object for the reference '{@link xPPU.InterfaceRepository.Suspension#getIntefacePart <em>Inteface Part</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Inteface Part</em>'.
-	 * @see xPPU.InterfaceRepository.Suspension#getIntefacePart()
-	 * @see #getSuspension()
-	 * @generated
-	 */
-	EReference getSuspension_IntefacePart();
-
-	/**
 	 * Returns the meta object for class '{@link xPPU.InterfaceRepository.SuspensionRack <em>Suspension Rack</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1087,17 +912,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	EClass getGearing();
 
 	/**
-	 * Returns the meta object for the reference '{@link xPPU.InterfaceRepository.Gearing#getIntefacePart <em>Inteface Part</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Inteface Part</em>'.
-	 * @see xPPU.InterfaceRepository.Gearing#getIntefacePart()
-	 * @see #getGearing()
-	 * @generated
-	 */
-	EReference getGearing_IntefacePart();
-
-	/**
 	 * Returns the meta object for class '{@link xPPU.InterfaceRepository.Clamping <em>Clamping</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1106,17 +920,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getClamping();
-
-	/**
-	 * Returns the meta object for the reference '{@link xPPU.InterfaceRepository.Clamping#getIntefacePart <em>Inteface Part</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Inteface Part</em>'.
-	 * @see xPPU.InterfaceRepository.Clamping#getIntefacePart()
-	 * @see #getClamping()
-	 * @generated
-	 */
-	EReference getClamping_IntefacePart();
 
 	/**
 	 * Returns the meta object for class '{@link xPPU.InterfaceRepository.PneumaticSupply <em>Pneumatic Supply</em>}'.
@@ -1129,17 +932,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	EClass getPneumaticSupply();
 
 	/**
-	 * Returns the meta object for the reference '{@link xPPU.InterfaceRepository.PneumaticSupply#getIntefacePart <em>Inteface Part</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Inteface Part</em>'.
-	 * @see xPPU.InterfaceRepository.PneumaticSupply#getIntefacePart()
-	 * @see #getPneumaticSupply()
-	 * @generated
-	 */
-	EReference getPneumaticSupply_IntefacePart();
-
-	/**
 	 * Returns the meta object for class '{@link xPPU.InterfaceRepository.SignalInterface <em>Signal Interface</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1148,17 +940,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getSignalInterface();
-
-	/**
-	 * Returns the meta object for the reference '{@link xPPU.InterfaceRepository.SignalInterface#getIntefacePart <em>Inteface Part</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Inteface Part</em>'.
-	 * @see xPPU.InterfaceRepository.SignalInterface#getIntefacePart()
-	 * @see #getSignalInterface()
-	 * @generated
-	 */
-	EReference getSignalInterface_IntefacePart();
 
 	/**
 	 * Returns the meta object for class '{@link xPPU.InterfaceRepository.WaterSupply <em>Water Supply</em>}'.
@@ -1171,17 +952,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	EClass getWaterSupply();
 
 	/**
-	 * Returns the meta object for the reference '{@link xPPU.InterfaceRepository.WaterSupply#getIntefacePart <em>Inteface Part</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Inteface Part</em>'.
-	 * @see xPPU.InterfaceRepository.WaterSupply#getIntefacePart()
-	 * @see #getWaterSupply()
-	 * @generated
-	 */
-	EReference getWaterSupply_IntefacePart();
-
-	/**
 	 * Returns the meta object for class '{@link xPPU.InterfaceRepository.PhysicalConnection <em>Physical Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1192,17 +962,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	EClass getPhysicalConnection();
 
 	/**
-	 * Returns the meta object for the reference '{@link xPPU.InterfaceRepository.PhysicalConnection#getIntefacePart <em>Inteface Part</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Inteface Part</em>'.
-	 * @see xPPU.InterfaceRepository.PhysicalConnection#getIntefacePart()
-	 * @see #getPhysicalConnection()
-	 * @generated
-	 */
-	EReference getPhysicalConnection_IntefacePart();
-
-	/**
 	 * Returns the meta object for class '{@link xPPU.InterfaceRepository.TransportConnection <em>Transport Connection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1211,17 +970,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getTransportConnection();
-
-	/**
-	 * Returns the meta object for the reference '{@link xPPU.InterfaceRepository.TransportConnection#getIntefacePart <em>Inteface Part</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Inteface Part</em>'.
-	 * @see xPPU.InterfaceRepository.TransportConnection#getIntefacePart()
-	 * @see #getTransportConnection()
-	 * @generated
-	 */
-	EReference getTransportConnection_IntefacePart();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1283,14 +1031,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SCREWING = eINSTANCE.getScrewing();
-
-		/**
-		 * The meta object literal for the '<em><b>Inteface Part</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SCREWING__INTEFACE_PART = eINSTANCE.getScrewing_IntefacePart();
 
 		/**
 		 * The meta object literal for the '{@link xPPU.InterfaceRepository.impl.ScrewingSplitterImpl <em>Screwing Splitter</em>}' class.
@@ -1363,14 +1103,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		EClass SUSPENSION = eINSTANCE.getSuspension();
 
 		/**
-		 * The meta object literal for the '<em><b>Inteface Part</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SUSPENSION__INTEFACE_PART = eINSTANCE.getSuspension_IntefacePart();
-
-		/**
 		 * The meta object literal for the '{@link xPPU.InterfaceRepository.impl.SuspensionRackImpl <em>Suspension Rack</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1401,14 +1133,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		EClass GEARING = eINSTANCE.getGearing();
 
 		/**
-		 * The meta object literal for the '<em><b>Inteface Part</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference GEARING__INTEFACE_PART = eINSTANCE.getGearing_IntefacePart();
-
-		/**
 		 * The meta object literal for the '{@link xPPU.InterfaceRepository.impl.ClampingImpl <em>Clamping</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1417,14 +1141,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EClass CLAMPING = eINSTANCE.getClamping();
-
-		/**
-		 * The meta object literal for the '<em><b>Inteface Part</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference CLAMPING__INTEFACE_PART = eINSTANCE.getClamping_IntefacePart();
 
 		/**
 		 * The meta object literal for the '{@link xPPU.InterfaceRepository.impl.PneumaticSupplyImpl <em>Pneumatic Supply</em>}' class.
@@ -1437,14 +1153,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		EClass PNEUMATIC_SUPPLY = eINSTANCE.getPneumaticSupply();
 
 		/**
-		 * The meta object literal for the '<em><b>Inteface Part</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PNEUMATIC_SUPPLY__INTEFACE_PART = eINSTANCE.getPneumaticSupply_IntefacePart();
-
-		/**
 		 * The meta object literal for the '{@link xPPU.InterfaceRepository.impl.SignalInterfaceImpl <em>Signal Interface</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1453,14 +1161,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EClass SIGNAL_INTERFACE = eINSTANCE.getSignalInterface();
-
-		/**
-		 * The meta object literal for the '<em><b>Inteface Part</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference SIGNAL_INTERFACE__INTEFACE_PART = eINSTANCE.getSignalInterface_IntefacePart();
 
 		/**
 		 * The meta object literal for the '{@link xPPU.InterfaceRepository.impl.WaterSupplyImpl <em>Water Supply</em>}' class.
@@ -1473,14 +1173,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		EClass WATER_SUPPLY = eINSTANCE.getWaterSupply();
 
 		/**
-		 * The meta object literal for the '<em><b>Inteface Part</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference WATER_SUPPLY__INTEFACE_PART = eINSTANCE.getWaterSupply_IntefacePart();
-
-		/**
 		 * The meta object literal for the '{@link xPPU.InterfaceRepository.impl.PhysicalConnectionImpl <em>Physical Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1491,14 +1183,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		EClass PHYSICAL_CONNECTION = eINSTANCE.getPhysicalConnection();
 
 		/**
-		 * The meta object literal for the '<em><b>Inteface Part</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference PHYSICAL_CONNECTION__INTEFACE_PART = eINSTANCE.getPhysicalConnection_IntefacePart();
-
-		/**
 		 * The meta object literal for the '{@link xPPU.InterfaceRepository.impl.TransportConnectionImpl <em>Transport Connection</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1507,14 +1191,6 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRANSPORT_CONNECTION = eINSTANCE.getTransportConnection();
-
-		/**
-		 * The meta object literal for the '<em><b>Inteface Part</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TRANSPORT_CONNECTION__INTEFACE_PART = eINSTANCE.getTransportConnection_IntefacePart();
 
 	}
 

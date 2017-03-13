@@ -506,7 +506,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	int CRANE__COMPONENTS = STRUCTURE__COMPONENTS;
 
 	/**
-	 * The feature id for the '<em><b>Arm</b></em>' reference list.
+	 * The feature id for the '<em><b>Arm</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -515,7 +515,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	int CRANE__ARM = STRUCTURE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Mounted On</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Mounted On</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -524,7 +524,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	int CRANE__MOUNTED_ON = STRUCTURE_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Vacuumgripper</b></em>' reference list.
+	 * The feature id for the '<em><b>Vacuumgripper</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -741,10 +741,10 @@ public interface StructureRepositoryPackage extends EPackage {
 	EClass getCrane();
 
 	/**
-	 * Returns the meta object for the reference list '{@link xPPU.StructureRepository.Crane#getArm <em>Arm</em>}'.
+	 * Returns the meta object for the reference '{@link xPPU.StructureRepository.Crane#getArm <em>Arm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Arm</em>'.
+	 * @return the meta object for the reference '<em>Arm</em>'.
 	 * @see xPPU.StructureRepository.Crane#getArm()
 	 * @see #getCrane()
 	 * @generated
@@ -752,10 +752,10 @@ public interface StructureRepositoryPackage extends EPackage {
 	EReference getCrane_Arm();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link xPPU.StructureRepository.Crane#getMountedOn <em>Mounted On</em>}'.
+	 * Returns the meta object for the reference '{@link xPPU.StructureRepository.Crane#getMountedOn <em>Mounted On</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Mounted On</em>'.
+	 * @return the meta object for the reference '<em>Mounted On</em>'.
 	 * @see xPPU.StructureRepository.Crane#getMountedOn()
 	 * @see #getCrane()
 	 * @generated
@@ -763,10 +763,10 @@ public interface StructureRepositoryPackage extends EPackage {
 	EReference getCrane_MountedOn();
 
 	/**
-	 * Returns the meta object for the reference list '{@link xPPU.StructureRepository.Crane#getVacuumgripper <em>Vacuumgripper</em>}'.
+	 * Returns the meta object for the reference '{@link xPPU.StructureRepository.Crane#getVacuumgripper <em>Vacuumgripper</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Vacuumgripper</em>'.
+	 * @return the meta object for the reference '<em>Vacuumgripper</em>'.
 	 * @see xPPU.StructureRepository.Crane#getVacuumgripper()
 	 * @see #getCrane()
 	 * @generated
@@ -917,7 +917,7 @@ public interface StructureRepositoryPackage extends EPackage {
 		EClass CRANE = eINSTANCE.getCrane();
 
 		/**
-		 * The meta object literal for the '<em><b>Arm</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Arm</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -925,7 +925,7 @@ public interface StructureRepositoryPackage extends EPackage {
 		EReference CRANE__ARM = eINSTANCE.getCrane_Arm();
 
 		/**
-		 * The meta object literal for the '<em><b>Mounted On</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Mounted On</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -933,7 +933,7 @@ public interface StructureRepositoryPackage extends EPackage {
 		EReference CRANE__MOUNTED_ON = eINSTANCE.getCrane_MountedOn();
 
 		/**
-		 * The meta object literal for the '<em><b>Vacuumgripper</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Vacuumgripper</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

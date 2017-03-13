@@ -330,15 +330,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getScrewing_IntefacePart() {
-		return (EReference)screwingEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getScrewingSplitter() {
 		return screwingSplitterEClass;
 	}
@@ -402,15 +393,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getSuspension_IntefacePart() {
-		return (EReference)suspensionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSuspensionRack() {
 		return suspensionRackEClass;
 	}
@@ -438,26 +420,8 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getGearing_IntefacePart() {
-		return (EReference)gearingEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getClamping() {
 		return clampingEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getClamping_IntefacePart() {
-		return (EReference)clampingEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -474,26 +438,8 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPneumaticSupply_IntefacePart() {
-		return (EReference)pneumaticSupplyEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getSignalInterface() {
 		return signalInterfaceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getSignalInterface_IntefacePart() {
-		return (EReference)signalInterfaceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -510,15 +456,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getWaterSupply_IntefacePart() {
-		return (EReference)waterSupplyEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPhysicalConnection() {
 		return physicalConnectionEClass;
 	}
@@ -528,26 +465,8 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getPhysicalConnection_IntefacePart() {
-		return (EReference)physicalConnectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getTransportConnection() {
 		return transportConnectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getTransportConnection_IntefacePart() {
-		return (EReference)transportConnectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -584,7 +503,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		interfaceEClass = createEClass(INTERFACE);
 
 		screwingEClass = createEClass(SCREWING);
-		createEReference(screwingEClass, SCREWING__INTEFACE_PART);
 
 		screwingSplitterEClass = createEClass(SCREWING_SPLITTER);
 
@@ -599,32 +517,24 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		screwingPotentiometerEClass = createEClass(SCREWING_POTENTIOMETER);
 
 		suspensionEClass = createEClass(SUSPENSION);
-		createEReference(suspensionEClass, SUSPENSION__INTEFACE_PART);
 
 		suspensionRackEClass = createEClass(SUSPENSION_RACK);
 
 		suspensionArmEClass = createEClass(SUSPENSION_ARM);
 
 		gearingEClass = createEClass(GEARING);
-		createEReference(gearingEClass, GEARING__INTEFACE_PART);
 
 		clampingEClass = createEClass(CLAMPING);
-		createEReference(clampingEClass, CLAMPING__INTEFACE_PART);
 
 		pneumaticSupplyEClass = createEClass(PNEUMATIC_SUPPLY);
-		createEReference(pneumaticSupplyEClass, PNEUMATIC_SUPPLY__INTEFACE_PART);
 
 		signalInterfaceEClass = createEClass(SIGNAL_INTERFACE);
-		createEReference(signalInterfaceEClass, SIGNAL_INTERFACE__INTEFACE_PART);
 
 		waterSupplyEClass = createEClass(WATER_SUPPLY);
-		createEReference(waterSupplyEClass, WATER_SUPPLY__INTEFACE_PART);
 
 		physicalConnectionEClass = createEClass(PHYSICAL_CONNECTION);
-		createEReference(physicalConnectionEClass, PHYSICAL_CONNECTION__INTEFACE_PART);
 
 		transportConnectionEClass = createEClass(TRANSPORT_CONNECTION);
-		createEReference(transportConnectionEClass, TRANSPORT_CONNECTION__INTEFACE_PART);
 	}
 
 	/**
@@ -685,7 +595,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		initEClass(interfaceEClass, Interface.class, "Interface", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(screwingEClass, Screwing.class, "Screwing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getScrewing_IntefacePart(), this.getInterface(), null, "intefacePart", null, 1, 1, Screwing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(screwingSplitterEClass, ScrewingSplitter.class, "ScrewingSplitter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -700,32 +609,24 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		initEClass(screwingPotentiometerEClass, ScrewingPotentiometer.class, "ScrewingPotentiometer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(suspensionEClass, Suspension.class, "Suspension", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSuspension_IntefacePart(), this.getInterface(), null, "intefacePart", null, 1, 1, Suspension.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(suspensionRackEClass, SuspensionRack.class, "SuspensionRack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(suspensionArmEClass, SuspensionArm.class, "SuspensionArm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(gearingEClass, Gearing.class, "Gearing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGearing_IntefacePart(), this.getInterface(), null, "intefacePart", null, 1, 1, Gearing.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(clampingEClass, Clamping.class, "Clamping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getClamping_IntefacePart(), this.getInterface(), null, "intefacePart", null, 1, 1, Clamping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pneumaticSupplyEClass, PneumaticSupply.class, "PneumaticSupply", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPneumaticSupply_IntefacePart(), this.getInterface(), null, "intefacePart", null, 1, 1, PneumaticSupply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(signalInterfaceEClass, SignalInterface.class, "SignalInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getSignalInterface_IntefacePart(), this.getInterface(), null, "intefacePart", null, 1, 1, SignalInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(waterSupplyEClass, WaterSupply.class, "WaterSupply", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getWaterSupply_IntefacePart(), this.getInterface(), null, "intefacePart", null, 1, 1, WaterSupply.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(physicalConnectionEClass, PhysicalConnection.class, "PhysicalConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getPhysicalConnection_IntefacePart(), this.getInterface(), null, "intefacePart", null, 1, 1, PhysicalConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transportConnectionEClass, TransportConnection.class, "TransportConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getTransportConnection_IntefacePart(), this.getInterface(), null, "intefacePart", null, 1, 1, TransportConnection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //InterfaceRepositoryPackageImpl

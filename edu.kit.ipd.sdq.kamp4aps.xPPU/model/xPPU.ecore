@@ -308,11 +308,11 @@
           eType="#//ComponentRepository/ConveyorBelt" containment="true" eOpposite="#//ComponentRepository/ConveyorBelt/mountedTo"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Crane" eSuperTypes="#//StructureRepository/Structure">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="arm" upperBound="-1"
-          eType="#//ComponentRepository/Arm" eOpposite="#//ComponentRepository/Arm/mountedTo"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="mountedOn" upperBound="-1"
-          eType="#//ComponentRepository/TurningTable" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="vacuumgripper" upperBound="-1"
+      <eStructuralFeatures xsi:type="ecore:EReference" name="arm" lowerBound="1" eType="#//ComponentRepository/Arm"
+          eOpposite="#//ComponentRepository/Arm/mountedTo"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mountedOn" lowerBound="1"
+          eType="#//ComponentRepository/TurningTable"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="vacuumgripper" lowerBound="1"
           eType="#//ComponentRepository/VacuumGripper" eOpposite="#//ComponentRepository/VacuumGripper/mountedTo"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="PowerWiring" eSuperTypes="#//StructureRepository/Structure"/>
@@ -365,50 +365,23 @@
           upperBound="-1" eType="#//InterfaceRepository/Interface"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Interface" abstract="true" eSuperTypes="#//Identifier/Identifier"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Screwing" eSuperTypes="#//InterfaceRepository/Interface">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="intefacePart" lowerBound="1"
-          eType="#//InterfaceRepository/Interface"/>
-    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Screwing" eSuperTypes="#//InterfaceRepository/Interface"/>
     <eClassifiers xsi:type="ecore:EClass" name="ScrewingSplitter" eSuperTypes="#//InterfaceRepository/Screwing"/>
     <eClassifiers xsi:type="ecore:EClass" name="ScrewingMotor" eSuperTypes="#//InterfaceRepository/Screwing"/>
     <eClassifiers xsi:type="ecore:EClass" name="ScrewingRack" eSuperTypes="#//InterfaceRepository/Screwing"/>
     <eClassifiers xsi:type="ecore:EClass" name="ScrewingCylinder" eSuperTypes="#//InterfaceRepository/Screwing"/>
     <eClassifiers xsi:type="ecore:EClass" name="ScrewingFixture" eSuperTypes="#//InterfaceRepository/Screwing"/>
     <eClassifiers xsi:type="ecore:EClass" name="ScrewingPotentiometer" eSuperTypes="#//InterfaceRepository/Screwing"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Suspension" eSuperTypes="#//InterfaceRepository/Interface">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="intefacePart" lowerBound="1"
-          eType="#//InterfaceRepository/Interface"/>
-    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Suspension" eSuperTypes="#//InterfaceRepository/Interface"/>
     <eClassifiers xsi:type="ecore:EClass" name="SuspensionRack" eSuperTypes="#//InterfaceRepository/Suspension"/>
     <eClassifiers xsi:type="ecore:EClass" name="SuspensionArm" eSuperTypes="#//InterfaceRepository/Suspension"/>
-    <eClassifiers xsi:type="ecore:EClass" name="Gearing" eSuperTypes="#//InterfaceRepository/Interface">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="intefacePart" lowerBound="1"
-          eType="#//InterfaceRepository/Interface"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Clamping" eSuperTypes="#//InterfaceRepository/Interface">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="intefacePart" lowerBound="1"
-          eType="#//InterfaceRepository/Interface"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="PneumaticSupply" eSuperTypes="#//InterfaceRepository/Interface">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="intefacePart" lowerBound="1"
-          eType="#//InterfaceRepository/Interface"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="SignalInterface" eSuperTypes="#//InterfaceRepository/Interface">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="intefacePart" lowerBound="1"
-          eType="#//InterfaceRepository/Interface"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="WaterSupply" eSuperTypes="#//InterfaceRepository/Interface">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="intefacePart" lowerBound="1"
-          eType="#//InterfaceRepository/Interface"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="PhysicalConnection" eSuperTypes="#//InterfaceRepository/Interface">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="intefacePart" lowerBound="1"
-          eType="#//InterfaceRepository/Interface"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="TransportConnection" eSuperTypes="#//InterfaceRepository/Interface">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="intefacePart" lowerBound="1"
-          eType="#//InterfaceRepository/Interface"/>
-    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Gearing" eSuperTypes="#//InterfaceRepository/Interface"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Clamping" eSuperTypes="#//InterfaceRepository/Interface"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PneumaticSupply" eSuperTypes="#//InterfaceRepository/Interface"/>
+    <eClassifiers xsi:type="ecore:EClass" name="SignalInterface" eSuperTypes="#//InterfaceRepository/Interface"/>
+    <eClassifiers xsi:type="ecore:EClass" name="WaterSupply" eSuperTypes="#//InterfaceRepository/Interface"/>
+    <eClassifiers xsi:type="ecore:EClass" name="PhysicalConnection" eSuperTypes="#//InterfaceRepository/Interface"/>
+    <eClassifiers xsi:type="ecore:EClass" name="TransportConnection" eSuperTypes="#//InterfaceRepository/Interface"/>
   </eSubpackages>
   <eSubpackages name="Identifier" nsURI="edu.kit.ipd.sdq.kaps.xppu.identifier" nsPrefix="Identifier">
     <eClassifiers xsi:type="ecore:EClass" name="Identifier" abstract="true">

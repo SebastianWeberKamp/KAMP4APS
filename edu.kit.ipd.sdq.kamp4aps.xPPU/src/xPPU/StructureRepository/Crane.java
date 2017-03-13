@@ -2,8 +2,6 @@
  */
 package xPPU.StructureRepository;
 
-import org.eclipse.emf.common.util.EList;
-
 import xPPU.ComponentRepository.Arm;
 import xPPU.ComponentRepository.TurningTable;
 import xPPU.ComponentRepository.VacuumGripper;
@@ -28,55 +26,85 @@ import xPPU.ComponentRepository.VacuumGripper;
  */
 public interface Crane extends Structure {
 	/**
-	 * Returns the value of the '<em><b>Arm</b></em>' reference list.
-	 * The list contents are of type {@link xPPU.ComponentRepository.Arm}.
+	 * Returns the value of the '<em><b>Arm</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link xPPU.ComponentRepository.Arm#getMountedTo <em>Mounted To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Arm</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Arm</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Arm</em>' reference list.
+	 * @return the value of the '<em>Arm</em>' reference.
+	 * @see #setArm(Arm)
 	 * @see xPPU.StructureRepository.StructureRepositoryPackage#getCrane_Arm()
 	 * @see xPPU.ComponentRepository.Arm#getMountedTo
-	 * @model opposite="mountedTo"
+	 * @model opposite="mountedTo" required="true"
 	 * @generated
 	 */
-	EList<Arm> getArm();
+	Arm getArm();
 
 	/**
-	 * Returns the value of the '<em><b>Mounted On</b></em>' containment reference list.
-	 * The list contents are of type {@link xPPU.ComponentRepository.TurningTable}.
+	 * Sets the value of the '{@link xPPU.StructureRepository.Crane#getArm <em>Arm</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Arm</em>' reference.
+	 * @see #getArm()
+	 * @generated
+	 */
+	void setArm(Arm value);
+
+	/**
+	 * Returns the value of the '<em><b>Mounted On</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Mounted On</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Mounted On</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Mounted On</em>' containment reference list.
+	 * @return the value of the '<em>Mounted On</em>' reference.
+	 * @see #setMountedOn(TurningTable)
 	 * @see xPPU.StructureRepository.StructureRepositoryPackage#getCrane_MountedOn()
-	 * @model containment="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<TurningTable> getMountedOn();
+	TurningTable getMountedOn();
 
 	/**
-	 * Returns the value of the '<em><b>Vacuumgripper</b></em>' reference list.
-	 * The list contents are of type {@link xPPU.ComponentRepository.VacuumGripper}.
+	 * Sets the value of the '{@link xPPU.StructureRepository.Crane#getMountedOn <em>Mounted On</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Mounted On</em>' reference.
+	 * @see #getMountedOn()
+	 * @generated
+	 */
+	void setMountedOn(TurningTable value);
+
+	/**
+	 * Returns the value of the '<em><b>Vacuumgripper</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link xPPU.ComponentRepository.VacuumGripper#getMountedTo <em>Mounted To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Vacuumgripper</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Vacuumgripper</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Vacuumgripper</em>' reference list.
+	 * @return the value of the '<em>Vacuumgripper</em>' reference.
+	 * @see #setVacuumgripper(VacuumGripper)
 	 * @see xPPU.StructureRepository.StructureRepositoryPackage#getCrane_Vacuumgripper()
 	 * @see xPPU.ComponentRepository.VacuumGripper#getMountedTo
-	 * @model opposite="mountedTo"
+	 * @model opposite="mountedTo" required="true"
 	 * @generated
 	 */
-	EList<VacuumGripper> getVacuumgripper();
+	VacuumGripper getVacuumgripper();
+
+	/**
+	 * Sets the value of the '{@link xPPU.StructureRepository.Crane#getVacuumgripper <em>Vacuumgripper</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Vacuumgripper</em>' reference.
+	 * @see #getVacuumgripper()
+	 * @generated
+	 */
+	void setVacuumgripper(VacuumGripper value);
 
 } // Crane
