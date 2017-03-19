@@ -2,11 +2,10 @@
  */
 package fieldofactivityannotations.provider;
 
-import edu.kit.ipd.sdq.kamp4aps.xPPU.provider.XPPUEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+import xPPU.provider.XppuEditPlugin;
 
 /**
  * This is the central singleton for the Fieldofactivityannotations edit plugin.
@@ -40,7 +39,7 @@ public final class FieldofactivityannotationsEditPlugin extends EMFPlugin {
 	public FieldofactivityannotationsEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     XPPUEditPlugin.INSTANCE,
+		     XppuEditPlugin.INSTANCE,
 		   });
 	}
 
