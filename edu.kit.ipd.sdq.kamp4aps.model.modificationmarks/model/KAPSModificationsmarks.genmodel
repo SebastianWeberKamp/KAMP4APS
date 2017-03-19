@@ -8,7 +8,7 @@
     testSuiteClass="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests.KAPSModificationmarksAllTests"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="6.0" copyrightFields="false"
     editPluginID="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.edit" editorPluginID="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor"
-    usedGenPackages="../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.genmodel#//modificationmarks ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.genmodel#//xPPU">
+    usedGenPackages="../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.genmodel#//modificationmarks ../../xPPU/model/xPPU.genmodel#//xPPU">
   <foreignModel>KAPSModificationsmarks.ecore</foreignModel>
   <genPackages prefix="modificationmarks" basePackage="edu.kit.ipd.sdq.kamp4aps.model"
       resource="XMI" disposableProviderFactory="true" ecorePackage="KAPSModificationsmarks.ecore#/">
