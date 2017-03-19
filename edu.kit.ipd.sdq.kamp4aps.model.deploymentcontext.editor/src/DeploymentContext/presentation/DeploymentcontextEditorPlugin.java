@@ -2,8 +2,6 @@
  */
 package DeploymentContext.presentation;
 
-import edu.kit.ipd.sdq.kamp4aps.xPPU.provider.XPPUEditPlugin;
-
 import iec611313Specification.common.provider.IEC611313EditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
@@ -11,6 +9,7 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+import xPPU.provider.XppuEditPlugin;
 
 /**
  * This is the central singleton for the Deploymentcontext editor plugin.
@@ -45,7 +44,7 @@ public final class DeploymentcontextEditorPlugin extends EMFPlugin {
 		super
 			(new ResourceLocator [] {
 				IEC611313EditPlugin.INSTANCE,
-				XPPUEditPlugin.INSTANCE,
+				XppuEditPlugin.INSTANCE,
 			});
 	}
 
