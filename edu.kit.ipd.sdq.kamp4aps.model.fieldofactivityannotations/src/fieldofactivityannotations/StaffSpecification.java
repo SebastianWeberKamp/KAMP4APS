@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fieldofactivityannotations.StaffSpecification#getParent <em>Parent</em>}</li>
  *   <li>{@link fieldofactivityannotations.StaffSpecification#getPersonList <em>Person List</em>}</li>
  *   <li>{@link fieldofactivityannotations.StaffSpecification#getRoleList <em>Role List</em>}</li>
- *   <li>{@link fieldofactivityannotations.StaffSpecification#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getStaffSpecification()
@@ -107,31 +106,5 @@ public interface StaffSpecification extends EObject {
 	 * @generated
 	 */
 	void setRoleList(RoleList value);
-
-	/**
-	 * Returns the value of the '<em><b>Role</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Role</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Role</em>' reference.
-	 * @see #setRole(Role)
-	 * @see fieldofactivityannotations.FieldofactivityannotationsPackage#getStaffSpecification_Role()
-	 * @model
-	 * @generated
-	 */
-	Role getRole();
-
-	/**
-	 * Sets the value of the '{@link fieldofactivityannotations.StaffSpecification#getRole <em>Role</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Role</em>' reference.
-	 * @see #getRole()
-	 * @generated
-	 */
-	void setRole(Role value);
 
 } // StaffSpecification

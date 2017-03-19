@@ -75,7 +75,6 @@
         eType="#//PersonList" containment="true" eOpposite="#//PersonList/parent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="roleList" lowerBound="1"
         eType="#//RoleList" containment="true" eOpposite="#//RoleList/parent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="role" eType="#//Role"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CalibrationSpecification">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
@@ -89,24 +88,24 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//CalibrationSpecification" eOpposite="#//CalibrationSpecification/calibrationConfig"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="HMIConfiguration">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//HMISpecification" eOpposite="#//HMISpecification/hmiConfig"/>
   </eClassifiers>
@@ -145,7 +144,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="SystemTest" eSuperTypes="#//TestCase">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//TestSpecification" eOpposite="#//TestSpecification/systemTests"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnderTest" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//Plant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="systemUnderTest" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//Plant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Engineer" eSuperTypes="#//Role"/>
   <eClassifiers xsi:type="ecore:EClass" name="Purchaser" eSuperTypes="#//Role"/>
@@ -156,16 +155,16 @@
         eType="#//ECADSpecification" eOpposite="#//ECADSpecification/drawings"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentDrawing" eSuperTypes="#//Drawing">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_component" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModuleDrawing" eSuperTypes="#//Drawing">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_module" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_module" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceDrawing" eSuperTypes="#//Drawing">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_interface" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_interface" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StructureDrawing" eSuperTypes="#//Drawing">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_structure" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="drawn_structure" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="MainteneanceDocumentation" eSuperTypes="#//Documentation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
@@ -198,49 +197,49 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/componentDocumentation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="documentedComponent" lowerBound="1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModuleDocumentationFiles" eSuperTypes="#//DocumentationFiles">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/moduleDocumentation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="documentedModule" lowerBound="1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceDocumentationFiles" eSuperTypes="#//DocumentationFiles">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/interfaceDocumentation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="documentedInterface" lowerBound="1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StructureDocumentationFiles" eSuperTypes="#//DocumentationFiles">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//DocumentationSpecification" eOpposite="#//DocumentationSpecification/structureDocumentation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="documentedStructure" lowerBound="1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StockList" eSuperTypes="#//File"/>
   <eClassifiers xsi:type="ecore:EClass" name="ComponentStockList" eSuperTypes="#//StockList">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//StockSpecification" eOpposite="#//StockSpecification/componentStockList"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InterfaceStockList" eSuperTypes="#//StockList">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//StockSpecification" eOpposite="#//StockSpecification/interfaceStockList"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModuleStockList" eSuperTypes="#//StockList">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//StockSpecification" eOpposite="#//StockSpecification/moduleStockList"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StructureStockList" eSuperTypes="#//StockList">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//StockSpecification" eOpposite="#//StockSpecification/structureStockList"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="structures" upperBound="-1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
+        eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
   </eClassifiers>
 </ecore:EPackage>

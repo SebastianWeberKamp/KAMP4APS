@@ -514,22 +514,13 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	int STAFF_SPECIFICATION__ROLE_LIST = 2;
 
 	/**
-	 * The feature id for the '<em><b>Role</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STAFF_SPECIFICATION__ROLE = 3;
-
-	/**
 	 * The number of structural features of the '<em>Staff Specification</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STAFF_SPECIFICATION_FEATURE_COUNT = 4;
+	int STAFF_SPECIFICATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Staff Specification</em>' class.
@@ -2804,17 +2795,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 	EReference getStaffSpecification_RoleList();
 
 	/**
-	 * Returns the meta object for the reference '{@link fieldofactivityannotations.StaffSpecification#getRole <em>Role</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Role</em>'.
-	 * @see fieldofactivityannotations.StaffSpecification#getRole()
-	 * @see #getStaffSpecification()
-	 * @generated
-	 */
-	EReference getStaffSpecification_Role();
-
-	/**
 	 * Returns the meta object for class '{@link fieldofactivityannotations.CalibrationSpecification <em>Calibration Specification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4122,14 +4102,6 @@ public interface FieldofactivityannotationsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference STAFF_SPECIFICATION__ROLE_LIST = eINSTANCE.getStaffSpecification_RoleList();
-
-		/**
-		 * The meta object literal for the '<em><b>Role</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STAFF_SPECIFICATION__ROLE = eINSTANCE.getStaffSpecification_Role();
 
 		/**
 		 * The meta object literal for the '{@link fieldofactivityannotations.impl.CalibrationSpecificationImpl <em>Calibration Specification</em>}' class.

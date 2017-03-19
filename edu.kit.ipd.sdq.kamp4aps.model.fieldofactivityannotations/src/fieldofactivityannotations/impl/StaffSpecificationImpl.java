@@ -5,7 +5,6 @@ package fieldofactivityannotations.impl;
 import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import fieldofactivityannotations.FieldofactivityannotationsPackage;
 import fieldofactivityannotations.PersonList;
-import fieldofactivityannotations.Role;
 import fieldofactivityannotations.RoleList;
 import fieldofactivityannotations.StaffSpecification;
 
@@ -31,7 +30,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link fieldofactivityannotations.impl.StaffSpecificationImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link fieldofactivityannotations.impl.StaffSpecificationImpl#getPersonList <em>Person List</em>}</li>
  *   <li>{@link fieldofactivityannotations.impl.StaffSpecificationImpl#getRoleList <em>Role List</em>}</li>
- *   <li>{@link fieldofactivityannotations.impl.StaffSpecificationImpl#getRole <em>Role</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,16 +54,6 @@ public class StaffSpecificationImpl extends MinimalEObjectImpl.Container impleme
 	 * @ordered
 	 */
 	protected RoleList roleList;
-
-	/**
-	 * The cached value of the '{@link #getRole() <em>Role</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRole()
-	 * @generated
-	 * @ordered
-	 */
-	protected Role role;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -218,44 +206,6 @@ public class StaffSpecificationImpl extends MinimalEObjectImpl.Container impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Role getRole() {
-		if (role != null && role.eIsProxy()) {
-			InternalEObject oldRole = (InternalEObject)role;
-			role = (Role)eResolveProxy(oldRole);
-			if (role != oldRole) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, FieldofactivityannotationsPackage.STAFF_SPECIFICATION__ROLE, oldRole, role));
-			}
-		}
-		return role;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Role basicGetRole() {
-		return role;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRole(Role newRole) {
-		Role oldRole = role;
-		role = newRole;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, FieldofactivityannotationsPackage.STAFF_SPECIFICATION__ROLE, oldRole, role));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -321,9 +271,6 @@ public class StaffSpecificationImpl extends MinimalEObjectImpl.Container impleme
 				return getPersonList();
 			case FieldofactivityannotationsPackage.STAFF_SPECIFICATION__ROLE_LIST:
 				return getRoleList();
-			case FieldofactivityannotationsPackage.STAFF_SPECIFICATION__ROLE:
-				if (resolve) return getRole();
-				return basicGetRole();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -344,9 +291,6 @@ public class StaffSpecificationImpl extends MinimalEObjectImpl.Container impleme
 				return;
 			case FieldofactivityannotationsPackage.STAFF_SPECIFICATION__ROLE_LIST:
 				setRoleList((RoleList)newValue);
-				return;
-			case FieldofactivityannotationsPackage.STAFF_SPECIFICATION__ROLE:
-				setRole((Role)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -369,9 +313,6 @@ public class StaffSpecificationImpl extends MinimalEObjectImpl.Container impleme
 			case FieldofactivityannotationsPackage.STAFF_SPECIFICATION__ROLE_LIST:
 				setRoleList((RoleList)null);
 				return;
-			case FieldofactivityannotationsPackage.STAFF_SPECIFICATION__ROLE:
-				setRole((Role)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -390,8 +331,6 @@ public class StaffSpecificationImpl extends MinimalEObjectImpl.Container impleme
 				return personList != null;
 			case FieldofactivityannotationsPackage.STAFF_SPECIFICATION__ROLE_LIST:
 				return roleList != null;
-			case FieldofactivityannotationsPackage.STAFF_SPECIFICATION__ROLE:
-				return role != null;
 		}
 		return super.eIsSet(featureID);
 	}

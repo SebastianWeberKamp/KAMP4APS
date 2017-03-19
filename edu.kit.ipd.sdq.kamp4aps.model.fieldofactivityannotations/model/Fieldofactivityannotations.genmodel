@@ -3,7 +3,7 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations/src"
     modelPluginID="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations" modelName="Fieldofactivityannotations"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.kamp4aps.xPPU/model/xPPU.genmodel#//xPPU"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../xPPU/model/xPPU.genmodel#//xPPU"
     operationReflection="true" importOrganizing="true">
   <foreignModel>Fieldofactivityannotations.ecore</foreignModel>
   <genPackages prefix="Fieldofactivityannotations" disposableProviderFactory="true"
@@ -52,7 +52,6 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StaffSpecification/parent"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StaffSpecification/personList"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StaffSpecification/roleList"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//StaffSpecification/role"/>
     </genClasses>
     <genClasses ecoreClass="Fieldofactivityannotations.ecore#//CalibrationSpecification">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//CalibrationSpecification/parent"/>
@@ -91,7 +90,7 @@
     </genClasses>
     <genClasses ecoreClass="Fieldofactivityannotations.ecore#//RoleList">
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//RoleList/parent"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//RoleList/roles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fieldofactivityannotations.ecore#//RoleList/roles"/>
     </genClasses>
     <genClasses image="false" ecoreClass="Fieldofactivityannotations.ecore#//File">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fieldofactivityannotations.ecore#//File/filename"/>

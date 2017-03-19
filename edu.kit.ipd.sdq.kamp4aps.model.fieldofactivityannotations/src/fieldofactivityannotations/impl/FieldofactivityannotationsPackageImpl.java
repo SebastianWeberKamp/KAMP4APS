@@ -760,15 +760,6 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getStaffSpecification_Role() {
-		return (EReference)staffSpecificationEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getCalibrationSpecification() {
 		return calibrationSpecificationEClass;
 	}
@@ -1655,7 +1646,6 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 		createEReference(staffSpecificationEClass, STAFF_SPECIFICATION__PARENT);
 		createEReference(staffSpecificationEClass, STAFF_SPECIFICATION__PERSON_LIST);
 		createEReference(staffSpecificationEClass, STAFF_SPECIFICATION__ROLE_LIST);
-		createEReference(staffSpecificationEClass, STAFF_SPECIFICATION__ROLE);
 
 		calibrationSpecificationEClass = createEClass(CALIBRATION_SPECIFICATION);
 		createEReference(calibrationSpecificationEClass, CALIBRATION_SPECIFICATION__PARENT);
@@ -1886,7 +1876,6 @@ public class FieldofactivityannotationsPackageImpl extends EPackageImpl implemen
 		initEReference(getStaffSpecification_Parent(), this.getFieldOfActivityAnnotationRepository(), this.getFieldOfActivityAnnotationRepository_StaffSpecification(), "parent", null, 1, 1, StaffSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStaffSpecification_PersonList(), this.getPersonList(), this.getPersonList_Parent(), "personList", null, 1, 1, StaffSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStaffSpecification_RoleList(), this.getRoleList(), this.getRoleList_Parent(), "roleList", null, 1, 1, StaffSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStaffSpecification_Role(), this.getRole(), null, "role", null, 0, 1, StaffSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(calibrationSpecificationEClass, CalibrationSpecification.class, "CalibrationSpecification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCalibrationSpecification_Parent(), this.getFieldOfActivityAnnotationRepository(), this.getFieldOfActivityAnnotationRepository_CalibrationSpecification(), "parent", null, 1, 1, CalibrationSpecification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
