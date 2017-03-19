@@ -16,7 +16,7 @@ Require-Bundle: org.eclipse.core.runtime,
  de.uka.ipd.sdq.probfunction;visibility:=reexport,
  de.uka.ipd.sdq.stoex;visibility:=reexport,
  de.uka.ipd.sdq.units;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4aps.xPPU;visibility:=reexport,
+ xPPU;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
