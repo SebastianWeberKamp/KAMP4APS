@@ -74,7 +74,7 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 						activity.getElement(), component.getId() , null, activity.getBasicActivity(), "Firmware of Element " + component.getId() +" in ProgramType "+ softwareChangeAffectedParts.get(component).getTypeName()));
 				
 				for(Interface interfaceElement : variableChanges.keySet()){
-						if(component.getInterfaces().contains(interfaceElement) || component.getConnectedInterfaces().contains(interfaceElement)){
+						if(component.getConnectedInterfaces().contains(interfaceElement) || component.getConnectedInterfaces().contains(interfaceElement)){
 							activity.addFollowupActivity(new Activity(ActivityType.UPDATE_SOFTWARE, ActivityElementType.PROGRAM_TYPE,
 									activity.getElement(), "Variable: " + variableChanges.get(interfaceElement).getVariableType() + " " + variableChanges.get(interfaceElement).getName(), 
 									null, activity.getBasicActivity(), "Firmware of Element " + interfaceElement.getId() +": Variable "+ variableChanges.get(interfaceElement).getVariableType()
@@ -88,12 +88,15 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 	private void deriveCalibrationActivities(ArchitectureVersion baseVersion, ArchitectureVersion targetVersion,
 			List<Activity> baseActivityList) {
 		Map<ActivityElementType, List<? extends EObject>> calibrationAffectingParts = new HashMap<ActivityElementType, List<? extends EObject>>();
+		Activity lastActivity = null;
 		for(Activity activity : baseActivityList){
+			lastActivity = activity;
 			ArchitectureAnnotationLookup.lookUpNumberOfCalibrationChanges(
 					determineRelevantArchitectureVersion(activity, baseVersion, targetVersion), activity,
 					calibrationAffectingParts);
-			addCalibrationChanges(calibrationAffectingParts, activity);
 		}
+		if(lastActivity != null)
+			addCalibrationChanges(calibrationAffectingParts, lastActivity);
 	}
 
 	private void addCalibrationChanges(Map<ActivityElementType, List<? extends EObject>> calibrationAffectingParts,
@@ -443,11 +446,16 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 	}
 
 	private void addTestsForPlants(List<Plant> plantsToTest, Activity lastActivity) {
+		List<String> plantIds = new ArrayList<String>();
+		for(Plant plant : plantsToTest){
+			if(!plantIds.contains(plant.getId()))
+				plantIds.add(plant.getId());
+		}
 		if (lastActivity != null) {
-			for (Plant plant : plantsToTest)
+			for (String plantId : plantIds)
 				lastActivity.addFollowupActivity(new Activity(ActivityType.TEST_EXECUTION, ActivityElementType.TESTCASE,
-						lastActivity.getElement(), plant.getId() + " test ", null, lastActivity.getBasicActivity(),
-						"Test: " + lastActivity.getBasicActivity().getName() + " test (" + plant.getId()
+						lastActivity.getElement(), plantId + " test ", null, lastActivity.getBasicActivity(),
+						"Test: " + lastActivity.getBasicActivity().getName() + " test (" + plantId
 								+ " testcases)."));
 		}
 	}

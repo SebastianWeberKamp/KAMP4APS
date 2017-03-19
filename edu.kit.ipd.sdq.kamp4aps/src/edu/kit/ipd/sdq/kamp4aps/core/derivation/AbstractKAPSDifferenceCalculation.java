@@ -13,6 +13,7 @@ import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.LabelCustomizing;
+import xPPU.Plant;
 import xPPU.Identifier.Identifier;
 
 public abstract class AbstractKAPSDifferenceCalculation<T extends ArchitectureVersion>
@@ -43,6 +44,7 @@ public abstract class AbstractKAPSDifferenceCalculation<T extends ArchitectureVe
 	@Override
 	public List<Activity> deriveWorkplan(T baseVersion, T targetVersion) {
 		List<Activity> activityList = new ArrayList<Activity>();
+		
 		List<Diff> plantDiff = calculateDiffModel(baseVersion.getXPPUPlant(), targetVersion.getXPPUPlant());
 		
 		List<Activity> plantActivities = deriveAddAndRemoveActivities(plantDiff);

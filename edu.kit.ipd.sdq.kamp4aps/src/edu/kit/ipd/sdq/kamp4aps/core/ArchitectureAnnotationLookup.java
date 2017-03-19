@@ -305,6 +305,13 @@ public class ArchitectureAnnotationLookup {
 				if(cc.getComponent() == component)
 					softwareChangeAffectedParts.put(component, cc.getProgram());
 			}
+		} else if (activity.getElement() instanceof Interface){
+			Interface interfaze = (Interface)activity.getElement();
+			for(ComponentCorrelation cc : version.getDeploymentContextRepository().getComponentCorrelation()){
+				if(cc.getComponent().getConnectedInterfaces().contains(interfaze)){
+					softwareChangeAffectedParts.put(cc.getComponent(), cc.getProgram());
+				}
+			}
 		}
 		return softwareChangeAffectedParts;
 	}
@@ -322,7 +329,16 @@ public class ArchitectureAnnotationLookup {
 					}
 				}
 			}
-			
+		} else if (activity.getElement() instanceof Interface){
+			Interface interfaze = (Interface)activity.getElement();
+			for(ComponentCorrelation cc : version.getDeploymentContextRepository().getComponentCorrelation()){
+				if(cc.getComponent().getConnectedInterfaces().contains(interfaze)){
+					List<VariableMapping> mappings = cc.getVariableMapping();
+					for(VariableMapping mapping : mappings){
+						variableChanges.put(mapping.getInterfaceDeclaration(), mapping.getProgramVariable());
+					}
+				}
+			}
 		}
 		return variableChanges;
 	}

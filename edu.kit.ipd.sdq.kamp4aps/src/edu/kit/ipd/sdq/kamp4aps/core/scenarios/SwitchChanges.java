@@ -38,7 +38,7 @@ public class SwitchChanges {
 			MicroswitchModule microswitchModule, ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
 		
 		PhysicalConnection physicalConnectionSwitch = microswitchModule.getPhysicalconnection();
-		List<Interface> interfaces = microswitchModule.getInterfaces();
+		List<Interface> interfaces = microswitchModule.getConnectedInterfaces();
 		Collection<MicroswitchModule> initialMarkedMicroswitches = getInitialMarkedMicroswitchModules();
 		
 		ModifyMicroSwitchModule modifyMicroSwitchModule = modificationmarksFactory.eINSTANCE
