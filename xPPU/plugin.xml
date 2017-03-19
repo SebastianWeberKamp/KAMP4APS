@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xppu -->
+      <package
+            uri="edu.kit.ipd.sdq.kaps.xppu"
+            class="xPPU.XPPUPackage"
+            genModel="model/xPPU.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xppu -->
+      <package
+            uri="edu.kit.ipd.sdq.kaps.xppu.componentrepository"
+            class="xPPU.ComponentRepository.ComponentRepositoryPackage"
+            genModel="model/xPPU.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xppu -->
+      <package
+            uri="edu.kit.ipd.sdq.kaps.xppu.buscomponents"
+            class="xPPU.BusComponents.BusComponentsPackage"
+            genModel="model/xPPU.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xppu -->
+      <package
+            uri="edu.kit.ipd.sdq.kaps.xppu.electroniccomponents"
+            class="xPPU.ElectronicComponents.ElectronicComponentsPackage"
+            genModel="model/xPPU.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xppu -->
+      <package
+            uri="edu.kit.ipd.sdq.kaps.xppu.mechanicalcomponents"
+            class="xPPU.MechanicalComponents.MechanicalComponentsPackage"
+            genModel="model/xPPU.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xppu -->
+      <package
+            uri="edu.kit.ipd.sdq.kaps.xppu.structurerepository"
+            class="xPPU.StructureRepository.StructureRepositoryPackage"
+            genModel="model/xPPU.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xppu -->
+      <package
+            uri="edu.kit.ipd.sdq.kaps.xppu.modulerepository"
+            class="xPPU.ModuleRepository.ModuleRepositoryPackage"
+            genModel="model/xPPU.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xppu -->
+      <package
+            uri="edu.kit.ipd.sdq.kaps.xppu.interfacerepository"
+            class="xPPU.InterfaceRepository.InterfaceRepositoryPackage"
+            genModel="model/xPPU.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated xppu -->
+      <package
+            uri="edu.kit.ipd.sdq.kaps.xppu.identifier"
+            class="xPPU.Identifier.IdentifierPackage"
+            genModel="model/xPPU.genmodel"/>
+   </extension>
+
+</plugin>
