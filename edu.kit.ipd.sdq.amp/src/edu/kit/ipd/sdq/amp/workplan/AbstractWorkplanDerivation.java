@@ -68,6 +68,9 @@ public abstract class AbstractWorkplanDerivation<T extends AbstractArchitectureV
 		for (Diff diffElement : diff) {
 			this.checkForDifferencesAndAddToWorkplan(diffElement, workplan);			
 		}
+		for(Activity a : workplan){
+			
+		}
 		return workplan;
 	}
 
