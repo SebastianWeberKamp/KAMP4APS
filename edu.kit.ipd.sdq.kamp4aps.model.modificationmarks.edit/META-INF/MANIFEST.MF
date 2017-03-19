@@ -24,6 +24,6 @@ Require-Bundle: org.eclipse.core.runtime,
  de.uka.ipd.sdq.stoex.edit;visibility:=reexport,
  de.uka.ipd.sdq.units;visibility:=reexport,
  de.uka.ipd.sdq.units.edit;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4aps.xPPU;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4aps.xPPU.edit;visibility:=reexport
+ xPPU;visibility:=reexport,
+ xPPU.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

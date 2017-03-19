@@ -2,22 +2,10 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
-import de.uka.ipd.sdq.identifier.provider.IdentifierEditPlugin;
-
-import de.uka.ipd.sdq.probfunction.provider.ProbabilityFunctionEditPlugin;
-
-import de.uka.ipd.sdq.stoex.provider.StoexEditPlugin;
-
-import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
-
 import edu.kit.ipd.sdq.amp.model.modificationmarks.provider.ModificationmarksEditPlugin;
-
 import org.eclipse.emf.common.EMFPlugin;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
-import org.palladiosimulator.pcm.core.provider.PalladioComponentModelEditPlugin;
-import edu.kit.ipd.sdq.kamp4aps.xPPU.provider.XPPUEditPlugin;
+import xPPU.provider.XppuEditPlugin;
 
 /**
  * This is the central singleton for the KAPSModificationmarks edit plugin.
@@ -52,7 +40,7 @@ public final class KAPSModificationmarksEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     ModificationmarksEditPlugin.INSTANCE,
-		     XPPUEditPlugin.INSTANCE,
+		     XppuEditPlugin.INSTANCE,
 		   });
 	}
 
