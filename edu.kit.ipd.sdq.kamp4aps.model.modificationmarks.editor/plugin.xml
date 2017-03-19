@@ -9,7 +9,7 @@
    <extension point="org.eclipse.ui.newWizards">
       <category
             id="edu.kit.ipd.sdq.kaps.wizard.category"
-            name="%_UI_Wizard_category"/>
+            name="KAMP4aPS Models"/>
       <wizard
             id="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.modificationmarksModelWizardID"
             name="%_UI_modificationmarksModelWizard_label"
