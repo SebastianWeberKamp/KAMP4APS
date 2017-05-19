@@ -2,9 +2,10 @@
  */
 package xPPU.StructureRepository;
 
-import xPPU.ComponentRepository.Arm;
 import xPPU.ComponentRepository.TurningTable;
 import xPPU.ComponentRepository.VacuumGripper;
+
+import xPPU.MechanicalComponents.Arm;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,7 +28,7 @@ import xPPU.ComponentRepository.VacuumGripper;
 public interface Crane extends Structure {
 	/**
 	 * Returns the value of the '<em><b>Arm</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link xPPU.ComponentRepository.Arm#getMountedTo <em>Mounted To</em>}'.
+	 * It is bidirectional and its opposite is '{@link xPPU.MechanicalComponents.Arm#getMountedTo <em>Mounted To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Arm</em>' reference isn't clear,
@@ -37,7 +38,7 @@ public interface Crane extends Structure {
 	 * @return the value of the '<em>Arm</em>' reference.
 	 * @see #setArm(Arm)
 	 * @see xPPU.StructureRepository.StructureRepositoryPackage#getCrane_Arm()
-	 * @see xPPU.ComponentRepository.Arm#getMountedTo
+	 * @see xPPU.MechanicalComponents.Arm#getMountedTo
 	 * @model opposite="mountedTo" required="true"
 	 * @generated
 	 */
@@ -55,6 +56,7 @@ public interface Crane extends Structure {
 
 	/**
 	 * Returns the value of the '<em><b>Mounted On</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link xPPU.ComponentRepository.TurningTable#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Mounted On</em>' reference isn't clear,
@@ -64,7 +66,8 @@ public interface Crane extends Structure {
 	 * @return the value of the '<em>Mounted On</em>' reference.
 	 * @see #setMountedOn(TurningTable)
 	 * @see xPPU.StructureRepository.StructureRepositoryPackage#getCrane_MountedOn()
-	 * @model required="true"
+	 * @see xPPU.ComponentRepository.TurningTable#getParent
+	 * @model opposite="parent" required="true"
 	 * @generated
 	 */
 	TurningTable getMountedOn();

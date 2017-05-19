@@ -2,6 +2,7 @@
  */
 package xPPU.ComponentRepository;
 
+import xPPU.MechanicalComponents.Ramp;
 
 /**
  * <!-- begin-user-doc -->

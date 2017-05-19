@@ -555,8 +555,8 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 		initEReference(getBusSlave_Signalinterface_slave(), theInterfaceRepositoryPackage.getSignalInterface(), null, "signalinterface_slave", null, 1, 1, BusSlave.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(busCableEClass, BusCable.class, "BusCable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBusCable_SignalPlug1(), theInterfaceRepositoryPackage.getSignalInterface(), null, "SignalPlug1", null, 1, 1, BusCable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getBusCable_SignalPlug2(), theInterfaceRepositoryPackage.getSignalInterface(), null, "SignalPlug2", null, 1, 1, BusCable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBusCable_SignalPlug1(), theInterfaceRepositoryPackage.getSignalInterface(), null, "SignalPlug1", null, 0, 1, BusCable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBusCable_SignalPlug2(), theInterfaceRepositoryPackage.getSignalInterface(), null, "SignalPlug2", null, 0, 1, BusCable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(profibusDPBoxEClass, ProfibusDPBox.class, "ProfibusDPBox", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

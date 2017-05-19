@@ -3,6 +3,7 @@
 package xPPU.BusComponents.impl;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -32,7 +33,7 @@ import xPPU.InterfaceRepository.SignalInterface;
  */
 public class BusCableImpl extends CableImpl implements BusCable {
 	/**
-	 * The cached value of the '{@link #getSignalPlug1() <em>Signal Plug1</em>}' reference.
+	 * The cached value of the '{@link #getSignalPlug1() <em>Signal Plug1</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSignalPlug1()
@@ -42,7 +43,7 @@ public class BusCableImpl extends CableImpl implements BusCable {
 	protected SignalInterface signalPlug1;
 
 	/**
-	 * The cached value of the '{@link #getSignalPlug2() <em>Signal Plug2</em>}' reference.
+	 * The cached value of the '{@link #getSignalPlug2() <em>Signal Plug2</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSignalPlug2()
@@ -76,14 +77,6 @@ public class BusCableImpl extends CableImpl implements BusCable {
 	 * @generated
 	 */
 	public SignalInterface getSignalPlug1() {
-		if (signalPlug1 != null && signalPlug1.eIsProxy()) {
-			InternalEObject oldSignalPlug1 = (InternalEObject)signalPlug1;
-			signalPlug1 = (SignalInterface)eResolveProxy(oldSignalPlug1);
-			if (signalPlug1 != oldSignalPlug1) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG1, oldSignalPlug1, signalPlug1));
-			}
-		}
 		return signalPlug1;
 	}
 
@@ -92,8 +85,14 @@ public class BusCableImpl extends CableImpl implements BusCable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SignalInterface basicGetSignalPlug1() {
-		return signalPlug1;
+	public NotificationChain basicSetSignalPlug1(SignalInterface newSignalPlug1, NotificationChain msgs) {
+		SignalInterface oldSignalPlug1 = signalPlug1;
+		signalPlug1 = newSignalPlug1;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG1, oldSignalPlug1, newSignalPlug1);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -102,10 +101,17 @@ public class BusCableImpl extends CableImpl implements BusCable {
 	 * @generated
 	 */
 	public void setSignalPlug1(SignalInterface newSignalPlug1) {
-		SignalInterface oldSignalPlug1 = signalPlug1;
-		signalPlug1 = newSignalPlug1;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG1, oldSignalPlug1, signalPlug1));
+		if (newSignalPlug1 != signalPlug1) {
+			NotificationChain msgs = null;
+			if (signalPlug1 != null)
+				msgs = ((InternalEObject)signalPlug1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG1, null, msgs);
+			if (newSignalPlug1 != null)
+				msgs = ((InternalEObject)newSignalPlug1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG1, null, msgs);
+			msgs = basicSetSignalPlug1(newSignalPlug1, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG1, newSignalPlug1, newSignalPlug1));
 	}
 
 	/**
@@ -114,14 +120,6 @@ public class BusCableImpl extends CableImpl implements BusCable {
 	 * @generated
 	 */
 	public SignalInterface getSignalPlug2() {
-		if (signalPlug2 != null && signalPlug2.eIsProxy()) {
-			InternalEObject oldSignalPlug2 = (InternalEObject)signalPlug2;
-			signalPlug2 = (SignalInterface)eResolveProxy(oldSignalPlug2);
-			if (signalPlug2 != oldSignalPlug2) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG2, oldSignalPlug2, signalPlug2));
-			}
-		}
 		return signalPlug2;
 	}
 
@@ -130,8 +128,14 @@ public class BusCableImpl extends CableImpl implements BusCable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public SignalInterface basicGetSignalPlug2() {
-		return signalPlug2;
+	public NotificationChain basicSetSignalPlug2(SignalInterface newSignalPlug2, NotificationChain msgs) {
+		SignalInterface oldSignalPlug2 = signalPlug2;
+		signalPlug2 = newSignalPlug2;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG2, oldSignalPlug2, newSignalPlug2);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -140,10 +144,33 @@ public class BusCableImpl extends CableImpl implements BusCable {
 	 * @generated
 	 */
 	public void setSignalPlug2(SignalInterface newSignalPlug2) {
-		SignalInterface oldSignalPlug2 = signalPlug2;
-		signalPlug2 = newSignalPlug2;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG2, oldSignalPlug2, signalPlug2));
+		if (newSignalPlug2 != signalPlug2) {
+			NotificationChain msgs = null;
+			if (signalPlug2 != null)
+				msgs = ((InternalEObject)signalPlug2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG2, null, msgs);
+			if (newSignalPlug2 != null)
+				msgs = ((InternalEObject)newSignalPlug2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG2, null, msgs);
+			msgs = basicSetSignalPlug2(newSignalPlug2, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG2, newSignalPlug2, newSignalPlug2));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG1:
+				return basicSetSignalPlug1(null, msgs);
+			case BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG2:
+				return basicSetSignalPlug2(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -155,11 +182,9 @@ public class BusCableImpl extends CableImpl implements BusCable {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG1:
-				if (resolve) return getSignalPlug1();
-				return basicGetSignalPlug1();
+				return getSignalPlug1();
 			case BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG2:
-				if (resolve) return getSignalPlug2();
-				return basicGetSignalPlug2();
+				return getSignalPlug2();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

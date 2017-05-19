@@ -1,6 +1,8 @@
 /**
  */
-package xPPU.ComponentRepository;
+package xPPU.MechanicalComponents;
+
+import xPPU.ComponentRepository.MechanicalAssembly;
 
 import xPPU.StructureRepository.Crane;
 
@@ -13,10 +15,10 @@ import xPPU.StructureRepository.Crane;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xPPU.ComponentRepository.Arm#getMountedTo <em>Mounted To</em>}</li>
+ *   <li>{@link xPPU.MechanicalComponents.Arm#getMountedTo <em>Mounted To</em>}</li>
  * </ul>
  *
- * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getArm()
+ * @see xPPU.MechanicalComponents.MechanicalComponentsPackage#getArm()
  * @model
  * @generated
  */
@@ -32,7 +34,7 @@ public interface Arm extends MechanicalAssembly {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Mounted To</em>' reference.
 	 * @see #setMountedTo(Crane)
-	 * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getArm_MountedTo()
+	 * @see xPPU.MechanicalComponents.MechanicalComponentsPackage#getArm_MountedTo()
 	 * @see xPPU.StructureRepository.Crane#getArm
 	 * @model opposite="arm" required="true"
 	 * @generated
@@ -40,7 +42,7 @@ public interface Arm extends MechanicalAssembly {
 	Crane getMountedTo();
 
 	/**
-	 * Sets the value of the '{@link xPPU.ComponentRepository.Arm#getMountedTo <em>Mounted To</em>}' reference.
+	 * Sets the value of the '{@link xPPU.MechanicalComponents.Arm#getMountedTo <em>Mounted To</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Mounted To</em>' reference.

@@ -1,6 +1,8 @@
 /**
  */
-package xPPU.ComponentRepository;
+package xPPU.MechanicalComponents;
+
+import xPPU.ComponentRepository.MechanicalAssembly;
 
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.Screwing;
@@ -14,12 +16,12 @@ import xPPU.InterfaceRepository.Screwing;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xPPU.ComponentRepository.Ramp#getScrewing_base <em>Screwing base</em>}</li>
- *   <li>{@link xPPU.ComponentRepository.Ramp#getScrewing_component <em>Screwing component</em>}</li>
- *   <li>{@link xPPU.ComponentRepository.Ramp#getPhysicalconnection <em>Physicalconnection</em>}</li>
+ *   <li>{@link xPPU.MechanicalComponents.Ramp#getScrewing_base <em>Screwing base</em>}</li>
+ *   <li>{@link xPPU.MechanicalComponents.Ramp#getScrewing_component <em>Screwing component</em>}</li>
+ *   <li>{@link xPPU.MechanicalComponents.Ramp#getPhysicalconnection <em>Physicalconnection</em>}</li>
  * </ul>
  *
- * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getRamp()
+ * @see xPPU.MechanicalComponents.MechanicalComponentsPackage#getRamp()
  * @model abstract="true"
  * @generated
  */
@@ -34,14 +36,14 @@ public interface Ramp extends MechanicalAssembly {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Screwing base</em>' reference.
 	 * @see #setScrewing_base(Screwing)
-	 * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getRamp_Screwing_base()
+	 * @see xPPU.MechanicalComponents.MechanicalComponentsPackage#getRamp_Screwing_base()
 	 * @model required="true"
 	 * @generated
 	 */
 	Screwing getScrewing_base();
 
 	/**
-	 * Sets the value of the '{@link xPPU.ComponentRepository.Ramp#getScrewing_base <em>Screwing base</em>}' reference.
+	 * Sets the value of the '{@link xPPU.MechanicalComponents.Ramp#getScrewing_base <em>Screwing base</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Screwing base</em>' reference.
@@ -60,14 +62,14 @@ public interface Ramp extends MechanicalAssembly {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Screwing component</em>' reference.
 	 * @see #setScrewing_component(Screwing)
-	 * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getRamp_Screwing_component()
+	 * @see xPPU.MechanicalComponents.MechanicalComponentsPackage#getRamp_Screwing_component()
 	 * @model required="true"
 	 * @generated
 	 */
 	Screwing getScrewing_component();
 
 	/**
-	 * Sets the value of the '{@link xPPU.ComponentRepository.Ramp#getScrewing_component <em>Screwing component</em>}' reference.
+	 * Sets the value of the '{@link xPPU.MechanicalComponents.Ramp#getScrewing_component <em>Screwing component</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Screwing component</em>' reference.
@@ -86,14 +88,14 @@ public interface Ramp extends MechanicalAssembly {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Physicalconnection</em>' reference.
 	 * @see #setPhysicalconnection(PhysicalConnection)
-	 * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getRamp_Physicalconnection()
+	 * @see xPPU.MechanicalComponents.MechanicalComponentsPackage#getRamp_Physicalconnection()
 	 * @model required="true"
 	 * @generated
 	 */
 	PhysicalConnection getPhysicalconnection();
 
 	/**
-	 * Sets the value of the '{@link xPPU.ComponentRepository.Ramp#getPhysicalconnection <em>Physicalconnection</em>}' reference.
+	 * Sets the value of the '{@link xPPU.MechanicalComponents.Ramp#getPhysicalconnection <em>Physicalconnection</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Physicalconnection</em>' reference.

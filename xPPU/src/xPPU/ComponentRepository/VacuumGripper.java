@@ -6,6 +6,8 @@ import org.eclipse.emf.common.util.EList;
 
 import xPPU.BusComponents.ProfibusDPSlave;
 
+import xPPU.MechanicalComponents.GripperPart;
+
 import xPPU.StructureRepository.Crane;
 
 /**

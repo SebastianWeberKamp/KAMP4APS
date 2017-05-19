@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.util.Switch;
 
 import xPPU.ComponentRepository.Component;
+import xPPU.ComponentRepository.MechanicalAssembly;
 
 import xPPU.Identifier.Identifier;
 
@@ -105,6 +106,51 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case MechanicalComponentsPackage.RUBBER_BAND: {
+				RubberBand rubberBand = (RubberBand)theEObject;
+				T result = caseRubberBand(rubberBand);
+				if (result == null) result = caseMechanicalPart(rubberBand);
+				if (result == null) result = caseComponent(rubberBand);
+				if (result == null) result = caseIdentifier(rubberBand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MechanicalComponentsPackage.GRIPPER_PART: {
+				GripperPart gripperPart = (GripperPart)theEObject;
+				T result = caseGripperPart(gripperPart);
+				if (result == null) result = caseMechanicalAssembly(gripperPart);
+				if (result == null) result = caseComponent(gripperPart);
+				if (result == null) result = caseIdentifier(gripperPart);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MechanicalComponentsPackage.ARM: {
+				Arm arm = (Arm)theEObject;
+				T result = caseArm(arm);
+				if (result == null) result = caseMechanicalAssembly(arm);
+				if (result == null) result = caseComponent(arm);
+				if (result == null) result = caseIdentifier(arm);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MechanicalComponentsPackage.RAMP: {
+				Ramp ramp = (Ramp)theEObject;
+				T result = caseRamp(ramp);
+				if (result == null) result = caseMechanicalAssembly(ramp);
+				if (result == null) result = caseComponent(ramp);
+				if (result == null) result = caseIdentifier(ramp);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case MechanicalComponentsPackage.TABLE: {
+				Table table = (Table)theEObject;
+				T result = caseTable(table);
+				if (result == null) result = caseMechanicalAssembly(table);
+				if (result == null) result = caseComponent(table);
+				if (result == null) result = caseIdentifier(table);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -170,6 +216,81 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Rubber Band</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Rubber Band</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRubberBand(RubberBand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Gripper Part</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Gripper Part</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseGripperPart(GripperPart object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Arm</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Arm</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseArm(Arm object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Ramp</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Ramp</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRamp(Ramp object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Table</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseTable(Table object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -196,6 +317,21 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseComponent(Component object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Mechanical Assembly</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Mechanical Assembly</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMechanicalAssembly(MechanicalAssembly object) {
 		return null;
 	}
 

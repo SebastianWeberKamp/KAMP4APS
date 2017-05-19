@@ -1,6 +1,6 @@
 /**
  */
-package xPPU.ComponentRepository.impl;
+package xPPU.MechanicalComponents.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -10,8 +10,10 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import xPPU.ComponentRepository.Arm;
-import xPPU.ComponentRepository.ComponentRepositoryPackage;
+import xPPU.ComponentRepository.impl.MechanicalAssemblyImpl;
+
+import xPPU.MechanicalComponents.Arm;
+import xPPU.MechanicalComponents.MechanicalComponentsPackage;
 
 import xPPU.StructureRepository.Crane;
 import xPPU.StructureRepository.StructureRepositoryPackage;
@@ -24,7 +26,7 @@ import xPPU.StructureRepository.StructureRepositoryPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xPPU.ComponentRepository.impl.ArmImpl#getMountedTo <em>Mounted To</em>}</li>
+ *   <li>{@link xPPU.MechanicalComponents.impl.ArmImpl#getMountedTo <em>Mounted To</em>}</li>
  * </ul>
  *
  * @generated
@@ -56,7 +58,7 @@ public class ArmImpl extends MechanicalAssemblyImpl implements Arm {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ComponentRepositoryPackage.Literals.ARM;
+		return MechanicalComponentsPackage.Literals.ARM;
 	}
 
 	/**
@@ -70,7 +72,7 @@ public class ArmImpl extends MechanicalAssemblyImpl implements Arm {
 			mountedTo = (Crane)eResolveProxy(oldMountedTo);
 			if (mountedTo != oldMountedTo) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentRepositoryPackage.ARM__MOUNTED_TO, oldMountedTo, mountedTo));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MechanicalComponentsPackage.ARM__MOUNTED_TO, oldMountedTo, mountedTo));
 			}
 		}
 		return mountedTo;
@@ -94,7 +96,7 @@ public class ArmImpl extends MechanicalAssemblyImpl implements Arm {
 		Crane oldMountedTo = mountedTo;
 		mountedTo = newMountedTo;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.ARM__MOUNTED_TO, oldMountedTo, newMountedTo);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MechanicalComponentsPackage.ARM__MOUNTED_TO, oldMountedTo, newMountedTo);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -116,7 +118,7 @@ public class ArmImpl extends MechanicalAssemblyImpl implements Arm {
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.ARM__MOUNTED_TO, newMountedTo, newMountedTo));
+			eNotify(new ENotificationImpl(this, Notification.SET, MechanicalComponentsPackage.ARM__MOUNTED_TO, newMountedTo, newMountedTo));
 	}
 
 	/**
@@ -127,7 +129,7 @@ public class ArmImpl extends MechanicalAssemblyImpl implements Arm {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.ARM__MOUNTED_TO:
+			case MechanicalComponentsPackage.ARM__MOUNTED_TO:
 				if (mountedTo != null)
 					msgs = ((InternalEObject)mountedTo).eInverseRemove(this, StructureRepositoryPackage.CRANE__ARM, Crane.class, msgs);
 				return basicSetMountedTo((Crane)otherEnd, msgs);
@@ -143,7 +145,7 @@ public class ArmImpl extends MechanicalAssemblyImpl implements Arm {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.ARM__MOUNTED_TO:
+			case MechanicalComponentsPackage.ARM__MOUNTED_TO:
 				return basicSetMountedTo(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -157,7 +159,7 @@ public class ArmImpl extends MechanicalAssemblyImpl implements Arm {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.ARM__MOUNTED_TO:
+			case MechanicalComponentsPackage.ARM__MOUNTED_TO:
 				if (resolve) return getMountedTo();
 				return basicGetMountedTo();
 		}
@@ -172,7 +174,7 @@ public class ArmImpl extends MechanicalAssemblyImpl implements Arm {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.ARM__MOUNTED_TO:
+			case MechanicalComponentsPackage.ARM__MOUNTED_TO:
 				setMountedTo((Crane)newValue);
 				return;
 		}
@@ -187,7 +189,7 @@ public class ArmImpl extends MechanicalAssemblyImpl implements Arm {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.ARM__MOUNTED_TO:
+			case MechanicalComponentsPackage.ARM__MOUNTED_TO:
 				setMountedTo((Crane)null);
 				return;
 		}
@@ -202,7 +204,7 @@ public class ArmImpl extends MechanicalAssemblyImpl implements Arm {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.ARM__MOUNTED_TO:
+			case MechanicalComponentsPackage.ARM__MOUNTED_TO:
 				return mountedTo != null;
 		}
 		return super.eIsSet(featureID);

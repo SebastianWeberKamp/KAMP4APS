@@ -1,8 +1,7 @@
 /**
  */
-package xPPU.ComponentRepository;
+package xPPU.MechanicalComponents;
 
-import xPPU.MechanicalComponents.MechanicalPart;
 
 /**
  * <!-- begin-user-doc -->
@@ -10,7 +9,7 @@ import xPPU.MechanicalComponents.MechanicalPart;
  * <!-- end-user-doc -->
  *
  *
- * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getRubberBand()
+ * @see xPPU.MechanicalComponents.MechanicalComponentsPackage#getRubberBand()
  * @model
  * @generated
  */

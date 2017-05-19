@@ -1,11 +1,13 @@
 /**
  */
-package xPPU.ComponentRepository.impl;
+package xPPU.MechanicalComponents.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import xPPU.ComponentRepository.ComponentRepositoryPackage;
-import xPPU.ComponentRepository.GripperPart;
+import xPPU.ComponentRepository.impl.MechanicalAssemblyImpl;
+
+import xPPU.MechanicalComponents.GripperPart;
+import xPPU.MechanicalComponents.MechanicalComponentsPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +33,7 @@ public class GripperPartImpl extends MechanicalAssemblyImpl implements GripperPa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ComponentRepositoryPackage.Literals.GRIPPER_PART;
+		return MechanicalComponentsPackage.Literals.GRIPPER_PART;
 	}
 
 } //GripperPartImpl

@@ -25,52 +25,52 @@ import xPPU.InterfaceRepository.SignalInterface;
  */
 public interface BusCable extends Cable {
 	/**
-	 * Returns the value of the '<em><b>Signal Plug1</b></em>' reference.
+	 * Returns the value of the '<em><b>Signal Plug1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Signal Plug1</em>' reference isn't clear,
+	 * If the meaning of the '<em>Signal Plug1</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Signal Plug1</em>' reference.
+	 * @return the value of the '<em>Signal Plug1</em>' containment reference.
 	 * @see #setSignalPlug1(SignalInterface)
 	 * @see xPPU.BusComponents.BusComponentsPackage#getBusCable_SignalPlug1()
-	 * @model required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	SignalInterface getSignalPlug1();
 
 	/**
-	 * Sets the value of the '{@link xPPU.BusComponents.BusCable#getSignalPlug1 <em>Signal Plug1</em>}' reference.
+	 * Sets the value of the '{@link xPPU.BusComponents.BusCable#getSignalPlug1 <em>Signal Plug1</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Signal Plug1</em>' reference.
+	 * @param value the new value of the '<em>Signal Plug1</em>' containment reference.
 	 * @see #getSignalPlug1()
 	 * @generated
 	 */
 	void setSignalPlug1(SignalInterface value);
 
 	/**
-	 * Returns the value of the '<em><b>Signal Plug2</b></em>' reference.
+	 * Returns the value of the '<em><b>Signal Plug2</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Signal Plug2</em>' reference isn't clear,
+	 * If the meaning of the '<em>Signal Plug2</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Signal Plug2</em>' reference.
+	 * @return the value of the '<em>Signal Plug2</em>' containment reference.
 	 * @see #setSignalPlug2(SignalInterface)
 	 * @see xPPU.BusComponents.BusComponentsPackage#getBusCable_SignalPlug2()
-	 * @model required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	SignalInterface getSignalPlug2();
 
 	/**
-	 * Sets the value of the '{@link xPPU.BusComponents.BusCable#getSignalPlug2 <em>Signal Plug2</em>}' reference.
+	 * Sets the value of the '{@link xPPU.BusComponents.BusCable#getSignalPlug2 <em>Signal Plug2</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Signal Plug2</em>' reference.
+	 * @param value the new value of the '<em>Signal Plug2</em>' containment reference.
 	 * @see #getSignalPlug2()
 	 * @generated
 	 */

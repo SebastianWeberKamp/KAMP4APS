@@ -1,6 +1,6 @@
 /**
  */
-package xPPU.ComponentRepository.impl;
+package xPPU.MechanicalComponents.impl;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -9,11 +9,13 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import xPPU.ComponentRepository.ComponentRepositoryPackage;
-import xPPU.ComponentRepository.Ramp;
+import xPPU.ComponentRepository.impl.MechanicalAssemblyImpl;
 
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.Screwing;
+
+import xPPU.MechanicalComponents.MechanicalComponentsPackage;
+import xPPU.MechanicalComponents.Ramp;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,9 +25,9 @@ import xPPU.InterfaceRepository.Screwing;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xPPU.ComponentRepository.impl.RampImpl#getScrewing_base <em>Screwing base</em>}</li>
- *   <li>{@link xPPU.ComponentRepository.impl.RampImpl#getScrewing_component <em>Screwing component</em>}</li>
- *   <li>{@link xPPU.ComponentRepository.impl.RampImpl#getPhysicalconnection <em>Physicalconnection</em>}</li>
+ *   <li>{@link xPPU.MechanicalComponents.impl.RampImpl#getScrewing_base <em>Screwing base</em>}</li>
+ *   <li>{@link xPPU.MechanicalComponents.impl.RampImpl#getScrewing_component <em>Screwing component</em>}</li>
+ *   <li>{@link xPPU.MechanicalComponents.impl.RampImpl#getPhysicalconnection <em>Physicalconnection</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,7 +79,7 @@ public abstract class RampImpl extends MechanicalAssemblyImpl implements Ramp {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ComponentRepositoryPackage.Literals.RAMP;
+		return MechanicalComponentsPackage.Literals.RAMP;
 	}
 
 	/**
@@ -91,7 +93,7 @@ public abstract class RampImpl extends MechanicalAssemblyImpl implements Ramp {
 			screwing_base = (Screwing)eResolveProxy(oldScrewing_base);
 			if (screwing_base != oldScrewing_base) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentRepositoryPackage.RAMP__SCREWING_BASE, oldScrewing_base, screwing_base));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MechanicalComponentsPackage.RAMP__SCREWING_BASE, oldScrewing_base, screwing_base));
 			}
 		}
 		return screwing_base;
@@ -115,7 +117,7 @@ public abstract class RampImpl extends MechanicalAssemblyImpl implements Ramp {
 		Screwing oldScrewing_base = screwing_base;
 		screwing_base = newScrewing_base;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.RAMP__SCREWING_BASE, oldScrewing_base, screwing_base));
+			eNotify(new ENotificationImpl(this, Notification.SET, MechanicalComponentsPackage.RAMP__SCREWING_BASE, oldScrewing_base, screwing_base));
 	}
 
 	/**
@@ -129,7 +131,7 @@ public abstract class RampImpl extends MechanicalAssemblyImpl implements Ramp {
 			screwing_component = (Screwing)eResolveProxy(oldScrewing_component);
 			if (screwing_component != oldScrewing_component) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentRepositoryPackage.RAMP__SCREWING_COMPONENT, oldScrewing_component, screwing_component));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MechanicalComponentsPackage.RAMP__SCREWING_COMPONENT, oldScrewing_component, screwing_component));
 			}
 		}
 		return screwing_component;
@@ -153,7 +155,7 @@ public abstract class RampImpl extends MechanicalAssemblyImpl implements Ramp {
 		Screwing oldScrewing_component = screwing_component;
 		screwing_component = newScrewing_component;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.RAMP__SCREWING_COMPONENT, oldScrewing_component, screwing_component));
+			eNotify(new ENotificationImpl(this, Notification.SET, MechanicalComponentsPackage.RAMP__SCREWING_COMPONENT, oldScrewing_component, screwing_component));
 	}
 
 	/**
@@ -167,7 +169,7 @@ public abstract class RampImpl extends MechanicalAssemblyImpl implements Ramp {
 			physicalconnection = (PhysicalConnection)eResolveProxy(oldPhysicalconnection);
 			if (physicalconnection != oldPhysicalconnection) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentRepositoryPackage.RAMP__PHYSICALCONNECTION, oldPhysicalconnection, physicalconnection));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MechanicalComponentsPackage.RAMP__PHYSICALCONNECTION, oldPhysicalconnection, physicalconnection));
 			}
 		}
 		return physicalconnection;
@@ -191,7 +193,7 @@ public abstract class RampImpl extends MechanicalAssemblyImpl implements Ramp {
 		PhysicalConnection oldPhysicalconnection = physicalconnection;
 		physicalconnection = newPhysicalconnection;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.RAMP__PHYSICALCONNECTION, oldPhysicalconnection, physicalconnection));
+			eNotify(new ENotificationImpl(this, Notification.SET, MechanicalComponentsPackage.RAMP__PHYSICALCONNECTION, oldPhysicalconnection, physicalconnection));
 	}
 
 	/**
@@ -202,13 +204,13 @@ public abstract class RampImpl extends MechanicalAssemblyImpl implements Ramp {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.RAMP__SCREWING_BASE:
+			case MechanicalComponentsPackage.RAMP__SCREWING_BASE:
 				if (resolve) return getScrewing_base();
 				return basicGetScrewing_base();
-			case ComponentRepositoryPackage.RAMP__SCREWING_COMPONENT:
+			case MechanicalComponentsPackage.RAMP__SCREWING_COMPONENT:
 				if (resolve) return getScrewing_component();
 				return basicGetScrewing_component();
-			case ComponentRepositoryPackage.RAMP__PHYSICALCONNECTION:
+			case MechanicalComponentsPackage.RAMP__PHYSICALCONNECTION:
 				if (resolve) return getPhysicalconnection();
 				return basicGetPhysicalconnection();
 		}
@@ -223,13 +225,13 @@ public abstract class RampImpl extends MechanicalAssemblyImpl implements Ramp {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.RAMP__SCREWING_BASE:
+			case MechanicalComponentsPackage.RAMP__SCREWING_BASE:
 				setScrewing_base((Screwing)newValue);
 				return;
-			case ComponentRepositoryPackage.RAMP__SCREWING_COMPONENT:
+			case MechanicalComponentsPackage.RAMP__SCREWING_COMPONENT:
 				setScrewing_component((Screwing)newValue);
 				return;
-			case ComponentRepositoryPackage.RAMP__PHYSICALCONNECTION:
+			case MechanicalComponentsPackage.RAMP__PHYSICALCONNECTION:
 				setPhysicalconnection((PhysicalConnection)newValue);
 				return;
 		}
@@ -244,13 +246,13 @@ public abstract class RampImpl extends MechanicalAssemblyImpl implements Ramp {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.RAMP__SCREWING_BASE:
+			case MechanicalComponentsPackage.RAMP__SCREWING_BASE:
 				setScrewing_base((Screwing)null);
 				return;
-			case ComponentRepositoryPackage.RAMP__SCREWING_COMPONENT:
+			case MechanicalComponentsPackage.RAMP__SCREWING_COMPONENT:
 				setScrewing_component((Screwing)null);
 				return;
-			case ComponentRepositoryPackage.RAMP__PHYSICALCONNECTION:
+			case MechanicalComponentsPackage.RAMP__PHYSICALCONNECTION:
 				setPhysicalconnection((PhysicalConnection)null);
 				return;
 		}
@@ -265,11 +267,11 @@ public abstract class RampImpl extends MechanicalAssemblyImpl implements Ramp {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.RAMP__SCREWING_BASE:
+			case MechanicalComponentsPackage.RAMP__SCREWING_BASE:
 				return screwing_base != null;
-			case ComponentRepositoryPackage.RAMP__SCREWING_COMPONENT:
+			case MechanicalComponentsPackage.RAMP__SCREWING_COMPONENT:
 				return screwing_component != null;
-			case ComponentRepositoryPackage.RAMP__PHYSICALCONNECTION:
+			case MechanicalComponentsPackage.RAMP__PHYSICALCONNECTION:
 				return physicalconnection != null;
 		}
 		return super.eIsSet(featureID);

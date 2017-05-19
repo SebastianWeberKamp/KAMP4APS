@@ -58,6 +58,10 @@ public class MechanicalComponentsFactoryImpl extends EFactoryImpl implements Mec
 		switch (eClass.getClassifierID()) {
 			case MechanicalComponentsPackage.HOUSING: return createHousing();
 			case MechanicalComponentsPackage.RETURN_SPRING: return createReturnSpring();
+			case MechanicalComponentsPackage.RUBBER_BAND: return createRubberBand();
+			case MechanicalComponentsPackage.GRIPPER_PART: return createGripperPart();
+			case MechanicalComponentsPackage.ARM: return createArm();
+			case MechanicalComponentsPackage.TABLE: return createTable();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -81,6 +85,46 @@ public class MechanicalComponentsFactoryImpl extends EFactoryImpl implements Mec
 	public ReturnSpring createReturnSpring() {
 		ReturnSpringImpl returnSpring = new ReturnSpringImpl();
 		return returnSpring;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public RubberBand createRubberBand() {
+		RubberBandImpl rubberBand = new RubberBandImpl();
+		return rubberBand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public GripperPart createGripperPart() {
+		GripperPartImpl gripperPart = new GripperPartImpl();
+		return gripperPart;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Arm createArm() {
+		ArmImpl arm = new ArmImpl();
+		return arm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Table createTable() {
+		TableImpl table = new TableImpl();
+		return table;
 	}
 
 	/**

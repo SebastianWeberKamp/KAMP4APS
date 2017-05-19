@@ -39,7 +39,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="SimpleMotor" eSuperTypes="#//ComponentRepository/Motor"/>
     <eClassifiers xsi:type="ecore:EClass" name="MechanicalAssembly" abstract="true"
         eSuperTypes="#//ComponentRepository/Component"/>
-    <eClassifiers xsi:type="ecore:EClass" name="RegularRamp" eSuperTypes="#//ComponentRepository/Ramp"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RegularRamp" eSuperTypes="#//MechanicalComponents/Ramp"/>
     <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//ComponentRepository/Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="physicalconnection" lowerBound="1"
           eType="#//InterfaceRepository/PhysicalConnection"/>
@@ -117,7 +117,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="mountedTo" lowerBound="1"
           eType="#//StructureRepository/Crane" eOpposite="#//StructureRepository/Crane/vacuumgripper"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="gripperPart" lowerBound="1"
-          eType="#//ComponentRepository/GripperPart" containment="true"/>
+          eType="#//MechanicalComponents/GripperPart" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="valve" lowerBound="1"
           eType="#//ComponentRepository/RegularValve" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="vacuumSwitch" lowerBound="1"
@@ -131,10 +131,9 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="frame" lowerBound="1"
           eType="#//ComponentRepository/Frame" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="rubberBand" lowerBound="1"
-          eType="#//ComponentRepository/RubberBand" containment="true"/>
+          eType="#//MechanicalComponents/RubberBand" containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Frame" eSuperTypes="#//ComponentRepository/MechanicalAssembly"/>
-    <eClassifiers xsi:type="ecore:EClass" name="RubberBand" eSuperTypes="#//MechanicalComponents/MechanicalPart"/>
     <eClassifiers xsi:type="ecore:EClass" name="Pusher" eSuperTypes="#//ComponentRepository/Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="componentsRepository"
           lowerBound="1" eType="#//ComponentRepository/Component"/>
@@ -151,7 +150,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="rack_for_turningtable"
           lowerBound="1" eType="#//ComponentRepository/Rack" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="table_to_stand_on" lowerBound="1"
-          eType="#//ComponentRepository/Table" containment="true"/>
+          eType="#//MechanicalComponents/Table" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="motor_to_drive" lowerBound="1"
           eType="#//ComponentRepository/SimpleMotor" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="microswitchModule" lowerBound="1"
@@ -164,6 +163,8 @@
           upperBound="-1" eType="#//BusComponents/BusCable" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="potentiometer" lowerBound="1"
           upperBound="-1" eType="#//ComponentRepository/Potentiometer" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
+          eType="#//StructureRepository/Crane" eOpposite="#//StructureRepository/Crane/mountedOn"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="#//ComponentRepository/Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="powersupply" lowerBound="1"
@@ -175,20 +176,6 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="busCable" lowerBound="1"
           upperBound="-1" eType="#//BusComponents/BusCable" containment="true"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Arm" eSuperTypes="#//ComponentRepository/MechanicalAssembly">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="mountedTo" lowerBound="1"
-          eType="#//StructureRepository/Crane" eOpposite="#//StructureRepository/Crane/arm"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Ramp" abstract="true" eSuperTypes="#//ComponentRepository/MechanicalAssembly">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="screwing_base" lowerBound="1"
-          eType="#//InterfaceRepository/Screwing"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="screwing_component" lowerBound="1"
-          eType="#//InterfaceRepository/Screwing"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="physicalconnection" lowerBound="1"
-          eType="#//InterfaceRepository/PhysicalConnection"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//ComponentRepository/MechanicalAssembly"/>
-    <eClassifiers xsi:type="ecore:EClass" name="GripperPart" eSuperTypes="#//ComponentRepository/MechanicalAssembly"/>
     <eClassifiers xsi:type="ecore:EClass" name="MicroswitchModule" eSuperTypes="#//ElectronicComponents/Switch">
       <eStructuralFeatures xsi:type="ecore:EReference" name="busSlave" lowerBound="1"
           upperBound="-1" eType="#//BusComponents/BusSlave" containment="true"/>
@@ -252,10 +239,10 @@
           lowerBound="1" eType="#//InterfaceRepository/SignalInterface"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="BusCable" eSuperTypes="#//ComponentRepository/Cable">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="SignalPlug1" lowerBound="1"
-          eType="#//InterfaceRepository/SignalInterface"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="SignalPlug2" lowerBound="1"
-          eType="#//InterfaceRepository/SignalInterface"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SignalPlug1" eType="#//InterfaceRepository/SignalInterface"
+          containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="SignalPlug2" eType="#//InterfaceRepository/SignalInterface"
+          containment="true"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ProfibusDPBox" eSuperTypes="#//BusComponents/BusBox"/>
     <eClassifiers xsi:type="ecore:EClass" name="ProfibusDPMaster" eSuperTypes="#//BusComponents/BusMaster"/>
@@ -287,6 +274,21 @@
     <eClassifiers xsi:type="ecore:EClass" name="Pushhead" abstract="true" eSuperTypes="#//MechanicalComponents/MechanicalPart"/>
     <eClassifiers xsi:type="ecore:EClass" name="Housing" eSuperTypes="#//MechanicalComponents/MechanicalPart"/>
     <eClassifiers xsi:type="ecore:EClass" name="ReturnSpring" eSuperTypes="#//MechanicalComponents/MechanicalPart"/>
+    <eClassifiers xsi:type="ecore:EClass" name="RubberBand" eSuperTypes="#//MechanicalComponents/MechanicalPart"/>
+    <eClassifiers xsi:type="ecore:EClass" name="GripperPart" eSuperTypes="#//ComponentRepository/MechanicalAssembly"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Arm" eSuperTypes="#//ComponentRepository/MechanicalAssembly">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="mountedTo" lowerBound="1"
+          eType="#//StructureRepository/Crane" eOpposite="#//StructureRepository/Crane/arm"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Ramp" abstract="true" eSuperTypes="#//ComponentRepository/MechanicalAssembly">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="screwing_base" lowerBound="1"
+          eType="#//InterfaceRepository/Screwing"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="screwing_component" lowerBound="1"
+          eType="#//InterfaceRepository/Screwing"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="physicalconnection" lowerBound="1"
+          eType="#//InterfaceRepository/PhysicalConnection"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Table" eSuperTypes="#//ComponentRepository/MechanicalAssembly"/>
   </eSubpackages>
   <eSubpackages name="StructureRepository" nsURI="edu.kit.ipd.sdq.kaps.xppu.structurerepository"
       nsPrefix="StructureRepository">
@@ -310,10 +312,10 @@
           eType="#//ComponentRepository/ConveyorBelt" containment="true" eOpposite="#//ComponentRepository/ConveyorBelt/mountedTo"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Crane" eSuperTypes="#//StructureRepository/Structure">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="arm" lowerBound="1" eType="#//ComponentRepository/Arm"
-          eOpposite="#//ComponentRepository/Arm/mountedTo"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="arm" lowerBound="1" eType="#//MechanicalComponents/Arm"
+          eOpposite="#//MechanicalComponents/Arm/mountedTo"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="mountedOn" lowerBound="1"
-          eType="#//ComponentRepository/TurningTable"/>
+          eType="#//ComponentRepository/TurningTable" eOpposite="#//ComponentRepository/TurningTable/parent"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="vacuumgripper" lowerBound="1"
           eType="#//ComponentRepository/VacuumGripper" eOpposite="#//ComponentRepository/VacuumGripper/mountedTo"/>
     </eClassifiers>

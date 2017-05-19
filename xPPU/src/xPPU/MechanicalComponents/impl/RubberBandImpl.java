@@ -1,13 +1,11 @@
 /**
  */
-package xPPU.ComponentRepository.impl;
+package xPPU.MechanicalComponents.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import xPPU.ComponentRepository.ComponentRepositoryPackage;
-import xPPU.ComponentRepository.RubberBand;
-
-import xPPU.MechanicalComponents.impl.MechanicalPartImpl;
+import xPPU.MechanicalComponents.MechanicalComponentsPackage;
+import xPPU.MechanicalComponents.RubberBand;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,7 +31,7 @@ public class RubberBandImpl extends MechanicalPartImpl implements RubberBand {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ComponentRepositoryPackage.Literals.RUBBER_BAND;
+		return MechanicalComponentsPackage.Literals.RUBBER_BAND;
 	}
 
 } //RubberBandImpl

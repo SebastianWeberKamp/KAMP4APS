@@ -1,11 +1,13 @@
 /**
  */
-package xPPU.ComponentRepository.impl;
+package xPPU.MechanicalComponents.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
-import xPPU.ComponentRepository.ComponentRepositoryPackage;
-import xPPU.ComponentRepository.Table;
+import xPPU.ComponentRepository.impl.MechanicalAssemblyImpl;
+
+import xPPU.MechanicalComponents.MechanicalComponentsPackage;
+import xPPU.MechanicalComponents.Table;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,7 +33,7 @@ public class TableImpl extends MechanicalAssemblyImpl implements Table {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ComponentRepositoryPackage.Literals.TABLE;
+		return MechanicalComponentsPackage.Literals.TABLE;
 	}
 
 } //TableImpl

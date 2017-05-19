@@ -40,6 +40,42 @@ public interface MechanicalComponentsFactory extends EFactory {
 	ReturnSpring createReturnSpring();
 
 	/**
+	 * Returns a new object of class '<em>Rubber Band</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Rubber Band</em>'.
+	 * @generated
+	 */
+	RubberBand createRubberBand();
+
+	/**
+	 * Returns a new object of class '<em>Gripper Part</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Gripper Part</em>'.
+	 * @generated
+	 */
+	GripperPart createGripperPart();
+
+	/**
+	 * Returns a new object of class '<em>Arm</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Arm</em>'.
+	 * @generated
+	 */
+	Arm createArm();
+
+	/**
+	 * Returns a new object of class '<em>Table</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Table</em>'.
+	 * @generated
+	 */
+	Table createTable();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

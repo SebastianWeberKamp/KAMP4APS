@@ -296,7 +296,7 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_CABLE__CONNECTED_INTERFACES = ComponentRepositoryPackage.CABLE__CONNECTED_INTERFACES;
 
 	/**
-	 * The feature id for the '<em><b>Signal Plug1</b></em>' reference.
+	 * The feature id for the '<em><b>Signal Plug1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -305,7 +305,7 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_CABLE__SIGNAL_PLUG1 = ComponentRepositoryPackage.CABLE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Signal Plug2</b></em>' reference.
+	 * The feature id for the '<em><b>Signal Plug2</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -570,7 +570,7 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_CABLE__CONNECTED_INTERFACES = BUS_CABLE__CONNECTED_INTERFACES;
 
 	/**
-	 * The feature id for the '<em><b>Signal Plug1</b></em>' reference.
+	 * The feature id for the '<em><b>Signal Plug1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -579,7 +579,7 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_CABLE__SIGNAL_PLUG1 = BUS_CABLE__SIGNAL_PLUG1;
 
 	/**
-	 * The feature id for the '<em><b>Signal Plug2</b></em>' reference.
+	 * The feature id for the '<em><b>Signal Plug2</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -844,7 +844,7 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_CABLE__CONNECTED_INTERFACES = BUS_CABLE__CONNECTED_INTERFACES;
 
 	/**
-	 * The feature id for the '<em><b>Signal Plug1</b></em>' reference.
+	 * The feature id for the '<em><b>Signal Plug1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -853,7 +853,7 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_CABLE__SIGNAL_PLUG1 = BUS_CABLE__SIGNAL_PLUG1;
 
 	/**
-	 * The feature id for the '<em><b>Signal Plug2</b></em>' reference.
+	 * The feature id for the '<em><b>Signal Plug2</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1009,10 +1009,10 @@ public interface BusComponentsPackage extends EPackage {
 	EClass getBusCable();
 
 	/**
-	 * Returns the meta object for the reference '{@link xPPU.BusComponents.BusCable#getSignalPlug1 <em>Signal Plug1</em>}'.
+	 * Returns the meta object for the containment reference '{@link xPPU.BusComponents.BusCable#getSignalPlug1 <em>Signal Plug1</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Signal Plug1</em>'.
+	 * @return the meta object for the containment reference '<em>Signal Plug1</em>'.
 	 * @see xPPU.BusComponents.BusCable#getSignalPlug1()
 	 * @see #getBusCable()
 	 * @generated
@@ -1020,10 +1020,10 @@ public interface BusComponentsPackage extends EPackage {
 	EReference getBusCable_SignalPlug1();
 
 	/**
-	 * Returns the meta object for the reference '{@link xPPU.BusComponents.BusCable#getSignalPlug2 <em>Signal Plug2</em>}'.
+	 * Returns the meta object for the containment reference '{@link xPPU.BusComponents.BusCable#getSignalPlug2 <em>Signal Plug2</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Signal Plug2</em>'.
+	 * @return the meta object for the containment reference '<em>Signal Plug2</em>'.
 	 * @see xPPU.BusComponents.BusCable#getSignalPlug2()
 	 * @see #getBusCable()
 	 * @generated
@@ -1238,7 +1238,7 @@ public interface BusComponentsPackage extends EPackage {
 		EClass BUS_CABLE = eINSTANCE.getBusCable();
 
 		/**
-		 * The meta object literal for the '<em><b>Signal Plug1</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Signal Plug1</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1246,7 +1246,7 @@ public interface BusComponentsPackage extends EPackage {
 		EReference BUS_CABLE__SIGNAL_PLUG1 = eINSTANCE.getBusCable_SignalPlug1();
 
 		/**
-		 * The meta object literal for the '<em><b>Signal Plug2</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Signal Plug2</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

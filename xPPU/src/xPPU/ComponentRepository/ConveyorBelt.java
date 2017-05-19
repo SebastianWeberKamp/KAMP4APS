@@ -2,6 +2,8 @@
  */
 package xPPU.ComponentRepository;
 
+import xPPU.MechanicalComponents.RubberBand;
+
 import xPPU.StructureRepository.Conveyor;
 
 /**

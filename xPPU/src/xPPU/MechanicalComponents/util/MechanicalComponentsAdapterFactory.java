@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 import org.eclipse.emf.ecore.EObject;
 
 import xPPU.ComponentRepository.Component;
+import xPPU.ComponentRepository.MechanicalAssembly;
 
 import xPPU.Identifier.Identifier;
 
@@ -88,12 +89,36 @@ public class MechanicalComponentsAdapterFactory extends AdapterFactoryImpl {
 				return createReturnSpringAdapter();
 			}
 			@Override
+			public Adapter caseRubberBand(RubberBand object) {
+				return createRubberBandAdapter();
+			}
+			@Override
+			public Adapter caseGripperPart(GripperPart object) {
+				return createGripperPartAdapter();
+			}
+			@Override
+			public Adapter caseArm(Arm object) {
+				return createArmAdapter();
+			}
+			@Override
+			public Adapter caseRamp(Ramp object) {
+				return createRampAdapter();
+			}
+			@Override
+			public Adapter caseTable(Table object) {
+				return createTableAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object) {
 				return createIdentifierAdapter();
 			}
 			@Override
 			public Adapter caseComponent(Component object) {
 				return createComponentAdapter();
+			}
+			@Override
+			public Adapter caseMechanicalAssembly(MechanicalAssembly object) {
+				return createMechanicalAssemblyAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -172,6 +197,76 @@ public class MechanicalComponentsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.MechanicalComponents.RubberBand <em>Rubber Band</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.MechanicalComponents.RubberBand
+	 * @generated
+	 */
+	public Adapter createRubberBandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.MechanicalComponents.GripperPart <em>Gripper Part</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.MechanicalComponents.GripperPart
+	 * @generated
+	 */
+	public Adapter createGripperPartAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.MechanicalComponents.Arm <em>Arm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.MechanicalComponents.Arm
+	 * @generated
+	 */
+	public Adapter createArmAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.MechanicalComponents.Ramp <em>Ramp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.MechanicalComponents.Ramp
+	 * @generated
+	 */
+	public Adapter createRampAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.MechanicalComponents.Table <em>Table</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.MechanicalComponents.Table
+	 * @generated
+	 */
+	public Adapter createTableAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link xPPU.Identifier.Identifier <em>Identifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -196,6 +291,20 @@ public class MechanicalComponentsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createComponentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.ComponentRepository.MechanicalAssembly <em>Mechanical Assembly</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.ComponentRepository.MechanicalAssembly
+	 * @generated
+	 */
+	public Adapter createMechanicalAssemblyAdapter() {
 		return null;
 	}
 

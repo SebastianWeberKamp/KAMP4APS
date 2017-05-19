@@ -419,79 +419,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int MECHANICAL_ASSEMBLY_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.RampImpl <em>Ramp</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.ComponentRepository.impl.RampImpl
-	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getRamp()
-	 * @generated
-	 */
-	int RAMP = 37;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP__ID = MECHANICAL_ASSEMBLY__ID;
-
-	/**
-	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP__CONNECTED_INTERFACES = MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES;
-
-	/**
-	 * The feature id for the '<em><b>Screwing base</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP__SCREWING_BASE = MECHANICAL_ASSEMBLY_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Screwing component</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP__SCREWING_COMPONENT = MECHANICAL_ASSEMBLY_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Physicalconnection</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP__PHYSICALCONNECTION = MECHANICAL_ASSEMBLY_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>Ramp</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP_FEATURE_COUNT = MECHANICAL_ASSEMBLY_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>Ramp</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RAMP_OPERATION_COUNT = MECHANICAL_ASSEMBLY_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.RegularRampImpl <em>Regular Ramp</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -508,7 +435,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGULAR_RAMP__ID = RAMP__ID;
+	int REGULAR_RAMP__ID = MechanicalComponentsPackage.RAMP__ID;
 
 	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
@@ -517,7 +444,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGULAR_RAMP__CONNECTED_INTERFACES = RAMP__CONNECTED_INTERFACES;
+	int REGULAR_RAMP__CONNECTED_INTERFACES = MechanicalComponentsPackage.RAMP__CONNECTED_INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Screwing base</b></em>' reference.
@@ -526,7 +453,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGULAR_RAMP__SCREWING_BASE = RAMP__SCREWING_BASE;
+	int REGULAR_RAMP__SCREWING_BASE = MechanicalComponentsPackage.RAMP__SCREWING_BASE;
 
 	/**
 	 * The feature id for the '<em><b>Screwing component</b></em>' reference.
@@ -535,7 +462,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGULAR_RAMP__SCREWING_COMPONENT = RAMP__SCREWING_COMPONENT;
+	int REGULAR_RAMP__SCREWING_COMPONENT = MechanicalComponentsPackage.RAMP__SCREWING_COMPONENT;
 
 	/**
 	 * The feature id for the '<em><b>Physicalconnection</b></em>' reference.
@@ -544,7 +471,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGULAR_RAMP__PHYSICALCONNECTION = RAMP__PHYSICALCONNECTION;
+	int REGULAR_RAMP__PHYSICALCONNECTION = MechanicalComponentsPackage.RAMP__PHYSICALCONNECTION;
 
 	/**
 	 * The number of structural features of the '<em>Regular Ramp</em>' class.
@@ -553,7 +480,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGULAR_RAMP_FEATURE_COUNT = RAMP_FEATURE_COUNT + 0;
+	int REGULAR_RAMP_FEATURE_COUNT = MechanicalComponentsPackage.RAMP_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>Regular Ramp</em>' class.
@@ -562,7 +489,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int REGULAR_RAMP_OPERATION_COUNT = RAMP_OPERATION_COUNT + 0;
+	int REGULAR_RAMP_OPERATION_COUNT = MechanicalComponentsPackage.RAMP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.SensorImpl <em>Sensor</em>}' class.
@@ -2092,61 +2019,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int FRAME_OPERATION_COUNT = MECHANICAL_ASSEMBLY_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.RubberBandImpl <em>Rubber Band</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.ComponentRepository.impl.RubberBandImpl
-	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getRubberBand()
-	 * @generated
-	 */
-	int RUBBER_BAND = 31;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUBBER_BAND__ID = MechanicalComponentsPackage.MECHANICAL_PART__ID;
-
-	/**
-	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUBBER_BAND__CONNECTED_INTERFACES = MechanicalComponentsPackage.MECHANICAL_PART__CONNECTED_INTERFACES;
-
-	/**
-	 * The feature id for the '<em><b>Screwing</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUBBER_BAND__SCREWING = MechanicalComponentsPackage.MECHANICAL_PART__SCREWING;
-
-	/**
-	 * The number of structural features of the '<em>Rubber Band</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUBBER_BAND_FEATURE_COUNT = MechanicalComponentsPackage.MECHANICAL_PART_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Rubber Band</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RUBBER_BAND_OPERATION_COUNT = MechanicalComponentsPackage.MECHANICAL_PART_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.PusherImpl <em>Pusher</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2154,7 +2026,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPusher()
 	 * @generated
 	 */
-	int PUSHER = 32;
+	int PUSHER = 31;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2245,7 +2117,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getTurningTable()
 	 * @generated
 	 */
-	int TURNING_TABLE = 33;
+	int TURNING_TABLE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2338,13 +2210,22 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int TURNING_TABLE__POTENTIOMETER = COMPONENT_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_TABLE__PARENT = COMPONENT_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Turning Table</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 8;
+	int TURNING_TABLE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Turning Table</em>' class.
@@ -2363,7 +2244,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getController()
 	 * @generated
 	 */
-	int CONTROLLER = 34;
+	int CONTROLLER = 33;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2427,7 +2308,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getLogicalWiring()
 	 * @generated
 	 */
-	int LOGICAL_WIRING = 35;
+	int LOGICAL_WIRING = 34;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2475,153 +2356,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int LOGICAL_WIRING_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.ArmImpl <em>Arm</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.ComponentRepository.impl.ArmImpl
-	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getArm()
-	 * @generated
-	 */
-	int ARM = 36;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARM__ID = MECHANICAL_ASSEMBLY__ID;
-
-	/**
-	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARM__CONNECTED_INTERFACES = MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES;
-
-	/**
-	 * The feature id for the '<em><b>Mounted To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARM__MOUNTED_TO = MECHANICAL_ASSEMBLY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Arm</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARM_FEATURE_COUNT = MECHANICAL_ASSEMBLY_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Arm</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARM_OPERATION_COUNT = MECHANICAL_ASSEMBLY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.TableImpl <em>Table</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.ComponentRepository.impl.TableImpl
-	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getTable()
-	 * @generated
-	 */
-	int TABLE = 38;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__ID = MECHANICAL_ASSEMBLY__ID;
-
-	/**
-	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE__CONNECTED_INTERFACES = MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES;
-
-	/**
-	 * The number of structural features of the '<em>Table</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_FEATURE_COUNT = MECHANICAL_ASSEMBLY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Table</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TABLE_OPERATION_COUNT = MECHANICAL_ASSEMBLY_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.GripperPartImpl <em>Gripper Part</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see xPPU.ComponentRepository.impl.GripperPartImpl
-	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getGripperPart()
-	 * @generated
-	 */
-	int GRIPPER_PART = 39;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRIPPER_PART__ID = MECHANICAL_ASSEMBLY__ID;
-
-	/**
-	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRIPPER_PART__CONNECTED_INTERFACES = MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES;
-
-	/**
-	 * The number of structural features of the '<em>Gripper Part</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRIPPER_PART_FEATURE_COUNT = MECHANICAL_ASSEMBLY_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Gripper Part</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int GRIPPER_PART_OPERATION_COUNT = MECHANICAL_ASSEMBLY_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link xPPU.ComponentRepository.impl.MicroswitchModuleImpl <em>Microswitch Module</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2629,7 +2363,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getMicroswitchModule()
 	 * @generated
 	 */
-	int MICROSWITCH_MODULE = 40;
+	int MICROSWITCH_MODULE = 35;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2702,7 +2436,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPotentiometer()
 	 * @generated
 	 */
-	int POTENTIOMETER = 41;
+	int POTENTIOMETER = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2766,7 +2500,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getVacuumSwitch()
 	 * @generated
 	 */
-	int VACUUM_SWITCH = 42;
+	int VACUUM_SWITCH = 37;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2830,7 +2564,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getReedSwitch()
 	 * @generated
 	 */
-	int REED_SWITCH = 43;
+	int REED_SWITCH = 38;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2894,7 +2628,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPowerSplitter()
 	 * @generated
 	 */
-	int POWER_SPLITTER = 44;
+	int POWER_SPLITTER = 39;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2958,7 +2692,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getWaterSplitter()
 	 * @generated
 	 */
-	int WATER_SPLITTER = 45;
+	int WATER_SPLITTER = 40;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3022,7 +2756,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPneumaticSplitter()
 	 * @generated
 	 */
-	int PNEUMATIC_SPLITTER = 46;
+	int PNEUMATIC_SPLITTER = 41;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3086,7 +2820,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getCylinderPart()
 	 * @generated
 	 */
-	int CYLINDER_PART = 47;
+	int CYLINDER_PART = 42;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3141,7 +2875,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getMonostableCylinder()
 	 * @generated
 	 */
-	int MONOSTABLE_CYLINDER = 48;
+	int MONOSTABLE_CYLINDER = 43;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3259,7 +2993,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getComponentRepository()
 	 * @generated
 	 */
-	int COMPONENT_REPOSITORY = 49;
+	int COMPONENT_REPOSITORY = 44;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4027,16 +3761,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	EClass getFrame();
 
 	/**
-	 * Returns the meta object for class '{@link xPPU.ComponentRepository.RubberBand <em>Rubber Band</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Rubber Band</em>'.
-	 * @see xPPU.ComponentRepository.RubberBand
-	 * @generated
-	 */
-	EClass getRubberBand();
-
-	/**
 	 * Returns the meta object for class '{@link xPPU.ComponentRepository.Pusher <em>Pusher</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4200,6 +3924,17 @@ public interface ComponentRepositoryPackage extends EPackage {
 	EReference getTurningTable_Potentiometer();
 
 	/**
+	 * Returns the meta object for the reference '{@link xPPU.ComponentRepository.TurningTable#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent</em>'.
+	 * @see xPPU.ComponentRepository.TurningTable#getParent()
+	 * @see #getTurningTable()
+	 * @generated
+	 */
+	EReference getTurningTable_Parent();
+
+	/**
 	 * Returns the meta object for class '{@link xPPU.ComponentRepository.Controller <em>Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4251,90 +3986,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLogicalWiring_BusCable();
-
-	/**
-	 * Returns the meta object for class '{@link xPPU.ComponentRepository.Arm <em>Arm</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Arm</em>'.
-	 * @see xPPU.ComponentRepository.Arm
-	 * @generated
-	 */
-	EClass getArm();
-
-	/**
-	 * Returns the meta object for the reference '{@link xPPU.ComponentRepository.Arm#getMountedTo <em>Mounted To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Mounted To</em>'.
-	 * @see xPPU.ComponentRepository.Arm#getMountedTo()
-	 * @see #getArm()
-	 * @generated
-	 */
-	EReference getArm_MountedTo();
-
-	/**
-	 * Returns the meta object for class '{@link xPPU.ComponentRepository.Ramp <em>Ramp</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ramp</em>'.
-	 * @see xPPU.ComponentRepository.Ramp
-	 * @generated
-	 */
-	EClass getRamp();
-
-	/**
-	 * Returns the meta object for the reference '{@link xPPU.ComponentRepository.Ramp#getScrewing_base <em>Screwing base</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Screwing base</em>'.
-	 * @see xPPU.ComponentRepository.Ramp#getScrewing_base()
-	 * @see #getRamp()
-	 * @generated
-	 */
-	EReference getRamp_Screwing_base();
-
-	/**
-	 * Returns the meta object for the reference '{@link xPPU.ComponentRepository.Ramp#getScrewing_component <em>Screwing component</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Screwing component</em>'.
-	 * @see xPPU.ComponentRepository.Ramp#getScrewing_component()
-	 * @see #getRamp()
-	 * @generated
-	 */
-	EReference getRamp_Screwing_component();
-
-	/**
-	 * Returns the meta object for the reference '{@link xPPU.ComponentRepository.Ramp#getPhysicalconnection <em>Physicalconnection</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Physicalconnection</em>'.
-	 * @see xPPU.ComponentRepository.Ramp#getPhysicalconnection()
-	 * @see #getRamp()
-	 * @generated
-	 */
-	EReference getRamp_Physicalconnection();
-
-	/**
-	 * Returns the meta object for class '{@link xPPU.ComponentRepository.Table <em>Table</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Table</em>'.
-	 * @see xPPU.ComponentRepository.Table
-	 * @generated
-	 */
-	EClass getTable();
-
-	/**
-	 * Returns the meta object for class '{@link xPPU.ComponentRepository.GripperPart <em>Gripper Part</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Gripper Part</em>'.
-	 * @see xPPU.ComponentRepository.GripperPart
-	 * @generated
-	 */
-	EClass getGripperPart();
 
 	/**
 	 * Returns the meta object for class '{@link xPPU.ComponentRepository.MicroswitchModule <em>Microswitch Module</em>}'.
@@ -5195,16 +4846,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 		EClass FRAME = eINSTANCE.getFrame();
 
 		/**
-		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.RubberBandImpl <em>Rubber Band</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xPPU.ComponentRepository.impl.RubberBandImpl
-		 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getRubberBand()
-		 * @generated
-		 */
-		EClass RUBBER_BAND = eINSTANCE.getRubberBand();
-
-		/**
 		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.PusherImpl <em>Pusher</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5329,6 +4970,14 @@ public interface ComponentRepositoryPackage extends EPackage {
 		EReference TURNING_TABLE__POTENTIOMETER = eINSTANCE.getTurningTable_Potentiometer();
 
 		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TURNING_TABLE__PARENT = eINSTANCE.getTurningTable_Parent();
+
+		/**
 		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.ControllerImpl <em>Controller</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5371,78 +5020,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOGICAL_WIRING__BUS_CABLE = eINSTANCE.getLogicalWiring_BusCable();
-
-		/**
-		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.ArmImpl <em>Arm</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xPPU.ComponentRepository.impl.ArmImpl
-		 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getArm()
-		 * @generated
-		 */
-		EClass ARM = eINSTANCE.getArm();
-
-		/**
-		 * The meta object literal for the '<em><b>Mounted To</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference ARM__MOUNTED_TO = eINSTANCE.getArm_MountedTo();
-
-		/**
-		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.RampImpl <em>Ramp</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xPPU.ComponentRepository.impl.RampImpl
-		 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getRamp()
-		 * @generated
-		 */
-		EClass RAMP = eINSTANCE.getRamp();
-
-		/**
-		 * The meta object literal for the '<em><b>Screwing base</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RAMP__SCREWING_BASE = eINSTANCE.getRamp_Screwing_base();
-
-		/**
-		 * The meta object literal for the '<em><b>Screwing component</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RAMP__SCREWING_COMPONENT = eINSTANCE.getRamp_Screwing_component();
-
-		/**
-		 * The meta object literal for the '<em><b>Physicalconnection</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference RAMP__PHYSICALCONNECTION = eINSTANCE.getRamp_Physicalconnection();
-
-		/**
-		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.TableImpl <em>Table</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xPPU.ComponentRepository.impl.TableImpl
-		 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getTable()
-		 * @generated
-		 */
-		EClass TABLE = eINSTANCE.getTable();
-
-		/**
-		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.GripperPartImpl <em>Gripper Part</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see xPPU.ComponentRepository.impl.GripperPartImpl
-		 * @see xPPU.ComponentRepository.impl.ComponentRepositoryPackageImpl#getGripperPart()
-		 * @generated
-		 */
-		EClass GRIPPER_PART = eINSTANCE.getGripperPart();
 
 		/**
 		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.MicroswitchModuleImpl <em>Microswitch Module</em>}' class.

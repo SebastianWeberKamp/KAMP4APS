@@ -1,7 +1,8 @@
 /**
  */
-package xPPU.ComponentRepository;
+package xPPU.MechanicalComponents;
 
+import xPPU.ComponentRepository.MechanicalAssembly;
 
 /**
  * <!-- begin-user-doc -->
@@ -9,7 +10,7 @@ package xPPU.ComponentRepository;
  * <!-- end-user-doc -->
  *
  *
- * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getGripperPart()
+ * @see xPPU.MechanicalComponents.MechanicalComponentsPackage#getGripperPart()
  * @model
  * @generated
  */

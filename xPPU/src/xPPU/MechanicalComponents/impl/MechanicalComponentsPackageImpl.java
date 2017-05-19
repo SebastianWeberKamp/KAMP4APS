@@ -28,12 +28,17 @@ import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
 import xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl;
 
+import xPPU.MechanicalComponents.Arm;
+import xPPU.MechanicalComponents.GripperPart;
 import xPPU.MechanicalComponents.Housing;
 import xPPU.MechanicalComponents.MechanicalComponentsFactory;
 import xPPU.MechanicalComponents.MechanicalComponentsPackage;
 import xPPU.MechanicalComponents.MechanicalPart;
 import xPPU.MechanicalComponents.Pushhead;
+import xPPU.MechanicalComponents.Ramp;
 import xPPU.MechanicalComponents.ReturnSpring;
+import xPPU.MechanicalComponents.RubberBand;
+import xPPU.MechanicalComponents.Table;
 
 import xPPU.ModuleRepository.ModuleRepositoryPackage;
 
@@ -81,6 +86,41 @@ public class MechanicalComponentsPackageImpl extends EPackageImpl implements Mec
 	 * @generated
 	 */
 	private EClass returnSpringEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rubberBandEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass gripperPartEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass armEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass rampEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -219,6 +259,87 @@ public class MechanicalComponentsPackageImpl extends EPackageImpl implements Mec
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRubberBand() {
+		return rubberBandEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getGripperPart() {
+		return gripperPartEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getArm() {
+		return armEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getArm_MountedTo() {
+		return (EReference)armEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getRamp() {
+		return rampEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRamp_Screwing_base() {
+		return (EReference)rampEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRamp_Screwing_component() {
+		return (EReference)rampEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRamp_Physicalconnection() {
+		return (EReference)rampEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTable() {
+		return tableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MechanicalComponentsFactory getMechanicalComponentsFactory() {
 		return (MechanicalComponentsFactory)getEFactoryInstance();
 	}
@@ -250,6 +371,20 @@ public class MechanicalComponentsPackageImpl extends EPackageImpl implements Mec
 		housingEClass = createEClass(HOUSING);
 
 		returnSpringEClass = createEClass(RETURN_SPRING);
+
+		rubberBandEClass = createEClass(RUBBER_BAND);
+
+		gripperPartEClass = createEClass(GRIPPER_PART);
+
+		armEClass = createEClass(ARM);
+		createEReference(armEClass, ARM__MOUNTED_TO);
+
+		rampEClass = createEClass(RAMP);
+		createEReference(rampEClass, RAMP__SCREWING_BASE);
+		createEReference(rampEClass, RAMP__SCREWING_COMPONENT);
+		createEReference(rampEClass, RAMP__PHYSICALCONNECTION);
+
+		tableEClass = createEClass(TABLE);
 	}
 
 	/**
@@ -278,6 +413,7 @@ public class MechanicalComponentsPackageImpl extends EPackageImpl implements Mec
 		// Obtain other dependent packages
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
+		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -288,6 +424,11 @@ public class MechanicalComponentsPackageImpl extends EPackageImpl implements Mec
 		pushheadEClass.getESuperTypes().add(this.getMechanicalPart());
 		housingEClass.getESuperTypes().add(this.getMechanicalPart());
 		returnSpringEClass.getESuperTypes().add(this.getMechanicalPart());
+		rubberBandEClass.getESuperTypes().add(this.getMechanicalPart());
+		gripperPartEClass.getESuperTypes().add(theComponentRepositoryPackage.getMechanicalAssembly());
+		armEClass.getESuperTypes().add(theComponentRepositoryPackage.getMechanicalAssembly());
+		rampEClass.getESuperTypes().add(theComponentRepositoryPackage.getMechanicalAssembly());
+		tableEClass.getESuperTypes().add(theComponentRepositoryPackage.getMechanicalAssembly());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(mechanicalPartEClass, MechanicalPart.class, "MechanicalPart", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -298,6 +439,20 @@ public class MechanicalComponentsPackageImpl extends EPackageImpl implements Mec
 		initEClass(housingEClass, Housing.class, "Housing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(returnSpringEClass, ReturnSpring.class, "ReturnSpring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(rubberBandEClass, RubberBand.class, "RubberBand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(gripperPartEClass, GripperPart.class, "GripperPart", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(armEClass, Arm.class, "Arm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getArm_MountedTo(), theStructureRepositoryPackage.getCrane(), theStructureRepositoryPackage.getCrane_Arm(), "mountedTo", null, 1, 1, Arm.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(rampEClass, Ramp.class, "Ramp", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getRamp_Screwing_base(), theInterfaceRepositoryPackage.getScrewing(), null, "screwing_base", null, 1, 1, Ramp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRamp_Screwing_component(), theInterfaceRepositoryPackage.getScrewing(), null, "screwing_component", null, 1, 1, Ramp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRamp_Physicalconnection(), theInterfaceRepositoryPackage.getPhysicalConnection(), null, "physicalconnection", null, 1, 1, Ramp.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //MechanicalComponentsPackageImpl
