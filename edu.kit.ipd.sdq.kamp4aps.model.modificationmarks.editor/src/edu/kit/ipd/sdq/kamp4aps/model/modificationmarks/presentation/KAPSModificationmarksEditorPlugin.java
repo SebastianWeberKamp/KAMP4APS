@@ -18,7 +18,7 @@ import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the central singleton for the KAPSModificationmarks editor plugin.
@@ -53,7 +53,7 @@ public final class KAPSModificationmarksEditorPlugin extends EMFPlugin {
 		super
 			(new ResourceLocator [] {
 				ModificationmarksEditPlugin.INSTANCE,
-				XppuEditPlugin.INSTANCE,
+				XPPUEditPlugin.INSTANCE,
 			});
 	}
 
