@@ -21,21 +21,26 @@ public abstract class AbstractKAPSDifferenceCalculation<T extends ArchitectureVe
 
 	private final InternalModificationDerivation architectureInternalModificationDerivation = new InternalModificationDerivation();
 	private final SubactivityDerivation architectureSubactivityDerivation = new SubactivityDerivation();
-
+	private ArchitectureVersion version;
+	
 	@Override
 	protected void checkForDifferencesAndAddToWorkplan(Diff diffElement, List<Activity> workplan) {
 		for (ActivityElementType elementType : ActivityElementType.topLevelAPSActivityElementTypes()) {
 			if (detectionRuleAdded(diffElement, elementType.getElementClass())) {
 				Identifier architectureElement = (Identifier) (((ReferenceChange) diffElement).getValue());
-				workplan.add(new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, architectureElement,
+				Activity newActivity = new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, architectureElement,
 						LabelCustomizing.getIdentifierName(architectureElement), null, BasicActivity.ADD,
-						createAddElementDescription(architectureElement)));
+						createAddElementDescription(architectureElement));
+				workplan.add(newActivity);
+				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
 				return;
 			} else if (detectionRuleDeleted(diffElement, elementType.getElementClass())) {
 				Identifier architectureElement = (Identifier) (((ReferenceChange) diffElement).getValue());
-				workplan.add(new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, architectureElement,
+				Activity newActivity = new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, architectureElement,
 						LabelCustomizing.getIdentifierName(architectureElement), null, BasicActivity.REMOVE,
-						createRemoveElementDescription(architectureElement)));
+						createRemoveElementDescription(architectureElement));
+				workplan.add(newActivity);
+				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
 				return;
 			}
 		}
@@ -43,6 +48,7 @@ public abstract class AbstractKAPSDifferenceCalculation<T extends ArchitectureVe
 
 	@Override
 	public List<Activity> deriveWorkplan(T baseVersion, T targetVersion) {
+		this.version = targetVersion;
 		List<Activity> activityList = new ArrayList<Activity>();
 		
 		List<Diff> plantDiff = calculateDiffModel(baseVersion.getXPPUPlant(), targetVersion.getXPPUPlant());

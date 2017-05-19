@@ -338,6 +338,7 @@ public class ArchitectureModelLookup {
 			for(BusSlave bs : bcParams.busSlavesToChange){
 				interfacesOfBusSlaves.add(bs.getSignalinterface_master());
 				interfacesOfBusSlaves.add(bs.getSignalinterface_slave());
+				interfacesOfBusSlaves.addAll(bs.getConnectedInterfaces());
 			}
 			return interfacesOfBusSlaves;
 		}

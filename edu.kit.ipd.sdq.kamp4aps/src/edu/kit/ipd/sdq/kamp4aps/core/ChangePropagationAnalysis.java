@@ -21,6 +21,7 @@ public class ChangePropagationAnalysis  extends AbstractKAPSChangePropagationAna
 	
 	@Override
 	public void runChangePropagationAnalysis(ArchitectureVersion version) {
+		long timeBefore = System.currentTimeMillis();
 		// Setup
 		setChangePropagationDueToHardwareChange(modificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange());
 		
@@ -33,6 +34,8 @@ public class ChangePropagationAnalysis  extends AbstractKAPSChangePropagationAna
 			
 		// Update
 		addAllChangePropagations(version);
+		System.out.println("Time: " + (System.currentTimeMillis() - timeBefore));
+		
 	}
 
 

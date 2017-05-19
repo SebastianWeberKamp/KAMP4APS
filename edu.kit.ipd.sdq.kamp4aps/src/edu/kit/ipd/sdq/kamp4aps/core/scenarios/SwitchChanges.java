@@ -10,17 +10,22 @@ import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPhysicalConnection;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 import xPPU.Plant;
 import xPPU.BusComponents.BusMaster;
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.MicroswitchModule;
+import xPPU.ComponentRepository.TurningTable;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.SignalInterface;
+import xPPU.StructureRepository.Crane;
+import xPPU.StructureRepository.Structure;
 
 public class SwitchChanges {
 
@@ -53,6 +58,29 @@ public class SwitchChanges {
 		modifyPhysicalConnection.setAffectedElement(physicalConnectionSwitch);
 		modifyPhysicalConnection.getCausingElements().add(modifyMicroSwitchModule);
 		
+		for(Component component : version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant()){
+			if(component instanceof TurningTable){
+				TurningTable tt = (TurningTable)component;
+				if(microswitchModule == tt.getMicroswitchModule()){
+					ModifyComponent<Component> mtt = modificationmarksFactory.eINSTANCE.createModifyComponent();
+					mtt.setToolderived(true);
+					mtt.setAffectedElement(tt);
+					mtt.getCausingElements().addAll(initialMarkedMicroswitches);
+					
+					ModifyStructure<Structure> mcrane = modificationmarksFactory.eINSTANCE.createModifyStructure();
+					mcrane.setToolderived(true);
+					mcrane.setAffectedElement(tt.getParent());
+					mcrane.getCausingElements().addAll(initialMarkedMicroswitches);
+					mcrane.getCausingElements().add(tt);
+					
+					if(!changePropagationDueToHardwareChange.getComponentModifications().contains(mtt))
+						changePropagationDueToHardwareChange.getComponentModifications().add(mtt);
+					
+					if(!changePropagationDueToHardwareChange.getStructureModifications().contains(mcrane))
+						changePropagationDueToHardwareChange.getStructureModifications().add(mcrane);
+				}
+			}
+		}
 		List<ModifyInterface<Interface>> modifyInterfaces = new ArrayList<ModifyInterface<Interface>>();
 		for(Interface i : interfaces){
 			ModifyInterface<Interface> modifyInterface = modificationmarksFactory.eINSTANCE.createModifyInterface();
