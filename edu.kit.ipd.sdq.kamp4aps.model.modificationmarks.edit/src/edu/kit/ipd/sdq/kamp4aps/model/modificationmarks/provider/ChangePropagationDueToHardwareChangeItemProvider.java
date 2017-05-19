@@ -75,6 +75,7 @@ public class ChangePropagationDueToHardwareChangeItemProvider extends ChangeProp
 			childrenFeatures.add(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS);
 			childrenFeatures.add(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS);
 			childrenFeatures.add(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS);
+			childrenFeatures.add(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__STRUCTURE_MODIFICATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -137,6 +138,7 @@ public class ChangePropagationDueToHardwareChangeItemProvider extends ChangeProp
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__BUS_CABLE_MODIFICATIONS:
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__INTERFACE_MODIFICATIONS:
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS:
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__STRUCTURE_MODIFICATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -253,6 +255,11 @@ public class ChangePropagationDueToHardwareChangeItemProvider extends ChangeProp
 			(createChildParameter
 				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS,
 				 modificationmarksFactory.eINSTANCE.createModifySensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(modificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__STRUCTURE_MODIFICATIONS,
+				 modificationmarksFactory.eINSTANCE.createModifyStructure()));
 	}
 
 	/**

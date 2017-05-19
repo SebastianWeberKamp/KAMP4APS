@@ -5,7 +5,7 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 import edu.kit.ipd.sdq.amp.model.modificationmarks.provider.ModificationmarksEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the central singleton for the KAPSModificationmarks edit plugin.
@@ -40,7 +40,7 @@ public final class KAPSModificationmarksEditPlugin extends EMFPlugin {
 		super
 		  (new ResourceLocator [] {
 		     ModificationmarksEditPlugin.INSTANCE,
-		     XppuEditPlugin.INSTANCE,
+		     XPPUEditPlugin.INSTANCE,
 		   });
 	}
 
