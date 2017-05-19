@@ -59,6 +59,12 @@
         <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
       </eGenericType>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="structureModifications"
+        upperBound="-1" containment="true">
+      <eGenericType eClassifier="#//ModifyStructure">
+        <eTypeArguments eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
+      </eGenericType>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModifyComponent">
     <eTypeParameters name="T">

@@ -7,6 +7,7 @@ import edu.kit.ipd.sdq.amp.model.modificationmarks.ChangePropagationStep;
 import org.eclipse.emf.common.util.EList;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
+import xPPU.StructureRepository.Structure;
 
 /**
  * <!-- begin-user-doc -->
@@ -27,6 +28,7 @@ import xPPU.InterfaceRepository.Interface;
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getBusCableModifications <em>Bus Cable Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getInterfaceModifications <em>Interface Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getComponentModifications <em>Component Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getStructureModifications <em>Structure Modifications</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange()
@@ -193,5 +195,21 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * @generated
 	 */
 	EList<ModifyComponent<Component>> getComponentModifications();
+
+	/**
+	 * Returns the value of the '<em><b>Structure Modifications</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure}&lt;xPPU.StructureRepository.Structure>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Structure Modifications</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Structure Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_StructureModifications()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ModifyStructure<Structure>> getStructureModifications();
 
 } // ChangePropagationDueToHardwareChange

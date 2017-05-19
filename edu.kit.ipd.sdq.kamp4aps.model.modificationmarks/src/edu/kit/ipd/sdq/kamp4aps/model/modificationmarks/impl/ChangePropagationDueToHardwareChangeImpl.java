@@ -14,6 +14,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPhysicalConnection;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignalinterface;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
+import xPPU.StructureRepository.Structure;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,6 +46,7 @@ import xPPU.InterfaceRepository.Interface;
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ChangePropagationDueToHardwareChangeImpl#getBusCableModifications <em>Bus Cable Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ChangePropagationDueToHardwareChangeImpl#getInterfaceModifications <em>Interface Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ChangePropagationDueToHardwareChangeImpl#getComponentModifications <em>Component Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.ChangePropagationDueToHardwareChangeImpl#getStructureModifications <em>Structure Modifications</em>}</li>
  * </ul>
  *
  * @generated
@@ -148,6 +151,16 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * @ordered
 	 */
 	protected EList<ModifyComponent<Component>> componentModifications;
+
+	/**
+	 * The cached value of the '{@link #getStructureModifications() <em>Structure Modifications</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStructureModifications()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<ModifyStructure<Structure>> structureModifications;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -293,6 +306,18 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<ModifyStructure<Structure>> getStructureModifications() {
+		if (structureModifications == null) {
+			structureModifications = new EObjectContainmentEList<ModifyStructure<Structure>>(ModifyStructure.class, this, modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__STRUCTURE_MODIFICATIONS);
+		}
+		return structureModifications;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -316,6 +341,8 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 				return ((InternalEList<?>)getInterfaceModifications()).basicRemove(otherEnd, msgs);
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS:
 				return ((InternalEList<?>)getComponentModifications()).basicRemove(otherEnd, msgs);
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__STRUCTURE_MODIFICATIONS:
+				return ((InternalEList<?>)getStructureModifications()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -348,6 +375,8 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 				return getInterfaceModifications();
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS:
 				return getComponentModifications();
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__STRUCTURE_MODIFICATIONS:
+				return getStructureModifications();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -401,6 +430,10 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 				getComponentModifications().clear();
 				getComponentModifications().addAll((Collection<? extends ModifyComponent<Component>>)newValue);
 				return;
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__STRUCTURE_MODIFICATIONS:
+				getStructureModifications().clear();
+				getStructureModifications().addAll((Collection<? extends ModifyStructure<Structure>>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -443,6 +476,9 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS:
 				getComponentModifications().clear();
 				return;
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__STRUCTURE_MODIFICATIONS:
+				getStructureModifications().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -475,6 +511,8 @@ public class ChangePropagationDueToHardwareChangeImpl extends ChangePropagationS
 				return interfaceModifications != null && !interfaceModifications.isEmpty();
 			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS:
 				return componentModifications != null && !componentModifications.isEmpty();
+			case modificationmarksPackage.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__STRUCTURE_MODIFICATIONS:
+				return structureModifications != null && !structureModifications.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
