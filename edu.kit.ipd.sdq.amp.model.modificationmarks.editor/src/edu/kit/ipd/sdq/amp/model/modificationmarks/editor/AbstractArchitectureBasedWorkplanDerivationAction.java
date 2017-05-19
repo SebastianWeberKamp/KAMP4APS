@@ -42,6 +42,8 @@ public abstract class AbstractArchitectureBasedWorkplanDerivationAction<T extend
 		}
 		
 		if (selectedElement != null) {
+			long timeBefore = System.currentTimeMillis();
+			long timeAfter = 0;
 			if (selectedElement instanceof AbstractModificationRepository) {
 				URI resourceURI = ((AbstractModificationRepository<?,?>)selectedElement).eResource().getURI();
 				String nameOfTargetVersionFolder = resourceURI.trimSegments(1).lastSegment();
@@ -67,6 +69,8 @@ public abstract class AbstractArchitectureBasedWorkplanDerivationAction<T extend
 					this.getArchitectureVersionPersistency().saveActivityListToExcelFile(
 							targetFolderPathString, "activitylist-" + usernameSuffix + "-"
 							+ nameOfTargetVersionFolder, enrichedActivityList);
+				timeAfter = System.currentTimeMillis();
+				System.out.println("Time: " + (timeAfter - timeBefore));
 					
 					showMessage("Activity list has been calculated.");
 					PlatformUI.getWorkbench().saveAllEditors(false);				
@@ -78,6 +82,7 @@ public abstract class AbstractArchitectureBasedWorkplanDerivationAction<T extend
 				if (targetversion == null) {
 					showMessage("Activity list could not be calculated, as the target version was not found.");
 				}
+
 			}
 		}
 	}
