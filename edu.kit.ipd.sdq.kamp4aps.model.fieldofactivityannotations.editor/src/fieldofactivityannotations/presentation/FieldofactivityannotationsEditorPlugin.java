@@ -7,7 +7,7 @@ import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the central singleton for the Fieldofactivityannotations editor plugin.
@@ -41,7 +41,7 @@ public final class FieldofactivityannotationsEditorPlugin extends EMFPlugin {
 	public FieldofactivityannotationsEditorPlugin() {
 		super
 			(new ResourceLocator [] {
-				XppuEditPlugin.INSTANCE,
+				XPPUEditPlugin.INSTANCE,
 			});
 	}
 
