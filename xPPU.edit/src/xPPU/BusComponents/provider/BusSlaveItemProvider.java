@@ -19,7 +19,7 @@ import xPPU.BusComponents.BusSlave;
 
 import xPPU.ComponentRepository.provider.ComponentItemProvider;
 
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link xPPU.BusComponents.BusSlave} object.
@@ -158,7 +158,7 @@ public class BusSlaveItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return XppuEditPlugin.INSTANCE;
+		return XPPUEditPlugin.INSTANCE;
 	}
 
 }

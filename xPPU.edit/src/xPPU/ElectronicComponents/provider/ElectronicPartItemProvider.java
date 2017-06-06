@@ -12,6 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
@@ -22,7 +23,7 @@ import xPPU.ElectronicComponents.ElectronicPart;
 
 import xPPU.InterfaceRepository.InterfaceRepositoryFactory;
 
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ElectronicComponents.ElectronicPart} object.
@@ -152,7 +153,7 @@ public class ElectronicPartItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return XppuEditPlugin.INSTANCE;
+		return XPPUEditPlugin.INSTANCE;
 	}
 
 }

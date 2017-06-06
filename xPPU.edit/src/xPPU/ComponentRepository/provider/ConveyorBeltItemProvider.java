@@ -18,6 +18,8 @@ import xPPU.ComponentRepository.ComponentRepositoryFactory;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 import xPPU.ComponentRepository.ConveyorBelt;
 
+import xPPU.MechanicalComponents.MechanicalComponentsFactory;
+
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.ConveyorBelt} object.
  * <!-- begin-user-doc -->
@@ -146,7 +148,7 @@ public class ConveyorBeltItemProvider extends ComponentItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ComponentRepositoryPackage.Literals.CONVEYOR_BELT__RUBBER_BAND,
-				 ComponentRepositoryFactory.eINSTANCE.createRubberBand()));
+				 MechanicalComponentsFactory.eINSTANCE.createRubberBand()));
 	}
 
 }

@@ -31,7 +31,7 @@ import xPPU.ModuleRepository.ModuleRepositoryFactory;
 import xPPU.StructureRepository.Structure;
 import xPPU.StructureRepository.StructureRepositoryPackage;
 
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link xPPU.StructureRepository.Structure} object.
@@ -295,11 +295,6 @@ public class StructureItemProvider extends IdentifierItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
-				 ComponentRepositoryFactory.eINSTANCE.createRubberBand()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
 				 ComponentRepositoryFactory.eINSTANCE.createPusher()));
 
 		newChildDescriptors.add
@@ -316,21 +311,6 @@ public class StructureItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
 				 ComponentRepositoryFactory.eINSTANCE.createLogicalWiring()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
-				 ComponentRepositoryFactory.eINSTANCE.createArm()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
-				 ComponentRepositoryFactory.eINSTANCE.createTable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
-				 ComponentRepositoryFactory.eINSTANCE.createGripperPart()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -461,6 +441,26 @@ public class StructureItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
 				 MechanicalComponentsFactory.eINSTANCE.createReturnSpring()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
+				 MechanicalComponentsFactory.eINSTANCE.createRubberBand()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
+				 MechanicalComponentsFactory.eINSTANCE.createGripperPart()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
+				 MechanicalComponentsFactory.eINSTANCE.createArm()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
+				 MechanicalComponentsFactory.eINSTANCE.createTable()));
 	}
 
 	/**
@@ -471,7 +471,7 @@ public class StructureItemProvider extends IdentifierItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return XppuEditPlugin.INSTANCE;
+		return XPPUEditPlugin.INSTANCE;
 	}
 
 }

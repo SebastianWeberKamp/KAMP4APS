@@ -232,7 +232,7 @@ public class PlantItemProvider extends IdentifierItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return XppuEditPlugin.INSTANCE;
+		return XPPUEditPlugin.INSTANCE;
 	}
 
 }

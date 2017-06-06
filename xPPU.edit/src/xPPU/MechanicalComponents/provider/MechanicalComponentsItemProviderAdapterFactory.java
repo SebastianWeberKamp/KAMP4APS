@@ -118,6 +118,98 @@ public class MechanicalComponentsItemProviderAdapterFactory extends MechanicalCo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.MechanicalComponents.RubberBand} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RubberBandItemProvider rubberBandItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.MechanicalComponents.RubberBand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRubberBandAdapter() {
+		if (rubberBandItemProvider == null) {
+			rubberBandItemProvider = new RubberBandItemProvider(this);
+		}
+
+		return rubberBandItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.MechanicalComponents.GripperPart} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected GripperPartItemProvider gripperPartItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.MechanicalComponents.GripperPart}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createGripperPartAdapter() {
+		if (gripperPartItemProvider == null) {
+			gripperPartItemProvider = new GripperPartItemProvider(this);
+		}
+
+		return gripperPartItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.MechanicalComponents.Arm} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ArmItemProvider armItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.MechanicalComponents.Arm}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createArmAdapter() {
+		if (armItemProvider == null) {
+			armItemProvider = new ArmItemProvider(this);
+		}
+
+		return armItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.MechanicalComponents.Table} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableItemProvider tableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.MechanicalComponents.Table}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableAdapter() {
+		if (tableItemProvider == null) {
+			tableItemProvider = new TableItemProvider(this);
+		}
+
+		return tableItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -218,6 +310,10 @@ public class MechanicalComponentsItemProviderAdapterFactory extends MechanicalCo
 	public void dispose() {
 		if (housingItemProvider != null) housingItemProvider.dispose();
 		if (returnSpringItemProvider != null) returnSpringItemProvider.dispose();
+		if (rubberBandItemProvider != null) rubberBandItemProvider.dispose();
+		if (gripperPartItemProvider != null) gripperPartItemProvider.dispose();
+		if (armItemProvider != null) armItemProvider.dispose();
+		if (tableItemProvider != null) tableItemProvider.dispose();
 	}
 
 }

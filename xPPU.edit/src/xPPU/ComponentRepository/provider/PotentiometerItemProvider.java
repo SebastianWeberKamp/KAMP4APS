@@ -17,7 +17,7 @@ import xPPU.ComponentRepository.Potentiometer;
 
 import xPPU.ElectronicComponents.provider.ElectronicPartItemProvider;
 
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.Potentiometer} object.
@@ -110,7 +110,7 @@ public class PotentiometerItemProvider extends ElectronicPartItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return XppuEditPlugin.INSTANCE;
+		return XPPUEditPlugin.INSTANCE;
 	}
 
 }

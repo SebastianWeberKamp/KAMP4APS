@@ -23,7 +23,7 @@ import xPPU.ComponentRepository.MicroswitchModule;
 
 import xPPU.ElectronicComponents.provider.SwitchItemProvider;
 
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.MicroswitchModule} object.
@@ -167,7 +167,7 @@ public class MicroswitchModuleItemProvider extends SwitchItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return XppuEditPlugin.INSTANCE;
+		return XPPUEditPlugin.INSTANCE;
 	}
 
 }

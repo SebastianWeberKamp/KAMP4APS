@@ -172,7 +172,7 @@ import xPPU.ModuleRepository.provider.ModuleRepositoryItemProviderAdapterFactory
 
 import xPPU.StructureRepository.provider.StructureRepositoryItemProviderAdapterFactory;
 
-import xPPU.presentation.XppuEditorPlugin;
+import xPPU.presentation.XPPUEditorPlugin;
 
 import xPPU.provider.XPPUItemProviderAdapterFactory;
 
@@ -548,7 +548,7 @@ public class InterfaceRepositoryEditor
 					}
 				}
 				catch (CoreException exception) {
-					XppuEditorPlugin.INSTANCE.log(exception);
+					XPPUEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -664,7 +664,7 @@ public class InterfaceRepositoryEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					XppuEditorPlugin.INSTANCE.log(exception);
+					XPPUEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -675,7 +675,7 @@ public class InterfaceRepositoryEditor
 						markerHelper.createMarkers(diagnostic);
 					}
 					catch (CoreException exception) {
-						XppuEditorPlugin.INSTANCE.log(exception);
+						XPPUEditorPlugin.INSTANCE.log(exception);
 					}
 				}
 			}
@@ -1549,7 +1549,7 @@ public class InterfaceRepositoryEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			XppuEditorPlugin.INSTANCE.log(exception);
+			XPPUEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1753,7 +1753,7 @@ public class InterfaceRepositoryEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return XppuEditorPlugin.INSTANCE.getString(key);
+		return XPPUEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1763,7 +1763,7 @@ public class InterfaceRepositoryEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return XppuEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return XPPUEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

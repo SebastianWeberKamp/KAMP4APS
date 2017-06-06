@@ -19,7 +19,7 @@ import xPPU.ComponentRepository.provider.ComponentItemProvider;
 import xPPU.MechanicalComponents.MechanicalComponentsPackage;
 import xPPU.MechanicalComponents.MechanicalPart;
 
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link xPPU.MechanicalComponents.MechanicalPart} object.
@@ -124,7 +124,7 @@ public class MechanicalPartItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return XppuEditPlugin.INSTANCE;
+		return XPPUEditPlugin.INSTANCE;
 	}
 
 }

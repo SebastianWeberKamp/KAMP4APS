@@ -578,29 +578,6 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.ComponentRepository.RubberBand} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected RubberBandItemProvider rubberBandItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xPPU.ComponentRepository.RubberBand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createRubberBandAdapter() {
-		if (rubberBandItemProvider == null) {
-			rubberBandItemProvider = new RubberBandItemProvider(this);
-		}
-
-		return rubberBandItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link xPPU.ComponentRepository.Pusher} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -690,75 +667,6 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 		}
 
 		return logicalWiringItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.ComponentRepository.Arm} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ArmItemProvider armItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xPPU.ComponentRepository.Arm}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createArmAdapter() {
-		if (armItemProvider == null) {
-			armItemProvider = new ArmItemProvider(this);
-		}
-
-		return armItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.ComponentRepository.Table} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected TableItemProvider tableItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xPPU.ComponentRepository.Table}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createTableAdapter() {
-		if (tableItemProvider == null) {
-			tableItemProvider = new TableItemProvider(this);
-		}
-
-		return tableItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.ComponentRepository.GripperPart} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GripperPartItemProvider gripperPartItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xPPU.ComponentRepository.GripperPart}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createGripperPartAdapter() {
-		if (gripperPartItemProvider == null) {
-			gripperPartItemProvider = new GripperPartItemProvider(this);
-		}
-
-		return gripperPartItemProvider;
 	}
 
 	/**
@@ -1112,14 +1020,10 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 		if (vacuumGripperItemProvider != null) vacuumGripperItemProvider.dispose();
 		if (conveyorBeltItemProvider != null) conveyorBeltItemProvider.dispose();
 		if (frameItemProvider != null) frameItemProvider.dispose();
-		if (rubberBandItemProvider != null) rubberBandItemProvider.dispose();
 		if (pusherItemProvider != null) pusherItemProvider.dispose();
 		if (turningTableItemProvider != null) turningTableItemProvider.dispose();
 		if (controllerItemProvider != null) controllerItemProvider.dispose();
 		if (logicalWiringItemProvider != null) logicalWiringItemProvider.dispose();
-		if (armItemProvider != null) armItemProvider.dispose();
-		if (tableItemProvider != null) tableItemProvider.dispose();
-		if (gripperPartItemProvider != null) gripperPartItemProvider.dispose();
 		if (microswitchModuleItemProvider != null) microswitchModuleItemProvider.dispose();
 		if (potentiometerItemProvider != null) potentiometerItemProvider.dispose();
 		if (vacuumSwitchItemProvider != null) vacuumSwitchItemProvider.dispose();

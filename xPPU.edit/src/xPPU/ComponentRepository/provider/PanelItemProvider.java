@@ -19,7 +19,7 @@ import xPPU.ComponentRepository.Panel;
 
 import xPPU.Identifier.provider.IdentifierItemProvider;
 
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.Panel} object.
@@ -124,7 +124,7 @@ public class PanelItemProvider extends IdentifierItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return XppuEditPlugin.INSTANCE;
+		return XPPUEditPlugin.INSTANCE;
 	}
 
 }

@@ -7,6 +7,8 @@ import junit.textui.TestRunner;
 import xPPU.ComponentRepository.ComponentRepositoryFactory;
 import xPPU.ComponentRepository.RegularRamp;
 
+import xPPU.MechanicalComponents.tests.RampTest;
+
 /**
  * <!-- begin-user-doc -->
  * A test case for the model object '<em><b>Regular Ramp</b></em>'.

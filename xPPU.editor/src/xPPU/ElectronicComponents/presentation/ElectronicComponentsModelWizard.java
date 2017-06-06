@@ -71,7 +71,7 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 
 import xPPU.ElectronicComponents.ElectronicComponentsFactory;
 import xPPU.ElectronicComponents.ElectronicComponentsPackage;
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 
 import org.eclipse.core.runtime.Path;
@@ -84,7 +84,7 @@ import org.eclipse.ui.IWorkbenchPart;
 import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
 
-import xPPU.presentation.XppuEditorPlugin;
+import xPPU.presentation.XPPUEditorPlugin;
 
 
 /**
@@ -101,7 +101,7 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 	 * @generated
 	 */
 	public static final List<String> FILE_EXTENSIONS =
-		Collections.unmodifiableList(Arrays.asList(XppuEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsEditorFilenameExtensions").split("\\s*,\\s*")));
+		Collections.unmodifiableList(Arrays.asList(XPPUEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsEditorFilenameExtensions").split("\\s*,\\s*")));
 
 	/**
 	 * A formatted list of supported file extensions, suitable for display.
@@ -110,7 +110,7 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 	 * @generated
 	 */
 	public static final String FORMATTED_FILE_EXTENSIONS =
-		XppuEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
+		XPPUEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsEditorFilenameExtensions").replaceAll("\\s*,\\s*", ", ");
 
 	/**
 	 * This caches an instance of the model package.
@@ -177,8 +177,8 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 	public void init(IWorkbench workbench, IStructuredSelection selection) {
 		this.workbench = workbench;
 		this.selection = selection;
-		setWindowTitle(XppuEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
-		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(XppuEditorPlugin.INSTANCE.getImage("full/wizban/NewElectronicComponents")));
+		setWindowTitle(XPPUEditorPlugin.INSTANCE.getString("_UI_Wizard_label"));
+		setDefaultPageImageDescriptor(ExtendedImageRegistry.INSTANCE.getImageDescriptor(XPPUEditorPlugin.INSTANCE.getImage("full/wizban/NewElectronicComponents")));
 	}
 
 	/**
@@ -261,7 +261,7 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 							resource.save(options);
 						}
 						catch (Exception exception) {
-							XppuEditorPlugin.INSTANCE.log(exception);
+							XPPUEditorPlugin.INSTANCE.log(exception);
 						}
 						finally {
 							progressMonitor.done();
@@ -294,14 +294,14 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 					 workbench.getEditorRegistry().getDefaultEditor(modelFile.getFullPath().toString()).getId());					 	 
 			}
 			catch (PartInitException exception) {
-				MessageDialog.openError(workbenchWindow.getShell(), XppuEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
+				MessageDialog.openError(workbenchWindow.getShell(), XPPUEditorPlugin.INSTANCE.getString("_UI_OpenEditorError_label"), exception.getMessage());
 				return false;
 			}
 
 			return true;
 		}
 		catch (Exception exception) {
-			XppuEditorPlugin.INSTANCE.log(exception);
+			XPPUEditorPlugin.INSTANCE.log(exception);
 			return false;
 		}
 	}
@@ -335,7 +335,7 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 				String extension = new Path(getFileName()).getFileExtension();
 				if (extension == null || !FILE_EXTENSIONS.contains(extension)) {
 					String key = FILE_EXTENSIONS.size() > 1 ? "_WARN_FilenameExtensions" : "_WARN_FilenameExtension";
-					setErrorMessage(XppuEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
+					setErrorMessage(XPPUEditorPlugin.INSTANCE.getString(key, new Object [] { FORMATTED_FILE_EXTENSIONS }));
 					return false;
 				}
 				return true;
@@ -397,7 +397,8 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 		 * @generated
 		 */
 		public void createControl(Composite parent) {
-			Composite composite = new Composite(parent, SWT.NONE); {
+			Composite composite = new Composite(parent, SWT.NONE);
+			{
 				GridLayout layout = new GridLayout();
 				layout.numColumns = 1;
 				layout.verticalSpacing = 12;
@@ -412,7 +413,7 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 
 			Label containerLabel = new Label(composite, SWT.LEFT);
 			{
-				containerLabel.setText(XppuEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
+				containerLabel.setText(XPPUEditorPlugin.INSTANCE.getString("_UI_ModelObject"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -438,7 +439,7 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 
 			Label encodingLabel = new Label(composite, SWT.LEFT);
 			{
-				encodingLabel.setText(XppuEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
+				encodingLabel.setText(XPPUEditorPlugin.INSTANCE.getString("_UI_XMLEncoding"));
 
 				GridData data = new GridData();
 				data.horizontalAlignment = GridData.FILL;
@@ -537,10 +538,10 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 		 */
 		protected String getLabel(String typeName) {
 			try {
-				return XppuEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
+				return XPPUEditPlugin.INSTANCE.getString("_UI_" + typeName + "_type");
 			}
 			catch(MissingResourceException mre) {
-				XppuEditorPlugin.INSTANCE.log(mre);
+				XPPUEditorPlugin.INSTANCE.log(mre);
 			}
 			return typeName;
 		}
@@ -553,7 +554,7 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 		protected Collection<String> getEncodings() {
 			if (encodings == null) {
 				encodings = new ArrayList<String>();
-				for (StringTokenizer stringTokenizer = new StringTokenizer(XppuEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
+				for (StringTokenizer stringTokenizer = new StringTokenizer(XPPUEditorPlugin.INSTANCE.getString("_UI_XMLEncodingChoices")); stringTokenizer.hasMoreTokens(); ) {
 					encodings.add(stringTokenizer.nextToken());
 				}
 			}
@@ -572,9 +573,9 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 		// Create a page, set the title, and the initial model file name.
 		//
 		newFileCreationPage = new ElectronicComponentsModelWizardNewFileCreationPage("Whatever", selection);
-		newFileCreationPage.setTitle(XppuEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsModelWizard_label"));
-		newFileCreationPage.setDescription(XppuEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsModelWizard_description"));
-		newFileCreationPage.setFileName(XppuEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
+		newFileCreationPage.setTitle(XPPUEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsModelWizard_label"));
+		newFileCreationPage.setDescription(XPPUEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsModelWizard_description"));
+		newFileCreationPage.setFileName(XPPUEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsEditorFilenameDefaultBase") + "." + FILE_EXTENSIONS.get(0));
 		addPage(newFileCreationPage);
 
 		// Try and get the resource selection to determine a current directory for the file dialog.
@@ -600,7 +601,7 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 
 					// Make up a unique new name here.
 					//
-					String defaultModelBaseFilename = XppuEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsEditorFilenameDefaultBase");
+					String defaultModelBaseFilename = XPPUEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsEditorFilenameDefaultBase");
 					String defaultModelFilenameExtension = FILE_EXTENSIONS.get(0);
 					String modelFilename = defaultModelBaseFilename + "." + defaultModelFilenameExtension;
 					for (int i = 1; ((IContainer)selectedResource).findMember(modelFilename) != null; ++i) {
@@ -611,8 +612,8 @@ public class ElectronicComponentsModelWizard extends Wizard implements INewWizar
 			}
 		}
 		initialObjectCreationPage = new ElectronicComponentsModelWizardInitialObjectCreationPage("Whatever2");
-		initialObjectCreationPage.setTitle(XppuEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsModelWizard_label"));
-		initialObjectCreationPage.setDescription(XppuEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
+		initialObjectCreationPage.setTitle(XPPUEditorPlugin.INSTANCE.getString("_UI_ElectronicComponentsModelWizard_label"));
+		initialObjectCreationPage.setDescription(XPPUEditorPlugin.INSTANCE.getString("_UI_Wizard_initial_object_description"));
 		addPage(initialObjectCreationPage);
 	}
 

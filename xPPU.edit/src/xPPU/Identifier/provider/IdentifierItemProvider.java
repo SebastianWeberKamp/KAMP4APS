@@ -25,7 +25,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
 import xPPU.Identifier.Identifier;
 import xPPU.Identifier.IdentifierPackage;
 
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link xPPU.Identifier.Identifier} object.
@@ -143,7 +143,7 @@ public class IdentifierItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return XppuEditPlugin.INSTANCE;
+		return XPPUEditPlugin.INSTANCE;
 	}
 
 }

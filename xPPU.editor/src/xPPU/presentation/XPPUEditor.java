@@ -546,7 +546,7 @@ public class XPPUEditor
 					}
 				}
 				catch (CoreException exception) {
-					XppuEditorPlugin.INSTANCE.log(exception);
+					XPPUEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -662,7 +662,7 @@ public class XPPUEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					XppuEditorPlugin.INSTANCE.log(exception);
+					XPPUEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -673,7 +673,7 @@ public class XPPUEditor
 						markerHelper.createMarkers(diagnostic);
 					}
 					catch (CoreException exception) {
-						XppuEditorPlugin.INSTANCE.log(exception);
+						XPPUEditorPlugin.INSTANCE.log(exception);
 					}
 				}
 			}
@@ -1547,7 +1547,7 @@ public class XPPUEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			XppuEditorPlugin.INSTANCE.log(exception);
+			XPPUEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1751,7 +1751,7 @@ public class XPPUEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return XppuEditorPlugin.INSTANCE.getString(key);
+		return XPPUEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1761,7 +1761,7 @@ public class XPPUEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return XppuEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return XPPUEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

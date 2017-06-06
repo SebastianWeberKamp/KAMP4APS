@@ -19,7 +19,7 @@ import xPPU.Identifier.provider.IdentifierItemProvider;
 import xPPU.ModuleRepository.Module;
 import xPPU.ModuleRepository.ModuleRepositoryPackage;
 
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ModuleRepository.Module} object.
@@ -135,7 +135,7 @@ public class ModuleItemProvider extends IdentifierItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return XppuEditPlugin.INSTANCE;
+		return XPPUEditPlugin.INSTANCE;
 	}
 
 }

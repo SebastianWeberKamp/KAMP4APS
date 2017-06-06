@@ -17,7 +17,7 @@ import xPPU.ComponentRepository.ReedSwitch;
 
 import xPPU.ElectronicComponents.provider.SwitchItemProvider;
 
-import xPPU.provider.XppuEditPlugin;
+import xPPU.provider.XPPUEditPlugin;
 
 /**
  * This is the item provider adapter for a {@link xPPU.ComponentRepository.ReedSwitch} object.
@@ -110,7 +110,7 @@ public class ReedSwitchItemProvider extends SwitchItemProvider {
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return XppuEditPlugin.INSTANCE;
+		return XPPUEditPlugin.INSTANCE;
 	}
 
 }
