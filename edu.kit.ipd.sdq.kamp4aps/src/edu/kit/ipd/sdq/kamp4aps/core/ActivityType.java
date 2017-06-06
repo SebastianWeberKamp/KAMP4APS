@@ -1,6 +1,6 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
-import edu.kit.ipd.sdq.amp.workplan.AbstractActivityType;
+import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityType;
 
 public enum ActivityType implements AbstractActivityType {
 	ARCHITECTUREMODELDIFF("Architecture-related activity"),

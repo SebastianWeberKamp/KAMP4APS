@@ -9,7 +9,7 @@ import java.util.Set;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
-import edu.kit.ipd.sdq.amp.util.MapUtil;
+import edu.kit.ipd.sdq.kamp.util.MapUtil;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
 import xPPU.BusComponents.BusBox;
 import xPPU.BusComponents.BusCable;

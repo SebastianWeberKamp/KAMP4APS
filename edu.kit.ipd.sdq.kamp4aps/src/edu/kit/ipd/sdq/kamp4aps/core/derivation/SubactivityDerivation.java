@@ -1,8 +1,8 @@
 package edu.kit.ipd.sdq.kamp4aps.core.derivation;
 
-import edu.kit.ipd.sdq.amp.workplan.AbstractActivityElementType;
-import edu.kit.ipd.sdq.amp.workplan.Activity;
-import edu.kit.ipd.sdq.amp.workplan.BasicActivity;
+import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
+import edu.kit.ipd.sdq.kamp.workplan.Activity;
+import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;

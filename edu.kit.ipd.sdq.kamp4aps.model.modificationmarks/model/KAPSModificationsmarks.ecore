@@ -7,9 +7,9 @@
     <eTypeParameters name="T">
       <eBounds eClassifier="#//KAPSSeedModifications"/>
     </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModificationRepository">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModificationRepository">
       <eTypeArguments eTypeParameter="#//AbstractKAPSModificationRepository/T"/>
-      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//ChangePropagationStep"/>
+      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/modificationmarks.ecore#//ChangePropagationStep"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="KAPSModificationRepository">
@@ -17,7 +17,7 @@
       <eTypeArguments eClassifier="#//KAPSSeedModifications"/>
     </eGenericSuperTypes>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="KAPSSeedModifications" eSuperTypes="../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractSeedModifications">
+  <eClassifiers xsi:type="ecore:EClass" name="KAPSSeedModifications" eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/modificationmarks.ecore#//AbstractSeedModifications">
     <eStructuralFeatures xsi:type="ecore:EReference" name="busBoxModifications" upperBound="-1"
         eType="#//ModifyBusBox" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sensorModifications" upperBound="-1"
@@ -30,7 +30,7 @@
         upperBound="-1" eType="#//ModifyMicroSwitchModule" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ChangePropagationDueToHardwareChange"
-      eSuperTypes="../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//ChangePropagationStep">
+      eSuperTypes="../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/modificationmarks.ecore#//ChangePropagationStep">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sensorModifications" upperBound="-1"
         eType="#//ModifySensor" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="signalinterfaceModifications"
@@ -70,7 +70,7 @@
     <eTypeParameters name="T">
       <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
     </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
       <eTypeArguments eTypeParameter="#//ModifyComponent/T"/>
       <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     </eGenericSuperTypes>
@@ -79,7 +79,7 @@
     <eTypeParameters name="T">
       <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//ModuleRepository/Module"/>
     </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
       <eTypeArguments eTypeParameter="#//ModifyModule/T"/>
       <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     </eGenericSuperTypes>
@@ -88,7 +88,7 @@
     <eTypeParameters name="T">
       <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//StructureRepository/Structure"/>
     </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
       <eTypeArguments eTypeParameter="#//ModifyStructure/T"/>
       <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     </eGenericSuperTypes>
@@ -97,7 +97,7 @@
     <eTypeParameters name="T">
       <eBounds eClassifier="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
     </eTypeParameters>
-    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.amp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
+    <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/modificationmarks.ecore#//AbstractModification">
       <eTypeArguments eTypeParameter="#//ModifyInterface/T"/>
       <eTypeArguments eClassifier="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"/>
     </eGenericSuperTypes>

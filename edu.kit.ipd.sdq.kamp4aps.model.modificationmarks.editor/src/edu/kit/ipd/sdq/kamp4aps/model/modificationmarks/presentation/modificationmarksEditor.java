@@ -162,7 +162,7 @@ import de.uka.ipd.sdq.stoex.provider.StoexItemProviderAdapterFactory;
 
 import de.uka.ipd.sdq.units.provider.UnitsItemProviderAdapterFactory;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.provider.ModificationmarksItemProviderAdapterFactory;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.ModificationmarksItemProviderAdapterFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.modificationmarksItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;

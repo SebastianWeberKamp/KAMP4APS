@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.EObject;
 
 import DeploymentContext.ComponentCorrelation;
 import DeploymentContext.VariableMapping;
-import edu.kit.ipd.sdq.amp.workplan.Activity;
+import edu.kit.ipd.sdq.kamp.workplan.Activity;
 import fieldofactivityannotations.CalibrationConfiguration;
 import fieldofactivityannotations.ComponentDocumentationFiles;
 import fieldofactivityannotations.ComponentDrawing;

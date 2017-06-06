@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.ModificationmarksPackage;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSModificationRepository;

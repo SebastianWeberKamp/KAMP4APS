@@ -2,9 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.ChangePropagationStep;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.impl.AbstractModificationRepositoryImpl;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.AbstractModificationRepositoryImpl;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;

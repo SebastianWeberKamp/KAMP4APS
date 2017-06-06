@@ -3,7 +3,7 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.provider.ChangePropagationStepItemProvider;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.ChangePropagationStepItemProvider;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;

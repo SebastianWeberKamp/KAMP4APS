@@ -2,11 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.util;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractChangePropagationStep;
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModificationRepository;
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractSeedModifications;
-import edu.kit.ipd.sdq.amp.model.modificationmarks.ChangePropagationStep;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractChangePropagationStep;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModificationRepository;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.*;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -308,13 +308,13 @@ public class modificationmarksAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.amp.model.modificationmarks.ChangePropagationStep <em>Change Propagation Step</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep <em>Change Propagation Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.amp.model.modificationmarks.ChangePropagationStep
+	 * @see edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep
 	 * @generated
 	 */
 	public Adapter createChangePropagationStepAdapter() {
@@ -322,13 +322,13 @@ public class modificationmarksAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification <em>Abstract Modification</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification <em>Abstract Modification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification
+	 * @see edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification
 	 * @generated
 	 */
 	public Adapter createAbstractModificationAdapter() {
@@ -448,13 +448,13 @@ public class modificationmarksAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractChangePropagationStep <em>Abstract Change Propagation Step</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractChangePropagationStep <em>Abstract Change Propagation Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractChangePropagationStep
+	 * @see edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractChangePropagationStep
 	 * @generated
 	 */
 	public Adapter createAbstractChangePropagationStepAdapter() {
@@ -462,13 +462,13 @@ public class modificationmarksAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModificationRepository <em>Abstract Modification Repository</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModificationRepository <em>Abstract Modification Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModificationRepository
+	 * @see edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModificationRepository
 	 * @generated
 	 */
 	public Adapter createAbstractModificationRepositoryAdapter() {
@@ -476,13 +476,13 @@ public class modificationmarksAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractSeedModifications <em>Abstract Seed Modifications</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications <em>Abstract Seed Modifications</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractSeedModifications
+	 * @see edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications
 	 * @generated
 	 */
 	public Adapter createAbstractSeedModificationsAdapter() {

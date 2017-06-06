@@ -3,9 +3,9 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.ModificationmarksPackage;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.provider.AbstractModificationRepositoryItemProvider;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.AbstractModificationRepositoryItemProvider;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 
 import java.util.Collection;

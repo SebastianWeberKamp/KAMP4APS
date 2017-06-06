@@ -5,11 +5,11 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 
-import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
-import edu.kit.ipd.sdq.amp.workplan.AbstractActivityElementType;
-import edu.kit.ipd.sdq.amp.workplan.Activity;
-import edu.kit.ipd.sdq.amp.workplan.BasicActivity;
+import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
+import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
+import edu.kit.ipd.sdq.kamp.workplan.Activity;
+import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
@@ -99,7 +99,7 @@ public class InternalModificationDerivation {
 	}
 
 	private void deriveComponentModifications(ArchitectureVersion targetVersion, List<Activity> activityList) {
-		Collection<ModifyComponent> modifyComponents = AMPArchitectureModelLookup
+		Collection<ModifyComponent> modifyComponents = ArchitectureModelLookup
 				.lookUpAllCalculatedMarksOfAType(targetVersion, ModifyComponent.class);
 		for (ModifyComponent<?> modifyComponent : modifyComponents) {
 			Activity componentActivity = createModificationActivity(modifyComponent, ActivityElementType.COMPONENT);
@@ -109,7 +109,7 @@ public class InternalModificationDerivation {
 	}
 
 	private void deriveInterfaceModifications(ArchitectureVersion targetVersion, List<Activity> activityList) {
-		Collection<ModifyInterface> modifyInterfaces = AMPArchitectureModelLookup
+		Collection<ModifyInterface> modifyInterfaces = ArchitectureModelLookup
 				.lookUpAllCalculatedMarksOfAType(targetVersion, ModifyInterface.class);
 		for (ModifyInterface<?> modifyInterface : modifyInterfaces) {
 			Activity interfaceActivity = createModificationActivity(modifyInterface, ActivityElementType.INTERFACE);
@@ -118,7 +118,7 @@ public class InternalModificationDerivation {
 	}
 
 	private void deriveModuleModifications(ArchitectureVersion targetVersion, List<Activity> activityList) {
-		Collection<ModifyModule> modifyModules = AMPArchitectureModelLookup
+		Collection<ModifyModule> modifyModules = ArchitectureModelLookup
 				.lookUpAllCalculatedMarksOfAType(targetVersion, ModifyModule.class);
 		for (ModifyModule<?> modifyInterface : modifyModules) {
 			Activity interfaceActivity = createModificationActivity(modifyInterface, ActivityElementType.MODULE);
@@ -127,7 +127,7 @@ public class InternalModificationDerivation {
 	}
 	
 	private void deriveStructureModifications(ArchitectureVersion targetVersion, List<Activity> activityList) {
-		Collection<ModifyStructure> modifyStructure = AMPArchitectureModelLookup
+		Collection<ModifyStructure> modifyStructure = ArchitectureModelLookup
 				.lookUpAllCalculatedMarksOfAType(targetVersion, ModifyStructure.class);
 		for (ModifyStructure<?> modifyInterface : modifyStructure) {
 			Activity interfaceActivity = createModificationActivity(modifyInterface, ActivityElementType.STRUCTURE);

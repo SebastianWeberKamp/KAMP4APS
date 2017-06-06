@@ -8,7 +8,7 @@ import org.palladiosimulator.pcm.system.SystemPackage;
 import DeploymentContext.DeploymentContextFactory;
 import DeploymentContext.DeploymentContextPackage;
 //import de.uka.ipd.sdq.componentInternalDependencies.ComponentInternalDependenciesPackage;
-import edu.kit.ipd.sdq.amp.architecture.AbstractArchitectureVersionPersistency;
+import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersionPersistency;
 import fieldofactivityannotations.FieldofactivityannotationsPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 

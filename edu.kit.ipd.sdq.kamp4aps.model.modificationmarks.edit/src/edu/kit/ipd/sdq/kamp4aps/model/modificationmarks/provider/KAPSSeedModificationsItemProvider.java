@@ -3,7 +3,7 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.provider.AbstractSeedModificationsItemProvider;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.AbstractSeedModificationsItemProvider;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;

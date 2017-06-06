@@ -1,6 +1,6 @@
 package edu.kit.ipd.sdq.kamp4aps.ui;
 
-import edu.kit.ipd.sdq.amp.ui.AbstractDeriveWorkplanAction;
+import edu.kit.ipd.sdq.kamp.ui.AbstractDeriveWorkplanAction;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersionPersistency;
 import edu.kit.ipd.sdq.kamp4aps.core.derivation.DifferenceCalculation;

@@ -10,7 +10,7 @@ import de.uka.ipd.sdq.stoex.provider.StoexEditPlugin;
 
 import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.provider.ModificationmarksEditPlugin;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.ModificationmarksEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
 

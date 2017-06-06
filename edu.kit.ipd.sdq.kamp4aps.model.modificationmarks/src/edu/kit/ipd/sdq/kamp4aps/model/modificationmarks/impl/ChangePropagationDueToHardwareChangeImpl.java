@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.impl.ChangePropagationStepImpl;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.ChangePropagationStepImpl;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusCable;

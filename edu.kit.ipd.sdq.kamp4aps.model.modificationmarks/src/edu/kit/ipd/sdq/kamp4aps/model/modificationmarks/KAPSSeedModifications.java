@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractSeedModifications;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
 
 import org.eclipse.emf.common.util.EList;
 

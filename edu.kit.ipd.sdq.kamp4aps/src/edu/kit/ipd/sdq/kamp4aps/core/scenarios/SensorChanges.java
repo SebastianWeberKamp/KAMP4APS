@@ -2,7 +2,7 @@ package edu.kit.ipd.sdq.kamp4aps.core.scenarios;
 
 import java.util.Collection;
 
-import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
+import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPhysicalConnection;
@@ -22,7 +22,7 @@ public class SensorChanges {
 	}
 	
 	public Collection<Sensor> getInitialMarkedSensors(){
-		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, Sensor.class);
+		return ArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, Sensor.class);
 	}
 
 	public void addSensorModificationToChangePropagation(Sensor sensor, 

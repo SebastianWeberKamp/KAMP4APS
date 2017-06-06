@@ -4,27 +4,20 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import org.eclipse.emf.common.util.EList;
-
-import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
+import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPhysicalConnection;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
-import xPPU.Plant;
-import xPPU.BusComponents.BusMaster;
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.MicroswitchModule;
 import xPPU.ComponentRepository.TurningTable;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.PhysicalConnection;
-import xPPU.InterfaceRepository.SignalInterface;
-import xPPU.StructureRepository.Crane;
 import xPPU.StructureRepository.Structure;
 
 public class SwitchChanges {
@@ -36,7 +29,7 @@ public class SwitchChanges {
 	}
 
 	public Collection<MicroswitchModule> getInitialMarkedMicroswitchModules() {
-		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, MicroswitchModule.class);
+		return ArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, MicroswitchModule.class);
 	}
 
 	public ModifyMicroSwitchModule generateModifyMicroswitchModule(

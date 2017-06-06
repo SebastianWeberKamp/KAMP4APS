@@ -1,6 +1,6 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
-import edu.kit.ipd.sdq.amp.workplan.AbstractActivityElementType;
+import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
 import fieldofactivityannotations.CalibrationConfiguration;
 import fieldofactivityannotations.ComponentStockList;
 import fieldofactivityannotations.Documentation;

@@ -1,6 +1,6 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.editor.AbstractArchitectureBasedWorkplanDerivationAction;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.AbstractArchitectureBasedWorkplanDerivationAction;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersionPersistency;
 import edu.kit.ipd.sdq.kamp4aps.core.derivation.DifferenceCalculation;

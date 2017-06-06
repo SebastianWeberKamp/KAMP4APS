@@ -8,9 +8,9 @@ import java.util.Map;
 import org.eclipse.emf.ecore.EObject;
 
 import DeploymentContext.ComponentCorrelation;
-import edu.kit.ipd.sdq.amp.workplan.AbstractEnrichedWorkplanDerivation;
-import edu.kit.ipd.sdq.amp.workplan.Activity;
-import edu.kit.ipd.sdq.amp.workplan.BasicActivity;
+import edu.kit.ipd.sdq.kamp.workplan.AbstractEnrichedWorkplanDerivation;
+import edu.kit.ipd.sdq.kamp.workplan.Activity;
+import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureAnnotationLookup;

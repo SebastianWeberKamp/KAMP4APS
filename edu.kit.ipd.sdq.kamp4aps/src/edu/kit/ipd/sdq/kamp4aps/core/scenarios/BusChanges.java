@@ -4,7 +4,7 @@ import java.util.Collection;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
-import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
+import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
@@ -30,17 +30,17 @@ public class BusChanges {
 	}
 
 	public Collection<BusBox> getInitialMarkedBusBoxes() {
-		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusBox.class);
+		return ArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusBox.class);
 	}
 	public Collection<BusMaster> getInitialMarkedBusMaster() {
-		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusMaster.class);
+		return ArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusMaster.class);
 	}
 	public Collection<BusSlave> getInitialMarkedBusSlave() {
-		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusSlave.class);
+		return ArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusSlave.class);
 	}
 	
 	public Collection<BusCable> getInitialMarkedBusCable() {
-		return AMPArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusCable.class);
+		return ArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, BusCable.class);
 	}
 
 	public ModifyBusBox createNewModifyBusBox(BusBox busBox) {

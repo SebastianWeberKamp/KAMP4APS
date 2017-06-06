@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
-import edu.kit.ipd.sdq.amp.propagation.AbstractChangePropagationAnalysis;
+import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SwitchChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureModelLookup.BusComponentsParams;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.BusChanges;

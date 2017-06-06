@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.provider.ModificationmarksEditPlugin;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.ModificationmarksEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 import org.eclipse.emf.common.util.ResourceLocator;
 import xPPU.provider.XPPUEditPlugin;

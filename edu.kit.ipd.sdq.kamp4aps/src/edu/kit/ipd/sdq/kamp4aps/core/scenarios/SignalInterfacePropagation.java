@@ -1,9 +1,7 @@
 package edu.kit.ipd.sdq.kamp4aps.core.scenarios;
 
-import java.util.Collection;
 import java.util.List;
 
-import edu.kit.ipd.sdq.amp.architecture.AMPArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
@@ -11,7 +9,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
-import xPPU.InterfaceRepository.SignalInterface;
 
 public class SignalInterfacePropagation {
 	private ArchitectureVersion v;

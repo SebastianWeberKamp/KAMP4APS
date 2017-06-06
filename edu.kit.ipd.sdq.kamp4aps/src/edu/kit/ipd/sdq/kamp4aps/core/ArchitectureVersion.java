@@ -2,7 +2,7 @@ package edu.kit.ipd.sdq.kamp4aps.core;
 
 import DeploymentContext.DeploymentContextFactory;
 import DeploymentContext.DeploymentContextRepository;
-import edu.kit.ipd.sdq.amp.architecture.AbstractArchitectureVersion;
+import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
 import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import fieldofactivityannotations.FieldofactivityannotationsFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;

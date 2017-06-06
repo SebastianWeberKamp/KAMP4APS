@@ -6,9 +6,9 @@ import java.util.List;
 import org.eclipse.emf.compare.Diff;
 import org.eclipse.emf.compare.ReferenceChange;
 
-import edu.kit.ipd.sdq.amp.workplan.AbstractWorkplanDerivation;
-import edu.kit.ipd.sdq.amp.workplan.Activity;
-import edu.kit.ipd.sdq.amp.workplan.BasicActivity;
+import edu.kit.ipd.sdq.kamp.workplan.AbstractWorkplanDerivation;
+import edu.kit.ipd.sdq.kamp.workplan.Activity;
+import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;

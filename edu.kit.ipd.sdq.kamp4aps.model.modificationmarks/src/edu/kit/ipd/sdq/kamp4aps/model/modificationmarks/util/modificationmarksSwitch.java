@@ -2,11 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.util;
 
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractChangePropagationStep;
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModification;
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractModificationRepository;
-import edu.kit.ipd.sdq.amp.model.modificationmarks.AbstractSeedModifications;
-import edu.kit.ipd.sdq.amp.model.modificationmarks.ChangePropagationStep;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractChangePropagationStep;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModificationRepository;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.*;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
