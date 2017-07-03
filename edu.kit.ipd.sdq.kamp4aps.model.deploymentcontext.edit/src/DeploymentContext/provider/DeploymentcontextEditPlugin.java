@@ -2,12 +2,18 @@
  */
 package DeploymentContext.provider;
 
-import iec611313Specification.common.provider.IEC611313EditPlugin;
+import edu.kit.ipd.sdq.kamp4aps.iec.ComponentInternalDependencies.provider.ComponentInternalDependenciesEditPlugin;
+
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.provider.IECModelEditPlugin;
+
+import edu.kit.ipd.sdq.kamp4aps.iec.IECRepository.provider.IECRepositoryEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import xPPU.provider.XPPUEditPlugin;
+
 
 /**
  * This is the central singleton for the Deploymentcontext edit plugin.
@@ -41,7 +47,9 @@ public final class DeploymentcontextEditPlugin extends EMFPlugin {
 	public DeploymentcontextEditPlugin() {
 		super
 		  (new ResourceLocator [] {
-		     IEC611313EditPlugin.INSTANCE,
+		     ComponentInternalDependenciesEditPlugin.INSTANCE,
+		     IECModelEditPlugin.INSTANCE,
+		     IECRepositoryEditPlugin.INSTANCE,
 		     XPPUEditPlugin.INSTANCE,
 		   });
 	}

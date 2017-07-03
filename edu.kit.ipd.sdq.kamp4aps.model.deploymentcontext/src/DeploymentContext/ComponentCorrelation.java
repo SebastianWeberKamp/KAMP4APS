@@ -2,7 +2,7 @@
  */
 package DeploymentContext;
 
-import iec611313Specification.common.pous.programs.ProgramType;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.Program;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -94,12 +94,12 @@ public interface ComponentCorrelation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Program</em>' reference.
-	 * @see #setProgram(ProgramType)
+	 * @see #setProgram(Program)
 	 * @see DeploymentContext.DeploymentContextPackage#getComponentCorrelation_Program()
 	 * @model
 	 * @generated
 	 */
-	ProgramType getProgram();
+	Program getProgram();
 
 	/**
 	 * Sets the value of the '{@link DeploymentContext.ComponentCorrelation#getProgram <em>Program</em>}' reference.
@@ -109,7 +109,7 @@ public interface ComponentCorrelation extends EObject {
 	 * @see #getProgram()
 	 * @generated
 	 */
-	void setProgram(ProgramType value);
+	void setProgram(Program value);
 
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.

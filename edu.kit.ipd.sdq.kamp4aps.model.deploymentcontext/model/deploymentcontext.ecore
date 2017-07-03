@@ -10,7 +10,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//DeploymentContextRepository" eOpposite="#//DeploymentContextRepository/componentCorrelation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//ComponentRepository/Component"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="program" eType="ecore:EClass ../../Iec61131_3/model/IEC611313.ecore#//common/pous/programs/ProgramType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="program" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.iec.iecModel/model/IECModel.ecore#//Program"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="variableMapping" upperBound="-1"
         eType="#//VariableMapping" containment="true" eOpposite="#//VariableMapping/parent"/>
@@ -18,7 +18,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="VariableMapping">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="programVariable" lowerBound="1"
-        eType="ecore:EClass ../../Iec61131_3/model/IEC611313.ecore#//common/variables/VariableDeclaration"/>
+        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.iec.iecModel/model/IECModel.ecore#//GlobalVariable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceDeclaration" lowerBound="1"
         eType="ecore:EClass ../../xPPU/model/xPPU.ecore#//InterfaceRepository/Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"

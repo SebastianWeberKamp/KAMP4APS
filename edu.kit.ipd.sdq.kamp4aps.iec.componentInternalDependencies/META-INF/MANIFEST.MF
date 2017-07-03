@@ -7,10 +7,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: ComponentInternalDependencies,
- ComponentInternalDependencies.impl,
- ComponentInternalDependencies.util,
- edu.kit.ipd.sdq.kamp4aps.iec.ComponentInternalDependencies,
+Export-Package: edu.kit.ipd.sdq.kamp4aps.iec.ComponentInternalDependencies,
  edu.kit.ipd.sdq.kamp4aps.iec.ComponentInternalDependencies.impl,
  edu.kit.ipd.sdq.kamp4aps.iec.ComponentInternalDependencies.util
 Require-Bundle: org.eclipse.core.runtime,

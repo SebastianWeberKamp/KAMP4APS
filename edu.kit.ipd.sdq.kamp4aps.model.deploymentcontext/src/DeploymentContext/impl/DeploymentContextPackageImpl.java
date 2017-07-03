@@ -8,25 +8,7 @@ import DeploymentContext.DeploymentContextPackage;
 import DeploymentContext.DeploymentContextRepository;
 import DeploymentContext.VariableMapping;
 
-import iec611313Specification.common.CommonPackage;
-
-import iec611313Specification.common.pous.programs.ProgramsPackage;
-
-import iec611313Specification.common.variables.VariablesPackage;
-
-import iec611313Specification.configuration.ConfigurationPackage;
-
-import iec611313Specification.dummy.DummyPackage;
-
-import iec611313Specification.language.fbd.FbdPackage;
-
-import iec611313Specification.language.il.IlPackage;
-
-import iec611313Specification.language.ld.LdPackage;
-
-import iec611313Specification.language.sfc.SfcPackage;
-
-import iec611313Specification.language.st.StPackage;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.IECModelPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -116,14 +98,7 @@ public class DeploymentContextPackageImpl extends EPackageImpl implements Deploy
 		isInited = true;
 
 		// Initialize simple dependencies
-		CommonPackage.eINSTANCE.eClass();
-		ConfigurationPackage.eINSTANCE.eClass();
-		IlPackage.eINSTANCE.eClass();
-		StPackage.eINSTANCE.eClass();
-		FbdPackage.eINSTANCE.eClass();
-		LdPackage.eINSTANCE.eClass();
-		SfcPackage.eINSTANCE.eClass();
-		DummyPackage.eINSTANCE.eClass();
+		IECModelPackage.eINSTANCE.eClass();
 		XPPUPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -328,8 +303,7 @@ public class DeploymentContextPackageImpl extends EPackageImpl implements Deploy
 
 		// Obtain other dependent packages
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
-		ProgramsPackage theProgramsPackage = (ProgramsPackage)EPackage.Registry.INSTANCE.getEPackage(ProgramsPackage.eNS_URI);
-		VariablesPackage theVariablesPackage = (VariablesPackage)EPackage.Registry.INSTANCE.getEPackage(VariablesPackage.eNS_URI);
+		IECModelPackage theIECModelPackage = (IECModelPackage)EPackage.Registry.INSTANCE.getEPackage(IECModelPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
 
 		// Create type parameters
@@ -345,13 +319,13 @@ public class DeploymentContextPackageImpl extends EPackageImpl implements Deploy
 		initEClass(componentCorrelationEClass, ComponentCorrelation.class, "ComponentCorrelation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponentCorrelation_Parent(), this.getDeploymentContextRepository(), this.getDeploymentContextRepository_ComponentCorrelation(), "parent", null, 1, 1, ComponentCorrelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponentCorrelation_Component(), theComponentRepositoryPackage.getComponent(), null, "component", null, 0, 1, ComponentCorrelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponentCorrelation_Program(), theProgramsPackage.getProgramType(), null, "program", null, 0, 1, ComponentCorrelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponentCorrelation_Program(), theIECModelPackage.getProgram(), null, "program", null, 0, 1, ComponentCorrelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComponentCorrelation_Name(), ecorePackage.getEString(), "name", null, 1, 1, ComponentCorrelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponentCorrelation_VariableMapping(), this.getVariableMapping(), this.getVariableMapping_Parent(), "variableMapping", null, 0, -1, ComponentCorrelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(variableMappingEClass, VariableMapping.class, "VariableMapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariableMapping_Name(), ecorePackage.getEString(), "name", null, 0, 1, VariableMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVariableMapping_ProgramVariable(), theVariablesPackage.getVariableDeclaration(), null, "programVariable", null, 1, 1, VariableMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariableMapping_ProgramVariable(), theIECModelPackage.getGlobalVariable(), null, "programVariable", null, 1, 1, VariableMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariableMapping_InterfaceDeclaration(), theInterfaceRepositoryPackage.getInterface(), null, "interfaceDeclaration", null, 1, 1, VariableMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariableMapping_Parent(), this.getComponentCorrelation(), this.getComponentCorrelation_VariableMapping(), "parent", null, 1, 1, VariableMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

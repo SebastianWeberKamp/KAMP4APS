@@ -5,11 +5,16 @@
 -->
 
 <plugin>
+   <requires>
+      <import plugin="xPPU" version="1.0.0"/>
+      <import plugin="xPPU.edit" version="1.0.0"/>
+      <import plugin="xPPU.editor" version="1.0.0"/>
+   </requires>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated deploymentcontext -->
       <package
-            uri="http://sdq.ipd.kit.edu/KAMP4APS_DeploymentContext/0.1"
+            uri="http://sdq.ipd.kit.edu/KAPS_DeploymentContext/0.1"
             class="DeploymentContext.DeploymentContextPackage"
             genModel="model/deploymentcontext.genmodel"/>
    </extension>

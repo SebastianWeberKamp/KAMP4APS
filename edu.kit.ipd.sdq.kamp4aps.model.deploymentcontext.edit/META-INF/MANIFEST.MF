@@ -12,8 +12,12 @@ Export-Package: DeploymentContext.provider
 Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4aps.model.deploymentcontext;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
- Iec61131_3;visibility:=reexport,
- Iec61131_3.edit;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.iec.componentInternalDependencies;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.iec.componentInternalDependencies.edit;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.iec.iecModel;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.iec.iecModel.edit;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.iec.iecRepository;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.iec.iecRepository.edit;visibility:=reexport,
  xPPU;visibility:=reexport,
  xPPU.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

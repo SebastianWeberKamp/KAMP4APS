@@ -156,33 +156,11 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import DeploymentContext.provider.DeploymentContextItemProviderAdapterFactory;
 
-import iec611313Specification.common.oop.provider.OopItemProviderAdapterFactory;
+import edu.kit.ipd.sdq.kamp4aps.iec.ComponentInternalDependencies.provider.ComponentInternalDependenciesItemProviderAdapterFactory;
 
-import iec611313Specification.common.pous.function_blocks.provider.Function_blocksItemProviderAdapterFactory;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.provider.IECModelItemProviderAdapterFactory;
 
-import iec611313Specification.common.pous.functions.provider.FunctionsItemProviderAdapterFactory;
-
-import iec611313Specification.common.pous.programs.provider.ProgramsItemProviderAdapterFactory;
-
-import iec611313Specification.common.provider.CommonItemProviderAdapterFactory;
-
-import iec611313Specification.common.types.provider.TypesItemProviderAdapterFactory;
-
-import iec611313Specification.common.variables.provider.VariablesItemProviderAdapterFactory;
-
-import iec611313Specification.configuration.provider.ConfigurationItemProviderAdapterFactory;
-
-import iec611313Specification.dummy.provider.DummyItemProviderAdapterFactory;
-
-import iec611313Specification.language.fbd.provider.FbdItemProviderAdapterFactory;
-
-import iec611313Specification.language.il.provider.IlItemProviderAdapterFactory;
-
-import iec611313Specification.language.ld.provider.LdItemProviderAdapterFactory;
-
-import iec611313Specification.language.sfc.provider.SfcItemProviderAdapterFactory;
-
-import iec611313Specification.language.st.provider.StItemProviderAdapterFactory;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECRepository.provider.IECRepositoryItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
@@ -748,20 +726,9 @@ public class DeploymentContextEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new DeploymentContextItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new CommonItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new Function_blocksItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ProgramsItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new FunctionsItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new VariablesItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new TypesItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new OopItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ConfigurationItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new IlItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new StItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new FbdItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new LdItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new SfcItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new DummyItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new ComponentInternalDependenciesItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new IECModelItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new IECRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new XPPUItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ComponentRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new BusComponentsItemProviderAdapterFactory());

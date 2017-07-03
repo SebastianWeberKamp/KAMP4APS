@@ -6,7 +6,7 @@ import DeploymentContext.ComponentCorrelation;
 import DeploymentContext.DeploymentContextPackage;
 import DeploymentContext.VariableMapping;
 
-import iec611313Specification.common.variables.VariableDeclaration;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.GlobalVariable;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -66,7 +66,7 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected VariableDeclaration programVariable;
+	protected GlobalVariable programVariable;
 
 	/**
 	 * The cached value of the '{@link #getInterfaceDeclaration() <em>Interface Declaration</em>}' reference.
@@ -123,10 +123,10 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VariableDeclaration getProgramVariable() {
+	public GlobalVariable getProgramVariable() {
 		if (programVariable != null && programVariable.eIsProxy()) {
 			InternalEObject oldProgramVariable = (InternalEObject)programVariable;
-			programVariable = (VariableDeclaration)eResolveProxy(oldProgramVariable);
+			programVariable = (GlobalVariable)eResolveProxy(oldProgramVariable);
 			if (programVariable != oldProgramVariable) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DeploymentContextPackage.VARIABLE_MAPPING__PROGRAM_VARIABLE, oldProgramVariable, programVariable));
@@ -140,7 +140,7 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VariableDeclaration basicGetProgramVariable() {
+	public GlobalVariable basicGetProgramVariable() {
 		return programVariable;
 	}
 
@@ -149,8 +149,8 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProgramVariable(VariableDeclaration newProgramVariable) {
-		VariableDeclaration oldProgramVariable = programVariable;
+	public void setProgramVariable(GlobalVariable newProgramVariable) {
+		GlobalVariable oldProgramVariable = programVariable;
 		programVariable = newProgramVariable;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DeploymentContextPackage.VARIABLE_MAPPING__PROGRAM_VARIABLE, oldProgramVariable, programVariable));
@@ -313,7 +313,7 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 				setName((String)newValue);
 				return;
 			case DeploymentContextPackage.VARIABLE_MAPPING__PROGRAM_VARIABLE:
-				setProgramVariable((VariableDeclaration)newValue);
+				setProgramVariable((GlobalVariable)newValue);
 				return;
 			case DeploymentContextPackage.VARIABLE_MAPPING__INTERFACE_DECLARATION:
 				setInterfaceDeclaration((Interface)newValue);
@@ -337,7 +337,7 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 				setName(NAME_EDEFAULT);
 				return;
 			case DeploymentContextPackage.VARIABLE_MAPPING__PROGRAM_VARIABLE:
-				setProgramVariable((VariableDeclaration)null);
+				setProgramVariable((GlobalVariable)null);
 				return;
 			case DeploymentContextPackage.VARIABLE_MAPPING__INTERFACE_DECLARATION:
 				setInterfaceDeclaration((Interface)null);

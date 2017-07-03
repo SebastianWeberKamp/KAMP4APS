@@ -14,7 +14,7 @@ import fieldofactivityannotations.StructureStockList;
 import fieldofactivityannotations.TestCase;
 import fieldofactivityannotations.TrainingDocExternal;
 import fieldofactivityannotations.TrainingDocIntern;
-import iec611313Specification.common.pous.programs.ProgramType;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.Program;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
@@ -43,7 +43,7 @@ public enum ActivityElementType implements AbstractActivityElementType {
 	INTERFACE_STOCKLIST(InterfaceStockList.class),
 	STRUCTURE_STOCKLIST(StructureStockList.class),
 
-	PROGRAM_TYPE(ProgramType.class);
+	PROGRAM_TYPE(Program.class);
 	
 	private final Class<?> clazz;
 	private final String name;

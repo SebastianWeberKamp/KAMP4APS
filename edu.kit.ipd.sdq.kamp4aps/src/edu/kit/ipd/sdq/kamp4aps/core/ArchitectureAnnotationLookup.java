@@ -28,8 +28,8 @@ import fieldofactivityannotations.StructureDocumentationFiles;
 import fieldofactivityannotations.StructureDrawing;
 import fieldofactivityannotations.StructureStockList;
 import fieldofactivityannotations.SystemTest;
-import iec611313Specification.common.pous.programs.ProgramType;
-import iec611313Specification.common.variables.VariableDeclaration;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.Program;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.GlobalVariable;
 import xPPU.Plant;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
@@ -296,9 +296,9 @@ public class ArchitectureAnnotationLookup {
 		}
 	}
 
-	public static Map<Component, ProgramType> lookUpToChangeSoftware(ArchitectureVersion version,
+	public static Map<Component, Program> lookUpToChangeSoftware(ArchitectureVersion version,
 			Activity activity) {
-		Map<Component, ProgramType> softwareChangeAffectedParts = new HashMap<Component, ProgramType>();
+		Map<Component, Program> softwareChangeAffectedParts = new HashMap<Component, Program>();
 		if(activity.getElement() instanceof Component){
 			Component component = (Component)activity.getElement();
 			for(ComponentCorrelation cc : version.getDeploymentContextRepository().getComponentCorrelation()){
@@ -316,9 +316,9 @@ public class ArchitectureAnnotationLookup {
 		return softwareChangeAffectedParts;
 	}
 
-	public static Map<Interface, VariableDeclaration> lookUpInterfacesOfSoftwareChanges(ArchitectureVersion version,
+	public static Map<Interface, GlobalVariable> lookUpInterfacesOfSoftwareChanges(ArchitectureVersion version,
 			Activity activity) {
-		Map<Interface, VariableDeclaration> variableChanges = new HashMap<Interface, VariableDeclaration>();
+		Map<Interface, GlobalVariable> variableChanges = new HashMap<Interface, GlobalVariable>();
 		if(activity.getElement() instanceof Component){
 			Component component = (Component)activity.getElement();
 			for(ComponentCorrelation cc : version.getDeploymentContextRepository().getComponentCorrelation()){

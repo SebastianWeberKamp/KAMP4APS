@@ -7,7 +7,7 @@ import DeploymentContext.DeploymentContextPackage;
 import DeploymentContext.DeploymentContextRepository;
 import DeploymentContext.VariableMapping;
 
-import iec611313Specification.common.pous.programs.ProgramType;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.Program;
 
 import java.util.Collection;
 
@@ -64,7 +64,7 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected ProgramType program;
+	protected Program program;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -199,10 +199,10 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProgramType getProgram() {
+	public Program getProgram() {
 		if (program != null && program.eIsProxy()) {
 			InternalEObject oldProgram = (InternalEObject)program;
-			program = (ProgramType)eResolveProxy(oldProgram);
+			program = (Program)eResolveProxy(oldProgram);
 			if (program != oldProgram) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM, oldProgram, program));
@@ -216,7 +216,7 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ProgramType basicGetProgram() {
+	public Program basicGetProgram() {
 		return program;
 	}
 
@@ -225,8 +225,8 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProgram(ProgramType newProgram) {
-		ProgramType oldProgram = program;
+	public void setProgram(Program newProgram) {
+		Program oldProgram = program;
 		program = newProgram;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM, oldProgram, program));
@@ -354,7 +354,7 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 				setComponent((Component)newValue);
 				return;
 			case DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM:
-				setProgram((ProgramType)newValue);
+				setProgram((Program)newValue);
 				return;
 			case DeploymentContextPackage.COMPONENT_CORRELATION__NAME:
 				setName((String)newValue);
@@ -382,7 +382,7 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 				setComponent((Component)null);
 				return;
 			case DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM:
-				setProgram((ProgramType)null);
+				setProgram((Program)null);
 				return;
 			case DeploymentContextPackage.COMPONENT_CORRELATION__NAME:
 				setName(NAME_EDEFAULT);

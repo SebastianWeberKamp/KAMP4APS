@@ -2,7 +2,7 @@
  */
 package DeploymentContext;
 
-import iec611313Specification.common.variables.VariableDeclaration;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.GlobalVariable;
 
 import org.eclipse.emf.ecore.EObject;
 
@@ -63,12 +63,12 @@ public interface VariableMapping extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Program Variable</em>' reference.
-	 * @see #setProgramVariable(VariableDeclaration)
+	 * @see #setProgramVariable(GlobalVariable)
 	 * @see DeploymentContext.DeploymentContextPackage#getVariableMapping_ProgramVariable()
 	 * @model required="true"
 	 * @generated
 	 */
-	VariableDeclaration getProgramVariable();
+	GlobalVariable getProgramVariable();
 
 	/**
 	 * Sets the value of the '{@link DeploymentContext.VariableMapping#getProgramVariable <em>Program Variable</em>}' reference.
@@ -78,7 +78,7 @@ public interface VariableMapping extends EObject {
 	 * @see #getProgramVariable()
 	 * @generated
 	 */
-	void setProgramVariable(VariableDeclaration value);
+	void setProgramVariable(GlobalVariable value);
 
 	/**
 	 * Returns the value of the '<em><b>Interface Declaration</b></em>' reference.

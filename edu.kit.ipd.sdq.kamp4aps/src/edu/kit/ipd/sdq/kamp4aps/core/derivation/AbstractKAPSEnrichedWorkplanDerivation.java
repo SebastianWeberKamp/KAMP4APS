@@ -25,8 +25,8 @@ import fieldofactivityannotations.ModuleStockList;
 import fieldofactivityannotations.Role;
 import fieldofactivityannotations.StructureDrawing;
 import fieldofactivityannotations.StructureStockList;
-import iec611313Specification.common.pous.programs.ProgramType;
-import iec611313Specification.common.variables.VariableDeclaration;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.Program;
+import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.GlobalVariable;
 import xPPU.Plant;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
@@ -54,8 +54,8 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 
 	private void deriveSoftwareChangeActivities(ArchitectureVersion baseVersion, ArchitectureVersion targetVersion, 
 			List<Activity> baseActivityList) {
-		Map<Component, ProgramType> softwareSeedChanges = new HashMap<Component, ProgramType>();
-		Map<Interface, VariableDeclaration> variableChanges = new HashMap<Interface, VariableDeclaration>();
+		Map<Component, Program> softwareSeedChanges = new HashMap<Component, Program>();
+		Map<Interface, GlobalVariable> variableChanges = new HashMap<Interface, GlobalVariable>();
 		for(Activity activity : baseActivityList){
 			ArchitectureVersion version = determineRelevantArchitectureVersion(activity, baseVersion, targetVersion);
 			softwareSeedChanges.putAll(ArchitectureAnnotationLookup.lookUpToChangeSoftware(
@@ -66,18 +66,18 @@ public abstract class AbstractKAPSEnrichedWorkplanDerivation<T extends Architect
 		}
 	}
 
-	private void addSoftwareChanges(Map<Component, ProgramType> softwareChangeAffectedParts, 
-									Map<Interface, VariableDeclaration> variableChanges, Activity activity) {
+	private void addSoftwareChanges(Map<Component, Program> softwareChangeAffectedParts, 
+									Map<Interface, GlobalVariable> variableChanges, Activity activity) {
 		for(Component component : softwareChangeAffectedParts.keySet()){
 			if(component == activity.getElement()){
 				activity.addFollowupActivity(new Activity(ActivityType.UPDATE_SOFTWARE, ActivityElementType.PROGRAM_TYPE,
-						activity.getElement(), component.getId() , null, activity.getBasicActivity(), "Firmware of Element " + component.getId() +" in ProgramType "+ softwareChangeAffectedParts.get(component).getTypeName()));
+						activity.getElement(), component.getId() , null, activity.getBasicActivity(), "Firmware of Element " + component.getId() +" in ProgramType "+ softwareChangeAffectedParts.get(component).getName()));
 				
 				for(Interface interfaceElement : variableChanges.keySet()){
 						if(component.getConnectedInterfaces().contains(interfaceElement) || component.getConnectedInterfaces().contains(interfaceElement)){
 							activity.addFollowupActivity(new Activity(ActivityType.UPDATE_SOFTWARE, ActivityElementType.PROGRAM_TYPE,
-									activity.getElement(), "Variable: " + variableChanges.get(interfaceElement).getVariableType() + " " + variableChanges.get(interfaceElement).getName(), 
-									null, activity.getBasicActivity(), "Firmware of Element " + interfaceElement.getId() +": Variable "+ variableChanges.get(interfaceElement).getVariableType()
+									activity.getElement(), "Variable: " + variableChanges.get(interfaceElement).getType() + " " + variableChanges.get(interfaceElement).getName(), 
+									null, activity.getBasicActivity(), "Firmware of Element " + interfaceElement.getId() +": Variable "+ variableChanges.get(interfaceElement).getType()
 									+ " " + variableChanges.get(interfaceElement).getName()));			
 						}
 					}
