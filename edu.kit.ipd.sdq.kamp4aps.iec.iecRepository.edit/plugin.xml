@@ -10,7 +10,7 @@
       <!-- @generated IECRepository -->
       <factory
             uri="http://sdq.ipd.kit.edu/IECRepository"
-            class="edu.kit.ipd.sdq.kamp4aps.iec.IECRepository.provider.IECRepositoryItemProviderAdapterFactory"
+            class="edu.kit.ipd.sdq.kamp4iec.model.iec.IECRepository.provider.IECRepositoryItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider
