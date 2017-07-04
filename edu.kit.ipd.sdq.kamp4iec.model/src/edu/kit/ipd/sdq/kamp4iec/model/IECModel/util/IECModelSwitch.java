@@ -134,7 +134,6 @@ public class IECModelSwitch<T> extends Switch<T> {
 			case IECModelPackage.ENUM: {
 				edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum enum_ = (edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum)theEObject;
 				T result = caseEnum(enum_);
-				if (result == null) result = caseIdentifier(enum_);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

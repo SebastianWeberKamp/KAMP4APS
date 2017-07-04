@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +21,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
  * @model
  * @generated
  */
-public interface Enum extends Identifier {
+public interface Enum extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

@@ -833,17 +833,17 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		functionBlockEClass.getESuperTypes().add(this.getFunctionblockResource());
 		functionBlockEClass.getESuperTypes().add(this.getIdentifier());
+		functionBlockEClass.getESuperTypes().add(this.getFunctionblockResource());
 		globalVariableEClass.getESuperTypes().add(this.getIdentifier());
-		iecInterfaceEClass.getESuperTypes().add(this.getFunctionblockResource());
 		iecInterfaceEClass.getESuperTypes().add(this.getIdentifier());
-		iecMethodImplementationEClass.getESuperTypes().add(this.getMethodResource());
+		iecInterfaceEClass.getESuperTypes().add(this.getFunctionblockResource());
 		iecMethodImplementationEClass.getESuperTypes().add(this.getIdentifier());
+		iecMethodImplementationEClass.getESuperTypes().add(this.getMethodResource());
 		functionEClass.getESuperTypes().add(this.getIdentifier());
 		programEClass.getESuperTypes().add(this.getIdentifier());
-		iecPropertyImplementationEClass.getESuperTypes().add(this.getMethodResource());
 		iecPropertyImplementationEClass.getESuperTypes().add(this.getIdentifier());
+		iecPropertyImplementationEClass.getESuperTypes().add(this.getMethodResource());
 		iecPropertyEClass.getESuperTypes().add(this.getIdentifier());
 		iecMethodEClass.getESuperTypes().add(this.getIdentifier());
 

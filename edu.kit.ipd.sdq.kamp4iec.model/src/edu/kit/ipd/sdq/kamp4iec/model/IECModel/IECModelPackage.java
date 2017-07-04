@@ -625,22 +625,13 @@ public interface IECModelPackage extends EPackage {
 	int ENUM = 8;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENUM__ID = IECRepositoryPackage.IDENTIFIER__ID;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM__NAME = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int ENUM__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -649,7 +640,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM__TYPE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int ENUM__TYPE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Enum</em>' class.
@@ -658,7 +649,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
+	int ENUM_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>Enum</em>' class.
@@ -667,7 +658,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
+	int ENUM_OPERATION_COUNT = 0;
 
 
 	/**

@@ -636,7 +636,6 @@ public class IECModelPackageImpl extends EPackageImpl implements IECModelPackage
 		globalVariableEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 		iecMethodImplementationEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 		iecPropertyImplementationEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
-		enumEClass.getESuperTypes().add(theIECRepositoryPackage.getIdentifier());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(functionBlockEClass, FunctionBlock.class, "FunctionBlock", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

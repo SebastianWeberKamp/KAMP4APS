@@ -4,9 +4,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.tests;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
-
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +12,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IECInterfaceTest extends TestCase {
-
-	/**
-	 * The fixture for this IEC Interface test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECInterface fixture = null;
+public class IECInterfaceTest extends IdentifierTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +34,14 @@ public class IECInterfaceTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this IEC Interface test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(IECInterface fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this IEC Interface test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected IECInterface getFixture() {
-		return fixture;
+		return (IECInterface)fixture;
 	}
 
 	/**

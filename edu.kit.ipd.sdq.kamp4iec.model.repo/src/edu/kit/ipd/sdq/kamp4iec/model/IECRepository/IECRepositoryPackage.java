@@ -178,123 +178,6 @@ public interface IECRepositoryPackage extends EPackage {
 	int IEC_METHOD = 9;
 
 	/**
-	 * The number of structural features of the '<em>Functionblock Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Functionblock Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTIONBLOCK_RESOURCE_OPERATION_COUNT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK__ID = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK__NAME = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Has Iec Method</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK__HAS_IEC_METHOD = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Has Iec Property</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK__HAS_IEC_PROPERTY = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Accesses Variable</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK__ACCESSES_VARIABLE = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Uses Function Block</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK__USES_FUNCTION_BLOCK = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Calls Function</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK__CALLS_FUNCTION = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 6;
-
-	/**
-	 * The feature id for the '<em><b>Implements</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK__IMPLEMENTS = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 7;
-
-	/**
-	 * The feature id for the '<em><b>Uses Enum</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK__USES_ENUM = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 8;
-
-	/**
-	 * The number of structural features of the '<em>Function Block</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK_FEATURE_COUNT = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 9;
-
-	/**
-	 * The number of operations of the '<em>Function Block</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FUNCTION_BLOCK_OPERATION_COUNT = FUNCTIONBLOCK_RESOURCE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl <em>Identifier</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -330,6 +213,105 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int IDENTIFIER_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__ID = IDENTIFIER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__NAME = IDENTIFIER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Has Iec Method</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__HAS_IEC_METHOD = IDENTIFIER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Has Iec Property</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__HAS_IEC_PROPERTY = IDENTIFIER_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Accesses Variable</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__ACCESSES_VARIABLE = IDENTIFIER_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Uses Function Block</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__USES_FUNCTION_BLOCK = IDENTIFIER_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Calls Function</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__CALLS_FUNCTION = IDENTIFIER_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Implements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__IMPLEMENTS = IDENTIFIER_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Uses Enum</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__USES_ENUM = IDENTIFIER_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>Function Block</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK_FEATURE_COUNT = IDENTIFIER_FEATURE_COUNT + 8;
+
+	/**
+	 * The number of operations of the '<em>Function Block</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK_OPERATION_COUNT = IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -392,7 +374,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE__ID = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 0;
+	int IEC_INTERFACE__ID = IDENTIFIER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -401,7 +383,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE__NAME = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 1;
+	int IEC_INTERFACE__NAME = IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Defines Iec Method</b></em>' containment reference list.
@@ -410,7 +392,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE__DEFINES_IEC_METHOD = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 2;
+	int IEC_INTERFACE__DEFINES_IEC_METHOD = IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Defines Iec Property</b></em>' containment reference list.
@@ -419,7 +401,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE__DEFINES_IEC_PROPERTY = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 3;
+	int IEC_INTERFACE__DEFINES_IEC_PROPERTY = IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Uses Enum</b></em>' reference list.
@@ -428,7 +410,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE__USES_ENUM = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 4;
+	int IEC_INTERFACE__USES_ENUM = IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>IEC Interface</em>' class.
@@ -437,7 +419,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE_FEATURE_COUNT = FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT + 5;
+	int IEC_INTERFACE_FEATURE_COUNT = IDENTIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>IEC Interface</em>' class.
@@ -446,25 +428,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE_OPERATION_COUNT = FUNCTIONBLOCK_RESOURCE_OPERATION_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Method Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD_RESOURCE_FEATURE_COUNT = 0;
-
-	/**
-	 * The number of operations of the '<em>Method Resource</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int METHOD_RESOURCE_OPERATION_COUNT = 0;
+	int IEC_INTERFACE_OPERATION_COUNT = IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -473,7 +437,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__ID = METHOD_RESOURCE_FEATURE_COUNT + 0;
+	int IEC_METHOD_IMPLEMENTATION__ID = IDENTIFIER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -482,7 +446,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__NAME = METHOD_RESOURCE_FEATURE_COUNT + 1;
+	int IEC_METHOD_IMPLEMENTATION__NAME = IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Implements</b></em>' reference.
@@ -491,7 +455,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__IMPLEMENTS = METHOD_RESOURCE_FEATURE_COUNT + 2;
+	int IEC_METHOD_IMPLEMENTATION__IMPLEMENTS = IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Accesses Property</b></em>' reference list.
@@ -500,7 +464,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__ACCESSES_PROPERTY = METHOD_RESOURCE_FEATURE_COUNT + 3;
+	int IEC_METHOD_IMPLEMENTATION__ACCESSES_PROPERTY = IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Accesses Variable</b></em>' reference list.
@@ -509,7 +473,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__ACCESSES_VARIABLE = METHOD_RESOURCE_FEATURE_COUNT + 4;
+	int IEC_METHOD_IMPLEMENTATION__ACCESSES_VARIABLE = IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Uses Enum</b></em>' reference list.
@@ -518,7 +482,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__USES_ENUM = METHOD_RESOURCE_FEATURE_COUNT + 5;
+	int IEC_METHOD_IMPLEMENTATION__USES_ENUM = IDENTIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>IEC Method Implementation</em>' class.
@@ -527,7 +491,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION_FEATURE_COUNT = METHOD_RESOURCE_FEATURE_COUNT + 6;
+	int IEC_METHOD_IMPLEMENTATION_FEATURE_COUNT = IDENTIFIER_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>IEC Method Implementation</em>' class.
@@ -536,7 +500,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION_OPERATION_COUNT = METHOD_RESOURCE_OPERATION_COUNT + 0;
+	int IEC_METHOD_IMPLEMENTATION_OPERATION_COUNT = IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -716,7 +680,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION__ID = METHOD_RESOURCE_FEATURE_COUNT + 0;
+	int IEC_PROPERTY_IMPLEMENTATION__ID = IDENTIFIER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -725,7 +689,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION__NAME = METHOD_RESOURCE_FEATURE_COUNT + 1;
+	int IEC_PROPERTY_IMPLEMENTATION__NAME = IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Implements</b></em>' reference.
@@ -734,7 +698,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS = METHOD_RESOURCE_FEATURE_COUNT + 2;
+	int IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS = IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Accesses Variable</b></em>' reference list.
@@ -743,7 +707,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION__ACCESSES_VARIABLE = METHOD_RESOURCE_FEATURE_COUNT + 3;
+	int IEC_PROPERTY_IMPLEMENTATION__ACCESSES_VARIABLE = IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Uses Enum</b></em>' reference list.
@@ -752,7 +716,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION__USES_ENUM = METHOD_RESOURCE_FEATURE_COUNT + 4;
+	int IEC_PROPERTY_IMPLEMENTATION__USES_ENUM = IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>IEC Property Implementation</em>' class.
@@ -761,7 +725,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION_FEATURE_COUNT = METHOD_RESOURCE_FEATURE_COUNT + 5;
+	int IEC_PROPERTY_IMPLEMENTATION_FEATURE_COUNT = IDENTIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>IEC Property Implementation</em>' class.
@@ -770,7 +734,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION_OPERATION_COUNT = METHOD_RESOURCE_OPERATION_COUNT + 0;
+	int IEC_PROPERTY_IMPLEMENTATION_OPERATION_COUNT = IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -861,6 +825,42 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int IEC_METHOD_OPERATION_COUNT = IDENTIFIER_OPERATION_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Functionblock Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTIONBLOCK_RESOURCE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Functionblock Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTIONBLOCK_RESOURCE_OPERATION_COUNT = 0;
+
+	/**
+	 * The number of structural features of the '<em>Method Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD_RESOURCE_FEATURE_COUNT = 0;
+
+	/**
+	 * The number of operations of the '<em>Method Resource</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int METHOD_RESOURCE_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.EnumImpl <em>Enum</em>}' class.

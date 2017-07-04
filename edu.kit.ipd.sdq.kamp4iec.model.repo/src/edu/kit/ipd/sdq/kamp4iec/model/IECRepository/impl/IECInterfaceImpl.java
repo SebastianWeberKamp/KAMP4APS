@@ -6,8 +6,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -19,8 +17,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -33,7 +29,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getDefinesIecMethod <em>Defines Iec Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECInterfaceImpl#getDefinesIecProperty <em>Defines Iec Property</em>}</li>
@@ -42,27 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class IECInterfaceImpl extends MinimalEObjectImpl.Container implements IECInterface {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
+public class IECInterfaceImpl extends IdentifierImpl implements IECInterface {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -130,27 +105,6 @@ public class IECInterfaceImpl extends MinimalEObjectImpl.Container implements IE
 	@Override
 	protected EClass eStaticClass() {
 		return IECRepositoryPackage.Literals.IEC_INTERFACE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.IEC_INTERFACE__ID, oldId, id));
 	}
 
 	/**
@@ -234,8 +188,6 @@ public class IECInterfaceImpl extends MinimalEObjectImpl.Container implements IE
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_INTERFACE__ID:
-				return getId();
 			case IECRepositoryPackage.IEC_INTERFACE__NAME:
 				return getName();
 			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD:
@@ -257,9 +209,6 @@ public class IECInterfaceImpl extends MinimalEObjectImpl.Container implements IE
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_INTERFACE__ID:
-				setId((String)newValue);
-				return;
 			case IECRepositoryPackage.IEC_INTERFACE__NAME:
 				setName((String)newValue);
 				return;
@@ -287,9 +236,6 @@ public class IECInterfaceImpl extends MinimalEObjectImpl.Container implements IE
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_INTERFACE__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case IECRepositoryPackage.IEC_INTERFACE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -314,8 +260,6 @@ public class IECInterfaceImpl extends MinimalEObjectImpl.Container implements IE
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_INTERFACE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case IECRepositoryPackage.IEC_INTERFACE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECRepositoryPackage.IEC_INTERFACE__DEFINES_IEC_METHOD:
@@ -334,45 +278,11 @@ public class IECInterfaceImpl extends MinimalEObjectImpl.Container implements IE
 	 * @generated
 	 */
 	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == Identifier.class) {
-			switch (derivedFeatureID) {
-				case IECRepositoryPackage.IEC_INTERFACE__ID: return IECRepositoryPackage.IDENTIFIER__ID;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == Identifier.class) {
-			switch (baseFeatureID) {
-				case IECRepositoryPackage.IDENTIFIER__ID: return IECRepositoryPackage.IEC_INTERFACE__ID;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(", Name: ");
+		result.append(" (Name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

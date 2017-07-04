@@ -81,8 +81,8 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 			case IECRepositoryPackage.FUNCTION_BLOCK: {
 				FunctionBlock functionBlock = (FunctionBlock)theEObject;
 				T result = caseFunctionBlock(functionBlock);
-				if (result == null) result = caseFunctionblockResource(functionBlock);
 				if (result == null) result = caseIdentifier(functionBlock);
+				if (result == null) result = caseFunctionblockResource(functionBlock);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -96,16 +96,16 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 			case IECRepositoryPackage.IEC_INTERFACE: {
 				IECInterface iecInterface = (IECInterface)theEObject;
 				T result = caseIECInterface(iecInterface);
-				if (result == null) result = caseFunctionblockResource(iecInterface);
 				if (result == null) result = caseIdentifier(iecInterface);
+				if (result == null) result = caseFunctionblockResource(iecInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case IECRepositoryPackage.IEC_METHOD_IMPLEMENTATION: {
 				IECMethodImplementation iecMethodImplementation = (IECMethodImplementation)theEObject;
 				T result = caseIECMethodImplementation(iecMethodImplementation);
-				if (result == null) result = caseMethodResource(iecMethodImplementation);
 				if (result == null) result = caseIdentifier(iecMethodImplementation);
+				if (result == null) result = caseMethodResource(iecMethodImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -132,8 +132,8 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION: {
 				IECPropertyImplementation iecPropertyImplementation = (IECPropertyImplementation)theEObject;
 				T result = caseIECPropertyImplementation(iecPropertyImplementation);
-				if (result == null) result = caseMethodResource(iecPropertyImplementation);
 				if (result == null) result = caseIdentifier(iecPropertyImplementation);
+				if (result == null) result = caseMethodResource(iecPropertyImplementation);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
