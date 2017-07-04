@@ -2,9 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
@@ -26,33 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface IECMethodImplementation extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECMethodImplementation_Id()
-	 * @model
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
+public interface IECMethodImplementation extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -88,12 +60,12 @@ public interface IECMethodImplementation extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
-	 * @see #setType(IECRepository.IECMethodImplementation)
+	 * @see #setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getIECMethodImplementation_Type()
 	 * @model required="true" derived="true"
 	 * @generated
 	 */
-	IECRepository.IECMethodImplementation getType();
+	edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation getType();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getType <em>Type</em>}' reference.
@@ -103,7 +75,7 @@ public interface IECMethodImplementation extends EObject {
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(IECRepository.IECMethodImplementation value);
+	void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation value);
 
 	/**
 	 * Returns the value of the '<em><b>Accesses Global Variable</b></em>' reference list.

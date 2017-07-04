@@ -5,13 +5,13 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,34 +21,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionImpl#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class FunctionImpl extends MinimalEObjectImpl.Container implements Function {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
+public class FunctionImpl extends IdentifierImpl implements Function {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -77,7 +56,7 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	 * @generated
 	 * @ordered
 	 */
-	protected IECRepository.Function type;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,27 +75,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	protected EClass eStaticClass() {
 		return IECModelPackage.Literals.FUNCTION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.FUNCTION__ID, oldId, id));
 	}
 
 	/**
@@ -145,10 +103,10 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.Function getType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (IECRepository.Function)eResolveProxy(oldType);
+			type = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.FUNCTION__TYPE, oldType, type));
@@ -162,7 +120,7 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.Function basicGetType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function basicGetType() {
 		return type;
 	}
 
@@ -171,8 +129,8 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(IECRepository.Function newType) {
-		IECRepository.Function oldType = type;
+	public void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function newType) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.FUNCTION__TYPE, oldType, type));
@@ -186,8 +144,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECModelPackage.FUNCTION__ID:
-				return getId();
 			case IECModelPackage.FUNCTION__NAME:
 				return getName();
 			case IECModelPackage.FUNCTION__TYPE:
@@ -205,14 +161,11 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECModelPackage.FUNCTION__ID:
-				setId((String)newValue);
-				return;
 			case IECModelPackage.FUNCTION__NAME:
 				setName((String)newValue);
 				return;
 			case IECModelPackage.FUNCTION__TYPE:
-				setType((IECRepository.Function)newValue);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,14 +179,11 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.FUNCTION__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case IECModelPackage.FUNCTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 			case IECModelPackage.FUNCTION__TYPE:
-				setType((IECRepository.Function)null);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -247,8 +197,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.FUNCTION__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case IECModelPackage.FUNCTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECModelPackage.FUNCTION__TYPE:
@@ -267,9 +215,7 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Id: ");
-		result.append(id);
-		result.append(", Name: ");
+		result.append(" (Name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

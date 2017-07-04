@@ -7,6 +7,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IdentifierItemProvider;
 import java.util.Collection;
 import java.util.List;
 
@@ -18,14 +19,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -35,13 +30,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class SPSSystemItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends IdentifierItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -64,7 +53,6 @@ public class SPSSystemItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addIdPropertyDescriptor(object);
 			addComponentInternalDependenciesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -84,28 +72,6 @@ public class SPSSystemItemProvider
 				 getString("_UI_SPSSystem_Name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_SPSSystem_Name_feature", "_UI_SPSSystem_type"),
 				 IECModelPackage.Literals.SPS_SYSTEM__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Id feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_SPSSystem_Id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_SPSSystem_Id_feature", "_UI_SPSSystem_type"),
-				 IECModelPackage.Literals.SPS_SYSTEM__ID,
 				 true,
 				 false,
 				 false,
@@ -205,7 +171,6 @@ public class SPSSystemItemProvider
 
 		switch (notification.getFeatureID(SPSSystem.class)) {
 			case IECModelPackage.SPS_SYSTEM__NAME:
-			case IECModelPackage.SPS_SYSTEM__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:

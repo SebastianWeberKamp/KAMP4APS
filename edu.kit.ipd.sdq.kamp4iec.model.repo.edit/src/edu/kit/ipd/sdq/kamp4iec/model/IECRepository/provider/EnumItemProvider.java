@@ -3,8 +3,6 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider;
 
 
-import IECRepository.provider.IECRepositoryEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 
 import java.util.Collection;
@@ -61,32 +59,9 @@ public class EnumItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIdPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Id feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Enum_Id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Enum_Id_feature", "_UI_Enum_type"),
-				 IECRepositoryPackage.Literals.ENUM__ID,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -149,7 +124,6 @@ public class EnumItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class)) {
-			case IECRepositoryPackage.ENUM__ID:
 			case IECRepositoryPackage.ENUM__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.presentation;
 
-import IECRepository.presentation.IECRepositoryEditorPlugin;
-
 import java.util.ArrayList;
 import java.util.Collection;
 

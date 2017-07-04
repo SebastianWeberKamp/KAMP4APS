@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository;
 
-import IECRepository.IFunctionblock;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -25,7 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface StaticFunctionblock extends IFunctionblock {
+public interface StaticFunctionblock extends FunctionblockResource {
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
@@ -35,12 +33,12 @@ public interface StaticFunctionblock extends IFunctionblock {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
-	 * @see #setType(IFunctionblock)
+	 * @see #setType(FunctionblockResource)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getStaticFunctionblock_Type()
 	 * @model required="true"
 	 * @generated
 	 */
-	IFunctionblock getType();
+	FunctionblockResource getType();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.StaticFunctionblock#getType <em>Type</em>}' reference.
@@ -50,7 +48,7 @@ public interface StaticFunctionblock extends IFunctionblock {
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(IFunctionblock value);
+	void setType(FunctionblockResource value);
 
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
@@ -106,7 +104,7 @@ public interface StaticFunctionblock extends IFunctionblock {
 
 	/**
 	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.
-	 * The list contents are of type {@link IECRepository.Enum}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Uses Enum</em>' reference list isn't clear,
@@ -118,6 +116,6 @@ public interface StaticFunctionblock extends IFunctionblock {
 	 * @model
 	 * @generated
 	 */
-	EList<IECRepository.Enum> getUsesEnum();
+	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum();
 
 } // StaticFunctionblock

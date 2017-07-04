@@ -5,8 +5,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.tests;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IECMethodTest extends TestCase {
-
-	/**
-	 * The fixture for this IEC Method test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECMethod fixture = null;
+public class IECMethodTest extends IdentifierTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +35,14 @@ public class IECMethodTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this IEC Method test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(IECMethod fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this IEC Method test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected IECMethod getFixture() {
-		return fixture;
+		return (IECMethod)fixture;
 	}
 
 	/**

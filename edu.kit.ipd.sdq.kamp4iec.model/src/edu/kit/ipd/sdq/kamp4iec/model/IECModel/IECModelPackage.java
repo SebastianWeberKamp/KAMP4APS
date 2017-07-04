@@ -2,6 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -73,7 +74,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK__ID = 0;
+	int FUNCTION_BLOCK__ID = IECRepositoryPackage.IDENTIFIER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -82,7 +83,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK__NAME = 1;
+	int FUNCTION_BLOCK__NAME = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -91,7 +92,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK__TYPE = 2;
+	int FUNCTION_BLOCK__TYPE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Accesses Property</b></em>' reference list.
@@ -100,7 +101,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK__ACCESSES_PROPERTY = 3;
+	int FUNCTION_BLOCK__ACCESSES_PROPERTY = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Has Method</b></em>' containment reference list.
@@ -109,7 +110,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK__HAS_METHOD = 4;
+	int FUNCTION_BLOCK__HAS_METHOD = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Has Property</b></em>' containment reference list.
@@ -118,7 +119,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK__HAS_PROPERTY = 5;
+	int FUNCTION_BLOCK__HAS_PROPERTY = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Function Block</em>' class.
@@ -127,7 +128,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK_FEATURE_COUNT = 6;
+	int FUNCTION_BLOCK_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Function Block</em>' class.
@@ -136,7 +137,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK_OPERATION_COUNT = 0;
+	int FUNCTION_BLOCK_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionImpl <em>Function</em>}' class.
@@ -155,7 +156,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__ID = 0;
+	int FUNCTION__ID = IECRepositoryPackage.IDENTIFIER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -164,7 +165,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__NAME = 1;
+	int FUNCTION__NAME = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -173,7 +174,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION__TYPE = 2;
+	int FUNCTION__TYPE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Function</em>' class.
@@ -182,7 +183,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_FEATURE_COUNT = 3;
+	int FUNCTION_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Function</em>' class.
@@ -191,7 +192,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_OPERATION_COUNT = 0;
+	int FUNCTION_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl <em>Program</em>}' class.
@@ -204,13 +205,22 @@ public interface IECModelPackage extends EPackage {
 	int PROGRAM = 2;
 
 	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROGRAM__ID = IECRepositoryPackage.IDENTIFIER__ID;
+
+	/**
 	 * The feature id for the '<em><b>Calls Function</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__CALLS_FUNCTION = 0;
+	int PROGRAM__CALLS_FUNCTION = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Calls Function Block</b></em>' containment reference list.
@@ -219,7 +229,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__CALLS_FUNCTION_BLOCK = 1;
+	int PROGRAM__CALLS_FUNCTION_BLOCK = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -228,16 +238,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__NAME = 2;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int PROGRAM__ID = 3;
+	int PROGRAM__NAME = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -246,7 +247,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__TYPE = 4;
+	int PROGRAM__TYPE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Implements Interface</b></em>' containment reference list.
@@ -255,7 +256,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__IMPLEMENTS_INTERFACE = 5;
+	int PROGRAM__IMPLEMENTS_INTERFACE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Declares Variable</b></em>' containment reference list.
@@ -264,7 +265,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__DECLARES_VARIABLE = 6;
+	int PROGRAM__DECLARES_VARIABLE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Uses Enum</b></em>' containment reference list.
@@ -273,7 +274,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__USES_ENUM = 7;
+	int PROGRAM__USES_ENUM = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Accesses Property</b></em>' reference list.
@@ -282,7 +283,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__ACCESSES_PROPERTY = 8;
+	int PROGRAM__ACCESSES_PROPERTY = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Calls Method</b></em>' reference list.
@@ -291,7 +292,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM__CALLS_METHOD = 9;
+	int PROGRAM__CALLS_METHOD = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Program</em>' class.
@@ -300,7 +301,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM_FEATURE_COUNT = 10;
+	int PROGRAM_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Program</em>' class.
@@ -309,7 +310,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROGRAM_OPERATION_COUNT = 0;
+	int PROGRAM_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl <em>SPS System</em>}' class.
@@ -322,22 +323,22 @@ public interface IECModelPackage extends EPackage {
 	int SPS_SYSTEM = 3;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SPS_SYSTEM__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SPS_SYSTEM__ID = 1;
+	int SPS_SYSTEM__ID = IECRepositoryPackage.IDENTIFIER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPS_SYSTEM__NAME = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Contains Program</b></em>' containment reference list.
@@ -346,7 +347,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPS_SYSTEM__CONTAINS_PROGRAM = 2;
+	int SPS_SYSTEM__CONTAINS_PROGRAM = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Component Internal Dependencies</b></em>' reference list.
@@ -355,7 +356,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPS_SYSTEM__COMPONENT_INTERNAL_DEPENDENCIES = 3;
+	int SPS_SYSTEM__COMPONENT_INTERNAL_DEPENDENCIES = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>SPS System</em>' class.
@@ -364,7 +365,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPS_SYSTEM_FEATURE_COUNT = 4;
+	int SPS_SYSTEM_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>SPS System</em>' class.
@@ -373,7 +374,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int SPS_SYSTEM_OPERATION_COUNT = 0;
+	int SPS_SYSTEM_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECInterfaceImpl <em>IEC Interface</em>}' class.
@@ -392,7 +393,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE__ID = 0;
+	int IEC_INTERFACE__ID = IECRepositoryPackage.IDENTIFIER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -401,7 +402,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE__NAME = 1;
+	int IEC_INTERFACE__NAME = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -410,7 +411,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE__TYPE = 2;
+	int IEC_INTERFACE__TYPE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>IEC Interface</em>' class.
@@ -419,7 +420,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE_FEATURE_COUNT = 3;
+	int IEC_INTERFACE_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>IEC Interface</em>' class.
@@ -428,7 +429,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_INTERFACE_OPERATION_COUNT = 0;
+	int IEC_INTERFACE_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -447,7 +448,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLOBAL_VARIABLE__ID = 0;
+	int GLOBAL_VARIABLE__ID = IECRepositoryPackage.IDENTIFIER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -456,7 +457,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLOBAL_VARIABLE__NAME = 1;
+	int GLOBAL_VARIABLE__NAME = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -465,7 +466,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLOBAL_VARIABLE__TYPE = 2;
+	int GLOBAL_VARIABLE__TYPE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Global Variable</em>' class.
@@ -474,7 +475,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLOBAL_VARIABLE_FEATURE_COUNT = 3;
+	int GLOBAL_VARIABLE_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Global Variable</em>' class.
@@ -483,7 +484,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int GLOBAL_VARIABLE_OPERATION_COUNT = 0;
+	int GLOBAL_VARIABLE_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl <em>IEC Method Implementation</em>}' class.
@@ -502,7 +503,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__ID = 0;
+	int IEC_METHOD_IMPLEMENTATION__ID = IECRepositoryPackage.IDENTIFIER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -511,7 +512,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__NAME = 1;
+	int IEC_METHOD_IMPLEMENTATION__NAME = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -520,7 +521,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__TYPE = 2;
+	int IEC_METHOD_IMPLEMENTATION__TYPE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Accesses Global Variable</b></em>' reference list.
@@ -529,7 +530,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__ACCESSES_GLOBAL_VARIABLE = 3;
+	int IEC_METHOD_IMPLEMENTATION__ACCESSES_GLOBAL_VARIABLE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Accesses Property</b></em>' reference list.
@@ -538,7 +539,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION__ACCESSES_PROPERTY = 4;
+	int IEC_METHOD_IMPLEMENTATION__ACCESSES_PROPERTY = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>IEC Method Implementation</em>' class.
@@ -547,7 +548,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION_FEATURE_COUNT = 5;
+	int IEC_METHOD_IMPLEMENTATION_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>IEC Method Implementation</em>' class.
@@ -556,7 +557,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_METHOD_IMPLEMENTATION_OPERATION_COUNT = 0;
+	int IEC_METHOD_IMPLEMENTATION_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl <em>IEC Property Implementation</em>}' class.
@@ -575,7 +576,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION__ID = 0;
+	int IEC_PROPERTY_IMPLEMENTATION__ID = IECRepositoryPackage.IDENTIFIER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -584,7 +585,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION__NAME = 1;
+	int IEC_PROPERTY_IMPLEMENTATION__NAME = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -593,7 +594,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION__TYPE = 2;
+	int IEC_PROPERTY_IMPLEMENTATION__TYPE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>IEC Property Implementation</em>' class.
@@ -602,7 +603,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION_FEATURE_COUNT = 3;
+	int IEC_PROPERTY_IMPLEMENTATION_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>IEC Property Implementation</em>' class.
@@ -611,7 +612,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int IEC_PROPERTY_IMPLEMENTATION_OPERATION_COUNT = 0;
+	int IEC_PROPERTY_IMPLEMENTATION_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.EnumImpl <em>Enum</em>}' class.
@@ -630,7 +631,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM__ID = 0;
+	int ENUM__ID = IECRepositoryPackage.IDENTIFIER__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -639,7 +640,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM__NAME = 1;
+	int ENUM__NAME = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Type</b></em>' reference.
@@ -648,7 +649,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM__TYPE = 2;
+	int ENUM__TYPE = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Enum</em>' class.
@@ -657,7 +658,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM_FEATURE_COUNT = 3;
+	int ENUM_FEATURE_COUNT = IECRepositoryPackage.IDENTIFIER_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Enum</em>' class.
@@ -666,7 +667,7 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ENUM_OPERATION_COUNT = 0;
+	int ENUM_OPERATION_COUNT = IECRepositoryPackage.IDENTIFIER_OPERATION_COUNT + 0;
 
 
 	/**
@@ -678,17 +679,6 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFunctionBlock();
-
-	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getId()
-	 * @see #getFunctionBlock()
-	 * @generated
-	 */
-	EAttribute getFunctionBlock_Id();
 
 	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.FunctionBlock#getName <em>Name</em>}'.
@@ -756,17 +746,6 @@ public interface IECModelPackage extends EPackage {
 	EClass getFunction();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function#getId()
-	 * @see #getFunction()
-	 * @generated
-	 */
-	EAttribute getFunction_Id();
-
-	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -830,17 +809,6 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getProgram_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getId()
-	 * @see #getProgram()
-	 * @generated
-	 */
-	EAttribute getProgram_Id();
 
 	/**
 	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getType <em>Type</em>}'.
@@ -930,17 +898,6 @@ public interface IECModelPackage extends EPackage {
 	EAttribute getSPSSystem_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getId()
-	 * @see #getSPSSystem()
-	 * @generated
-	 */
-	EAttribute getSPSSystem_Id();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getContainsProgram <em>Contains Program</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -971,17 +928,6 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getIECInterface();
-
-	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface#getId()
-	 * @see #getIECInterface()
-	 * @generated
-	 */
-	EAttribute getIECInterface_Id();
 
 	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECInterface#getName <em>Name</em>}'.
@@ -1016,17 +962,6 @@ public interface IECModelPackage extends EPackage {
 	EClass getGlobalVariable();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable#getId()
-	 * @see #getGlobalVariable()
-	 * @generated
-	 */
-	EAttribute getGlobalVariable_Id();
-
-	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1057,17 +992,6 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getIECMethodImplementation();
-
-	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getId()
-	 * @see #getIECMethodImplementation()
-	 * @generated
-	 */
-	EAttribute getIECMethodImplementation_Id();
 
 	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#getName <em>Name</em>}'.
@@ -1124,17 +1048,6 @@ public interface IECModelPackage extends EPackage {
 	EClass getIECPropertyImplementation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation#getId()
-	 * @see #getIECPropertyImplementation()
-	 * @generated
-	 */
-	EAttribute getIECPropertyImplementation_Id();
-
-	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1165,17 +1078,6 @@ public interface IECModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getEnum();
-
-	/**
-	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum#getId()
-	 * @see #getEnum()
-	 * @generated
-	 */
-	EAttribute getEnum_Id();
 
 	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum#getName <em>Name</em>}'.
@@ -1233,14 +1135,6 @@ public interface IECModelPackage extends EPackage {
 		EClass FUNCTION_BLOCK = eINSTANCE.getFunctionBlock();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FUNCTION_BLOCK__ID = eINSTANCE.getFunctionBlock_Id();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1291,14 +1185,6 @@ public interface IECModelPackage extends EPackage {
 		EClass FUNCTION = eINSTANCE.getFunction();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute FUNCTION__ID = eINSTANCE.getFunction_Id();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1347,14 +1233,6 @@ public interface IECModelPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute PROGRAM__NAME = eINSTANCE.getProgram_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute PROGRAM__ID = eINSTANCE.getProgram_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
@@ -1423,14 +1301,6 @@ public interface IECModelPackage extends EPackage {
 		EAttribute SPS_SYSTEM__NAME = eINSTANCE.getSPSSystem_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute SPS_SYSTEM__ID = eINSTANCE.getSPSSystem_Id();
-
-		/**
 		 * The meta object literal for the '<em><b>Contains Program</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1455,14 +1325,6 @@ public interface IECModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass IEC_INTERFACE = eINSTANCE.getIECInterface();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IEC_INTERFACE__ID = eINSTANCE.getIECInterface_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1491,14 +1353,6 @@ public interface IECModelPackage extends EPackage {
 		EClass GLOBAL_VARIABLE = eINSTANCE.getGlobalVariable();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute GLOBAL_VARIABLE__ID = eINSTANCE.getGlobalVariable_Id();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1523,14 +1377,6 @@ public interface IECModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass IEC_METHOD_IMPLEMENTATION = eINSTANCE.getIECMethodImplementation();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IEC_METHOD_IMPLEMENTATION__ID = eINSTANCE.getIECMethodImplementation_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -1575,14 +1421,6 @@ public interface IECModelPackage extends EPackage {
 		EClass IEC_PROPERTY_IMPLEMENTATION = eINSTANCE.getIECPropertyImplementation();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute IEC_PROPERTY_IMPLEMENTATION__ID = eINSTANCE.getIECPropertyImplementation_Id();
-
-		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1607,14 +1445,6 @@ public interface IECModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass ENUM = eINSTANCE.getEnum();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute ENUM__ID = eINSTANCE.getEnum_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

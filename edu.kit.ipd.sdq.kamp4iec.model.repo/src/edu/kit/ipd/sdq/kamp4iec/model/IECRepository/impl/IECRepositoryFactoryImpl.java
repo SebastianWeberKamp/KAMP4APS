@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
-import IECRepository.VariableType;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
@@ -16,7 +14,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.StaticFunctionblock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EDataType;
@@ -81,7 +79,6 @@ public class IECRepositoryFactoryImpl extends EFactoryImpl implements IECReposit
 			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION: return createIECPropertyImplementation();
 			case IECRepositoryPackage.IEC_PROPERTY: return createIECProperty();
 			case IECRepositoryPackage.IEC_METHOD: return createIECMethod();
-			case IECRepositoryPackage.STATIC_FUNCTIONBLOCK: return createStaticFunctionblock();
 			case IECRepositoryPackage.ENUM: return createEnum();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -223,16 +220,6 @@ public class IECRepositoryFactoryImpl extends EFactoryImpl implements IECReposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public StaticFunctionblock createStaticFunctionblock() {
-		StaticFunctionblockImpl staticFunctionblock = new StaticFunctionblockImpl();
-		return staticFunctionblock;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum createEnum() {
 		EnumImpl enum_ = new EnumImpl();
 		return enum_;
@@ -244,7 +231,7 @@ public class IECRepositoryFactoryImpl extends EFactoryImpl implements IECReposit
 	 * @generated
 	 */
 	public VariableType createVariableTypeFromString(EDataType eDataType, String initialValue) {
-		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType result = edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType.get(initialValue);
+		VariableType result = VariableType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}

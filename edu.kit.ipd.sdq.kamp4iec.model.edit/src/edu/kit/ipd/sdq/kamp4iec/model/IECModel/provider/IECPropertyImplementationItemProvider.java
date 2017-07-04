@@ -6,6 +6,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IdentifierItemProvider;
 import java.util.Collection;
 import java.util.List;
 
@@ -15,14 +16,8 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -32,13 +27,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class IECPropertyImplementationItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends IdentifierItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -60,33 +49,10 @@ public class IECPropertyImplementationItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addIdPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Id feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_IECPropertyImplementation_Id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECPropertyImplementation_Id_feature", "_UI_IECPropertyImplementation_type"),
-				 IECModelPackage.Literals.IEC_PROPERTY_IMPLEMENTATION__ID,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -171,7 +137,6 @@ public class IECPropertyImplementationItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(IECPropertyImplementation.class)) {
-			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__ID:
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;

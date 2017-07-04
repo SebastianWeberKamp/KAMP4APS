@@ -4,8 +4,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository;
 
 import org.eclipse.emf.common.util.EList;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Function</b></em>'.
@@ -15,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function#getCallsFunction <em>Calls Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function#getUsesEnum <em>Uses Enum</em>}</li>
@@ -25,33 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Function extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunction_Id()
-	 * @model
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
+public interface Function extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -80,7 +51,7 @@ public interface Function extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Calls Function</b></em>' reference list.
-	 * The list contents are of type {@link IECRepository.Function}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Calls Function</em>' reference list isn't clear,
@@ -92,11 +63,11 @@ public interface Function extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<IECRepository.Function> getCallsFunction();
+	EList<Function> getCallsFunction();
 
 	/**
 	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.
-	 * The list contents are of type {@link IECRepository.Enum}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Uses Enum</em>' reference list isn't clear,
@@ -108,6 +79,6 @@ public interface Function extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<IECRepository.Enum> getUsesEnum();
+	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum();
 
 } // Function

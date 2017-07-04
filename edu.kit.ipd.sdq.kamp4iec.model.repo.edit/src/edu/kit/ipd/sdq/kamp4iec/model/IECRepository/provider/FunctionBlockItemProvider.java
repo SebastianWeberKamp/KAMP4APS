@@ -3,8 +3,6 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider;
 
 
-import IECRepository.provider.IECRepositoryEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
@@ -87,9 +85,9 @@ public class FunctionBlockItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_FunctionBlock_Id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_Id_feature", "_UI_FunctionBlock_type"),
-				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__ID,
+				 getString("_UI_Identifier_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Identifier_id_feature", "_UI_Identifier_type"),
+				 IECRepositoryPackage.Literals.IDENTIFIER__ID,
 				 true,
 				 false,
 				 false,
@@ -329,18 +327,8 @@ public class FunctionBlockItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_IEC_METHOD,
-				 IECRepository.IECRepositoryFactory.eINSTANCE.createIECMethodImplementation()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_IEC_PROPERTY,
 				 IECRepositoryFactory.eINSTANCE.createIECPropertyImplementation()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECRepositoryPackage.Literals.FUNCTION_BLOCK__HAS_IEC_PROPERTY,
-				 IECRepository.IECRepositoryFactory.eINSTANCE.createIECPropertyImplementation()));
 	}
 
 	/**

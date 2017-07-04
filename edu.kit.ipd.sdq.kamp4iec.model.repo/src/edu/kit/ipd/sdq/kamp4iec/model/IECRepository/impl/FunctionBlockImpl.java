@@ -2,16 +2,16 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
-import IECRepository.Function;
-import IECRepository.GlobalVariable;
-import IECRepository.IECInterface;
-import IECRepository.IECMethodImplementation;
-import IECRepository.IECPropertyImplementation;
-import IECRepository.IFunctionblock;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -129,7 +129,7 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IFunctionblock> usesFunctionBlock;
+	protected EList<FunctionblockResource> usesFunctionBlock;
 
 	/**
 	 * The cached value of the '{@link #getCallsFunction() <em>Calls Function</em>}' reference list.
@@ -159,7 +159,7 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECRepository.Enum> usesEnum;
+	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> usesEnum;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -263,9 +263,9 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IFunctionblock> getUsesFunctionBlock() {
+	public EList<FunctionblockResource> getUsesFunctionBlock() {
 		if (usesFunctionBlock == null) {
-			usesFunctionBlock = new EObjectResolvingEList<IFunctionblock>(IFunctionblock.class, this, IECRepositoryPackage.FUNCTION_BLOCK__USES_FUNCTION_BLOCK);
+			usesFunctionBlock = new EObjectResolvingEList<FunctionblockResource>(FunctionblockResource.class, this, IECRepositoryPackage.FUNCTION_BLOCK__USES_FUNCTION_BLOCK);
 		}
 		return usesFunctionBlock;
 	}
@@ -299,9 +299,9 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECRepository.Enum> getUsesEnum() {
+	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum() {
 		if (usesEnum == null) {
-			usesEnum = new EObjectResolvingEList<IECRepository.Enum>(IECRepository.Enum.class, this, IECRepositoryPackage.FUNCTION_BLOCK__USES_ENUM);
+			usesEnum = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class, this, IECRepositoryPackage.FUNCTION_BLOCK__USES_ENUM);
 		}
 		return usesEnum;
 	}
@@ -381,7 +381,7 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__USES_FUNCTION_BLOCK:
 				getUsesFunctionBlock().clear();
-				getUsesFunctionBlock().addAll((Collection<? extends IFunctionblock>)newValue);
+				getUsesFunctionBlock().addAll((Collection<? extends FunctionblockResource>)newValue);
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__CALLS_FUNCTION:
 				getCallsFunction().clear();
@@ -393,7 +393,7 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 				return;
 			case IECRepositoryPackage.FUNCTION_BLOCK__USES_ENUM:
 				getUsesEnum().clear();
-				getUsesEnum().addAll((Collection<? extends IECRepository.Enum>)newValue);
+				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -474,11 +474,43 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Identifier.class) {
+			switch (derivedFeatureID) {
+				case IECRepositoryPackage.FUNCTION_BLOCK__ID: return IECRepositoryPackage.IDENTIFIER__ID;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Identifier.class) {
+			switch (baseFeatureID) {
+				case IECRepositoryPackage.IDENTIFIER__ID: return IECRepositoryPackage.FUNCTION_BLOCK__ID;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Id: ");
+		result.append(" (id: ");
 		result.append(id);
 		result.append(", Name: ");
 		result.append(name);

@@ -3,8 +3,6 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider;
 
 
-import IECRepository.provider.IECRepositoryEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
@@ -66,7 +64,6 @@ public class RepositoryItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addIdPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -94,28 +91,6 @@ public class RepositoryItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Id feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Repository_Id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Repository_Id_feature", "_UI_Repository_type"),
-				 IECRepositoryPackage.Literals.REPOSITORY__ID,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -132,7 +107,6 @@ public class RepositoryItemProvider
 			childrenFeatures.add(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_FUNCTION_BLOCK);
 			childrenFeatures.add(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_FUNCTION);
 			childrenFeatures.add(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_VARIABLE);
-			childrenFeatures.add(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_STATIC_FUNCTIONBLOCK);
 			childrenFeatures.add(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_ENUM);
 		}
 		return childrenFeatures;
@@ -190,7 +164,6 @@ public class RepositoryItemProvider
 
 		switch (notification.getFeatureID(Repository.class)) {
 			case IECRepositoryPackage.REPOSITORY__NAME:
-			case IECRepositoryPackage.REPOSITORY__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_PROGRAM:
@@ -198,7 +171,6 @@ public class RepositoryItemProvider
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_FUNCTION_BLOCK:
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_FUNCTION:
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_VARIABLE:
-			case IECRepositoryPackage.REPOSITORY__CONTAINS_STATIC_FUNCTIONBLOCK:
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_ENUM:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
@@ -224,18 +196,8 @@ public class RepositoryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_PROGRAM,
-				 IECRepository.IECRepositoryFactory.eINSTANCE.createProgram()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_INTERFACE,
 				 IECRepositoryFactory.eINSTANCE.createIECInterface()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_INTERFACE,
-				 IECRepository.IECRepositoryFactory.eINSTANCE.createIECInterface()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -244,18 +206,8 @@ public class RepositoryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_FUNCTION_BLOCK,
-				 IECRepository.IECRepositoryFactory.eINSTANCE.createFunctionBlock()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_FUNCTION,
 				 IECRepositoryFactory.eINSTANCE.createFunction()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_FUNCTION,
-				 IECRepository.IECRepositoryFactory.eINSTANCE.createFunction()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -264,28 +216,8 @@ public class RepositoryItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_VARIABLE,
-				 IECRepository.IECRepositoryFactory.eINSTANCE.createGlobalVariable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_STATIC_FUNCTIONBLOCK,
-				 IECRepositoryFactory.eINSTANCE.createStaticFunctionblock()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_STATIC_FUNCTIONBLOCK,
-				 IECRepository.IECRepositoryFactory.eINSTANCE.createStaticFunctionblock()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_ENUM,
 				 IECRepositoryFactory.eINSTANCE.createEnum()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECRepositoryPackage.Literals.REPOSITORY__CONTAINS_ENUM,
-				 IECRepository.IECRepositoryFactory.eINSTANCE.createEnum()));
 	}
 
 	/**

@@ -4,9 +4,8 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesRepository;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getName <em>Name</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getContainsProgram <em>Contains Program</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getComponentInternalDependencies <em>Component Internal Dependencies</em>}</li>
  * </ul>
@@ -27,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface SPSSystem extends EObject {
+public interface SPSSystem extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -53,32 +51,6 @@ public interface SPSSystem extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getSPSSystem_Id()
-	 * @model
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Contains Program</b></em>' containment reference list.

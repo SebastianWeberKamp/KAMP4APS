@@ -5,13 +5,13 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,34 +21,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.GlobalVariableImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements GlobalVariable {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
+public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -77,7 +56,7 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected IECRepository.GlobalVariable type;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,27 +75,6 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	protected EClass eStaticClass() {
 		return IECModelPackage.Literals.GLOBAL_VARIABLE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.GLOBAL_VARIABLE__ID, oldId, id));
 	}
 
 	/**
@@ -145,10 +103,10 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.GlobalVariable getType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (IECRepository.GlobalVariable)eResolveProxy(oldType);
+			type = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.GLOBAL_VARIABLE__TYPE, oldType, type));
@@ -162,7 +120,7 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.GlobalVariable basicGetType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable basicGetType() {
 		return type;
 	}
 
@@ -171,8 +129,8 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(IECRepository.GlobalVariable newType) {
-		IECRepository.GlobalVariable oldType = type;
+	public void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable newType) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.GLOBAL_VARIABLE__TYPE, oldType, type));
@@ -186,8 +144,6 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECModelPackage.GLOBAL_VARIABLE__ID:
-				return getId();
 			case IECModelPackage.GLOBAL_VARIABLE__NAME:
 				return getName();
 			case IECModelPackage.GLOBAL_VARIABLE__TYPE:
@@ -205,14 +161,11 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECModelPackage.GLOBAL_VARIABLE__ID:
-				setId((String)newValue);
-				return;
 			case IECModelPackage.GLOBAL_VARIABLE__NAME:
 				setName((String)newValue);
 				return;
 			case IECModelPackage.GLOBAL_VARIABLE__TYPE:
-				setType((IECRepository.GlobalVariable)newValue);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,14 +179,11 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.GLOBAL_VARIABLE__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case IECModelPackage.GLOBAL_VARIABLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 			case IECModelPackage.GLOBAL_VARIABLE__TYPE:
-				setType((IECRepository.GlobalVariable)null);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -247,8 +197,6 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.GLOBAL_VARIABLE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case IECModelPackage.GLOBAL_VARIABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECModelPackage.GLOBAL_VARIABLE__TYPE:
@@ -267,9 +215,7 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Id: ");
-		result.append(id);
-		result.append(", Name: ");
+		result.append(" (Name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

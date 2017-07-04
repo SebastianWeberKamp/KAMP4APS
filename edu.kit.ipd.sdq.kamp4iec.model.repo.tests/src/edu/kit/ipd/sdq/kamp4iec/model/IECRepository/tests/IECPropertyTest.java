@@ -5,8 +5,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.tests;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class IECPropertyTest extends TestCase {
-
-	/**
-	 * The fixture for this IEC Property test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IECProperty fixture = null;
+public class IECPropertyTest extends IdentifierTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +35,14 @@ public class IECPropertyTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this IEC Property test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(IECProperty fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this IEC Property test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected IECProperty getFixture() {
-		return fixture;
+		return (IECProperty)fixture;
 	}
 
 	/**

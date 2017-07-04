@@ -106,10 +106,10 @@ public class IECMethodImplementationTest extends TestCase {
 	}
 
 	/**
-	 * Tests the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#setType(IECRepository.IECMethodImplementation) <em>Type</em>}' feature setter.
+	 * Tests the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation) <em>Type</em>}' feature setter.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#setType(IECRepository.IECMethodImplementation)
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation#setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation)
 	 * @generated
 	 */
 	public void testSetType() {

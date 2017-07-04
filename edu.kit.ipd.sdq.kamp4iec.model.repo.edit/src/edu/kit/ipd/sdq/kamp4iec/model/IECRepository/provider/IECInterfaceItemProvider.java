@@ -3,8 +3,6 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider;
 
 
-import IECRepository.provider.IECRepositoryEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
@@ -83,9 +81,9 @@ public class IECInterfaceItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_IECInterface_Id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECInterface_Id_feature", "_UI_IECInterface_type"),
-				 IECRepositoryPackage.Literals.IEC_INTERFACE__ID,
+				 getString("_UI_Identifier_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Identifier_id_feature", "_UI_Identifier_type"),
+				 IECRepositoryPackage.Literals.IDENTIFIER__ID,
 				 true,
 				 false,
 				 false,
@@ -237,18 +235,8 @@ public class IECInterfaceItemProvider
 
 		newChildDescriptors.add
 			(createChildParameter
-				(IECRepositoryPackage.Literals.IEC_INTERFACE__DEFINES_IEC_METHOD,
-				 IECRepository.IECRepositoryFactory.eINSTANCE.createIECMethod()));
-
-		newChildDescriptors.add
-			(createChildParameter
 				(IECRepositoryPackage.Literals.IEC_INTERFACE__DEFINES_IEC_PROPERTY,
 				 IECRepositoryFactory.eINSTANCE.createIECProperty()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(IECRepositoryPackage.Literals.IEC_INTERFACE__DEFINES_IEC_PROPERTY,
-				 IECRepository.IECRepositoryFactory.eINSTANCE.createIECProperty()));
 	}
 
 	/**

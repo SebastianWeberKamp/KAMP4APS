@@ -13,7 +13,6 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum#getName <em>Name</em>}</li>
  * </ul>
  *
@@ -22,32 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface Enum extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getEnum_Id()
-	 * @model
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

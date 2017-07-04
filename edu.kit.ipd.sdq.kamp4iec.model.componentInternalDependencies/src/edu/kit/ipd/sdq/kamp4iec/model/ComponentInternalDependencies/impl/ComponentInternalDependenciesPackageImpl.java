@@ -8,6 +8,8 @@ import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInt
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.FunctionblockDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.MethodDependency;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -89,7 +91,7 @@ public class ComponentInternalDependenciesPackageImpl extends EPackageImpl imple
 		isInited = true;
 
 		// Initialize simple dependencies
-		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage.eINSTANCE.eClass();
+		IECRepositoryPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theComponentInternalDependenciesPackage.createPackageContents();
@@ -252,7 +254,7 @@ public class ComponentInternalDependenciesPackageImpl extends EPackageImpl imple
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage theIECRepositoryPackage = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage.eNS_URI);
+		IECRepositoryPackage theIECRepositoryPackage = (IECRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(IECRepositoryPackage.eNS_URI);
 
 		// Create type parameters
 

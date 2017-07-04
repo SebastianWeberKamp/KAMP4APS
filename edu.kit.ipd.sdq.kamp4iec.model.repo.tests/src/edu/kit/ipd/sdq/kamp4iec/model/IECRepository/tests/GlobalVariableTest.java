@@ -5,8 +5,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.tests;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class GlobalVariableTest extends TestCase {
-
-	/**
-	 * The fixture for this Global Variable test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected GlobalVariable fixture = null;
+public class GlobalVariableTest extends IdentifierTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +35,14 @@ public class GlobalVariableTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Global Variable test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(GlobalVariable fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Global Variable test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected GlobalVariable getFixture() {
-		return fixture;
+		return (GlobalVariable)fixture;
 	}
 
 	/**

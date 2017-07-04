@@ -71,10 +71,8 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
-import IECRepository.provider.IECRepositoryEditPlugin;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryEditPlugin;
 
-
-import IECRepository.presentation.IECRepositoryEditorPlugin;
 
 import org.eclipse.core.runtime.Path;
 

@@ -112,15 +112,6 @@ public interface IECRepositoryFactory extends EFactory {
 	IECMethod createIECMethod();
 
 	/**
-	 * Returns a new object of class '<em>Static Functionblock</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Static Functionblock</em>'.
-	 * @generated
-	 */
-	StaticFunctionblock createStaticFunctionblock();
-
-	/**
 	 * Returns a new object of class '<em>Enum</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -302,29 +302,6 @@ public class IECRepositoryItemProviderAdapterFactory extends IECRepositoryAdapte
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.StaticFunctionblock} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected StaticFunctionblockItemProvider staticFunctionblockItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.StaticFunctionblock}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createStaticFunctionblockAdapter() {
-		if (staticFunctionblockItemProvider == null) {
-			staticFunctionblockItemProvider = new StaticFunctionblockItemProvider(this);
-		}
-
-		return staticFunctionblockItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -456,7 +433,6 @@ public class IECRepositoryItemProviderAdapterFactory extends IECRepositoryAdapte
 		if (iecPropertyImplementationItemProvider != null) iecPropertyImplementationItemProvider.dispose();
 		if (iecPropertyItemProvider != null) iecPropertyItemProvider.dispose();
 		if (iecMethodItemProvider != null) iecMethodItemProvider.dispose();
-		if (staticFunctionblockItemProvider != null) staticFunctionblockItemProvider.dispose();
 		if (enumItemProvider != null) enumItemProvider.dispose();
 	}
 

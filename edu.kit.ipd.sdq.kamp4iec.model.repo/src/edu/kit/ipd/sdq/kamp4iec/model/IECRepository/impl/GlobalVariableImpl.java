@@ -2,10 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
-import IECRepository.VariableType;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType;
 
 import java.util.Collection;
 
@@ -16,8 +15,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -29,14 +26,13 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.GlobalVariableImpl#getType <em>Type</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.GlobalVariableImpl#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.GlobalVariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.GlobalVariableImpl#getUsesEnum <em>Uses Enum</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements GlobalVariable {
+public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable {
 	/**
 	 * The default value of the '{@link #getType() <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -56,26 +52,6 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected VariableType type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -105,7 +81,7 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECRepository.Enum> usesEnum;
+	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> usesEnum;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -152,27 +128,6 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.GLOBAL_VARIABLE__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -194,9 +149,9 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECRepository.Enum> getUsesEnum() {
+	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum() {
 		if (usesEnum == null) {
-			usesEnum = new EObjectResolvingEList<IECRepository.Enum>(IECRepository.Enum.class, this, IECRepositoryPackage.GLOBAL_VARIABLE__USES_ENUM);
+			usesEnum = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class, this, IECRepositoryPackage.GLOBAL_VARIABLE__USES_ENUM);
 		}
 		return usesEnum;
 	}
@@ -211,8 +166,6 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
 				return getType();
-			case IECRepositoryPackage.GLOBAL_VARIABLE__ID:
-				return getId();
 			case IECRepositoryPackage.GLOBAL_VARIABLE__NAME:
 				return getName();
 			case IECRepositoryPackage.GLOBAL_VARIABLE__USES_ENUM:
@@ -233,15 +186,12 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
 				setType((VariableType)newValue);
 				return;
-			case IECRepositoryPackage.GLOBAL_VARIABLE__ID:
-				setId((String)newValue);
-				return;
 			case IECRepositoryPackage.GLOBAL_VARIABLE__NAME:
 				setName((String)newValue);
 				return;
 			case IECRepositoryPackage.GLOBAL_VARIABLE__USES_ENUM:
 				getUsesEnum().clear();
-				getUsesEnum().addAll((Collection<? extends IECRepository.Enum>)newValue);
+				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -257,9 +207,6 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
 				setType(TYPE_EDEFAULT);
-				return;
-			case IECRepositoryPackage.GLOBAL_VARIABLE__ID:
-				setId(ID_EDEFAULT);
 				return;
 			case IECRepositoryPackage.GLOBAL_VARIABLE__NAME:
 				setName(NAME_EDEFAULT);
@@ -281,8 +228,6 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
 				return type != TYPE_EDEFAULT;
-			case IECRepositoryPackage.GLOBAL_VARIABLE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case IECRepositoryPackage.GLOBAL_VARIABLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECRepositoryPackage.GLOBAL_VARIABLE__USES_ENUM:
@@ -303,8 +248,6 @@ public class GlobalVariableImpl extends MinimalEObjectImpl.Container implements 
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Type: ");
 		result.append(type);
-		result.append(", Id: ");
-		result.append(id);
 		result.append(", Name: ");
 		result.append(name);
 		result.append(')');

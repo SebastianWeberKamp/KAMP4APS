@@ -5,13 +5,13 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,34 +21,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class IECPropertyImplementationImpl extends MinimalEObjectImpl.Container implements IECPropertyImplementation {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
+public class IECPropertyImplementationImpl extends IdentifierImpl implements IECPropertyImplementation {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -77,7 +56,7 @@ public class IECPropertyImplementationImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected IECRepository.IECPropertyImplementation type;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -96,27 +75,6 @@ public class IECPropertyImplementationImpl extends MinimalEObjectImpl.Container 
 	@Override
 	protected EClass eStaticClass() {
 		return IECModelPackage.Literals.IEC_PROPERTY_IMPLEMENTATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__ID, oldId, id));
 	}
 
 	/**
@@ -145,10 +103,10 @@ public class IECPropertyImplementationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.IECPropertyImplementation getType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (IECRepository.IECPropertyImplementation)eResolveProxy(oldType);
+			type = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__TYPE, oldType, type));
@@ -162,7 +120,7 @@ public class IECPropertyImplementationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.IECPropertyImplementation basicGetType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation basicGetType() {
 		return type;
 	}
 
@@ -171,8 +129,8 @@ public class IECPropertyImplementationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(IECRepository.IECPropertyImplementation newType) {
-		IECRepository.IECPropertyImplementation oldType = type;
+	public void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation newType) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__TYPE, oldType, type));
@@ -186,8 +144,6 @@ public class IECPropertyImplementationImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__ID:
-				return getId();
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
 				return getName();
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__TYPE:
@@ -205,14 +161,11 @@ public class IECPropertyImplementationImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__ID:
-				setId((String)newValue);
-				return;
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
 				setName((String)newValue);
 				return;
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__TYPE:
-				setType((IECRepository.IECPropertyImplementation)newValue);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -226,14 +179,11 @@ public class IECPropertyImplementationImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__TYPE:
-				setType((IECRepository.IECPropertyImplementation)null);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -247,8 +197,6 @@ public class IECPropertyImplementationImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__TYPE:
@@ -267,9 +215,7 @@ public class IECPropertyImplementationImpl extends MinimalEObjectImpl.Container 
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Id: ");
-		result.append(id);
-		result.append(", Name: ");
+		result.append(" (Name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

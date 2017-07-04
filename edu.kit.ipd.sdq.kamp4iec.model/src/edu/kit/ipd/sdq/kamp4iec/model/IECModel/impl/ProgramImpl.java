@@ -11,6 +11,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -22,8 +23,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -39,7 +38,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getCallsFunction <em>Calls Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getCallsFunctionBlock <em>Calls Function Block</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getName <em>Name</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getImplementsInterface <em>Implements Interface</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getDeclaresVariable <em>Declares Variable</em>}</li>
@@ -50,7 +48,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class ProgramImpl extends MinimalEObjectImpl.Container implements Program {
+public class ProgramImpl extends IdentifierImpl implements Program {
 	/**
 	 * The cached value of the '{@link #getCallsFunction() <em>Calls Function</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -92,26 +90,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
-	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -119,7 +97,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 	 * @generated
 	 * @ordered
 	 */
-	protected IECRepository.Program type;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program type;
 
 	/**
 	 * The cached value of the '{@link #getImplementsInterface() <em>Implements Interface</em>}' containment reference list.
@@ -240,31 +218,10 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.PROGRAM__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public IECRepository.Program getType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (IECRepository.Program)eResolveProxy(oldType);
+			type = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.PROGRAM__TYPE, oldType, type));
@@ -278,7 +235,7 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.Program basicGetType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program basicGetType() {
 		return type;
 	}
 
@@ -287,8 +244,8 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(IECRepository.Program newType) {
-		IECRepository.Program oldType = type;
+	public void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program newType) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.PROGRAM__TYPE, oldType, type));
@@ -390,8 +347,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 				return getCallsFunctionBlock();
 			case IECModelPackage.PROGRAM__NAME:
 				return getName();
-			case IECModelPackage.PROGRAM__ID:
-				return getId();
 			case IECModelPackage.PROGRAM__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
@@ -429,11 +384,8 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 			case IECModelPackage.PROGRAM__NAME:
 				setName((String)newValue);
 				return;
-			case IECModelPackage.PROGRAM__ID:
-				setId((String)newValue);
-				return;
 			case IECModelPackage.PROGRAM__TYPE:
-				setType((IECRepository.Program)newValue);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program)newValue);
 				return;
 			case IECModelPackage.PROGRAM__IMPLEMENTS_INTERFACE:
 				getImplementsInterface().clear();
@@ -476,11 +428,8 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 			case IECModelPackage.PROGRAM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case IECModelPackage.PROGRAM__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case IECModelPackage.PROGRAM__TYPE:
-				setType((IECRepository.Program)null);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program)null);
 				return;
 			case IECModelPackage.PROGRAM__IMPLEMENTS_INTERFACE:
 				getImplementsInterface().clear();
@@ -515,8 +464,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 				return callsFunctionBlock != null && !callsFunctionBlock.isEmpty();
 			case IECModelPackage.PROGRAM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case IECModelPackage.PROGRAM__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case IECModelPackage.PROGRAM__TYPE:
 				return type != null;
 			case IECModelPackage.PROGRAM__IMPLEMENTS_INTERFACE:
@@ -545,8 +492,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
-		result.append(", Id: ");
-		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

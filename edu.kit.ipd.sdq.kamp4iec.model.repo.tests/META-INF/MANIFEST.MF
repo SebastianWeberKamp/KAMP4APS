@@ -7,8 +7,7 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: IECRepository.tests,
- edu.kit.ipd.sdq.kamp4iec.model.IECRepository.tests
+Export-Package: edu.kit.ipd.sdq.kamp4iec.model.IECRepository.tests
 Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4iec.model.repo;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,

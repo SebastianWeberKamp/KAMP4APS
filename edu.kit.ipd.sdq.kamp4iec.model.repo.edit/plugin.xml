@@ -10,19 +10,6 @@
       <!-- @generated IECRepository -->
       <factory
             uri="http://sdq.ipd.kit.edu/IECRepository"
-            class="IECRepository.provider.IECRepositoryItemProviderAdapterFactory"
-            supportedTypes=
-              "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
-               org.eclipse.emf.edit.provider.IStructuredItemContentProvider
-               org.eclipse.emf.edit.provider.ITreeItemContentProvider
-               org.eclipse.emf.edit.provider.IItemLabelProvider
-               org.eclipse.emf.edit.provider.IItemPropertySource"/>
-   </extension>
-
-   <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated IECRepository -->
-      <factory
-            uri="http://sdq.ipd.kit.edu/IECRepository"
             class="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider

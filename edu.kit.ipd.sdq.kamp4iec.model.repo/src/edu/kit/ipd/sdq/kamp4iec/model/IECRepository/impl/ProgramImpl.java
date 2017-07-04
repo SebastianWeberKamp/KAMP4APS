@@ -10,7 +10,6 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,12 +20,11 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.ProgramImpl#getName <em>Name</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.ProgramImpl#getId <em>Id</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ProgramImpl extends MinimalEObjectImpl.Container implements Program {
+public class ProgramImpl extends IdentifierImpl implements Program {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -46,26 +44,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -112,34 +90,11 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.PROGRAM__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case IECRepositoryPackage.PROGRAM__NAME:
 				return getName();
-			case IECRepositoryPackage.PROGRAM__ID:
-				return getId();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -154,9 +109,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 		switch (featureID) {
 			case IECRepositoryPackage.PROGRAM__NAME:
 				setName((String)newValue);
-				return;
-			case IECRepositoryPackage.PROGRAM__ID:
-				setId((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -173,9 +125,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 			case IECRepositoryPackage.PROGRAM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case IECRepositoryPackage.PROGRAM__ID:
-				setId(ID_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -190,8 +139,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 		switch (featureID) {
 			case IECRepositoryPackage.PROGRAM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case IECRepositoryPackage.PROGRAM__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -208,8 +155,6 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
-		result.append(", Id: ");
-		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

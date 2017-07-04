@@ -3,8 +3,6 @@
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider;
 
 
-import IECRepository.provider.IECRepositoryEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 
@@ -83,9 +81,9 @@ public class IECMethodImplementationItemProvider
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_IECMethodImplementation_Id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IECMethodImplementation_Id_feature", "_UI_IECMethodImplementation_type"),
-				 IECRepositoryPackage.Literals.IEC_METHOD_IMPLEMENTATION__ID,
+				 getString("_UI_Identifier_id_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Identifier_id_feature", "_UI_Identifier_type"),
+				 IECRepositoryPackage.Literals.IDENTIFIER__ID,
 				 true,
 				 false,
 				 false,

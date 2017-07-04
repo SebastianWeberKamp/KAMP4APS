@@ -2,10 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository;
 
-import IECRepository.IECMethod;
-import IECRepository.IECProperty;
-import IECRepository.IFunctionblock;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -17,7 +13,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface#getDefinesIecMethod <em>Defines Iec Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface#getDefinesIecProperty <em>Defines Iec Property</em>}</li>
@@ -28,33 +23,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface IECInterface extends IFunctionblock {
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getIECInterface_Id()
-	 * @model
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
+public interface IECInterface extends FunctionblockResource, Identifier {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -83,7 +52,7 @@ public interface IECInterface extends IFunctionblock {
 
 	/**
 	 * Returns the value of the '<em><b>Defines Iec Method</b></em>' containment reference list.
-	 * The list contents are of type {@link IECRepository.IECMethod}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Defines Iec Method</em>' containment reference list isn't clear,
@@ -99,7 +68,7 @@ public interface IECInterface extends IFunctionblock {
 
 	/**
 	 * Returns the value of the '<em><b>Defines Iec Property</b></em>' containment reference list.
-	 * The list contents are of type {@link IECRepository.IECProperty}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Defines Iec Property</em>' containment reference list isn't clear,
@@ -115,7 +84,7 @@ public interface IECInterface extends IFunctionblock {
 
 	/**
 	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.
-	 * The list contents are of type {@link IECRepository.Enum}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Uses Enum</em>' reference list isn't clear,
@@ -127,6 +96,6 @@ public interface IECInterface extends IFunctionblock {
 	 * @model
 	 * @generated
 	 */
-	EList<IECRepository.Enum> getUsesEnum();
+	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum();
 
 } // IECInterface

@@ -2,9 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider;
 
-import IECRepository.provider.IECRepositoryEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.provider.ComponentInternalDependenciesEditPlugin;
+
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
 

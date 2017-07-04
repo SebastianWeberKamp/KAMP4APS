@@ -7,6 +7,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -17,8 +18,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -29,7 +28,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
@@ -38,27 +36,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class IECMethodImplementationImpl extends MinimalEObjectImpl.Container implements IECMethodImplementation {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
+public class IECMethodImplementationImpl extends IdentifierImpl implements IECMethodImplementation {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -87,7 +65,7 @@ public class IECMethodImplementationImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected IECRepository.IECMethodImplementation type;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation type;
 
 	/**
 	 * The cached value of the '{@link #getAccessesGlobalVariable() <em>Accesses Global Variable</em>}' reference list.
@@ -133,27 +111,6 @@ public class IECMethodImplementationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.IEC_METHOD_IMPLEMENTATION__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -175,10 +132,10 @@ public class IECMethodImplementationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.IECMethodImplementation getType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (IECRepository.IECMethodImplementation)eResolveProxy(oldType);
+			type = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.IEC_METHOD_IMPLEMENTATION__TYPE, oldType, type));
@@ -192,7 +149,7 @@ public class IECMethodImplementationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.IECMethodImplementation basicGetType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation basicGetType() {
 		return type;
 	}
 
@@ -201,8 +158,8 @@ public class IECMethodImplementationImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(IECRepository.IECMethodImplementation newType) {
-		IECRepository.IECMethodImplementation oldType = type;
+	public void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation newType) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.IEC_METHOD_IMPLEMENTATION__TYPE, oldType, type));
@@ -240,8 +197,6 @@ public class IECMethodImplementationImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__ID:
-				return getId();
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__NAME:
 				return getName();
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__TYPE:
@@ -264,14 +219,11 @@ public class IECMethodImplementationImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__ID:
-				setId((String)newValue);
-				return;
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__NAME:
 				setName((String)newValue);
 				return;
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__TYPE:
-				setType((IECRepository.IECMethodImplementation)newValue);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation)newValue);
 				return;
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__ACCESSES_GLOBAL_VARIABLE:
 				getAccessesGlobalVariable().clear();
@@ -293,14 +245,11 @@ public class IECMethodImplementationImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__TYPE:
-				setType((IECRepository.IECMethodImplementation)null);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation)null);
 				return;
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__ACCESSES_GLOBAL_VARIABLE:
 				getAccessesGlobalVariable().clear();
@@ -320,8 +269,6 @@ public class IECMethodImplementationImpl extends MinimalEObjectImpl.Container im
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__TYPE:
@@ -344,9 +291,7 @@ public class IECMethodImplementationImpl extends MinimalEObjectImpl.Container im
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Id: ");
-		result.append(id);
-		result.append(", Name: ");
+		result.append(" (Name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

@@ -2,16 +2,13 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
-import IECRepository.Function;
-import IECRepository.FunctionBlock;
-import IECRepository.GlobalVariable;
-import IECRepository.IECInterface;
-import IECRepository.Program;
-import IECRepository.StaticFunctionblock;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -42,8 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.RepositoryImpl#getContainsFunction <em>Contains Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.RepositoryImpl#getContainsVariable <em>Contains Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.RepositoryImpl#getName <em>Name</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.RepositoryImpl#getId <em>Id</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.RepositoryImpl#getContainsStaticFunctionblock <em>Contains Static Functionblock</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.RepositoryImpl#getContainsEnum <em>Contains Enum</em>}</li>
  * </ul>
  *
@@ -121,36 +116,6 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getContainsStaticFunctionblock() <em>Contains Static Functionblock</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContainsStaticFunctionblock()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<StaticFunctionblock> containsStaticFunctionblock;
-
-	/**
 	 * The cached value of the '{@link #getContainsEnum() <em>Contains Enum</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -158,7 +123,7 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECRepository.Enum> containsEnum;
+	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> containsEnum;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -265,42 +230,9 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.REPOSITORY__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<StaticFunctionblock> getContainsStaticFunctionblock() {
-		if (containsStaticFunctionblock == null) {
-			containsStaticFunctionblock = new EObjectContainmentEList<StaticFunctionblock>(StaticFunctionblock.class, this, IECRepositoryPackage.REPOSITORY__CONTAINS_STATIC_FUNCTIONBLOCK);
-		}
-		return containsStaticFunctionblock;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<IECRepository.Enum> getContainsEnum() {
+	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getContainsEnum() {
 		if (containsEnum == null) {
-			containsEnum = new EObjectContainmentEList<IECRepository.Enum>(IECRepository.Enum.class, this, IECRepositoryPackage.REPOSITORY__CONTAINS_ENUM);
+			containsEnum = new EObjectContainmentEList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class, this, IECRepositoryPackage.REPOSITORY__CONTAINS_ENUM);
 		}
 		return containsEnum;
 	}
@@ -323,8 +255,6 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 				return ((InternalEList<?>)getContainsFunction()).basicRemove(otherEnd, msgs);
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_VARIABLE:
 				return ((InternalEList<?>)getContainsVariable()).basicRemove(otherEnd, msgs);
-			case IECRepositoryPackage.REPOSITORY__CONTAINS_STATIC_FUNCTIONBLOCK:
-				return ((InternalEList<?>)getContainsStaticFunctionblock()).basicRemove(otherEnd, msgs);
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_ENUM:
 				return ((InternalEList<?>)getContainsEnum()).basicRemove(otherEnd, msgs);
 		}
@@ -351,10 +281,6 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 				return getContainsVariable();
 			case IECRepositoryPackage.REPOSITORY__NAME:
 				return getName();
-			case IECRepositoryPackage.REPOSITORY__ID:
-				return getId();
-			case IECRepositoryPackage.REPOSITORY__CONTAINS_STATIC_FUNCTIONBLOCK:
-				return getContainsStaticFunctionblock();
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_ENUM:
 				return getContainsEnum();
 		}
@@ -393,16 +319,9 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 			case IECRepositoryPackage.REPOSITORY__NAME:
 				setName((String)newValue);
 				return;
-			case IECRepositoryPackage.REPOSITORY__ID:
-				setId((String)newValue);
-				return;
-			case IECRepositoryPackage.REPOSITORY__CONTAINS_STATIC_FUNCTIONBLOCK:
-				getContainsStaticFunctionblock().clear();
-				getContainsStaticFunctionblock().addAll((Collection<? extends StaticFunctionblock>)newValue);
-				return;
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_ENUM:
 				getContainsEnum().clear();
-				getContainsEnum().addAll((Collection<? extends IECRepository.Enum>)newValue);
+				getContainsEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -434,12 +353,6 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 			case IECRepositoryPackage.REPOSITORY__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case IECRepositoryPackage.REPOSITORY__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case IECRepositoryPackage.REPOSITORY__CONTAINS_STATIC_FUNCTIONBLOCK:
-				getContainsStaticFunctionblock().clear();
-				return;
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_ENUM:
 				getContainsEnum().clear();
 				return;
@@ -467,10 +380,6 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 				return containsVariable != null && !containsVariable.isEmpty();
 			case IECRepositoryPackage.REPOSITORY__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case IECRepositoryPackage.REPOSITORY__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case IECRepositoryPackage.REPOSITORY__CONTAINS_STATIC_FUNCTIONBLOCK:
-				return containsStaticFunctionblock != null && !containsStaticFunctionblock.isEmpty();
 			case IECRepositoryPackage.REPOSITORY__CONTAINS_ENUM:
 				return containsEnum != null && !containsEnum.isEmpty();
 		}
@@ -489,8 +398,6 @@ public class RepositoryImpl extends MinimalEObjectImpl.Container implements Repo
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
-		result.append(", Id: ");
-		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

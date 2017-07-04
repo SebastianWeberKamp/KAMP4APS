@@ -2,8 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository;
 
-import org.eclipse.emf.ecore.EObject;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Program</b></em>'.
@@ -14,14 +12,13 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program#getName <em>Name</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program#getId <em>Id</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getProgram()
  * @model
  * @generated
  */
-public interface Program extends EObject {
+public interface Program extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -47,31 +44,5 @@ public interface Program extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getProgram_Id()
-	 * @model
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
 
 } // Program

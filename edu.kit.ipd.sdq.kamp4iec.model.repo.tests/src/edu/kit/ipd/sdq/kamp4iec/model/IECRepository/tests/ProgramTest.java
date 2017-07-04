@@ -5,8 +5,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.tests;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ProgramTest extends TestCase {
-
-	/**
-	 * The fixture for this Program test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Program fixture = null;
+public class ProgramTest extends IdentifierTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +35,14 @@ public class ProgramTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Program test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Program fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Program test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Program getFixture() {
-		return fixture;
+		return (Program)fixture;
 	}
 
 	/**

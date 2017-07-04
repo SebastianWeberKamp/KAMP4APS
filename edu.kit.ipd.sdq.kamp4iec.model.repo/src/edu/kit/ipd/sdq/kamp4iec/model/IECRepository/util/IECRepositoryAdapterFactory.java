@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.util;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
@@ -11,12 +12,10 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IFunctionblock;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IResource;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
-import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.StaticFunctionblock;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -121,28 +120,20 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 				return createIECMethodAdapter();
 			}
 			@Override
-			public Adapter caseIFunctionblock(IFunctionblock object) {
-				return createIFunctionblockAdapter();
+			public Adapter caseFunctionblockResource(FunctionblockResource object) {
+				return createFunctionblockResourceAdapter();
 			}
 			@Override
-			public Adapter caseStaticFunctionblock(StaticFunctionblock object) {
-				return createStaticFunctionblockAdapter();
-			}
-			@Override
-			public Adapter caseIResource(IResource object) {
-				return createIResourceAdapter();
+			public Adapter caseMethodResource(MethodResource object) {
+				return createMethodResourceAdapter();
 			}
 			@Override
 			public Adapter caseEnum(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum object) {
 				return createEnumAdapter();
 			}
 			@Override
-			public Adapter caseIECRepository_IFunctionblock(IECRepository.IFunctionblock object) {
-				return createIECRepository_IFunctionblockAdapter();
-			}
-			@Override
-			public Adapter caseIECRepository_IResource(IECRepository.IResource object) {
-				return createIECRepository_IResourceAdapter();
+			public Adapter caseIdentifier(Identifier object) {
+				return createIdentifierAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -305,44 +296,30 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IFunctionblock <em>IFunctionblock</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource <em>Functionblock Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IFunctionblock
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource
 	 * @generated
 	 */
-	public Adapter createIFunctionblockAdapter() {
+	public Adapter createFunctionblockResourceAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.StaticFunctionblock <em>Static Functionblock</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource <em>Method Resource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.StaticFunctionblock
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource
 	 * @generated
 	 */
-	public Adapter createStaticFunctionblockAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IResource <em>IResource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IResource
-	 * @generated
-	 */
-	public Adapter createIResourceAdapter() {
+	public Adapter createMethodResourceAdapter() {
 		return null;
 	}
 
@@ -361,30 +338,16 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link IECRepository.IFunctionblock <em>IFunctionblock</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier <em>Identifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see IECRepository.IFunctionblock
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier
 	 * @generated
 	 */
-	public Adapter createIECRepository_IFunctionblockAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link IECRepository.IResource <em>IResource</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see IECRepository.IResource
-	 * @generated
-	 */
-	public Adapter createIECRepository_IResourceAdapter() {
+	public Adapter createIdentifierAdapter() {
 		return null;
 	}
 

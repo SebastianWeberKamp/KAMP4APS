@@ -6,7 +6,9 @@ import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInt
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.FunctionblockDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.MethodDependency;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -47,7 +49,7 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 	 * @generated
 	 * @ordered
 	 */
-	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock providedFunctionBlock;
+	protected FunctionBlock providedFunctionBlock;
 
 	/**
 	 * The cached value of the '{@link #getRequiredResource() <em>Required Resource</em>}' reference.
@@ -93,10 +95,10 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock getProvidedFunctionBlock() {
+	public FunctionBlock getProvidedFunctionBlock() {
 		if (providedFunctionBlock != null && providedFunctionBlock.eIsProxy()) {
 			InternalEObject oldProvidedFunctionBlock = (InternalEObject)providedFunctionBlock;
-			providedFunctionBlock = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock)eResolveProxy(oldProvidedFunctionBlock);
+			providedFunctionBlock = (FunctionBlock)eResolveProxy(oldProvidedFunctionBlock);
 			if (providedFunctionBlock != oldProvidedFunctionBlock) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__PROVIDED_FUNCTION_BLOCK, oldProvidedFunctionBlock, providedFunctionBlock));
@@ -110,7 +112,7 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock basicGetProvidedFunctionBlock() {
+	public FunctionBlock basicGetProvidedFunctionBlock() {
 		return providedFunctionBlock;
 	}
 
@@ -119,8 +121,8 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProvidedFunctionBlock(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock newProvidedFunctionBlock) {
-		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock oldProvidedFunctionBlock = providedFunctionBlock;
+	public void setProvidedFunctionBlock(FunctionBlock newProvidedFunctionBlock) {
+		FunctionBlock oldProvidedFunctionBlock = providedFunctionBlock;
 		providedFunctionBlock = newProvidedFunctionBlock;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__PROVIDED_FUNCTION_BLOCK, oldProvidedFunctionBlock, providedFunctionBlock));
@@ -220,7 +222,7 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__PROVIDED_FUNCTION_BLOCK:
-				setProvidedFunctionBlock((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock)newValue);
+				setProvidedFunctionBlock((FunctionBlock)newValue);
 				return;
 			case ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__REQUIRED_RESOURCE:
 				setRequiredResource((FunctionblockResource)newValue);
@@ -242,7 +244,7 @@ public class FunctionblockDependencyImpl extends MinimalEObjectImpl.Container im
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__PROVIDED_FUNCTION_BLOCK:
-				setProvidedFunctionBlock((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock)null);
+				setProvidedFunctionBlock((FunctionBlock)null);
 				return;
 			case ComponentInternalDependenciesPackage.FUNCTIONBLOCK_DEPENDENCY__REQUIRED_RESOURCE:
 				setRequiredResource((FunctionblockResource)null);

@@ -2,13 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository;
 
-import IECRepository.Function;
-import IECRepository.FunctionBlock;
-import IECRepository.GlobalVariable;
-import IECRepository.IECInterface;
-import IECRepository.Program;
-import IECRepository.StaticFunctionblock;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -28,8 +21,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getContainsFunction <em>Contains Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getContainsVariable <em>Contains Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getName <em>Name</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getId <em>Id</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getContainsStaticFunctionblock <em>Contains Static Functionblock</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getContainsEnum <em>Contains Enum</em>}</li>
  * </ul>
  *
@@ -40,7 +31,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface Repository extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Contains Program</b></em>' containment reference list.
-	 * The list contents are of type {@link IECRepository.Program}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contains Program</em>' containment reference list isn't clear,
@@ -56,7 +47,7 @@ public interface Repository extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Contains Interface</b></em>' containment reference list.
-	 * The list contents are of type {@link IECRepository.IECInterface}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contains Interface</em>' containment reference list isn't clear,
@@ -72,7 +63,7 @@ public interface Repository extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Contains Function Block</b></em>' containment reference list.
-	 * The list contents are of type {@link IECRepository.FunctionBlock}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contains Function Block</em>' containment reference list isn't clear,
@@ -88,7 +79,7 @@ public interface Repository extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Contains Function</b></em>' containment reference list.
-	 * The list contents are of type {@link IECRepository.Function}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contains Function</em>' containment reference list isn't clear,
@@ -104,7 +95,7 @@ public interface Repository extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Contains Variable</b></em>' containment reference list.
-	 * The list contents are of type {@link IECRepository.GlobalVariable}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contains Variable</em>' containment reference list isn't clear,
@@ -145,50 +136,8 @@ public interface Repository extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getRepository_Id()
-	 * @model
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Contains Static Functionblock</b></em>' containment reference list.
-	 * The list contents are of type {@link IECRepository.StaticFunctionblock}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Contains Static Functionblock</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Contains Static Functionblock</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getRepository_ContainsStaticFunctionblock()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<StaticFunctionblock> getContainsStaticFunctionblock();
-
-	/**
 	 * Returns the value of the '<em><b>Contains Enum</b></em>' containment reference list.
-	 * The list contents are of type {@link IECRepository.Enum}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Contains Enum</em>' containment reference list isn't clear,
@@ -200,6 +149,6 @@ public interface Repository extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECRepository.Enum> getContainsEnum();
+	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getContainsEnum();
 
 } // Repository

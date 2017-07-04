@@ -5,8 +5,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.tests;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 
-import junit.framework.TestCase;
-
 import junit.textui.TestRunner;
 
 /**
@@ -15,15 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class FunctionTest extends TestCase {
-
-	/**
-	 * The fixture for this Function test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected Function fixture = null;
+public class FunctionTest extends IdentifierTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -45,23 +35,14 @@ public class FunctionTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Function test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(Function fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Function test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected Function getFixture() {
-		return fixture;
+		return (Function)fixture;
 	}
 
 	/**

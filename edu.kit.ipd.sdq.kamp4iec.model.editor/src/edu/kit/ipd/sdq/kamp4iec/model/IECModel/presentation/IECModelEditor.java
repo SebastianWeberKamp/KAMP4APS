@@ -156,9 +156,9 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider.IECModelItemProviderAdapterFactory;
 
-import IECRepository.provider.IECRepositoryItemProviderAdapterFactory;
-
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.provider.ComponentInternalDependenciesItemProviderAdapterFactory;
+
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
@@ -708,7 +708,6 @@ public class IECModelEditor
 		adapterFactory.addAdapterFactory(new IECModelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ComponentInternalDependenciesItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IECRepositoryItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

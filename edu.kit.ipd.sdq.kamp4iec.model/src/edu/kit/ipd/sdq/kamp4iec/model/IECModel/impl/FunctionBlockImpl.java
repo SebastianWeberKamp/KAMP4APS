@@ -7,6 +7,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECMethodImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECPropertyImplementation;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -18,8 +19,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -32,7 +31,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.FunctionBlockImpl#getAccessesProperty <em>Accesses Property</em>}</li>
@@ -42,27 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements FunctionBlock {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
+public class FunctionBlockImpl extends IdentifierImpl implements FunctionBlock {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -91,7 +69,7 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	 * @generated
 	 * @ordered
 	 */
-	protected IECRepository.FunctionBlock type;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock type;
 
 	/**
 	 * The cached value of the '{@link #getAccessesProperty() <em>Accesses Property</em>}' reference list.
@@ -147,27 +125,6 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.FUNCTION_BLOCK__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -189,10 +146,10 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.FunctionBlock getType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (IECRepository.FunctionBlock)eResolveProxy(oldType);
+			type = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.FUNCTION_BLOCK__TYPE, oldType, type));
@@ -206,7 +163,7 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.FunctionBlock basicGetType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock basicGetType() {
 		return type;
 	}
 
@@ -215,8 +172,8 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(IECRepository.FunctionBlock newType) {
-		IECRepository.FunctionBlock oldType = type;
+	public void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock newType) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.FUNCTION_BLOCK__TYPE, oldType, type));
@@ -282,8 +239,6 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECModelPackage.FUNCTION_BLOCK__ID:
-				return getId();
 			case IECModelPackage.FUNCTION_BLOCK__NAME:
 				return getName();
 			case IECModelPackage.FUNCTION_BLOCK__TYPE:
@@ -308,14 +263,11 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECModelPackage.FUNCTION_BLOCK__ID:
-				setId((String)newValue);
-				return;
 			case IECModelPackage.FUNCTION_BLOCK__NAME:
 				setName((String)newValue);
 				return;
 			case IECModelPackage.FUNCTION_BLOCK__TYPE:
-				setType((IECRepository.FunctionBlock)newValue);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock)newValue);
 				return;
 			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_PROPERTY:
 				getAccessesProperty().clear();
@@ -341,14 +293,11 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.FUNCTION_BLOCK__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case IECModelPackage.FUNCTION_BLOCK__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 			case IECModelPackage.FUNCTION_BLOCK__TYPE:
-				setType((IECRepository.FunctionBlock)null);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock)null);
 				return;
 			case IECModelPackage.FUNCTION_BLOCK__ACCESSES_PROPERTY:
 				getAccessesProperty().clear();
@@ -371,8 +320,6 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.FUNCTION_BLOCK__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case IECModelPackage.FUNCTION_BLOCK__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECModelPackage.FUNCTION_BLOCK__TYPE:
@@ -397,9 +344,7 @@ public class FunctionBlockImpl extends MinimalEObjectImpl.Container implements F
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Id: ");
-		result.append(id);
-		result.append(", Name: ");
+		result.append(" (Name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

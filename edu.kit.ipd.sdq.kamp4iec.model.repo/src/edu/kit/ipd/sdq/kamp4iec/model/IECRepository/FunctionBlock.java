@@ -2,13 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository;
 
-import IECRepository.Function;
-import IECRepository.GlobalVariable;
-import IECRepository.IECInterface;
-import IECRepository.IECMethodImplementation;
-import IECRepository.IECPropertyImplementation;
-import IECRepository.IFunctionblock;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -20,7 +13,6 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getHasIecMethod <em>Has Iec Method</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getHasIecProperty <em>Has Iec Property</em>}</li>
@@ -35,33 +27,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface FunctionBlock extends IFunctionblock {
-	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_Id()
-	 * @model
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
+public interface FunctionBlock extends FunctionblockResource, Identifier {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -90,7 +56,7 @@ public interface FunctionBlock extends IFunctionblock {
 
 	/**
 	 * Returns the value of the '<em><b>Has Iec Method</b></em>' containment reference list.
-	 * The list contents are of type {@link IECRepository.IECMethodImplementation}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Has Iec Method</em>' containment reference list isn't clear,
@@ -106,7 +72,7 @@ public interface FunctionBlock extends IFunctionblock {
 
 	/**
 	 * Returns the value of the '<em><b>Has Iec Property</b></em>' containment reference list.
-	 * The list contents are of type {@link IECRepository.IECPropertyImplementation}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Has Iec Property</em>' containment reference list isn't clear,
@@ -122,7 +88,7 @@ public interface FunctionBlock extends IFunctionblock {
 
 	/**
 	 * Returns the value of the '<em><b>Accesses Variable</b></em>' reference list.
-	 * The list contents are of type {@link IECRepository.GlobalVariable}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Accesses Variable</em>' reference list isn't clear,
@@ -138,7 +104,7 @@ public interface FunctionBlock extends IFunctionblock {
 
 	/**
 	 * Returns the value of the '<em><b>Uses Function Block</b></em>' reference list.
-	 * The list contents are of type {@link IECRepository.IFunctionblock}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Uses Function Block</em>' reference list isn't clear,
@@ -150,11 +116,11 @@ public interface FunctionBlock extends IFunctionblock {
 	 * @model
 	 * @generated
 	 */
-	EList<IFunctionblock> getUsesFunctionBlock();
+	EList<FunctionblockResource> getUsesFunctionBlock();
 
 	/**
 	 * Returns the value of the '<em><b>Calls Function</b></em>' reference list.
-	 * The list contents are of type {@link IECRepository.Function}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Function}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Calls Function</em>' reference list isn't clear,
@@ -170,7 +136,7 @@ public interface FunctionBlock extends IFunctionblock {
 
 	/**
 	 * Returns the value of the '<em><b>Implements</b></em>' reference list.
-	 * The list contents are of type {@link IECRepository.IECInterface}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Implements</em>' reference list isn't clear,
@@ -186,7 +152,7 @@ public interface FunctionBlock extends IFunctionblock {
 
 	/**
 	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.
-	 * The list contents are of type {@link IECRepository.Enum}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Uses Enum</em>' reference list isn't clear,
@@ -198,6 +164,6 @@ public interface FunctionBlock extends IFunctionblock {
 	 * @model
 	 * @generated
 	 */
-	EList<IECRepository.Enum> getUsesEnum();
+	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum();
 
 } // FunctionBlock

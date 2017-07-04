@@ -2,7 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -35,12 +37,12 @@ public interface FunctionblockDependency extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Provided Function Block</em>' reference.
-	 * @see #setProvidedFunctionBlock(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock)
+	 * @see #setProvidedFunctionBlock(FunctionBlock)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.ComponentInternalDependenciesPackage#getFunctionblockDependency_ProvidedFunctionBlock()
 	 * @model required="true"
 	 * @generated
 	 */
-	edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock getProvidedFunctionBlock();
+	FunctionBlock getProvidedFunctionBlock();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.FunctionblockDependency#getProvidedFunctionBlock <em>Provided Function Block</em>}' reference.
@@ -50,7 +52,7 @@ public interface FunctionblockDependency extends EObject {
 	 * @see #getProvidedFunctionBlock()
 	 * @generated
 	 */
-	void setProvidedFunctionBlock(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock value);
+	void setProvidedFunctionBlock(FunctionBlock value);
 
 	/**
 	 * Returns the value of the '<em><b>Required Resource</b></em>' reference.

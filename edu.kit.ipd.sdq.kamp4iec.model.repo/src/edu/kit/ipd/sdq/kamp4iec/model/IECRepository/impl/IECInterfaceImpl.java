@@ -2,12 +2,12 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl;
 
-import IECRepository.IECMethod;
-import IECRepository.IECProperty;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -111,7 +111,7 @@ public class IECInterfaceImpl extends MinimalEObjectImpl.Container implements IE
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<IECRepository.Enum> usesEnum;
+	protected EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> usesEnum;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -203,9 +203,9 @@ public class IECInterfaceImpl extends MinimalEObjectImpl.Container implements IE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<IECRepository.Enum> getUsesEnum() {
+	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum() {
 		if (usesEnum == null) {
-			usesEnum = new EObjectResolvingEList<IECRepository.Enum>(IECRepository.Enum.class, this, IECRepositoryPackage.IEC_INTERFACE__USES_ENUM);
+			usesEnum = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class, this, IECRepositoryPackage.IEC_INTERFACE__USES_ENUM);
 		}
 		return usesEnum;
 	}
@@ -273,7 +273,7 @@ public class IECInterfaceImpl extends MinimalEObjectImpl.Container implements IE
 				return;
 			case IECRepositoryPackage.IEC_INTERFACE__USES_ENUM:
 				getUsesEnum().clear();
-				getUsesEnum().addAll((Collection<? extends IECRepository.Enum>)newValue);
+				getUsesEnum().addAll((Collection<? extends edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -334,11 +334,43 @@ public class IECInterfaceImpl extends MinimalEObjectImpl.Container implements IE
 	 * @generated
 	 */
 	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == Identifier.class) {
+			switch (derivedFeatureID) {
+				case IECRepositoryPackage.IEC_INTERFACE__ID: return IECRepositoryPackage.IDENTIFIER__ID;
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == Identifier.class) {
+			switch (baseFeatureID) {
+				case IECRepositoryPackage.IDENTIFIER__ID: return IECRepositoryPackage.IEC_INTERFACE__ID;
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String toString() {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Id: ");
+		result.append(" (id: ");
 		result.append(id);
 		result.append(", Name: ");
 		result.append(name);

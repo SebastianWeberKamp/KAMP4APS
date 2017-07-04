@@ -4,13 +4,13 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,34 +20,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.EnumImpl#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.EnumImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.EnumImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class EnumImpl extends MinimalEObjectImpl.Container implements edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum {
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
+public class EnumImpl extends IdentifierImpl implements edu.kit.ipd.sdq.kamp4iec.model.IECModel.Enum {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -76,7 +55,7 @@ public class EnumImpl extends MinimalEObjectImpl.Container implements edu.kit.ip
 	 * @generated
 	 * @ordered
 	 */
-	protected IECRepository.Enum type;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum type;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -95,27 +74,6 @@ public class EnumImpl extends MinimalEObjectImpl.Container implements edu.kit.ip
 	@Override
 	protected EClass eStaticClass() {
 		return IECModelPackage.Literals.ENUM;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.ENUM__ID, oldId, id));
 	}
 
 	/**
@@ -144,10 +102,10 @@ public class EnumImpl extends MinimalEObjectImpl.Container implements edu.kit.ip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.Enum getType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum getType() {
 		if (type != null && type.eIsProxy()) {
 			InternalEObject oldType = (InternalEObject)type;
-			type = (IECRepository.Enum)eResolveProxy(oldType);
+			type = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum)eResolveProxy(oldType);
 			if (type != oldType) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, IECModelPackage.ENUM__TYPE, oldType, type));
@@ -161,7 +119,7 @@ public class EnumImpl extends MinimalEObjectImpl.Container implements edu.kit.ip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IECRepository.Enum basicGetType() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum basicGetType() {
 		return type;
 	}
 
@@ -170,8 +128,8 @@ public class EnumImpl extends MinimalEObjectImpl.Container implements edu.kit.ip
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setType(IECRepository.Enum newType) {
-		IECRepository.Enum oldType = type;
+	public void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum newType) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum oldType = type;
 		type = newType;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.ENUM__TYPE, oldType, type));
@@ -185,8 +143,6 @@ public class EnumImpl extends MinimalEObjectImpl.Container implements edu.kit.ip
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECModelPackage.ENUM__ID:
-				return getId();
 			case IECModelPackage.ENUM__NAME:
 				return getName();
 			case IECModelPackage.ENUM__TYPE:
@@ -204,14 +160,11 @@ public class EnumImpl extends MinimalEObjectImpl.Container implements edu.kit.ip
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECModelPackage.ENUM__ID:
-				setId((String)newValue);
-				return;
 			case IECModelPackage.ENUM__NAME:
 				setName((String)newValue);
 				return;
 			case IECModelPackage.ENUM__TYPE:
-				setType((IECRepository.Enum)newValue);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -225,14 +178,11 @@ public class EnumImpl extends MinimalEObjectImpl.Container implements edu.kit.ip
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.ENUM__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case IECModelPackage.ENUM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
 			case IECModelPackage.ENUM__TYPE:
-				setType((IECRepository.Enum)null);
+				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -246,8 +196,6 @@ public class EnumImpl extends MinimalEObjectImpl.Container implements edu.kit.ip
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.ENUM__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case IECModelPackage.ENUM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECModelPackage.ENUM__TYPE:
@@ -266,9 +214,7 @@ public class EnumImpl extends MinimalEObjectImpl.Container implements edu.kit.ip
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Id: ");
-		result.append(id);
-		result.append(", Name: ");
+		result.append(" (Name: ");
 		result.append(name);
 		result.append(')');
 		return result.toString();

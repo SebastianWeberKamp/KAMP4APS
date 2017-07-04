@@ -2,9 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4iec.model.IECModel;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,7 +17,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getCallsFunction <em>Calls Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getCallsFunctionBlock <em>Calls Function Block</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getName <em>Name</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getImplementsInterface <em>Implements Interface</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getDeclaresVariable <em>Declares Variable</em>}</li>
@@ -31,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface Program extends EObject {
+public interface Program extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Calls Function</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Function}.
@@ -91,32 +89,6 @@ public interface Program extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram_Id()
-	 * @model
-	 * @generated
-	 */
-	String getId();
-
-	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getId <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
-	 * @generated
-	 */
-	void setId(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -125,12 +97,12 @@ public interface Program extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' reference.
-	 * @see #setType(IECRepository.Program)
+	 * @see #setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program)
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage#getProgram_Type()
 	 * @model required="true"
 	 * @generated
 	 */
-	IECRepository.Program getType();
+	edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program getType();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program#getType <em>Type</em>}' reference.
@@ -140,7 +112,7 @@ public interface Program extends EObject {
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(IECRepository.Program value);
+	void setType(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program value);
 
 	/**
 	 * Returns the value of the '<em><b>Implements Interface</b></em>' containment reference list.

@@ -7,6 +7,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IdentifierItemProvider;
 import java.util.Collection;
 import java.util.List;
 
@@ -18,14 +19,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
-import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
-import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.IItemPropertySource;
-import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
-import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
 import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -35,13 +30,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * @generated
  */
 public class ProgramItemProvider 
-	extends ItemProviderAdapter
-	implements
-		IEditingDomainItemProvider,
-		IStructuredItemContentProvider,
-		ITreeItemContentProvider,
-		IItemLabelProvider,
-		IItemPropertySource {
+	extends IdentifierItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -64,7 +53,6 @@ public class ProgramItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addIdPropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 			addAccessesPropertyPropertyDescriptor(object);
 			addCallsMethodPropertyDescriptor(object);
@@ -86,28 +74,6 @@ public class ProgramItemProvider
 				 getString("_UI_Program_Name_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Program_Name_feature", "_UI_Program_type"),
 				 IECModelPackage.Literals.PROGRAM__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Id feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIdPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Program_Id_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Program_Id_feature", "_UI_Program_type"),
-				 IECModelPackage.Literals.PROGRAM__ID,
 				 true,
 				 false,
 				 false,
@@ -255,7 +221,6 @@ public class ProgramItemProvider
 
 		switch (notification.getFeatureID(Program.class)) {
 			case IECModelPackage.PROGRAM__NAME:
-			case IECModelPackage.PROGRAM__ID:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION:

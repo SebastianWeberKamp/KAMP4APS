@@ -8,6 +8,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -19,8 +20,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -34,14 +33,13 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl#getName <em>Name</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl#getId <em>Id</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl#getContainsProgram <em>Contains Program</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl#getComponentInternalDependencies <em>Component Internal Dependencies</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class SPSSystemImpl extends MinimalEObjectImpl.Container implements SPSSystem {
+public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,26 +59,6 @@ public class SPSSystemImpl extends MinimalEObjectImpl.Container implements SPSSy
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getContainsProgram() <em>Contains Program</em>}' containment reference list.
@@ -147,27 +125,6 @@ public class SPSSystemImpl extends MinimalEObjectImpl.Container implements SPSSy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.SPS_SYSTEM__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Program> getContainsProgram() {
 		if (containsProgram == null) {
 			containsProgram = new EObjectContainmentEList<Program>(Program.class, this, IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM);
@@ -211,8 +168,6 @@ public class SPSSystemImpl extends MinimalEObjectImpl.Container implements SPSSy
 		switch (featureID) {
 			case IECModelPackage.SPS_SYSTEM__NAME:
 				return getName();
-			case IECModelPackage.SPS_SYSTEM__ID:
-				return getId();
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
 				return getContainsProgram();
 			case IECModelPackage.SPS_SYSTEM__COMPONENT_INTERNAL_DEPENDENCIES:
@@ -232,9 +187,6 @@ public class SPSSystemImpl extends MinimalEObjectImpl.Container implements SPSSy
 		switch (featureID) {
 			case IECModelPackage.SPS_SYSTEM__NAME:
 				setName((String)newValue);
-				return;
-			case IECModelPackage.SPS_SYSTEM__ID:
-				setId((String)newValue);
 				return;
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
 				getContainsProgram().clear();
@@ -259,9 +211,6 @@ public class SPSSystemImpl extends MinimalEObjectImpl.Container implements SPSSy
 			case IECModelPackage.SPS_SYSTEM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case IECModelPackage.SPS_SYSTEM__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
 				getContainsProgram().clear();
 				return;
@@ -282,8 +231,6 @@ public class SPSSystemImpl extends MinimalEObjectImpl.Container implements SPSSy
 		switch (featureID) {
 			case IECModelPackage.SPS_SYSTEM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case IECModelPackage.SPS_SYSTEM__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
 				return containsProgram != null && !containsProgram.isEmpty();
 			case IECModelPackage.SPS_SYSTEM__COMPONENT_INTERNAL_DEPENDENCIES:
@@ -304,8 +251,6 @@ public class SPSSystemImpl extends MinimalEObjectImpl.Container implements SPSSy
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Name: ");
 		result.append(name);
-		result.append(", Id: ");
-		result.append(id);
 		result.append(')');
 		return result.toString();
 	}
