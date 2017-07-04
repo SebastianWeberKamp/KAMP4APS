@@ -278,7 +278,7 @@ public interface IECRepositoryPackage extends EPackage {
 	int FUNCTION_BLOCK__CALLS_FUNCTION = IDENTIFIER_FEATURE_COUNT + 5;
 
 	/**
-	 * The feature id for the '<em><b>Implements</b></em>' reference list.
+	 * The feature id for the '<em><b>Implements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -296,13 +296,22 @@ public interface IECRepositoryPackage extends EPackage {
 	int FUNCTION_BLOCK__USES_ENUM = IDENTIFIER_FEATURE_COUNT + 7;
 
 	/**
+	 * The feature id for the '<em><b>Uses Interface</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FUNCTION_BLOCK__USES_INTERFACE = IDENTIFIER_FEATURE_COUNT + 8;
+
+	/**
 	 * The number of structural features of the '<em>Function Block</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FUNCTION_BLOCK_FEATURE_COUNT = IDENTIFIER_FEATURE_COUNT + 8;
+	int FUNCTION_BLOCK_FEATURE_COUNT = IDENTIFIER_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Function Block</em>' class.
@@ -900,6 +909,43 @@ public interface IECRepositoryPackage extends EPackage {
 	int ENUM_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.ImplementsInterfaceImpl <em>Implements Interface</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.ImplementsInterfaceImpl
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECRepositoryPackageImpl#getImplementsInterface()
+	 * @generated
+	 */
+	int IMPLEMENTS_INTERFACE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Interface</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLEMENTS_INTERFACE__INTERFACE = 0;
+
+	/**
+	 * The number of structural features of the '<em>Implements Interface</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLEMENTS_INTERFACE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Implements Interface</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int IMPLEMENTS_INTERFACE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType <em>Variable Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -907,7 +953,7 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECRepositoryPackageImpl#getVariableType()
 	 * @generated
 	 */
-	int VARIABLE_TYPE = 14;
+	int VARIABLE_TYPE = 15;
 
 
 	/**
@@ -987,10 +1033,10 @@ public interface IECRepositoryPackage extends EPackage {
 	EReference getFunctionBlock_CallsFunction();
 
 	/**
-	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getImplements <em>Implements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getImplements <em>Implements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Implements</em>'.
+	 * @return the meta object for the containment reference list '<em>Implements</em>'.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getImplements()
 	 * @see #getFunctionBlock()
 	 * @generated
@@ -1007,6 +1053,17 @@ public interface IECRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getFunctionBlock_UsesEnum();
+
+	/**
+	 * Returns the meta object for the reference list '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getUsesInterface <em>Uses Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Uses Interface</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getUsesInterface()
+	 * @see #getFunctionBlock()
+	 * @generated
+	 */
+	EReference getFunctionBlock_UsesInterface();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable <em>Global Variable</em>}'.
@@ -1502,6 +1559,27 @@ public interface IECRepositoryPackage extends EPackage {
 	EAttribute getIdentifier_Id();
 
 	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface <em>Implements Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Implements Interface</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface
+	 * @generated
+	 */
+	EClass getImplementsInterface();
+
+	/**
+	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface#getInterface <em>Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Interface</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface#getInterface()
+	 * @see #getImplementsInterface()
+	 * @generated
+	 */
+	EReference getImplementsInterface_Interface();
+
+	/**
 	 * Returns the meta object for enum '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType <em>Variable Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1593,7 +1671,7 @@ public interface IECRepositoryPackage extends EPackage {
 		EReference FUNCTION_BLOCK__CALLS_FUNCTION = eINSTANCE.getFunctionBlock_CallsFunction();
 
 		/**
-		 * The meta object literal for the '<em><b>Implements</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Implements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1607,6 +1685,14 @@ public interface IECRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FUNCTION_BLOCK__USES_ENUM = eINSTANCE.getFunctionBlock_UsesEnum();
+
+		/**
+		 * The meta object literal for the '<em><b>Uses Interface</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FUNCTION_BLOCK__USES_INTERFACE = eINSTANCE.getFunctionBlock_UsesInterface();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.GlobalVariableImpl <em>Global Variable</em>}' class.
@@ -2001,6 +2087,24 @@ public interface IECRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute IDENTIFIER__ID = eINSTANCE.getIdentifier_Id();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.ImplementsInterfaceImpl <em>Implements Interface</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.ImplementsInterfaceImpl
+		 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECRepositoryPackageImpl#getImplementsInterface()
+		 * @generated
+		 */
+		EClass IMPLEMENTS_INTERFACE = eINSTANCE.getImplementsInterface();
+
+		/**
+		 * The meta object literal for the '<em><b>Interface</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference IMPLEMENTS_INTERFACE__INTERFACE = eINSTANCE.getImplementsInterface_Interface();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.VariableType <em>Variable Type</em>}' enum.

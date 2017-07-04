@@ -13,6 +13,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
@@ -134,6 +135,10 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseIdentifier(Identifier object) {
 				return createIdentifierAdapter();
+			}
+			@Override
+			public Adapter caseImplementsInterface(ImplementsInterface object) {
+				return createImplementsInterfaceAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -348,6 +353,20 @@ public class IECRepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIdentifierAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface <em>Implements Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface
+	 * @generated
+	 */
+	public Adapter createImplementsInterfaceAdapter() {
 		return null;
 	}
 

@@ -14,6 +14,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
@@ -131,6 +132,13 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 	 * @generated
 	 */
 	private EClass identifierEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass implementsInterfaceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -279,6 +287,15 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 	 */
 	public EReference getFunctionBlock_UsesEnum() {
 		return (EReference)functionBlockEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFunctionBlock_UsesInterface() {
+		return (EReference)functionBlockEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -700,6 +717,24 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getImplementsInterface() {
+		return implementsInterfaceEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getImplementsInterface_Interface() {
+		return (EReference)implementsInterfaceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVariableType() {
 		return variableTypeEEnum;
 	}
@@ -741,6 +776,7 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		createEReference(functionBlockEClass, FUNCTION_BLOCK__CALLS_FUNCTION);
 		createEReference(functionBlockEClass, FUNCTION_BLOCK__IMPLEMENTS);
 		createEReference(functionBlockEClass, FUNCTION_BLOCK__USES_ENUM);
+		createEReference(functionBlockEClass, FUNCTION_BLOCK__USES_INTERFACE);
 
 		globalVariableEClass = createEClass(GLOBAL_VARIABLE);
 		createEAttribute(globalVariableEClass, GLOBAL_VARIABLE__TYPE);
@@ -801,6 +837,9 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		identifierEClass = createEClass(IDENTIFIER);
 		createEAttribute(identifierEClass, IDENTIFIER__ID);
 
+		implementsInterfaceEClass = createEClass(IMPLEMENTS_INTERFACE);
+		createEReference(implementsInterfaceEClass, IMPLEMENTS_INTERFACE__INTERFACE);
+
 		// Create enums
 		variableTypeEEnum = createEEnum(VARIABLE_TYPE);
 	}
@@ -853,10 +892,11 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 		initEReference(getFunctionBlock_HasIecMethod(), this.getIECMethodImplementation(), null, "HasIecMethod", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_HasIecProperty(), this.getIECPropertyImplementation(), null, "HasIecProperty", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_AccessesVariable(), this.getGlobalVariable(), null, "AccessesVariable", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionBlock_UsesFunctionBlock(), this.getFunctionblockResource(), null, "UsesFunctionBlock", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionBlock_UsesFunctionBlock(), this.getFunctionBlock(), null, "UsesFunctionBlock", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_CallsFunction(), this.getFunction(), null, "CallsFunction", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getFunctionBlock_Implements(), this.getIECInterface(), null, "Implements", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionBlock_Implements(), this.getImplementsInterface(), null, "Implements", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getFunctionBlock_UsesEnum(), this.getEnum(), null, "UsesEnum", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getFunctionBlock_UsesInterface(), this.getIECInterface(), null, "UsesInterface", null, 0, -1, FunctionBlock.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(globalVariableEClass, GlobalVariable.class, "GlobalVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getGlobalVariable_Type(), this.getVariableType(), "Type", "NONE", 0, 1, GlobalVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -916,6 +956,9 @@ public class IECRepositoryPackageImpl extends EPackageImpl implements IECReposit
 
 		initEClass(identifierEClass, Identifier.class, "Identifier", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentifier_Id(), ecorePackage.getEString(), "id", null, 0, 1, Identifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(implementsInterfaceEClass, ImplementsInterface.class, "ImplementsInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getImplementsInterface_Interface(), this.getIECInterface(), null, "Interface", null, 1, 1, ImplementsInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(variableTypeEEnum, VariableType.class, "VariableType");

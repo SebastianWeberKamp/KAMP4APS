@@ -121,6 +121,15 @@ public interface IECRepositoryFactory extends EFactory {
 	Enum createEnum();
 
 	/**
+	 * Returns a new object of class '<em>Implements Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Implements Interface</em>'.
+	 * @generated
+	 */
+	ImplementsInterface createImplementsInterface();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

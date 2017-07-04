@@ -54,6 +54,7 @@ public class FunctionBlockItemProvider
 			addCallsFunctionPropertyDescriptor(object);
 			addImplementsPropertyDescriptor(object);
 			addUsesEnumPropertyDescriptor(object);
+			addUsesInterfacePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -182,6 +183,28 @@ public class FunctionBlockItemProvider
 				 getString("_UI_FunctionBlock_UsesEnum_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_UsesEnum_feature", "_UI_FunctionBlock_type"),
 				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__USES_ENUM,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Uses Interface feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addUsesInterfacePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_FunctionBlock_UsesInterface_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_FunctionBlock_UsesInterface_feature", "_UI_FunctionBlock_type"),
+				 IECRepositoryPackage.Literals.FUNCTION_BLOCK__USES_INTERFACE,
 				 true,
 				 false,
 				 true,

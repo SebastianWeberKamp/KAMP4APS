@@ -11,13 +11,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="AccessesVariable" upperBound="-1"
         eType="#//GlobalVariable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="UsesFunctionBlock" upperBound="-1"
-        eType="#//FunctionblockResource"/>
+        eType="#//FunctionBlock"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="CallsFunction" upperBound="-1"
         eType="#//Function"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="Implements" upperBound="-1"
-        eType="#//IECInterface"/>
+        eType="#//ImplementsInterface" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="UsesEnum" upperBound="-1"
         eType="#//Enum"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="UsesInterface" upperBound="-1"
+        eType="#//IECInterface"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GlobalVariable" eSuperTypes="#//Identifier">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="Type" eType="#//VariableType"
@@ -101,5 +103,9 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Identifier" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ImplementsInterface">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="Interface" lowerBound="1"
+        eType="#//IECInterface"/>
   </eClassifiers>
 </ecore:EPackage>

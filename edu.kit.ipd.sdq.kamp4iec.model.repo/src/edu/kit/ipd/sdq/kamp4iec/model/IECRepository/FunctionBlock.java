@@ -21,6 +21,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getCallsFunction <em>Calls Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getImplements <em>Implements</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getUsesEnum <em>Uses Enum</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock#getUsesInterface <em>Uses Interface</em>}</li>
  * </ul>
  *
  * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock()
@@ -104,7 +105,7 @@ public interface FunctionBlock extends Identifier, FunctionblockResource {
 
 	/**
 	 * Returns the value of the '<em><b>Uses Function Block</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionblockResource}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.FunctionBlock}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Uses Function Block</em>' reference list isn't clear,
@@ -116,7 +117,7 @@ public interface FunctionBlock extends Identifier, FunctionblockResource {
 	 * @model
 	 * @generated
 	 */
-	EList<FunctionblockResource> getUsesFunctionBlock();
+	EList<FunctionBlock> getUsesFunctionBlock();
 
 	/**
 	 * Returns the value of the '<em><b>Calls Function</b></em>' reference list.
@@ -135,20 +136,20 @@ public interface FunctionBlock extends Identifier, FunctionblockResource {
 	EList<Function> getCallsFunction();
 
 	/**
-	 * Returns the value of the '<em><b>Implements</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface}.
+	 * Returns the value of the '<em><b>Implements</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Implements</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Implements</em>' reference list.
+	 * @return the value of the '<em>Implements</em>' containment reference list.
 	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_Implements()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<IECInterface> getImplements();
+	EList<ImplementsInterface> getImplements();
 
 	/**
 	 * Returns the value of the '<em><b>Uses Enum</b></em>' reference list.
@@ -165,5 +166,21 @@ public interface FunctionBlock extends Identifier, FunctionblockResource {
 	 * @generated
 	 */
 	EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum();
+
+	/**
+	 * Returns the value of the '<em><b>Uses Interface</b></em>' reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECInterface}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Uses Interface</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Uses Interface</em>' reference list.
+	 * @see edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage#getFunctionBlock_UsesInterface()
+	 * @model
+	 * @generated
+	 */
+	EList<IECInterface> getUsesInterface();
 
 } // FunctionBlock
