@@ -37,7 +37,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getCallsFunction <em>Calls Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getCallsFunctionBlock <em>Calls Function Block</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getImplementsInterface <em>Implements Interface</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.ProgramImpl#getDeclaresVariable <em>Declares Variable</em>}</li>
@@ -68,26 +67,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 	 * @ordered
 	 */
 	protected EList<FunctionBlock> callsFunctionBlock;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
@@ -190,27 +169,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 			callsFunctionBlock = new EObjectContainmentEList<FunctionBlock>(FunctionBlock.class, this, IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK);
 		}
 		return callsFunctionBlock;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.PROGRAM__NAME, oldName, name));
 	}
 
 	/**
@@ -345,8 +303,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return getCallsFunction();
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
 				return getCallsFunctionBlock();
-			case IECModelPackage.PROGRAM__NAME:
-				return getName();
 			case IECModelPackage.PROGRAM__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
@@ -380,9 +336,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
 				getCallsFunctionBlock().clear();
 				getCallsFunctionBlock().addAll((Collection<? extends FunctionBlock>)newValue);
-				return;
-			case IECModelPackage.PROGRAM__NAME:
-				setName((String)newValue);
 				return;
 			case IECModelPackage.PROGRAM__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program)newValue);
@@ -425,9 +378,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
 				getCallsFunctionBlock().clear();
 				return;
-			case IECModelPackage.PROGRAM__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case IECModelPackage.PROGRAM__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program)null);
 				return;
@@ -462,8 +412,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return callsFunction != null && !callsFunction.isEmpty();
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
 				return callsFunctionBlock != null && !callsFunctionBlock.isEmpty();
-			case IECModelPackage.PROGRAM__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECModelPackage.PROGRAM__TYPE:
 				return type != null;
 			case IECModelPackage.PROGRAM__IMPLEMENTS_INTERFACE:
@@ -478,22 +426,6 @@ public class ProgramImpl extends IdentifierImpl implements Program {
 				return callsMethod != null && !callsMethod.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //ProgramImpl

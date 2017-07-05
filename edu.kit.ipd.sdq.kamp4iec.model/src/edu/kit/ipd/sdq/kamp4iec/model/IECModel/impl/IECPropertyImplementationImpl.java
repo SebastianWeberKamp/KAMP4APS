@@ -21,33 +21,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECPropertyImplementationImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class IECPropertyImplementationImpl extends IdentifierImpl implements IECPropertyImplementation {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -75,27 +54,6 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	@Override
 	protected EClass eStaticClass() {
 		return IECModelPackage.Literals.IEC_PROPERTY_IMPLEMENTATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__NAME, oldName, name));
 	}
 
 	/**
@@ -144,8 +102,6 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
-				return getName();
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
@@ -161,9 +117,6 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
-				setName((String)newValue);
-				return;
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation)newValue);
 				return;
@@ -179,9 +132,6 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation)null);
 				return;
@@ -197,28 +147,10 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECModelPackage.IEC_PROPERTY_IMPLEMENTATION__TYPE:
 				return type != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //IECPropertyImplementationImpl

@@ -4,7 +4,6 @@ package edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider;
 
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
-
 import java.util.Collection;
 import java.util.List;
 

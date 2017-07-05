@@ -15,6 +15,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -26,7 +27,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.GlobalVariableImpl#getType <em>Type</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.GlobalVariableImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.GlobalVariableImpl#getUsesEnum <em>Uses Enum</em>}</li>
  * </ul>
  *
@@ -52,26 +52,6 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	 * @ordered
 	 */
 	protected VariableType type = TYPE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getUsesEnum() <em>Uses Enum</em>}' reference list.
@@ -128,27 +108,6 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.GLOBAL_VARIABLE__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum> getUsesEnum() {
 		if (usesEnum == null) {
 			usesEnum = new EObjectResolvingEList<edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum>(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Enum.class, this, IECRepositoryPackage.GLOBAL_VARIABLE__USES_ENUM);
@@ -166,8 +125,6 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 		switch (featureID) {
 			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
 				return getType();
-			case IECRepositoryPackage.GLOBAL_VARIABLE__NAME:
-				return getName();
 			case IECRepositoryPackage.GLOBAL_VARIABLE__USES_ENUM:
 				return getUsesEnum();
 		}
@@ -185,9 +142,6 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 		switch (featureID) {
 			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
 				setType((VariableType)newValue);
-				return;
-			case IECRepositoryPackage.GLOBAL_VARIABLE__NAME:
-				setName((String)newValue);
 				return;
 			case IECRepositoryPackage.GLOBAL_VARIABLE__USES_ENUM:
 				getUsesEnum().clear();
@@ -208,9 +162,6 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
 				setType(TYPE_EDEFAULT);
 				return;
-			case IECRepositoryPackage.GLOBAL_VARIABLE__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case IECRepositoryPackage.GLOBAL_VARIABLE__USES_ENUM:
 				getUsesEnum().clear();
 				return;
@@ -228,8 +179,6 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 		switch (featureID) {
 			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
 				return type != TYPE_EDEFAULT;
-			case IECRepositoryPackage.GLOBAL_VARIABLE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECRepositoryPackage.GLOBAL_VARIABLE__USES_ENUM:
 				return usesEnum != null && !usesEnum.isEmpty();
 		}
@@ -248,8 +197,6 @@ public class GlobalVariableImpl extends IdentifierImpl implements GlobalVariable
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (Type: ");
 		result.append(type);
-		result.append(", Name: ");
-		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

@@ -20,7 +20,6 @@ import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
-import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
@@ -52,34 +51,11 @@ public class ProgramItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNamePropertyDescriptor(object);
 			addTypePropertyDescriptor(object);
 			addAccessesPropertyPropertyDescriptor(object);
 			addCallsMethodPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Program_Name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Program_Name_feature", "_UI_Program_type"),
-				 IECModelPackage.Literals.PROGRAM__NAME,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
 	}
 
 	/**
@@ -220,9 +196,6 @@ public class ProgramItemProvider
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Program.class)) {
-			case IECModelPackage.PROGRAM__NAME:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION:
 			case IECModelPackage.PROGRAM__CALLS_FUNCTION_BLOCK:
 			case IECModelPackage.PROGRAM__IMPLEMENTS_INTERFACE:

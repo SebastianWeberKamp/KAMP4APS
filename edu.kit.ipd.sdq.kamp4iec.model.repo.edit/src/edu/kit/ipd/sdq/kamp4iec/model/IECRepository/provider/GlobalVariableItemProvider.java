@@ -46,7 +46,6 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addTypePropertyDescriptor(object);
-			addNamePropertyDescriptor(object);
 			addUsesEnumPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -66,28 +65,6 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 				 getString("_UI_GlobalVariable_Type_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_GlobalVariable_Type_feature", "_UI_GlobalVariable_type"),
 				 IECRepositoryPackage.Literals.GLOBAL_VARIABLE__TYPE,
-				 true,
-				 false,
-				 false,
-				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Name feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addNamePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_GlobalVariable_Name_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_GlobalVariable_Name_feature", "_UI_GlobalVariable_type"),
-				 IECRepositoryPackage.Literals.GLOBAL_VARIABLE__NAME,
 				 true,
 				 false,
 				 false,
@@ -157,7 +134,6 @@ public class GlobalVariableItemProvider extends IdentifierItemProvider {
 
 		switch (notification.getFeatureID(GlobalVariable.class)) {
 			case IECRepositoryPackage.GLOBAL_VARIABLE__TYPE:
-			case IECRepositoryPackage.GLOBAL_VARIABLE__NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

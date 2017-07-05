@@ -7,13 +7,10 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -24,7 +21,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionImpl#getCallsFunction <em>Calls Function</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.FunctionImpl#getUsesEnum <em>Uses Enum</em>}</li>
  * </ul>
@@ -32,26 +28,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public class FunctionImpl extends IdentifierImpl implements Function {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getCallsFunction() <em>Calls Function</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -96,27 +72,6 @@ public class FunctionImpl extends IdentifierImpl implements Function {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.FUNCTION__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EList<Function> getCallsFunction() {
 		if (callsFunction == null) {
 			callsFunction = new EObjectResolvingEList<Function>(Function.class, this, IECRepositoryPackage.FUNCTION__CALLS_FUNCTION);
@@ -144,8 +99,6 @@ public class FunctionImpl extends IdentifierImpl implements Function {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECRepositoryPackage.FUNCTION__NAME:
-				return getName();
 			case IECRepositoryPackage.FUNCTION__CALLS_FUNCTION:
 				return getCallsFunction();
 			case IECRepositoryPackage.FUNCTION__USES_ENUM:
@@ -163,9 +116,6 @@ public class FunctionImpl extends IdentifierImpl implements Function {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECRepositoryPackage.FUNCTION__NAME:
-				setName((String)newValue);
-				return;
 			case IECRepositoryPackage.FUNCTION__CALLS_FUNCTION:
 				getCallsFunction().clear();
 				getCallsFunction().addAll((Collection<? extends Function>)newValue);
@@ -186,9 +136,6 @@ public class FunctionImpl extends IdentifierImpl implements Function {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.FUNCTION__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case IECRepositoryPackage.FUNCTION__CALLS_FUNCTION:
 				getCallsFunction().clear();
 				return;
@@ -207,30 +154,12 @@ public class FunctionImpl extends IdentifierImpl implements Function {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.FUNCTION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECRepositoryPackage.FUNCTION__CALLS_FUNCTION:
 				return callsFunction != null && !callsFunction.isEmpty();
 			case IECRepositoryPackage.FUNCTION__USES_ENUM:
 				return usesEnum != null && !usesEnum.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //FunctionImpl

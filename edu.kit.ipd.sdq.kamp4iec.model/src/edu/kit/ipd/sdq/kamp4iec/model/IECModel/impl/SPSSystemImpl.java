@@ -10,16 +10,12 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECModel.SPSSystem;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl;
 import java.util.Collection;
-
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -32,7 +28,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl#getContainsProgram <em>Contains Program</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.SPSSystemImpl#getComponentInternalDependencies <em>Component Internal Dependencies</em>}</li>
  * </ul>
@@ -40,26 +35,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getContainsProgram() <em>Contains Program</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -97,27 +72,6 @@ public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	@Override
 	protected EClass eStaticClass() {
 		return IECModelPackage.Literals.SPS_SYSTEM;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.SPS_SYSTEM__NAME, oldName, name));
 	}
 
 	/**
@@ -166,8 +120,6 @@ public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECModelPackage.SPS_SYSTEM__NAME:
-				return getName();
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
 				return getContainsProgram();
 			case IECModelPackage.SPS_SYSTEM__COMPONENT_INTERNAL_DEPENDENCIES:
@@ -185,9 +137,6 @@ public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECModelPackage.SPS_SYSTEM__NAME:
-				setName((String)newValue);
-				return;
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
 				getContainsProgram().clear();
 				getContainsProgram().addAll((Collection<? extends Program>)newValue);
@@ -208,9 +157,6 @@ public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.SPS_SYSTEM__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
 				getContainsProgram().clear();
 				return;
@@ -229,30 +175,12 @@ public class SPSSystemImpl extends IdentifierImpl implements SPSSystem {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.SPS_SYSTEM__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECModelPackage.SPS_SYSTEM__CONTAINS_PROGRAM:
 				return containsProgram != null && !containsProgram.isEmpty();
 			case IECModelPackage.SPS_SYSTEM__COMPONENT_INTERNAL_DEPENDENCIES:
 				return componentInternalDependencies != null && !componentInternalDependencies.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //SPSSystemImpl

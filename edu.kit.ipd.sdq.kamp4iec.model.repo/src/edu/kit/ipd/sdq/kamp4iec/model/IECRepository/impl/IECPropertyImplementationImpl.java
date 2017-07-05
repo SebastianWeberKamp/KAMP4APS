@@ -6,6 +6,7 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -16,6 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -26,7 +28,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECPropertyImplementationImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECPropertyImplementationImpl#getImplements <em>Implements</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECPropertyImplementationImpl#getAccessesVariable <em>Accesses Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IECPropertyImplementationImpl#getUsesEnum <em>Uses Enum</em>}</li>
@@ -35,26 +36,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public class IECPropertyImplementationImpl extends IdentifierImpl implements IECPropertyImplementation {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getImplements() <em>Implements</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -102,27 +83,6 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	@Override
 	protected EClass eStaticClass() {
 		return IECRepositoryPackage.Literals.IEC_PROPERTY_IMPLEMENTATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION__NAME, oldName, name));
 	}
 
 	/**
@@ -195,8 +155,6 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
-				return getName();
 			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS:
 				if (resolve) return getImplements();
 				return basicGetImplements();
@@ -217,9 +175,6 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
-				setName((String)newValue);
-				return;
 			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS:
 				setImplements((IECProperty)newValue);
 				return;
@@ -243,9 +198,6 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS:
 				setImplements((IECProperty)null);
 				return;
@@ -267,8 +219,6 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION__IMPLEMENTS:
 				return implements_ != null;
 			case IECRepositoryPackage.IEC_PROPERTY_IMPLEMENTATION__ACCESSES_VARIABLE:
@@ -277,22 +227,6 @@ public class IECPropertyImplementationImpl extends IdentifierImpl implements IEC
 				return usesEnum != null && !usesEnum.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //IECPropertyImplementationImpl
