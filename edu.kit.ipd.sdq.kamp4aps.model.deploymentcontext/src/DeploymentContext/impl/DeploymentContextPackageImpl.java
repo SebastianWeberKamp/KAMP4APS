@@ -8,8 +8,7 @@ import DeploymentContext.DeploymentContextPackage;
 import DeploymentContext.DeploymentContextRepository;
 import DeploymentContext.VariableMapping;
 
-import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.IECModelPackage;
-
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;

@@ -15,8 +15,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4aps.iec.componentInternalDependencies.edit;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4aps.iec.iecModel.edit;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4aps.iec.iecRepository.edit;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies.edit;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4iec.model.edit;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4iec.model.repo.edit;visibility:=reexport,
  xPPU.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

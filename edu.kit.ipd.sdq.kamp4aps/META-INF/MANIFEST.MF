@@ -25,7 +25,7 @@ Export-Package: edu.kit.ipd.sdq.kamp4aps.activator,
  edu.kit.ipd.sdq.kamp4aps.core.derivation,
  edu.kit.ipd.sdq.kamp4aps.ui
 Import-Package: DeploymentContext,
- edu.kit.ipd.sdq.kamp4aps.iec.IECModel,
- edu.kit.ipd.sdq.kamp4aps.iec.IECRepository,
+ edu.kit.ipd.sdq.kamp4iec.model.IECModel,
+ edu.kit.ipd.sdq.kamp4iec.model.IECRepository,
  edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider,
  xPPU

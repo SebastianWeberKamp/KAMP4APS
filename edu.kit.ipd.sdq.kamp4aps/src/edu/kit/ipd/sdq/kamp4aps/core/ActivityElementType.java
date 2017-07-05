@@ -14,7 +14,7 @@ import fieldofactivityannotations.StructureStockList;
 import fieldofactivityannotations.TestCase;
 import fieldofactivityannotations.TrainingDocExternal;
 import fieldofactivityannotations.TrainingDocIntern;
-import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.Program;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;

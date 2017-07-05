@@ -6,9 +6,6 @@ import DeploymentContext.ComponentCorrelation;
 import DeploymentContext.DeploymentContextPackage;
 import DeploymentContext.DeploymentContextRepository;
 import DeploymentContext.VariableMapping;
-
-import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.Program;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -64,7 +61,7 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 	 * @generated
 	 * @ordered
 	 */
-	protected Program program;
+	protected edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program program;
 
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -199,10 +196,10 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Program getProgram() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program getProgram() {
 		if (program != null && program.eIsProxy()) {
 			InternalEObject oldProgram = (InternalEObject)program;
-			program = (Program)eResolveProxy(oldProgram);
+			program = (edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program)eResolveProxy(oldProgram);
 			if (program != oldProgram) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM, oldProgram, program));
@@ -216,7 +213,7 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Program basicGetProgram() {
+	public edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program basicGetProgram() {
 		return program;
 	}
 
@@ -225,8 +222,8 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProgram(Program newProgram) {
-		Program oldProgram = program;
+	public void setProgram(edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program newProgram) {
+		edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program oldProgram = program;
 		program = newProgram;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM, oldProgram, program));
@@ -354,7 +351,7 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 				setComponent((Component)newValue);
 				return;
 			case DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM:
-				setProgram((Program)newValue);
+				setProgram((edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program)newValue);
 				return;
 			case DeploymentContextPackage.COMPONENT_CORRELATION__NAME:
 				setName((String)newValue);
@@ -382,7 +379,7 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 				setComponent((Component)null);
 				return;
 			case DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM:
-				setProgram((Program)null);
+				setProgram((edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program)null);
 				return;
 			case DeploymentContextPackage.COMPONENT_CORRELATION__NAME:
 				setName(NAME_EDEFAULT);

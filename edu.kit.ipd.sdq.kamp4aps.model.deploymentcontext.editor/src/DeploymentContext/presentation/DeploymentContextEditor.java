@@ -156,11 +156,11 @@ import org.eclipse.emf.edit.ui.view.ExtendedPropertySheetPage;
 
 import DeploymentContext.provider.DeploymentContextItemProviderAdapterFactory;
 
-import edu.kit.ipd.sdq.kamp4aps.iec.ComponentInternalDependencies.provider.ComponentInternalDependenciesItemProviderAdapterFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.provider.ComponentInternalDependenciesItemProviderAdapterFactory;
 
-import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.provider.IECModelItemProviderAdapterFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider.IECModelItemProviderAdapterFactory;
 
-import edu.kit.ipd.sdq.kamp4aps.iec.IECRepository.provider.IECRepositoryItemProviderAdapterFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryItemProviderAdapterFactory;
 
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 

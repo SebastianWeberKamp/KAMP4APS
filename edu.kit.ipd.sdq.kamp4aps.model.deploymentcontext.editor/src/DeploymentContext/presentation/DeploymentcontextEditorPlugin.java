@@ -2,11 +2,11 @@
  */
 package DeploymentContext.presentation;
 
-import edu.kit.ipd.sdq.kamp4aps.iec.ComponentInternalDependencies.provider.ComponentInternalDependenciesEditPlugin;
+import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.provider.ComponentInternalDependenciesEditPlugin;
 
-import edu.kit.ipd.sdq.kamp4aps.iec.IECModel.provider.IECModelEditPlugin;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider.IECModelEditPlugin;
 
-import edu.kit.ipd.sdq.kamp4aps.iec.IECRepository.provider.IECRepositoryEditPlugin;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;
 
