@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl#getId <em>Id</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECRepository.impl.IdentifierImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,13 +49,34 @@ public abstract class IdentifierImpl extends MinimalEObjectImpl.Container implem
 	protected String id = ID_EDEFAULT;
 
 	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated NOT
 	 */
 	protected IdentifierImpl() {
 		super();
-		this.id = EcoreUtil.generateUUID();
+		this.id = this.eClass().getName() + "_" + EcoreUtil.generateUUID();
+		this.name = " " + id;
 	}
 
 	/**
@@ -93,11 +115,34 @@ public abstract class IdentifierImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, IECRepositoryPackage.IDENTIFIER__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case IECRepositoryPackage.IDENTIFIER__ID:
 				return getId();
+			case IECRepositoryPackage.IDENTIFIER__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,6 +157,9 @@ public abstract class IdentifierImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case IECRepositoryPackage.IDENTIFIER__ID:
 				setId((String)newValue);
+				return;
+			case IECRepositoryPackage.IDENTIFIER__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,6 +176,9 @@ public abstract class IdentifierImpl extends MinimalEObjectImpl.Container implem
 			case IECRepositoryPackage.IDENTIFIER__ID:
 				setId(ID_EDEFAULT);
 				return;
+			case IECRepositoryPackage.IDENTIFIER__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -142,6 +193,8 @@ public abstract class IdentifierImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case IECRepositoryPackage.IDENTIFIER__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case IECRepositoryPackage.IDENTIFIER__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -158,6 +211,8 @@ public abstract class IdentifierImpl extends MinimalEObjectImpl.Container implem
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
 		result.append(id);
+		result.append(", Name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}

@@ -28,7 +28,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getType <em>Type</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getAccessesGlobalVariable <em>Accesses Global Variable</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4iec.model.IECModel.impl.IECMethodImplementationImpl#getAccessesProperty <em>Accesses Property</em>}</li>
@@ -37,26 +36,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * @generated
  */
 public class IECMethodImplementationImpl extends IdentifierImpl implements IECMethodImplementation {
-	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
 	/**
 	 * The cached value of the '{@link #getType() <em>Type</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -104,27 +83,6 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 	@Override
 	protected EClass eStaticClass() {
 		return IECModelPackage.Literals.IEC_METHOD_IMPLEMENTATION;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, IECModelPackage.IEC_METHOD_IMPLEMENTATION__NAME, oldName, name));
 	}
 
 	/**
@@ -197,8 +155,6 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__NAME:
-				return getName();
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__TYPE:
 				if (resolve) return getType();
 				return basicGetType();
@@ -219,9 +175,6 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__NAME:
-				setName((String)newValue);
-				return;
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation)newValue);
 				return;
@@ -245,9 +198,6 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__NAME:
-				setName(NAME_EDEFAULT);
-				return;
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__TYPE:
 				setType((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECMethodImplementation)null);
 				return;
@@ -269,8 +219,6 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__TYPE:
 				return type != null;
 			case IECModelPackage.IEC_METHOD_IMPLEMENTATION__ACCESSES_GLOBAL_VARIABLE:
@@ -279,22 +227,6 @@ public class IECMethodImplementationImpl extends IdentifierImpl implements IECMe
 				return accessesProperty != null && !accessesProperty.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (Name: ");
-		result.append(name);
-		result.append(')');
-		return result.toString();
 	}
 
 } //IECMethodImplementationImpl

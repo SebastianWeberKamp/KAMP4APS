@@ -13,9 +13,11 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECProperty;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECPropertyImplementation;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Identifier;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.ImplementsInterface;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.MethodResource;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -172,6 +174,12 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 			case IECRepositoryPackage.IDENTIFIER: {
 				Identifier identifier = (Identifier)theEObject;
 				T result = caseIdentifier(identifier);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case IECRepositoryPackage.IMPLEMENTS_INTERFACE: {
+				ImplementsInterface implementsInterface = (ImplementsInterface)theEObject;
+				T result = caseImplementsInterface(implementsInterface);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -386,6 +394,21 @@ public class IECRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIdentifier(Identifier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Implements Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Implements Interface</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseImplementsInterface(ImplementsInterface object) {
 		return null;
 	}
 
