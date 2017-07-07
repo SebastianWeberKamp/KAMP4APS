@@ -32,6 +32,15 @@ import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
 import xPPU.StructureRepository.Structure;
 
+/**
+ * 
+ * This class uses the look up methods of \texttt{ArchitectureAnnotationLookup}
+ * to add the activities based on the non-structural changes to the workplan.
+ * 
+ * @author Sandro Koch
+ * @see ArchitectureAnnotationLookup
+ */
+
 public class EnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDerivation<ArchitectureVersion> {
 	@Override
 	public List<Activity> deriveEnrichedWorkplan(ArchitectureVersion baseArchitectureVersion,
