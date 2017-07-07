@@ -17,6 +17,17 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSModificationReposito
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
 
+/**
+ * This class loads the structural and non-structural models
+ * as well as the aPS specific correspondence model.
+ * More information to the correspondence model can be found
+ * in the link below.
+ * 
+ * @author Sandro Koch
+ * @see <a href="https://sdqweb.ipd.kit.edu/publications/pdfs/koch2017a.pdf">koch2017a<\a>
+ * 
+ */
+
 public class ArchitectureModelFactoryFacade {
 	
 	private static ArchitectureVersionParams archParams = new ArchitectureVersionParams();
