@@ -3,7 +3,6 @@ package edu.kit.ipd.sdq.kamp4aps.core;
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
 import fieldofactivityannotations.CalibrationConfiguration;
 import fieldofactivityannotations.ComponentStockList;
-import fieldofactivityannotations.Documentation;
 import fieldofactivityannotations.Drawing;
 import fieldofactivityannotations.HMIConfiguration;
 import fieldofactivityannotations.InterfaceStockList;
@@ -20,6 +19,17 @@ import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
 import xPPU.StructureRepository.Structure;
 
+/**
+ * This class represents the elements an activity can affect.
+ * We distinct between aPS related elements and annotation related
+ * activities. APS related activities are caused by architectural
+ * changes in the system under analysis also known as structural
+ * changes. While annotation related activities are caused by changes 
+ * in the non-structural part of the system.
+ * 
+ * @author Sandro Koch
+ * @see AbstractActivityElementType
+ */
 public enum ActivityElementType implements AbstractActivityElementType {
 	//aPS related
 	COMPONENT(Component.class),
@@ -29,7 +39,6 @@ public enum ActivityElementType implements AbstractActivityElementType {
 	
 	// annotation-related
 	TESTCASE(TestCase.class),
-//	DOCUMENTATION(Documentation.class),
 	MAINTENEANCE_DOCUMENTATION(MainteneanceDocumentation.class),
 	OPERATOR_INSTRUCTIONS(OperatorInstructions.class),
 	TRAINING_DOCUMENTATION_INTERNAL(TrainingDocIntern.class),
