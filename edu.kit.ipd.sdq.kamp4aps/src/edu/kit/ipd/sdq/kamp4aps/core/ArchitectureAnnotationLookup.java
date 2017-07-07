@@ -5,7 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 import DeploymentContext.ComponentCorrelation;
@@ -36,6 +35,17 @@ import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
 import xPPU.StructureRepository.Structure;
 
+/**
+ * This class represents the implementation of the change rules
+ * that where extracted of the scenarios described in the link below.
+ * These rules are searching for the affected non-structural elements
+ * which were defined in the \texttt{FieldOfActivityAnnotations} metamodel.
+ * Each look up method is the manifestation of a single element of the mentioned
+ * metamodel.
+ * 
+ * @author Sandro Koch
+ * @see <a href="https://sdqweb.ipd.kit.edu/publications/pdfs/koch2017a.pdf">koch2017a<\a>
+ */
 public class ArchitectureAnnotationLookup {
 
 	public static List<?> lookUpSystemTestsForPlant(ArchitectureVersion version, Plant plant) {
