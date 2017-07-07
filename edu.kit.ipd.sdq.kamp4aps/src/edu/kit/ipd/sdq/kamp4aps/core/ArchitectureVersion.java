@@ -8,6 +8,14 @@ import fieldofactivityannotations.FieldofactivityannotationsFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
 import xPPU.Plant;
 
+/**
+ * This class creates the structural and non-structural
+ * in memory representations.
+ * 
+ * @author Sandro Koch
+ *
+ */
+
 public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAPSModificationRepository<?>> {
 	private FieldOfActivityAnnotationRepository _fieldOfActivityRepository;
 	private Plant _xppuPlant;
