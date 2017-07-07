@@ -11,13 +11,19 @@ import edu.kit.ipd.sdq.kamp.util.FileAndFolderManagement;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion.ArchitectureVersionParams;
 import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
+import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersionPersistency;
 import xPPU.Plant;
 
-public class ArchitectureVersionPersistency extends AbstractKAPSArchitectureVersionPersistency<ArchitectureVersion> {	
+public class ArchitectureVersionPersistency extends AbstractArchitectureVersionPersistency<ArchitectureVersion> {	
 	
 	
 	private ArchitectureVersionParams archParams = new ArchitectureVersionParams();
-
+	public static final String FILEEXTENSION_REPOSITORY = "repository";
+	public static final String FILEEXTENSION_SYSTEM = "system";
+	public static final String FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS = "fieldofactivityannotations";
+	public static final String FILEEXTENSION_XPPU = "xppu";
+	public static final String FILEEXTENSION_DEPLOYMENTCONTEXT = "deploymentcontext";
+	
 	@Override
 	public ArchitectureVersion load(String folderpath, String filename, String versionname) {
 		ResourceSet loadResourceSet = new ResourceSetImpl();	
@@ -56,6 +62,12 @@ public class ArchitectureVersionPersistency extends AbstractKAPSArchitectureVers
 		if (deploymentContextFile != null && deploymentContextFile.exists())
 			archParams.deploymentContextRepository = (DeploymentContextRepository)loadEmfModelFromResource(deploymentContextFile.getFullPath().toString(), null, loadResourceSet);
 		return new ArchitectureVersion(archParams);
+	}
+
+	@Override
+	public void save(String targetDirectoryPath, String filename, ArchitectureVersion version) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 }
