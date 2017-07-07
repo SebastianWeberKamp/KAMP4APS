@@ -13,6 +13,14 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModification
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersionPersistency;
 import xPPU.Plant;
 
+/**
+ * 
+ * This class provides the loading and saving of 
+ * the aPS specific models.
+ * 
+ * @author Sandro Koch
+ *
+ */
 public class ArchitectureVersionPersistency extends AbstractArchitectureVersionPersistency<ArchitectureVersion> {
 
 	private ArchitectureVersionParams archParams = new ArchitectureVersionParams();
