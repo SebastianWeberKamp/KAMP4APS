@@ -17,7 +17,16 @@ import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.LabelCustomizing;
 import xPPU.Identifier.Identifier;
 
-
+/**
+ * 
+ * This class compares the models before and after the changes.
+ * If elements are added or removed, the activity is added
+ * to the work plan and the change propagation analysis for
+ * the found changes is started.
+ * 
+ * @author Sandro Koch
+ *
+ */
 public class DifferenceCalculation extends AbstractDifferenceCalculation<ArchitectureVersion>{
 
 	private final InternalModificationDerivation architectureInternalModificationDerivation = new InternalModificationDerivation();
