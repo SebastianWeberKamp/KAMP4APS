@@ -2,6 +2,18 @@ package edu.kit.ipd.sdq.kamp4aps.core;
 
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityType;
 
+/**
+ * This class represents the activity type metamodel. Each type of activity
+ * is represented in this class. Basic activities for adding, removing and
+ * updating are defined. This is possible for structural as well as 
+ * non-structural changes of the system. APS specific is the system
+ * calibration and the purchasing activities for mechanical and electrical
+ * components.
+ * 
+ * 
+ * @author Sandro Koch
+ * @see AbstractActivityType
+ */
 public enum ActivityType implements AbstractActivityType {
 	ARCHITECTUREMODELDIFF("Architecture-related activity"),
 	INTERNALMODIFICATIONMARK("Modification mark"),
