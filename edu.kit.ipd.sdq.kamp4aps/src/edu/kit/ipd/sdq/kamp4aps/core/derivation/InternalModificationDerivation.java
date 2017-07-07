@@ -12,6 +12,7 @@ import edu.kit.ipd.sdq.kamp.workplan.Activity;
 import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
+import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureAnnotationLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
@@ -21,6 +22,15 @@ import xPPU.ComponentRepository.Component;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
 import xPPU.StructureRepository.Structure;
+
+/**
+ * 
+ * This class uses the look up methods of \texttt{ArchitectureModelLookup}
+ * to add the activities based on the structural changes to the workplan.
+ * 
+ * @author Sandro Koch
+ * @see ArchitectureModelLookup
+ */
 
 public class InternalModificationDerivation {
 
