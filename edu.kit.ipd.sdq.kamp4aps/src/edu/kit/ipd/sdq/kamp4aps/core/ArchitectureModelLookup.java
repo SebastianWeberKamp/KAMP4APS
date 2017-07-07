@@ -16,20 +16,32 @@ import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusMaster;
 import xPPU.BusComponents.BusSlave;
 import xPPU.ComponentRepository.Component;
-import xPPU.ComponentRepository.Controller;
 import xPPU.ComponentRepository.PowerSupply;
 import xPPU.ComponentRepository.Sensor;
 import xPPU.Identifier.Identifier;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.SignalInterface;
 
+/**
+ * This class represents a part of the change rules implementation
+ * that where extracted of the scenarios described in the link below.
+ * These rules are searching for the affected structural elements
+ * which were defined in the \texttt{xPPU} metamodel.
+ * Each look up method is the manifestation of a single element of the mentioned
+ * metamodel.
+ * 
+ * The internal public class \texttt{BusComponentsParams} serves as data exchange
+ * class to avoid large parameter lists.
+ * 
+ * @author Sandro Koch
+ * @see <a href="https://sdqweb.ipd.kit.edu/publications/pdfs/koch2017a.pdf">koch2017a<\a>
+ *
+ */
+
 public class ArchitectureModelLookup {
 
 	private static BusComponentsParams bcParams;
 	
-	/**
-	 * Finds PowerSupplys of BusBoxes
-	 */
 	public static Map<PowerSupply, Set<BusBox>> lookUpBusBoxesWithSupplys(ArchitectureVersion version,
 			Collection<BusBox> initialMarkedBusBoxes) {
 		Map<PowerSupply, Set<BusBox>> results = new HashMap<>();
@@ -59,9 +71,6 @@ public class ArchitectureModelLookup {
 		Map<Component, Set<ModifyInterface<Interface>>> results = new HashMap<Component, Set<ModifyInterface<Interface>>>();
 		for(ModifyInterface<Interface> modifyInterface : initialMarkedInterfaces){
 			for(Component component : version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant()){
-				if(component instanceof Controller){
-					int i = 0;
-				}
 				if(modifyInterface.getAffectedElement() instanceof Interface){
 					for(Interface componentInterface : component.getConnectedInterfaces()){
 						if(componentInterface.getId() == modifyInterface.getAffectedElement().getId()){
@@ -105,16 +114,6 @@ public class ArchitectureModelLookup {
 		updateBusCableCausingsByBusSlaves();
 		updateBusCableCausingsByBusBoxes();
 		
-//		
-//		for(BusCable key : bcParams.causingElementsOfBusCable.keySet()){
-//			Set<Identifier> identifiers = bcParams.causingElementsOfBusCable.get(key);
-//			for(Identifier i : identifiers){
-//				for(BusBox box : bcParams.busBoxesToChange){
-//					if(box.getSignalinterface_master() != null && box.getSignalinterface_master().getId().equals(i.getId()))
-//						bcParams.causingElementsOfBusCable.get(key).add((Identifier)box);
-//				}
-//			}
-//		}
 		return bcParams;
 	}
 
@@ -352,6 +351,18 @@ public class ArchitectureModelLookup {
 			return interfacesOfBusCables;
 		}
 	
+	/**
+	 * 
+	 * This class is a data exchange class to avoid large
+	 * parameter lists. It stores all bus components of the system
+	 * as well as the identified bus components which are affected
+	 * by a change. Also the causing entities are stored in this class
+	 * The look up methods of the parent class 
+	 * \texttt{ArchitectureModelLookup} fill the parameters of the class.
+	 * 
+	 * @author Sandro Koch
+	 *
+	 */
 	public static class BusComponentsParams{
 		public Set<BusBox> busBoxesToChange;
 		public Set<BusMaster> busMastersToChange;
