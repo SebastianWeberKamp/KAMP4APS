@@ -30,7 +30,7 @@ import java.util.Set;
 
 import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
 /**
- * The change propagation analysis of KAPS
+ * The change propagation analysis of KAMP4APS
  * 1. determines a seed population of affected components (resp. provided roles)
  * 2. calculates in iterations:
  *    a) inter-component propagation
@@ -40,7 +40,7 @@ import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
  * - elements which were already part of a seed population are not further investigated
  * 
  * 
- * @author koch
+ * @author Sandro Koch
  *
  */
 public class ChangePropagationAnalysis implements AbstractChangePropagationAnalysis<ArchitectureVersion> {
