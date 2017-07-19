@@ -9,12 +9,18 @@
         eType="#//InterfaceRepository/InterfaceRepository" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="componentRepository" lowerBound="1"
         eType="#//ComponentRepository/ComponentRepository" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="moduleRepository" lowerBound="1"
+        eType="#//ModuleRepository/ModuleRepository" containment="true"/>
   </eClassifiers>
   <eSubpackages name="ComponentRepository" nsURI="edu.kit.ipd.sdq.kaps.xppu.componentrepository"
       nsPrefix="ComponentRepository">
     <eClassifiers xsi:type="ecore:EClass" name="Component" abstract="true" eSuperTypes="#//Identifier/Identifier">
       <eStructuralFeatures xsi:type="ecore:EReference" name="connectedInterfaces"
           upperBound="-1" eType="#//InterfaceRepository/Interface"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//StructureRepository/Structure"
+          eOpposite="#//StructureRepository/Structure/components"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentModule" eType="#//ModuleRepository/Module"
+          eOpposite="#//ModuleRepository/Module/components"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Panel" abstract="true" eSuperTypes="#//Identifier/Identifier">
       <eStructuralFeatures xsi:type="ecore:EReference" name="componentRepository"
@@ -163,8 +169,6 @@
           upperBound="-1" eType="#//BusComponents/BusCable" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="potentiometer" lowerBound="1"
           upperBound="-1" eType="#//ComponentRepository/Potentiometer" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
-          eType="#//StructureRepository/Crane" eOpposite="#//StructureRepository/Crane/mountedOn"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Controller" eSuperTypes="#//ComponentRepository/Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="powersupply" lowerBound="1"
@@ -298,7 +302,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
           eType="#//ModuleRepository/Module" containment="true" eOpposite="#//ModuleRepository/Module/parentStructure"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
-          eType="#//ComponentRepository/Component" containment="true"/>
+          eType="#//ComponentRepository/Component" containment="true" eOpposite="#//ComponentRepository/Component/parent"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="CommunicationNetwork" eSuperTypes="#//StructureRepository/Structure"/>
     <eClassifiers xsi:type="ecore:EClass" name="PowerNetwork" eSuperTypes="#//StructureRepository/Structure"/>
@@ -315,7 +319,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="arm" lowerBound="1" eType="#//MechanicalComponents/Arm"
           eOpposite="#//MechanicalComponents/Arm/mountedTo"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="mountedOn" lowerBound="1"
-          eType="#//ComponentRepository/TurningTable" eOpposite="#//ComponentRepository/TurningTable/parent"/>
+          eType="#//ComponentRepository/TurningTable"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="vacuumgripper" lowerBound="1"
           eType="#//ComponentRepository/VacuumGripper" eOpposite="#//ComponentRepository/VacuumGripper/mountedTo"/>
     </eClassifiers>
@@ -323,11 +327,19 @@
   </eSubpackages>
   <eSubpackages name="ModuleRepository" nsURI="edu.kit.ipd.sdq.kaps.xppu.modulerepository"
       nsPrefix="ModuleRepository">
-    <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="#//Identifier/Identifier">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+    <eClassifiers xsi:type="ecore:EClass" name="ModuleRepository" eSuperTypes="#//Identifier/Identifier">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="allModulesInPlant" upperBound="-1"
           eType="#//ModuleRepository/Module"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="Module" eSuperTypes="#//Identifier/Identifier">
       <eStructuralFeatures xsi:type="ecore:EReference" name="parentStructure" lowerBound="1"
           eType="#//StructureRepository/Structure" eOpposite="#//StructureRepository/Structure/modules"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="modules" upperBound="-1"
+          eType="#//ModuleRepository/Module"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="components" upperBound="-1"
+          eType="#//ComponentRepository/Component" eOpposite="#//ComponentRepository/Component/parentModule"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" upperBound="-1"
+          eType="#//InterfaceRepository/Interface"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="RampModule" eSuperTypes="#//ModuleRepository/Module"/>
     <eClassifiers xsi:type="ecore:EClass" name="PusherModule" eSuperTypes="#//ModuleRepository/Module"/>
@@ -368,7 +380,10 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="allInterfacesInPlant"
           upperBound="-1" eType="#//InterfaceRepository/Interface"/>
     </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="Interface" abstract="true" eSuperTypes="#//Identifier/Identifier"/>
+    <eClassifiers xsi:type="ecore:EClass" name="Interface" abstract="true" eSuperTypes="#//Identifier/Identifier">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="parentElement" lowerBound="1"
+          eType="#//Identifier/Identifier"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Screwing" abstract="true" eSuperTypes="#//InterfaceRepository/Interface"/>
     <eClassifiers xsi:type="ecore:EClass" name="ScrewingSplitter" eSuperTypes="#//InterfaceRepository/Screwing"/>
     <eClassifiers xsi:type="ecore:EClass" name="ScrewingMotor" eSuperTypes="#//InterfaceRepository/Screwing"/>

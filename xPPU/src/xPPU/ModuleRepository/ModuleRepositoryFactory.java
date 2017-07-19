@@ -22,6 +22,15 @@ public interface ModuleRepositoryFactory extends EFactory {
 	ModuleRepositoryFactory eINSTANCE = xPPU.ModuleRepository.impl.ModuleRepositoryFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Module Repository</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Module Repository</em>'.
+	 * @generated
+	 */
+	ModuleRepository createModuleRepository();
+
+	/**
 	 * Returns a new object of class '<em>Module</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

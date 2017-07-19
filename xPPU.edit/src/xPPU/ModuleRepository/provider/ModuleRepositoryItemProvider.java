@@ -1,6 +1,6 @@
 /**
  */
-package xPPU.InterfaceRepository.provider;
+package xPPU.ModuleRepository.provider;
 
 
 import java.util.Collection;
@@ -16,25 +16,25 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 import xPPU.Identifier.provider.IdentifierItemProvider;
 
-import xPPU.InterfaceRepository.Interface;
-import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
+import xPPU.ModuleRepository.ModuleRepository;
+import xPPU.ModuleRepository.ModuleRepositoryPackage;
 
 import xPPU.provider.XPPUEditPlugin;
 
 /**
- * This is the item provider adapter for a {@link xPPU.InterfaceRepository.Interface} object.
+ * This is the item provider adapter for a {@link xPPU.ModuleRepository.ModuleRepository} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class InterfaceItemProvider extends IdentifierItemProvider {
+public class ModuleRepositoryItemProvider extends IdentifierItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public InterfaceItemProvider(AdapterFactory adapterFactory) {
+	public ModuleRepositoryItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -49,31 +49,42 @@ public class InterfaceItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addParentElementPropertyDescriptor(object);
+			addAllModulesInPlantPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Parent Element feature.
+	 * This adds a property descriptor for the All Modules In Plant feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addParentElementPropertyDescriptor(Object object) {
+	protected void addAllModulesInPlantPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_Interface_parentElement_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Interface_parentElement_feature", "_UI_Interface_type"),
-				 InterfaceRepositoryPackage.Literals.INTERFACE__PARENT_ELEMENT,
+				 getString("_UI_ModuleRepository_allModulesInPlant_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ModuleRepository_allModulesInPlant_feature", "_UI_ModuleRepository_type"),
+				 ModuleRepositoryPackage.Literals.MODULE_REPOSITORY__ALL_MODULES_IN_PLANT,
 				 true,
 				 false,
 				 true,
 				 null,
 				 null,
 				 null));
+	}
+
+	/**
+	 * This returns ModuleRepository.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ModuleRepository"));
 	}
 
 	/**
@@ -84,10 +95,10 @@ public class InterfaceItemProvider extends IdentifierItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Interface)object).getId();
+		String label = ((ModuleRepository)object).getId();
 		return label == null || label.length() == 0 ?
-			getString("_UI_Interface_type") :
-			getString("_UI_Interface_type") + " " + label;
+			getString("_UI_ModuleRepository_type") :
+			getString("_UI_ModuleRepository_type") + " " + label;
 	}
 	
 

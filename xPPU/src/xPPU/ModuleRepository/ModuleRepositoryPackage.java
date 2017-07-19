@@ -58,6 +58,52 @@ public interface ModuleRepositoryPackage extends EPackage {
 	ModuleRepositoryPackage eINSTANCE = xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link xPPU.ModuleRepository.impl.ModuleRepositoryImpl <em>Module Repository</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.ModuleRepository.impl.ModuleRepositoryImpl
+	 * @see xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl#getModuleRepository()
+	 * @generated
+	 */
+	int MODULE_REPOSITORY = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_REPOSITORY__ID = IdentifierPackage.IDENTIFIER__ID;
+
+	/**
+	 * The feature id for the '<em><b>All Modules In Plant</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_REPOSITORY__ALL_MODULES_IN_PLANT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Module Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_REPOSITORY_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Module Repository</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_REPOSITORY_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link xPPU.ModuleRepository.impl.ModuleImpl <em>Module</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -65,7 +111,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl#getModule()
 	 * @generated
 	 */
-	int MODULE = 0;
+	int MODULE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -77,22 +123,40 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int MODULE__ID = IdentifierPackage.IDENTIFIER__ID;
 
 	/**
-	 * The feature id for the '<em><b>Modules</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MODULE__MODULES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
-
-	/**
 	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__PARENT_STRUCTURE = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int MODULE__PARENT_STRUCTURE = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Modules</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__MODULES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__COMPONENTS = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__INTERFACES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Module</em>' class.
@@ -101,7 +165,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 2;
+	int MODULE_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Module</em>' class.
@@ -120,7 +184,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl#getRampModule()
 	 * @generated
 	 */
-	int RAMP_MODULE = 1;
+	int RAMP_MODULE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -132,6 +196,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int RAMP_MODULE__ID = MODULE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAMP_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -141,13 +214,22 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int RAMP_MODULE__MODULES = MODULE__MODULES;
 
 	/**
-	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RAMP_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+	int RAMP_MODULE__COMPONENTS = MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAMP_MODULE__INTERFACES = MODULE__INTERFACES;
 
 	/**
 	 * The number of structural features of the '<em>Ramp Module</em>' class.
@@ -175,7 +257,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl#getPusherModule()
 	 * @generated
 	 */
-	int PUSHER_MODULE = 2;
+	int PUSHER_MODULE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -187,6 +269,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int PUSHER_MODULE__ID = MODULE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUSHER_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -196,13 +287,22 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int PUSHER_MODULE__MODULES = MODULE__MODULES;
 
 	/**
-	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PUSHER_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+	int PUSHER_MODULE__COMPONENTS = MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUSHER_MODULE__INTERFACES = MODULE__INTERFACES;
 
 	/**
 	 * The number of structural features of the '<em>Pusher Module</em>' class.
@@ -230,7 +330,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl#getMotorModule()
 	 * @generated
 	 */
-	int MOTOR_MODULE = 3;
+	int MOTOR_MODULE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -242,6 +342,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int MOTOR_MODULE__ID = MODULE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -251,13 +360,22 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int MOTOR_MODULE__MODULES = MODULE__MODULES;
 
 	/**
-	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MOTOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+	int MOTOR_MODULE__COMPONENTS = MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTOR_MODULE__INTERFACES = MODULE__INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Simple Motor</b></em>' containment reference list.
@@ -321,7 +439,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl#getSensorModule()
 	 * @generated
 	 */
-	int SENSOR_MODULE = 4;
+	int SENSOR_MODULE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -333,6 +451,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int SENSOR_MODULE__ID = MODULE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -342,13 +469,22 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int SENSOR_MODULE__MODULES = MODULE__MODULES;
 
 	/**
-	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int SENSOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+	int SENSOR_MODULE__COMPONENTS = MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR_MODULE__INTERFACES = MODULE__INTERFACES;
 
 	/**
 	 * The number of structural features of the '<em>Sensor Module</em>' class.
@@ -376,7 +512,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl#getOpticalSensorModule()
 	 * @generated
 	 */
-	int OPTICAL_SENSOR_MODULE = 5;
+	int OPTICAL_SENSOR_MODULE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -388,6 +524,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int OPTICAL_SENSOR_MODULE__ID = MODULE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTICAL_SENSOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -397,13 +542,22 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int OPTICAL_SENSOR_MODULE__MODULES = MODULE__MODULES;
 
 	/**
-	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int OPTICAL_SENSOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+	int OPTICAL_SENSOR_MODULE__COMPONENTS = MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTICAL_SENSOR_MODULE__INTERFACES = MODULE__INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Optical Sensor</b></em>' containment reference list.
@@ -449,7 +603,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl#getInductiveSensorModule()
 	 * @generated
 	 */
-	int INDUCTIVE_SENSOR_MODULE = 6;
+	int INDUCTIVE_SENSOR_MODULE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -461,6 +615,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int INDUCTIVE_SENSOR_MODULE__ID = MODULE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDUCTIVE_SENSOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -470,13 +633,22 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int INDUCTIVE_SENSOR_MODULE__MODULES = MODULE__MODULES;
 
 	/**
-	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INDUCTIVE_SENSOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+	int INDUCTIVE_SENSOR_MODULE__COMPONENTS = MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDUCTIVE_SENSOR_MODULE__INTERFACES = MODULE__INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Inductive Sensor</b></em>' containment reference list.
@@ -522,7 +694,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl#getPresenceSensorModule()
 	 * @generated
 	 */
-	int PRESENCE_SENSOR_MODULE = 7;
+	int PRESENCE_SENSOR_MODULE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -534,6 +706,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int PRESENCE_SENSOR_MODULE__ID = MODULE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESENCE_SENSOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -543,13 +724,22 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int PRESENCE_SENSOR_MODULE__MODULES = MODULE__MODULES;
 
 	/**
-	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESENCE_SENSOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+	int PRESENCE_SENSOR_MODULE__COMPONENTS = MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESENCE_SENSOR_MODULE__INTERFACES = MODULE__INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Presence Sensor</b></em>' containment reference list.
@@ -595,7 +785,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl#getPressureSensorModule()
 	 * @generated
 	 */
-	int PRESSURE_SENSOR_MODULE = 8;
+	int PRESSURE_SENSOR_MODULE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -607,6 +797,15 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int PRESSURE_SENSOR_MODULE__ID = MODULE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESSURE_SENSOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+
+	/**
 	 * The feature id for the '<em><b>Modules</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -616,13 +815,22 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int PRESSURE_SENSOR_MODULE__MODULES = MODULE__MODULES;
 
 	/**
-	 * The feature id for the '<em><b>Parent Structure</b></em>' container reference.
+	 * The feature id for the '<em><b>Components</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PRESSURE_SENSOR_MODULE__PARENT_STRUCTURE = MODULE__PARENT_STRUCTURE;
+	int PRESSURE_SENSOR_MODULE__COMPONENTS = MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESSURE_SENSOR_MODULE__INTERFACES = MODULE__INTERFACES;
 
 	/**
 	 * The number of structural features of the '<em>Pressure Sensor Module</em>' class.
@@ -644,6 +852,27 @@ public interface ModuleRepositoryPackage extends EPackage {
 
 
 	/**
+	 * Returns the meta object for class '{@link xPPU.ModuleRepository.ModuleRepository <em>Module Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Module Repository</em>'.
+	 * @see xPPU.ModuleRepository.ModuleRepository
+	 * @generated
+	 */
+	EClass getModuleRepository();
+
+	/**
+	 * Returns the meta object for the reference list '{@link xPPU.ModuleRepository.ModuleRepository#getAllModulesInPlant <em>All Modules In Plant</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>All Modules In Plant</em>'.
+	 * @see xPPU.ModuleRepository.ModuleRepository#getAllModulesInPlant()
+	 * @see #getModuleRepository()
+	 * @generated
+	 */
+	EReference getModuleRepository_AllModulesInPlant();
+
+	/**
 	 * Returns the meta object for class '{@link xPPU.ModuleRepository.Module <em>Module</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -652,6 +881,17 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getModule();
+
+	/**
+	 * Returns the meta object for the container reference '{@link xPPU.ModuleRepository.Module#getParentStructure <em>Parent Structure</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent Structure</em>'.
+	 * @see xPPU.ModuleRepository.Module#getParentStructure()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EReference getModule_ParentStructure();
 
 	/**
 	 * Returns the meta object for the reference list '{@link xPPU.ModuleRepository.Module#getModules <em>Modules</em>}'.
@@ -665,15 +905,26 @@ public interface ModuleRepositoryPackage extends EPackage {
 	EReference getModule_Modules();
 
 	/**
-	 * Returns the meta object for the container reference '{@link xPPU.ModuleRepository.Module#getParentStructure <em>Parent Structure</em>}'.
+	 * Returns the meta object for the reference list '{@link xPPU.ModuleRepository.Module#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the container reference '<em>Parent Structure</em>'.
-	 * @see xPPU.ModuleRepository.Module#getParentStructure()
+	 * @return the meta object for the reference list '<em>Components</em>'.
+	 * @see xPPU.ModuleRepository.Module#getComponents()
 	 * @see #getModule()
 	 * @generated
 	 */
-	EReference getModule_ParentStructure();
+	EReference getModule_Components();
+
+	/**
+	 * Returns the meta object for the reference list '{@link xPPU.ModuleRepository.Module#getInterfaces <em>Interfaces</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Interfaces</em>'.
+	 * @see xPPU.ModuleRepository.Module#getInterfaces()
+	 * @see #getModule()
+	 * @generated
+	 */
+	EReference getModule_Interfaces();
 
 	/**
 	 * Returns the meta object for class '{@link xPPU.ModuleRepository.RampModule <em>Ramp Module</em>}'.
@@ -889,6 +1140,24 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
+		 * The meta object literal for the '{@link xPPU.ModuleRepository.impl.ModuleRepositoryImpl <em>Module Repository</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xPPU.ModuleRepository.impl.ModuleRepositoryImpl
+		 * @see xPPU.ModuleRepository.impl.ModuleRepositoryPackageImpl#getModuleRepository()
+		 * @generated
+		 */
+		EClass MODULE_REPOSITORY = eINSTANCE.getModuleRepository();
+
+		/**
+		 * The meta object literal for the '<em><b>All Modules In Plant</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE_REPOSITORY__ALL_MODULES_IN_PLANT = eINSTANCE.getModuleRepository_AllModulesInPlant();
+
+		/**
 		 * The meta object literal for the '{@link xPPU.ModuleRepository.impl.ModuleImpl <em>Module</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -899,6 +1168,14 @@ public interface ModuleRepositoryPackage extends EPackage {
 		EClass MODULE = eINSTANCE.getModule();
 
 		/**
+		 * The meta object literal for the '<em><b>Parent Structure</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE__PARENT_STRUCTURE = eINSTANCE.getModule_ParentStructure();
+
+		/**
 		 * The meta object literal for the '<em><b>Modules</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -907,12 +1184,20 @@ public interface ModuleRepositoryPackage extends EPackage {
 		EReference MODULE__MODULES = eINSTANCE.getModule_Modules();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent Structure</b></em>' container reference feature.
+		 * The meta object literal for the '<em><b>Components</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference MODULE__PARENT_STRUCTURE = eINSTANCE.getModule_ParentStructure();
+		EReference MODULE__COMPONENTS = eINSTANCE.getModule_Components();
+
+		/**
+		 * The meta object literal for the '<em><b>Interfaces</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MODULE__INTERFACES = eINSTANCE.getModule_Interfaces();
 
 		/**
 		 * The meta object literal for the '{@link xPPU.ModuleRepository.impl.RampModuleImpl <em>Ramp Module</em>}' class.

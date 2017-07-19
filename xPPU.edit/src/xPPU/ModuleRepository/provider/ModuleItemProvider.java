@@ -50,6 +50,8 @@ public class ModuleItemProvider extends IdentifierItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addModulesPropertyDescriptor(object);
+			addComponentsPropertyDescriptor(object);
+			addInterfacesPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +70,50 @@ public class ModuleItemProvider extends IdentifierItemProvider {
 				 getString("_UI_Module_modules_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Module_modules_feature", "_UI_Module_type"),
 				 ModuleRepositoryPackage.Literals.MODULE__MODULES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Components feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addComponentsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_components_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_components_feature", "_UI_Module_type"),
+				 ModuleRepositoryPackage.Literals.MODULE__COMPONENTS,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Interfaces feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addInterfacesPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Module_interfaces_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Module_interfaces_feature", "_UI_Module_type"),
+				 ModuleRepositoryPackage.Literals.MODULE__INTERFACES,
 				 true,
 				 false,
 				 true,

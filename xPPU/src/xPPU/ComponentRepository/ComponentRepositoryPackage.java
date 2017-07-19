@@ -90,13 +90,31 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int COMPONENT__CONNECTED_INTERFACES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__PARENT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT__PARENT_MODULE = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>Component</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int COMPONENT_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -255,6 +273,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int MOTOR__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTOR__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MOTOR__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Gearing</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -326,6 +362,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SIMPLE_MOTOR__CONNECTED_INTERFACES = MOTOR__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MOTOR__PARENT = MOTOR__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIMPLE_MOTOR__PARENT_MODULE = MOTOR__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Gearing</b></em>' reference.
@@ -401,6 +455,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MECHANICAL_ASSEMBLY__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MECHANICAL_ASSEMBLY__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The number of structural features of the '<em>Mechanical Assembly</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -445,6 +517,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int REGULAR_RAMP__CONNECTED_INTERFACES = MechanicalComponentsPackage.RAMP__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_RAMP__PARENT = MechanicalComponentsPackage.RAMP__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_RAMP__PARENT_MODULE = MechanicalComponentsPackage.RAMP__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Screwing base</b></em>' reference.
@@ -520,6 +610,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int SENSOR__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SENSOR__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Physicalconnection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -591,6 +699,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int OPTICAL_SENSOR__CONNECTED_INTERFACES = SENSOR__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTICAL_SENSOR__PARENT = SENSOR__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OPTICAL_SENSOR__PARENT_MODULE = SENSOR__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Physicalconnection</b></em>' reference.
@@ -666,6 +792,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int INDUCTIVE_SENSOR__CONNECTED_INTERFACES = SENSOR__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDUCTIVE_SENSOR__PARENT = SENSOR__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INDUCTIVE_SENSOR__PARENT_MODULE = SENSOR__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Physicalconnection</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -737,6 +881,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int PRESENCE_SENSOR__CONNECTED_INTERFACES = SENSOR__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESENCE_SENSOR__PARENT = SENSOR__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRESENCE_SENSOR__PARENT_MODULE = SENSOR__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Physicalconnection</b></em>' reference.
@@ -812,6 +974,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PIPE__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPE__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIPE__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Plugs</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -867,6 +1047,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PNEUMATIC_PIPE__CONNECTED_INTERFACES = PIPE__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_PIPE__PARENT = PIPE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_PIPE__PARENT_MODULE = PIPE__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Plugs</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -920,6 +1118,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMPRESSOR__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPRESSOR__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPRESSOR__PARENT_MODULE = COMPONENT__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Powersupply</b></em>' containment reference.
@@ -1013,6 +1229,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CABLE__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CABLE__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CABLE__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The number of structural features of the '<em>Cable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1059,6 +1293,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int POWER_CABLE__CONNECTED_INTERFACES = CABLE__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_CABLE__PARENT = CABLE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_CABLE__PARENT_MODULE = CABLE__PARENT_MODULE;
+
+	/**
 	 * The number of structural features of the '<em>Power Cable</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1103,6 +1355,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int CYLINDER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYLINDER__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYLINDER__PARENT_MODULE = COMPONENT__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
@@ -1169,6 +1439,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int PROPORTIONAL_CYLINDER__CONNECTED_INTERFACES = CYLINDER__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPORTIONAL_CYLINDER__PARENT = CYLINDER__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROPORTIONAL_CYLINDER__PARENT_MODULE = CYLINDER__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1231,6 +1519,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int BISTABLE_CYLINDER__CONNECTED_INTERFACES = CYLINDER__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BISTABLE_CYLINDER__PARENT = CYLINDER__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BISTABLE_CYLINDER__PARENT_MODULE = CYLINDER__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
@@ -1297,6 +1603,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int RACK__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RACK__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RACK__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Screwing to base</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1352,6 +1676,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CORNER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORNER__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CORNER__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The number of structural features of the '<em>Corner</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1396,6 +1738,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int VALVE__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALVE__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VALVE__PARENT_MODULE = COMPONENT__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
@@ -1471,6 +1831,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int REGULAR_VALVE__CONNECTED_INTERFACES = VALVE__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_VALVE__PARENT = VALVE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REGULAR_VALVE__PARENT_MODULE = VALVE__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1544,6 +1922,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int TANK__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TANK__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TANK__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Watersupply</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1608,6 +2004,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int DISPENSER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISPENSER__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int DISPENSER__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The number of structural features of the '<em>Dispenser</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1652,6 +2066,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int BOTTLE_SEPERATOR__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOTTLE_SEPERATOR__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BOTTLE_SEPERATOR__PARENT_MODULE = COMPONENT__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Signalinterface</b></em>' reference.
@@ -1736,6 +2168,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int SPLITTER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPLITTER__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SPLITTER__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1791,13 +2241,40 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int POWER_SUPPLY__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_SUPPLY__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_SUPPLY__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_SUPPLY__PARENT_ELEMENT = COMPONENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Power Supply</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int POWER_SUPPLY_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 0;
+	int POWER_SUPPLY_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Power Supply</em>' class.
@@ -1835,6 +2312,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int VACUUM_GRIPPER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER__PARENT_MODULE = COMPONENT__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Mounted To</b></em>' reference.
@@ -1928,6 +2423,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CONVEYOR_BELT__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVEYOR_BELT__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVEYOR_BELT__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Mounted To</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2001,6 +2514,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int FRAME__CONNECTED_INTERFACES = MECHANICAL_ASSEMBLY__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAME__PARENT = MECHANICAL_ASSEMBLY__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FRAME__PARENT_MODULE = MECHANICAL_ASSEMBLY__PARENT_MODULE;
+
+	/**
 	 * The number of structural features of the '<em>Frame</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2045,6 +2576,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int PUSHER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUSHER__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUSHER__PARENT_MODULE = COMPONENT__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Components Repository</b></em>' reference.
@@ -2138,6 +2687,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int TURNING_TABLE__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_TABLE__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_TABLE__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Rack for turningtable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2210,22 +2777,13 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int TURNING_TABLE__POTENTIOMETER = COMPONENT_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TURNING_TABLE__PARENT = COMPONENT_FEATURE_COUNT + 8;
-
-	/**
 	 * The number of structural features of the '<em>Turning Table</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 9;
+	int TURNING_TABLE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Turning Table</em>' class.
@@ -2263,6 +2821,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTROLLER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROLLER__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROLLER__PARENT_MODULE = COMPONENT__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Powersupply</b></em>' reference.
@@ -2329,6 +2905,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int LOGICAL_WIRING__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_WIRING__PARENT = COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_WIRING__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Bus Cable</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2382,6 +2976,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int MICROSWITCH_MODULE__CONNECTED_INTERFACES = ElectronicComponentsPackage.SWITCH__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICROSWITCH_MODULE__PARENT = ElectronicComponentsPackage.SWITCH__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICROSWITCH_MODULE__PARENT_MODULE = ElectronicComponentsPackage.SWITCH__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Pin</b></em>' containment reference.
@@ -2457,6 +3069,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int POTENTIOMETER__CONNECTED_INTERFACES = ElectronicComponentsPackage.ELECTRONIC_PART__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER__PARENT = ElectronicComponentsPackage.ELECTRONIC_PART__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER__PARENT_MODULE = ElectronicComponentsPackage.ELECTRONIC_PART__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Pin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2519,6 +3149,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int VACUUM_SWITCH__CONNECTED_INTERFACES = ElectronicComponentsPackage.SWITCH__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_SWITCH__PARENT = ElectronicComponentsPackage.SWITCH__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_SWITCH__PARENT_MODULE = ElectronicComponentsPackage.SWITCH__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Pin</b></em>' containment reference.
@@ -2585,6 +3233,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int REED_SWITCH__CONNECTED_INTERFACES = ElectronicComponentsPackage.SWITCH__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REED_SWITCH__PARENT = ElectronicComponentsPackage.SWITCH__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REED_SWITCH__PARENT_MODULE = ElectronicComponentsPackage.SWITCH__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Pin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2647,6 +3313,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int POWER_SPLITTER__CONNECTED_INTERFACES = SPLITTER__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_SPLITTER__PARENT = SPLITTER__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_SPLITTER__PARENT_MODULE = SPLITTER__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
@@ -2713,6 +3397,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int WATER_SPLITTER__CONNECTED_INTERFACES = SPLITTER__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WATER_SPLITTER__PARENT = SPLITTER__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WATER_SPLITTER__PARENT_MODULE = SPLITTER__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2775,6 +3477,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int PNEUMATIC_SPLITTER__CONNECTED_INTERFACES = SPLITTER__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_SPLITTER__PARENT = SPLITTER__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_SPLITTER__PARENT_MODULE = SPLITTER__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
@@ -2841,6 +3561,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int CYLINDER_PART__CONNECTED_INTERFACES = MechanicalComponentsPackage.MECHANICAL_PART__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYLINDER_PART__PARENT = MechanicalComponentsPackage.MECHANICAL_PART__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CYLINDER_PART__PARENT_MODULE = MechanicalComponentsPackage.MECHANICAL_PART__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Screwing</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2894,6 +3632,24 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int MONOSTABLE_CYLINDER__CONNECTED_INTERFACES = CYLINDER__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER__PARENT = CYLINDER__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER__PARENT_MODULE = CYLINDER__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Pneumaticsupply</b></em>' reference.
@@ -3052,6 +3808,28 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComponent_ConnectedInterfaces();
+
+	/**
+	 * Returns the meta object for the container reference '{@link xPPU.ComponentRepository.Component#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see xPPU.ComponentRepository.Component#getParent()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_Parent();
+
+	/**
+	 * Returns the meta object for the reference '{@link xPPU.ComponentRepository.Component#getParentModule <em>Parent Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent Module</em>'.
+	 * @see xPPU.ComponentRepository.Component#getParentModule()
+	 * @see #getComponent()
+	 * @generated
+	 */
+	EReference getComponent_ParentModule();
 
 	/**
 	 * Returns the meta object for class '{@link xPPU.ComponentRepository.Panel <em>Panel</em>}'.
@@ -3924,17 +4702,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	EReference getTurningTable_Potentiometer();
 
 	/**
-	 * Returns the meta object for the reference '{@link xPPU.ComponentRepository.TurningTable#getParent <em>Parent</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent</em>'.
-	 * @see xPPU.ComponentRepository.TurningTable#getParent()
-	 * @see #getTurningTable()
-	 * @generated
-	 */
-	EReference getTurningTable_Parent();
-
-	/**
 	 * Returns the meta object for class '{@link xPPU.ComponentRepository.Controller <em>Controller</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4248,6 +5015,22 @@ public interface ComponentRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT__CONNECTED_INTERFACES = eINSTANCE.getComponent_ConnectedInterfaces();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__PARENT = eINSTANCE.getComponent_Parent();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent Module</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPONENT__PARENT_MODULE = eINSTANCE.getComponent_ParentModule();
 
 		/**
 		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.PanelImpl <em>Panel</em>}' class.
@@ -4968,14 +5751,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TURNING_TABLE__POTENTIOMETER = eINSTANCE.getTurningTable_Potentiometer();
-
-		/**
-		 * The meta object literal for the '<em><b>Parent</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference TURNING_TABLE__PARENT = eINSTANCE.getTurningTable_Parent();
 
 		/**
 		 * The meta object literal for the '{@link xPPU.ComponentRepository.impl.ControllerImpl <em>Controller</em>}' class.

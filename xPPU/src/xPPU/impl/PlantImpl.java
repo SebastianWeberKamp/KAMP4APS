@@ -23,6 +23,8 @@ import xPPU.Identifier.impl.IdentifierImpl;
 
 import xPPU.InterfaceRepository.InterfaceRepository;
 
+import xPPU.ModuleRepository.ModuleRepository;
+
 import xPPU.Plant;
 
 import xPPU.StructureRepository.Structure;
@@ -42,6 +44,7 @@ import xPPU.XPPUPackage;
  *   <li>{@link xPPU.impl.PlantImpl#getStructures <em>Structures</em>}</li>
  *   <li>{@link xPPU.impl.PlantImpl#getInterfaceRepository <em>Interface Repository</em>}</li>
  *   <li>{@link xPPU.impl.PlantImpl#getComponentRepository <em>Component Repository</em>}</li>
+ *   <li>{@link xPPU.impl.PlantImpl#getModuleRepository <em>Module Repository</em>}</li>
  * </ul>
  *
  * @generated
@@ -96,6 +99,16 @@ public class PlantImpl extends IdentifierImpl implements Plant {
 	 * @ordered
 	 */
 	protected ComponentRepository componentRepository;
+
+	/**
+	 * The cached value of the '{@link #getModuleRepository() <em>Module Repository</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getModuleRepository()
+	 * @generated
+	 * @ordered
+	 */
+	protected ModuleRepository moduleRepository;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -240,6 +253,49 @@ public class PlantImpl extends IdentifierImpl implements Plant {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public ModuleRepository getModuleRepository() {
+		return moduleRepository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetModuleRepository(ModuleRepository newModuleRepository, NotificationChain msgs) {
+		ModuleRepository oldModuleRepository = moduleRepository;
+		moduleRepository = newModuleRepository;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, XPPUPackage.PLANT__MODULE_REPOSITORY, oldModuleRepository, newModuleRepository);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setModuleRepository(ModuleRepository newModuleRepository) {
+		if (newModuleRepository != moduleRepository) {
+			NotificationChain msgs = null;
+			if (moduleRepository != null)
+				msgs = ((InternalEObject)moduleRepository).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - XPPUPackage.PLANT__MODULE_REPOSITORY, null, msgs);
+			if (newModuleRepository != null)
+				msgs = ((InternalEObject)newModuleRepository).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - XPPUPackage.PLANT__MODULE_REPOSITORY, null, msgs);
+			msgs = basicSetModuleRepository(newModuleRepository, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, XPPUPackage.PLANT__MODULE_REPOSITORY, newModuleRepository, newModuleRepository));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
@@ -264,6 +320,8 @@ public class PlantImpl extends IdentifierImpl implements Plant {
 				return basicSetInterfaceRepository(null, msgs);
 			case XPPUPackage.PLANT__COMPONENT_REPOSITORY:
 				return basicSetComponentRepository(null, msgs);
+			case XPPUPackage.PLANT__MODULE_REPOSITORY:
+				return basicSetModuleRepository(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -284,6 +342,8 @@ public class PlantImpl extends IdentifierImpl implements Plant {
 				return getInterfaceRepository();
 			case XPPUPackage.PLANT__COMPONENT_REPOSITORY:
 				return getComponentRepository();
+			case XPPUPackage.PLANT__MODULE_REPOSITORY:
+				return getModuleRepository();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -310,6 +370,9 @@ public class PlantImpl extends IdentifierImpl implements Plant {
 			case XPPUPackage.PLANT__COMPONENT_REPOSITORY:
 				setComponentRepository((ComponentRepository)newValue);
 				return;
+			case XPPUPackage.PLANT__MODULE_REPOSITORY:
+				setModuleRepository((ModuleRepository)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -334,6 +397,9 @@ public class PlantImpl extends IdentifierImpl implements Plant {
 			case XPPUPackage.PLANT__COMPONENT_REPOSITORY:
 				setComponentRepository((ComponentRepository)null);
 				return;
+			case XPPUPackage.PLANT__MODULE_REPOSITORY:
+				setModuleRepository((ModuleRepository)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -354,6 +420,8 @@ public class PlantImpl extends IdentifierImpl implements Plant {
 				return interfaceRepository != null;
 			case XPPUPackage.PLANT__COMPONENT_REPOSITORY:
 				return componentRepository != null;
+			case XPPUPackage.PLANT__MODULE_REPOSITORY:
+				return moduleRepository != null;
 		}
 		return super.eIsSet(featureID);
 	}

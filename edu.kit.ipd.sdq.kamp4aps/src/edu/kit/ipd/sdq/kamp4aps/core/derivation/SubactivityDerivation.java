@@ -14,6 +14,14 @@ import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
 import xPPU.StructureRepository.Structure;
 
+/**
+ * 
+ * 
+ * 
+ * @author Sandro Koch
+ *
+ */
+
 public class SubactivityDerivation {
 
 	public static Activity addSubActivity(Module entity, AbstractActivityElementType activityElementType,

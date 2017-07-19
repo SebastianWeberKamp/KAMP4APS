@@ -86,6 +86,24 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int ELECTRONIC_PART__CONNECTED_INTERFACES = ComponentRepositoryPackage.COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELECTRONIC_PART__PARENT = ComponentRepositoryPackage.COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELECTRONIC_PART__PARENT_MODULE = ComponentRepositoryPackage.COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Pin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -148,6 +166,24 @@ public interface ElectronicComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int SWITCH__CONNECTED_INTERFACES = ELECTRONIC_PART__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SWITCH__PARENT = ELECTRONIC_PART__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SWITCH__PARENT_MODULE = ELECTRONIC_PART__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Pin</b></em>' containment reference.
@@ -214,6 +250,24 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int LED__CONNECTED_INTERFACES = ELECTRONIC_PART__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LED__PARENT = ELECTRONIC_PART__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LED__PARENT_MODULE = ELECTRONIC_PART__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Pin</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -276,6 +330,24 @@ public interface ElectronicComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUTTON__CONNECTED_INTERFACES = ELECTRONIC_PART__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__PARENT = ELECTRONIC_PART__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__PARENT_MODULE = ELECTRONIC_PART__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Pin</b></em>' containment reference.

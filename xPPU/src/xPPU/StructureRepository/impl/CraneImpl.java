@@ -176,33 +176,11 @@ public class CraneImpl extends StructureImpl implements Crane {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetMountedOn(TurningTable newMountedOn, NotificationChain msgs) {
+	public void setMountedOn(TurningTable newMountedOn) {
 		TurningTable oldMountedOn = mountedOn;
 		mountedOn = newMountedOn;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StructureRepositoryPackage.CRANE__MOUNTED_ON, oldMountedOn, newMountedOn);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setMountedOn(TurningTable newMountedOn) {
-		if (newMountedOn != mountedOn) {
-			NotificationChain msgs = null;
-			if (mountedOn != null)
-				msgs = ((InternalEObject)mountedOn).eInverseRemove(this, ComponentRepositoryPackage.TURNING_TABLE__PARENT, TurningTable.class, msgs);
-			if (newMountedOn != null)
-				msgs = ((InternalEObject)newMountedOn).eInverseAdd(this, ComponentRepositoryPackage.TURNING_TABLE__PARENT, TurningTable.class, msgs);
-			msgs = basicSetMountedOn(newMountedOn, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StructureRepositoryPackage.CRANE__MOUNTED_ON, newMountedOn, newMountedOn));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StructureRepositoryPackage.CRANE__MOUNTED_ON, oldMountedOn, mountedOn));
 	}
 
 	/**
@@ -277,10 +255,6 @@ public class CraneImpl extends StructureImpl implements Crane {
 				if (arm != null)
 					msgs = ((InternalEObject)arm).eInverseRemove(this, MechanicalComponentsPackage.ARM__MOUNTED_TO, Arm.class, msgs);
 				return basicSetArm((Arm)otherEnd, msgs);
-			case StructureRepositoryPackage.CRANE__MOUNTED_ON:
-				if (mountedOn != null)
-					msgs = ((InternalEObject)mountedOn).eInverseRemove(this, ComponentRepositoryPackage.TURNING_TABLE__PARENT, TurningTable.class, msgs);
-				return basicSetMountedOn((TurningTable)otherEnd, msgs);
 			case StructureRepositoryPackage.CRANE__VACUUMGRIPPER:
 				if (vacuumgripper != null)
 					msgs = ((InternalEObject)vacuumgripper).eInverseRemove(this, ComponentRepositoryPackage.VACUUM_GRIPPER__MOUNTED_TO, VacuumGripper.class, msgs);
@@ -299,8 +273,6 @@ public class CraneImpl extends StructureImpl implements Crane {
 		switch (featureID) {
 			case StructureRepositoryPackage.CRANE__ARM:
 				return basicSetArm(null, msgs);
-			case StructureRepositoryPackage.CRANE__MOUNTED_ON:
-				return basicSetMountedOn(null, msgs);
 			case StructureRepositoryPackage.CRANE__VACUUMGRIPPER:
 				return basicSetVacuumgripper(null, msgs);
 		}

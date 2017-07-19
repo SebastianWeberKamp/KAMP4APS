@@ -10,6 +10,8 @@ import xPPU.Identifier.Identifier;
 
 import xPPU.InterfaceRepository.InterfaceRepository;
 
+import xPPU.ModuleRepository.ModuleRepository;
+
 import xPPU.StructureRepository.Structure;
 
 /**
@@ -25,6 +27,7 @@ import xPPU.StructureRepository.Structure;
  *   <li>{@link xPPU.Plant#getStructures <em>Structures</em>}</li>
  *   <li>{@link xPPU.Plant#getInterfaceRepository <em>Interface Repository</em>}</li>
  *   <li>{@link xPPU.Plant#getComponentRepository <em>Component Repository</em>}</li>
+ *   <li>{@link xPPU.Plant#getModuleRepository <em>Module Repository</em>}</li>
  * </ul>
  *
  * @see xPPU.XPPUPackage#getPlant()
@@ -127,5 +130,31 @@ public interface Plant extends Identifier {
 	 * @generated
 	 */
 	void setComponentRepository(ComponentRepository value);
+
+	/**
+	 * Returns the value of the '<em><b>Module Repository</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Module Repository</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Module Repository</em>' containment reference.
+	 * @see #setModuleRepository(ModuleRepository)
+	 * @see xPPU.XPPUPackage#getPlant_ModuleRepository()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	ModuleRepository getModuleRepository();
+
+	/**
+	 * Sets the value of the '{@link xPPU.Plant#getModuleRepository <em>Module Repository</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Module Repository</em>' containment reference.
+	 * @see #getModuleRepository()
+	 * @generated
+	 */
+	void setModuleRepository(ModuleRepository value);
 
 } // Plant

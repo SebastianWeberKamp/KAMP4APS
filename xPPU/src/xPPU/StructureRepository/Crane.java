@@ -56,7 +56,6 @@ public interface Crane extends Structure {
 
 	/**
 	 * Returns the value of the '<em><b>Mounted On</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link xPPU.ComponentRepository.TurningTable#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Mounted On</em>' reference isn't clear,
@@ -66,8 +65,7 @@ public interface Crane extends Structure {
 	 * @return the value of the '<em>Mounted On</em>' reference.
 	 * @see #setMountedOn(TurningTable)
 	 * @see xPPU.StructureRepository.StructureRepositoryPackage#getCrane_MountedOn()
-	 * @see xPPU.ComponentRepository.TurningTable#getParent
-	 * @model opposite="parent" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	TurningTable getMountedOn();

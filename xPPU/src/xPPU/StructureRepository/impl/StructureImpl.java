@@ -14,12 +14,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import xPPU.ComponentRepository.Component;
+import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
 import xPPU.Identifier.impl.IdentifierImpl;
 
@@ -148,7 +148,7 @@ public abstract class StructureImpl extends IdentifierImpl implements Structure 
 	 */
 	public EList<Component> getComponents() {
 		if (components == null) {
-			components = new EObjectContainmentEList<Component>(Component.class, this, StructureRepositoryPackage.STRUCTURE__COMPONENTS);
+			components = new EObjectContainmentWithInverseEList<Component>(Component.class, this, StructureRepositoryPackage.STRUCTURE__COMPONENTS, ComponentRepositoryPackage.COMPONENT__PARENT);
 		}
 		return components;
 	}
@@ -168,6 +168,8 @@ public abstract class StructureImpl extends IdentifierImpl implements Structure 
 				return basicSetParentPlant((Plant)otherEnd, msgs);
 			case StructureRepositoryPackage.STRUCTURE__MODULES:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getModules()).basicAdd(otherEnd, msgs);
+			case StructureRepositoryPackage.STRUCTURE__COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComponents()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}

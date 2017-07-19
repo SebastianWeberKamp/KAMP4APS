@@ -197,6 +197,15 @@ public class XPPUPackageImpl extends EPackageImpl implements XPPUPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPlant_ModuleRepository() {
+		return (EReference)plantEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public XPPUFactory getXPPUFactory() {
 		return (XPPUFactory)getEFactoryInstance();
 	}
@@ -225,6 +234,7 @@ public class XPPUPackageImpl extends EPackageImpl implements XPPUPackage {
 		createEReference(plantEClass, PLANT__STRUCTURES);
 		createEReference(plantEClass, PLANT__INTERFACE_REPOSITORY);
 		createEReference(plantEClass, PLANT__COMPONENT_REPOSITORY);
+		createEReference(plantEClass, PLANT__MODULE_REPOSITORY);
 	}
 
 	/**
@@ -283,6 +293,7 @@ public class XPPUPackageImpl extends EPackageImpl implements XPPUPackage {
 		initEReference(getPlant_Structures(), theStructureRepositoryPackage.getStructure(), theStructureRepositoryPackage.getStructure_ParentPlant(), "structures", null, 0, -1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_InterfaceRepository(), theInterfaceRepositoryPackage.getInterfaceRepository(), null, "interfaceRepository", null, 1, 1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_ComponentRepository(), theComponentRepositoryPackage.getComponentRepository(), null, "componentRepository", null, 1, 1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPlant_ModuleRepository(), theModuleRepositoryPackage.getModuleRepository(), null, "moduleRepository", null, 1, 1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

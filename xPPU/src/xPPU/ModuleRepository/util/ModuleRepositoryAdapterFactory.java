@@ -70,6 +70,10 @@ public class ModuleRepositoryAdapterFactory extends AdapterFactoryImpl {
 	protected ModuleRepositorySwitch<Adapter> modelSwitch =
 		new ModuleRepositorySwitch<Adapter>() {
 			@Override
+			public Adapter caseModuleRepository(ModuleRepository object) {
+				return createModuleRepositoryAdapter();
+			}
+			@Override
 			public Adapter caseModule(Module object) {
 				return createModuleAdapter();
 			}
@@ -128,6 +132,20 @@ public class ModuleRepositoryAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.ModuleRepository.ModuleRepository <em>Module Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.ModuleRepository.ModuleRepository
+	 * @generated
+	 */
+	public Adapter createModuleRepositoryAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link xPPU.ModuleRepository.Module <em>Module</em>}'.

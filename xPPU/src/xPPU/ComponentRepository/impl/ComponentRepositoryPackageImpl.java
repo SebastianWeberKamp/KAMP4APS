@@ -520,6 +520,24 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getComponent_Parent() {
+		return (EReference)componentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getComponent_ParentModule() {
+		return (EReference)componentEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPanel() {
 		return panelEClass;
 	}
@@ -1258,15 +1276,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getTurningTable_Parent() {
-		return (EReference)turningTableEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getController() {
 		return controllerEClass;
 	}
@@ -1526,6 +1535,8 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		// Create classes and their features
 		componentEClass = createEClass(COMPONENT);
 		createEReference(componentEClass, COMPONENT__CONNECTED_INTERFACES);
+		createEReference(componentEClass, COMPONENT__PARENT);
+		createEReference(componentEClass, COMPONENT__PARENT_MODULE);
 
 		panelEClass = createEClass(PANEL);
 		createEReference(panelEClass, PANEL__COMPONENT_REPOSITORY);
@@ -1640,7 +1651,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		createEReference(turningTableEClass, TURNING_TABLE__BUS_BOX);
 		createEReference(turningTableEClass, TURNING_TABLE__BUS_CABLE);
 		createEReference(turningTableEClass, TURNING_TABLE__POTENTIOMETER);
-		createEReference(turningTableEClass, TURNING_TABLE__PARENT);
 
 		controllerEClass = createEClass(CONTROLLER);
 		createEReference(controllerEClass, CONTROLLER__POWERSUPPLY);
@@ -1707,9 +1717,10 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		// Obtain other dependent packages
 		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
+		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
+		ModuleRepositoryPackage theModuleRepositoryPackage = (ModuleRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI);
 		ElectronicComponentsPackage theElectronicComponentsPackage = (ElectronicComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(ElectronicComponentsPackage.eNS_URI);
 		MechanicalComponentsPackage theMechanicalComponentsPackage = (MechanicalComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI);
-		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
 		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
 
 		// Create type parameters
@@ -1767,6 +1778,8 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		// Initialize classes, features, and operations; add parameters
 		initEClass(componentEClass, Component.class, "Component", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponent_ConnectedInterfaces(), theInterfaceRepositoryPackage.getInterface(), null, "connectedInterfaces", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_Parent(), theStructureRepositoryPackage.getStructure(), theStructureRepositoryPackage.getStructure_Components(), "parent", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_ParentModule(), theModuleRepositoryPackage.getModule(), theModuleRepositoryPackage.getModule_Components(), "parentModule", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(panelEClass, Panel.class, "Panel", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPanel_ComponentRepository(), this.getComponent(), null, "componentRepository", null, 1, 1, Panel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1881,7 +1894,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		initEReference(getTurningTable_BusBox(), theBusComponentsPackage.getBusBox(), null, "busBox", null, 1, 1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTurningTable_BusCable(), theBusComponentsPackage.getBusCable(), null, "busCable", null, 1, -1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTurningTable_Potentiometer(), this.getPotentiometer(), null, "potentiometer", null, 1, -1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTurningTable_Parent(), theStructureRepositoryPackage.getCrane(), theStructureRepositoryPackage.getCrane_MountedOn(), "parent", null, 1, 1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controllerEClass, Controller.class, "Controller", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getController_Powersupply(), this.getPowerSupply(), null, "powersupply", null, 1, 1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

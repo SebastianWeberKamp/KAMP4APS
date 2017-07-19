@@ -15,9 +15,16 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
+import org.eclipse.emf.ecore.util.InternalEList;
+
+import xPPU.ComponentRepository.Component;
+import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
 import xPPU.Identifier.impl.IdentifierImpl;
+
+import xPPU.InterfaceRepository.Interface;
 
 import xPPU.ModuleRepository.Module;
 import xPPU.ModuleRepository.ModuleRepositoryPackage;
@@ -33,8 +40,10 @@ import xPPU.StructureRepository.StructureRepositoryPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xPPU.ModuleRepository.impl.ModuleImpl#getModules <em>Modules</em>}</li>
  *   <li>{@link xPPU.ModuleRepository.impl.ModuleImpl#getParentStructure <em>Parent Structure</em>}</li>
+ *   <li>{@link xPPU.ModuleRepository.impl.ModuleImpl#getModules <em>Modules</em>}</li>
+ *   <li>{@link xPPU.ModuleRepository.impl.ModuleImpl#getComponents <em>Components</em>}</li>
+ *   <li>{@link xPPU.ModuleRepository.impl.ModuleImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,6 +58,26 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	 * @ordered
 	 */
 	protected EList<Module> modules;
+
+	/**
+	 * The cached value of the '{@link #getComponents() <em>Components</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getComponents()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Component> components;
+
+	/**
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInterfaces()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Interface> interfaces;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -67,18 +96,6 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	@Override
 	protected EClass eStaticClass() {
 		return ModuleRepositoryPackage.Literals.MODULE;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<Module> getModules() {
-		if (modules == null) {
-			modules = new EObjectResolvingEList<Module>(Module.class, this, ModuleRepositoryPackage.MODULE__MODULES);
-		}
-		return modules;
 	}
 
 	/**
@@ -127,6 +144,43 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Module> getModules() {
+		if (modules == null) {
+			modules = new EObjectResolvingEList<Module>(Module.class, this, ModuleRepositoryPackage.MODULE__MODULES);
+		}
+		return modules;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Component> getComponents() {
+		if (components == null) {
+			components = new EObjectWithInverseResolvingEList<Component>(Component.class, this, ModuleRepositoryPackage.MODULE__COMPONENTS, ComponentRepositoryPackage.COMPONENT__PARENT_MODULE);
+		}
+		return components;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<Interface> getInterfaces() {
+		if (interfaces == null) {
+			interfaces = new EObjectResolvingEList<Interface>(Interface.class, this, ModuleRepositoryPackage.MODULE__INTERFACES);
+		}
+		return interfaces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -134,6 +188,8 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetParentStructure((Structure)otherEnd, msgs);
+			case ModuleRepositoryPackage.MODULE__COMPONENTS:
+				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComponents()).basicAdd(otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -148,6 +204,8 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 		switch (featureID) {
 			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
 				return basicSetParentStructure(null, msgs);
+			case ModuleRepositoryPackage.MODULE__COMPONENTS:
+				return ((InternalEList<?>)getComponents()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -174,10 +232,14 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModuleRepositoryPackage.MODULE__MODULES:
-				return getModules();
 			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
 				return getParentStructure();
+			case ModuleRepositoryPackage.MODULE__MODULES:
+				return getModules();
+			case ModuleRepositoryPackage.MODULE__COMPONENTS:
+				return getComponents();
+			case ModuleRepositoryPackage.MODULE__INTERFACES:
+				return getInterfaces();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -191,12 +253,20 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
+				setParentStructure((Structure)newValue);
+				return;
 			case ModuleRepositoryPackage.MODULE__MODULES:
 				getModules().clear();
 				getModules().addAll((Collection<? extends Module>)newValue);
 				return;
-			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
-				setParentStructure((Structure)newValue);
+			case ModuleRepositoryPackage.MODULE__COMPONENTS:
+				getComponents().clear();
+				getComponents().addAll((Collection<? extends Component>)newValue);
+				return;
+			case ModuleRepositoryPackage.MODULE__INTERFACES:
+				getInterfaces().clear();
+				getInterfaces().addAll((Collection<? extends Interface>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -210,11 +280,17 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
+				setParentStructure((Structure)null);
+				return;
 			case ModuleRepositoryPackage.MODULE__MODULES:
 				getModules().clear();
 				return;
-			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
-				setParentStructure((Structure)null);
+			case ModuleRepositoryPackage.MODULE__COMPONENTS:
+				getComponents().clear();
+				return;
+			case ModuleRepositoryPackage.MODULE__INTERFACES:
+				getInterfaces().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -228,10 +304,14 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModuleRepositoryPackage.MODULE__MODULES:
-				return modules != null && !modules.isEmpty();
 			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
 				return getParentStructure() != null;
+			case ModuleRepositoryPackage.MODULE__MODULES:
+				return modules != null && !modules.isEmpty();
+			case ModuleRepositoryPackage.MODULE__COMPONENTS:
+				return components != null && !components.isEmpty();
+			case ModuleRepositoryPackage.MODULE__INTERFACES:
+				return interfaces != null && !interfaces.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

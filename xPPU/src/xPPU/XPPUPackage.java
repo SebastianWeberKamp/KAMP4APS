@@ -114,13 +114,22 @@ public interface XPPUPackage extends EPackage {
 	int PLANT__COMPONENT_REPOSITORY = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Module Repository</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT__MODULE_REPOSITORY = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 4;
+
+	/**
 	 * The number of structural features of the '<em>Plant</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 4;
+	int PLANT_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Plant</em>' class.
@@ -187,6 +196,17 @@ public interface XPPUPackage extends EPackage {
 	EReference getPlant_ComponentRepository();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link xPPU.Plant#getModuleRepository <em>Module Repository</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Module Repository</em>'.
+	 * @see xPPU.Plant#getModuleRepository()
+	 * @see #getPlant()
+	 * @generated
+	 */
+	EReference getPlant_ModuleRepository();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -250,6 +270,14 @@ public interface XPPUPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PLANT__COMPONENT_REPOSITORY = eINSTANCE.getPlant_ComponentRepository();
+
+		/**
+		 * The meta object literal for the '<em><b>Module Repository</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PLANT__MODULE_REPOSITORY = eINSTANCE.getPlant_ModuleRepository();
 
 	}
 

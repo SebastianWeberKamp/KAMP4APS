@@ -80,6 +80,7 @@ public interface Structure extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
 	 * The list contents are of type {@link xPPU.ComponentRepository.Component}.
+	 * It is bidirectional and its opposite is '{@link xPPU.ComponentRepository.Component#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Components</em>' containment reference list isn't clear,
@@ -88,7 +89,8 @@ public interface Structure extends Identifier {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Components</em>' containment reference list.
 	 * @see xPPU.StructureRepository.StructureRepositoryPackage#getStructure_Components()
-	 * @model containment="true"
+	 * @see xPPU.ComponentRepository.Component#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
 	EList<Component> getComponents();

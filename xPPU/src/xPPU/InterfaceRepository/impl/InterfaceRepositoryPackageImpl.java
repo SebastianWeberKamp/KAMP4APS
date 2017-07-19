@@ -321,6 +321,15 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getInterface_ParentElement() {
+		return (EReference)interfaceEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getScrewing() {
 		return screwingEClass;
 	}
@@ -501,6 +510,7 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		createEReference(interfaceRepositoryEClass, INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT);
 
 		interfaceEClass = createEClass(INTERFACE);
+		createEReference(interfaceEClass, INTERFACE__PARENT_ELEMENT);
 
 		screwingEClass = createEClass(SCREWING);
 
@@ -593,6 +603,7 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		initEReference(getInterfaceRepository_AllInterfacesInPlant(), this.getInterface(), null, "allInterfacesInPlant", null, 0, -1, InterfaceRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(interfaceEClass, Interface.class, "Interface", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInterface_ParentElement(), theIdentifierPackage.getIdentifier(), null, "parentElement", null, 1, 1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(screwingEClass, Screwing.class, "Screwing", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

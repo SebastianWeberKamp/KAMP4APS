@@ -50,6 +50,7 @@ public class ComponentItemProvider extends IdentifierItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addConnectedInterfacesPropertyDescriptor(object);
+			addParentModulePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,6 +69,28 @@ public class ComponentItemProvider extends IdentifierItemProvider {
 				 getString("_UI_Component_connectedInterfaces_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_Component_connectedInterfaces_feature", "_UI_Component_type"),
 				 ComponentRepositoryPackage.Literals.COMPONENT__CONNECTED_INTERFACES,
+				 true,
+				 false,
+				 true,
+				 null,
+				 null,
+				 null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Parent Module feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addParentModulePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_Component_parentModule_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_Component_parentModule_feature", "_UI_Component_type"),
+				 ComponentRepositoryPackage.Literals.COMPONENT__PARENT_MODULE,
 				 true,
 				 false,
 				 true,

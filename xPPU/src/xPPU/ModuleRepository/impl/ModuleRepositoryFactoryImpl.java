@@ -56,6 +56,7 @@ public class ModuleRepositoryFactoryImpl extends EFactoryImpl implements ModuleR
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case ModuleRepositoryPackage.MODULE_REPOSITORY: return createModuleRepository();
 			case ModuleRepositoryPackage.MODULE: return createModule();
 			case ModuleRepositoryPackage.RAMP_MODULE: return createRampModule();
 			case ModuleRepositoryPackage.PUSHER_MODULE: return createPusherModule();
@@ -68,6 +69,16 @@ public class ModuleRepositoryFactoryImpl extends EFactoryImpl implements ModuleR
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModuleRepository createModuleRepository() {
+		ModuleRepositoryImpl moduleRepository = new ModuleRepositoryImpl();
+		return moduleRepository;
 	}
 
 	/**

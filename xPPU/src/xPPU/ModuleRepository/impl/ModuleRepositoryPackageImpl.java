@@ -34,6 +34,7 @@ import xPPU.MechanicalComponents.impl.MechanicalComponentsPackageImpl;
 
 import xPPU.ModuleRepository.InductiveSensorModule;
 import xPPU.ModuleRepository.Module;
+import xPPU.ModuleRepository.ModuleRepository;
 import xPPU.ModuleRepository.ModuleRepositoryFactory;
 import xPPU.ModuleRepository.ModuleRepositoryPackage;
 import xPPU.ModuleRepository.MotorModule;
@@ -59,6 +60,13 @@ import xPPU.impl.XPPUPackageImpl;
  * @generated
  */
 public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleRepositoryPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass moduleRepositoryEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -214,6 +222,24 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getModuleRepository() {
+		return moduleRepositoryEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModuleRepository_AllModulesInPlant() {
+		return (EReference)moduleRepositoryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getModule() {
 		return moduleEClass;
 	}
@@ -223,7 +249,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getModule_Modules() {
+	public EReference getModule_ParentStructure() {
 		return (EReference)moduleEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -232,8 +258,26 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getModule_ParentStructure() {
+	public EReference getModule_Modules() {
 		return (EReference)moduleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModule_Components() {
+		return (EReference)moduleEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getModule_Interfaces() {
+		return (EReference)moduleEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -426,9 +470,14 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		isCreated = true;
 
 		// Create classes and their features
+		moduleRepositoryEClass = createEClass(MODULE_REPOSITORY);
+		createEReference(moduleRepositoryEClass, MODULE_REPOSITORY__ALL_MODULES_IN_PLANT);
+
 		moduleEClass = createEClass(MODULE);
-		createEReference(moduleEClass, MODULE__MODULES);
 		createEReference(moduleEClass, MODULE__PARENT_STRUCTURE);
+		createEReference(moduleEClass, MODULE__MODULES);
+		createEReference(moduleEClass, MODULE__COMPONENTS);
+		createEReference(moduleEClass, MODULE__INTERFACES);
 
 		rampModuleEClass = createEClass(RAMP_MODULE);
 
@@ -484,6 +533,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
+		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
 		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
 
 		// Create type parameters
@@ -491,6 +541,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		moduleRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 		moduleEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 		rampModuleEClass.getESuperTypes().add(this.getModule());
 		pusherModuleEClass.getESuperTypes().add(this.getModule());
@@ -502,9 +553,14 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		pressureSensorModuleEClass.getESuperTypes().add(this.getModule());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(moduleRepositoryEClass, ModuleRepository.class, "ModuleRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getModuleRepository_AllModulesInPlant(), this.getModule(), null, "allModulesInPlant", null, 0, -1, ModuleRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(moduleEClass, Module.class, "Module", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModule_Modules(), this.getModule(), null, "modules", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModule_ParentStructure(), theStructureRepositoryPackage.getStructure(), theStructureRepositoryPackage.getStructure_Modules(), "parentStructure", null, 1, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModule_Modules(), this.getModule(), null, "modules", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModule_Components(), theComponentRepositoryPackage.getComponent(), theComponentRepositoryPackage.getComponent_ParentModule(), "components", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModule_Interfaces(), theInterfaceRepositoryPackage.getInterface(), null, "interfaces", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rampModuleEClass, RampModule.class, "RampModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

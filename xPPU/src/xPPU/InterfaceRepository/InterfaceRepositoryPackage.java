@@ -123,13 +123,22 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int INTERFACE__ID = IdentifierPackage.IDENTIFIER__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE__PARENT_ELEMENT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+
+	/**
 	 * The number of structural features of the '<em>Interface</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int INTERFACE_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Interface</em>' class.
@@ -158,6 +167,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCREWING__ID = INTERFACE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING__PARENT_ELEMENT = INTERFACE__PARENT_ELEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Screwing</em>' class.
@@ -197,6 +215,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_SPLITTER__ID = SCREWING__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_SPLITTER__PARENT_ELEMENT = SCREWING__PARENT_ELEMENT;
+
+	/**
 	 * The number of structural features of the '<em>Screwing Splitter</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -232,6 +259,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCREWING_MOTOR__ID = SCREWING__ID;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_MOTOR__PARENT_ELEMENT = SCREWING__PARENT_ELEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Screwing Motor</em>' class.
@@ -271,6 +307,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_RACK__ID = SCREWING__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_RACK__PARENT_ELEMENT = SCREWING__PARENT_ELEMENT;
+
+	/**
 	 * The number of structural features of the '<em>Screwing Rack</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -306,6 +351,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCREWING_CYLINDER__ID = SCREWING__ID;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_CYLINDER__PARENT_ELEMENT = SCREWING__PARENT_ELEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Screwing Cylinder</em>' class.
@@ -345,6 +399,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_FIXTURE__ID = SCREWING__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_FIXTURE__PARENT_ELEMENT = SCREWING__PARENT_ELEMENT;
+
+	/**
 	 * The number of structural features of the '<em>Screwing Fixture</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -380,6 +443,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SCREWING_POTENTIOMETER__ID = SCREWING__ID;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_POTENTIOMETER__PARENT_ELEMENT = SCREWING__PARENT_ELEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Screwing Potentiometer</em>' class.
@@ -419,6 +491,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SUSPENSION__ID = INTERFACE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUSPENSION__PARENT_ELEMENT = INTERFACE__PARENT_ELEMENT;
+
+	/**
 	 * The number of structural features of the '<em>Suspension</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -454,6 +535,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int SUSPENSION_RACK__ID = SUSPENSION__ID;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUSPENSION_RACK__PARENT_ELEMENT = SUSPENSION__PARENT_ELEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Suspension Rack</em>' class.
@@ -493,6 +583,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SUSPENSION_ARM__ID = SUSPENSION__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUSPENSION_ARM__PARENT_ELEMENT = SUSPENSION__PARENT_ELEMENT;
+
+	/**
 	 * The number of structural features of the '<em>Suspension Arm</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -528,6 +627,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int GEARING__ID = INTERFACE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEARING__PARENT_ELEMENT = INTERFACE__PARENT_ELEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Gearing</em>' class.
@@ -567,6 +675,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int CLAMPING__ID = INTERFACE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLAMPING__PARENT_ELEMENT = INTERFACE__PARENT_ELEMENT;
+
+	/**
 	 * The number of structural features of the '<em>Clamping</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -602,6 +719,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int PNEUMATIC_SUPPLY__ID = INTERFACE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_SUPPLY__PARENT_ELEMENT = INTERFACE__PARENT_ELEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Pneumatic Supply</em>' class.
@@ -641,6 +767,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SIGNAL_INTERFACE__ID = INTERFACE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_INTERFACE__PARENT_ELEMENT = INTERFACE__PARENT_ELEMENT;
+
+	/**
 	 * The number of structural features of the '<em>Signal Interface</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -676,6 +811,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int WATER_SUPPLY__ID = INTERFACE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WATER_SUPPLY__PARENT_ELEMENT = INTERFACE__PARENT_ELEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Water Supply</em>' class.
@@ -715,6 +859,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int PHYSICAL_CONNECTION__ID = INTERFACE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_CONNECTION__PARENT_ELEMENT = INTERFACE__PARENT_ELEMENT;
+
+	/**
 	 * The number of structural features of the '<em>Physical Connection</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -750,6 +903,15 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int TRANSPORT_CONNECTION__ID = INTERFACE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSPORT_CONNECTION__PARENT_ELEMENT = INTERFACE__PARENT_ELEMENT;
 
 	/**
 	 * The number of structural features of the '<em>Transport Connection</em>' class.
@@ -800,6 +962,17 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getInterface();
+
+	/**
+	 * Returns the meta object for the reference '{@link xPPU.InterfaceRepository.Interface#getParentElement <em>Parent Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Parent Element</em>'.
+	 * @see xPPU.InterfaceRepository.Interface#getParentElement()
+	 * @see #getInterface()
+	 * @generated
+	 */
+	EReference getInterface_ParentElement();
 
 	/**
 	 * Returns the meta object for class '{@link xPPU.InterfaceRepository.Screwing <em>Screwing</em>}'.
@@ -1021,6 +1194,14 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EClass INTERFACE = eINSTANCE.getInterface();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent Element</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERFACE__PARENT_ELEMENT = eINSTANCE.getInterface_ParentElement();
 
 		/**
 		 * The meta object literal for the '{@link xPPU.InterfaceRepository.impl.ScrewingImpl <em>Screwing</em>}' class.

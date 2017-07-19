@@ -86,6 +86,24 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_BOX__CONNECTED_INTERFACES = ComponentRepositoryPackage.COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_BOX__PARENT = ComponentRepositoryPackage.COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_BOX__PARENT_MODULE = ComponentRepositoryPackage.COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Signalinterfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -168,6 +186,24 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_MASTER__CONNECTED_INTERFACES = ComponentRepositoryPackage.COMPONENT__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_MASTER__PARENT = ComponentRepositoryPackage.COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_MASTER__PARENT_MODULE = ComponentRepositoryPackage.COMPONENT__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Signalinterfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -230,6 +266,24 @@ public interface BusComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUS_SLAVE__CONNECTED_INTERFACES = ComponentRepositoryPackage.COMPONENT__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_SLAVE__PARENT = ComponentRepositoryPackage.COMPONENT__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_SLAVE__PARENT_MODULE = ComponentRepositoryPackage.COMPONENT__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Signalinterface master</b></em>' reference.
@@ -296,6 +350,24 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_CABLE__CONNECTED_INTERFACES = ComponentRepositoryPackage.CABLE__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CABLE__PARENT = ComponentRepositoryPackage.CABLE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CABLE__PARENT_MODULE = ComponentRepositoryPackage.CABLE__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Signal Plug1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -358,6 +430,24 @@ public interface BusComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROFIBUS_DP_BOX__CONNECTED_INTERFACES = BUS_BOX__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_BOX__PARENT = BUS_BOX__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_BOX__PARENT_MODULE = BUS_BOX__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Signalinterfaces</b></em>' reference list.
@@ -442,6 +532,24 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_MASTER__CONNECTED_INTERFACES = BUS_MASTER__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_MASTER__PARENT = BUS_MASTER__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_MASTER__PARENT_MODULE = BUS_MASTER__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Signalinterfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -504,6 +612,24 @@ public interface BusComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int PROFIBUS_DP_SLAVE__CONNECTED_INTERFACES = BUS_SLAVE__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_SLAVE__PARENT = BUS_SLAVE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_SLAVE__PARENT_MODULE = BUS_SLAVE__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Signalinterface master</b></em>' reference.
@@ -570,6 +696,24 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_CABLE__CONNECTED_INTERFACES = BUS_CABLE__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_CABLE__PARENT = BUS_CABLE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_CABLE__PARENT_MODULE = BUS_CABLE__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Signal Plug1</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -632,6 +776,24 @@ public interface BusComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETHER_CAT_BOX__CONNECTED_INTERFACES = BUS_BOX__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_BOX__PARENT = BUS_BOX__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_BOX__PARENT_MODULE = BUS_BOX__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Signalinterfaces</b></em>' reference list.
@@ -716,6 +878,24 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_MASTER__CONNECTED_INTERFACES = BUS_MASTER__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_MASTER__PARENT = BUS_MASTER__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_MASTER__PARENT_MODULE = BUS_MASTER__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Signalinterfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -780,6 +960,24 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_SLAVE__CONNECTED_INTERFACES = BUS_SLAVE__CONNECTED_INTERFACES;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_SLAVE__PARENT = BUS_SLAVE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_SLAVE__PARENT_MODULE = BUS_SLAVE__PARENT_MODULE;
+
+	/**
 	 * The feature id for the '<em><b>Signalinterface master</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -842,6 +1040,24 @@ public interface BusComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETHER_CAT_CABLE__CONNECTED_INTERFACES = BUS_CABLE__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_CABLE__PARENT = BUS_CABLE__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_CABLE__PARENT_MODULE = BUS_CABLE__PARENT_MODULE;
 
 	/**
 	 * The feature id for the '<em><b>Signal Plug1</b></em>' containment reference.

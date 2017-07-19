@@ -10,8 +10,6 @@ import xPPU.BusComponents.BusSlave;
 
 import xPPU.MechanicalComponents.Table;
 
-import xPPU.StructureRepository.Crane;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Turning Table</b></em>'.
@@ -29,7 +27,6 @@ import xPPU.StructureRepository.Crane;
  *   <li>{@link xPPU.ComponentRepository.TurningTable#getBusBox <em>Bus Box</em>}</li>
  *   <li>{@link xPPU.ComponentRepository.TurningTable#getBusCable <em>Bus Cable</em>}</li>
  *   <li>{@link xPPU.ComponentRepository.TurningTable#getPotentiometer <em>Potentiometer</em>}</li>
- *   <li>{@link xPPU.ComponentRepository.TurningTable#getParent <em>Parent</em>}</li>
  * </ul>
  *
  * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getTurningTable()
@@ -214,33 +211,5 @@ public interface TurningTable extends Component {
 	 * @generated
 	 */
 	EList<Potentiometer> getPotentiometer();
-
-	/**
-	 * Returns the value of the '<em><b>Parent</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link xPPU.StructureRepository.Crane#getMountedOn <em>Mounted On</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parent</em>' reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parent</em>' reference.
-	 * @see #setParent(Crane)
-	 * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getTurningTable_Parent()
-	 * @see xPPU.StructureRepository.Crane#getMountedOn
-	 * @model opposite="mountedOn" required="true"
-	 * @generated
-	 */
-	Crane getParent();
-
-	/**
-	 * Sets the value of the '{@link xPPU.ComponentRepository.TurningTable#getParent <em>Parent</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent</em>' reference.
-	 * @see #getParent()
-	 * @generated
-	 */
-	void setParent(Crane value);
 
 } // TurningTable

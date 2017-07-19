@@ -11,6 +11,7 @@ import org.eclipse.emf.common.util.EList;
 
 import edu.kit.ipd.sdq.kamp.util.MapUtil;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
 import xPPU.BusComponents.BusBox;
 import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusMaster;
@@ -21,6 +22,7 @@ import xPPU.ComponentRepository.Sensor;
 import xPPU.Identifier.Identifier;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.SignalInterface;
+import xPPU.ModuleRepository.Module;
 
 /**
  * This class represents a part of the change rules implementation
@@ -42,47 +44,55 @@ public class ArchitectureModelLookup {
 
 	private static BusComponentsParams bcParams;
 	
-	public static Map<PowerSupply, Set<BusBox>> lookUpBusBoxesWithSupplys(ArchitectureVersion version,
-			Collection<BusBox> initialMarkedBusBoxes) {
-		Map<PowerSupply, Set<BusBox>> results = new HashMap<>();
+//	public static Map<PowerSupply, Set<BusBox>> lookUpBusBoxesWithSupplys(ArchitectureVersion version,
+//			Collection<BusBox> initialMarkedBusBoxes) {
+//		Map<PowerSupply, Set<BusBox>> results = new HashMap<>();
+//
+//		Set<BusBox> matchingBoxes = new HashSet<BusBox>(initialMarkedBusBoxes);
+//		for (BusBox bb : initialMarkedBusBoxes) {
+//			matchingBoxes.add(bb);
+//			MapUtil.putOrAddToMap(results, bb.getPowersupply(), matchingBoxes);
+//		}
+//		return results;
+//	}
 
-		Set<BusBox> matchingBoxes = new HashSet<BusBox>(initialMarkedBusBoxes);
-		for (BusBox bb : initialMarkedBusBoxes) {
-			matchingBoxes.add(bb);
-			MapUtil.putOrAddToMap(results, bb.getPowersupply(), matchingBoxes);
-		}
-		return results;
-	}
-
-	public static Map<Interface, Set<Sensor>> lookUpSensorsWithPhysicalConnections(ArchitectureVersion version,
-			Collection<Sensor> seedSensors) {
-		Map<Interface, Set<Sensor>> results = new HashMap<Interface, Set<Sensor>>();
-
-		Set<Sensor> sensors = new HashSet<Sensor>();
-		for(Sensor s : seedSensors){
-			sensors.add(s);
-			results.put((Interface)s.getPhysicalconnection(), sensors);
-		}
-		return results;
-	}
+//	public static Map<Interface, Set<Sensor>> lookUpSensorsWithPhysicalConnections(ArchitectureVersion version,
+//			Collection<Sensor> seedSensors) {
+//		Map<Interface, Set<Sensor>> results = new HashMap<Interface, Set<Sensor>>();
+//
+//		Set<Sensor> sensors = new HashSet<Sensor>();
+//		for(Sensor s : seedSensors){
+//			sensors.add(s);
+//			results.put((Interface)s.getPhysicalconnection(), sensors);
+//		}
+//		return results;
+//	}
 	
-	public static Map<Component, Set<ModifyInterface<Interface>>> lookUpChangesBasedOnSignalInterfaces(ArchitectureVersion version,
-			Collection<ModifyInterface<Interface>> initialMarkedInterfaces){
-		Map<Component, Set<ModifyInterface<Interface>>> results = new HashMap<Component, Set<ModifyInterface<Interface>>>();
-		for(ModifyInterface<Interface> modifyInterface : initialMarkedInterfaces){
-			for(Component component : version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant()){
-				if(modifyInterface.getAffectedElement() instanceof Interface){
-					for(Interface componentInterface : component.getConnectedInterfaces()){
-						if(componentInterface.getId() == modifyInterface.getAffectedElement().getId()){
-							if(results.get(component) == null)
-								results.put(component, new HashSet<ModifyInterface<Interface>>());
-							results.get(component).add(modifyInterface);
-						}
-					}
-				}
-			}
+//	public static Map<Component, Set<ModifyInterface<Interface>>> lookUpChangesBasedOnSignalInterfaces(ArchitectureVersion version,
+//			Collection<ModifyInterface<Interface>> initialMarkedInterfaces){
+//		Map<Component, Set<ModifyInterface<Interface>>> results = new HashMap<Component, Set<ModifyInterface<Interface>>>();
+//		for(ModifyInterface<Interface> modifyInterface : initialMarkedInterfaces){
+//			for(Component component : version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant()){
+//				if(modifyInterface.getAffectedElement() instanceof Interface){
+//					for(Interface componentInterface : component.getConnectedInterfaces()){
+//						if(componentInterface.getId() == modifyInterface.getAffectedElement().getId()){
+//							if(results.get(component) == null)
+//								results.put(component, new HashSet<ModifyInterface<Interface>>());
+//							results.get(component).add(modifyInterface);
+//						}
+//					}
+//				}
+//			}
+//		}
+//		return results;
+//	}
+	
+	public static void lookUpChangesBasedOnModuleModification(ArchitectureVersion version,
+			Collection<ModifyModule<Module>> initialMarkedModules){
+		Map<Module, Set<ModifyModule<Module>>> results = new HashMap<Module, Set<ModifyModule<Module>>>();
+		for(ModifyModule<Module> modifyModule : initialMarkedModules){
+			
 		}
-		return results;
 	}
 	
 	public static BusComponentsParams lookUpChangesBasedOnBusModification(ArchitectureVersion version,

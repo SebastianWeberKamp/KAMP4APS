@@ -24,6 +24,8 @@ import xPPU.Identifier.provider.IdentifierItemProvider;
 
 import xPPU.InterfaceRepository.InterfaceRepositoryFactory;
 
+import xPPU.ModuleRepository.ModuleRepositoryFactory;
+
 import xPPU.Plant;
 
 import xPPU.StructureRepository.StructureRepositoryFactory;
@@ -100,6 +102,7 @@ public class PlantItemProvider extends IdentifierItemProvider {
 			childrenFeatures.add(XPPUPackage.Literals.PLANT__STRUCTURES);
 			childrenFeatures.add(XPPUPackage.Literals.PLANT__INTERFACE_REPOSITORY);
 			childrenFeatures.add(XPPUPackage.Literals.PLANT__COMPONENT_REPOSITORY);
+			childrenFeatures.add(XPPUPackage.Literals.PLANT__MODULE_REPOSITORY);
 		}
 		return childrenFeatures;
 	}
@@ -161,6 +164,7 @@ public class PlantItemProvider extends IdentifierItemProvider {
 			case XPPUPackage.PLANT__STRUCTURES:
 			case XPPUPackage.PLANT__INTERFACE_REPOSITORY:
 			case XPPUPackage.PLANT__COMPONENT_REPOSITORY:
+			case XPPUPackage.PLANT__MODULE_REPOSITORY:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -222,6 +226,11 @@ public class PlantItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(XPPUPackage.Literals.PLANT__COMPONENT_REPOSITORY,
 				 ComponentRepositoryFactory.eINSTANCE.createComponentRepository()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(XPPUPackage.Literals.PLANT__MODULE_REPOSITORY,
+				 ModuleRepositoryFactory.eINSTANCE.createModuleRepository()));
 	}
 
 	/**

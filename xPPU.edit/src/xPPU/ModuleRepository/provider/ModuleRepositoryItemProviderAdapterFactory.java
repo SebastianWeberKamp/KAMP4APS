@@ -72,6 +72,29 @@ public class ModuleRepositoryItemProviderAdapterFactory extends ModuleRepository
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.ModuleRepository.ModuleRepository} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModuleRepositoryItemProvider moduleRepositoryItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.ModuleRepository.ModuleRepository}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModuleRepositoryAdapter() {
+		if (moduleRepositoryItemProvider == null) {
+			moduleRepositoryItemProvider = new ModuleRepositoryItemProvider(this);
+		}
+
+		return moduleRepositoryItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link xPPU.ModuleRepository.Module} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -377,6 +400,7 @@ public class ModuleRepositoryItemProviderAdapterFactory extends ModuleRepository
 	 * @generated
 	 */
 	public void dispose() {
+		if (moduleRepositoryItemProvider != null) moduleRepositoryItemProvider.dispose();
 		if (moduleItemProvider != null) moduleItemProvider.dispose();
 		if (rampModuleItemProvider != null) rampModuleItemProvider.dispose();
 		if (pusherModuleItemProvider != null) pusherModuleItemProvider.dispose();

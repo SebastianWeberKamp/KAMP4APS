@@ -13,8 +13,8 @@ import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusComponentsPackage;
@@ -53,54 +53,8 @@ public class BusCableItemProvider extends CableItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addSignalPlug1PropertyDescriptor(object);
-			addSignalPlug2PropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Signal Plug1 feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSignalPlug1PropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_BusCable_SignalPlug1_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_BusCable_SignalPlug1_feature", "_UI_BusCable_type"),
-				 BusComponentsPackage.Literals.BUS_CABLE__SIGNAL_PLUG1,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Signal Plug2 feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addSignalPlug2PropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_BusCable_SignalPlug2_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_BusCable_SignalPlug2_feature", "_UI_BusCable_type"),
-				 BusComponentsPackage.Literals.BUS_CABLE__SIGNAL_PLUG2,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**
@@ -170,6 +124,13 @@ public class BusCableItemProvider extends CableItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(BusCable.class)) {
+			case BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG1:
+			case BusComponentsPackage.BUS_CABLE__SIGNAL_PLUG2:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 

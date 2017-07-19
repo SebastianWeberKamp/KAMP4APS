@@ -30,9 +30,6 @@ import xPPU.ComponentRepository.TurningTable;
 
 import xPPU.MechanicalComponents.Table;
 
-import xPPU.StructureRepository.Crane;
-import xPPU.StructureRepository.StructureRepositoryPackage;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Turning Table</b></em>'.
@@ -49,7 +46,6 @@ import xPPU.StructureRepository.StructureRepositoryPackage;
  *   <li>{@link xPPU.ComponentRepository.impl.TurningTableImpl#getBusBox <em>Bus Box</em>}</li>
  *   <li>{@link xPPU.ComponentRepository.impl.TurningTableImpl#getBusCable <em>Bus Cable</em>}</li>
  *   <li>{@link xPPU.ComponentRepository.impl.TurningTableImpl#getPotentiometer <em>Potentiometer</em>}</li>
- *   <li>{@link xPPU.ComponentRepository.impl.TurningTableImpl#getParent <em>Parent</em>}</li>
  * </ul>
  *
  * @generated
@@ -134,16 +130,6 @@ public class TurningTableImpl extends ComponentImpl implements TurningTable {
 	 * @ordered
 	 */
 	protected EList<Potentiometer> potentiometer;
-
-	/**
-	 * The cached value of the '{@link #getParent() <em>Parent</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParent()
-	 * @generated
-	 * @ordered
-	 */
-	protected Crane parent;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -420,82 +406,6 @@ public class TurningTableImpl extends ComponentImpl implements TurningTable {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Crane getParent() {
-		if (parent != null && parent.eIsProxy()) {
-			InternalEObject oldParent = (InternalEObject)parent;
-			parent = (Crane)eResolveProxy(oldParent);
-			if (parent != oldParent) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentRepositoryPackage.TURNING_TABLE__PARENT, oldParent, parent));
-			}
-		}
-		return parent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Crane basicGetParent() {
-		return parent;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetParent(Crane newParent, NotificationChain msgs) {
-		Crane oldParent = parent;
-		parent = newParent;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.TURNING_TABLE__PARENT, oldParent, newParent);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParent(Crane newParent) {
-		if (newParent != parent) {
-			NotificationChain msgs = null;
-			if (parent != null)
-				msgs = ((InternalEObject)parent).eInverseRemove(this, StructureRepositoryPackage.CRANE__MOUNTED_ON, Crane.class, msgs);
-			if (newParent != null)
-				msgs = ((InternalEObject)newParent).eInverseAdd(this, StructureRepositoryPackage.CRANE__MOUNTED_ON, Crane.class, msgs);
-			msgs = basicSetParent(newParent, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.TURNING_TABLE__PARENT, newParent, newParent));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case ComponentRepositoryPackage.TURNING_TABLE__PARENT:
-				if (parent != null)
-					msgs = ((InternalEObject)parent).eInverseRemove(this, StructureRepositoryPackage.CRANE__MOUNTED_ON, Crane.class, msgs);
-				return basicSetParent((Crane)otherEnd, msgs);
-		}
-		return super.eInverseAdd(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -515,8 +425,6 @@ public class TurningTableImpl extends ComponentImpl implements TurningTable {
 				return ((InternalEList<?>)getBusCable()).basicRemove(otherEnd, msgs);
 			case ComponentRepositoryPackage.TURNING_TABLE__POTENTIOMETER:
 				return ((InternalEList<?>)getPotentiometer()).basicRemove(otherEnd, msgs);
-			case ComponentRepositoryPackage.TURNING_TABLE__PARENT:
-				return basicSetParent(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -545,9 +453,6 @@ public class TurningTableImpl extends ComponentImpl implements TurningTable {
 				return getBusCable();
 			case ComponentRepositoryPackage.TURNING_TABLE__POTENTIOMETER:
 				return getPotentiometer();
-			case ComponentRepositoryPackage.TURNING_TABLE__PARENT:
-				if (resolve) return getParent();
-				return basicGetParent();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -588,9 +493,6 @@ public class TurningTableImpl extends ComponentImpl implements TurningTable {
 				getPotentiometer().clear();
 				getPotentiometer().addAll((Collection<? extends Potentiometer>)newValue);
 				return;
-			case ComponentRepositoryPackage.TURNING_TABLE__PARENT:
-				setParent((Crane)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -627,9 +529,6 @@ public class TurningTableImpl extends ComponentImpl implements TurningTable {
 			case ComponentRepositoryPackage.TURNING_TABLE__POTENTIOMETER:
 				getPotentiometer().clear();
 				return;
-			case ComponentRepositoryPackage.TURNING_TABLE__PARENT:
-				setParent((Crane)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -658,8 +557,6 @@ public class TurningTableImpl extends ComponentImpl implements TurningTable {
 				return busCable != null && !busCable.isEmpty();
 			case ComponentRepositoryPackage.TURNING_TABLE__POTENTIOMETER:
 				return potentiometer != null && !potentiometer.isEmpty();
-			case ComponentRepositoryPackage.TURNING_TABLE__PARENT:
-				return parent != null;
 		}
 		return super.eIsSet(featureID);
 	}
