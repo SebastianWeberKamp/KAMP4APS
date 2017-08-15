@@ -30,7 +30,7 @@ import xPPU.StructureRepository.Structure;
  * @author Sandro Koch
  * @see AbstractActivityElementType
  */
-public enum ActivityElementType implements AbstractActivityElementType {
+public enum APSActivityElementType implements AbstractActivityElementType {
 	//aPS related
 	COMPONENT(Component.class),
 	MODULE(Module.class),
@@ -57,7 +57,7 @@ public enum ActivityElementType implements AbstractActivityElementType {
 	private final Class<?> clazz;
 	private final String name;
 	
-	private ActivityElementType(Class<?> clazz) {
+	private APSActivityElementType(Class<?> clazz) {
 		this.clazz = clazz;
 		this.name = clazz.getSimpleName();
 	}
@@ -72,8 +72,8 @@ public enum ActivityElementType implements AbstractActivityElementType {
 		return name;
 	}
 
-	public static ActivityElementType[] topLevelAPSActivityElementTypes() {	
-		return new ActivityElementType[]{COMPONENT, MODULE, INTERFACE, STRUCTURE};
+	public static APSActivityElementType[] topLevelAPSActivityElementTypes() {	
+		return new APSActivityElementType[]{COMPONENT, MODULE, INTERFACE, STRUCTURE};
 	}
 
 }

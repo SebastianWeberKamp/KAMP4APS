@@ -1,6 +1,10 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureModelLookup.BusComponentsParams;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureModelLookup.BusComponentsParams;
+import edu.kit.ipd.sdq.kamp4aps.core.changepropagation.ComponentChanges;
+import edu.kit.ipd.sdq.kamp4aps.core.changepropagation.InterfaceChanges;
+import edu.kit.ipd.sdq.kamp4aps.core.changepropagation.ModuleChanges;
+import edu.kit.ipd.sdq.kamp4aps.core.changepropagation.StructureChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.BusChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SensorChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SignalInterfacePropagation;
@@ -10,8 +14,12 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusCable;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
+import xPPU.Plant;
 import xPPU.BusComponents.BusBox;
 import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusMaster;
@@ -22,9 +30,12 @@ import xPPU.ComponentRepository.Sensor;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.SignalInterface;
+import xPPU.ModuleRepository.Module;
+import xPPU.StructureRepository.Structure;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -43,7 +54,7 @@ import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
  * @author Sandro Koch
  *
  */
-public class ChangePropagationAnalysis implements AbstractChangePropagationAnalysis<ArchitectureVersion> {
+public class APSChangePropagationAnalysis implements AbstractChangePropagationAnalysis<APSArchitectureVersion> {
 	
 	private ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange;
 	private SensorChanges scenarioZero;
@@ -52,29 +63,62 @@ public class ChangePropagationAnalysis implements AbstractChangePropagationAnaly
 	private SignalInterfacePropagation siPropagation;
 	
 	@Override
-	public void runChangePropagationAnalysis(ArchitectureVersion version) {
-		long timeBefore = System.currentTimeMillis();
+	public void runChangePropagationAnalysis(APSArchitectureVersion version) {
 		// Setup
-		setChangePropagationDueToHardwareChange(modificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange());
+		setChangePropagationDueToHardwareChange(ModificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange());
 		
 		// Calculate
-		calculateAndMarkFromSensorPropagration(version);
-		calculateAndMarkReplacementOfMicroSwitch(version);
-		calculateAndMarkBusBoxChange(version);
-		calculateAndMarkSignalInterfaceChangen(version);
+		do {
+			changePropagationDueToHardwareChange.setChanged(false);
+			calculateAndMarkFromStructurePropagation(version);
+			System.out.println(changePropagationDueToHardwareChange.isChanged());
+			calculateAndMarkFromModulePropagation(version);
+			System.out.println(changePropagationDueToHardwareChange.isChanged());
+			calculateAndMarkFromComponentPropagation(version);
+			System.out.println(changePropagationDueToHardwareChange.isChanged());
+			calculateAndMarkFromInterfacePropagation(version);
+			System.out.println(changePropagationDueToHardwareChange.isChanged());
+		} while(changePropagationDueToHardwareChange.isChanged());
 		
 			
 		// Update
 		addAllChangePropagations(version);
-		System.out.println("Time: " + (System.currentTimeMillis() - timeBefore));
-		
+	}
+
+	private void calculateAndMarkFromStructurePropagation(APSArchitectureVersion version) {
+		StructureChanges sc = new StructureChanges(version);
+		sc.addInitialMarkedStructuresToList(changePropagationDueToHardwareChange);
+		sc.calculateAndMarkToModulePropagation(changePropagationDueToHardwareChange);
+		sc.calculateAndMarkToComponentPropagation(changePropagationDueToHardwareChange);
 	}
 	
+	private void calculateAndMarkFromModulePropagation(APSArchitectureVersion version){
+		ModuleChanges mc = new ModuleChanges(version);
+		mc.addInitialMarkedModulesToList(changePropagationDueToHardwareChange);
+		mc.calculateAndMarkToModulePropagation(changePropagationDueToHardwareChange);
+		mc.calculateAndMarkToComponentPropagation(changePropagationDueToHardwareChange);
+		mc.calculateAndMarkToInterfacePropagation(changePropagationDueToHardwareChange);
+	}
+	
+	private void calculateAndMarkFromComponentPropagation(APSArchitectureVersion version){
+		ComponentChanges cc = new ComponentChanges(version);
+		cc.addInitialMarkedModulesToList(changePropagationDueToHardwareChange);
+		cc.calculateAndMarkToInterfacePropagation(changePropagationDueToHardwareChange);
+	}
+	
+	private void calculateAndMarkFromInterfacePropagation(APSArchitectureVersion version){
+		InterfaceChanges ic = new InterfaceChanges(version);
+		ic.addInitialMarkedInterfacesToList(changePropagationDueToHardwareChange);
+		ic.calculateAndMarkToModulePropagation(changePropagationDueToHardwareChange);
+		ic.calculateAndMarkToComponentPropagation(changePropagationDueToHardwareChange);
+		ic.flattenAllModifyInterfaces(changePropagationDueToHardwareChange);
+	}
+
 	/**
 	 * Scenario 0
 	 * Sensor Change
 	 */
-	protected void calculateAndMarkFromSensorPropagration(ArchitectureVersion version) {
+	protected void calculateAndMarkFromSensorPropagration(APSArchitectureVersion version) {
 		scenarioZero = new SensorChanges(version);
 		Collection<SignalInterface> signalInterfaceToChange = new ArrayList<SignalInterface>();
 		Collection<PhysicalConnection> physicalConnectionToChange = new ArrayList<PhysicalConnection>();
@@ -95,7 +139,7 @@ public class ChangePropagationAnalysis implements AbstractChangePropagationAnaly
 	 * Scenario 1
 	 * Replace MicroSwitches with Potentiometers
 	 */
-	protected void calculateAndMarkReplacementOfMicroSwitch(ArchitectureVersion version) {
+	protected void calculateAndMarkReplacementOfMicroSwitch(APSArchitectureVersion version) {
 		scenarioOne = new SwitchChanges(version);
 		addMicroSwitchModifications();
 	}
@@ -111,13 +155,13 @@ public class ChangePropagationAnalysis implements AbstractChangePropagationAnaly
 	 * Scenario 2
 	 * BusChange
 	 */
-	protected void calculateAndMarkBusBoxChange(ArchitectureVersion version){
+	protected void calculateAndMarkBusBoxChange(APSArchitectureVersion version){
 		scenarioTwo = new BusChanges(version);
 		addBusBoxModifications(version);
 	}
 
-		private void addBusBoxModifications(ArchitectureVersion version) {
-			BusComponentsParams params = ArchitectureModelLookup.lookUpChangesBasedOnBusModification(version, scenarioTwo.getInitialMarkedBusBoxes());
+		private void addBusBoxModifications(APSArchitectureVersion version) {
+			BusComponentsParams params = APSArchitectureModelLookup.lookUpChangesBasedOnBusModification(version, scenarioTwo.getInitialMarkedBusBoxes());
 			for(BusBox busBox : params.busBoxesToChange){
 				ModifyBusBox modifyBusBox = scenarioTwo.createNewModifyBusBox(busBox);
 				changePropagationDueToHardwareChange.getBusBoxModifications().add(modifyBusBox);
@@ -136,19 +180,19 @@ public class ChangePropagationAnalysis implements AbstractChangePropagationAnaly
 			}
 		}
 		
-	protected void calculateAndMarkSignalInterfaceChangen(ArchitectureVersion version) {
+	protected void calculateAndMarkSignalInterfaceChangen(APSArchitectureVersion version) {
 		boolean hasChanged = false;
 		do{
 			siPropagation = new SignalInterfacePropagation(version);
 			Collection<ModifyInterface<Interface>> markedInterfaceChanges = changePropagationDueToHardwareChange.getInterfaceModifications();
-			Map<Component, Set<ModifyInterface<Interface>>> changes = ArchitectureModelLookup.lookUpChangesBasedOnSignalInterfaces(version, markedInterfaceChanges);
+			Map<Component, Set<ModifyInterface<Interface>>> changes = APSArchitectureModelLookup.lookUpChangesBasedOnSignalInterfaces(version, markedInterfaceChanges);
 			for(Component key : changes.keySet()){
 				siPropagation.markChangesBasedOnSignalInterfaces(key, changePropagationDueToHardwareChange, hasChanged);
 			}
 		}while(hasChanged);
 	}
 			
-	protected void addAllChangePropagations(ArchitectureVersion version){
+	protected void addAllChangePropagations(APSArchitectureVersion version){
 		version.getModificationMarkRepository().getChangePropagationSteps().add(changePropagationDueToHardwareChange);
 	}
 		

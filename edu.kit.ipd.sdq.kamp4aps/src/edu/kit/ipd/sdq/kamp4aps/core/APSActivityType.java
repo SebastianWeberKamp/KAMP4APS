@@ -14,7 +14,7 @@ import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityType;
  * @author Sandro Koch
  * @see AbstractActivityType
  */
-public enum ActivityType implements AbstractActivityType {
+public enum APSActivityType implements AbstractActivityType {
 	ARCHITECTUREMODELDIFF("Architecture-related activity"),
 	INTERNALMODIFICATIONMARK("Modification mark"),
 
@@ -48,7 +48,7 @@ public enum ActivityType implements AbstractActivityType {
 	
 	private final String name;
 	
-	private ActivityType(String name) {
+	private APSActivityType(String name) {
 		this.name = name;
 	}
 

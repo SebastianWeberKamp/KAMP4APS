@@ -16,7 +16,7 @@ import xPPU.Plant;
  *
  */
 
-public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAPSModificationRepository<?>> {
+public class APSArchitectureVersion extends AbstractArchitectureVersion<AbstractKAPSModificationRepository<?>> {
 	private FieldOfActivityAnnotationRepository _fieldOfActivityRepository;
 	private Plant _xppuPlant;
 	private DeploymentContextRepository _deploymentContextRepository;
@@ -29,7 +29,7 @@ public class ArchitectureVersion extends AbstractArchitectureVersion<AbstractKAP
 		public Plant xPPUPlant;
 	}
 	
-	public ArchitectureVersion(ArchitectureVersionParams params) {
+	public APSArchitectureVersion(ArchitectureVersionParams params) {
 		super(params.name, params.modificationMarkRepository);
 		// Some of the files describing the architecture might not exist; prevent NullPointer
 		// in propagation algorithm by setting newly created objects (whose EReferences are

@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 
 import DeploymentContext.DeploymentContextRepository;
 import edu.kit.ipd.sdq.kamp.util.FileAndFolderManagement;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion.ArchitectureVersionParams;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion.ArchitectureVersionParams;
 import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersionPersistency;
@@ -21,7 +21,7 @@ import xPPU.Plant;
  * @author Sandro Koch
  *
  */
-public class ArchitectureVersionPersistency extends AbstractArchitectureVersionPersistency<ArchitectureVersion> {
+public class APSArchitectureVersionPersistency extends AbstractArchitectureVersionPersistency<APSArchitectureVersion> {
 
 	private ArchitectureVersionParams archParams = new ArchitectureVersionParams();
 	public static final String FILEEXTENSION_REPOSITORY = "repository";
@@ -31,7 +31,7 @@ public class ArchitectureVersionPersistency extends AbstractArchitectureVersionP
 	public static final String FILEEXTENSION_DEPLOYMENTCONTEXT = "deploymentcontext";
 
 	@Override
-	public ArchitectureVersion load(String folderpath, String filename, String versionname) {
+	public APSArchitectureVersion load(String folderpath, String filename, String versionname) {
 		ResourceSet loadResourceSet = new ResourceSetImpl();
 		String fieldOfActivityRepositoryFilePath = filename + "." + FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS;
 		String internalModFilePath = filename + "." + FILEEXTENSION_MODIFICATIONMARK;
@@ -45,11 +45,11 @@ public class ArchitectureVersionPersistency extends AbstractArchitectureVersionP
 		archParams.xPPUPlant = (Plant) loadEmfModelFromResource(folderpath, xppufilePath, loadResourceSet);
 		archParams.deploymentContextRepository = (DeploymentContextRepository) loadEmfModelFromResource(folderpath,
 				internalModFilePath, loadResourceSet);
-		return new ArchitectureVersion(archParams);
+		return new APSArchitectureVersion(archParams);
 	}
 
 	@Override
-	public ArchitectureVersion load(IContainer folder, String versionname) {
+	public APSArchitectureVersion load(IContainer folder, String versionname) {
 		ResourceSet loadResourceSet = new ResourceSetImpl();
 		IFile fieldOfActivityRepositoryFile = FileAndFolderManagement.retrieveFileWithExtension(folder,
 				FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS);
@@ -77,15 +77,15 @@ public class ArchitectureVersionPersistency extends AbstractArchitectureVersionP
 		if (deploymentContextFile != null && deploymentContextFile.exists())
 			archParams.deploymentContextRepository = (DeploymentContextRepository) loadEmfModelFromResource(
 					deploymentContextFile.getFullPath().toString(), null, loadResourceSet);
-		return new ArchitectureVersion(archParams);
+		return new APSArchitectureVersion(archParams);
 	}
 
 	@Override
-	public void save(String targetDirectoryPath, String filename, ArchitectureVersion version) {
+	public void save(String targetDirectoryPath, String filename, APSArchitectureVersion version) {
 		savePCMAndKAMP4APSModels(targetDirectoryPath, filename, version);
 	}
 
-	public static void savePCMAndKAMP4APSModels(String targetDirectoryPath, String filename, ArchitectureVersion version) {
+	public static void savePCMAndKAMP4APSModels(String targetDirectoryPath, String filename, APSArchitectureVersion version) {
 		ResourceSet resourceSet = new ResourceSetImpl();
 		String internalModFilePath = filename + "." + FILEEXTENSION_MODIFICATIONMARK;
 		String fieldOfActivityRepositoryFilePath = filename + "." + FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS;

@@ -46,9 +46,9 @@ import xPPU.StructureRepository.Structure;
  * @author Sandro Koch
  * @see <a href="https://sdqweb.ipd.kit.edu/publications/pdfs/koch2017a.pdf">koch2017a<\a>
  */
-public class ArchitectureAnnotationLookup {
+public class APSArchitectureAnnotationLookup {
 
-	public static List<?> lookUpSystemTestsForPlant(ArchitectureVersion version, Plant plant) {
+	public static List<?> lookUpSystemTestsForPlant(APSArchitectureVersion version, Plant plant) {
 		List<SystemTest> systemTests = new ArrayList<SystemTest>();
 
 		if (version.getFieldOfActivityRepository().getTestSpecification() != null) {
@@ -61,7 +61,7 @@ public class ArchitectureAnnotationLookup {
 		return systemTests;
 	}
 
-	public static List<ComponentDrawing> lookUpDrawingsForComponent(ArchitectureVersion version, Component component) {
+	public static List<ComponentDrawing> lookUpDrawingsForComponent(APSArchitectureVersion version, Component component) {
 		List<ComponentDrawing> drawings = new ArrayList<ComponentDrawing>();
 
 		if (version.getFieldOfActivityRepository().getEcadSpecification() != null) {
@@ -77,7 +77,7 @@ public class ArchitectureAnnotationLookup {
 		return drawings;
 	}
 
-	public static List<ModuleDrawing> lookUpDrawingsForModules(ArchitectureVersion version, Module module) {
+	public static List<ModuleDrawing> lookUpDrawingsForModules(APSArchitectureVersion version, Module module) {
 		List<ModuleDrawing> drawings = new ArrayList<ModuleDrawing>();
 
 		if (version.getFieldOfActivityRepository().getEcadSpecification() != null) {
@@ -93,7 +93,7 @@ public class ArchitectureAnnotationLookup {
 		return drawings;
 	}
 
-	public static List<InterfaceDrawing> lookUpDrawingsForInterfaces(ArchitectureVersion version,
+	public static List<InterfaceDrawing> lookUpDrawingsForInterfaces(APSArchitectureVersion version,
 			Interface interfacemodule) {
 		List<InterfaceDrawing> drawings = new ArrayList<InterfaceDrawing>();
 
@@ -111,7 +111,7 @@ public class ArchitectureAnnotationLookup {
 		return drawings;
 	}
 
-	public static List<StructureDrawing> lookUpDrawingsForStructures(ArchitectureVersion version, Structure structure) {
+	public static List<StructureDrawing> lookUpDrawingsForStructures(APSArchitectureVersion version, Structure structure) {
 		List<StructureDrawing> drawings = new ArrayList<StructureDrawing>();
 
 		if (version.getFieldOfActivityRepository().getEcadSpecification() != null) {
@@ -127,7 +127,7 @@ public class ArchitectureAnnotationLookup {
 		return drawings;
 	}
 
-	public static List<ComponentDocumentationFiles> lookUpDocumentationForComponents(ArchitectureVersion version,
+	public static List<ComponentDocumentationFiles> lookUpDocumentationForComponents(APSArchitectureVersion version,
 			Component component) {
 		List<ComponentDocumentationFiles> doc = new ArrayList<ComponentDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
@@ -140,7 +140,7 @@ public class ArchitectureAnnotationLookup {
 		return doc;
 	}
 
-	public static List<ModuleDocumentationFiles> lookUpDocumentationForModules(ArchitectureVersion version,
+	public static List<ModuleDocumentationFiles> lookUpDocumentationForModules(APSArchitectureVersion version,
 			Module module) {
 		List<ModuleDocumentationFiles> doc = new ArrayList<ModuleDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
@@ -153,7 +153,7 @@ public class ArchitectureAnnotationLookup {
 		return doc;
 	}
 
-	public static List<? extends DocumentationFiles> lookUpDocumentationForInterfaces(ArchitectureVersion version,
+	public static List<? extends DocumentationFiles> lookUpDocumentationForInterfaces(APSArchitectureVersion version,
 			Interface interfaceElement) {
 		List<InterfaceDocumentationFiles> doc = new ArrayList<InterfaceDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
@@ -166,7 +166,7 @@ public class ArchitectureAnnotationLookup {
 		return doc;
 	}
 
-	public static List<? extends DocumentationFiles> lookUpDocumentationForStructures(ArchitectureVersion version,
+	public static List<? extends DocumentationFiles> lookUpDocumentationForStructures(APSArchitectureVersion version,
 			Structure structure) {
 		List<StructureDocumentationFiles> doc = new ArrayList<StructureDocumentationFiles>();
 		if (version.getFieldOfActivityRepository().getDocumentationSpecification() != null) {
@@ -179,7 +179,7 @@ public class ArchitectureAnnotationLookup {
 		return doc;
 	}
 
-	public static List<ComponentStockList> lookUpStockListForComponent(ArchitectureVersion version,
+	public static List<ComponentStockList> lookUpStockListForComponent(APSArchitectureVersion version,
 			Component component) {
 		List<ComponentStockList> componentStockList = new ArrayList<ComponentStockList>();
 		if (version.getFieldOfActivityRepository().getStockSpecification() != null) {
@@ -192,7 +192,7 @@ public class ArchitectureAnnotationLookup {
 		return componentStockList;
 	}
 
-	public static List<ModuleStockList> lookUpStockListForModule(ArchitectureVersion version, Module module) {
+	public static List<ModuleStockList> lookUpStockListForModule(APSArchitectureVersion version, Module module) {
 		List<ModuleStockList> moduleStockList = new ArrayList<ModuleStockList>();
 		for (ModuleStockList stock : version.getFieldOfActivityRepository().getStockSpecification()
 				.getModuleStockList()) {
@@ -202,7 +202,7 @@ public class ArchitectureAnnotationLookup {
 		return moduleStockList;
 	}
 
-	public static List<StructureStockList> lookUpStockListForStructure(ArchitectureVersion version,
+	public static List<StructureStockList> lookUpStockListForStructure(APSArchitectureVersion version,
 			Structure structure) {
 		List<StructureStockList> structureStockList = new ArrayList<StructureStockList>();
 		if (version.getFieldOfActivityRepository().getStockSpecification() != null) {
@@ -215,7 +215,7 @@ public class ArchitectureAnnotationLookup {
 		return structureStockList;
 	}
 
-	public static List<InterfaceStockList> lookUpStockListForInterface(ArchitectureVersion version,
+	public static List<InterfaceStockList> lookUpStockListForInterface(APSArchitectureVersion version,
 			Interface interfaceElement) {
 		List<InterfaceStockList> interfaceStockList = new ArrayList<InterfaceStockList>();
 		if (version.getFieldOfActivityRepository().getStockSpecification() != null) {
@@ -228,7 +228,7 @@ public class ArchitectureAnnotationLookup {
 		return interfaceStockList;
 	}
 
-	public static void lookUpNumberOfTests(ArchitectureVersion version, Activity activity, List<Plant> plantsToTest) {
+	public static void lookUpNumberOfTests(APSArchitectureVersion version, Activity activity, List<Plant> plantsToTest) {
 		if (version.getFieldOfActivityRepository().getTestSpecification() != null) {
 			List<SystemTest> tests = version.getFieldOfActivityRepository().getTestSpecification().getSystemTests();
 			for (SystemTest test : tests) {
@@ -238,8 +238,8 @@ public class ArchitectureAnnotationLookup {
 		}
 	}
 
-	public static void lookUpNumberOfHmiChanges(ArchitectureVersion version, Activity activity,
-			Map<ActivityElementType, List<? extends EObject>> hmiAffectingParts) {
+	public static void lookUpNumberOfHmiChanges(APSArchitectureVersion version, Activity activity,
+			Map<APSActivityElementType, List<? extends EObject>> hmiAffectingParts) {
 		if (version.getFieldOfActivityRepository().getHmiSpecification() != null) {
 			List<HMIConfiguration> hmiConfigs = version.getFieldOfActivityRepository().getHmiSpecification()
 					.getHmiConfig();
@@ -248,32 +248,32 @@ public class ArchitectureAnnotationLookup {
 					if (!hmiConfig.getComponents().isEmpty()
 							&& !hmiAffectingParts.containsValue(hmiConfig.getComponents())
 							&& hmiConfig.getComponents().contains((Component) activity.getElement()))
-						hmiAffectingParts.put(ActivityElementType.COMPONENT, hmiConfig.getComponents());
+						hmiAffectingParts.put(APSActivityElementType.COMPONENT, hmiConfig.getComponents());
 				}
 				if (activity.getElement() instanceof Interface) {
 					if (!hmiConfig.getInterfaces().isEmpty()
 							&& !hmiAffectingParts.containsValue(hmiConfig.getInterfaces())
 							&& hmiConfig.getInterfaces().contains((Interface) activity.getElement()))
-						hmiAffectingParts.put(ActivityElementType.INTERFACE, hmiConfig.getInterfaces());
+						hmiAffectingParts.put(APSActivityElementType.INTERFACE, hmiConfig.getInterfaces());
 				}
 				if (activity.getElement() instanceof Structure) {
 					if (!hmiConfig.getStructures().isEmpty()
 							&& !hmiAffectingParts.containsValue(hmiConfig.getStructures())
 							&& hmiConfig.getStructures().contains((Structure) activity.getElement()))
-						hmiAffectingParts.put(ActivityElementType.STRUCTURE, hmiConfig.getStructures());
+						hmiAffectingParts.put(APSActivityElementType.STRUCTURE, hmiConfig.getStructures());
 				}
 				if (activity.getElement() instanceof Module) {
 					if (!hmiConfig.getModules().isEmpty() 
 							&& !hmiAffectingParts.containsValue(hmiConfig.getModules())
 							&& hmiConfig.getModules().contains((Module) activity.getElement()))
-						hmiAffectingParts.put(ActivityElementType.MODULE, hmiConfig.getModules());
+						hmiAffectingParts.put(APSActivityElementType.MODULE, hmiConfig.getModules());
 				}
 			}
 		}
 	}
 
-	public static void lookUpNumberOfCalibrationChanges(ArchitectureVersion version,
-			Activity activity, Map<ActivityElementType, List<? extends EObject>> calibrationAffectingParts) {
+	public static void lookUpNumberOfCalibrationChanges(APSArchitectureVersion version,
+			Activity activity, Map<APSActivityElementType, List<? extends EObject>> calibrationAffectingParts) {
 		if (version.getFieldOfActivityRepository().getHmiSpecification() != null) {
 			List<CalibrationConfiguration> calibrationConfigs = version.getFieldOfActivityRepository().getCalibrationSpecification()
 					.getCalibrationConfig();
@@ -282,31 +282,31 @@ public class ArchitectureAnnotationLookup {
 					if (!calibrationConfig.getComponents().isEmpty()
 							&& !calibrationAffectingParts.containsValue(calibrationConfig.getComponents())
 							&& calibrationConfig.getComponents().contains((Component) activity.getElement()))
-						calibrationAffectingParts.put(ActivityElementType.COMPONENT, calibrationConfig.getComponents());
+						calibrationAffectingParts.put(APSActivityElementType.COMPONENT, calibrationConfig.getComponents());
 				}
 				if (activity.getElement() instanceof Interface) {
 					if (!calibrationConfig.getInterfaces().isEmpty()
 							&& !calibrationAffectingParts.containsValue(calibrationConfig.getInterfaces())
 							&& calibrationConfig.getInterfaces().contains((Interface) activity.getElement()))
-						calibrationAffectingParts.put(ActivityElementType.INTERFACE, calibrationConfig.getInterfaces());
+						calibrationAffectingParts.put(APSActivityElementType.INTERFACE, calibrationConfig.getInterfaces());
 				}
 				if (activity.getElement() instanceof Structure) {
 					if (!calibrationConfig.getStructures().isEmpty()
 							&& !calibrationAffectingParts.containsValue(calibrationConfig.getStructures())
 							&& calibrationConfig.getStructures().contains((Structure) activity.getElement()))
-						calibrationAffectingParts.put(ActivityElementType.STRUCTURE, calibrationConfig.getStructures());
+						calibrationAffectingParts.put(APSActivityElementType.STRUCTURE, calibrationConfig.getStructures());
 				}
 				if (activity.getElement() instanceof Module) {
 					if (!calibrationConfig.getModules().isEmpty() 
 							&& !calibrationAffectingParts.containsValue(calibrationConfig.getModules())
 							&& calibrationConfig.getModules().contains((Module) activity.getElement()))
-						calibrationAffectingParts.put(ActivityElementType.MODULE, calibrationConfig.getModules());
+						calibrationAffectingParts.put(APSActivityElementType.MODULE, calibrationConfig.getModules());
 				}
 			}
 		}
 	}
 
-	public static Map<Component, Program> lookUpToChangeSoftware(ArchitectureVersion version,
+	public static Map<Component, Program> lookUpToChangeSoftware(APSArchitectureVersion version,
 			Activity activity) {
 		Map<Component, Program> softwareChangeAffectedParts = new HashMap<Component, Program>();
 		if(activity.getElement() instanceof Component){
@@ -326,7 +326,7 @@ public class ArchitectureAnnotationLookup {
 		return softwareChangeAffectedParts;
 	}
 
-	public static Map<Interface, GlobalVariable> lookUpInterfacesOfSoftwareChanges(ArchitectureVersion version,
+	public static Map<Interface, GlobalVariable> lookUpInterfacesOfSoftwareChanges(APSArchitectureVersion version,
 			Activity activity) {
 		Map<Interface, GlobalVariable> variableChanges = new HashMap<Interface, GlobalVariable>();
 		if(activity.getElement() instanceof Component){

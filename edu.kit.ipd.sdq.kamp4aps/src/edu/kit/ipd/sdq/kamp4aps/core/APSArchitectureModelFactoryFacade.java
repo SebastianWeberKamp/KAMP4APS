@@ -3,7 +3,7 @@ package edu.kit.ipd.sdq.kamp4aps.core;
 import DeploymentContext.DeploymentContextFactory;
 import DeploymentContext.DeploymentContextRepository;
 
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion.ArchitectureVersionParams;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion.ArchitectureVersionParams;
 import fieldofactivityannotations.CalibrationSpecification;
 import fieldofactivityannotations.DocumentationSpecification;
 import fieldofactivityannotations.ECADSpecification;
@@ -15,7 +15,7 @@ import fieldofactivityannotations.StockSpecification;
 import fieldofactivityannotations.TestSpecification;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSModificationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
 
 /**
  * This class loads the structural and non-structural models
@@ -28,22 +28,22 @@ import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory
  * 
  */
 
-public class ArchitectureModelFactoryFacade {
+public class APSArchitectureModelFactoryFacade {
 	
 	private static ArchitectureVersionParams archParams = new ArchitectureVersionParams();
 	
-	public static ArchitectureVersion createEmptyModel(String name) {
+	public static APSArchitectureVersion createEmptyModel(String name) {
 		archParams.name = name;
-		archParams.fieldOfActivityRepository = ArchitectureModelFactoryFacade.createFieldOfActivityAnnotationsRepository();
-		archParams.modificationMarkRepository = ArchitectureModelFactoryFacade.createKAPSModificationMarkRepository();
-		archParams.deploymentContextRepository = ArchitectureModelFactoryFacade.createDeploymentContextRepository();
-		return new ArchitectureVersion(archParams);
+		archParams.fieldOfActivityRepository = APSArchitectureModelFactoryFacade.createFieldOfActivityAnnotationsRepository();
+		archParams.modificationMarkRepository = APSArchitectureModelFactoryFacade.createKAPSModificationMarkRepository();
+		archParams.deploymentContextRepository = APSArchitectureModelFactoryFacade.createDeploymentContextRepository();
+		return new APSArchitectureVersion(archParams);
 	}
 	
 	public static KAPSModificationRepository createKAPSModificationMarkRepository() {
-		KAPSModificationRepository repository = modificationmarksFactory.eINSTANCE.createKAPSModificationRepository();
+		KAPSModificationRepository repository = ModificationmarksFactory.eINSTANCE.createKAPSModificationRepository();
 
-		KAPSSeedModifications seedModifications = modificationmarksFactory.eINSTANCE.createKAPSSeedModifications();
+		KAPSSeedModifications seedModifications = ModificationmarksFactory.eINSTANCE.createKAPSSeedModifications();
 		repository.setSeedModifications(seedModifications);
 		
 		return repository;

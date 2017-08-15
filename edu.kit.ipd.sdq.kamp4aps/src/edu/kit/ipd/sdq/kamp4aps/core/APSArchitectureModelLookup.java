@@ -1,28 +1,35 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 
-import edu.kit.ipd.sdq.kamp.util.MapUtil;
+import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
+import xPPU.Entity;
+import xPPU.Plant;
 import xPPU.BusComponents.BusBox;
 import xPPU.BusComponents.BusCable;
 import xPPU.BusComponents.BusMaster;
 import xPPU.BusComponents.BusSlave;
 import xPPU.ComponentRepository.Component;
-import xPPU.ComponentRepository.PowerSupply;
-import xPPU.ComponentRepository.Sensor;
 import xPPU.Identifier.Identifier;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.SignalInterface;
 import xPPU.ModuleRepository.Module;
+import xPPU.StructureRepository.Structure;
 
 /**
  * This class represents a part of the change rules implementation
@@ -40,62 +47,399 @@ import xPPU.ModuleRepository.Module;
  *
  */
 
-public class ArchitectureModelLookup {
+public class APSArchitectureModelLookup extends ArchitectureModelLookup {
 
 	private static BusComponentsParams bcParams;
-	
-//	public static Map<PowerSupply, Set<BusBox>> lookUpBusBoxesWithSupplys(ArchitectureVersion version,
-//			Collection<BusBox> initialMarkedBusBoxes) {
-//		Map<PowerSupply, Set<BusBox>> results = new HashMap<>();
-//
-//		Set<BusBox> matchingBoxes = new HashSet<BusBox>(initialMarkedBusBoxes);
-//		for (BusBox bb : initialMarkedBusBoxes) {
-//			matchingBoxes.add(bb);
-//			MapUtil.putOrAddToMap(results, bb.getPowersupply(), matchingBoxes);
-//		}
-//		return results;
-//	}
-
-//	public static Map<Interface, Set<Sensor>> lookUpSensorsWithPhysicalConnections(ArchitectureVersion version,
-//			Collection<Sensor> seedSensors) {
-//		Map<Interface, Set<Sensor>> results = new HashMap<Interface, Set<Sensor>>();
-//
-//		Set<Sensor> sensors = new HashSet<Sensor>();
-//		for(Sensor s : seedSensors){
-//			sensors.add(s);
-//			results.put((Interface)s.getPhysicalconnection(), sensors);
-//		}
-//		return results;
-//	}
-	
-//	public static Map<Component, Set<ModifyInterface<Interface>>> lookUpChangesBasedOnSignalInterfaces(ArchitectureVersion version,
-//			Collection<ModifyInterface<Interface>> initialMarkedInterfaces){
-//		Map<Component, Set<ModifyInterface<Interface>>> results = new HashMap<Component, Set<ModifyInterface<Interface>>>();
-//		for(ModifyInterface<Interface> modifyInterface : initialMarkedInterfaces){
-//			for(Component component : version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant()){
-//				if(modifyInterface.getAffectedElement() instanceof Interface){
-//					for(Interface componentInterface : component.getConnectedInterfaces()){
-//						if(componentInterface.getId() == modifyInterface.getAffectedElement().getId()){
-//							if(results.get(component) == null)
-//								results.put(component, new HashSet<ModifyInterface<Interface>>());
-//							results.get(component).add(modifyInterface);
-//						}
-//					}
-//				}
-//			}
-//		}
-//		return results;
-//	}
-	
-	public static void lookUpChangesBasedOnModuleModification(ArchitectureVersion version,
-			Collection<ModifyModule<Module>> initialMarkedModules){
-		Map<Module, Set<ModifyModule<Module>>> results = new HashMap<Module, Set<ModifyModule<Module>>>();
-		for(ModifyModule<Module> modifyModule : initialMarkedModules){
-			
+		
+	/*	########################################################################################################################
+	 * 	#  STRUCTURE LOOKUP SECTION  ###########################################################################################
+	 *  ########################################################################################################################              
+	 */
+	/**
+	 * 
+	 * @param version
+	 * @param initialMarkedStructures
+	 * @return
+	 */
+	public static List<Plant> lookUpParentsOfStructures(Collection<ModifyStructure<Structure>> initialMarkedStructures){
+		List<Plant> results = new ArrayList<Plant>();
+		for(ModifyStructure<Structure> modifyStructure : initialMarkedStructures){
+			results.add(modifyStructure.getAffectedElement().getParentPlant());
 		}
+		return results;
 	}
 	
-	public static BusComponentsParams lookUpChangesBasedOnBusModification(ArchitectureVersion version,
+	/**
+	 * 
+	 * @param version
+	 * @param initialMarkedStructures
+	 * @return
+	 */
+	public static Map<Structure, Set<Module>> lookUpModulesOfStructures(Collection<Structure> initialMarkedStructures){
+		Map<Structure, Set<Module>> results = new HashMap<Structure, Set<Module>>();
+		for(Structure modifyStructure : initialMarkedStructures){
+			for(Module module : modifyStructure.getModules()){
+				if(results.get(modifyStructure) == null)
+					results.put(modifyStructure, new HashSet<Module>());
+				results.get(modifyStructure).add(module);
+			}
+		}
+		return results;
+	}
+	
+	/**
+	 * 
+	 * @param version
+	 * @param initialMarkedStructures
+	 * @return
+	 */
+	public static Map<Structure, Set<Component>> lookUpComponentsOfStructures(Collection<Structure> initialMarkedStructures){
+		Map<Structure, Set<Component>> results = new HashMap<Structure, Set<Component>>();
+		for(Structure modifyStructure : initialMarkedStructures){
+			for(Component component : modifyStructure.getComponents()){
+				if(results.get(modifyStructure) == null)
+					results.put(modifyStructure, new HashSet<Component>());
+				results.get(modifyStructure).add(component);
+			}
+		}
+		return results;
+	}
+	
+	/*	#####################################################################################################################
+	 * 	#  MODULE LOOKUP SECTION  ###########################################################################################
+	 *  #####################################################################################################################               
+	 */
+	/**
+	 * Returns a map with modules and their parent structure.
+	 * For reverse LookUp.
+	 * @param initialMarkedModules
+	 * @param changePropagationDueToHardwareChange
+	 * @return
+	 */
+	public static Map<Module, Structure> lookUpParentStructuresOfModules(Collection<ModifyModule<Module>> initialMarkedModules,
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Map<Module, Structure> results = new HashMap<Module, Structure>();
+		for(ModifyModule<Module> modifyModule : initialMarkedModules){
+			if(modifyModule.getAffectedElement().getParentEntity() != null &&
+					modifyModule.getAffectedElement().getParentEntity() instanceof Structure)
+				results.put(modifyModule.getAffectedElement(), (Structure) modifyModule.getAffectedElement().getParentEntity());
+		}
+		
+		
+		List<ModifyModule<Module>> modulesToModify = changePropagationDueToHardwareChange.getModuleModifications();
+		for(ModifyModule<Module> moduleToModify : modulesToModify){
+			Module affectedModule = moduleToModify.getAffectedElement();
+			Entity parent = affectedModule.getParentEntity();
+			if(parent instanceof Structure){
+				results.put(affectedModule, (Structure) parent);
+			}
+		}
+		return results;
+	}
+	
+	/**
+	 * Returns a map with modules and their parent module.
+	 * For reverse LookUp.
+	 * @param initialMarkedModules
+	 * @param changePropagationDueToHardwareChange
+	 * @return
+	 */
+	public static Map<Module, Module> lookUpParentModulesOfModules(Collection<ModifyModule<Module>> initialMarkedModules,
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Map<Module, Module> results = new HashMap<Module, Module>();
+		for(ModifyModule<Module> modifyModule : initialMarkedModules){
+			if(modifyModule.getAffectedElement().getParentEntity() != null &&
+					modifyModule.getAffectedElement().getParentEntity() instanceof Module)
+				results.put(modifyModule.getAffectedElement(), (Module) modifyModule.getAffectedElement().getParentEntity());
+		}
+		
+		List<ModifyModule<Module>> modulesToModify = changePropagationDueToHardwareChange.getModuleModifications();
+		for(ModifyModule<Module> moduleToModify : modulesToModify){
+			Module affectedModule = moduleToModify.getAffectedElement();
+			Entity parent = affectedModule.getParentEntity();
+			if(parent instanceof Module){
+				results.put(affectedModule, (Module) parent);
+			}
+		}
+		
+		
+		return results;
+	}
+	
+	/**
+	 * 
+	 * @param initialMarkedModules
+	 * @param changePropagationDueToHardwareChange
+	 * @return
+	 */
+	public static Map<Module, Set<Module>> lookUpModulesOfModules(Collection<Module> initialMarkedModules, 
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Map<Module, Set<Module>> results = new HashMap<Module, Set<Module>>();
+		for(Module modifyModule: initialMarkedModules){
+			for(Module module : modifyModule.getModules()){
+				if(results.get(modifyModule) == null)
+					results.put(modifyModule, new HashSet<Module>());
+				results.get(modifyModule).add(module);
+			}
+		}
+		
+		List<ModifyModule<Module>> modulesToModify = changePropagationDueToHardwareChange.getModuleModifications();
+		for(ModifyModule<Module> moduleToModify : modulesToModify){
+			Module affectedModule = moduleToModify.getAffectedElement();
+			for(Module module : affectedModule.getModules()){
+				if(results.get(affectedModule) == null)
+					results.put(affectedModule, new HashSet<Module>());
+				results.get(affectedModule).add(module);
+			}
+		}
+		return results;
+	}
+	
+	/**
+	 * 
+	 * @param initialMarkedModules
+	 * @param changePropagationDueToHardwareChange
+	 * @return
+	 */
+	public static Map<Module, Set<Component>> lookUpComponentsOfModules(Collection<Module> initialMarkedModules,
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Map<Module, Set<Component>> results = new HashMap<Module, Set<Component>>();
+		
+		for(Module modifyModule: initialMarkedModules){
+			for(Component component : modifyModule.getComponents()){
+				if(results.get(modifyModule) == null)
+					results.put(modifyModule, new HashSet<Component>());
+				results.get(modifyModule).add(component);
+			}
+		}
+		
+		List<ModifyModule<Module>> modulesToModify = changePropagationDueToHardwareChange.getModuleModifications();
+		for(ModifyModule<Module> moduleToModify : modulesToModify){
+			Module affectedModule = moduleToModify.getAffectedElement();
+			for(Component component : affectedModule.getComponents()){
+				if(results.get(affectedModule) == null)
+					results.put(affectedModule, new HashSet<Component>());
+				results.get(affectedModule).add(component);
+			}
+		}
+		
+		return results;
+	}
+	
+	/**
+	 * 
+	 * @param initialMarkedModules
+	 * @param changePropagationDueToHardwareChange
+	 * @return
+	 */
+	public static Map<Module, Set<Interface>> lookUpInterfacesOfModules(Collection<Module> initialMarkedModules,
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Map<Module, Set<Interface>> results = new HashMap<Module, Set<Interface>>();
+		
+		for(Module modifyModule: initialMarkedModules){
+			for(Interface interfac : modifyModule.getInterfaces()){
+				if(results.get(modifyModule) == null)
+					results.put(modifyModule, new HashSet<Interface>());
+				results.get(modifyModule).add(interfac);
+			}
+		}
+		
+		List<ModifyModule<Module>> modulesToModify = changePropagationDueToHardwareChange.getModuleModifications();
+		for(ModifyModule<Module> moduleToModify : modulesToModify){
+			Module affectedModule = moduleToModify.getAffectedElement();
+			for(Interface interfac : affectedModule.getInterfaces()){
+				if(results.get(affectedModule) == null)
+					results.put(affectedModule, new HashSet<Interface>());
+				results.get(affectedModule).add(interfac);
+			}
+		}
+		
+		return results;
+	}
+	
+	/*	########################################################################################################################
+	 * 	#  COMPONENT LOOKUP SECTION  ###########################################################################################
+	 *  ########################################################################################################################
+	 */
+	
+	/**
+	 * 
+	 * @param version
+	 * @param initialMarkedComponents
+	 * @return
+	 */
+	public static Map<Component, Structure> lookUpParentStructuresOfComponents(Collection<Component> initialMarkedComponents, 
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Map<Component, Structure> results = new HashMap<Component, Structure>();
+		for(Component modifyComponent : initialMarkedComponents){
+			if(modifyComponent.getParent() != null)
+				results.put(modifyComponent, (Structure) modifyComponent.getParent());
+		}
+		
+		List<ModifyComponent<Component>> componentsToModify = changePropagationDueToHardwareChange.getComponentModifications();
+		for(ModifyComponent<Component> componentToModify : componentsToModify){
+			Component affectedComponent = componentToModify.getAffectedElement();
+			Structure parent = affectedComponent.getParent();
+			if(parent != null){
+				results.put(affectedComponent, parent);
+			}
+		}
+		return results;
+	}
+	
+	/**
+	 * 
+	 * @param version
+	 * @param initialMarkedComponents
+	 * @return
+	 */
+	public static Map<Component, Module> lookUpParentModulesOfComponents(Collection<Component> initialMarkedComponents,
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Map<Component, Module> results = new HashMap<Component, Module>();
+		for(Component modifyComponent : initialMarkedComponents){
+			if(modifyComponent.getParentModule() instanceof Module)
+				results.put(modifyComponent, (Module)modifyComponent.getParentModule());
+		}
+		
+		List<ModifyComponent<Component>> componentsToModify = changePropagationDueToHardwareChange.getComponentModifications();
+		for(ModifyComponent<Component> componentToModify : componentsToModify){
+			Component affectedComponent = componentToModify.getAffectedElement();
+			Module parent = affectedComponent.getParentModule();
+			if(parent != null){
+				results.put(affectedComponent, parent);
+			}
+		}
+		return results;
+	}
+	
+	/**
+	 * 
+	 * @param version
+	 * @param initialMarkedComponents
+	 * @return
+	 */
+	public static Map<Component, Set<Interface>> lookUpInterfacesOfComponents(Collection<Component> initialMarkedComponents, 
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Map<Component, Set<Interface>> results = new HashMap<Component, Set<Interface>>();
+		for(Component modifyComponent : initialMarkedComponents){
+			for(Interface interfac : modifyComponent.getConnectedInterfaces()){
+				if(results.get(modifyComponent) == null)
+					results.put(modifyComponent, new HashSet<Interface>());
+				results.get(modifyComponent).add(interfac);
+			}
+		}
+		
+		List<ModifyComponent<Component>> componentsToModify = changePropagationDueToHardwareChange.getComponentModifications();
+		for(ModifyComponent<Component> componentToModify : componentsToModify){
+			Component affectedComponent = componentToModify.getAffectedElement();
+			for(Interface interfac : affectedComponent.getConnectedInterfaces()){
+				if(results.get(affectedComponent) == null)
+					results.put(affectedComponent, new HashSet<Interface>());
+				results.get(affectedComponent).add(interfac);
+			}
+		}
+		
+		return results;
+	}
+	
+	
+	
+	/*	########################################################################################################################
+	 * 	#  INTERFACE LOOKUP SECTION  ###########################################################################################
+	 *  ########################################################################################################################              
+	 */
+	
+	/**
+	 * 
+	 * @param initialMarkedInterfaces
+	 * @return
+	 */
+	public static Map<Interface, Set<Module>> lookUpParentModulesOfInterfaces(
+			Collection<Interface> initialMarkedInterfaces,
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Map<Interface, Set<Module>> results = new HashMap<Interface, Set<Module>>();
+		for(Interface modifyInterface : initialMarkedInterfaces){
+			for(Identifier parent : modifyInterface.getParentElement()){
+				if(parent instanceof Module){
+					if(results.get(modifyInterface) == null)
+						results.put(modifyInterface, new HashSet<Module>());
+					results.get(modifyInterface).add((Module) parent);
+				}
+			}
+			
+		}
+		
+		List<ModifyInterface<Interface>> interfacesToModify = changePropagationDueToHardwareChange.getInterfaceModifications();
+		for(ModifyInterface<Interface> modifyInterface : interfacesToModify){
+			for(Identifier parent : modifyInterface.getAffectedElement().getParentElement()){
+				if(parent instanceof Module){
+					if(results.get(modifyInterface.getAffectedElement()) == null)
+						results.put(modifyInterface.getAffectedElement(), new HashSet<Module>());
+					results.get(modifyInterface.getAffectedElement()).add((Module) parent);
+				}
+			}
+		}
+		
+		return results;
+	}
+	
+	/**
+	 * 
+	 * @param initialMarkedInterfaces
+	 * @return
+	 */
+	public static Map<Interface, Set<Component>> lookUpParentComponentsOfInterfaces(
+			Collection<Interface> initialMarkedInterfaces,
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Map<Interface, Set<Component>> results = new HashMap<Interface, Set<Component>>();
+		for(Interface modifyInterface : initialMarkedInterfaces){
+			for(Identifier parent : modifyInterface.getParentElement()){
+				if(parent instanceof Component){
+					if(results.get(modifyInterface) == null)
+						results.put(modifyInterface, new HashSet<Component>());
+					results.get(modifyInterface).add((Component) parent);
+				}
+			}
+			
+		}
+		
+		for(ModifyInterface<Interface> modifyInterface : changePropagationDueToHardwareChange.getInterfaceModifications()){
+			for(Identifier parent : modifyInterface.getAffectedElement().getParentElement()){
+				if(parent instanceof Component){
+					if(results.get(modifyInterface.getAffectedElement()) == null)
+						results.put(modifyInterface.getAffectedElement(), new HashSet<Component>());
+					results.get(modifyInterface.getAffectedElement()).add((Component) parent);
+				}
+			}
+		}
+		return results;
+	}
+
+	
+//#########################################################################################################################################
+//#########################################################################################################################################
+//#########################################################################################################################################
+	
+	public static Map<Component, Set<ModifyInterface<Interface>>> lookUpChangesBasedOnSignalInterfaces(APSArchitectureVersion version,
+			Collection<ModifyInterface<Interface>> initialMarkedInterfaces){
+		Map<Component, Set<ModifyInterface<Interface>>> results = new HashMap<Component, Set<ModifyInterface<Interface>>>();
+		for(ModifyInterface<Interface> modifyInterface : initialMarkedInterfaces){
+			for(Component component : version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant()){
+				if(modifyInterface.getAffectedElement() instanceof Interface){
+					for(Interface componentInterface : component.getConnectedInterfaces()){
+						if(componentInterface.getId() == modifyInterface.getAffectedElement().getId()){
+							if(results.get(component) == null)
+								results.put(component, new HashSet<ModifyInterface<Interface>>());
+							results.get(component).add(modifyInterface);
+						}
+					}
+				}
+			}
+		}
+		return results;
+	}
+
+	public static BusComponentsParams lookUpChangesBasedOnBusModification(APSArchitectureVersion version,
 			Collection<BusBox> initialMarkedBusBoxes){
 		EList<Component> allComponents = version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant();
 		bcParams = initBusComponentParams(initialMarkedBusBoxes);
@@ -388,5 +732,8 @@ public class ArchitectureModelLookup {
 		public Map<BusCable, Set<Identifier>> causingElementsOfBusCable;
 		public boolean hasChanged;
 	}
+
+
+
 	
 }
