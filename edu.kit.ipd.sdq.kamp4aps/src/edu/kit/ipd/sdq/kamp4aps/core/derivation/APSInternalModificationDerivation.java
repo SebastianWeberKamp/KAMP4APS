@@ -10,10 +10,10 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
 import edu.kit.ipd.sdq.kamp.workplan.Activity;
 import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
-import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
-import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureAnnotationLookup;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.core.APSActivityElementType;
+import edu.kit.ipd.sdq.kamp4aps.core.APSActivityType;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureAnnotationLookup;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
@@ -32,7 +32,7 @@ import xPPU.StructureRepository.Structure;
  * @see ArchitectureModelLookup
  */
 
-public class InternalModificationDerivation {
+public class APSInternalModificationDerivation {
 
 	public static List<String> getCausingElementsNames(AbstractModification<?, ?> modification) {
 		List<String> causingElementNames = new LinkedList<String>();
@@ -40,19 +40,19 @@ public class InternalModificationDerivation {
 			if (causingElement instanceof Component) {
 				Component causingCompoenent = (Component) causingElement;
 				causingElementNames.add(causingCompoenent.eClass().
-						getName() + " \"" + causingCompoenent.getId() + "\"");
+						getName() + " \"" + causingCompoenent.getName() + "\"");
 			} else if (causingElement instanceof Module) {
 				Module causingModule = (Module) causingElement;
 				causingElementNames.add(causingModule.eClass().
-						getName() + " \"" + causingModule.getId() + "\"");
+						getName() + " \"" + causingModule.getName() + "\"");
 			} else if (causingElement instanceof Interface) {
 				Interface causingInterface = (Interface) causingElement;
 				causingElementNames.add(causingInterface.eClass().
-						getName() + " \"" + causingInterface.getId() + "\"");
+						getName() + " \"" + causingInterface.getName() + "\"");
 			} else if (causingElement instanceof Structure) {
 				Structure causingStructure = (Structure) causingElement;
 				causingElementNames.add(causingStructure.eClass().
-						getName() + " \"" + causingStructure.getId() + "\"");
+						getName() + " \"" + causingStructure.getName() + "\"");
 			}
 		}
 		return causingElementNames;
@@ -62,23 +62,23 @@ public class InternalModificationDerivation {
 			List<String> causingElementNames, AbstractActivityElementType activityElementType) {
 		if (modification instanceof ModifyComponent<?>){
 			Component component = ((ModifyComponent<?>) modification).getAffectedElement();
-			return new Activity(ActivityType.INTERNALMODIFICATIONMARK, activityElementType, component,
-					component.getId(), causingElementNames, BasicActivity.MODIFY, "Modify " + component.eClass().getName() + ".");
+			return new Activity(APSActivityType.INTERNALMODIFICATIONMARK, activityElementType, component,
+					component.getName(), causingElementNames, BasicActivity.MODIFY, "Modify " + component.eClass().getName() + ".");
 		}
 		if (modification instanceof ModifyInterface<?>){
 			Interface interfaceElement = ((ModifyInterface<?>) modification).getAffectedElement();
-			return new Activity(ActivityType.INTERNALMODIFICATIONMARK, activityElementType, interfaceElement,
-					interfaceElement.getId(), causingElementNames, BasicActivity.MODIFY, "Modify " + interfaceElement.eClass().getName() + ".");
+			return new Activity(APSActivityType.INTERNALMODIFICATIONMARK, activityElementType, interfaceElement,
+					interfaceElement.getName(), causingElementNames, BasicActivity.MODIFY, "Modify " + interfaceElement.eClass().getName() + ".");
 		}
 		if (modification instanceof ModifyStructure<?>){
 			Structure structure = ((ModifyStructure<?>) modification).getAffectedElement();
-			return new Activity(ActivityType.INTERNALMODIFICATIONMARK, activityElementType, structure,
-					structure.getId(), causingElementNames, BasicActivity.MODIFY, "Modify " + structure.eClass().getName() + ".");
+			return new Activity(APSActivityType.INTERNALMODIFICATIONMARK, activityElementType, structure,
+					structure.getName(), causingElementNames, BasicActivity.MODIFY, "Modify " + structure.eClass().getName() + ".");
 		}
 		if (modification instanceof ModifyModule<?>){
 			Module module = ((ModifyModule<?>) modification).getAffectedElement();
-			return new Activity(ActivityType.INTERNALMODIFICATIONMARK, activityElementType, module,
-					module.getId(), causingElementNames, BasicActivity.MODIFY, "Modify " + module.eClass().getName() + ".");
+			return new Activity(APSActivityType.INTERNALMODIFICATIONMARK, activityElementType, module,
+					module.getName(), causingElementNames, BasicActivity.MODIFY, "Modify " + module.eClass().getName() + ".");
 		} else {
 			return null;
 		}
@@ -97,7 +97,7 @@ public class InternalModificationDerivation {
 		return result;
 	}
 
-	public List<Activity> deriveInternalModifications(ArchitectureVersion targetVersion) {
+	public List<Activity> deriveInternalModifications(APSArchitectureVersion targetVersion) {
 		List<Activity> activityList = new ArrayList<Activity>();
 
 		this.deriveComponentModifications(targetVersion, activityList);
@@ -108,39 +108,39 @@ public class InternalModificationDerivation {
 		return activityList;
 	}
 
-	private void deriveComponentModifications(ArchitectureVersion targetVersion, List<Activity> activityList) {
+	private void deriveComponentModifications(APSArchitectureVersion targetVersion, List<Activity> activityList) {
 		Collection<ModifyComponent> modifyComponents = ArchitectureModelLookup
 				.lookUpAllCalculatedMarksOfAType(targetVersion, ModifyComponent.class);
 		for (ModifyComponent<?> modifyComponent : modifyComponents) {
-			Activity componentActivity = createModificationActivity(modifyComponent, ActivityElementType.COMPONENT);
+			Activity componentActivity = createModificationActivity(modifyComponent, APSActivityElementType.COMPONENT);
 			activityList.add(componentActivity);
 //			this.deriveSubActivities(modifyComponent, componentActivity);
 		}
 	}
 
-	private void deriveInterfaceModifications(ArchitectureVersion targetVersion, List<Activity> activityList) {
+	private void deriveInterfaceModifications(APSArchitectureVersion targetVersion, List<Activity> activityList) {
 		Collection<ModifyInterface> modifyInterfaces = ArchitectureModelLookup
 				.lookUpAllCalculatedMarksOfAType(targetVersion, ModifyInterface.class);
 		for (ModifyInterface<?> modifyInterface : modifyInterfaces) {
-			Activity interfaceActivity = createModificationActivity(modifyInterface, ActivityElementType.INTERFACE);
+			Activity interfaceActivity = createModificationActivity(modifyInterface, APSActivityElementType.INTERFACE);
 			activityList.add(interfaceActivity);
 		}
 	}
 
-	private void deriveModuleModifications(ArchitectureVersion targetVersion, List<Activity> activityList) {
+	private void deriveModuleModifications(APSArchitectureVersion targetVersion, List<Activity> activityList) {
 		Collection<ModifyModule> modifyModules = ArchitectureModelLookup
 				.lookUpAllCalculatedMarksOfAType(targetVersion, ModifyModule.class);
 		for (ModifyModule<?> modifyInterface : modifyModules) {
-			Activity interfaceActivity = createModificationActivity(modifyInterface, ActivityElementType.MODULE);
+			Activity interfaceActivity = createModificationActivity(modifyInterface, APSActivityElementType.MODULE);
 			activityList.add(interfaceActivity);
 		}
 	}
 	
-	private void deriveStructureModifications(ArchitectureVersion targetVersion, List<Activity> activityList) {
+	private void deriveStructureModifications(APSArchitectureVersion targetVersion, List<Activity> activityList) {
 		Collection<ModifyStructure> modifyStructure = ArchitectureModelLookup
 				.lookUpAllCalculatedMarksOfAType(targetVersion, ModifyStructure.class);
 		for (ModifyStructure<?> modifyInterface : modifyStructure) {
-			Activity interfaceActivity = createModificationActivity(modifyInterface, ActivityElementType.STRUCTURE);
+			Activity interfaceActivity = createModificationActivity(modifyInterface, APSActivityElementType.STRUCTURE);
 			activityList.add(interfaceActivity);
 		}
 	}

@@ -3,13 +3,14 @@ package edu.kit.ipd.sdq.kamp4aps.core.derivation;
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
 import edu.kit.ipd.sdq.kamp.workplan.Activity;
 import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
-import edu.kit.ipd.sdq.kamp4aps.core.ActivityElementType;
-import edu.kit.ipd.sdq.kamp4aps.core.ActivityType;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.core.APSActivityElementType;
+import edu.kit.ipd.sdq.kamp4aps.core.APSActivityType;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.MicroswitchModule;
 import xPPU.ComponentRepository.TurningTable;
 import xPPU.Identifier.Identifier;
+import xPPU.Identifier.NamedElement;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.ModuleRepository.Module;
 import xPPU.StructureRepository.Structure;
@@ -22,18 +23,18 @@ import xPPU.StructureRepository.Structure;
  *
  */
 
-public class SubactivityDerivation {
+public class APSSubactivityDerivation {
 
 	public static Activity addSubActivity(Module entity, AbstractActivityElementType activityElementType,
 			Module parentElement, Activity parentActivity) {
-		Activity result = new Activity(ActivityType.ARCHITECTUREMODELDIFF, activityElementType, entity, entity.getId(),
+		Activity result = new Activity(APSActivityType.ARCHITECTUREMODELDIFF, activityElementType, entity, entity.getId(),
 				null, parentActivity.getBasicActivity(),
 				generateDescription(parentElement, entity, parentActivity.getBasicActivity()));
 		parentActivity.addSubActivity(result);
 		return result;
 	}
 
-	public void deriveSubactivities(Identifier plantElement, Activity parentActivity, ArchitectureVersion version) {
+	public void deriveSubactivities(NamedElement plantElement, Activity parentActivity, APSArchitectureVersion version) {
 		if (plantElement instanceof Component) {
 			deriveSubactivity((Component) plantElement, parentActivity, version);
 		} else if (plantElement instanceof Interface) {
@@ -45,16 +46,16 @@ public class SubactivityDerivation {
 		}
 	}
 
-	private void deriveSubactivity(Component plantElement, Activity parentActivity, ArchitectureVersion version) {
+	private void deriveSubactivity(Component plantElement, Activity parentActivity, APSArchitectureVersion version) {
 		if (plantElement instanceof MicroswitchModule) {
 			for (Component c : version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant()) {
 				if (c instanceof TurningTable) {
 					TurningTable tt = (TurningTable) c;
 					for(MicroswitchModule mm : tt.getMicroswitchModule()){
 						if (plantElement.getId() == mm.getId()) {
-							addSubActivity((Component) tt, ActivityElementType.COMPONENT, c,
+							addSubActivity((Component) tt, APSActivityElementType.COMPONENT, c,
 									parentActivity);
-							addSubActivity((Structure) tt.getParent(), ActivityElementType.STRUCTURE, c,
+							addSubActivity((Structure) tt.getParent(), APSActivityElementType.STRUCTURE, c,
 									parentActivity);
 						}
 					}
@@ -63,31 +64,31 @@ public class SubactivityDerivation {
 		}
 	}
 
-	private Activity addSubActivity(Component component, ActivityElementType elementType, Component parentElement, Activity parentActivity) {
-		Activity result = new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, component, component.getId(), null, parentActivity.getBasicActivity(), 
+	private Activity addSubActivity(Component component, APSActivityElementType elementType, Component parentElement, Activity parentActivity) {
+		Activity result = new Activity(APSActivityType.ARCHITECTUREMODELDIFF, elementType, component, component.getId(), null, parentActivity.getBasicActivity(), 
 				generateDescription(parentElement, component, parentActivity.getBasicActivity()));
 		parentActivity.addSubActivity(result);
 		return parentActivity;
 	}
 
-	private Activity addSubActivity(Structure structure, ActivityElementType elementType, Component parentElement, Activity parentActivity) {
-		Activity result = new Activity(ActivityType.ARCHITECTUREMODELDIFF, elementType, structure, structure.getId(), null, parentActivity.getBasicActivity(), 
+	private Activity addSubActivity(Structure structure, APSActivityElementType elementType, Component parentElement, Activity parentActivity) {
+		Activity result = new Activity(APSActivityType.ARCHITECTUREMODELDIFF, elementType, structure, structure.getId(), null, parentActivity.getBasicActivity(), 
 				generateDescription(parentElement, structure, parentActivity.getBasicActivity()));
 		parentActivity.addSubActivity(result);
 		return parentActivity;
 	}
 
-	private void deriveSubactivity(Interface plantElement, Activity parentActivity, ArchitectureVersion version) {
+	private void deriveSubactivity(Interface plantElement, Activity parentActivity, APSArchitectureVersion version) {
 		// TODO Auto-generated method stub
 
 	}
 
-	private void deriveSubactivity(Module plantElement, Activity parentActivity, ArchitectureVersion version) {
+	private void deriveSubactivity(Module plantElement, Activity parentActivity, APSArchitectureVersion version) {
 		// TODO Auto-generated method stub
 
 	}
 
-	private void deriveSubactivity(Structure plantElement, Activity parentActivity, ArchitectureVersion version) {
+	private void deriveSubactivity(Structure plantElement, Activity parentActivity, APSArchitectureVersion version) {
 		// TODO Auto-generated method stub
 
 	}
