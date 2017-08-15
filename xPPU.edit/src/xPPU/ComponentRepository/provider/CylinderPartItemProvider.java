@@ -70,7 +70,7 @@ public class CylinderPartItemProvider extends MechanicalPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((CylinderPart)object).getId();
+		String label = ((CylinderPart)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_CylinderPart_type") :
 			getString("_UI_CylinderPart_type") + " " + label;

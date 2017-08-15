@@ -7,7 +7,10 @@ import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
+import xPPU.Entity;
+
 import xPPU.Identifier.Identifier;
+import xPPU.Identifier.NamedElement;
 
 import xPPU.StructureRepository.*;
 
@@ -71,7 +74,9 @@ public class StructureRepositorySwitch<T> extends Switch<T> {
 			case StructureRepositoryPackage.STRUCTURE: {
 				Structure structure = (Structure)theEObject;
 				T result = caseStructure(structure);
+				if (result == null) result = caseEntity(structure);
 				if (result == null) result = caseIdentifier(structure);
+				if (result == null) result = caseNamedElement(structure);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -79,7 +84,9 @@ public class StructureRepositorySwitch<T> extends Switch<T> {
 				CommunicationNetwork communicationNetwork = (CommunicationNetwork)theEObject;
 				T result = caseCommunicationNetwork(communicationNetwork);
 				if (result == null) result = caseStructure(communicationNetwork);
+				if (result == null) result = caseEntity(communicationNetwork);
 				if (result == null) result = caseIdentifier(communicationNetwork);
+				if (result == null) result = caseNamedElement(communicationNetwork);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -87,7 +94,9 @@ public class StructureRepositorySwitch<T> extends Switch<T> {
 				PowerNetwork powerNetwork = (PowerNetwork)theEObject;
 				T result = casePowerNetwork(powerNetwork);
 				if (result == null) result = caseStructure(powerNetwork);
+				if (result == null) result = caseEntity(powerNetwork);
 				if (result == null) result = caseIdentifier(powerNetwork);
+				if (result == null) result = caseNamedElement(powerNetwork);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -95,7 +104,9 @@ public class StructureRepositorySwitch<T> extends Switch<T> {
 				ControlCabinet controlCabinet = (ControlCabinet)theEObject;
 				T result = caseControlCabinet(controlCabinet);
 				if (result == null) result = caseStructure(controlCabinet);
+				if (result == null) result = caseEntity(controlCabinet);
 				if (result == null) result = caseIdentifier(controlCabinet);
+				if (result == null) result = caseNamedElement(controlCabinet);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -103,7 +114,9 @@ public class StructureRepositorySwitch<T> extends Switch<T> {
 				PneumaticNetwork pneumaticNetwork = (PneumaticNetwork)theEObject;
 				T result = casePneumaticNetwork(pneumaticNetwork);
 				if (result == null) result = caseStructure(pneumaticNetwork);
+				if (result == null) result = caseEntity(pneumaticNetwork);
 				if (result == null) result = caseIdentifier(pneumaticNetwork);
+				if (result == null) result = caseNamedElement(pneumaticNetwork);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -111,7 +124,9 @@ public class StructureRepositorySwitch<T> extends Switch<T> {
 				Conveyor conveyor = (Conveyor)theEObject;
 				T result = caseConveyor(conveyor);
 				if (result == null) result = caseStructure(conveyor);
+				if (result == null) result = caseEntity(conveyor);
 				if (result == null) result = caseIdentifier(conveyor);
+				if (result == null) result = caseNamedElement(conveyor);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -119,7 +134,9 @@ public class StructureRepositorySwitch<T> extends Switch<T> {
 				Crane crane = (Crane)theEObject;
 				T result = caseCrane(crane);
 				if (result == null) result = caseStructure(crane);
+				if (result == null) result = caseEntity(crane);
 				if (result == null) result = caseIdentifier(crane);
+				if (result == null) result = caseNamedElement(crane);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -127,7 +144,19 @@ public class StructureRepositorySwitch<T> extends Switch<T> {
 				PowerWiring powerWiring = (PowerWiring)theEObject;
 				T result = casePowerWiring(powerWiring);
 				if (result == null) result = caseStructure(powerWiring);
+				if (result == null) result = caseEntity(powerWiring);
 				if (result == null) result = caseIdentifier(powerWiring);
+				if (result == null) result = caseNamedElement(powerWiring);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case StructureRepositoryPackage.LOGICAL_WIRING: {
+				LogicalWiring logicalWiring = (LogicalWiring)theEObject;
+				T result = caseLogicalWiring(logicalWiring);
+				if (result == null) result = caseStructure(logicalWiring);
+				if (result == null) result = caseEntity(logicalWiring);
+				if (result == null) result = caseIdentifier(logicalWiring);
+				if (result == null) result = caseNamedElement(logicalWiring);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -256,6 +285,21 @@ public class StructureRepositorySwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Logical Wiring</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Logical Wiring</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseLogicalWiring(LogicalWiring object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -267,6 +311,36 @@ public class StructureRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIdentifier(Identifier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamedElement(NamedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEntity(Entity object) {
 		return null;
 	}
 

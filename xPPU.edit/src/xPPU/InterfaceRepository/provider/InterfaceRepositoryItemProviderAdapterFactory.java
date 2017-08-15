@@ -95,141 +95,49 @@ public class InterfaceRepositoryItemProviderAdapterFactory extends InterfaceRepo
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.ScrewingSplitter} instances.
+	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.Interface} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ScrewingSplitterItemProvider screwingSplitterItemProvider;
+	protected InterfaceItemProvider interfaceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link xPPU.InterfaceRepository.ScrewingSplitter}.
+	 * This creates an adapter for a {@link xPPU.InterfaceRepository.Interface}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createScrewingSplitterAdapter() {
-		if (screwingSplitterItemProvider == null) {
-			screwingSplitterItemProvider = new ScrewingSplitterItemProvider(this);
+	public Adapter createInterfaceAdapter() {
+		if (interfaceItemProvider == null) {
+			interfaceItemProvider = new InterfaceItemProvider(this);
 		}
 
-		return screwingSplitterItemProvider;
+		return interfaceItemProvider;
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.ScrewingMotor} instances.
+	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.Screwing} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ScrewingMotorItemProvider screwingMotorItemProvider;
+	protected ScrewingItemProvider screwingItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link xPPU.InterfaceRepository.ScrewingMotor}.
+	 * This creates an adapter for a {@link xPPU.InterfaceRepository.Screwing}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createScrewingMotorAdapter() {
-		if (screwingMotorItemProvider == null) {
-			screwingMotorItemProvider = new ScrewingMotorItemProvider(this);
+	public Adapter createScrewingAdapter() {
+		if (screwingItemProvider == null) {
+			screwingItemProvider = new ScrewingItemProvider(this);
 		}
 
-		return screwingMotorItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.ScrewingRack} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ScrewingRackItemProvider screwingRackItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xPPU.InterfaceRepository.ScrewingRack}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createScrewingRackAdapter() {
-		if (screwingRackItemProvider == null) {
-			screwingRackItemProvider = new ScrewingRackItemProvider(this);
-		}
-
-		return screwingRackItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.ScrewingCylinder} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ScrewingCylinderItemProvider screwingCylinderItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xPPU.InterfaceRepository.ScrewingCylinder}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createScrewingCylinderAdapter() {
-		if (screwingCylinderItemProvider == null) {
-			screwingCylinderItemProvider = new ScrewingCylinderItemProvider(this);
-		}
-
-		return screwingCylinderItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.ScrewingFixture} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ScrewingFixtureItemProvider screwingFixtureItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xPPU.InterfaceRepository.ScrewingFixture}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createScrewingFixtureAdapter() {
-		if (screwingFixtureItemProvider == null) {
-			screwingFixtureItemProvider = new ScrewingFixtureItemProvider(this);
-		}
-
-		return screwingFixtureItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.ScrewingPotentiometer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ScrewingPotentiometerItemProvider screwingPotentiometerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xPPU.InterfaceRepository.ScrewingPotentiometer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createScrewingPotentiometerAdapter() {
-		if (screwingPotentiometerItemProvider == null) {
-			screwingPotentiometerItemProvider = new ScrewingPotentiometerItemProvider(this);
-		}
-
-		return screwingPotentiometerItemProvider;
+		return screwingItemProvider;
 	}
 
 	/**
@@ -253,52 +161,6 @@ public class InterfaceRepositoryItemProviderAdapterFactory extends InterfaceRepo
 		}
 
 		return suspensionItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.SuspensionRack} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SuspensionRackItemProvider suspensionRackItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xPPU.InterfaceRepository.SuspensionRack}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSuspensionRackAdapter() {
-		if (suspensionRackItemProvider == null) {
-			suspensionRackItemProvider = new SuspensionRackItemProvider(this);
-		}
-
-		return suspensionRackItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.SuspensionArm} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected SuspensionArmItemProvider suspensionArmItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link xPPU.InterfaceRepository.SuspensionArm}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createSuspensionArmAdapter() {
-		if (suspensionArmItemProvider == null) {
-			suspensionArmItemProvider = new SuspensionArmItemProvider(this);
-		}
-
-		return suspensionArmItemProvider;
 	}
 
 	/**
@@ -463,6 +325,29 @@ public class InterfaceRepositoryItemProviderAdapterFactory extends InterfaceRepo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.InterfaceRepository.Fixture} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FixtureItemProvider fixtureItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.InterfaceRepository.Fixture}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFixtureAdapter() {
+		if (fixtureItemProvider == null) {
+			fixtureItemProvider = new FixtureItemProvider(this);
+		}
+
+		return fixtureItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -562,15 +447,9 @@ public class InterfaceRepositoryItemProviderAdapterFactory extends InterfaceRepo
 	 */
 	public void dispose() {
 		if (interfaceRepositoryItemProvider != null) interfaceRepositoryItemProvider.dispose();
-		if (screwingSplitterItemProvider != null) screwingSplitterItemProvider.dispose();
-		if (screwingMotorItemProvider != null) screwingMotorItemProvider.dispose();
-		if (screwingRackItemProvider != null) screwingRackItemProvider.dispose();
-		if (screwingCylinderItemProvider != null) screwingCylinderItemProvider.dispose();
-		if (screwingFixtureItemProvider != null) screwingFixtureItemProvider.dispose();
-		if (screwingPotentiometerItemProvider != null) screwingPotentiometerItemProvider.dispose();
+		if (interfaceItemProvider != null) interfaceItemProvider.dispose();
+		if (screwingItemProvider != null) screwingItemProvider.dispose();
 		if (suspensionItemProvider != null) suspensionItemProvider.dispose();
-		if (suspensionRackItemProvider != null) suspensionRackItemProvider.dispose();
-		if (suspensionArmItemProvider != null) suspensionArmItemProvider.dispose();
 		if (gearingItemProvider != null) gearingItemProvider.dispose();
 		if (clampingItemProvider != null) clampingItemProvider.dispose();
 		if (pneumaticSupplyItemProvider != null) pneumaticSupplyItemProvider.dispose();
@@ -578,6 +457,7 @@ public class InterfaceRepositoryItemProviderAdapterFactory extends InterfaceRepo
 		if (waterSupplyItemProvider != null) waterSupplyItemProvider.dispose();
 		if (physicalConnectionItemProvider != null) physicalConnectionItemProvider.dispose();
 		if (transportConnectionItemProvider != null) transportConnectionItemProvider.dispose();
+		if (fixtureItemProvider != null) fixtureItemProvider.dispose();
 	}
 
 }

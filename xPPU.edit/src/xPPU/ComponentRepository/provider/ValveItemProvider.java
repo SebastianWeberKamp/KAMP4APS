@@ -124,7 +124,7 @@ public class ValveItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Valve)object).getId();
+		String label = ((Valve)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Valve_type") :
 			getString("_UI_Valve_type") + " " + label;

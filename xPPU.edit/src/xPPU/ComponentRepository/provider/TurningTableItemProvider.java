@@ -110,7 +110,7 @@ public class TurningTableItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((TurningTable)object).getId();
+		String label = ((TurningTable)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_TurningTable_type") :
 			getString("_UI_TurningTable_type") + " " + label;

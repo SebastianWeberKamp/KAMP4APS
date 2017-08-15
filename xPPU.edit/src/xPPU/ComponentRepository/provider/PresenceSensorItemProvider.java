@@ -64,7 +64,7 @@ public class PresenceSensorItemProvider extends SensorItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PresenceSensor)object).getId();
+		String label = ((PresenceSensor)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PresenceSensor_type") :
 			getString("_UI_PresenceSensor_type") + " " + label;

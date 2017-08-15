@@ -13,8 +13,6 @@ import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 import xPPU.ComponentRepository.Panel;
 
-import xPPU.Identifier.impl.IdentifierImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Panel</b></em>'.
@@ -28,7 +26,7 @@ import xPPU.Identifier.impl.IdentifierImpl;
  *
  * @generated
  */
-public abstract class PanelImpl extends IdentifierImpl implements Panel {
+public abstract class PanelImpl extends ComponentImpl implements Panel {
 	/**
 	 * The cached value of the '{@link #getComponentRepository() <em>Component Repository</em>}' reference.
 	 * <!-- begin-user-doc -->

@@ -89,7 +89,7 @@ public class PowerSplitterItemProvider extends SplitterItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PowerSplitter)object).getId();
+		String label = ((PowerSplitter)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PowerSplitter_type") :
 			getString("_UI_PowerSplitter_type") + " " + label;

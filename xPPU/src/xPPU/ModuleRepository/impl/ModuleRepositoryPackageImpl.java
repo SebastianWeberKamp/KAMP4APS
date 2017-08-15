@@ -32,6 +32,7 @@ import xPPU.MechanicalComponents.MechanicalComponentsPackage;
 
 import xPPU.MechanicalComponents.impl.MechanicalComponentsPackageImpl;
 
+import xPPU.ModuleRepository.ConveyorBeltModule;
 import xPPU.ModuleRepository.InductiveSensorModule;
 import xPPU.ModuleRepository.Module;
 import xPPU.ModuleRepository.ModuleRepository;
@@ -129,6 +130,13 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 	 * @generated
 	 */
 	private EClass pressureSensorModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass conveyorBeltModuleEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -249,7 +257,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getModule_ParentStructure() {
+	public EReference getModule_ParentEntity() {
 		return (EReference)moduleEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -447,6 +455,33 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getConveyorBeltModule() {
+		return conveyorBeltModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConveyorBeltModule_RubberBand() {
+		return (EReference)conveyorBeltModuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getConveyorBeltModule_Frame() {
+		return (EReference)conveyorBeltModuleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ModuleRepositoryFactory getModuleRepositoryFactory() {
 		return (ModuleRepositoryFactory)getEFactoryInstance();
 	}
@@ -474,7 +509,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		createEReference(moduleRepositoryEClass, MODULE_REPOSITORY__ALL_MODULES_IN_PLANT);
 
 		moduleEClass = createEClass(MODULE);
-		createEReference(moduleEClass, MODULE__PARENT_STRUCTURE);
+		createEReference(moduleEClass, MODULE__PARENT_ENTITY);
 		createEReference(moduleEClass, MODULE__MODULES);
 		createEReference(moduleEClass, MODULE__COMPONENTS);
 		createEReference(moduleEClass, MODULE__INTERFACES);
@@ -504,6 +539,10 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		createEReference(presenceSensorModuleEClass, PRESENCE_SENSOR_MODULE__BUS_SLAVE);
 
 		pressureSensorModuleEClass = createEClass(PRESSURE_SENSOR_MODULE);
+
+		conveyorBeltModuleEClass = createEClass(CONVEYOR_BELT_MODULE);
+		createEReference(conveyorBeltModuleEClass, CONVEYOR_BELT_MODULE__RUBBER_BAND);
+		createEReference(conveyorBeltModuleEClass, CONVEYOR_BELT_MODULE__FRAME);
 	}
 
 	/**
@@ -531,10 +570,11 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 
 		// Obtain other dependent packages
 		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
-		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
+		XPPUPackage theXPPUPackage = (XPPUPackage)EPackage.Registry.INSTANCE.getEPackage(XPPUPackage.eNS_URI);
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
 		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
+		MechanicalComponentsPackage theMechanicalComponentsPackage = (MechanicalComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -542,7 +582,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 
 		// Add supertypes to classes
 		moduleRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
-		moduleEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+		moduleEClass.getESuperTypes().add(theXPPUPackage.getEntity());
 		rampModuleEClass.getESuperTypes().add(this.getModule());
 		pusherModuleEClass.getESuperTypes().add(this.getModule());
 		motorModuleEClass.getESuperTypes().add(this.getModule());
@@ -551,15 +591,16 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		inductiveSensorModuleEClass.getESuperTypes().add(this.getModule());
 		presenceSensorModuleEClass.getESuperTypes().add(this.getModule());
 		pressureSensorModuleEClass.getESuperTypes().add(this.getModule());
+		conveyorBeltModuleEClass.getESuperTypes().add(this.getModule());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(moduleRepositoryEClass, ModuleRepository.class, "ModuleRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModuleRepository_AllModulesInPlant(), this.getModule(), null, "allModulesInPlant", null, 0, -1, ModuleRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(moduleEClass, Module.class, "Module", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModule_ParentStructure(), theStructureRepositoryPackage.getStructure(), theStructureRepositoryPackage.getStructure_Modules(), "parentStructure", null, 1, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModule_Modules(), this.getModule(), null, "modules", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getModule_Components(), theComponentRepositoryPackage.getComponent(), theComponentRepositoryPackage.getComponent_ParentModule(), "components", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModule_ParentEntity(), theXPPUPackage.getEntity(), null, "parentEntity", null, 1, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModule_Modules(), this.getModule(), null, "modules", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModule_Components(), theComponentRepositoryPackage.getComponent(), theComponentRepositoryPackage.getComponent_ParentModule(), "components", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModule_Interfaces(), theInterfaceRepositoryPackage.getInterface(), null, "interfaces", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(rampModuleEClass, RampModule.class, "RampModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -587,6 +628,10 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		initEReference(getPresenceSensorModule_BusSlave(), theBusComponentsPackage.getBusSlave(), null, "busSlave", null, 1, -1, PresenceSensorModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pressureSensorModuleEClass, PressureSensorModule.class, "PressureSensorModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(conveyorBeltModuleEClass, ConveyorBeltModule.class, "ConveyorBeltModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getConveyorBeltModule_RubberBand(), theMechanicalComponentsPackage.getRubberBand(), null, "rubberBand", null, 1, 1, ConveyorBeltModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getConveyorBeltModule_Frame(), theComponentRepositoryPackage.getFrame(), null, "frame", null, 1, 1, ConveyorBeltModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //ModuleRepositoryPackageImpl

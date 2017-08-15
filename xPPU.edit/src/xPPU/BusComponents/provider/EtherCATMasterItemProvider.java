@@ -64,7 +64,7 @@ public class EtherCATMasterItemProvider extends BusMasterItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EtherCATMaster)object).getId();
+		String label = ((EtherCATMaster)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_EtherCATMaster_type") :
 			getString("_UI_EtherCATMaster_type") + " " + label;

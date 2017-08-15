@@ -64,7 +64,7 @@ public class CornerItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Corner)object).getId();
+		String label = ((Corner)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Corner_type") :
 			getString("_UI_Corner_type") + " " + label;

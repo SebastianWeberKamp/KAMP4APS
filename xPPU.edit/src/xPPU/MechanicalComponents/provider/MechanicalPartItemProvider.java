@@ -84,7 +84,7 @@ public class MechanicalPartItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MechanicalPart)object).getId();
+		String label = ((MechanicalPart)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MechanicalPart_type") :
 			getString("_UI_MechanicalPart_type") + " " + label;

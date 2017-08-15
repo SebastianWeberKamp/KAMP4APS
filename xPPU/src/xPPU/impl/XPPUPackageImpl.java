@@ -21,6 +21,8 @@ import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 
 import xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
+import xPPU.Entity;
+
 import xPPU.Identifier.IdentifierPackage;
 
 import xPPU.Identifier.impl.IdentifierPackageImpl;
@@ -59,6 +61,13 @@ public class XPPUPackageImpl extends EPackageImpl implements XPPUPackage {
 	 * @generated
 	 */
 	private EClass plantEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass entityEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -206,6 +215,15 @@ public class XPPUPackageImpl extends EPackageImpl implements XPPUPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getEntity() {
+		return entityEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public XPPUFactory getXPPUFactory() {
 		return (XPPUFactory)getEFactoryInstance();
 	}
@@ -235,6 +253,8 @@ public class XPPUPackageImpl extends EPackageImpl implements XPPUPackage {
 		createEReference(plantEClass, PLANT__INTERFACE_REPOSITORY);
 		createEReference(plantEClass, PLANT__COMPONENT_REPOSITORY);
 		createEReference(plantEClass, PLANT__MODULE_REPOSITORY);
+
+		entityEClass = createEClass(ENTITY);
 	}
 
 	/**
@@ -285,7 +305,9 @@ public class XPPUPackageImpl extends EPackageImpl implements XPPUPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		plantEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+		plantEClass.getESuperTypes().add(this.getEntity());
+		entityEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+		entityEClass.getESuperTypes().add(theIdentifierPackage.getNamedElement());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(plantEClass, Plant.class, "Plant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -294,6 +316,8 @@ public class XPPUPackageImpl extends EPackageImpl implements XPPUPackage {
 		initEReference(getPlant_InterfaceRepository(), theInterfaceRepositoryPackage.getInterfaceRepository(), null, "interfaceRepository", null, 1, 1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_ComponentRepository(), theComponentRepositoryPackage.getComponentRepository(), null, "componentRepository", null, 1, 1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_ModuleRepository(), theModuleRepositoryPackage.getModuleRepository(), null, "moduleRepository", null, 1, 1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(entityEClass, Entity.class, "Entity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

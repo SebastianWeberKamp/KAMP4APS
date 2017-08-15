@@ -64,7 +64,7 @@ public class ScrewingFixtureItemProvider extends ScrewingItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ScrewingFixture)object).getId();
+		String label = ((ScrewingFixture)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ScrewingFixture_type") :
 			getString("_UI_ScrewingFixture_type") + " " + label;

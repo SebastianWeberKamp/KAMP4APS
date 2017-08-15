@@ -26,6 +26,7 @@ import xPPU.ComponentRepository.Corner;
 import xPPU.ComponentRepository.Cylinder;
 import xPPU.ComponentRepository.CylinderPart;
 import xPPU.ComponentRepository.Dispenser;
+import xPPU.ComponentRepository.Fixture;
 import xPPU.ComponentRepository.Frame;
 import xPPU.ComponentRepository.InductiveSensor;
 import xPPU.ComponentRepository.LogicalWiring;
@@ -44,6 +45,7 @@ import xPPU.ComponentRepository.PowerCable;
 import xPPU.ComponentRepository.PowerSplitter;
 import xPPU.ComponentRepository.PowerSupply;
 import xPPU.ComponentRepository.PresenceSensor;
+import xPPU.ComponentRepository.PressureSensor;
 import xPPU.ComponentRepository.ProportionalCylinder;
 import xPPU.ComponentRepository.Pusher;
 import xPPU.ComponentRepository.Rack;
@@ -171,6 +173,13 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * @generated
 	 */
 	private EClass presenceSensorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pressureSensorEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -409,6 +418,13 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * @generated
 	 */
 	private EClass componentRepositoryEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fixtureEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -711,6 +727,15 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 */
 	public EClass getPresenceSensor() {
 		return presenceSensorEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPressureSensor() {
+		return pressureSensorEClass;
 	}
 
 	/**
@@ -1339,6 +1364,15 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getMicroswitchModule_Switch() {
+		return (EReference)microswitchModuleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getPotentiometer() {
 		return potentiometerEClass;
 	}
@@ -1510,6 +1544,15 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFixture() {
+		return fixtureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ComponentRepositoryFactory getComponentRepositoryFactory() {
 		return (ComponentRepositoryFactory)getEFactoryInstance();
 	}
@@ -1567,6 +1610,8 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		inductiveSensorEClass = createEClass(INDUCTIVE_SENSOR);
 
 		presenceSensorEClass = createEClass(PRESENCE_SENSOR);
+
+		pressureSensorEClass = createEClass(PRESSURE_SENSOR);
 
 		pipeEClass = createEClass(PIPE);
 		createEReference(pipeEClass, PIPE__PLUGS);
@@ -1661,6 +1706,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 
 		microswitchModuleEClass = createEClass(MICROSWITCH_MODULE);
 		createEReference(microswitchModuleEClass, MICROSWITCH_MODULE__BUS_SLAVE);
+		createEReference(microswitchModuleEClass, MICROSWITCH_MODULE__SWITCH);
 
 		potentiometerEClass = createEClass(POTENTIOMETER);
 
@@ -1689,6 +1735,8 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 
 		componentRepositoryEClass = createEClass(COMPONENT_REPOSITORY);
 		createEReference(componentRepositoryEClass, COMPONENT_REPOSITORY__ALL_COMPONENTS_IN_PLANT);
+
+		fixtureEClass = createEClass(FIXTURE);
 	}
 
 	/**
@@ -1715,21 +1763,22 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
+		XPPUPackage theXPPUPackage = (XPPUPackage)EPackage.Registry.INSTANCE.getEPackage(XPPUPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
 		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
 		ModuleRepositoryPackage theModuleRepositoryPackage = (ModuleRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI);
 		ElectronicComponentsPackage theElectronicComponentsPackage = (ElectronicComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(ElectronicComponentsPackage.eNS_URI);
 		MechanicalComponentsPackage theMechanicalComponentsPackage = (MechanicalComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI);
 		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
+		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		componentEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
-		panelEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+		componentEClass.getESuperTypes().add(theXPPUPackage.getEntity());
+		panelEClass.getESuperTypes().add(this.getComponent());
 		operationPanelEClass.getESuperTypes().add(this.getPanel());
 		motorEClass.getESuperTypes().add(this.getComponent());
 		simpleMotorEClass.getESuperTypes().add(this.getMotor());
@@ -1739,6 +1788,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		opticalSensorEClass.getESuperTypes().add(this.getSensor());
 		inductiveSensorEClass.getESuperTypes().add(this.getSensor());
 		presenceSensorEClass.getESuperTypes().add(this.getSensor());
+		pressureSensorEClass.getESuperTypes().add(this.getSensor());
 		pipeEClass.getESuperTypes().add(this.getComponent());
 		pneumaticPipeEClass.getESuperTypes().add(this.getPipe());
 		compressorEClass.getESuperTypes().add(this.getComponent());
@@ -1764,7 +1814,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		turningTableEClass.getESuperTypes().add(this.getComponent());
 		controllerEClass.getESuperTypes().add(this.getComponent());
 		logicalWiringEClass.getESuperTypes().add(this.getComponent());
-		microswitchModuleEClass.getESuperTypes().add(theElectronicComponentsPackage.getSwitch());
+		microswitchModuleEClass.getESuperTypes().add(theModuleRepositoryPackage.getModule());
 		potentiometerEClass.getESuperTypes().add(theElectronicComponentsPackage.getElectronicPart());
 		vacuumSwitchEClass.getESuperTypes().add(theElectronicComponentsPackage.getSwitch());
 		reedSwitchEClass.getESuperTypes().add(theElectronicComponentsPackage.getSwitch());
@@ -1774,12 +1824,13 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		cylinderPartEClass.getESuperTypes().add(theMechanicalComponentsPackage.getMechanicalPart());
 		monostableCylinderEClass.getESuperTypes().add(this.getCylinder());
 		componentRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+		fixtureEClass.getESuperTypes().add(this.getComponent());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(componentEClass, Component.class, "Component", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(componentEClass, Component.class, "Component", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponent_ConnectedInterfaces(), theInterfaceRepositoryPackage.getInterface(), null, "connectedInterfaces", null, 0, -1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponent_Parent(), theStructureRepositoryPackage.getStructure(), theStructureRepositoryPackage.getStructure_Components(), "parent", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponent_ParentModule(), theModuleRepositoryPackage.getModule(), theModuleRepositoryPackage.getModule_Components(), "parentModule", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getComponent_ParentModule(), theModuleRepositoryPackage.getModule(), theModuleRepositoryPackage.getModule_Components(), "parentModule", null, 0, 1, Component.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(panelEClass, Panel.class, "Panel", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPanel_ComponentRepository(), this.getComponent(), null, "componentRepository", null, 1, 1, Panel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1810,6 +1861,8 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		initEClass(inductiveSensorEClass, InductiveSensor.class, "InductiveSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(presenceSensorEClass, PresenceSensor.class, "PresenceSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(pressureSensorEClass, PressureSensor.class, "PressureSensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(pipeEClass, Pipe.class, "Pipe", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPipe_Plugs(), theInterfaceRepositoryPackage.getPneumaticSupply(), null, "plugs", null, 0, 1, Pipe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1904,6 +1957,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 
 		initEClass(microswitchModuleEClass, MicroswitchModule.class, "MicroswitchModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMicroswitchModule_BusSlave(), theBusComponentsPackage.getBusSlave(), null, "busSlave", null, 1, -1, MicroswitchModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMicroswitchModule_Switch(), theElectronicComponentsPackage.getMicroSwitch(), theElectronicComponentsPackage.getMicroSwitch_MsModule(), "switch", null, 1, 1, MicroswitchModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(potentiometerEClass, Potentiometer.class, "Potentiometer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1932,6 +1986,8 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 
 		initEClass(componentRepositoryEClass, ComponentRepository.class, "ComponentRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponentRepository_AllComponentsInPlant(), this.getComponent(), null, "allComponentsInPlant", null, 0, -1, ComponentRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fixtureEClass, Fixture.class, "Fixture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //ComponentRepositoryPackageImpl

@@ -14,12 +14,16 @@ import xPPU.ComponentRepository.*;
 import xPPU.ElectronicComponents.ElectronicPart;
 import xPPU.ElectronicComponents.Switch;
 
+import xPPU.Entity;
+
 import xPPU.Identifier.Identifier;
+import xPPU.Identifier.NamedElement;
 
 import xPPU.InterfaceRepository.Interface;
 
 import xPPU.MechanicalComponents.MechanicalPart;
 import xPPU.MechanicalComponents.Ramp;
+import xPPU.ModuleRepository.Module;
 
 /**
  * <!-- begin-user-doc -->
@@ -120,6 +124,10 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter casePresenceSensor(PresenceSensor object) {
 				return createPresenceSensorAdapter();
+			}
+			@Override
+			public Adapter casePressureSensor(PressureSensor object) {
+				return createPressureSensorAdapter();
 			}
 			@Override
 			public Adapter casePipe(Pipe object) {
@@ -258,8 +266,20 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 				return createComponentRepositoryAdapter();
 			}
 			@Override
+			public Adapter caseFixture(Fixture object) {
+				return createFixtureAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object) {
 				return createIdentifierAdapter();
+			}
+			@Override
+			public Adapter caseNamedElement(NamedElement object) {
+				return createNamedElementAdapter();
+			}
+			@Override
+			public Adapter caseEntity(Entity object) {
+				return createEntityAdapter();
 			}
 			@Override
 			public Adapter caseRamp(Ramp object) {
@@ -268,6 +288,10 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseInterface(Interface object) {
 				return createInterfaceAdapter();
+			}
+			@Override
+			public Adapter caseModule(Module object) {
+				return createModuleAdapter();
 			}
 			@Override
 			public Adapter caseElectronicPart(ElectronicPart object) {
@@ -452,6 +476,20 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPresenceSensorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.ComponentRepository.PressureSensor <em>Pressure Sensor</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.ComponentRepository.PressureSensor
+	 * @generated
+	 */
+	public Adapter createPressureSensorAdapter() {
 		return null;
 	}
 
@@ -932,6 +970,20 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.ComponentRepository.Fixture <em>Fixture</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.ComponentRepository.Fixture
+	 * @generated
+	 */
+	public Adapter createFixtureAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link xPPU.Identifier.Identifier <em>Identifier</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -942,6 +994,34 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createIdentifierAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.Identifier.NamedElement <em>Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.Identifier.NamedElement
+	 * @generated
+	 */
+	public Adapter createNamedElementAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.Entity <em>Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.Entity
+	 * @generated
+	 */
+	public Adapter createEntityAdapter() {
 		return null;
 	}
 
@@ -970,6 +1050,20 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInterfaceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link xPPU.ModuleRepository.Module <em>Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see xPPU.ModuleRepository.Module
+	 * @generated
+	 */
+	public Adapter createModuleAdapter() {
 		return null;
 	}
 

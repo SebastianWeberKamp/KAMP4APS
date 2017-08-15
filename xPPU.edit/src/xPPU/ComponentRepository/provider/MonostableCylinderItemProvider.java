@@ -108,7 +108,7 @@ public class MonostableCylinderItemProvider extends CylinderItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MonostableCylinder)object).getId();
+		String label = ((MonostableCylinder)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MonostableCylinder_type") :
 			getString("_UI_MonostableCylinder_type") + " " + label;

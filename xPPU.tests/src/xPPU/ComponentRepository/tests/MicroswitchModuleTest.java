@@ -6,8 +6,7 @@ import junit.textui.TestRunner;
 
 import xPPU.ComponentRepository.ComponentRepositoryFactory;
 import xPPU.ComponentRepository.MicroswitchModule;
-
-import xPPU.ElectronicComponents.tests.SwitchTest;
+import xPPU.ModuleRepository.tests.ModuleTest;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +14,7 @@ import xPPU.ElectronicComponents.tests.SwitchTest;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MicroswitchModuleTest extends SwitchTest {
+public class MicroswitchModuleTest extends ModuleTest {
 
 	/**
 	 * <!-- begin-user-doc -->

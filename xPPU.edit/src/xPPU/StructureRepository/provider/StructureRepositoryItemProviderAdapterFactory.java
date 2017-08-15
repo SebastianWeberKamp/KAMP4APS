@@ -72,6 +72,29 @@ public class StructureRepositoryItemProviderAdapterFactory extends StructureRepo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.StructureRepository.Structure} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected StructureItemProvider structureItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.StructureRepository.Structure}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createStructureAdapter() {
+		if (structureItemProvider == null) {
+			structureItemProvider = new StructureItemProvider(this);
+		}
+
+		return structureItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link xPPU.StructureRepository.CommunicationNetwork} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -233,6 +256,29 @@ public class StructureRepositoryItemProviderAdapterFactory extends StructureRepo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.StructureRepository.LogicalWiring} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected LogicalWiringItemProvider logicalWiringItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.StructureRepository.LogicalWiring}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createLogicalWiringAdapter() {
+		if (logicalWiringItemProvider == null) {
+			logicalWiringItemProvider = new LogicalWiringItemProvider(this);
+		}
+
+		return logicalWiringItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -331,6 +377,7 @@ public class StructureRepositoryItemProviderAdapterFactory extends StructureRepo
 	 * @generated
 	 */
 	public void dispose() {
+		if (structureItemProvider != null) structureItemProvider.dispose();
 		if (communicationNetworkItemProvider != null) communicationNetworkItemProvider.dispose();
 		if (powerNetworkItemProvider != null) powerNetworkItemProvider.dispose();
 		if (controlCabinetItemProvider != null) controlCabinetItemProvider.dispose();
@@ -338,6 +385,7 @@ public class StructureRepositoryItemProviderAdapterFactory extends StructureRepo
 		if (conveyorItemProvider != null) conveyorItemProvider.dispose();
 		if (craneItemProvider != null) craneItemProvider.dispose();
 		if (powerWiringItemProvider != null) powerWiringItemProvider.dispose();
+		if (logicalWiringItemProvider != null) logicalWiringItemProvider.dispose();
 	}
 
 }

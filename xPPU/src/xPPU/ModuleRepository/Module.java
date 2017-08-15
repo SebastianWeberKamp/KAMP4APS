@@ -6,11 +6,9 @@ import org.eclipse.emf.common.util.EList;
 
 import xPPU.ComponentRepository.Component;
 
-import xPPU.Identifier.Identifier;
+import xPPU.Entity;
 
 import xPPU.InterfaceRepository.Interface;
-
-import xPPU.StructureRepository.Structure;
 
 /**
  * <!-- begin-user-doc -->
@@ -21,7 +19,7 @@ import xPPU.StructureRepository.Structure;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link xPPU.ModuleRepository.Module#getParentStructure <em>Parent Structure</em>}</li>
+ *   <li>{@link xPPU.ModuleRepository.Module#getParentEntity <em>Parent Entity</em>}</li>
  *   <li>{@link xPPU.ModuleRepository.Module#getModules <em>Modules</em>}</li>
  *   <li>{@link xPPU.ModuleRepository.Module#getComponents <em>Components</em>}</li>
  *   <li>{@link xPPU.ModuleRepository.Module#getInterfaces <em>Interfaces</em>}</li>
@@ -31,65 +29,63 @@ import xPPU.StructureRepository.Structure;
  * @model
  * @generated
  */
-public interface Module extends Identifier {
+public interface Module extends Entity {
 	/**
-	 * Returns the value of the '<em><b>Parent Structure</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link xPPU.StructureRepository.Structure#getModules <em>Modules</em>}'.
+	 * Returns the value of the '<em><b>Parent Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Parent Structure</em>' container reference isn't clear,
+	 * If the meaning of the '<em>Parent Entity</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parent Structure</em>' container reference.
-	 * @see #setParentStructure(Structure)
-	 * @see xPPU.ModuleRepository.ModuleRepositoryPackage#getModule_ParentStructure()
-	 * @see xPPU.StructureRepository.Structure#getModules
-	 * @model opposite="modules" required="true" transient="false"
+	 * @return the value of the '<em>Parent Entity</em>' reference.
+	 * @see #setParentEntity(Entity)
+	 * @see xPPU.ModuleRepository.ModuleRepositoryPackage#getModule_ParentEntity()
+	 * @model required="true"
 	 * @generated
 	 */
-	Structure getParentStructure();
+	Entity getParentEntity();
 
 	/**
-	 * Sets the value of the '{@link xPPU.ModuleRepository.Module#getParentStructure <em>Parent Structure</em>}' container reference.
+	 * Sets the value of the '{@link xPPU.ModuleRepository.Module#getParentEntity <em>Parent Entity</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent Structure</em>' container reference.
-	 * @see #getParentStructure()
+	 * @param value the new value of the '<em>Parent Entity</em>' reference.
+	 * @see #getParentEntity()
 	 * @generated
 	 */
-	void setParentStructure(Structure value);
+	void setParentEntity(Entity value);
 
 	/**
-	 * Returns the value of the '<em><b>Modules</b></em>' reference list.
+	 * Returns the value of the '<em><b>Modules</b></em>' containment reference list.
 	 * The list contents are of type {@link xPPU.ModuleRepository.Module}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Modules</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Modules</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Modules</em>' reference list.
+	 * @return the value of the '<em>Modules</em>' containment reference list.
 	 * @see xPPU.ModuleRepository.ModuleRepositoryPackage#getModule_Modules()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Module> getModules();
 
 	/**
-	 * Returns the value of the '<em><b>Components</b></em>' reference list.
+	 * Returns the value of the '<em><b>Components</b></em>' containment reference list.
 	 * The list contents are of type {@link xPPU.ComponentRepository.Component}.
 	 * It is bidirectional and its opposite is '{@link xPPU.ComponentRepository.Component#getParentModule <em>Parent Module</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Components</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Components</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Components</em>' reference list.
+	 * @return the value of the '<em>Components</em>' containment reference list.
 	 * @see xPPU.ModuleRepository.ModuleRepositoryPackage#getModule_Components()
 	 * @see xPPU.ComponentRepository.Component#getParentModule
-	 * @model opposite="parentModule"
+	 * @model opposite="parentModule" containment="true"
 	 * @generated
 	 */
 	EList<Component> getComponents();

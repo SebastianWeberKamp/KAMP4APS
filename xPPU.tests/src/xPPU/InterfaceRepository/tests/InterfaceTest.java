@@ -2,9 +2,11 @@
  */
 package xPPU.InterfaceRepository.tests;
 
-import xPPU.Identifier.tests.IdentifierTest;
-
+import junit.textui.TestRunner;
 import xPPU.InterfaceRepository.Interface;
+
+import xPPU.InterfaceRepository.InterfaceRepositoryFactory;
+import xPPU.tests.EntityTest;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +14,16 @@ import xPPU.InterfaceRepository.Interface;
  * <!-- end-user-doc -->
  * @generated
  */
-public abstract class InterfaceTest extends IdentifierTest {
+public class InterfaceTest extends EntityTest {
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static void main(String[] args) {
+		TestRunner.run(InterfaceTest.class);
+	}
 
 	/**
 	 * Constructs a new Interface test case with the given name.
@@ -33,6 +44,28 @@ public abstract class InterfaceTest extends IdentifierTest {
 	@Override
 	protected Interface getFixture() {
 		return (Interface)fixture;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#setUp()
+	 * @generated
+	 */
+	@Override
+	protected void setUp() throws Exception {
+		setFixture(InterfaceRepositoryFactory.eINSTANCE.createInterface());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#tearDown()
+	 * @generated
+	 */
+	@Override
+	protected void tearDown() throws Exception {
+		setFixture(null);
 	}
 
 } //InterfaceTest

@@ -12,7 +12,10 @@ import xPPU.BusComponents.*;
 import xPPU.ComponentRepository.Cable;
 import xPPU.ComponentRepository.Component;
 
+import xPPU.Entity;
+
 import xPPU.Identifier.Identifier;
+import xPPU.Identifier.NamedElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -75,7 +78,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				BusBox busBox = (BusBox)theEObject;
 				T result = caseBusBox(busBox);
 				if (result == null) result = caseComponent(busBox);
+				if (result == null) result = caseEntity(busBox);
 				if (result == null) result = caseIdentifier(busBox);
+				if (result == null) result = caseNamedElement(busBox);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -83,7 +88,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				BusMaster busMaster = (BusMaster)theEObject;
 				T result = caseBusMaster(busMaster);
 				if (result == null) result = caseComponent(busMaster);
+				if (result == null) result = caseEntity(busMaster);
 				if (result == null) result = caseIdentifier(busMaster);
+				if (result == null) result = caseNamedElement(busMaster);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -91,7 +98,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				BusSlave busSlave = (BusSlave)theEObject;
 				T result = caseBusSlave(busSlave);
 				if (result == null) result = caseComponent(busSlave);
+				if (result == null) result = caseEntity(busSlave);
 				if (result == null) result = caseIdentifier(busSlave);
+				if (result == null) result = caseNamedElement(busSlave);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -100,7 +109,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				T result = caseBusCable(busCable);
 				if (result == null) result = caseCable(busCable);
 				if (result == null) result = caseComponent(busCable);
+				if (result == null) result = caseEntity(busCable);
 				if (result == null) result = caseIdentifier(busCable);
+				if (result == null) result = caseNamedElement(busCable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -109,7 +120,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				T result = caseProfibusDPBox(profibusDPBox);
 				if (result == null) result = caseBusBox(profibusDPBox);
 				if (result == null) result = caseComponent(profibusDPBox);
+				if (result == null) result = caseEntity(profibusDPBox);
 				if (result == null) result = caseIdentifier(profibusDPBox);
+				if (result == null) result = caseNamedElement(profibusDPBox);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -118,7 +131,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				T result = caseProfibusDPMaster(profibusDPMaster);
 				if (result == null) result = caseBusMaster(profibusDPMaster);
 				if (result == null) result = caseComponent(profibusDPMaster);
+				if (result == null) result = caseEntity(profibusDPMaster);
 				if (result == null) result = caseIdentifier(profibusDPMaster);
+				if (result == null) result = caseNamedElement(profibusDPMaster);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -127,7 +142,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				T result = caseProfibusDPSlave(profibusDPSlave);
 				if (result == null) result = caseBusSlave(profibusDPSlave);
 				if (result == null) result = caseComponent(profibusDPSlave);
+				if (result == null) result = caseEntity(profibusDPSlave);
 				if (result == null) result = caseIdentifier(profibusDPSlave);
+				if (result == null) result = caseNamedElement(profibusDPSlave);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -137,7 +154,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseBusCable(profibusDPCable);
 				if (result == null) result = caseCable(profibusDPCable);
 				if (result == null) result = caseComponent(profibusDPCable);
+				if (result == null) result = caseEntity(profibusDPCable);
 				if (result == null) result = caseIdentifier(profibusDPCable);
+				if (result == null) result = caseNamedElement(profibusDPCable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -146,7 +165,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				T result = caseEtherCATBox(etherCATBox);
 				if (result == null) result = caseBusBox(etherCATBox);
 				if (result == null) result = caseComponent(etherCATBox);
+				if (result == null) result = caseEntity(etherCATBox);
 				if (result == null) result = caseIdentifier(etherCATBox);
+				if (result == null) result = caseNamedElement(etherCATBox);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -155,7 +176,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				T result = caseEtherCATMaster(etherCATMaster);
 				if (result == null) result = caseBusMaster(etherCATMaster);
 				if (result == null) result = caseComponent(etherCATMaster);
+				if (result == null) result = caseEntity(etherCATMaster);
 				if (result == null) result = caseIdentifier(etherCATMaster);
+				if (result == null) result = caseNamedElement(etherCATMaster);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -164,7 +187,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				T result = caseEtherCATSlave(etherCATSlave);
 				if (result == null) result = caseBusSlave(etherCATSlave);
 				if (result == null) result = caseComponent(etherCATSlave);
+				if (result == null) result = caseEntity(etherCATSlave);
 				if (result == null) result = caseIdentifier(etherCATSlave);
+				if (result == null) result = caseNamedElement(etherCATSlave);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -174,7 +199,9 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseBusCable(etherCATCable);
 				if (result == null) result = caseCable(etherCATCable);
 				if (result == null) result = caseComponent(etherCATCable);
+				if (result == null) result = caseEntity(etherCATCable);
 				if (result == null) result = caseIdentifier(etherCATCable);
+				if (result == null) result = caseNamedElement(etherCATCable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -374,6 +401,36 @@ public class BusComponentsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIdentifier(Identifier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamedElement(NamedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEntity(Entity object) {
 		return null;
 	}
 

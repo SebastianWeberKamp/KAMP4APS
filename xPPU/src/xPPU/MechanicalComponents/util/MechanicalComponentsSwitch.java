@@ -10,7 +10,10 @@ import org.eclipse.emf.ecore.util.Switch;
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.MechanicalAssembly;
 
+import xPPU.Entity;
+
 import xPPU.Identifier.Identifier;
+import xPPU.Identifier.NamedElement;
 
 import xPPU.MechanicalComponents.*;
 
@@ -75,7 +78,9 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 				MechanicalPart mechanicalPart = (MechanicalPart)theEObject;
 				T result = caseMechanicalPart(mechanicalPart);
 				if (result == null) result = caseComponent(mechanicalPart);
+				if (result == null) result = caseEntity(mechanicalPart);
 				if (result == null) result = caseIdentifier(mechanicalPart);
+				if (result == null) result = caseNamedElement(mechanicalPart);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -84,7 +89,9 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 				T result = casePushhead(pushhead);
 				if (result == null) result = caseMechanicalPart(pushhead);
 				if (result == null) result = caseComponent(pushhead);
+				if (result == null) result = caseEntity(pushhead);
 				if (result == null) result = caseIdentifier(pushhead);
+				if (result == null) result = caseNamedElement(pushhead);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -93,7 +100,9 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 				T result = caseHousing(housing);
 				if (result == null) result = caseMechanicalPart(housing);
 				if (result == null) result = caseComponent(housing);
+				if (result == null) result = caseEntity(housing);
 				if (result == null) result = caseIdentifier(housing);
+				if (result == null) result = caseNamedElement(housing);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -102,7 +111,9 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 				T result = caseReturnSpring(returnSpring);
 				if (result == null) result = caseMechanicalPart(returnSpring);
 				if (result == null) result = caseComponent(returnSpring);
+				if (result == null) result = caseEntity(returnSpring);
 				if (result == null) result = caseIdentifier(returnSpring);
+				if (result == null) result = caseNamedElement(returnSpring);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -111,7 +122,9 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 				T result = caseRubberBand(rubberBand);
 				if (result == null) result = caseMechanicalPart(rubberBand);
 				if (result == null) result = caseComponent(rubberBand);
+				if (result == null) result = caseEntity(rubberBand);
 				if (result == null) result = caseIdentifier(rubberBand);
+				if (result == null) result = caseNamedElement(rubberBand);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -120,7 +133,9 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 				T result = caseGripperPart(gripperPart);
 				if (result == null) result = caseMechanicalAssembly(gripperPart);
 				if (result == null) result = caseComponent(gripperPart);
+				if (result == null) result = caseEntity(gripperPart);
 				if (result == null) result = caseIdentifier(gripperPart);
+				if (result == null) result = caseNamedElement(gripperPart);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -129,7 +144,9 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 				T result = caseArm(arm);
 				if (result == null) result = caseMechanicalAssembly(arm);
 				if (result == null) result = caseComponent(arm);
+				if (result == null) result = caseEntity(arm);
 				if (result == null) result = caseIdentifier(arm);
+				if (result == null) result = caseNamedElement(arm);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -138,7 +155,9 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 				T result = caseRamp(ramp);
 				if (result == null) result = caseMechanicalAssembly(ramp);
 				if (result == null) result = caseComponent(ramp);
+				if (result == null) result = caseEntity(ramp);
 				if (result == null) result = caseIdentifier(ramp);
+				if (result == null) result = caseNamedElement(ramp);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -147,7 +166,9 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 				T result = caseTable(table);
 				if (result == null) result = caseMechanicalAssembly(table);
 				if (result == null) result = caseComponent(table);
+				if (result == null) result = caseEntity(table);
 				if (result == null) result = caseIdentifier(table);
+				if (result == null) result = caseNamedElement(table);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -302,6 +323,36 @@ public class MechanicalComponentsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIdentifier(Identifier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamedElement(NamedElement object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEntity(Entity object) {
 		return null;
 	}
 

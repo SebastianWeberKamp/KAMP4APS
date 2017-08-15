@@ -95,7 +95,7 @@ public class ArmItemProvider extends MechanicalAssemblyItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Arm)object).getId();
+		String label = ((Arm)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Arm_type") :
 			getString("_UI_Arm_type") + " " + label;

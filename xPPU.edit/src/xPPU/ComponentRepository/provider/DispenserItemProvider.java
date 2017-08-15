@@ -64,7 +64,7 @@ public class DispenserItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Dispenser)object).getId();
+		String label = ((Dispenser)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Dispenser_type") :
 			getString("_UI_Dispenser_type") + " " + label;

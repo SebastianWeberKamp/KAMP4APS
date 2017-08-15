@@ -64,7 +64,7 @@ public class LEDItemProvider extends ElectronicPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((LED)object).getId();
+		String label = ((LED)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_LED_type") :
 			getString("_UI_LED_type") + " " + label;

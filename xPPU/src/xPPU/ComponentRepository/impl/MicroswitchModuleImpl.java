@@ -4,6 +4,7 @@ package xPPU.ComponentRepository.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -19,7 +21,9 @@ import xPPU.BusComponents.BusSlave;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 import xPPU.ComponentRepository.MicroswitchModule;
 
-import xPPU.ElectronicComponents.impl.SwitchImpl;
+import xPPU.ElectronicComponents.ElectronicComponentsPackage;
+import xPPU.ElectronicComponents.MicroSwitch;
+import xPPU.ModuleRepository.impl.ModuleImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,11 +34,12 @@ import xPPU.ElectronicComponents.impl.SwitchImpl;
  * </p>
  * <ul>
  *   <li>{@link xPPU.ComponentRepository.impl.MicroswitchModuleImpl#getBusSlave <em>Bus Slave</em>}</li>
+ *   <li>{@link xPPU.ComponentRepository.impl.MicroswitchModuleImpl#getSwitch <em>Switch</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MicroswitchModuleImpl extends SwitchImpl implements MicroswitchModule {
+public class MicroswitchModuleImpl extends ModuleImpl implements MicroswitchModule {
 	/**
 	 * The cached value of the '{@link #getBusSlave() <em>Bus Slave</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -44,6 +49,16 @@ public class MicroswitchModuleImpl extends SwitchImpl implements MicroswitchModu
 	 * @ordered
 	 */
 	protected EList<BusSlave> busSlave;
+
+	/**
+	 * The cached value of the '{@link #getSwitch() <em>Switch</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSwitch()
+	 * @generated
+	 * @ordered
+	 */
+	protected MicroSwitch switch_;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -81,11 +96,72 @@ public class MicroswitchModuleImpl extends SwitchImpl implements MicroswitchModu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public MicroSwitch getSwitch() {
+		return switch_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSwitch(MicroSwitch newSwitch, NotificationChain msgs) {
+		MicroSwitch oldSwitch = switch_;
+		switch_ = newSwitch;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH, oldSwitch, newSwitch);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSwitch(MicroSwitch newSwitch) {
+		if (newSwitch != switch_) {
+			NotificationChain msgs = null;
+			if (switch_ != null)
+				msgs = ((InternalEObject)switch_).eInverseRemove(this, ElectronicComponentsPackage.MICRO_SWITCH__MS_MODULE, MicroSwitch.class, msgs);
+			if (newSwitch != null)
+				msgs = ((InternalEObject)newSwitch).eInverseAdd(this, ElectronicComponentsPackage.MICRO_SWITCH__MS_MODULE, MicroSwitch.class, msgs);
+			msgs = basicSetSwitch(newSwitch, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH, newSwitch, newSwitch));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+				if (switch_ != null)
+					msgs = ((InternalEObject)switch_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH, null, msgs);
+				return basicSetSwitch((MicroSwitch)otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
 				return ((InternalEList<?>)getBusSlave()).basicRemove(otherEnd, msgs);
+			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+				return basicSetSwitch(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -100,6 +176,8 @@ public class MicroswitchModuleImpl extends SwitchImpl implements MicroswitchModu
 		switch (featureID) {
 			case ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
 				return getBusSlave();
+			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+				return getSwitch();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,6 +195,9 @@ public class MicroswitchModuleImpl extends SwitchImpl implements MicroswitchModu
 				getBusSlave().clear();
 				getBusSlave().addAll((Collection<? extends BusSlave>)newValue);
 				return;
+			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+				setSwitch((MicroSwitch)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -132,6 +213,9 @@ public class MicroswitchModuleImpl extends SwitchImpl implements MicroswitchModu
 			case ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
 				getBusSlave().clear();
 				return;
+			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+				setSwitch((MicroSwitch)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -146,6 +230,8 @@ public class MicroswitchModuleImpl extends SwitchImpl implements MicroswitchModu
 		switch (featureID) {
 			case ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
 				return busSlave != null && !busSlave.isEmpty();
+			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+				return switch_ != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -64,7 +64,7 @@ public class ScrewingPotentiometerItemProvider extends ScrewingItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ScrewingPotentiometer)object).getId();
+		String label = ((ScrewingPotentiometer)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ScrewingPotentiometer_type") :
 			getString("_UI_ScrewingPotentiometer_type") + " " + label;

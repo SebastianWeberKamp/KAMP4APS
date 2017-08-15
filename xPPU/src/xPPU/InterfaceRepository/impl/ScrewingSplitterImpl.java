@@ -14,7 +14,7 @@ import xPPU.InterfaceRepository.ScrewingSplitter;
  *
  * @generated
  */
-public class ScrewingSplitterImpl extends ScrewingImpl implements ScrewingSplitter {
+public abstract class ScrewingSplitterImpl extends ScrewingImpl implements ScrewingSplitter {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

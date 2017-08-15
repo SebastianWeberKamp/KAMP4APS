@@ -10,7 +10,7 @@ package xPPU.InterfaceRepository;
  *
  *
  * @see xPPU.InterfaceRepository.InterfaceRepositoryPackage#getScrewingPotentiometer()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ScrewingPotentiometer extends Screwing {

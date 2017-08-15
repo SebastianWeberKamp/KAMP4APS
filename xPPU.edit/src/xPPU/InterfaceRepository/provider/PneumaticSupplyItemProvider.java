@@ -64,7 +64,7 @@ public class PneumaticSupplyItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PneumaticSupply)object).getId();
+		String label = ((PneumaticSupply)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PneumaticSupply_type") :
 			getString("_UI_PneumaticSupply_type") + " " + label;

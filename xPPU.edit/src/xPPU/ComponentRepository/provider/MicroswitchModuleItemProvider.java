@@ -21,8 +21,9 @@ import xPPU.BusComponents.BusComponentsFactory;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 import xPPU.ComponentRepository.MicroswitchModule;
 
-import xPPU.ElectronicComponents.provider.SwitchItemProvider;
-
+import xPPU.ElectronicComponents.ElectronicComponentsFactory;
+import xPPU.ModuleRepository.ModuleRepositoryPackage;
+import xPPU.ModuleRepository.provider.ModuleItemProvider;
 import xPPU.provider.XPPUEditPlugin;
 
 /**
@@ -31,7 +32,7 @@ import xPPU.provider.XPPUEditPlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class MicroswitchModuleItemProvider extends SwitchItemProvider {
+public class MicroswitchModuleItemProvider extends ModuleItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -70,6 +71,7 @@ public class MicroswitchModuleItemProvider extends SwitchItemProvider {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE);
+			childrenFeatures.add(ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__SWITCH);
 		}
 		return childrenFeatures;
 	}
@@ -106,7 +108,7 @@ public class MicroswitchModuleItemProvider extends SwitchItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MicroswitchModule)object).getId();
+		String label = ((MicroswitchModule)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MicroswitchModule_type") :
 			getString("_UI_MicroswitchModule_type") + " " + label;
@@ -126,6 +128,7 @@ public class MicroswitchModuleItemProvider extends SwitchItemProvider {
 
 		switch (notification.getFeatureID(MicroswitchModule.class)) {
 			case ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
+			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -157,6 +160,35 @@ public class MicroswitchModuleItemProvider extends SwitchItemProvider {
 			(createChildParameter
 				(ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE,
 				 BusComponentsFactory.eINSTANCE.createEtherCATSlave()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__SWITCH,
+				 ElectronicComponentsFactory.eINSTANCE.createMicroSwitch()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == ModuleRepositoryPackage.Literals.MODULE__COMPONENTS ||
+			childFeature == ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE ||
+			childFeature == ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__SWITCH;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 	/**

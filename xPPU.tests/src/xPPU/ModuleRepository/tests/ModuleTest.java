@@ -4,10 +4,10 @@ package xPPU.ModuleRepository.tests;
 
 import junit.textui.TestRunner;
 
-import xPPU.Identifier.tests.IdentifierTest;
-
 import xPPU.ModuleRepository.Module;
 import xPPU.ModuleRepository.ModuleRepositoryFactory;
+
+import xPPU.tests.EntityTest;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,7 +15,7 @@ import xPPU.ModuleRepository.ModuleRepositoryFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModuleTest extends IdentifierTest {
+public class ModuleTest extends EntityTest {
 
 	/**
 	 * <!-- begin-user-doc -->

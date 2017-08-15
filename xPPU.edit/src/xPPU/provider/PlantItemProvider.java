@@ -9,8 +9,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
@@ -19,8 +17,6 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 import xPPU.ComponentRepository.ComponentRepositoryFactory;
-
-import xPPU.Identifier.provider.IdentifierItemProvider;
 
 import xPPU.InterfaceRepository.InterfaceRepositoryFactory;
 
@@ -38,7 +34,7 @@ import xPPU.XPPUPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PlantItemProvider extends IdentifierItemProvider {
+public class PlantItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -139,7 +135,7 @@ public class PlantItemProvider extends IdentifierItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Plant)object).getId();
+		String label = ((Plant)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Plant_type") :
 			getString("_UI_Plant_type") + " " + label;
@@ -185,6 +181,11 @@ public class PlantItemProvider extends IdentifierItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(XPPUPackage.Literals.PLANT__STRUCTURES,
+				 StructureRepositoryFactory.eINSTANCE.createStructure()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(XPPUPackage.Literals.PLANT__STRUCTURES,
 				 StructureRepositoryFactory.eINSTANCE.createCommunicationNetwork()));
 
 		newChildDescriptors.add
@@ -219,6 +220,11 @@ public class PlantItemProvider extends IdentifierItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(XPPUPackage.Literals.PLANT__STRUCTURES,
+				 StructureRepositoryFactory.eINSTANCE.createLogicalWiring()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(XPPUPackage.Literals.PLANT__INTERFACE_REPOSITORY,
 				 InterfaceRepositoryFactory.eINSTANCE.createInterfaceRepository()));
 
@@ -231,17 +237,6 @@ public class PlantItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(XPPUPackage.Literals.PLANT__MODULE_REPOSITORY,
 				 ModuleRepositoryFactory.eINSTANCE.createModuleRepository()));
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return XPPUEditPlugin.INSTANCE;
 	}
 
 }

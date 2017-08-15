@@ -112,7 +112,7 @@ public class ControllerItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Controller)object).getId();
+		String label = ((Controller)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Controller_type") :
 			getString("_UI_Controller_type") + " " + label;

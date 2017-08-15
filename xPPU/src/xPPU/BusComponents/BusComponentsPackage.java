@@ -77,6 +77,15 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_BOX__ID = ComponentRepositoryPackage.COMPONENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_BOX__NAME = ComponentRepositoryPackage.COMPONENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,7 +104,7 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_BOX__PARENT = ComponentRepositoryPackage.COMPONENT__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -177,6 +186,15 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_MASTER__ID = ComponentRepositoryPackage.COMPONENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_MASTER__NAME = ComponentRepositoryPackage.COMPONENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -195,7 +213,7 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_MASTER__PARENT = ComponentRepositoryPackage.COMPONENT__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -259,6 +277,15 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_SLAVE__ID = ComponentRepositoryPackage.COMPONENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_SLAVE__NAME = ComponentRepositoryPackage.COMPONENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -277,7 +304,7 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_SLAVE__PARENT = ComponentRepositoryPackage.COMPONENT__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -341,6 +368,15 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_CABLE__ID = ComponentRepositoryPackage.CABLE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUS_CABLE__NAME = ComponentRepositoryPackage.CABLE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -359,7 +395,7 @@ public interface BusComponentsPackage extends EPackage {
 	int BUS_CABLE__PARENT = ComponentRepositoryPackage.CABLE__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -423,6 +459,15 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_BOX__ID = BUS_BOX__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_BOX__NAME = BUS_BOX__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -441,7 +486,7 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_BOX__PARENT = BUS_BOX__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -523,6 +568,15 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_MASTER__ID = BUS_MASTER__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_MASTER__NAME = BUS_MASTER__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -541,7 +595,7 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_MASTER__PARENT = BUS_MASTER__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -605,6 +659,15 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_SLAVE__ID = BUS_SLAVE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_SLAVE__NAME = BUS_SLAVE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -623,7 +686,7 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_SLAVE__PARENT = BUS_SLAVE__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -687,6 +750,15 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_CABLE__ID = BUS_CABLE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIBUS_DP_CABLE__NAME = BUS_CABLE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -705,7 +777,7 @@ public interface BusComponentsPackage extends EPackage {
 	int PROFIBUS_DP_CABLE__PARENT = BUS_CABLE__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -769,6 +841,15 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_BOX__ID = BUS_BOX__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_BOX__NAME = BUS_BOX__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -787,7 +868,7 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_BOX__PARENT = BUS_BOX__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -869,6 +950,15 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_MASTER__ID = BUS_MASTER__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_MASTER__NAME = BUS_MASTER__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -887,7 +977,7 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_MASTER__PARENT = BUS_MASTER__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -951,6 +1041,15 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_SLAVE__ID = BUS_SLAVE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_SLAVE__NAME = BUS_SLAVE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -969,7 +1068,7 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_SLAVE__PARENT = BUS_SLAVE__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1033,6 +1132,15 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_CABLE__ID = BUS_CABLE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETHER_CAT_CABLE__NAME = BUS_CABLE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1051,7 +1159,7 @@ public interface BusComponentsPackage extends EPackage {
 	int ETHER_CAT_CABLE__PARENT = BUS_CABLE__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

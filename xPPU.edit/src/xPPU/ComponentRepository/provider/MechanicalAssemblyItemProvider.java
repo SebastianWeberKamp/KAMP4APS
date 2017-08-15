@@ -53,7 +53,7 @@ public class MechanicalAssemblyItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MechanicalAssembly)object).getId();
+		String label = ((MechanicalAssembly)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MechanicalAssembly_type") :
 			getString("_UI_MechanicalAssembly_type") + " " + label;

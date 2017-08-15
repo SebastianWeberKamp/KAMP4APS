@@ -135,7 +135,7 @@ public class SensorItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Sensor)object).getId();
+		String label = ((Sensor)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Sensor_type") :
 			getString("_UI_Sensor_type") + " " + label;

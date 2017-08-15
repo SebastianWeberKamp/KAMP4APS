@@ -56,6 +56,7 @@ public class StructureRepositoryFactoryImpl extends EFactoryImpl implements Stru
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case StructureRepositoryPackage.STRUCTURE: return createStructure();
 			case StructureRepositoryPackage.COMMUNICATION_NETWORK: return createCommunicationNetwork();
 			case StructureRepositoryPackage.POWER_NETWORK: return createPowerNetwork();
 			case StructureRepositoryPackage.CONTROL_CABINET: return createControlCabinet();
@@ -63,9 +64,20 @@ public class StructureRepositoryFactoryImpl extends EFactoryImpl implements Stru
 			case StructureRepositoryPackage.CONVEYOR: return createConveyor();
 			case StructureRepositoryPackage.CRANE: return createCrane();
 			case StructureRepositoryPackage.POWER_WIRING: return createPowerWiring();
+			case StructureRepositoryPackage.LOGICAL_WIRING: return createLogicalWiring();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Structure createStructure() {
+		StructureImpl structure = new StructureImpl();
+		return structure;
 	}
 
 	/**
@@ -136,6 +148,16 @@ public class StructureRepositoryFactoryImpl extends EFactoryImpl implements Stru
 	public PowerWiring createPowerWiring() {
 		PowerWiringImpl powerWiring = new PowerWiringImpl();
 		return powerWiring;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public LogicalWiring createLogicalWiring() {
+		LogicalWiringImpl logicalWiring = new LogicalWiringImpl();
+		return logicalWiring;
 	}
 
 	/**

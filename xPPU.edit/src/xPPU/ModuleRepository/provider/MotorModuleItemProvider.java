@@ -105,7 +105,7 @@ public class MotorModuleItemProvider extends ModuleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((MotorModule)object).getId();
+		String label = ((MotorModule)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_MotorModule_type") :
 			getString("_UI_MotorModule_type") + " " + label;
@@ -194,6 +194,32 @@ public class MotorModuleItemProvider extends ModuleItemProvider {
 			(createChildParameter
 				(ModuleRepositoryPackage.Literals.MOTOR_MODULE__BUS_CABLE,
 				 BusComponentsFactory.eINSTANCE.createEtherCATCable()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == ModuleRepositoryPackage.Literals.MODULE__COMPONENTS ||
+			childFeature == ModuleRepositoryPackage.Literals.MOTOR_MODULE__SIMPLE_MOTOR ||
+			childFeature == ModuleRepositoryPackage.Literals.MOTOR_MODULE__BUS_BOX ||
+			childFeature == ModuleRepositoryPackage.Literals.MOTOR_MODULE__BUS_SLAVE ||
+			childFeature == ModuleRepositoryPackage.Literals.MOTOR_MODULE__BUS_CABLE;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

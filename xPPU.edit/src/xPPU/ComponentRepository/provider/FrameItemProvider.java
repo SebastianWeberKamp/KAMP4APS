@@ -64,7 +64,7 @@ public class FrameItemProvider extends MechanicalAssemblyItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Frame)object).getId();
+		String label = ((Frame)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Frame_type") :
 			getString("_UI_Frame_type") + " " + label;

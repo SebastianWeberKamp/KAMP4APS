@@ -64,7 +64,7 @@ public class EtherCATSlaveItemProvider extends BusSlaveItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EtherCATSlave)object).getId();
+		String label = ((EtherCATSlave)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_EtherCATSlave_type") :
 			getString("_UI_EtherCATSlave_type") + " " + label;

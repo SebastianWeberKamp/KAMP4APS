@@ -65,7 +65,7 @@ public class ProfibusDPCableItemProvider extends BusCableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ProfibusDPCable)object).getId();
+		String label = ((ProfibusDPCable)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ProfibusDPCable_type") :
 			getString("_UI_ProfibusDPCable_type") + " " + label;

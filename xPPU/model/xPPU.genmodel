@@ -12,14 +12,14 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Plant/componentRepository"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//Plant/moduleRepository"/>
     </genClasses>
+    <genClasses image="false" ecoreClass="xPPU.ecore#//Entity"/>
     <nestedGenPackages prefix="ComponentRepository" disposableProviderFactory="true"
         ecorePackage="xPPU.ecore#//ComponentRepository">
       <genClasses image="false" ecoreClass="xPPU.ecore#//ComponentRepository/Component">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference xPPU.ecore#//ComponentRepository/Component/connectedInterfaces"/>
         <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//ComponentRepository/Component/parent"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference xPPU.ecore#//ComponentRepository/Component/parentModule"/>
+        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//ComponentRepository/Component/parentModule"/>
       </genClasses>
       <genClasses image="false" ecoreClass="xPPU.ecore#//ComponentRepository/Panel">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -291,11 +291,10 @@
             ecoreFeature="ecore:EReference xPPU.ecore#//ModuleRepository/ModuleRepository/allModulesInPlant"/>
       </genClasses>
       <genClasses ecoreClass="xPPU.ecore#//ModuleRepository/Module">
-        <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference xPPU.ecore#//ModuleRepository/Module/parentStructure"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference xPPU.ecore#//ModuleRepository/Module/modules"/>
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference xPPU.ecore#//ModuleRepository/Module/components"/>
+            ecoreFeature="ecore:EReference xPPU.ecore#//ModuleRepository/Module/parentEntity"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//ModuleRepository/Module/modules"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//ModuleRepository/Module/components"/>
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference xPPU.ecore#//ModuleRepository/Module/interfaces"/>
       </genClasses>
@@ -325,8 +324,7 @@
     <nestedGenPackages prefix="InterfaceRepository" disposableProviderFactory="true"
         ecorePackage="xPPU.ecore#//InterfaceRepository">
       <genClasses ecoreClass="xPPU.ecore#//InterfaceRepository/InterfaceRepository">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference xPPU.ecore#//InterfaceRepository/InterfaceRepository/allInterfacesInPlant"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference xPPU.ecore#//InterfaceRepository/InterfaceRepository/allInterfacesInPlant"/>
       </genClasses>
       <genClasses image="false" ecoreClass="xPPU.ecore#//InterfaceRepository/Interface">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
@@ -353,6 +351,9 @@
     <nestedGenPackages prefix="Identifier" disposableProviderFactory="true" ecorePackage="xPPU.ecore#//Identifier">
       <genClasses image="false" ecoreClass="xPPU.ecore#//Identifier/Identifier">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xPPU.ecore#//Identifier/Identifier/id"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="xPPU.ecore#//Identifier/NamedElement">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute xPPU.ecore#//Identifier/NamedElement/Name"/>
       </genClasses>
     </nestedGenPackages>
   </genPackages>

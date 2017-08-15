@@ -64,7 +64,7 @@ public class SignalInterfaceItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SignalInterface)object).getId();
+		String label = ((SignalInterface)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_SignalInterface_type") :
 			getString("_UI_SignalInterface_type") + " " + label;

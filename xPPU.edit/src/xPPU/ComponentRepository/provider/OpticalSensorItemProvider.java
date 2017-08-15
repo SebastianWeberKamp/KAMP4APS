@@ -64,7 +64,7 @@ public class OpticalSensorItemProvider extends SensorItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((OpticalSensor)object).getId();
+		String label = ((OpticalSensor)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_OpticalSensor_type") :
 			getString("_UI_OpticalSensor_type") + " " + label;

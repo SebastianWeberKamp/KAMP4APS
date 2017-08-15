@@ -14,7 +14,7 @@ import xPPU.InterfaceRepository.ScrewingMotor;
  *
  * @generated
  */
-public class ScrewingMotorImpl extends ScrewingImpl implements ScrewingMotor {
+public abstract class ScrewingMotorImpl extends ScrewingImpl implements ScrewingMotor {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -70,7 +70,7 @@ public class VacuumSwitchItemProvider extends SwitchItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((VacuumSwitch)object).getId();
+		String label = ((VacuumSwitch)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_VacuumSwitch_type") :
 			getString("_UI_VacuumSwitch_type") + " " + label;

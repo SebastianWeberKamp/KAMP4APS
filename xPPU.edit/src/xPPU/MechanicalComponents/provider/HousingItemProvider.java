@@ -64,7 +64,7 @@ public class HousingItemProvider extends MechanicalPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Housing)object).getId();
+		String label = ((Housing)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Housing_type") :
 			getString("_UI_Housing_type") + " " + label;

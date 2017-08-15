@@ -64,7 +64,7 @@ public class BistableCylinderItemProvider extends CylinderItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((BistableCylinder)object).getId();
+		String label = ((BistableCylinder)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_BistableCylinder_type") :
 			getString("_UI_BistableCylinder_type") + " " + label;

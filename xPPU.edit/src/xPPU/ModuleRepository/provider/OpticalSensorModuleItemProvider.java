@@ -103,7 +103,7 @@ public class OpticalSensorModuleItemProvider extends ModuleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((OpticalSensorModule)object).getId();
+		String label = ((OpticalSensorModule)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_OpticalSensorModule_type") :
 			getString("_UI_OpticalSensorModule_type") + " " + label;
@@ -160,6 +160,30 @@ public class OpticalSensorModuleItemProvider extends ModuleItemProvider {
 			(createChildParameter
 				(ModuleRepositoryPackage.Literals.OPTICAL_SENSOR_MODULE__BUS_SLAVE,
 				 BusComponentsFactory.eINSTANCE.createEtherCATSlave()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == ModuleRepositoryPackage.Literals.MODULE__COMPONENTS ||
+			childFeature == ModuleRepositoryPackage.Literals.OPTICAL_SENSOR_MODULE__OPTICAL_SENSOR ||
+			childFeature == ModuleRepositoryPackage.Literals.OPTICAL_SENSOR_MODULE__BUS_SLAVE;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
 	}
 
 }

@@ -118,7 +118,7 @@ public class BusSlaveItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((BusSlave)object).getId();
+		String label = ((BusSlave)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_BusSlave_type") :
 			getString("_UI_BusSlave_type") + " " + label;

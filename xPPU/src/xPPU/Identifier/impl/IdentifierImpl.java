@@ -8,6 +8,7 @@ import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 import xPPU.Identifier.Identifier;
 import xPPU.Identifier.IdentifierPackage;
@@ -49,10 +50,11 @@ public abstract class IdentifierImpl extends MinimalEObjectImpl.Container implem
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated not
 	 */
 	protected IdentifierImpl() {
 		super();
+		setId(EcoreUtil.generateUUID());
 	}
 
 	/**

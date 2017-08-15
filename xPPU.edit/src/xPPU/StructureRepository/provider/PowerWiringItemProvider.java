@@ -64,7 +64,7 @@ public class PowerWiringItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PowerWiring)object).getId();
+		String label = ((PowerWiring)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PowerWiring_type") :
 			getString("_UI_PowerWiring_type") + " " + label;

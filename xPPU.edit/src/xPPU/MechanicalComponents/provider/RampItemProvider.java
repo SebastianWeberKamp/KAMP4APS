@@ -130,7 +130,7 @@ public class RampItemProvider extends MechanicalAssemblyItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Ramp)object).getId();
+		String label = ((Ramp)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Ramp_type") :
 			getString("_UI_Ramp_type") + " " + label;

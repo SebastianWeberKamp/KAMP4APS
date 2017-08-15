@@ -6,8 +6,6 @@ import org.eclipse.emf.common.util.EList;
 
 import xPPU.ComponentRepository.ComponentRepository;
 
-import xPPU.Identifier.Identifier;
-
 import xPPU.InterfaceRepository.InterfaceRepository;
 
 import xPPU.ModuleRepository.ModuleRepository;
@@ -34,7 +32,7 @@ import xPPU.StructureRepository.Structure;
  * @model
  * @generated
  */
-public interface Plant extends Identifier {
+public interface Plant extends Entity {
 	/**
 	 * Returns the value of the '<em><b>Plant Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->

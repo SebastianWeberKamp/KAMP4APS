@@ -59,6 +59,52 @@ public interface XPPUPackage extends EPackage {
 	XPPUPackage eINSTANCE = xPPU.impl.XPPUPackageImpl.init();
 
 	/**
+	 * The meta object id for the '{@link xPPU.impl.EntityImpl <em>Entity</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.impl.EntityImpl
+	 * @see xPPU.impl.XPPUPackageImpl#getEntity()
+	 * @generated
+	 */
+	int ENTITY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__ID = IdentifierPackage.IDENTIFIER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY__NAME = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Entity</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ENTITY_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link xPPU.impl.PlantImpl <em>Plant</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -75,7 +121,16 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__ID = IdentifierPackage.IDENTIFIER__ID;
+	int PLANT__ID = ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLANT__NAME = ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Plant Name</b></em>' attribute.
@@ -84,7 +139,7 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__PLANT_NAME = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int PLANT__PLANT_NAME = ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Structures</b></em>' containment reference list.
@@ -93,7 +148,7 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__STRUCTURES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int PLANT__STRUCTURES = ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Interface Repository</b></em>' containment reference.
@@ -102,7 +157,7 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__INTERFACE_REPOSITORY = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 2;
+	int PLANT__INTERFACE_REPOSITORY = ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Component Repository</b></em>' containment reference.
@@ -111,7 +166,7 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__COMPONENT_REPOSITORY = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 3;
+	int PLANT__COMPONENT_REPOSITORY = ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Module Repository</b></em>' containment reference.
@@ -120,7 +175,7 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__MODULE_REPOSITORY = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 4;
+	int PLANT__MODULE_REPOSITORY = ENTITY_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Plant</em>' class.
@@ -129,7 +184,7 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 5;
+	int PLANT_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Plant</em>' class.
@@ -138,7 +193,7 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
+	int PLANT_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
 
 
 	/**
@@ -205,6 +260,16 @@ public interface XPPUPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPlant_ModuleRepository();
+
+	/**
+	 * Returns the meta object for class '{@link xPPU.Entity <em>Entity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Entity</em>'.
+	 * @see xPPU.Entity
+	 * @generated
+	 */
+	EClass getEntity();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -278,6 +343,16 @@ public interface XPPUPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PLANT__MODULE_REPOSITORY = eINSTANCE.getPlant_ModuleRepository();
+
+		/**
+		 * The meta object literal for the '{@link xPPU.impl.EntityImpl <em>Entity</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xPPU.impl.EntityImpl
+		 * @see xPPU.impl.XPPUPackageImpl#getEntity()
+		 * @generated
+		 */
+		EClass ENTITY = eINSTANCE.getEntity();
 
 	}
 

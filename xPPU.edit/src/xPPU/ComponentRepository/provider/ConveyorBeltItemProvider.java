@@ -102,7 +102,7 @@ public class ConveyorBeltItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ConveyorBelt)object).getId();
+		String label = ((ConveyorBelt)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ConveyorBelt_type") :
 			getString("_UI_ConveyorBelt_type") + " " + label;

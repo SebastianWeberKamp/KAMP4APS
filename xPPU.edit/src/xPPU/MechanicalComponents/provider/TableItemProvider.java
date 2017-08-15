@@ -70,7 +70,7 @@ public class TableItemProvider extends MechanicalAssemblyItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Table)object).getId();
+		String label = ((Table)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Table_type") :
 			getString("_UI_Table_type") + " " + label;

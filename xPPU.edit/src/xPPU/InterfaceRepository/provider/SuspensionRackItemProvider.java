@@ -64,7 +64,7 @@ public class SuspensionRackItemProvider extends SuspensionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SuspensionRack)object).getId();
+		String label = ((SuspensionRack)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_SuspensionRack_type") :
 			getString("_UI_SuspensionRack_type") + " " + label;

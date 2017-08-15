@@ -57,15 +57,9 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case InterfaceRepositoryPackage.INTERFACE_REPOSITORY: return createInterfaceRepository();
-			case InterfaceRepositoryPackage.SCREWING_SPLITTER: return createScrewingSplitter();
-			case InterfaceRepositoryPackage.SCREWING_MOTOR: return createScrewingMotor();
-			case InterfaceRepositoryPackage.SCREWING_RACK: return createScrewingRack();
-			case InterfaceRepositoryPackage.SCREWING_CYLINDER: return createScrewingCylinder();
-			case InterfaceRepositoryPackage.SCREWING_FIXTURE: return createScrewingFixture();
-			case InterfaceRepositoryPackage.SCREWING_POTENTIOMETER: return createScrewingPotentiometer();
+			case InterfaceRepositoryPackage.INTERFACE: return createInterface();
+			case InterfaceRepositoryPackage.SCREWING: return createScrewing();
 			case InterfaceRepositoryPackage.SUSPENSION: return createSuspension();
-			case InterfaceRepositoryPackage.SUSPENSION_RACK: return createSuspensionRack();
-			case InterfaceRepositoryPackage.SUSPENSION_ARM: return createSuspensionArm();
 			case InterfaceRepositoryPackage.GEARING: return createGearing();
 			case InterfaceRepositoryPackage.CLAMPING: return createClamping();
 			case InterfaceRepositoryPackage.PNEUMATIC_SUPPLY: return createPneumaticSupply();
@@ -73,6 +67,7 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 			case InterfaceRepositoryPackage.WATER_SUPPLY: return createWaterSupply();
 			case InterfaceRepositoryPackage.PHYSICAL_CONNECTION: return createPhysicalConnection();
 			case InterfaceRepositoryPackage.TRANSPORT_CONNECTION: return createTransportConnection();
+			case InterfaceRepositoryPackage.FIXTURE: return createFixture();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -93,9 +88,9 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ScrewingSplitter createScrewingSplitter() {
-		ScrewingSplitterImpl screwingSplitter = new ScrewingSplitterImpl();
-		return screwingSplitter;
+	public Interface createInterface() {
+		InterfaceImpl interface_ = new InterfaceImpl();
+		return interface_;
 	}
 
 	/**
@@ -103,49 +98,9 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ScrewingMotor createScrewingMotor() {
-		ScrewingMotorImpl screwingMotor = new ScrewingMotorImpl();
-		return screwingMotor;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ScrewingRack createScrewingRack() {
-		ScrewingRackImpl screwingRack = new ScrewingRackImpl();
-		return screwingRack;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ScrewingCylinder createScrewingCylinder() {
-		ScrewingCylinderImpl screwingCylinder = new ScrewingCylinderImpl();
-		return screwingCylinder;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ScrewingFixture createScrewingFixture() {
-		ScrewingFixtureImpl screwingFixture = new ScrewingFixtureImpl();
-		return screwingFixture;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public ScrewingPotentiometer createScrewingPotentiometer() {
-		ScrewingPotentiometerImpl screwingPotentiometer = new ScrewingPotentiometerImpl();
-		return screwingPotentiometer;
+	public Screwing createScrewing() {
+		ScrewingImpl screwing = new ScrewingImpl();
+		return screwing;
 	}
 
 	/**
@@ -156,26 +111,6 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 	public Suspension createSuspension() {
 		SuspensionImpl suspension = new SuspensionImpl();
 		return suspension;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SuspensionRack createSuspensionRack() {
-		SuspensionRackImpl suspensionRack = new SuspensionRackImpl();
-		return suspensionRack;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public SuspensionArm createSuspensionArm() {
-		SuspensionArmImpl suspensionArm = new SuspensionArmImpl();
-		return suspensionArm;
 	}
 
 	/**
@@ -246,6 +181,16 @@ public class InterfaceRepositoryFactoryImpl extends EFactoryImpl implements Inte
 	public TransportConnection createTransportConnection() {
 		TransportConnectionImpl transportConnection = new TransportConnectionImpl();
 		return transportConnection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Fixture createFixture() {
+		FixtureImpl fixture = new FixtureImpl();
+		return fixture;
 	}
 
 	/**

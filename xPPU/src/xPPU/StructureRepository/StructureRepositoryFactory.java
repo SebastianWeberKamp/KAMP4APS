@@ -22,6 +22,15 @@ public interface StructureRepositoryFactory extends EFactory {
 	StructureRepositoryFactory eINSTANCE = xPPU.StructureRepository.impl.StructureRepositoryFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Structure</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Structure</em>'.
+	 * @generated
+	 */
+	Structure createStructure();
+
+	/**
 	 * Returns a new object of class '<em>Communication Network</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,6 +92,15 @@ public interface StructureRepositoryFactory extends EFactory {
 	 * @generated
 	 */
 	PowerWiring createPowerWiring();
+
+	/**
+	 * Returns a new object of class '<em>Logical Wiring</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Logical Wiring</em>'.
+	 * @generated
+	 */
+	LogicalWiring createLogicalWiring();
 
 	/**
 	 * Returns the package supported by this factory.

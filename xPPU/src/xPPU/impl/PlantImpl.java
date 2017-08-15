@@ -19,8 +19,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import xPPU.ComponentRepository.ComponentRepository;
 
-import xPPU.Identifier.impl.IdentifierImpl;
-
 import xPPU.InterfaceRepository.InterfaceRepository;
 
 import xPPU.ModuleRepository.ModuleRepository;
@@ -49,7 +47,7 @@ import xPPU.XPPUPackage;
  *
  * @generated
  */
-public class PlantImpl extends IdentifierImpl implements Plant {
+public class PlantImpl extends EntityImpl implements Plant {
 	/**
 	 * The default value of the '{@link #getPlantName() <em>Plant Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

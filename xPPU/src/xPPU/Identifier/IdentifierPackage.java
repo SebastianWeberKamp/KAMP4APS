@@ -92,6 +92,43 @@ public interface IdentifierPackage extends EPackage {
 	 */
 	int IDENTIFIER_OPERATION_COUNT = 0;
 
+	/**
+	 * The meta object id for the '{@link xPPU.Identifier.impl.NamedElementImpl <em>Named Element</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.Identifier.impl.NamedElementImpl
+	 * @see xPPU.Identifier.impl.IdentifierPackageImpl#getNamedElement()
+	 * @generated
+	 */
+	int NAMED_ELEMENT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT__NAME = 0;
+
+	/**
+	 * The number of structural features of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Named Element</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NAMED_ELEMENT_OPERATION_COUNT = 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link xPPU.Identifier.Identifier <em>Identifier</em>}'.
@@ -113,6 +150,27 @@ public interface IdentifierPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getIdentifier_Id();
+
+	/**
+	 * Returns the meta object for class '{@link xPPU.Identifier.NamedElement <em>Named Element</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Named Element</em>'.
+	 * @see xPPU.Identifier.NamedElement
+	 * @generated
+	 */
+	EClass getNamedElement();
+
+	/**
+	 * Returns the meta object for the attribute '{@link xPPU.Identifier.NamedElement#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see xPPU.Identifier.NamedElement#getName()
+	 * @see #getNamedElement()
+	 * @generated
+	 */
+	EAttribute getNamedElement_Name();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -154,6 +212,24 @@ public interface IdentifierPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute IDENTIFIER__ID = eINSTANCE.getIdentifier_Id();
+
+		/**
+		 * The meta object literal for the '{@link xPPU.Identifier.impl.NamedElementImpl <em>Named Element</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xPPU.Identifier.impl.NamedElementImpl
+		 * @see xPPU.Identifier.impl.IdentifierPackageImpl#getNamedElement()
+		 * @generated
+		 */
+		EClass NAMED_ELEMENT = eINSTANCE.getNamedElement();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NAMED_ELEMENT__NAME = eINSTANCE.getNamedElement_Name();
 
 	}
 

@@ -64,7 +64,7 @@ public class SuspensionArmItemProvider extends SuspensionItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SuspensionArm)object).getId();
+		String label = ((SuspensionArm)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_SuspensionArm_type") :
 			getString("_UI_SuspensionArm_type") + " " + label;

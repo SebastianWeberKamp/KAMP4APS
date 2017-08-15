@@ -64,7 +64,7 @@ public class RubberBandItemProvider extends MechanicalPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((RubberBand)object).getId();
+		String label = ((RubberBand)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_RubberBand_type") :
 			getString("_UI_RubberBand_type") + " " + label;

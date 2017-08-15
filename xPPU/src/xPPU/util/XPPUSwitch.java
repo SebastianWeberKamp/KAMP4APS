@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.util.Switch;
 import xPPU.*;
 
 import xPPU.Identifier.Identifier;
+import xPPU.Identifier.NamedElement;
 
 /**
  * <!-- begin-user-doc -->
@@ -71,7 +72,17 @@ public class XPPUSwitch<T> extends Switch<T> {
 			case XPPUPackage.PLANT: {
 				Plant plant = (Plant)theEObject;
 				T result = casePlant(plant);
+				if (result == null) result = caseEntity(plant);
 				if (result == null) result = caseIdentifier(plant);
+				if (result == null) result = caseNamedElement(plant);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case XPPUPackage.ENTITY: {
+				Entity entity = (Entity)theEObject;
+				T result = caseEntity(entity);
+				if (result == null) result = caseIdentifier(entity);
+				if (result == null) result = caseNamedElement(entity);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -95,6 +106,21 @@ public class XPPUSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseEntity(Entity object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -106,6 +132,21 @@ public class XPPUSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseIdentifier(Identifier object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseNamedElement(NamedElement object) {
 		return null;
 	}
 

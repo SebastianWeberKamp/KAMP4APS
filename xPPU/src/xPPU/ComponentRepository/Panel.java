@@ -2,7 +2,6 @@
  */
 package xPPU.ComponentRepository;
 
-import xPPU.Identifier.Identifier;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +19,7 @@ import xPPU.Identifier.Identifier;
  * @model abstract="true"
  * @generated
  */
-public interface Panel extends Identifier {
+public interface Panel extends Component {
 	/**
 	 * Returns the value of the '<em><b>Component Repository</b></em>' reference.
 	 * <!-- begin-user-doc -->

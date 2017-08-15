@@ -4,8 +4,6 @@ package xPPU.tests;
 
 import junit.textui.TestRunner;
 
-import xPPU.Identifier.tests.IdentifierTest;
-
 import xPPU.Plant;
 import xPPU.XPPUFactory;
 
@@ -15,7 +13,7 @@ import xPPU.XPPUFactory;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PlantTest extends IdentifierTest {
+public class PlantTest extends EntityTest {
 
 	/**
 	 * <!-- begin-user-doc -->

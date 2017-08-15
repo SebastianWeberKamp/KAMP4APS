@@ -64,7 +64,7 @@ public class ScrewingRackItemProvider extends ScrewingItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ScrewingRack)object).getId();
+		String label = ((ScrewingRack)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ScrewingRack_type") :
 			getString("_UI_ScrewingRack_type") + " " + label;

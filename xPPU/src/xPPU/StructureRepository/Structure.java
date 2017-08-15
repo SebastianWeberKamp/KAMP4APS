@@ -6,7 +6,7 @@ import org.eclipse.emf.common.util.EList;
 
 import xPPU.ComponentRepository.Component;
 
-import xPPU.Identifier.Identifier;
+import xPPU.Entity;
 
 import xPPU.ModuleRepository.Module;
 
@@ -27,10 +27,10 @@ import xPPU.Plant;
  * </ul>
  *
  * @see xPPU.StructureRepository.StructureRepositoryPackage#getStructure()
- * @model abstract="true"
+ * @model
  * @generated
  */
-public interface Structure extends Identifier {
+public interface Structure extends Entity {
 	/**
 	 * Returns the value of the '<em><b>Parent Plant</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link xPPU.Plant#getStructures <em>Structures</em>}'.
@@ -62,7 +62,6 @@ public interface Structure extends Identifier {
 	/**
 	 * Returns the value of the '<em><b>Modules</b></em>' containment reference list.
 	 * The list contents are of type {@link xPPU.ModuleRepository.Module}.
-	 * It is bidirectional and its opposite is '{@link xPPU.ModuleRepository.Module#getParentStructure <em>Parent Structure</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Modules</em>' containment reference list isn't clear,
@@ -71,8 +70,7 @@ public interface Structure extends Identifier {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modules</em>' containment reference list.
 	 * @see xPPU.StructureRepository.StructureRepositoryPackage#getStructure_Modules()
-	 * @see xPPU.ModuleRepository.Module#getParentStructure
-	 * @model opposite="parentStructure" containment="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Module> getModules();

@@ -14,23 +14,22 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
-import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
-import xPPU.Identifier.impl.IdentifierImpl;
+import xPPU.Entity;
 
 import xPPU.InterfaceRepository.Interface;
 
 import xPPU.ModuleRepository.Module;
 import xPPU.ModuleRepository.ModuleRepositoryPackage;
 
-import xPPU.StructureRepository.Structure;
-import xPPU.StructureRepository.StructureRepositoryPackage;
+import xPPU.impl.EntityImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -40,7 +39,7 @@ import xPPU.StructureRepository.StructureRepositoryPackage;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link xPPU.ModuleRepository.impl.ModuleImpl#getParentStructure <em>Parent Structure</em>}</li>
+ *   <li>{@link xPPU.ModuleRepository.impl.ModuleImpl#getParentEntity <em>Parent Entity</em>}</li>
  *   <li>{@link xPPU.ModuleRepository.impl.ModuleImpl#getModules <em>Modules</em>}</li>
  *   <li>{@link xPPU.ModuleRepository.impl.ModuleImpl#getComponents <em>Components</em>}</li>
  *   <li>{@link xPPU.ModuleRepository.impl.ModuleImpl#getInterfaces <em>Interfaces</em>}</li>
@@ -48,9 +47,19 @@ import xPPU.StructureRepository.StructureRepositoryPackage;
  *
  * @generated
  */
-public class ModuleImpl extends IdentifierImpl implements Module {
+public class ModuleImpl extends EntityImpl implements Module {
 	/**
-	 * The cached value of the '{@link #getModules() <em>Modules</em>}' reference list.
+	 * The cached value of the '{@link #getParentEntity() <em>Parent Entity</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParentEntity()
+	 * @generated
+	 * @ordered
+	 */
+	protected Entity parentEntity;
+
+	/**
+	 * The cached value of the '{@link #getModules() <em>Modules</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getModules()
@@ -60,7 +69,7 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	protected EList<Module> modules;
 
 	/**
-	 * The cached value of the '{@link #getComponents() <em>Components</em>}' reference list.
+	 * The cached value of the '{@link #getComponents() <em>Components</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getComponents()
@@ -103,40 +112,37 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Structure getParentStructure() {
-		if (eContainerFeatureID() != ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE) return null;
-		return (Structure)eInternalContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetParentStructure(Structure newParentStructure, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject)newParentStructure, ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE, msgs);
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParentStructure(Structure newParentStructure) {
-		if (newParentStructure != eInternalContainer() || (eContainerFeatureID() != ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE && newParentStructure != null)) {
-			if (EcoreUtil.isAncestor(this, newParentStructure))
-				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
-			NotificationChain msgs = null;
-			if (eInternalContainer() != null)
-				msgs = eBasicRemoveFromContainer(msgs);
-			if (newParentStructure != null)
-				msgs = ((InternalEObject)newParentStructure).eInverseAdd(this, StructureRepositoryPackage.STRUCTURE__MODULES, Structure.class, msgs);
-			msgs = basicSetParentStructure(newParentStructure, msgs);
-			if (msgs != null) msgs.dispatch();
+	public Entity getParentEntity() {
+		if (parentEntity != null && parentEntity.eIsProxy()) {
+			InternalEObject oldParentEntity = (InternalEObject)parentEntity;
+			parentEntity = (Entity)eResolveProxy(oldParentEntity);
+			if (parentEntity != oldParentEntity) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ModuleRepositoryPackage.MODULE__PARENT_ENTITY, oldParentEntity, parentEntity));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE, newParentStructure, newParentStructure));
+		return parentEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Entity basicGetParentEntity() {
+		return parentEntity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setParentEntity(Entity newParentEntity) {
+		Entity oldParentEntity = parentEntity;
+		parentEntity = newParentEntity;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, ModuleRepositoryPackage.MODULE__PARENT_ENTITY, oldParentEntity, parentEntity));
 	}
 
 	/**
@@ -146,7 +152,7 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	 */
 	public EList<Module> getModules() {
 		if (modules == null) {
-			modules = new EObjectResolvingEList<Module>(Module.class, this, ModuleRepositoryPackage.MODULE__MODULES);
+			modules = new EObjectContainmentEList<Module>(Module.class, this, ModuleRepositoryPackage.MODULE__MODULES);
 		}
 		return modules;
 	}
@@ -158,7 +164,7 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	 */
 	public EList<Component> getComponents() {
 		if (components == null) {
-			components = new EObjectWithInverseResolvingEList<Component>(Component.class, this, ModuleRepositoryPackage.MODULE__COMPONENTS, ComponentRepositoryPackage.COMPONENT__PARENT_MODULE);
+			components = new EObjectContainmentWithInverseEList<Component>(Component.class, this, ModuleRepositoryPackage.MODULE__COMPONENTS, ComponentRepositoryPackage.COMPONENT__PARENT_MODULE);
 		}
 		return components;
 	}
@@ -184,10 +190,6 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
-				if (eInternalContainer() != null)
-					msgs = eBasicRemoveFromContainer(msgs);
-				return basicSetParentStructure((Structure)otherEnd, msgs);
 			case ModuleRepositoryPackage.MODULE__COMPONENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComponents()).basicAdd(otherEnd, msgs);
 		}
@@ -202,8 +204,8 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
-				return basicSetParentStructure(null, msgs);
+			case ModuleRepositoryPackage.MODULE__MODULES:
+				return ((InternalEList<?>)getModules()).basicRemove(otherEnd, msgs);
 			case ModuleRepositoryPackage.MODULE__COMPONENTS:
 				return ((InternalEList<?>)getComponents()).basicRemove(otherEnd, msgs);
 		}
@@ -216,24 +218,11 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	 * @generated
 	 */
 	@Override
-	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
-		switch (eContainerFeatureID()) {
-			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
-				return eInternalContainer().eInverseRemove(this, StructureRepositoryPackage.STRUCTURE__MODULES, Structure.class, msgs);
-		}
-		return super.eBasicRemoveFromContainerFeature(msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
-				return getParentStructure();
+			case ModuleRepositoryPackage.MODULE__PARENT_ENTITY:
+				if (resolve) return getParentEntity();
+				return basicGetParentEntity();
 			case ModuleRepositoryPackage.MODULE__MODULES:
 				return getModules();
 			case ModuleRepositoryPackage.MODULE__COMPONENTS:
@@ -253,8 +242,8 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
-				setParentStructure((Structure)newValue);
+			case ModuleRepositoryPackage.MODULE__PARENT_ENTITY:
+				setParentEntity((Entity)newValue);
 				return;
 			case ModuleRepositoryPackage.MODULE__MODULES:
 				getModules().clear();
@@ -280,8 +269,8 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
-				setParentStructure((Structure)null);
+			case ModuleRepositoryPackage.MODULE__PARENT_ENTITY:
+				setParentEntity((Entity)null);
 				return;
 			case ModuleRepositoryPackage.MODULE__MODULES:
 				getModules().clear();
@@ -304,8 +293,8 @@ public class ModuleImpl extends IdentifierImpl implements Module {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE:
-				return getParentStructure() != null;
+			case ModuleRepositoryPackage.MODULE__PARENT_ENTITY:
+				return parentEntity != null;
 			case ModuleRepositoryPackage.MODULE__MODULES:
 				return modules != null && !modules.isEmpty();
 			case ModuleRepositoryPackage.MODULE__COMPONENTS:

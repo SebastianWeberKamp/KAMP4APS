@@ -19,9 +19,9 @@ import org.eclipse.emf.ecore.util.Diagnostician;
 
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 
+import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.ComponentRepositoryFactory;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
-import xPPU.ComponentRepository.OperationPanel;
 
 /**
  * <!-- begin-user-doc -->
@@ -60,7 +60,7 @@ public class ComponentRepositoryExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.componentrepository"));
-				OperationPanel root = ComponentRepositoryFactory.eINSTANCE.createOperationPanel();
+				Component root = ComponentRepositoryFactory.eINSTANCE.createComponent();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

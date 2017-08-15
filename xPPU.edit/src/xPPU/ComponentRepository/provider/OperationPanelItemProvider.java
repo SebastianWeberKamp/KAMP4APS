@@ -135,7 +135,7 @@ public class OperationPanelItemProvider extends PanelItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((OperationPanel)object).getId();
+		String label = ((OperationPanel)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_OperationPanel_type") :
 			getString("_UI_OperationPanel_type") + " " + label;

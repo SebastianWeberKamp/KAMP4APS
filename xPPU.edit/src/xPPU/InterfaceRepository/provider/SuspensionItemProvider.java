@@ -64,7 +64,7 @@ public class SuspensionItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Suspension)object).getId();
+		String label = ((Suspension)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Suspension_type") :
 			getString("_UI_Suspension_type") + " " + label;

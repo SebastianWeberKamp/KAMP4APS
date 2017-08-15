@@ -90,7 +90,7 @@ public class PowerSupplyItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PowerSupply)object).getId();
+		String label = ((PowerSupply)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PowerSupply_type") :
 			getString("_UI_PowerSupply_type") + " " + label;

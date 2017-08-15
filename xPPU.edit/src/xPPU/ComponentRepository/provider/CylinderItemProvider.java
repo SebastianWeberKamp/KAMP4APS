@@ -101,7 +101,7 @@ public class CylinderItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Cylinder)object).getId();
+		String label = ((Cylinder)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Cylinder_type") :
 			getString("_UI_Cylinder_type") + " " + label;

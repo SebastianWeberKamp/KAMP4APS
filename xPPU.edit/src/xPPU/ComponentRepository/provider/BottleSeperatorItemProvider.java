@@ -158,7 +158,7 @@ public class BottleSeperatorItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((BottleSeperator)object).getId();
+		String label = ((BottleSeperator)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_BottleSeperator_type") :
 			getString("_UI_BottleSeperator_type") + " " + label;

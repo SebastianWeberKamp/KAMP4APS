@@ -89,7 +89,7 @@ public class PneumaticSplitterItemProvider extends SplitterItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PneumaticSplitter)object).getId();
+		String label = ((PneumaticSplitter)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PneumaticSplitter_type") :
 			getString("_UI_PneumaticSplitter_type") + " " + label;

@@ -112,7 +112,7 @@ public class TankItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Tank)object).getId();
+		String label = ((Tank)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Tank_type") :
 			getString("_UI_Tank_type") + " " + label;

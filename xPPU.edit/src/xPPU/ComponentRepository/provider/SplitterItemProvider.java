@@ -78,7 +78,7 @@ public class SplitterItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Splitter)object).getId();
+		String label = ((Splitter)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Splitter_type") :
 			getString("_UI_Splitter_type") + " " + label;

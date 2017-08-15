@@ -107,7 +107,7 @@ public class BusCableItemProvider extends CableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((BusCable)object).getId();
+		String label = ((BusCable)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_BusCable_type") :
 			getString("_UI_BusCable_type") + " " + label;

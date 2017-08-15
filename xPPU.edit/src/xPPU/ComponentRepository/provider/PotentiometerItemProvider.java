@@ -70,7 +70,7 @@ public class PotentiometerItemProvider extends ElectronicPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Potentiometer)object).getId();
+		String label = ((Potentiometer)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Potentiometer_type") :
 			getString("_UI_Potentiometer_type") + " " + label;

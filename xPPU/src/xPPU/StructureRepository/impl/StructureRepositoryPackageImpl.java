@@ -40,6 +40,7 @@ import xPPU.StructureRepository.CommunicationNetwork;
 import xPPU.StructureRepository.ControlCabinet;
 import xPPU.StructureRepository.Conveyor;
 import xPPU.StructureRepository.Crane;
+import xPPU.StructureRepository.LogicalWiring;
 import xPPU.StructureRepository.PneumaticNetwork;
 import xPPU.StructureRepository.PowerNetwork;
 import xPPU.StructureRepository.PowerWiring;
@@ -113,6 +114,13 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 	 * @generated
 	 */
 	private EClass powerWiringEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass logicalWiringEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -350,6 +358,15 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getLogicalWiring() {
+		return logicalWiringEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public StructureRepositoryFactory getStructureRepositoryFactory() {
 		return (StructureRepositoryFactory)getEFactoryInstance();
 	}
@@ -396,6 +413,8 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		createEReference(craneEClass, CRANE__VACUUMGRIPPER);
 
 		powerWiringEClass = createEClass(POWER_WIRING);
+
+		logicalWiringEClass = createEClass(LOGICAL_WIRING);
 	}
 
 	/**
@@ -422,7 +441,6 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 		XPPUPackage theXPPUPackage = (XPPUPackage)EPackage.Registry.INSTANCE.getEPackage(XPPUPackage.eNS_URI);
 		ModuleRepositoryPackage theModuleRepositoryPackage = (ModuleRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI);
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
@@ -433,7 +451,7 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		structureEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+		structureEClass.getESuperTypes().add(theXPPUPackage.getEntity());
 		communicationNetworkEClass.getESuperTypes().add(this.getStructure());
 		powerNetworkEClass.getESuperTypes().add(this.getStructure());
 		controlCabinetEClass.getESuperTypes().add(this.getStructure());
@@ -441,11 +459,12 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		conveyorEClass.getESuperTypes().add(this.getStructure());
 		craneEClass.getESuperTypes().add(this.getStructure());
 		powerWiringEClass.getESuperTypes().add(this.getStructure());
+		logicalWiringEClass.getESuperTypes().add(this.getStructure());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(structureEClass, Structure.class, "Structure", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(structureEClass, Structure.class, "Structure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getStructure_ParentPlant(), theXPPUPackage.getPlant(), theXPPUPackage.getPlant_Structures(), "parentPlant", null, 1, 1, Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getStructure_Modules(), theModuleRepositoryPackage.getModule(), theModuleRepositoryPackage.getModule_ParentStructure(), "modules", null, 0, -1, Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getStructure_Modules(), theModuleRepositoryPackage.getModule(), null, "modules", null, 0, -1, Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getStructure_Components(), theComponentRepositoryPackage.getComponent(), theComponentRepositoryPackage.getComponent_Parent(), "components", null, 0, -1, Structure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(communicationNetworkEClass, CommunicationNetwork.class, "CommunicationNetwork", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -466,6 +485,8 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		initEReference(getCrane_Vacuumgripper(), theComponentRepositoryPackage.getVacuumGripper(), theComponentRepositoryPackage.getVacuumGripper_MountedTo(), "vacuumgripper", null, 1, 1, Crane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(powerWiringEClass, PowerWiring.class, "PowerWiring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(logicalWiringEClass, LogicalWiring.class, "LogicalWiring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //StructureRepositoryPackageImpl

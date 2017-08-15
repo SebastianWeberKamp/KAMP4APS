@@ -10,7 +10,7 @@ package xPPU.InterfaceRepository;
  *
  *
  * @see xPPU.InterfaceRepository.InterfaceRepositoryPackage#getScrewingMotor()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ScrewingMotor extends Screwing {

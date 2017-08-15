@@ -18,8 +18,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.util.Diagnostician;
 
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-
-import xPPU.StructureRepository.CommunicationNetwork;
+import xPPU.StructureRepository.Structure;
 import xPPU.StructureRepository.StructureRepositoryFactory;
 import xPPU.StructureRepository.StructureRepositoryPackage;
 
@@ -60,7 +59,7 @@ public class StructureRepositoryExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.structurerepository"));
-				CommunicationNetwork root = StructureRepositoryFactory.eINSTANCE.createCommunicationNetwork();
+				Structure root = StructureRepositoryFactory.eINSTANCE.createStructure();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

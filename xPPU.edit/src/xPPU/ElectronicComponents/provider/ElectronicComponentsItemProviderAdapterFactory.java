@@ -141,6 +141,29 @@ public class ElectronicComponentsItemProviderAdapterFactory extends ElectronicCo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.ElectronicComponents.MicroSwitch} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MicroSwitchItemProvider microSwitchItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.ElectronicComponents.MicroSwitch}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMicroSwitchAdapter() {
+		if (microSwitchItemProvider == null) {
+			microSwitchItemProvider = new MicroSwitchItemProvider(this);
+		}
+
+		return microSwitchItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -242,6 +265,7 @@ public class ElectronicComponentsItemProviderAdapterFactory extends ElectronicCo
 		if (switchItemProvider != null) switchItemProvider.dispose();
 		if (ledItemProvider != null) ledItemProvider.dispose();
 		if (buttonItemProvider != null) buttonItemProvider.dispose();
+		if (microSwitchItemProvider != null) microSwitchItemProvider.dispose();
 	}
 
 }

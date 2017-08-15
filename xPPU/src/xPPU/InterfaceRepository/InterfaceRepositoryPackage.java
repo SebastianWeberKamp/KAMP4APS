@@ -8,6 +8,8 @@ import org.eclipse.emf.ecore.EReference;
 
 import xPPU.Identifier.IdentifierPackage;
 
+import xPPU.XPPUPackage;
+
 /**
  * <!-- begin-user-doc -->
  * The <b>Package</b> for the model.
@@ -77,7 +79,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int INTERFACE_REPOSITORY__ID = IdentifierPackage.IDENTIFIER__ID;
 
 	/**
-	 * The feature id for the '<em><b>All Interfaces In Plant</b></em>' reference list.
+	 * The feature id for the '<em><b>All Interfaces In Plant</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -120,16 +122,25 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE__ID = IdentifierPackage.IDENTIFIER__ID;
+	int INTERFACE__ID = XPPUPackage.ENTITY__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE__PARENT_ELEMENT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int INTERFACE__NAME = XPPUPackage.ENTITY__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE__PARENT_ELEMENT = XPPUPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Interface</em>' class.
@@ -138,7 +149,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int INTERFACE_FEATURE_COUNT = XPPUPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Interface</em>' class.
@@ -147,7 +158,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
+	int INTERFACE_OPERATION_COUNT = XPPUPackage.ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.ScrewingImpl <em>Screwing</em>}' class.
@@ -169,7 +180,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING__NAME = INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -215,7 +235,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_SPLITTER__ID = SCREWING__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_SPLITTER__NAME = SCREWING__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -261,7 +290,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_MOTOR__ID = SCREWING__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_MOTOR__NAME = SCREWING__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -307,7 +345,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_RACK__ID = SCREWING__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_RACK__NAME = SCREWING__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -353,7 +400,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_CYLINDER__ID = SCREWING__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_CYLINDER__NAME = SCREWING__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -399,7 +455,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_FIXTURE__ID = SCREWING__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_FIXTURE__NAME = SCREWING__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -445,7 +510,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SCREWING_POTENTIOMETER__ID = SCREWING__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SCREWING_POTENTIOMETER__NAME = SCREWING__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -491,7 +565,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SUSPENSION__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUSPENSION__NAME = INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -537,7 +620,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SUSPENSION_RACK__ID = SUSPENSION__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUSPENSION_RACK__NAME = SUSPENSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -583,7 +675,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SUSPENSION_ARM__ID = SUSPENSION__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SUSPENSION_ARM__NAME = SUSPENSION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -629,7 +730,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int GEARING__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GEARING__NAME = INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -675,7 +785,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int CLAMPING__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CLAMPING__NAME = INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -721,7 +840,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int PNEUMATIC_SUPPLY__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_SUPPLY__NAME = INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -767,7 +895,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int SIGNAL_INTERFACE__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SIGNAL_INTERFACE__NAME = INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -813,7 +950,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int WATER_SUPPLY__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int WATER_SUPPLY__NAME = INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -859,7 +1005,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int PHYSICAL_CONNECTION__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PHYSICAL_CONNECTION__NAME = INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -905,7 +1060,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	int TRANSPORT_CONNECTION__ID = INTERFACE__ID;
 
 	/**
-	 * The feature id for the '<em><b>Parent Element</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSPORT_CONNECTION__NAME = INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -933,6 +1097,62 @@ public interface InterfaceRepositoryPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link xPPU.InterfaceRepository.impl.FixtureImpl <em>Fixture</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.InterfaceRepository.impl.FixtureImpl
+	 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getFixture()
+	 * @generated
+	 */
+	int FIXTURE = 19;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIXTURE__ID = INTERFACE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIXTURE__NAME = INTERFACE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIXTURE__PARENT_ELEMENT = INTERFACE__PARENT_ELEMENT;
+
+	/**
+	 * The number of structural features of the '<em>Fixture</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIXTURE_FEATURE_COUNT = INTERFACE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Fixture</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FIXTURE_OPERATION_COUNT = INTERFACE_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link xPPU.InterfaceRepository.InterfaceRepository <em>Interface Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -943,10 +1163,10 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	EClass getInterfaceRepository();
 
 	/**
-	 * Returns the meta object for the reference list '{@link xPPU.InterfaceRepository.InterfaceRepository#getAllInterfacesInPlant <em>All Interfaces In Plant</em>}'.
+	 * Returns the meta object for the containment reference list '{@link xPPU.InterfaceRepository.InterfaceRepository#getAllInterfacesInPlant <em>All Interfaces In Plant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>All Interfaces In Plant</em>'.
+	 * @return the meta object for the containment reference list '<em>All Interfaces In Plant</em>'.
 	 * @see xPPU.InterfaceRepository.InterfaceRepository#getAllInterfacesInPlant()
 	 * @see #getInterfaceRepository()
 	 * @generated
@@ -964,10 +1184,10 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	EClass getInterface();
 
 	/**
-	 * Returns the meta object for the reference '{@link xPPU.InterfaceRepository.Interface#getParentElement <em>Parent Element</em>}'.
+	 * Returns the meta object for the reference list '{@link xPPU.InterfaceRepository.Interface#getParentElement <em>Parent Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Parent Element</em>'.
+	 * @return the meta object for the reference list '<em>Parent Element</em>'.
 	 * @see xPPU.InterfaceRepository.Interface#getParentElement()
 	 * @see #getInterface()
 	 * @generated
@@ -1145,6 +1365,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	EClass getTransportConnection();
 
 	/**
+	 * Returns the meta object for class '{@link xPPU.InterfaceRepository.Fixture <em>Fixture</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Fixture</em>'.
+	 * @see xPPU.InterfaceRepository.Fixture
+	 * @generated
+	 */
+	EClass getFixture();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1178,7 +1408,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		EClass INTERFACE_REPOSITORY = eINSTANCE.getInterfaceRepository();
 
 		/**
-		 * The meta object literal for the '<em><b>All Interfaces In Plant</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>All Interfaces In Plant</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1196,7 +1426,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		EClass INTERFACE = eINSTANCE.getInterface();
 
 		/**
-		 * The meta object literal for the '<em><b>Parent Element</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Parent Element</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -1372,6 +1602,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EClass TRANSPORT_CONNECTION = eINSTANCE.getTransportConnection();
+
+		/**
+		 * The meta object literal for the '{@link xPPU.InterfaceRepository.impl.FixtureImpl <em>Fixture</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xPPU.InterfaceRepository.impl.FixtureImpl
+		 * @see xPPU.InterfaceRepository.impl.InterfaceRepositoryPackageImpl#getFixture()
+		 * @generated
+		 */
+		EClass FIXTURE = eINSTANCE.getFixture();
 
 	}
 

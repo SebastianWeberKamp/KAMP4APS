@@ -77,6 +77,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int MECHANICAL_PART__ID = ComponentRepositoryPackage.COMPONENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MECHANICAL_PART__NAME = ComponentRepositoryPackage.COMPONENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,7 +104,7 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int MECHANICAL_PART__PARENT = ComponentRepositoryPackage.COMPONENT__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -150,6 +159,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int PUSHHEAD__ID = MECHANICAL_PART__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PUSHHEAD__NAME = MECHANICAL_PART__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -168,7 +186,7 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int PUSHHEAD__PARENT = MECHANICAL_PART__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -223,6 +241,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int HOUSING__ID = MECHANICAL_PART__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int HOUSING__NAME = MECHANICAL_PART__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -241,7 +268,7 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int HOUSING__PARENT = MECHANICAL_PART__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -296,6 +323,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int RETURN_SPRING__ID = MECHANICAL_PART__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RETURN_SPRING__NAME = MECHANICAL_PART__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -314,7 +350,7 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int RETURN_SPRING__PARENT = MECHANICAL_PART__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -369,6 +405,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int RUBBER_BAND__ID = MECHANICAL_PART__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RUBBER_BAND__NAME = MECHANICAL_PART__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -387,7 +432,7 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int RUBBER_BAND__PARENT = MECHANICAL_PART__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -442,6 +487,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int GRIPPER_PART__ID = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GRIPPER_PART__NAME = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -460,7 +514,7 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int GRIPPER_PART__PARENT = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -506,6 +560,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int ARM__ID = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARM__NAME = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -524,7 +587,7 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int ARM__PARENT = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -579,6 +642,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int RAMP__ID = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RAMP__NAME = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -597,7 +669,7 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int RAMP__PARENT = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -670,6 +742,15 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int TABLE__ID = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TABLE__NAME = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -688,7 +769,7 @@ public interface MechanicalComponentsPackage extends EPackage {
 	int TABLE__PARENT = ComponentRepositoryPackage.MECHANICAL_ASSEMBLY__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

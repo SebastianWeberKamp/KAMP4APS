@@ -64,7 +64,7 @@ public class PneumaticNetworkItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PneumaticNetwork)object).getId();
+		String label = ((PneumaticNetwork)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PneumaticNetwork_type") :
 			getString("_UI_PneumaticNetwork_type") + " " + label;

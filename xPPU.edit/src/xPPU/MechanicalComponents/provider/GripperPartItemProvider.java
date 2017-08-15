@@ -70,7 +70,7 @@ public class GripperPartItemProvider extends MechanicalAssemblyItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((GripperPart)object).getId();
+		String label = ((GripperPart)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_GripperPart_type") :
 			getString("_UI_GripperPart_type") + " " + label;

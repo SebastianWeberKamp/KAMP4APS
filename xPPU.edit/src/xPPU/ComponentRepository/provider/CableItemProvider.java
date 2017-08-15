@@ -53,7 +53,7 @@ public class CableItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Cable)object).getId();
+		String label = ((Cable)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Cable_type") :
 			getString("_UI_Cable_type") + " " + label;

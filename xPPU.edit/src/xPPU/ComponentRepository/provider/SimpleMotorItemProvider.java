@@ -64,7 +64,7 @@ public class SimpleMotorItemProvider extends MotorItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((SimpleMotor)object).getId();
+		String label = ((SimpleMotor)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_SimpleMotor_type") :
 			getString("_UI_SimpleMotor_type") + " " + label;

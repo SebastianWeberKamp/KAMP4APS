@@ -64,7 +64,7 @@ public class CommunicationNetworkItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((CommunicationNetwork)object).getId();
+		String label = ((CommunicationNetwork)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_CommunicationNetwork_type") :
 			getString("_UI_CommunicationNetwork_type") + " " + label;

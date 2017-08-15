@@ -302,6 +302,29 @@ public class ModuleRepositoryItemProviderAdapterFactory extends ModuleRepository
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.ModuleRepository.ConveyorBeltModule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ConveyorBeltModuleItemProvider conveyorBeltModuleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.ModuleRepository.ConveyorBeltModule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createConveyorBeltModuleAdapter() {
+		if (conveyorBeltModuleItemProvider == null) {
+			conveyorBeltModuleItemProvider = new ConveyorBeltModuleItemProvider(this);
+		}
+
+		return conveyorBeltModuleItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -410,6 +433,7 @@ public class ModuleRepositoryItemProviderAdapterFactory extends ModuleRepository
 		if (inductiveSensorModuleItemProvider != null) inductiveSensorModuleItemProvider.dispose();
 		if (presenceSensorModuleItemProvider != null) presenceSensorModuleItemProvider.dispose();
 		if (pressureSensorModuleItemProvider != null) pressureSensorModuleItemProvider.dispose();
+		if (conveyorBeltModuleItemProvider != null) conveyorBeltModuleItemProvider.dispose();
 	}
 
 }

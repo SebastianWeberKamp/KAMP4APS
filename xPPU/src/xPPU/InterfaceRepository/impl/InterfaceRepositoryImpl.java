@@ -4,11 +4,15 @@ package xPPU.InterfaceRepository.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 import xPPU.Identifier.impl.IdentifierImpl;
 
@@ -31,7 +35,7 @@ import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
  */
 public class InterfaceRepositoryImpl extends IdentifierImpl implements InterfaceRepository {
 	/**
-	 * The cached value of the '{@link #getAllInterfacesInPlant() <em>All Interfaces In Plant</em>}' reference list.
+	 * The cached value of the '{@link #getAllInterfacesInPlant() <em>All Interfaces In Plant</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAllInterfacesInPlant()
@@ -66,9 +70,23 @@ public class InterfaceRepositoryImpl extends IdentifierImpl implements Interface
 	 */
 	public EList<Interface> getAllInterfacesInPlant() {
 		if (allInterfacesInPlant == null) {
-			allInterfacesInPlant = new EObjectResolvingEList<Interface>(Interface.class, this, InterfaceRepositoryPackage.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT);
+			allInterfacesInPlant = new EObjectContainmentEList<Interface>(Interface.class, this, InterfaceRepositoryPackage.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT);
 		}
 		return allInterfacesInPlant;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case InterfaceRepositoryPackage.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT:
+				return ((InternalEList<?>)getAllInterfacesInPlant()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

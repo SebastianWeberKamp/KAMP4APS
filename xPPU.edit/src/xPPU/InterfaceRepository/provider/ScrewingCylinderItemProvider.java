@@ -64,7 +64,7 @@ public class ScrewingCylinderItemProvider extends ScrewingItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ScrewingCylinder)object).getId();
+		String label = ((ScrewingCylinder)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ScrewingCylinder_type") :
 			getString("_UI_ScrewingCylinder_type") + " " + label;

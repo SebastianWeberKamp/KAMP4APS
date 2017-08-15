@@ -66,6 +66,7 @@ public class ModuleRepositoryFactoryImpl extends EFactoryImpl implements ModuleR
 			case ModuleRepositoryPackage.INDUCTIVE_SENSOR_MODULE: return createInductiveSensorModule();
 			case ModuleRepositoryPackage.PRESENCE_SENSOR_MODULE: return createPresenceSensorModule();
 			case ModuleRepositoryPackage.PRESSURE_SENSOR_MODULE: return createPressureSensorModule();
+			case ModuleRepositoryPackage.CONVEYOR_BELT_MODULE: return createConveyorBeltModule();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -169,6 +170,16 @@ public class ModuleRepositoryFactoryImpl extends EFactoryImpl implements ModuleR
 	public PressureSensorModule createPressureSensorModule() {
 		PressureSensorModuleImpl pressureSensorModule = new PressureSensorModuleImpl();
 		return pressureSensorModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ConveyorBeltModule createConveyorBeltModule() {
+		ConveyorBeltModuleImpl conveyorBeltModule = new ConveyorBeltModuleImpl();
+		return conveyorBeltModule;
 	}
 
 	/**

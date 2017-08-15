@@ -64,7 +64,7 @@ public class GearingItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Gearing)object).getId();
+		String label = ((Gearing)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Gearing_type") :
 			getString("_UI_Gearing_type") + " " + label;

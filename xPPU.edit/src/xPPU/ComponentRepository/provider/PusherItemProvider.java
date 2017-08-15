@@ -130,7 +130,7 @@ public class PusherItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Pusher)object).getId();
+		String label = ((Pusher)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Pusher_type") :
 			getString("_UI_Pusher_type") + " " + label;

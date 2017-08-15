@@ -64,7 +64,7 @@ public class WaterSupplyItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((WaterSupply)object).getId();
+		String label = ((WaterSupply)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_WaterSupply_type") :
 			getString("_UI_WaterSupply_type") + " " + label;

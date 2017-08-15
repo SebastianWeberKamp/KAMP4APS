@@ -53,7 +53,7 @@ public class ScrewingItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Screwing)object).getId();
+		String label = ((Screwing)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Screwing_type") :
 			getString("_UI_Screwing_type") + " " + label;

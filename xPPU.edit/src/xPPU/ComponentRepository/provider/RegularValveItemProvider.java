@@ -64,7 +64,7 @@ public class RegularValveItemProvider extends ValveItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((RegularValve)object).getId();
+		String label = ((RegularValve)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_RegularValve_type") :
 			getString("_UI_RegularValve_type") + " " + label;

@@ -64,7 +64,7 @@ public class PhysicalConnectionItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PhysicalConnection)object).getId();
+		String label = ((PhysicalConnection)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PhysicalConnection_type") :
 			getString("_UI_PhysicalConnection_type") + " " + label;

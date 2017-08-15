@@ -56,6 +56,7 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case ComponentRepositoryPackage.COMPONENT: return createComponent();
 			case ComponentRepositoryPackage.OPERATION_PANEL: return createOperationPanel();
 			case ComponentRepositoryPackage.SIMPLE_MOTOR: return createSimpleMotor();
 			case ComponentRepositoryPackage.REGULAR_RAMP: return createRegularRamp();
@@ -63,6 +64,7 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 			case ComponentRepositoryPackage.OPTICAL_SENSOR: return createOpticalSensor();
 			case ComponentRepositoryPackage.INDUCTIVE_SENSOR: return createInductiveSensor();
 			case ComponentRepositoryPackage.PRESENCE_SENSOR: return createPresenceSensor();
+			case ComponentRepositoryPackage.PRESSURE_SENSOR: return createPressureSensor();
 			case ComponentRepositoryPackage.PNEUMATIC_PIPE: return createPneumaticPipe();
 			case ComponentRepositoryPackage.COMPRESSOR: return createCompressor();
 			case ComponentRepositoryPackage.POWER_CABLE: return createPowerCable();
@@ -92,9 +94,20 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 			case ComponentRepositoryPackage.CYLINDER_PART: return createCylinderPart();
 			case ComponentRepositoryPackage.MONOSTABLE_CYLINDER: return createMonostableCylinder();
 			case ComponentRepositoryPackage.COMPONENT_REPOSITORY: return createComponentRepository();
+			case ComponentRepositoryPackage.FIXTURE: return createFixture();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Component createComponent() {
+		ComponentImpl component = new ComponentImpl();
+		return component;
 	}
 
 	/**
@@ -165,6 +178,16 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 	public PresenceSensor createPresenceSensor() {
 		PresenceSensorImpl presenceSensor = new PresenceSensorImpl();
 		return presenceSensor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PressureSensor createPressureSensor() {
+		PressureSensorImpl pressureSensor = new PressureSensorImpl();
+		return pressureSensor;
 	}
 
 	/**
@@ -455,6 +478,16 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 	public ComponentRepository createComponentRepository() {
 		ComponentRepositoryImpl componentRepository = new ComponentRepositoryImpl();
 		return componentRepository;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Fixture createFixture() {
+		FixtureImpl fixture = new FixtureImpl();
+		return fixture;
 	}
 
 	/**

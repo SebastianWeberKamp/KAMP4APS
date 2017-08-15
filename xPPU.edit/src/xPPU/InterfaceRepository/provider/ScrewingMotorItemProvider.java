@@ -64,7 +64,7 @@ public class ScrewingMotorItemProvider extends ScrewingItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ScrewingMotor)object).getId();
+		String label = ((ScrewingMotor)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ScrewingMotor_type") :
 			getString("_UI_ScrewingMotor_type") + " " + label;

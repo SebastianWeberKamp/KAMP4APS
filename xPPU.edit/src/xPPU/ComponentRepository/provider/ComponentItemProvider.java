@@ -17,8 +17,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
-import xPPU.Identifier.provider.IdentifierItemProvider;
-
+import xPPU.provider.EntityItemProvider;
 import xPPU.provider.XPPUEditPlugin;
 
 /**
@@ -27,7 +26,7 @@ import xPPU.provider.XPPUEditPlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComponentItemProvider extends IdentifierItemProvider {
+public class ComponentItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -50,7 +49,6 @@ public class ComponentItemProvider extends IdentifierItemProvider {
 			super.getPropertyDescriptors(object);
 
 			addConnectedInterfacesPropertyDescriptor(object);
-			addParentModulePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -78,28 +76,6 @@ public class ComponentItemProvider extends IdentifierItemProvider {
 	}
 
 	/**
-	 * This adds a property descriptor for the Parent Module feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addParentModulePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_Component_parentModule_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_Component_parentModule_feature", "_UI_Component_type"),
-				 ComponentRepositoryPackage.Literals.COMPONENT__PARENT_MODULE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -107,7 +83,7 @@ public class ComponentItemProvider extends IdentifierItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Component)object).getId();
+		String label = ((Component)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Component_type") :
 			getString("_UI_Component_type") + " " + label;

@@ -107,7 +107,7 @@ public class CompressorItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Compressor)object).getId();
+		String label = ((Compressor)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Compressor_type") :
 			getString("_UI_Compressor_type") + " " + label;
@@ -166,37 +166,7 @@ public class CompressorItemProvider extends ComponentItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ComponentRepositoryPackage.Literals.COMPRESSOR__SCREWING,
-				 InterfaceRepositoryFactory.eINSTANCE.createScrewingSplitter()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ComponentRepositoryPackage.Literals.COMPRESSOR__SCREWING,
-				 InterfaceRepositoryFactory.eINSTANCE.createScrewingMotor()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ComponentRepositoryPackage.Literals.COMPRESSOR__SCREWING,
-				 InterfaceRepositoryFactory.eINSTANCE.createScrewingRack()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ComponentRepositoryPackage.Literals.COMPRESSOR__SCREWING,
-				 InterfaceRepositoryFactory.eINSTANCE.createScrewingCylinder()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ComponentRepositoryPackage.Literals.COMPRESSOR__SCREWING,
-				 InterfaceRepositoryFactory.eINSTANCE.createScrewingFixture()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ComponentRepositoryPackage.Literals.COMPRESSOR__SCREWING,
-				 InterfaceRepositoryFactory.eINSTANCE.createScrewingPotentiometer()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ComponentRepositoryPackage.Literals.COMPRESSOR__SWITCH,
-				 ComponentRepositoryFactory.eINSTANCE.createMicroswitchModule()));
+				 InterfaceRepositoryFactory.eINSTANCE.createScrewing()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -212,6 +182,11 @@ public class CompressorItemProvider extends ComponentItemProvider {
 			(createChildParameter
 				(ComponentRepositoryPackage.Literals.COMPRESSOR__SWITCH,
 				 ElectronicComponentsFactory.eINSTANCE.createSwitch()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ComponentRepositoryPackage.Literals.COMPRESSOR__SWITCH,
+				 ElectronicComponentsFactory.eINSTANCE.createMicroSwitch()));
 	}
 
 }

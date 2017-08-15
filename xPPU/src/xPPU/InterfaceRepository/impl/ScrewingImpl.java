@@ -14,7 +14,7 @@ import xPPU.InterfaceRepository.Screwing;
  *
  * @generated
  */
-public abstract class ScrewingImpl extends InterfaceImpl implements Screwing {
+public class ScrewingImpl extends InterfaceImpl implements Screwing {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

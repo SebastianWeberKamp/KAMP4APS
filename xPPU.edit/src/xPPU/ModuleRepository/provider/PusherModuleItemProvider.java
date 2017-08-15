@@ -64,7 +64,7 @@ public class PusherModuleItemProvider extends ModuleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PusherModule)object).getId();
+		String label = ((PusherModule)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PusherModule_type") :
 			getString("_UI_PusherModule_type") + " " + label;

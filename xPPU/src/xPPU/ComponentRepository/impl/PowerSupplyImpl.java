@@ -2,13 +2,10 @@
  */
 package xPPU.ComponentRepository.impl;
 
-import org.eclipse.emf.common.notify.Notification;
-
+import java.util.Collection;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 import xPPU.ComponentRepository.PowerSupply;
 
@@ -32,14 +29,14 @@ import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
  */
 public class PowerSupplyImpl extends ComponentImpl implements PowerSupply {
 	/**
-	 * The cached value of the '{@link #getParentElement() <em>Parent Element</em>}' reference.
+	 * The cached value of the '{@link #getParentElement() <em>Parent Element</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getParentElement()
 	 * @generated
 	 * @ordered
 	 */
-	protected Identifier parentElement;
+	protected EList<Identifier> parentElement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -65,37 +62,11 @@ public class PowerSupplyImpl extends ComponentImpl implements PowerSupply {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Identifier getParentElement() {
-		if (parentElement != null && parentElement.eIsProxy()) {
-			InternalEObject oldParentElement = (InternalEObject)parentElement;
-			parentElement = (Identifier)eResolveProxy(oldParentElement);
-			if (parentElement != oldParentElement) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentRepositoryPackage.POWER_SUPPLY__PARENT_ELEMENT, oldParentElement, parentElement));
-			}
+	public EList<Identifier> getParentElement() {
+		if (parentElement == null) {
+			parentElement = new EObjectResolvingEList<Identifier>(Identifier.class, this, ComponentRepositoryPackage.POWER_SUPPLY__PARENT_ELEMENT);
 		}
 		return parentElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Identifier basicGetParentElement() {
-		return parentElement;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setParentElement(Identifier newParentElement) {
-		Identifier oldParentElement = parentElement;
-		parentElement = newParentElement;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.POWER_SUPPLY__PARENT_ELEMENT, oldParentElement, parentElement));
 	}
 
 	/**
@@ -107,8 +78,7 @@ public class PowerSupplyImpl extends ComponentImpl implements PowerSupply {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case ComponentRepositoryPackage.POWER_SUPPLY__PARENT_ELEMENT:
-				if (resolve) return getParentElement();
-				return basicGetParentElement();
+				return getParentElement();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -118,11 +88,13 @@ public class PowerSupplyImpl extends ComponentImpl implements PowerSupply {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case ComponentRepositoryPackage.POWER_SUPPLY__PARENT_ELEMENT:
-				setParentElement((Identifier)newValue);
+				getParentElement().clear();
+				getParentElement().addAll((Collection<? extends Identifier>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -137,7 +109,7 @@ public class PowerSupplyImpl extends ComponentImpl implements PowerSupply {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case ComponentRepositoryPackage.POWER_SUPPLY__PARENT_ELEMENT:
-				setParentElement((Identifier)null);
+				getParentElement().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -152,7 +124,7 @@ public class PowerSupplyImpl extends ComponentImpl implements PowerSupply {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case ComponentRepositoryPackage.POWER_SUPPLY__PARENT_ELEMENT:
-				return parentElement != null;
+				return parentElement != null && !parentElement.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

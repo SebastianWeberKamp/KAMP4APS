@@ -65,7 +65,7 @@ public class EtherCATCableItemProvider extends BusCableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EtherCATCable)object).getId();
+		String label = ((EtherCATCable)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_EtherCATCable_type") :
 			getString("_UI_EtherCATCable_type") + " " + label;

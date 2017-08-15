@@ -64,7 +64,7 @@ public class PowerNetworkItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PowerNetwork)object).getId();
+		String label = ((PowerNetwork)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PowerNetwork_type") :
 			getString("_UI_PowerNetwork_type") + " " + label;

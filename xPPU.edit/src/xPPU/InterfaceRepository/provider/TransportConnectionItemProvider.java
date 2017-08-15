@@ -64,7 +64,7 @@ public class TransportConnectionItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((TransportConnection)object).getId();
+		String label = ((TransportConnection)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_TransportConnection_type") :
 			getString("_UI_TransportConnection_type") + " " + label;

@@ -112,6 +112,15 @@ public interface ModuleRepositoryFactory extends EFactory {
 	PressureSensorModule createPressureSensorModule();
 
 	/**
+	 * Returns a new object of class '<em>Conveyor Belt Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Conveyor Belt Module</em>'.
+	 * @generated
+	 */
+	ConveyorBeltModule createConveyorBeltModule();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

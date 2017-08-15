@@ -23,6 +23,7 @@ import xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 import xPPU.Identifier.Identifier;
 import xPPU.Identifier.IdentifierFactory;
 import xPPU.Identifier.IdentifierPackage;
+import xPPU.Identifier.NamedElement;
 
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
@@ -57,6 +58,13 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
 	 * @generated
 	 */
 	private EClass identifierEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass namedElementEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -168,6 +176,24 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getNamedElement() {
+		return namedElementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getNamedElement_Name() {
+		return (EAttribute)namedElementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public IdentifierFactory getIdentifierFactory() {
 		return (IdentifierFactory)getEFactoryInstance();
 	}
@@ -193,6 +219,9 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
 		// Create classes and their features
 		identifierEClass = createEClass(IDENTIFIER);
 		createEAttribute(identifierEClass, IDENTIFIER__ID);
+
+		namedElementEClass = createEClass(NAMED_ELEMENT);
+		createEAttribute(namedElementEClass, NAMED_ELEMENT__NAME);
 	}
 
 	/**
@@ -227,6 +256,9 @@ public class IdentifierPackageImpl extends EPackageImpl implements IdentifierPac
 		// Initialize classes, features, and operations; add parameters
 		initEClass(identifierEClass, Identifier.class, "Identifier", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIdentifier_Id(), ecorePackage.getEString(), "id", null, 0, 1, Identifier.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(namedElementEClass, NamedElement.class, "NamedElement", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getNamedElement_Name(), ecorePackage.getEString(), "Name", null, 1, 1, NamedElement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //IdentifierPackageImpl

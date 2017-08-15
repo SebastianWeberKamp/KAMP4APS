@@ -64,7 +64,7 @@ public class PneumaticPipeItemProvider extends PipeItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PneumaticPipe)object).getId();
+		String label = ((PneumaticPipe)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PneumaticPipe_type") :
 			getString("_UI_PneumaticPipe_type") + " " + label;

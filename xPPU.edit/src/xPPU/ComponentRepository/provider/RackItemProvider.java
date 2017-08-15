@@ -89,7 +89,7 @@ public class RackItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Rack)object).getId();
+		String label = ((Rack)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Rack_type") :
 			getString("_UI_Rack_type") + " " + label;

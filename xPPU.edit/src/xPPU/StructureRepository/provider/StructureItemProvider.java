@@ -22,8 +22,6 @@ import xPPU.ComponentRepository.ComponentRepositoryFactory;
 
 import xPPU.ElectronicComponents.ElectronicComponentsFactory;
 
-import xPPU.Identifier.provider.IdentifierItemProvider;
-
 import xPPU.MechanicalComponents.MechanicalComponentsFactory;
 
 import xPPU.ModuleRepository.ModuleRepositoryFactory;
@@ -31,6 +29,7 @@ import xPPU.ModuleRepository.ModuleRepositoryFactory;
 import xPPU.StructureRepository.Structure;
 import xPPU.StructureRepository.StructureRepositoryPackage;
 
+import xPPU.provider.EntityItemProvider;
 import xPPU.provider.XPPUEditPlugin;
 
 /**
@@ -39,7 +38,7 @@ import xPPU.provider.XPPUEditPlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class StructureItemProvider extends IdentifierItemProvider {
+public class StructureItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -104,7 +103,7 @@ public class StructureItemProvider extends IdentifierItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Structure)object).getId();
+		String label = ((Structure)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Structure_type") :
 			getString("_UI_Structure_type") + " " + label;
@@ -141,6 +140,11 @@ public class StructureItemProvider extends IdentifierItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructureRepositoryPackage.Literals.STRUCTURE__MODULES,
+				 ComponentRepositoryFactory.eINSTANCE.createMicroswitchModule()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -189,6 +193,21 @@ public class StructureItemProvider extends IdentifierItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
+				(StructureRepositoryPackage.Literals.STRUCTURE__MODULES,
+				 ModuleRepositoryFactory.eINSTANCE.createConveyorBeltModule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
+				 ComponentRepositoryFactory.eINSTANCE.createComponent()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
+				 ComponentRepositoryFactory.eINSTANCE.createOperationPanel()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
 				 ComponentRepositoryFactory.eINSTANCE.createSimpleMotor()));
 
@@ -216,6 +235,11 @@ public class StructureItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
 				 ComponentRepositoryFactory.eINSTANCE.createPresenceSensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
+				 ComponentRepositoryFactory.eINSTANCE.createPressureSensor()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -315,11 +339,6 @@ public class StructureItemProvider extends IdentifierItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
-				 ComponentRepositoryFactory.eINSTANCE.createMicroswitchModule()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
 				 ComponentRepositoryFactory.eINSTANCE.createPotentiometer()));
 
 		newChildDescriptors.add
@@ -356,6 +375,11 @@ public class StructureItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
 				 ComponentRepositoryFactory.eINSTANCE.createMonostableCylinder()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
+				 ComponentRepositoryFactory.eINSTANCE.createFixture()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -431,6 +455,11 @@ public class StructureItemProvider extends IdentifierItemProvider {
 			(createChildParameter
 				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
 				 ElectronicComponentsFactory.eINSTANCE.createButton()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(StructureRepositoryPackage.Literals.STRUCTURE__COMPONENTS,
+				 ElectronicComponentsFactory.eINSTANCE.createMicroSwitch()));
 
 		newChildDescriptors.add
 			(createChildParameter

@@ -96,7 +96,7 @@ public class ElectronicPartItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ElectronicPart)object).getId();
+		String label = ((ElectronicPart)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ElectronicPart_type") :
 			getString("_UI_ElectronicPart_type") + " " + label;

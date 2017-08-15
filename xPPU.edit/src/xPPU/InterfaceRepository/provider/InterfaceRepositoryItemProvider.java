@@ -11,12 +11,17 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ViewerNotification;
+
+import xPPU.ComponentRepository.ComponentRepositoryFactory;
 
 import xPPU.Identifier.provider.IdentifierItemProvider;
 
 import xPPU.InterfaceRepository.InterfaceRepository;
+import xPPU.InterfaceRepository.InterfaceRepositoryFactory;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
 import xPPU.provider.XPPUEditPlugin;
@@ -49,31 +54,38 @@ public class InterfaceRepositoryItemProvider extends IdentifierItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addAllInterfacesInPlantPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the All Interfaces In Plant feature.
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addAllInterfacesInPlantPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_InterfaceRepository_allInterfacesInPlant_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_InterfaceRepository_allInterfacesInPlant_feature", "_UI_InterfaceRepository_type"),
-				 InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -112,6 +124,12 @@ public class InterfaceRepositoryItemProvider extends IdentifierItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(InterfaceRepository.class)) {
+			case InterfaceRepositoryPackage.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -125,6 +143,66 @@ public class InterfaceRepositoryItemProvider extends IdentifierItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 InterfaceRepositoryFactory.eINSTANCE.createInterface()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 InterfaceRepositoryFactory.eINSTANCE.createScrewing()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 InterfaceRepositoryFactory.eINSTANCE.createSuspension()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 InterfaceRepositoryFactory.eINSTANCE.createGearing()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 InterfaceRepositoryFactory.eINSTANCE.createClamping()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 InterfaceRepositoryFactory.eINSTANCE.createPneumaticSupply()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 InterfaceRepositoryFactory.eINSTANCE.createSignalInterface()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 InterfaceRepositoryFactory.eINSTANCE.createWaterSupply()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 InterfaceRepositoryFactory.eINSTANCE.createPhysicalConnection()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 InterfaceRepositoryFactory.eINSTANCE.createTransportConnection()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 InterfaceRepositoryFactory.eINSTANCE.createFixture()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(InterfaceRepositoryPackage.Literals.INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT,
+				 ComponentRepositoryFactory.eINSTANCE.createPowerSupply()));
 	}
 
 	/**

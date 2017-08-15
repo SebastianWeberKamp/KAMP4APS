@@ -64,7 +64,7 @@ public class InductiveSensorItemProvider extends SensorItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((InductiveSensor)object).getId();
+		String label = ((InductiveSensor)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_InductiveSensor_type") :
 			getString("_UI_InductiveSensor_type") + " " + label;

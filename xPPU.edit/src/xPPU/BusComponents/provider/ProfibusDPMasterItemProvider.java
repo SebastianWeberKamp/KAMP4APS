@@ -64,7 +64,7 @@ public class ProfibusDPMasterItemProvider extends BusMasterItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ProfibusDPMaster)object).getId();
+		String label = ((ProfibusDPMaster)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ProfibusDPMaster_type") :
 			getString("_UI_ProfibusDPMaster_type") + " " + label;

@@ -14,7 +14,7 @@ import xPPU.InterfaceRepository.SuspensionArm;
  *
  * @generated
  */
-public class SuspensionArmImpl extends SuspensionImpl implements SuspensionArm {
+public abstract class SuspensionArmImpl extends SuspensionImpl implements SuspensionArm {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -70,7 +70,7 @@ public class ReedSwitchItemProvider extends SwitchItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ReedSwitch)object).getId();
+		String label = ((ReedSwitch)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ReedSwitch_type") :
 			getString("_UI_ReedSwitch_type") + " " + label;

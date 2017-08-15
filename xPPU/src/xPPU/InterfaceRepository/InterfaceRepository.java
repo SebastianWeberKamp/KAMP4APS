@@ -24,17 +24,17 @@ import xPPU.Identifier.Identifier;
  */
 public interface InterfaceRepository extends Identifier {
 	/**
-	 * Returns the value of the '<em><b>All Interfaces In Plant</b></em>' reference list.
+	 * Returns the value of the '<em><b>All Interfaces In Plant</b></em>' containment reference list.
 	 * The list contents are of type {@link xPPU.InterfaceRepository.Interface}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>All Interfaces In Plant</em>' reference list isn't clear,
+	 * If the meaning of the '<em>All Interfaces In Plant</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>All Interfaces In Plant</em>' reference list.
+	 * @return the value of the '<em>All Interfaces In Plant</em>' containment reference list.
 	 * @see xPPU.InterfaceRepository.InterfaceRepositoryPackage#getInterfaceRepository_AllInterfacesInPlant()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Interface> getAllInterfacesInPlant();

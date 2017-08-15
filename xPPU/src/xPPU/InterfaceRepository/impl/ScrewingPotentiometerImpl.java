@@ -14,7 +14,7 @@ import xPPU.InterfaceRepository.ScrewingPotentiometer;
  *
  * @generated
  */
-public class ScrewingPotentiometerImpl extends ScrewingImpl implements ScrewingPotentiometer {
+public abstract class ScrewingPotentiometerImpl extends ScrewingImpl implements ScrewingPotentiometer {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

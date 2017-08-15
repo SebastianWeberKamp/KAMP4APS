@@ -22,6 +22,15 @@ public interface ComponentRepositoryFactory extends EFactory {
 	ComponentRepositoryFactory eINSTANCE = xPPU.ComponentRepository.impl.ComponentRepositoryFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Component</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Component</em>'.
+	 * @generated
+	 */
+	Component createComponent();
+
+	/**
 	 * Returns a new object of class '<em>Operation Panel</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,6 +92,15 @@ public interface ComponentRepositoryFactory extends EFactory {
 	 * @generated
 	 */
 	PresenceSensor createPresenceSensor();
+
+	/**
+	 * Returns a new object of class '<em>Pressure Sensor</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pressure Sensor</em>'.
+	 * @generated
+	 */
+	PressureSensor createPressureSensor();
 
 	/**
 	 * Returns a new object of class '<em>Pneumatic Pipe</em>'.
@@ -344,6 +362,15 @@ public interface ComponentRepositoryFactory extends EFactory {
 	 * @generated
 	 */
 	ComponentRepository createComponentRepository();
+
+	/**
+	 * Returns a new object of class '<em>Fixture</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fixture</em>'.
+	 * @generated
+	 */
+	Fixture createFixture();
 
 	/**
 	 * Returns the package supported by this factory.

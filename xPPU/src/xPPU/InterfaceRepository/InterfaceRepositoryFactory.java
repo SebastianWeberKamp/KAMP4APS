@@ -31,58 +31,22 @@ public interface InterfaceRepositoryFactory extends EFactory {
 	InterfaceRepository createInterfaceRepository();
 
 	/**
-	 * Returns a new object of class '<em>Screwing Splitter</em>'.
+	 * Returns a new object of class '<em>Interface</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Screwing Splitter</em>'.
+	 * @return a new object of class '<em>Interface</em>'.
 	 * @generated
 	 */
-	ScrewingSplitter createScrewingSplitter();
+	Interface createInterface();
 
 	/**
-	 * Returns a new object of class '<em>Screwing Motor</em>'.
+	 * Returns a new object of class '<em>Screwing</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Screwing Motor</em>'.
+	 * @return a new object of class '<em>Screwing</em>'.
 	 * @generated
 	 */
-	ScrewingMotor createScrewingMotor();
-
-	/**
-	 * Returns a new object of class '<em>Screwing Rack</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Screwing Rack</em>'.
-	 * @generated
-	 */
-	ScrewingRack createScrewingRack();
-
-	/**
-	 * Returns a new object of class '<em>Screwing Cylinder</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Screwing Cylinder</em>'.
-	 * @generated
-	 */
-	ScrewingCylinder createScrewingCylinder();
-
-	/**
-	 * Returns a new object of class '<em>Screwing Fixture</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Screwing Fixture</em>'.
-	 * @generated
-	 */
-	ScrewingFixture createScrewingFixture();
-
-	/**
-	 * Returns a new object of class '<em>Screwing Potentiometer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Screwing Potentiometer</em>'.
-	 * @generated
-	 */
-	ScrewingPotentiometer createScrewingPotentiometer();
+	Screwing createScrewing();
 
 	/**
 	 * Returns a new object of class '<em>Suspension</em>'.
@@ -92,24 +56,6 @@ public interface InterfaceRepositoryFactory extends EFactory {
 	 * @generated
 	 */
 	Suspension createSuspension();
-
-	/**
-	 * Returns a new object of class '<em>Suspension Rack</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Suspension Rack</em>'.
-	 * @generated
-	 */
-	SuspensionRack createSuspensionRack();
-
-	/**
-	 * Returns a new object of class '<em>Suspension Arm</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Suspension Arm</em>'.
-	 * @generated
-	 */
-	SuspensionArm createSuspensionArm();
 
 	/**
 	 * Returns a new object of class '<em>Gearing</em>'.
@@ -173,6 +119,15 @@ public interface InterfaceRepositoryFactory extends EFactory {
 	 * @generated
 	 */
 	TransportConnection createTransportConnection();
+
+	/**
+	 * Returns a new object of class '<em>Fixture</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Fixture</em>'.
+	 * @generated
+	 */
+	Fixture createFixture();
 
 	/**
 	 * Returns the package supported by this factory.

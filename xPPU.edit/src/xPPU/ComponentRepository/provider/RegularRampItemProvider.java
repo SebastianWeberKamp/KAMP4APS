@@ -70,7 +70,7 @@ public class RegularRampItemProvider extends RampItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((RegularRamp)object).getId();
+		String label = ((RegularRamp)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_RegularRamp_type") :
 			getString("_UI_RegularRamp_type") + " " + label;

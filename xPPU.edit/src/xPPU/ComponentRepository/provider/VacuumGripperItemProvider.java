@@ -130,7 +130,7 @@ public class VacuumGripperItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((VacuumGripper)object).getId();
+		String label = ((VacuumGripper)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_VacuumGripper_type") :
 			getString("_UI_VacuumGripper_type") + " " + label;

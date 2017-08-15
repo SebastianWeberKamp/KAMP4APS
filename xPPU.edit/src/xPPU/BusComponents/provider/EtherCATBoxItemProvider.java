@@ -64,7 +64,7 @@ public class EtherCATBoxItemProvider extends BusBoxItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((EtherCATBox)object).getId();
+		String label = ((EtherCATBox)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_EtherCATBox_type") :
 			getString("_UI_EtherCATBox_type") + " " + label;

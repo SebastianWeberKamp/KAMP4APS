@@ -14,7 +14,7 @@ import xPPU.InterfaceRepository.SuspensionRack;
  *
  * @generated
  */
-public class SuspensionRackImpl extends SuspensionImpl implements SuspensionRack {
+public abstract class SuspensionRackImpl extends SuspensionImpl implements SuspensionRack {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

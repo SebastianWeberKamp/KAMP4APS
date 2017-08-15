@@ -20,8 +20,6 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
-import xPPU.Identifier.impl.IdentifierImpl;
-
 import xPPU.InterfaceRepository.Interface;
 
 import xPPU.ModuleRepository.Module;
@@ -29,6 +27,8 @@ import xPPU.ModuleRepository.ModuleRepositoryPackage;
 
 import xPPU.StructureRepository.Structure;
 import xPPU.StructureRepository.StructureRepositoryPackage;
+
+import xPPU.impl.EntityImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,7 +45,7 @@ import xPPU.StructureRepository.StructureRepositoryPackage;
  *
  * @generated
  */
-public abstract class ComponentImpl extends IdentifierImpl implements Component {
+public class ComponentImpl extends EntityImpl implements Component {
 	/**
 	 * The cached value of the '{@link #getConnectedInterfaces() <em>Connected Interfaces</em>}' reference list.
 	 * <!-- begin-user-doc -->
@@ -55,16 +55,6 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 	 * @ordered
 	 */
 	protected EList<Interface> connectedInterfaces;
-
-	/**
-	 * The cached value of the '{@link #getParentModule() <em>Parent Module</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParentModule()
-	 * @generated
-	 * @ordered
-	 */
-	protected Module parentModule;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -144,24 +134,8 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 	 * @generated
 	 */
 	public Module getParentModule() {
-		if (parentModule != null && parentModule.eIsProxy()) {
-			InternalEObject oldParentModule = (InternalEObject)parentModule;
-			parentModule = (Module)eResolveProxy(oldParentModule);
-			if (parentModule != oldParentModule) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, ComponentRepositoryPackage.COMPONENT__PARENT_MODULE, oldParentModule, parentModule));
-			}
-		}
-		return parentModule;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Module basicGetParentModule() {
-		return parentModule;
+		if (eContainerFeatureID() != ComponentRepositoryPackage.COMPONENT__PARENT_MODULE) return null;
+		return (Module)eInternalContainer();
 	}
 
 	/**
@@ -170,12 +144,7 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 	 * @generated
 	 */
 	public NotificationChain basicSetParentModule(Module newParentModule, NotificationChain msgs) {
-		Module oldParentModule = parentModule;
-		parentModule = newParentModule;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.COMPONENT__PARENT_MODULE, oldParentModule, newParentModule);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
+		msgs = eBasicSetContainer((InternalEObject)newParentModule, ComponentRepositoryPackage.COMPONENT__PARENT_MODULE, msgs);
 		return msgs;
 	}
 
@@ -185,10 +154,12 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 	 * @generated
 	 */
 	public void setParentModule(Module newParentModule) {
-		if (newParentModule != parentModule) {
+		if (newParentModule != eInternalContainer() || (eContainerFeatureID() != ComponentRepositoryPackage.COMPONENT__PARENT_MODULE && newParentModule != null)) {
+			if (EcoreUtil.isAncestor(this, newParentModule))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
-			if (parentModule != null)
-				msgs = ((InternalEObject)parentModule).eInverseRemove(this, ModuleRepositoryPackage.MODULE__COMPONENTS, Module.class, msgs);
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
 			if (newParentModule != null)
 				msgs = ((InternalEObject)newParentModule).eInverseAdd(this, ModuleRepositoryPackage.MODULE__COMPONENTS, Module.class, msgs);
 			msgs = basicSetParentModule(newParentModule, msgs);
@@ -211,8 +182,8 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetParent((Structure)otherEnd, msgs);
 			case ComponentRepositoryPackage.COMPONENT__PARENT_MODULE:
-				if (parentModule != null)
-					msgs = ((InternalEObject)parentModule).eInverseRemove(this, ModuleRepositoryPackage.MODULE__COMPONENTS, Module.class, msgs);
+				if (eInternalContainer() != null)
+					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetParentModule((Module)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -244,6 +215,8 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 		switch (eContainerFeatureID()) {
 			case ComponentRepositoryPackage.COMPONENT__PARENT:
 				return eInternalContainer().eInverseRemove(this, StructureRepositoryPackage.STRUCTURE__COMPONENTS, Structure.class, msgs);
+			case ComponentRepositoryPackage.COMPONENT__PARENT_MODULE:
+				return eInternalContainer().eInverseRemove(this, ModuleRepositoryPackage.MODULE__COMPONENTS, Module.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}
@@ -261,8 +234,7 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 			case ComponentRepositoryPackage.COMPONENT__PARENT:
 				return getParent();
 			case ComponentRepositoryPackage.COMPONENT__PARENT_MODULE:
-				if (resolve) return getParentModule();
-				return basicGetParentModule();
+				return getParentModule();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -324,7 +296,7 @@ public abstract class ComponentImpl extends IdentifierImpl implements Component 
 			case ComponentRepositoryPackage.COMPONENT__PARENT:
 				return getParent() != null;
 			case ComponentRepositoryPackage.COMPONENT__PARENT_MODULE:
-				return parentModule != null;
+				return getParentModule() != null;
 		}
 		return super.eIsSet(featureID);
 	}

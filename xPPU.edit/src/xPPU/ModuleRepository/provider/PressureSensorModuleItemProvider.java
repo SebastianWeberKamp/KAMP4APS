@@ -64,7 +64,7 @@ public class PressureSensorModuleItemProvider extends ModuleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PressureSensorModule)object).getId();
+		String label = ((PressureSensorModule)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PressureSensorModule_type") :
 			getString("_UI_PressureSensorModule_type") + " " + label;

@@ -77,6 +77,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int ELECTRONIC_PART__ID = ComponentRepositoryPackage.COMPONENT__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ELECTRONIC_PART__NAME = ComponentRepositoryPackage.COMPONENT__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -95,7 +104,7 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int ELECTRONIC_PART__PARENT = ComponentRepositoryPackage.COMPONENT__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -159,6 +168,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int SWITCH__ID = ELECTRONIC_PART__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SWITCH__NAME = ELECTRONIC_PART__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -177,7 +195,7 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int SWITCH__PARENT = ELECTRONIC_PART__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -241,6 +259,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int LED__ID = ELECTRONIC_PART__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LED__NAME = ELECTRONIC_PART__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -259,7 +286,7 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int LED__PARENT = ELECTRONIC_PART__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -323,6 +350,15 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int BUTTON__ID = ELECTRONIC_PART__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BUTTON__NAME = ELECTRONIC_PART__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -341,7 +377,7 @@ public interface ElectronicComponentsPackage extends EPackage {
 	int BUTTON__PARENT = ELECTRONIC_PART__PARENT;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' reference.
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -384,6 +420,107 @@ public interface ElectronicComponentsPackage extends EPackage {
 	 * @ordered
 	 */
 	int BUTTON_OPERATION_COUNT = ELECTRONIC_PART_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link xPPU.ElectronicComponents.impl.MicroSwitchImpl <em>Micro Switch</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.ElectronicComponents.impl.MicroSwitchImpl
+	 * @see xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl#getMicroSwitch()
+	 * @generated
+	 */
+	int MICRO_SWITCH = 4;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SWITCH__ID = SWITCH__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SWITCH__NAME = SWITCH__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SWITCH__CONNECTED_INTERFACES = SWITCH__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SWITCH__PARENT = SWITCH__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SWITCH__PARENT_MODULE = SWITCH__PARENT_MODULE;
+
+	/**
+	 * The feature id for the '<em><b>Pin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SWITCH__PIN = SWITCH__PIN;
+
+	/**
+	 * The feature id for the '<em><b>Physicalconnection</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SWITCH__PHYSICALCONNECTION = SWITCH__PHYSICALCONNECTION;
+
+	/**
+	 * The feature id for the '<em><b>Ms Module</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SWITCH__MS_MODULE = SWITCH_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Micro Switch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SWITCH_FEATURE_COUNT = SWITCH_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Micro Switch</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MICRO_SWITCH_OPERATION_COUNT = SWITCH_OPERATION_COUNT + 0;
 
 
 	/**
@@ -447,6 +584,27 @@ public interface ElectronicComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getButton();
+
+	/**
+	 * Returns the meta object for class '{@link xPPU.ElectronicComponents.MicroSwitch <em>Micro Switch</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Micro Switch</em>'.
+	 * @see xPPU.ElectronicComponents.MicroSwitch
+	 * @generated
+	 */
+	EClass getMicroSwitch();
+
+	/**
+	 * Returns the meta object for the container reference '{@link xPPU.ElectronicComponents.MicroSwitch#getMsModule <em>Ms Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Ms Module</em>'.
+	 * @see xPPU.ElectronicComponents.MicroSwitch#getMsModule()
+	 * @see #getMicroSwitch()
+	 * @generated
+	 */
+	EReference getMicroSwitch_MsModule();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -526,6 +684,24 @@ public interface ElectronicComponentsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BUTTON = eINSTANCE.getButton();
+
+		/**
+		 * The meta object literal for the '{@link xPPU.ElectronicComponents.impl.MicroSwitchImpl <em>Micro Switch</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xPPU.ElectronicComponents.impl.MicroSwitchImpl
+		 * @see xPPU.ElectronicComponents.impl.ElectronicComponentsPackageImpl#getMicroSwitch()
+		 * @generated
+		 */
+		EClass MICRO_SWITCH = eINSTANCE.getMicroSwitch();
+
+		/**
+		 * The meta object literal for the '<em><b>Ms Module</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference MICRO_SWITCH__MS_MODULE = eINSTANCE.getMicroSwitch_MsModule();
 
 	}
 

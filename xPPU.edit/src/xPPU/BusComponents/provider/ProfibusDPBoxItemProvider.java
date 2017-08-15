@@ -64,7 +64,7 @@ public class ProfibusDPBoxItemProvider extends BusBoxItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ProfibusDPBox)object).getId();
+		String label = ((ProfibusDPBox)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ProfibusDPBox_type") :
 			getString("_UI_ProfibusDPBox_type") + " " + label;

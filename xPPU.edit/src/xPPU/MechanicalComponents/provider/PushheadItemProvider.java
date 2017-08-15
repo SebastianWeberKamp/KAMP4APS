@@ -53,7 +53,7 @@ public class PushheadItemProvider extends MechanicalPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Pushhead)object).getId();
+		String label = ((Pushhead)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Pushhead_type") :
 			getString("_UI_Pushhead_type") + " " + label;

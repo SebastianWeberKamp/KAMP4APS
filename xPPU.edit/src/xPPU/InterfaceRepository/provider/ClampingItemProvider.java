@@ -64,7 +64,7 @@ public class ClampingItemProvider extends InterfaceItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Clamping)object).getId();
+		String label = ((Clamping)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Clamping_type") :
 			getString("_UI_Clamping_type") + " " + label;

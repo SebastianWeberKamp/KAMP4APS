@@ -6,7 +6,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
-import xPPU.Identifier.IdentifierPackage;
+import xPPU.XPPUPackage;
 
 /**
  * <!-- begin-user-doc -->
@@ -74,7 +74,16 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__ID = IdentifierPackage.IDENTIFIER__ID;
+	int STRUCTURE__ID = XPPUPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int STRUCTURE__NAME = XPPUPackage.ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
@@ -83,7 +92,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__PARENT_PLANT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int STRUCTURE__PARENT_PLANT = XPPUPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
@@ -92,7 +101,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__MODULES = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int STRUCTURE__MODULES = XPPUPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -101,7 +110,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__COMPONENTS = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 2;
+	int STRUCTURE__COMPONENTS = XPPUPackage.ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Structure</em>' class.
@@ -110,7 +119,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 3;
+	int STRUCTURE_FEATURE_COUNT = XPPUPackage.ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Structure</em>' class.
@@ -119,7 +128,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
+	int STRUCTURE_OPERATION_COUNT = XPPUPackage.ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link xPPU.StructureRepository.impl.CommunicationNetworkImpl <em>Communication Network</em>}' class.
@@ -139,6 +148,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int COMMUNICATION_NETWORK__ID = STRUCTURE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMMUNICATION_NETWORK__NAME = STRUCTURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
@@ -205,6 +223,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	int POWER_NETWORK__ID = STRUCTURE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_NETWORK__NAME = STRUCTURE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -267,6 +294,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONTROL_CABINET__ID = STRUCTURE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONTROL_CABINET__NAME = STRUCTURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
@@ -342,6 +378,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	int PNEUMATIC_NETWORK__ID = STRUCTURE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PNEUMATIC_NETWORK__NAME = STRUCTURE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -404,6 +449,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int CONVEYOR__ID = STRUCTURE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONVEYOR__NAME = STRUCTURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
@@ -477,6 +531,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int CRANE__ID = STRUCTURE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CRANE__NAME = STRUCTURE__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
@@ -570,6 +633,15 @@ public interface StructureRepositoryPackage extends EPackage {
 	int POWER_WIRING__ID = STRUCTURE__ID;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POWER_WIRING__NAME = STRUCTURE__NAME;
+
+	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -613,6 +685,80 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @ordered
 	 */
 	int POWER_WIRING_OPERATION_COUNT = STRUCTURE_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link xPPU.StructureRepository.impl.LogicalWiringImpl <em>Logical Wiring</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see xPPU.StructureRepository.impl.LogicalWiringImpl
+	 * @see xPPU.StructureRepository.impl.StructureRepositoryPackageImpl#getLogicalWiring()
+	 * @generated
+	 */
+	int LOGICAL_WIRING = 8;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_WIRING__ID = STRUCTURE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_WIRING__NAME = STRUCTURE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_WIRING__PARENT_PLANT = STRUCTURE__PARENT_PLANT;
+
+	/**
+	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_WIRING__MODULES = STRUCTURE__MODULES;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_WIRING__COMPONENTS = STRUCTURE__COMPONENTS;
+
+	/**
+	 * The number of structural features of the '<em>Logical Wiring</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_WIRING_FEATURE_COUNT = STRUCTURE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Logical Wiring</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LOGICAL_WIRING_OPERATION_COUNT = STRUCTURE_OPERATION_COUNT + 0;
 
 
 	/**
@@ -784,6 +930,16 @@ public interface StructureRepositoryPackage extends EPackage {
 	EClass getPowerWiring();
 
 	/**
+	 * Returns the meta object for class '{@link xPPU.StructureRepository.LogicalWiring <em>Logical Wiring</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Logical Wiring</em>'.
+	 * @see xPPU.StructureRepository.LogicalWiring
+	 * @generated
+	 */
+	EClass getLogicalWiring();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -949,6 +1105,16 @@ public interface StructureRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EClass POWER_WIRING = eINSTANCE.getPowerWiring();
+
+		/**
+		 * The meta object literal for the '{@link xPPU.StructureRepository.impl.LogicalWiringImpl <em>Logical Wiring</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see xPPU.StructureRepository.impl.LogicalWiringImpl
+		 * @see xPPU.StructureRepository.impl.StructureRepositoryPackageImpl#getLogicalWiring()
+		 * @generated
+		 */
+		EClass LOGICAL_WIRING = eINSTANCE.getLogicalWiring();
 
 	}
 

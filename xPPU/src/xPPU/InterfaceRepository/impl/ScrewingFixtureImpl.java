@@ -14,7 +14,7 @@ import xPPU.InterfaceRepository.ScrewingFixture;
  *
  * @generated
  */
-public class ScrewingFixtureImpl extends ScrewingImpl implements ScrewingFixture {
+public abstract class ScrewingFixtureImpl extends ScrewingImpl implements ScrewingFixture {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

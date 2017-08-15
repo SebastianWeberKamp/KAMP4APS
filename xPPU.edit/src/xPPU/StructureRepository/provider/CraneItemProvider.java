@@ -135,7 +135,7 @@ public class CraneItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Crane)object).getId();
+		String label = ((Crane)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Crane_type") :
 			getString("_UI_Crane_type") + " " + label;

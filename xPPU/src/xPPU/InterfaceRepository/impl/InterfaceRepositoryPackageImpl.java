@@ -25,6 +25,7 @@ import xPPU.Identifier.IdentifierPackage;
 import xPPU.Identifier.impl.IdentifierPackageImpl;
 
 import xPPU.InterfaceRepository.Clamping;
+import xPPU.InterfaceRepository.Fixture;
 import xPPU.InterfaceRepository.Gearing;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.InterfaceRepository;
@@ -201,6 +202,13 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	 * @generated
 	 */
 	private EClass transportConnectionEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fixtureEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -483,6 +491,15 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getFixture() {
+		return fixtureEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public InterfaceRepositoryFactory getInterfaceRepositoryFactory() {
 		return (InterfaceRepositoryFactory)getEFactoryInstance();
 	}
@@ -545,6 +562,8 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		physicalConnectionEClass = createEClass(PHYSICAL_CONNECTION);
 
 		transportConnectionEClass = createEClass(TRANSPORT_CONNECTION);
+
+		fixtureEClass = createEClass(FIXTURE);
 	}
 
 	/**
@@ -572,6 +591,7 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 
 		// Obtain other dependent packages
 		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
+		XPPUPackage theXPPUPackage = (XPPUPackage)EPackage.Registry.INSTANCE.getEPackage(XPPUPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -579,7 +599,7 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 
 		// Add supertypes to classes
 		interfaceRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
-		interfaceEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+		interfaceEClass.getESuperTypes().add(theXPPUPackage.getEntity());
 		screwingEClass.getESuperTypes().add(this.getInterface());
 		screwingSplitterEClass.getESuperTypes().add(this.getScrewing());
 		screwingMotorEClass.getESuperTypes().add(this.getScrewing());
@@ -597,33 +617,34 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		waterSupplyEClass.getESuperTypes().add(this.getInterface());
 		physicalConnectionEClass.getESuperTypes().add(this.getInterface());
 		transportConnectionEClass.getESuperTypes().add(this.getInterface());
+		fixtureEClass.getESuperTypes().add(this.getInterface());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(interfaceRepositoryEClass, InterfaceRepository.class, "InterfaceRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInterfaceRepository_AllInterfacesInPlant(), this.getInterface(), null, "allInterfacesInPlant", null, 0, -1, InterfaceRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInterfaceRepository_AllInterfacesInPlant(), this.getInterface(), null, "allInterfacesInPlant", null, 0, -1, InterfaceRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(interfaceEClass, Interface.class, "Interface", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInterface_ParentElement(), theIdentifierPackage.getIdentifier(), null, "parentElement", null, 1, 1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(interfaceEClass, Interface.class, "Interface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInterface_ParentElement(), theIdentifierPackage.getIdentifier(), null, "parentElement", null, 1, -1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(screwingEClass, Screwing.class, "Screwing", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(screwingEClass, Screwing.class, "Screwing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(screwingSplitterEClass, ScrewingSplitter.class, "ScrewingSplitter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(screwingSplitterEClass, ScrewingSplitter.class, "ScrewingSplitter", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(screwingMotorEClass, ScrewingMotor.class, "ScrewingMotor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(screwingMotorEClass, ScrewingMotor.class, "ScrewingMotor", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(screwingRackEClass, ScrewingRack.class, "ScrewingRack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(screwingRackEClass, ScrewingRack.class, "ScrewingRack", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(screwingCylinderEClass, ScrewingCylinder.class, "ScrewingCylinder", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(screwingCylinderEClass, ScrewingCylinder.class, "ScrewingCylinder", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(screwingFixtureEClass, ScrewingFixture.class, "ScrewingFixture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(screwingFixtureEClass, ScrewingFixture.class, "ScrewingFixture", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(screwingPotentiometerEClass, ScrewingPotentiometer.class, "ScrewingPotentiometer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(screwingPotentiometerEClass, ScrewingPotentiometer.class, "ScrewingPotentiometer", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(suspensionEClass, Suspension.class, "Suspension", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(suspensionRackEClass, SuspensionRack.class, "SuspensionRack", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(suspensionRackEClass, SuspensionRack.class, "SuspensionRack", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(suspensionArmEClass, SuspensionArm.class, "SuspensionArm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(suspensionArmEClass, SuspensionArm.class, "SuspensionArm", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(gearingEClass, Gearing.class, "Gearing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -638,6 +659,8 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		initEClass(physicalConnectionEClass, PhysicalConnection.class, "PhysicalConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(transportConnectionEClass, TransportConnection.class, "TransportConnection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(fixtureEClass, Fixture.class, "Fixture", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //InterfaceRepositoryPackageImpl

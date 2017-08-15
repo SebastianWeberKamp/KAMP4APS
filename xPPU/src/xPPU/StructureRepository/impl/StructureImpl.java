@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -21,10 +22,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import xPPU.ComponentRepository.Component;
 import xPPU.ComponentRepository.ComponentRepositoryPackage;
 
-import xPPU.Identifier.impl.IdentifierImpl;
-
 import xPPU.ModuleRepository.Module;
-import xPPU.ModuleRepository.ModuleRepositoryPackage;
 
 import xPPU.Plant;
 
@@ -32,6 +30,8 @@ import xPPU.StructureRepository.Structure;
 import xPPU.StructureRepository.StructureRepositoryPackage;
 
 import xPPU.XPPUPackage;
+
+import xPPU.impl.EntityImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -48,7 +48,7 @@ import xPPU.XPPUPackage;
  *
  * @generated
  */
-public abstract class StructureImpl extends IdentifierImpl implements Structure {
+public class StructureImpl extends EntityImpl implements Structure {
 	/**
 	 * The cached value of the '{@link #getModules() <em>Modules</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -136,7 +136,7 @@ public abstract class StructureImpl extends IdentifierImpl implements Structure 
 	 */
 	public EList<Module> getModules() {
 		if (modules == null) {
-			modules = new EObjectContainmentWithInverseEList<Module>(Module.class, this, StructureRepositoryPackage.STRUCTURE__MODULES, ModuleRepositoryPackage.MODULE__PARENT_STRUCTURE);
+			modules = new EObjectContainmentEList<Module>(Module.class, this, StructureRepositoryPackage.STRUCTURE__MODULES);
 		}
 		return modules;
 	}
@@ -166,8 +166,6 @@ public abstract class StructureImpl extends IdentifierImpl implements Structure 
 				if (eInternalContainer() != null)
 					msgs = eBasicRemoveFromContainer(msgs);
 				return basicSetParentPlant((Plant)otherEnd, msgs);
-			case StructureRepositoryPackage.STRUCTURE__MODULES:
-				return ((InternalEList<InternalEObject>)(InternalEList<?>)getModules()).basicAdd(otherEnd, msgs);
 			case StructureRepositoryPackage.STRUCTURE__COMPONENTS:
 				return ((InternalEList<InternalEObject>)(InternalEList<?>)getComponents()).basicAdd(otherEnd, msgs);
 		}

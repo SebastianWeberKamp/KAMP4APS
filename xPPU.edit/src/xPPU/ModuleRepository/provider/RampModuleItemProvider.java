@@ -64,7 +64,7 @@ public class RampModuleItemProvider extends ModuleItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((RampModule)object).getId();
+		String label = ((RampModule)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_RampModule_type") :
 			getString("_UI_RampModule_type") + " " + label;

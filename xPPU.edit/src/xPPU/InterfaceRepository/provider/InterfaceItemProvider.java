@@ -14,11 +14,10 @@ import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
-import xPPU.Identifier.provider.IdentifierItemProvider;
-
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.InterfaceRepositoryPackage;
 
+import xPPU.provider.EntityItemProvider;
 import xPPU.provider.XPPUEditPlugin;
 
 /**
@@ -27,7 +26,7 @@ import xPPU.provider.XPPUEditPlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InterfaceItemProvider extends IdentifierItemProvider {
+public class InterfaceItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -84,7 +83,7 @@ public class InterfaceItemProvider extends IdentifierItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Interface)object).getId();
+		String label = ((Interface)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Interface_type") :
 			getString("_UI_Interface_type") + " " + label;

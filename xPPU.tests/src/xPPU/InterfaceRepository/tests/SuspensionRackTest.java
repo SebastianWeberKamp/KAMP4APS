@@ -2,9 +2,6 @@
  */
 package xPPU.InterfaceRepository.tests;
 
-import junit.textui.TestRunner;
-
-import xPPU.InterfaceRepository.InterfaceRepositoryFactory;
 import xPPU.InterfaceRepository.SuspensionRack;
 
 /**
@@ -13,16 +10,7 @@ import xPPU.InterfaceRepository.SuspensionRack;
  * <!-- end-user-doc -->
  * @generated
  */
-public class SuspensionRackTest extends SuspensionTest {
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public static void main(String[] args) {
-		TestRunner.run(SuspensionRackTest.class);
-	}
+public abstract class SuspensionRackTest extends SuspensionTest {
 
 	/**
 	 * Constructs a new Suspension Rack test case with the given name.
@@ -43,28 +31,6 @@ public class SuspensionRackTest extends SuspensionTest {
 	@Override
 	protected SuspensionRack getFixture() {
 		return (SuspensionRack)fixture;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#setUp()
-	 * @generated
-	 */
-	@Override
-	protected void setUp() throws Exception {
-		setFixture(InterfaceRepositoryFactory.eINSTANCE.createSuspensionRack());
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see junit.framework.TestCase#tearDown()
-	 * @generated
-	 */
-	@Override
-	protected void tearDown() throws Exception {
-		setFixture(null);
 	}
 
 } //SuspensionRackTest

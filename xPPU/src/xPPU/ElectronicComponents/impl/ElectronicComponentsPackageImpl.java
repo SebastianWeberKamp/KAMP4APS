@@ -20,6 +20,7 @@ import xPPU.ElectronicComponents.Button;
 import xPPU.ElectronicComponents.ElectronicComponentsFactory;
 import xPPU.ElectronicComponents.ElectronicComponentsPackage;
 import xPPU.ElectronicComponents.ElectronicPart;
+import xPPU.ElectronicComponents.MicroSwitch;
 import xPPU.ElectronicComponents.Switch;
 
 import xPPU.Identifier.IdentifierPackage;
@@ -80,6 +81,13 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 	 * @generated
 	 */
 	private EClass buttonEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass microSwitchEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -227,6 +235,24 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getMicroSwitch() {
+		return microSwitchEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMicroSwitch_MsModule() {
+		return (EReference)microSwitchEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ElectronicComponentsFactory getElectronicComponentsFactory() {
 		return (ElectronicComponentsFactory)getEFactoryInstance();
 	}
@@ -259,6 +285,9 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		ledEClass = createEClass(LED);
 
 		buttonEClass = createEClass(BUTTON);
+
+		microSwitchEClass = createEClass(MICRO_SWITCH);
+		createEReference(microSwitchEClass, MICRO_SWITCH__MS_MODULE);
 	}
 
 	/**
@@ -297,6 +326,7 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		switchEClass.getESuperTypes().add(this.getElectronicPart());
 		ledEClass.getESuperTypes().add(this.getElectronicPart());
 		buttonEClass.getESuperTypes().add(this.getElectronicPart());
+		microSwitchEClass.getESuperTypes().add(this.getSwitch());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(electronicPartEClass, ElectronicPart.class, "ElectronicPart", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -308,6 +338,9 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		initEClass(ledEClass, xPPU.ElectronicComponents.LED.class, "LED", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(microSwitchEClass, MicroSwitch.class, "MicroSwitch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMicroSwitch_MsModule(), theComponentRepositoryPackage.getMicroswitchModule(), theComponentRepositoryPackage.getMicroswitchModule_Switch(), "msModule", null, 1, 1, MicroSwitch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //ElectronicComponentsPackageImpl

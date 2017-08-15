@@ -72,6 +72,29 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.ComponentRepository.Component} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ComponentItemProvider componentItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.ComponentRepository.Component}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createComponentAdapter() {
+		if (componentItemProvider == null) {
+			componentItemProvider = new ComponentItemProvider(this);
+		}
+
+		return componentItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link xPPU.ComponentRepository.OperationPanel} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -230,6 +253,29 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 		}
 
 		return presenceSensorItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.ComponentRepository.PressureSensor} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PressureSensorItemProvider pressureSensorItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.ComponentRepository.PressureSensor}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPressureSensorAdapter() {
+		if (pressureSensorItemProvider == null) {
+			pressureSensorItemProvider = new PressureSensorItemProvider(this);
+		}
+
+		return pressureSensorItemProvider;
 	}
 
 	/**
@@ -900,6 +946,29 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link xPPU.ComponentRepository.Fixture} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected FixtureItemProvider fixtureItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link xPPU.ComponentRepository.Fixture}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createFixtureAdapter() {
+		if (fixtureItemProvider == null) {
+			fixtureItemProvider = new FixtureItemProvider(this);
+		}
+
+		return fixtureItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -998,6 +1067,7 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 	 * @generated
 	 */
 	public void dispose() {
+		if (componentItemProvider != null) componentItemProvider.dispose();
 		if (operationPanelItemProvider != null) operationPanelItemProvider.dispose();
 		if (simpleMotorItemProvider != null) simpleMotorItemProvider.dispose();
 		if (regularRampItemProvider != null) regularRampItemProvider.dispose();
@@ -1005,6 +1075,7 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 		if (opticalSensorItemProvider != null) opticalSensorItemProvider.dispose();
 		if (inductiveSensorItemProvider != null) inductiveSensorItemProvider.dispose();
 		if (presenceSensorItemProvider != null) presenceSensorItemProvider.dispose();
+		if (pressureSensorItemProvider != null) pressureSensorItemProvider.dispose();
 		if (pneumaticPipeItemProvider != null) pneumaticPipeItemProvider.dispose();
 		if (compressorItemProvider != null) compressorItemProvider.dispose();
 		if (powerCableItemProvider != null) powerCableItemProvider.dispose();
@@ -1034,6 +1105,7 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 		if (cylinderPartItemProvider != null) cylinderPartItemProvider.dispose();
 		if (monostableCylinderItemProvider != null) monostableCylinderItemProvider.dispose();
 		if (componentRepositoryItemProvider != null) componentRepositoryItemProvider.dispose();
+		if (fixtureItemProvider != null) fixtureItemProvider.dispose();
 	}
 
 }

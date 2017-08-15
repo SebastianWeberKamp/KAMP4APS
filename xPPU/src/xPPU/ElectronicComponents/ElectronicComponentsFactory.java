@@ -49,6 +49,15 @@ public interface ElectronicComponentsFactory extends EFactory {
 	Button createButton();
 
 	/**
+	 * Returns a new object of class '<em>Micro Switch</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Micro Switch</em>'.
+	 * @generated
+	 */
+	MicroSwitch createMicroSwitch();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

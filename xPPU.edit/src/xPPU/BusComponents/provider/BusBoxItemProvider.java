@@ -164,7 +164,7 @@ public class BusBoxItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((BusBox)object).getId();
+		String label = ((BusBox)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_BusBox_type") :
 			getString("_UI_BusBox_type") + " " + label;

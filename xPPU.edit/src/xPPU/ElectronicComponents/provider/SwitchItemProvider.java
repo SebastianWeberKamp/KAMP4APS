@@ -64,7 +64,7 @@ public class SwitchItemProvider extends ElectronicPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Switch)object).getId();
+		String label = ((Switch)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Switch_type") :
 			getString("_UI_Switch_type") + " " + label;

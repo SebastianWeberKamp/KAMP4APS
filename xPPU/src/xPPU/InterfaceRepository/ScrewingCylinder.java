@@ -10,7 +10,7 @@ package xPPU.InterfaceRepository;
  *
  *
  * @see xPPU.InterfaceRepository.InterfaceRepositoryPackage#getScrewingCylinder()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ScrewingCylinder extends Screwing {

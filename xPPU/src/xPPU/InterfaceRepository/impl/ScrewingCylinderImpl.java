@@ -14,7 +14,7 @@ import xPPU.InterfaceRepository.ScrewingCylinder;
  *
  * @generated
  */
-public class ScrewingCylinderImpl extends ScrewingImpl implements ScrewingCylinder {
+public abstract class ScrewingCylinderImpl extends ScrewingImpl implements ScrewingCylinder {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

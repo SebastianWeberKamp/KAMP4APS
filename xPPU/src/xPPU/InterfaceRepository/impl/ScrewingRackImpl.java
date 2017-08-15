@@ -14,7 +14,7 @@ import xPPU.InterfaceRepository.ScrewingRack;
  *
  * @generated
  */
-public class ScrewingRackImpl extends ScrewingImpl implements ScrewingRack {
+public abstract class ScrewingRackImpl extends ScrewingImpl implements ScrewingRack {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

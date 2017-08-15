@@ -89,7 +89,7 @@ public class ControlCabinetItemProvider extends StructureItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ControlCabinet)object).getId();
+		String label = ((ControlCabinet)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ControlCabinet_type") :
 			getString("_UI_ControlCabinet_type") + " " + label;

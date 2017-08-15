@@ -4,7 +4,7 @@ package xPPU.ComponentRepository;
 
 import org.eclipse.emf.common.util.EList;
 
-import xPPU.Identifier.Identifier;
+import xPPU.Entity;
 
 import xPPU.InterfaceRepository.Interface;
 
@@ -27,10 +27,10 @@ import xPPU.StructureRepository.Structure;
  * </ul>
  *
  * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getComponent()
- * @model abstract="true"
+ * @model
  * @generated
  */
-public interface Component extends Identifier {
+public interface Component extends Entity {
 	/**
 	 * Returns the value of the '<em><b>Connected Interfaces</b></em>' reference list.
 	 * The list contents are of type {@link xPPU.InterfaceRepository.Interface}.
@@ -76,28 +76,28 @@ public interface Component extends Identifier {
 	void setParent(Structure value);
 
 	/**
-	 * Returns the value of the '<em><b>Parent Module</b></em>' reference.
+	 * Returns the value of the '<em><b>Parent Module</b></em>' container reference.
 	 * It is bidirectional and its opposite is '{@link xPPU.ModuleRepository.Module#getComponents <em>Components</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Parent Module</em>' reference isn't clear,
+	 * If the meaning of the '<em>Parent Module</em>' container reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parent Module</em>' reference.
+	 * @return the value of the '<em>Parent Module</em>' container reference.
 	 * @see #setParentModule(Module)
 	 * @see xPPU.ComponentRepository.ComponentRepositoryPackage#getComponent_ParentModule()
 	 * @see xPPU.ModuleRepository.Module#getComponents
-	 * @model opposite="components"
+	 * @model opposite="components" transient="false"
 	 * @generated
 	 */
 	Module getParentModule();
 
 	/**
-	 * Sets the value of the '{@link xPPU.ComponentRepository.Component#getParentModule <em>Parent Module</em>}' reference.
+	 * Sets the value of the '{@link xPPU.ComponentRepository.Component#getParentModule <em>Parent Module</em>}' container reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Parent Module</em>' reference.
+	 * @param value the new value of the '<em>Parent Module</em>' container reference.
 	 * @see #getParentModule()
 	 * @generated
 	 */

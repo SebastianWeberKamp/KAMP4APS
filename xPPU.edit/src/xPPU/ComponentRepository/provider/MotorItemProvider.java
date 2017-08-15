@@ -124,7 +124,7 @@ public class MotorItemProvider extends ComponentItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Motor)object).getId();
+		String label = ((Motor)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_Motor_type") :
 			getString("_UI_Motor_type") + " " + label;

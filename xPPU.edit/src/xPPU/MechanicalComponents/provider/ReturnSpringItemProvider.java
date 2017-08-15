@@ -64,7 +64,7 @@ public class ReturnSpringItemProvider extends MechanicalPartItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ReturnSpring)object).getId();
+		String label = ((ReturnSpring)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ReturnSpring_type") :
 			getString("_UI_ReturnSpring_type") + " " + label;

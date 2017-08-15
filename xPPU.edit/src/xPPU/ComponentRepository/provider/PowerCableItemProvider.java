@@ -64,7 +64,7 @@ public class PowerCableItemProvider extends CableItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((PowerCable)object).getId();
+		String label = ((PowerCable)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_PowerCable_type") :
 			getString("_UI_PowerCable_type") + " " + label;

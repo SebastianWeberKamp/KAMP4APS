@@ -2,9 +2,11 @@
  */
 package xPPU.ComponentRepository.tests;
 
+import junit.textui.TestRunner;
 import xPPU.ComponentRepository.Component;
 
-import xPPU.Identifier.tests.IdentifierTest;
+import xPPU.ComponentRepository.ComponentRepositoryFactory;
+import xPPU.tests.EntityTest;
 
 /**
  * <!-- begin-user-doc -->
@@ -12,7 +14,16 @@ import xPPU.Identifier.tests.IdentifierTest;
  * <!-- end-user-doc -->
  * @generated
  */
-public abstract class ComponentTest extends IdentifierTest {
+public class ComponentTest extends EntityTest {
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public static void main(String[] args) {
+		TestRunner.run(ComponentTest.class);
+	}
 
 	/**
 	 * Constructs a new Component test case with the given name.
@@ -33,6 +44,28 @@ public abstract class ComponentTest extends IdentifierTest {
 	@Override
 	protected Component getFixture() {
 		return (Component)fixture;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#setUp()
+	 * @generated
+	 */
+	@Override
+	protected void setUp() throws Exception {
+		setFixture(ComponentRepositoryFactory.eINSTANCE.createComponent());
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see junit.framework.TestCase#tearDown()
+	 * @generated
+	 */
+	@Override
+	protected void tearDown() throws Exception {
+		setFixture(null);
 	}
 
 } //ComponentTest
