@@ -1,19 +1,19 @@
 package edu.kit.ipd.sdq.kamp4aps.ui;
 
 import edu.kit.ipd.sdq.kamp.ui.AbstractCreateEmptyBaseModelAction;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureModelFactoryFacade;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersionPersistency;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureModelFactoryFacade;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersionPersistency;
 
-public class CreateEmptyBaseModelAction  extends AbstractCreateEmptyBaseModelAction<ArchitectureVersion> {
+public class CreateEmptyBaseModelAction  extends AbstractCreateEmptyBaseModelAction<APSArchitectureVersion> {
 	
 	public CreateEmptyBaseModelAction() {
-		this.setArchitectureVersionPersistency(new ArchitectureVersionPersistency());
+		this.setArchitectureVersionPersistency(new APSArchitectureVersionPersistency());
 	}
 	
 	@Override
-	protected ArchitectureVersion createArchitectureVersion() {
-		return ArchitectureModelFactoryFacade.createEmptyModel("architecturemodel");
+	protected APSArchitectureVersion createArchitectureVersion() {
+		return APSArchitectureModelFactoryFacade.createEmptyModel("architecturemodel");
 	}
 
 }
