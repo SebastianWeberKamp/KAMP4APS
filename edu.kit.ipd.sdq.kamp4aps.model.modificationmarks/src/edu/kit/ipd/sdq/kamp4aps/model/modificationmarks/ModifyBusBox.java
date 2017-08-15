@@ -10,7 +10,7 @@ import xPPU.BusComponents.BusBox;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyBusBox()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifyBusBox()
  * @model
  * @generated
  */

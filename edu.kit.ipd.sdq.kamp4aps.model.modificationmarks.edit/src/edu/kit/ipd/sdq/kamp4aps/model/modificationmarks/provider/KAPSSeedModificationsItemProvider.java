@@ -4,9 +4,10 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.AbstractSeedModificationsItemProvider;
+
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -65,11 +66,10 @@ public class KAPSSeedModificationsItemProvider extends AbstractSeedModifications
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(modificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS);
-			childrenFeatures.add(modificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS);
-			childrenFeatures.add(modificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS);
-			childrenFeatures.add(modificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS);
-			childrenFeatures.add(modificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__STRUCTURE_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__MODULE_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS);
 		}
 		return childrenFeatures;
 	}
@@ -122,11 +122,10 @@ public class KAPSSeedModificationsItemProvider extends AbstractSeedModifications
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(KAPSSeedModifications.class)) {
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS:
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS:
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS:
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS:
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS:
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__STRUCTURE_MODIFICATIONS:
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__MODULE_MODIFICATIONS:
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS:
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -146,28 +145,63 @@ public class KAPSSeedModificationsItemProvider extends AbstractSeedModifications
 
 		newChildDescriptors.add
 			(createChildParameter
-				(modificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS,
-				 modificationmarksFactory.eINSTANCE.createModifyBusBox()));
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__STRUCTURE_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifyStructure()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(modificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS,
-				 modificationmarksFactory.eINSTANCE.createModifySensor()));
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__MODULE_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifyModule()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(modificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS,
-				 modificationmarksFactory.eINSTANCE.createModifyBusMaster()));
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__MODULE_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifyMicroSwitchModule()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(modificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS,
-				 modificationmarksFactory.eINSTANCE.createModifyBusSlave()));
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifyComponent()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(modificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS,
-				 modificationmarksFactory.eINSTANCE.createModifyMicroSwitchModule()));
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifyBusBox()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifyBusMaster()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifyBusSlave()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifyBusCable()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifySensor()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifyInterface()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifySignalinterface()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS,
+				 ModificationmarksFactory.eINSTANCE.createModifyPhysicalConnection()));
 	}
 
 	/**

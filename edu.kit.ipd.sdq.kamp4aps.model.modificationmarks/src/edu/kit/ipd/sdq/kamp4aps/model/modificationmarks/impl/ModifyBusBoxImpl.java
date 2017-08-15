@@ -2,9 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
+
 import org.eclipse.emf.ecore.EClass;
+
 import xPPU.BusComponents.BusBox;
 
 /**
@@ -31,7 +33,7 @@ public class ModifyBusBoxImpl extends ModifyComponentImpl<BusBox> implements Mod
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return modificationmarksPackage.Literals.MODIFY_BUS_BOX;
+		return ModificationmarksPackage.Literals.MODIFY_BUS_BOX;
 	}
 
 } //ModifyBusBoxImpl

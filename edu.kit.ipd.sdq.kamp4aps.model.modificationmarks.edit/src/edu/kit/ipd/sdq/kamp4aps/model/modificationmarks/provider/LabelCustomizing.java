@@ -11,6 +11,7 @@ import xPPU.ComponentRepository.MicroswitchModule;
 import xPPU.ComponentRepository.PowerSupply;
 import xPPU.ComponentRepository.Sensor;
 import xPPU.Identifier.Identifier;
+import xPPU.Identifier.NamedElement;
 import xPPU.InterfaceRepository.Interface;
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.SignalInterface;
@@ -145,8 +146,8 @@ public class LabelCustomizing {
 		return modification.getAffectedElement() != null;
 	}
 
-	public static String getIdentifierName(Identifier architectureElement) {
-		return architectureElement.getId();
+	public static String getIdentifierName(NamedElement architectureElement) {
+		return architectureElement.getName();
 	}
 
 }

@@ -4,20 +4,20 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor;
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersionPersistency;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.AbstractChangePropagationAction;
 import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersionPersistency;
-import edu.kit.ipd.sdq.kamp4aps.core.ChangePropagationAnalysis;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersionPersistency;
+import edu.kit.ipd.sdq.kamp4aps.core.APSChangePropagationAnalysis;
 
-public class ChangePropagationAction extends AbstractChangePropagationAction<ArchitectureVersion> {
+public class ChangePropagationAction extends AbstractChangePropagationAction<APSArchitectureVersion> {
 
 	@Override
-	protected AbstractChangePropagationAnalysis<ArchitectureVersion> createChangePropagationAnalysis() {
-		return new ChangePropagationAnalysis();
+	protected AbstractChangePropagationAnalysis<APSArchitectureVersion> createChangePropagationAnalysis() {
+		return new APSChangePropagationAnalysis();
 	}
 
 	@Override
-	protected AbstractArchitectureVersionPersistency<ArchitectureVersion> createArchitectureVersionPersistency() {
-		return new ArchitectureVersionPersistency();
+	protected AbstractArchitectureVersionPersistency<APSArchitectureVersion> createArchitectureVersionPersistency() {
+		return new APSArchitectureVersionPersistency();
 	}
 
 }

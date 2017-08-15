@@ -2,16 +2,23 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
+
 import xPPU.ComponentRepository.Sensor;
+
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.SignalInterface;
 
@@ -39,6 +46,7 @@ public class ModifySensorImpl extends ModifyComponentImpl<Sensor> implements Mod
 	 * @ordered
 	 */
 	protected EList<SignalInterface> modifySignalInterfaces;
+
 	/**
 	 * The cached value of the '{@link #getModifyPhysicalConnections() <em>Modify Physical Connections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -65,7 +73,7 @@ public class ModifySensorImpl extends ModifyComponentImpl<Sensor> implements Mod
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return modificationmarksPackage.Literals.MODIFY_SENSOR;
+		return ModificationmarksPackage.Literals.MODIFY_SENSOR;
 	}
 
 	/**
@@ -75,7 +83,7 @@ public class ModifySensorImpl extends ModifyComponentImpl<Sensor> implements Mod
 	 */
 	public EList<SignalInterface> getModifySignalInterfaces() {
 		if (modifySignalInterfaces == null) {
-			modifySignalInterfaces = new EObjectContainmentEList<SignalInterface>(SignalInterface.class, this, modificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES);
+			modifySignalInterfaces = new EObjectContainmentEList<SignalInterface>(SignalInterface.class, this, ModificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES);
 		}
 		return modifySignalInterfaces;
 	}
@@ -87,7 +95,7 @@ public class ModifySensorImpl extends ModifyComponentImpl<Sensor> implements Mod
 	 */
 	public EList<PhysicalConnection> getModifyPhysicalConnections() {
 		if (modifyPhysicalConnections == null) {
-			modifyPhysicalConnections = new EObjectContainmentEList<PhysicalConnection>(PhysicalConnection.class, this, modificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS);
+			modifyPhysicalConnections = new EObjectContainmentEList<PhysicalConnection>(PhysicalConnection.class, this, ModificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS);
 		}
 		return modifyPhysicalConnections;
 	}
@@ -100,9 +108,9 @@ public class ModifySensorImpl extends ModifyComponentImpl<Sensor> implements Mod
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
 				return ((InternalEList<?>)getModifySignalInterfaces()).basicRemove(otherEnd, msgs);
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
 				return ((InternalEList<?>)getModifyPhysicalConnections()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -116,9 +124,9 @@ public class ModifySensorImpl extends ModifyComponentImpl<Sensor> implements Mod
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
 				return getModifySignalInterfaces();
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
 				return getModifyPhysicalConnections();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -133,11 +141,11 @@ public class ModifySensorImpl extends ModifyComponentImpl<Sensor> implements Mod
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
 				getModifySignalInterfaces().clear();
 				getModifySignalInterfaces().addAll((Collection<? extends SignalInterface>)newValue);
 				return;
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
 				getModifyPhysicalConnections().clear();
 				getModifyPhysicalConnections().addAll((Collection<? extends PhysicalConnection>)newValue);
 				return;
@@ -153,10 +161,10 @@ public class ModifySensorImpl extends ModifyComponentImpl<Sensor> implements Mod
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
 				getModifySignalInterfaces().clear();
 				return;
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
 				getModifyPhysicalConnections().clear();
 				return;
 		}
@@ -171,9 +179,9 @@ public class ModifySensorImpl extends ModifyComponentImpl<Sensor> implements Mod
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
 				return modifySignalInterfaces != null && !modifySignalInterfaces.isEmpty();
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
 				return modifyPhysicalConnections != null && !modifyPhysicalConnections.isEmpty();
 		}
 		return super.eIsSet(featureID);

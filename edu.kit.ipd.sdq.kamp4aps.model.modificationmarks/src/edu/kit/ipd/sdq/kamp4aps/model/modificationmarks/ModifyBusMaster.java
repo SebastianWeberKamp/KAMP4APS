@@ -10,7 +10,7 @@ import xPPU.BusComponents.BusMaster;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyBusMaster()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifyBusMaster()
  * @model
  * @generated
  */

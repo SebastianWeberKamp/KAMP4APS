@@ -2,11 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
-import org.eclipse.emf.ecore.EClass;
-
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSModificationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
+
+import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ public class KAPSModificationRepositoryImpl extends AbstractKAPSModificationRepo
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return modificationmarksPackage.Literals.KAPS_MODIFICATION_REPOSITORY;
+		return ModificationmarksPackage.Literals.KAPS_MODIFICATION_REPOSITORY;
 	}
 
 } //KAPSModificationRepositoryImpl

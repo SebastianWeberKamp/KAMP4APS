@@ -10,7 +10,7 @@ import xPPU.InterfaceRepository.PhysicalConnection;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyPhysicalConnection()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifyPhysicalConnection()
  * @model
  * @generated
  */

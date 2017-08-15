@@ -2,9 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests;
 
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
-import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
@@ -14,7 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyMicroSwitchModuleTest extends ModifyComponentTest {
+public class ModifyMicroSwitchModuleTest extends ModifyModuleTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -54,7 +53,7 @@ public class ModifyMicroSwitchModuleTest extends ModifyComponentTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(modificationmarksFactory.eINSTANCE.createModifyMicroSwitchModule());
+		setFixture(ModificationmarksFactory.eINSTANCE.createModifyMicroSwitchModule());
 	}
 
 	/**

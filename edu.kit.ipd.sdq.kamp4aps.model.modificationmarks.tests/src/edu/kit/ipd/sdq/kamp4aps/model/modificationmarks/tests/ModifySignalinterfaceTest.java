@@ -2,9 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests;
 
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignalinterface;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
-import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
@@ -54,7 +53,7 @@ public class ModifySignalinterfaceTest extends ModifyInterfaceTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(modificationmarksFactory.eINSTANCE.createModifySignalinterface());
+		setFixture(ModificationmarksFactory.eINSTANCE.createModifySignalinterface());
 	}
 
 	/**

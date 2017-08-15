@@ -20,4 +20,12 @@
             class="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.util.modificationmarksResourceFactoryImpl"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated KAPSModificationmarks -->
+      <package
+            uri="http://sdq.ipd.kit.edu/KAPSModificationmarks/1.0"
+            class="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage"
+            genModel="model/KAPSModificationmarks.genmodel"/>
+   </extension>
+
 </plugin>

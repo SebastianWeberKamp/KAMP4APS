@@ -3,17 +3,14 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
 
-import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.AbstractModificationItemProvider;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
@@ -26,7 +23,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyMicroSwitchModuleItemProvider extends ModifyComponentItemProvider {
+public class ModifyMicroSwitchModuleItemProvider extends ModifyModuleItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -66,7 +63,7 @@ public class ModifyMicroSwitchModuleItemProvider extends ModifyComponentItemProv
 				 getResourceLocator(),
 				 getString("_UI_ModifyMicroSwitchModule_isReplaced_feature"),
 				 getString("_UI_PropertyDescriptor_description", "_UI_ModifyMicroSwitchModule_isReplaced_feature", "_UI_ModifyMicroSwitchModule_type"),
-				 modificationmarksPackage.Literals.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED,
+				 ModificationmarksPackage.Literals.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED,
 				 true,
 				 false,
 				 false,
@@ -113,7 +110,7 @@ public class ModifyMicroSwitchModuleItemProvider extends ModifyComponentItemProv
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ModifyMicroSwitchModule.class)) {
-			case modificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED:
+			case ModificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

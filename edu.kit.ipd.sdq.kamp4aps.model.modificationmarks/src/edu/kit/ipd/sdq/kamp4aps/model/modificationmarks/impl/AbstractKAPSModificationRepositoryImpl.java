@@ -5,9 +5,10 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.AbstractModificationRepositoryImpl;
+
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -41,7 +42,7 @@ public abstract class AbstractKAPSModificationRepositoryImpl<T extends KAPSSeedM
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return modificationmarksPackage.Literals.ABSTRACT_KAPS_MODIFICATION_REPOSITORY;
+		return ModificationmarksPackage.Literals.ABSTRACT_KAPS_MODIFICATION_REPOSITORY;
 	}
 
 	/**
@@ -64,7 +65,7 @@ public abstract class AbstractKAPSModificationRepositoryImpl<T extends KAPSSeedM
 	@Override
 	public EList<ChangePropagationStep> getChangePropagationSteps() {
 		if (changePropagationSteps == null) {
-			changePropagationSteps = new EObjectContainmentEList<ChangePropagationStep>(ChangePropagationStep.class, this, modificationmarksPackage.ABSTRACT_KAPS_MODIFICATION_REPOSITORY__CHANGE_PROPAGATION_STEPS);
+			changePropagationSteps = new EObjectContainmentEList<ChangePropagationStep>(ChangePropagationStep.class, this, ModificationmarksPackage.ABSTRACT_KAPS_MODIFICATION_REPOSITORY__CHANGE_PROPAGATION_STEPS);
 		}
 		return changePropagationSteps;
 	}

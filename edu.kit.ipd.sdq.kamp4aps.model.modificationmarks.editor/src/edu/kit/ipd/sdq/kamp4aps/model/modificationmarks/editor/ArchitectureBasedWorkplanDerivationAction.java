@@ -1,18 +1,17 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.editor;
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.editor.AbstractArchitectureBasedWorkplanDerivationAction;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4aps.core.ArchitectureVersionPersistency;
-import edu.kit.ipd.sdq.kamp4aps.core.derivation.DifferenceCalculation;
-import edu.kit.ipd.sdq.kamp4aps.core.derivation.EnrichedWorkplanDerivation;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersionPersistency;
+import edu.kit.ipd.sdq.kamp4aps.core.derivation.APSDifferenceCalculation;
+import edu.kit.ipd.sdq.kamp4aps.core.derivation.APSEnrichedWorkplanDerivation;
 
-public class ArchitectureBasedWorkplanDerivationAction extends AbstractArchitectureBasedWorkplanDerivationAction<ArchitectureVersion> {
+public class ArchitectureBasedWorkplanDerivationAction extends AbstractArchitectureBasedWorkplanDerivationAction<APSArchitectureVersion> {
 	
 	public ArchitectureBasedWorkplanDerivationAction() {
-		this.setWorkplanDerivation(new DifferenceCalculation());
-		this.setEnrichedWorkplanDerivation(new EnrichedWorkplanDerivation());
-		this.setArchitectureVersionPersistency(new ArchitectureVersionPersistency());
+		setWorkplanDerivation(new APSDifferenceCalculation());
+		setEnrichedWorkplanDerivation(new APSEnrichedWorkplanDerivation());
+		setArchitectureVersionPersistency(new APSArchitectureVersionPersistency());
 	}
 
 }
-

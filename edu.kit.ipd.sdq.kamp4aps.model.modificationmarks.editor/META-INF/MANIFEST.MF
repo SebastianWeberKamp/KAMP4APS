@@ -7,7 +7,7 @@ Bundle-ClassPath: .
 Bundle-Activator: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.KAPSModificationmarksEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
@@ -15,15 +15,9 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
- de.uka.ipd.sdq.identifier.edit;visibility:=reexport,
  edu.kit.ipd.sdq.kamp.model.modificationmarks.edit;visibility:=reexport,
  xPPU.edit;visibility:=reexport,
- org.palladiosimulator.pcm.edit;visibility:=reexport,
- de.uka.ipd.sdq.probfunction.edit;visibility:=reexport,
- de.uka.ipd.sdq.stoex.edit;visibility:=reexport,
- de.uka.ipd.sdq.units.edit;visibility:=reexport,
- edu.kit.ipd.sdq.kamp,
- edu.kit.ipd.sdq.kamp.model.modificationmarks.editor,
- edu.kit.ipd.sdq.kamp4aps
+ edu.kit.ipd.sdq.kamp;bundle-version="1.0.0",
+ edu.kit.ipd.sdq.kamp4aps;bundle-version="1.0.0",
+ edu.kit.ipd.sdq.kamp.model.modificationmarks.editor;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
-Import-Package: edu.kit.ipd.sdq.kamp.model.modificationmarks.editor

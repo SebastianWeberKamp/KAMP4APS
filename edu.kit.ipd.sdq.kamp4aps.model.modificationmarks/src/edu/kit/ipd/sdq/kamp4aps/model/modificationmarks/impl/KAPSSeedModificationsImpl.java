@@ -3,13 +3,13 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.AbstractSeedModificationsImpl;
+
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
 
 import java.util.Collection;
 
@@ -23,6 +23,14 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
+import xPPU.ComponentRepository.Component;
+
+import xPPU.InterfaceRepository.Interface;
+
+import xPPU.ModuleRepository.Module;
+
+import xPPU.StructureRepository.Structure;
+
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>KAPS Seed Modifications</b></em>'.
@@ -31,65 +39,54 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.KAPSSeedModificationsImpl#getBusBoxModifications <em>Bus Box Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.KAPSSeedModificationsImpl#getSensorModifications <em>Sensor Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.KAPSSeedModificationsImpl#getBusMasterModifications <em>Bus Master Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.KAPSSeedModificationsImpl#getBusSlaveModifications <em>Bus Slave Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.KAPSSeedModificationsImpl#getMicroswitchModuleModifications <em>Microswitch Module Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.KAPSSeedModificationsImpl#getStructureModifications <em>Structure Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.KAPSSeedModificationsImpl#getModuleModifications <em>Module Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.KAPSSeedModificationsImpl#getComponentModifications <em>Component Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl.KAPSSeedModificationsImpl#getInterfaceModifications <em>Interface Modifications</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl implements KAPSSeedModifications {
 	/**
-	 * The cached value of the '{@link #getBusBoxModifications() <em>Bus Box Modifications</em>}' containment reference list.
+	 * The cached value of the '{@link #getStructureModifications() <em>Structure Modifications</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBusBoxModifications()
+	 * @see #getStructureModifications()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyBusBox> busBoxModifications;
+	protected EList<ModifyStructure<Structure>> structureModifications;
 
 	/**
-	 * The cached value of the '{@link #getSensorModifications() <em>Sensor Modifications</em>}' containment reference list.
+	 * The cached value of the '{@link #getModuleModifications() <em>Module Modifications</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSensorModifications()
+	 * @see #getModuleModifications()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifySensor> sensorModifications;
+	protected EList<ModifyModule<Module>> moduleModifications;
 
 	/**
-	 * The cached value of the '{@link #getBusMasterModifications() <em>Bus Master Modifications</em>}' containment reference list.
+	 * The cached value of the '{@link #getComponentModifications() <em>Component Modifications</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBusMasterModifications()
+	 * @see #getComponentModifications()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyBusMaster> busMasterModifications;
+	protected EList<ModifyComponent<Component>> componentModifications;
 
 	/**
-	 * The cached value of the '{@link #getBusSlaveModifications() <em>Bus Slave Modifications</em>}' containment reference list.
+	 * The cached value of the '{@link #getInterfaceModifications() <em>Interface Modifications</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBusSlaveModifications()
+	 * @see #getInterfaceModifications()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<ModifyBusSlave> busSlaveModifications;
-
-	/**
-	 * The cached value of the '{@link #getMicroswitchModuleModifications() <em>Microswitch Module Modifications</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getMicroswitchModuleModifications()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<ModifyMicroSwitchModule> microswitchModuleModifications;
+	protected EList<ModifyInterface<Interface>> interfaceModifications;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -107,7 +104,7 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return modificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS;
+		return ModificationmarksPackage.Literals.KAPS_SEED_MODIFICATIONS;
 	}
 
 	/**
@@ -115,11 +112,11 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyBusBox> getBusBoxModifications() {
-		if (busBoxModifications == null) {
-			busBoxModifications = new EObjectContainmentEList<ModifyBusBox>(ModifyBusBox.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS);
+	public EList<ModifyStructure<Structure>> getStructureModifications() {
+		if (structureModifications == null) {
+			structureModifications = new EObjectContainmentEList<ModifyStructure<Structure>>(ModifyStructure.class, this, ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__STRUCTURE_MODIFICATIONS);
 		}
-		return busBoxModifications;
+		return structureModifications;
 	}
 
 	/**
@@ -127,11 +124,11 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifySensor> getSensorModifications() {
-		if (sensorModifications == null) {
-			sensorModifications = new EObjectContainmentEList<ModifySensor>(ModifySensor.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS);
+	public EList<ModifyModule<Module>> getModuleModifications() {
+		if (moduleModifications == null) {
+			moduleModifications = new EObjectContainmentEList<ModifyModule<Module>>(ModifyModule.class, this, ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__MODULE_MODIFICATIONS);
 		}
-		return sensorModifications;
+		return moduleModifications;
 	}
 
 	/**
@@ -139,11 +136,11 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyBusMaster> getBusMasterModifications() {
-		if (busMasterModifications == null) {
-			busMasterModifications = new EObjectContainmentEList<ModifyBusMaster>(ModifyBusMaster.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS);
+	public EList<ModifyComponent<Component>> getComponentModifications() {
+		if (componentModifications == null) {
+			componentModifications = new EObjectContainmentEList<ModifyComponent<Component>>(ModifyComponent.class, this, ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS);
 		}
-		return busMasterModifications;
+		return componentModifications;
 	}
 
 	/**
@@ -151,23 +148,11 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<ModifyBusSlave> getBusSlaveModifications() {
-		if (busSlaveModifications == null) {
-			busSlaveModifications = new EObjectContainmentEList<ModifyBusSlave>(ModifyBusSlave.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS);
+	public EList<ModifyInterface<Interface>> getInterfaceModifications() {
+		if (interfaceModifications == null) {
+			interfaceModifications = new EObjectContainmentEList<ModifyInterface<Interface>>(ModifyInterface.class, this, ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS);
 		}
-		return busSlaveModifications;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<ModifyMicroSwitchModule> getMicroswitchModuleModifications() {
-		if (microswitchModuleModifications == null) {
-			microswitchModuleModifications = new EObjectContainmentEList<ModifyMicroSwitchModule>(ModifyMicroSwitchModule.class, this, modificationmarksPackage.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS);
-		}
-		return microswitchModuleModifications;
+		return interfaceModifications;
 	}
 
 	/**
@@ -178,16 +163,14 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS:
-				return ((InternalEList<?>)getBusBoxModifications()).basicRemove(otherEnd, msgs);
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS:
-				return ((InternalEList<?>)getSensorModifications()).basicRemove(otherEnd, msgs);
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS:
-				return ((InternalEList<?>)getBusMasterModifications()).basicRemove(otherEnd, msgs);
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS:
-				return ((InternalEList<?>)getBusSlaveModifications()).basicRemove(otherEnd, msgs);
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS:
-				return ((InternalEList<?>)getMicroswitchModuleModifications()).basicRemove(otherEnd, msgs);
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__STRUCTURE_MODIFICATIONS:
+				return ((InternalEList<?>)getStructureModifications()).basicRemove(otherEnd, msgs);
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__MODULE_MODIFICATIONS:
+				return ((InternalEList<?>)getModuleModifications()).basicRemove(otherEnd, msgs);
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS:
+				return ((InternalEList<?>)getComponentModifications()).basicRemove(otherEnd, msgs);
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS:
+				return ((InternalEList<?>)getInterfaceModifications()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -200,16 +183,14 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS:
-				return getBusBoxModifications();
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS:
-				return getSensorModifications();
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS:
-				return getBusMasterModifications();
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS:
-				return getBusSlaveModifications();
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS:
-				return getMicroswitchModuleModifications();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__STRUCTURE_MODIFICATIONS:
+				return getStructureModifications();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__MODULE_MODIFICATIONS:
+				return getModuleModifications();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS:
+				return getComponentModifications();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS:
+				return getInterfaceModifications();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -223,25 +204,21 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS:
-				getBusBoxModifications().clear();
-				getBusBoxModifications().addAll((Collection<? extends ModifyBusBox>)newValue);
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__STRUCTURE_MODIFICATIONS:
+				getStructureModifications().clear();
+				getStructureModifications().addAll((Collection<? extends ModifyStructure<Structure>>)newValue);
 				return;
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS:
-				getSensorModifications().clear();
-				getSensorModifications().addAll((Collection<? extends ModifySensor>)newValue);
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__MODULE_MODIFICATIONS:
+				getModuleModifications().clear();
+				getModuleModifications().addAll((Collection<? extends ModifyModule<Module>>)newValue);
 				return;
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS:
-				getBusMasterModifications().clear();
-				getBusMasterModifications().addAll((Collection<? extends ModifyBusMaster>)newValue);
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS:
+				getComponentModifications().clear();
+				getComponentModifications().addAll((Collection<? extends ModifyComponent<Component>>)newValue);
 				return;
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS:
-				getBusSlaveModifications().clear();
-				getBusSlaveModifications().addAll((Collection<? extends ModifyBusSlave>)newValue);
-				return;
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS:
-				getMicroswitchModuleModifications().clear();
-				getMicroswitchModuleModifications().addAll((Collection<? extends ModifyMicroSwitchModule>)newValue);
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS:
+				getInterfaceModifications().clear();
+				getInterfaceModifications().addAll((Collection<? extends ModifyInterface<Interface>>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -255,20 +232,17 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS:
-				getBusBoxModifications().clear();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__STRUCTURE_MODIFICATIONS:
+				getStructureModifications().clear();
 				return;
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS:
-				getSensorModifications().clear();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__MODULE_MODIFICATIONS:
+				getModuleModifications().clear();
 				return;
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS:
-				getBusMasterModifications().clear();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS:
+				getComponentModifications().clear();
 				return;
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS:
-				getBusSlaveModifications().clear();
-				return;
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS:
-				getMicroswitchModuleModifications().clear();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS:
+				getInterfaceModifications().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -282,16 +256,14 @@ public class KAPSSeedModificationsImpl extends AbstractSeedModificationsImpl imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_BOX_MODIFICATIONS:
-				return busBoxModifications != null && !busBoxModifications.isEmpty();
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__SENSOR_MODIFICATIONS:
-				return sensorModifications != null && !sensorModifications.isEmpty();
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_MASTER_MODIFICATIONS:
-				return busMasterModifications != null && !busMasterModifications.isEmpty();
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__BUS_SLAVE_MODIFICATIONS:
-				return busSlaveModifications != null && !busSlaveModifications.isEmpty();
-			case modificationmarksPackage.KAPS_SEED_MODIFICATIONS__MICROSWITCH_MODULE_MODIFICATIONS:
-				return microswitchModuleModifications != null && !microswitchModuleModifications.isEmpty();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__STRUCTURE_MODIFICATIONS:
+				return structureModifications != null && !structureModifications.isEmpty();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__MODULE_MODIFICATIONS:
+				return moduleModifications != null && !moduleModifications.isEmpty();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS:
+				return componentModifications != null && !componentModifications.isEmpty();
+			case ModificationmarksPackage.KAPS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS:
+				return interfaceModifications != null && !interfaceModifications.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

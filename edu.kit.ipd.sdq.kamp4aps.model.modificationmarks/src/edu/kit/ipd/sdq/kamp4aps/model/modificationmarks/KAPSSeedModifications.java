@@ -6,6 +6,14 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractSeedModifications;
 
 import org.eclipse.emf.common.util.EList;
 
+import xPPU.ComponentRepository.Component;
+
+import xPPU.InterfaceRepository.Interface;
+
+import xPPU.ModuleRepository.Module;
+
+import xPPU.StructureRepository.Structure;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>KAPS Seed Modifications</b></em>'.
@@ -15,96 +23,79 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications#getBusBoxModifications <em>Bus Box Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications#getSensorModifications <em>Sensor Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications#getBusMasterModifications <em>Bus Master Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications#getBusSlaveModifications <em>Bus Slave Modifications</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications#getMicroswitchModuleModifications <em>Microswitch Module Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications#getStructureModifications <em>Structure Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications#getModuleModifications <em>Module Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications#getComponentModifications <em>Component Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications#getInterfaceModifications <em>Interface Modifications</em>}</li>
  * </ul>
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getKAPSSeedModifications()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getKAPSSeedModifications()
  * @model
  * @generated
  */
 public interface KAPSSeedModifications extends AbstractSeedModifications {
 	/**
-	 * Returns the value of the '<em><b>Bus Box Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox}.
+	 * Returns the value of the '<em><b>Structure Modifications</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure}&lt;xPPU.StructureRepository.Structure>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bus Box Modifications</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Structure Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bus Box Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getKAPSSeedModifications_BusBoxModifications()
+	 * @return the value of the '<em>Structure Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getKAPSSeedModifications_StructureModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ModifyBusBox> getBusBoxModifications();
+	EList<ModifyStructure<Structure>> getStructureModifications();
 
 	/**
-	 * Returns the value of the '<em><b>Sensor Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor}.
+	 * Returns the value of the '<em><b>Module Modifications</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule}&lt;xPPU.ModuleRepository.Module>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sensor Modifications</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Module Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sensor Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getKAPSSeedModifications_SensorModifications()
+	 * @return the value of the '<em>Module Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getKAPSSeedModifications_ModuleModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ModifySensor> getSensorModifications();
+	EList<ModifyModule<Module>> getModuleModifications();
 
 	/**
-	 * Returns the value of the '<em><b>Bus Master Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster}.
+	 * Returns the value of the '<em><b>Component Modifications</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent}&lt;xPPU.ComponentRepository.Component>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bus Master Modifications</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Component Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bus Master Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getKAPSSeedModifications_BusMasterModifications()
+	 * @return the value of the '<em>Component Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getKAPSSeedModifications_ComponentModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ModifyBusMaster> getBusMasterModifications();
+	EList<ModifyComponent<Component>> getComponentModifications();
 
 	/**
-	 * Returns the value of the '<em><b>Bus Slave Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave}.
+	 * Returns the value of the '<em><b>Interface Modifications</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface}&lt;xPPU.InterfaceRepository.Interface>.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bus Slave Modifications</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Interface Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Bus Slave Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getKAPSSeedModifications_BusSlaveModifications()
+	 * @return the value of the '<em>Interface Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getKAPSSeedModifications_InterfaceModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<ModifyBusSlave> getBusSlaveModifications();
-
-	/**
-	 * Returns the value of the '<em><b>Microswitch Module Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Microswitch Module Modifications</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Microswitch Module Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getKAPSSeedModifications_MicroswitchModuleModifications()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<ModifyMicroSwitchModule> getMicroswitchModuleModifications();
+	EList<ModifyInterface<Interface>> getInterfaceModifications();
 
 } // KAPSSeedModifications

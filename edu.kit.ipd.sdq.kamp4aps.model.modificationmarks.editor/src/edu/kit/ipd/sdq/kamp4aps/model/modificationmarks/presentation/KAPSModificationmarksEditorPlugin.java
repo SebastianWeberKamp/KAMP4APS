@@ -2,14 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation;
 
-import de.uka.ipd.sdq.identifier.provider.IdentifierEditPlugin;
-
-import de.uka.ipd.sdq.probfunction.provider.ProbabilityFunctionEditPlugin;
-
-import de.uka.ipd.sdq.stoex.provider.StoexEditPlugin;
-
-import de.uka.ipd.sdq.units.provider.UnitsEditPlugin;
-
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.ModificationmarksEditPlugin;
 
 import org.eclipse.emf.common.EMFPlugin;

@@ -2,9 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignalinterface;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
+
 import org.eclipse.emf.ecore.EClass;
+
 import xPPU.InterfaceRepository.SignalInterface;
 
 /**
@@ -31,7 +33,7 @@ public class ModifySignalinterfaceImpl extends ModifyInterfaceImpl<SignalInterfa
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return modificationmarksPackage.Literals.MODIFY_SIGNALINTERFACE;
+		return ModificationmarksPackage.Literals.MODIFY_SIGNALINTERFACE;
 	}
 
 } //ModifySignalinterfaceImpl

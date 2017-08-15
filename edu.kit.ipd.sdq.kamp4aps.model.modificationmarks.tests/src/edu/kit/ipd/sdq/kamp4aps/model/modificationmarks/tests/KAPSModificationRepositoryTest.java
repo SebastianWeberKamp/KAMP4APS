@@ -3,7 +3,8 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests;
 
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSModificationRepository;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
+
 import junit.textui.TestRunner;
 
 /**
@@ -52,7 +53,7 @@ public class KAPSModificationRepositoryTest extends AbstractKAPSModificationRepo
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(modificationmarksFactory.eINSTANCE.createKAPSModificationRepository());
+		setFixture(ModificationmarksFactory.eINSTANCE.createKAPSModificationRepository());
 	}
 
 	/**

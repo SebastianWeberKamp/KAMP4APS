@@ -10,7 +10,7 @@ import xPPU.BusComponents.BusSlave;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyBusSlave()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifyBusSlave()
  * @model
  * @generated
  */

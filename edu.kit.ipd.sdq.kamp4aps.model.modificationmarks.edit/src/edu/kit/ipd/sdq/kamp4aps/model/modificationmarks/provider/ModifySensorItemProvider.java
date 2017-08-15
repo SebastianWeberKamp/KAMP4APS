@@ -3,9 +3,8 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
 
-import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.AbstractModificationItemProvider;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 
 import java.util.Collection;
 import java.util.List;
@@ -13,11 +12,11 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
+
 import xPPU.InterfaceRepository.InterfaceRepositoryFactory;
 
 /**
@@ -64,8 +63,8 @@ public class ModifySensorItemProvider extends ModifyComponentItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(modificationmarksPackage.Literals.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES);
-			childrenFeatures.add(modificationmarksPackage.Literals.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS);
+			childrenFeatures.add(ModificationmarksPackage.Literals.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES);
+			childrenFeatures.add(ModificationmarksPackage.Literals.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS);
 		}
 		return childrenFeatures;
 	}
@@ -121,8 +120,8 @@ public class ModifySensorItemProvider extends ModifyComponentItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ModifySensor.class)) {
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
-			case modificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES:
+			case ModificationmarksPackage.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -142,12 +141,12 @@ public class ModifySensorItemProvider extends ModifyComponentItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(modificationmarksPackage.Literals.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES,
+				(ModificationmarksPackage.Literals.MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES,
 				 InterfaceRepositoryFactory.eINSTANCE.createSignalInterface()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(modificationmarksPackage.Literals.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS,
+				(ModificationmarksPackage.Literals.MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS,
 				 InterfaceRepositoryFactory.eINSTANCE.createPhysicalConnection()));
 	}
 

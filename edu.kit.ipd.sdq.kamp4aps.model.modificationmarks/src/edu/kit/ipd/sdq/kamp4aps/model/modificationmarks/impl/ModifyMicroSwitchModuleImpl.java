@@ -2,11 +2,15 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import xPPU.ComponentRepository.MicroswitchModule;
 
 /**
@@ -22,7 +26,7 @@ import xPPU.ComponentRepository.MicroswitchModule;
  *
  * @generated
  */
-public class ModifyMicroSwitchModuleImpl extends ModifyComponentImpl<MicroswitchModule> implements ModifyMicroSwitchModule {
+public class ModifyMicroSwitchModuleImpl extends ModifyModuleImpl<MicroswitchModule> implements ModifyMicroSwitchModule {
 	/**
 	 * The default value of the '{@link #isIsReplaced() <em>Is Replaced</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -59,7 +63,7 @@ public class ModifyMicroSwitchModuleImpl extends ModifyComponentImpl<Microswitch
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return modificationmarksPackage.Literals.MODIFY_MICRO_SWITCH_MODULE;
+		return ModificationmarksPackage.Literals.MODIFY_MICRO_SWITCH_MODULE;
 	}
 
 	/**
@@ -80,7 +84,7 @@ public class ModifyMicroSwitchModuleImpl extends ModifyComponentImpl<Microswitch
 		boolean oldIsReplaced = isReplaced;
 		isReplaced = newIsReplaced;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, modificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED, oldIsReplaced, isReplaced));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED, oldIsReplaced, isReplaced));
 	}
 
 	/**
@@ -91,7 +95,7 @@ public class ModifyMicroSwitchModuleImpl extends ModifyComponentImpl<Microswitch
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case modificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED:
+			case ModificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED:
 				return isIsReplaced();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -105,7 +109,7 @@ public class ModifyMicroSwitchModuleImpl extends ModifyComponentImpl<Microswitch
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case modificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED:
+			case ModificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED:
 				setIsReplaced((Boolean)newValue);
 				return;
 		}
@@ -120,7 +124,7 @@ public class ModifyMicroSwitchModuleImpl extends ModifyComponentImpl<Microswitch
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case modificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED:
+			case ModificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED:
 				setIsReplaced(IS_REPLACED_EDEFAULT);
 				return;
 		}
@@ -135,7 +139,7 @@ public class ModifyMicroSwitchModuleImpl extends ModifyComponentImpl<Microswitch
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case modificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED:
+			case ModificationmarksPackage.MODIFY_MICRO_SWITCH_MODULE__IS_REPLACED:
 				return isReplaced != IS_REPLACED_EDEFAULT;
 		}
 		return super.eIsSet(featureID);

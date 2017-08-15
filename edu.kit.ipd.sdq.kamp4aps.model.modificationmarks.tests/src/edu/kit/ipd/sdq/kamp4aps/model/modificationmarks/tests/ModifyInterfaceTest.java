@@ -2,10 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests;
 
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
 
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
-import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 /**
@@ -14,15 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyInterfaceTest extends TestCase {
-
-	/**
-	 * The fixture for this Modify Interface test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModifyInterface<?> fixture = null;
+public class ModifyInterfaceTest extends ModifyEntityTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,23 +35,14 @@ public class ModifyInterfaceTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Modify Interface test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ModifyInterface<?> fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Modify Interface test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected ModifyInterface<?> getFixture() {
-		return fixture;
+		return (ModifyInterface<?>)fixture;
 	}
 
 	/**
@@ -71,7 +53,7 @@ public class ModifyInterfaceTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(modificationmarksFactory.eINSTANCE.createModifyInterface());
+		setFixture(ModificationmarksFactory.eINSTANCE.createModifyInterface());
 	}
 
 	/**

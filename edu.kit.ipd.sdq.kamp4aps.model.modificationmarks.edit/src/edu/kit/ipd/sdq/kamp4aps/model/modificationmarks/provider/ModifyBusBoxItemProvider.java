@@ -3,7 +3,6 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
 
-import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.AbstractModificationItemProvider;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
 
 import java.util.Collection;
@@ -12,7 +11,6 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**

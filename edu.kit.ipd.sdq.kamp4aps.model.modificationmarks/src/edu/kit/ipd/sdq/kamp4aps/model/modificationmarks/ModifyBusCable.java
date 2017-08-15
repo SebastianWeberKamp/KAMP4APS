@@ -10,7 +10,7 @@ import xPPU.BusComponents.BusCable;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyBusCable()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifyBusCable()
  * @model
  * @generated
  */

@@ -5,8 +5,13 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 
 import org.eclipse.emf.common.util.EList;
+
 import xPPU.ComponentRepository.Component;
+
 import xPPU.InterfaceRepository.Interface;
+
+import xPPU.ModuleRepository.Module;
+
 import xPPU.StructureRepository.Structure;
 
 /**
@@ -29,9 +34,11 @@ import xPPU.StructureRepository.Structure;
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getInterfaceModifications <em>Interface Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getComponentModifications <em>Component Modifications</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getStructureModifications <em>Structure Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#getModuleModifications <em>Module Modifications</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#isChanged <em>Changed</em>}</li>
  * </ul>
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange()
  * @model
  * @generated
  */
@@ -41,12 +48,12 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sensor Modifications</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Sensor Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Sensor Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_SensorModifications()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_SensorModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -57,12 +64,12 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySignalinterface}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Signalinterface Modifications</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Signalinterface Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Signalinterface Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_SignalinterfaceModifications()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_SignalinterfaceModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -73,12 +80,12 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyPhysicalConnection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Physical Connection Modifications</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Physical Connection Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Physical Connection Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_PhysicalConnectionModifications()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_PhysicalConnectionModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -89,12 +96,12 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Micro Switch Module Modifications</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Micro Switch Module Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Micro Switch Module Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_MicroSwitchModuleModifications()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_MicroSwitchModuleModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -105,12 +112,12 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bus Box Modifications</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Bus Box Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bus Box Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_BusBoxModifications()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_BusBoxModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -121,12 +128,12 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bus Master Modifications</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Bus Master Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bus Master Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_BusMasterModifications()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_BusMasterModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -137,12 +144,12 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bus Slave Modifications</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Bus Slave Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bus Slave Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_BusSlaveModifications()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_BusSlaveModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -153,12 +160,12 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusCable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Bus Cable Modifications</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Bus Cable Modifications</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bus Cable Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_BusCableModifications()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_BusCableModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -174,7 +181,7 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interface Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_InterfaceModifications()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_InterfaceModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -190,7 +197,7 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Component Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_ComponentModifications()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_ComponentModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -206,10 +213,53 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Structure Modifications</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getChangePropagationDueToHardwareChange_StructureModifications()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_StructureModifications()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<ModifyStructure<Structure>> getStructureModifications();
+
+	/**
+	 * Returns the value of the '<em><b>Module Modifications</b></em>' containment reference list.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule}&lt;xPPU.ModuleRepository.Module>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Module Modifications</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Module Modifications</em>' containment reference list.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_ModuleModifications()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<ModifyModule<Module>> getModuleModifications();
+
+	/**
+	 * Returns the value of the '<em><b>Changed</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Changed</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Changed</em>' attribute.
+	 * @see #setChanged(boolean)
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getChangePropagationDueToHardwareChange_Changed()
+	 * @model default="false" required="true"
+	 * @generated
+	 */
+	boolean isChanged();
+
+	/**
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange#isChanged <em>Changed</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Changed</em>' attribute.
+	 * @see #isChanged()
+	 * @generated
+	 */
+	void setChanged(boolean value);
 
 } // ChangePropagationDueToHardwareChange

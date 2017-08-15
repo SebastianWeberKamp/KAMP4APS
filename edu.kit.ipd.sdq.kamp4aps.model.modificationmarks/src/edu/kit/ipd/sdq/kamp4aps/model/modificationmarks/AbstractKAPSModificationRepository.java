@@ -11,7 +11,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getAbstractKAPSModificationRepository()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getAbstractKAPSModificationRepository()
  * @model abstract="true"
  * @generated
  */

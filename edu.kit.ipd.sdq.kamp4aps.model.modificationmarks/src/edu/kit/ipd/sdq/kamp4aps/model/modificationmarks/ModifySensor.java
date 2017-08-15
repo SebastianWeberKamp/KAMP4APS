@@ -3,7 +3,9 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
 import org.eclipse.emf.common.util.EList;
+
 import xPPU.ComponentRepository.Sensor;
+
 import xPPU.InterfaceRepository.PhysicalConnection;
 import xPPU.InterfaceRepository.SignalInterface;
 
@@ -20,12 +22,11 @@ import xPPU.InterfaceRepository.SignalInterface;
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifySensor#getModifyPhysicalConnections <em>Modify Physical Connections</em>}</li>
  * </ul>
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifySensor()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifySensor()
  * @model
  * @generated
  */
 public interface ModifySensor extends ModifyComponent<Sensor> {
-
 	/**
 	 * Returns the value of the '<em><b>Modify Signal Interfaces</b></em>' containment reference list.
 	 * The list contents are of type {@link xPPU.InterfaceRepository.SignalInterface}.
@@ -36,7 +37,7 @@ public interface ModifySensor extends ModifyComponent<Sensor> {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modify Signal Interfaces</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifySensor_ModifySignalInterfaces()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifySensor_ModifySignalInterfaces()
 	 * @model containment="true"
 	 * @generated
 	 */
@@ -52,9 +53,10 @@ public interface ModifySensor extends ModifyComponent<Sensor> {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Modify Physical Connections</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifySensor_ModifyPhysicalConnections()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifySensor_ModifyPhysicalConnections()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<PhysicalConnection> getModifyPhysicalConnections();
+
 } // ModifySensor

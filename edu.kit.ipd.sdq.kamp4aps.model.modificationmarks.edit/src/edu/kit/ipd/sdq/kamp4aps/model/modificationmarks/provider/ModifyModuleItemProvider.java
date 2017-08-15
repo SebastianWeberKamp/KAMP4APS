@@ -3,8 +3,6 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 
 
-import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.AbstractModificationItemProvider;
-
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
 
 import java.util.Collection;
@@ -12,8 +10,6 @@ import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
@@ -23,7 +19,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyModuleItemProvider extends AbstractModificationItemProvider {
+public class ModifyModuleItemProvider extends ModifyEntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -47,6 +43,17 @@ public class ModifyModuleItemProvider extends AbstractModificationItemProvider {
 
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This returns ModifyModule.gif.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object getImage(Object object) {
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ModifyModule"));
 	}
 
 	/**
@@ -87,17 +94,6 @@ public class ModifyModuleItemProvider extends AbstractModificationItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return KAPSModificationmarksEditPlugin.INSTANCE;
 	}
 
 }

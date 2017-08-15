@@ -3,7 +3,8 @@
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests;
 
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
+
 import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
@@ -71,7 +72,7 @@ public class ChangePropagationDueToHardwareChangeTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(modificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange());
+		setFixture(ModificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange());
 	}
 
 	/**

@@ -7,31 +7,33 @@
 <plugin>
 
    <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated KAPSModificationmarks -->
       <category
-            id="edu.kit.ipd.sdq.kaps.wizard.category"
-            name="KAMP4aPS Models"/>
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
       <wizard
-            id="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.modificationmarksModelWizardID"
-            name="%_UI_modificationmarksModelWizard_label"
-            class="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.modificationmarksModelWizard"
-            category="edu.kit.ipd.sdq.kaps.wizard.category"
-            icon="icons/full/obj16/modificationmarksModelFile.gif">
-         <description>%_UI_modificationmarksModelWizard_description</description>
+            id="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.ModificationmarksModelWizardID"
+            name="%_UI_ModificationmarksModelWizard_label"
+            class="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.ModificationmarksModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ModificationmarksModelFile.gif">
+         <description>%_UI_ModificationmarksModelWizard_description</description>
          <selection class="org.eclipse.core.resources.IResource"/>
       </wizard>
    </extension>
 
    <extension point="org.eclipse.ui.editors">
+      <!-- @generated KAPSModificationmarks -->
       <editor
-            id="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.modificationmarksEditorID"
-            name="%_UI_modificationmarksEditor_label"
-            icon="icons/full/obj16/modificationmarksModelFile.gif"
+            id="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.ModificationmarksEditorID"
+            name="%_UI_ModificationmarksEditor_label"
+            icon="icons/full/obj16/ModificationmarksModelFile.gif"
             extensions="modificationmarks"
-            class="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.modificationmarksEditor"
-            contributorClass="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.modificationmarksActionBarContributor">
+            class="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.ModificationmarksEditor"
+            contributorClass="edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.presentation.ModificationmarksActionBarContributor">
       </editor>
    </extension>
-
+   
    <extension
          point="org.eclipse.ui.popupMenus">
       <objectContribution
@@ -54,5 +56,6 @@
          </action>
       </objectContribution>
    </extension>
+   
 
 </plugin>

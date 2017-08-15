@@ -2,10 +2,9 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests;
 
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
 
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
-import junit.framework.TestCase;
 import junit.textui.TestRunner;
 
 /**
@@ -14,15 +13,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModifyStructureTest extends TestCase {
-
-	/**
-	 * The fixture for this Modify Structure test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ModifyStructure<?> fixture = null;
+public class ModifyStructureTest extends ModifyEntityTest {
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -44,23 +35,14 @@ public class ModifyStructureTest extends TestCase {
 	}
 
 	/**
-	 * Sets the fixture for this Modify Structure test case.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void setFixture(ModifyStructure<?> fixture) {
-		this.fixture = fixture;
-	}
-
-	/**
 	 * Returns the fixture for this Modify Structure test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@Override
 	protected ModifyStructure<?> getFixture() {
-		return fixture;
+		return (ModifyStructure<?>)fixture;
 	}
 
 	/**
@@ -71,7 +53,7 @@ public class ModifyStructureTest extends TestCase {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(modificationmarksFactory.eINSTANCE.createModifyStructure());
+		setFixture(ModificationmarksFactory.eINSTANCE.createModifyStructure());
 	}
 
 	/**

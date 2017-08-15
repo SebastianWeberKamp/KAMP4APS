@@ -10,7 +10,7 @@ import xPPU.InterfaceRepository.SignalInterface;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifySignalinterface()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifySignalinterface()
  * @model
  * @generated
  */

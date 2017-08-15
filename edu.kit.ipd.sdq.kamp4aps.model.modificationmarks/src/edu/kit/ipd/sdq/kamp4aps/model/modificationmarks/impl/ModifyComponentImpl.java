@@ -2,13 +2,10 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
-import edu.kit.ipd.sdq.kamp.model.modificationmarks.impl.AbstractModificationImpl;
-
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.EObject;
 
 import xPPU.ComponentRepository.Component;
 
@@ -19,7 +16,7 @@ import xPPU.ComponentRepository.Component;
  *
  * @generated
  */
-public class ModifyComponentImpl<T extends Component> extends AbstractModificationImpl<T, EObject> implements ModifyComponent<T> {
+public class ModifyComponentImpl<T extends Component> extends ModifyEntityImpl<Component> implements ModifyComponent<T> {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,18 +33,7 @@ public class ModifyComponentImpl<T extends Component> extends AbstractModificati
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return modificationmarksPackage.Literals.MODIFY_COMPONENT;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * This is specialized for the more specific type known in this context.
-	 * @generated
-	 */
-	@Override
-	public void setAffectedElement(T newAffectedElement) {
-		super.setAffectedElement(newAffectedElement);
+		return ModificationmarksPackage.Literals.MODIFY_COMPONENT;
 	}
 
 } //ModifyComponentImpl

@@ -6,7 +6,8 @@ package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider;
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.ModificationmarksPackage;
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.AbstractModificationRepositoryItemProvider;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksFactory;
+
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
 
 import java.util.Collection;
 import java.util.List;
@@ -89,12 +90,12 @@ public class AbstractKAPSModificationRepositoryItemProvider extends AbstractModi
 		newChildDescriptors.add
 			(createChildParameter
 				(ModificationmarksPackage.Literals.ABSTRACT_MODIFICATION_REPOSITORY__SEED_MODIFICATIONS,
-				 modificationmarksFactory.eINSTANCE.createKAPSSeedModifications()));
+				 ModificationmarksFactory.eINSTANCE.createKAPSSeedModifications()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ModificationmarksPackage.Literals.ABSTRACT_MODIFICATION_REPOSITORY__CHANGE_PROPAGATION_STEPS,
-				 modificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange()));
+				 ModificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange()));
 	}
 
 	/**

@@ -2,9 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.impl;
 
+import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage;
+
 import org.eclipse.emf.ecore.EClass;
+
 import xPPU.BusComponents.BusSlave;
 
 /**
@@ -31,7 +33,7 @@ public class ModifyBusSlaveImpl extends ModifyComponentImpl<BusSlave> implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return modificationmarksPackage.Literals.MODIFY_BUS_SLAVE;
+		return ModificationmarksPackage.Literals.MODIFY_BUS_SLAVE;
 	}
 
 } //ModifyBusSlaveImpl

@@ -2,10 +2,6 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;
 
-import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
-
-import org.eclipse.emf.ecore.EObject;
-
 import xPPU.ModuleRepository.Module;
 
 /**
@@ -14,9 +10,9 @@ import xPPU.ModuleRepository.Module;
  * <!-- end-user-doc -->
  *
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyModule()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifyModule()
  * @model
  * @generated
  */
-public interface ModifyModule<T extends Module> extends AbstractModification<T, EObject> {
+public interface ModifyModule<T extends Module> extends ModifyEntity<Module> {
 } // ModifyModule

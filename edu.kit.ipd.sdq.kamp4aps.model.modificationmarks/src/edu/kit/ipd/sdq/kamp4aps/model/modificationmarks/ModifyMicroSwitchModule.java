@@ -16,11 +16,11 @@ import xPPU.ComponentRepository.MicroswitchModule;
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyMicroSwitchModule#isIsReplaced <em>Is Replaced</em>}</li>
  * </ul>
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyMicroSwitchModule()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifyMicroSwitchModule()
  * @model
  * @generated
  */
-public interface ModifyMicroSwitchModule extends ModifyComponent<MicroswitchModule> {
+public interface ModifyMicroSwitchModule extends ModifyModule<MicroswitchModule> {
 	/**
 	 * Returns the value of the '<em><b>Is Replaced</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -31,7 +31,7 @@ public interface ModifyMicroSwitchModule extends ModifyComponent<MicroswitchModu
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Is Replaced</em>' attribute.
 	 * @see #setIsReplaced(boolean)
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.modificationmarksPackage#getModifyMicroSwitchModule_IsReplaced()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksPackage#getModifyMicroSwitchModule_IsReplaced()
 	 * @model required="true"
 	 * @generated
 	 */
