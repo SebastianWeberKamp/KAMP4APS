@@ -14,14 +14,14 @@ import edu.kit.ipd.sdq.kamp4aps.core.APSActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.APSActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureAnnotationLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
-import xPPU.ComponentRepository.Component;
-import xPPU.InterfaceRepository.Interface;
-import xPPU.ModuleRepository.Module;
-import xPPU.StructureRepository.Structure;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyModule;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyStructure;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
 /**
  * 

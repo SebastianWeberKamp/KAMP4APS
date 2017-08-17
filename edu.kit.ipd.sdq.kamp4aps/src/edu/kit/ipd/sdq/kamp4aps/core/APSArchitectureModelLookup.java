@@ -13,23 +13,23 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
-import xPPU.Entity;
-import xPPU.Plant;
-import xPPU.BusComponents.BusBox;
-import xPPU.BusComponents.BusCable;
-import xPPU.BusComponents.BusMaster;
-import xPPU.BusComponents.BusSlave;
-import xPPU.ComponentRepository.Component;
-import xPPU.Identifier.Identifier;
-import xPPU.InterfaceRepository.Interface;
-import xPPU.InterfaceRepository.SignalInterface;
-import xPPU.ModuleRepository.Module;
-import xPPU.StructureRepository.Structure;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagationDueToHardwareChange;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyModule;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyStructure;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.Plant;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusBox;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusCable;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusMaster;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.SignalInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
 /**
  * This class represents a part of the change rules implementation
@@ -424,7 +424,7 @@ public class APSArchitectureModelLookup extends ArchitectureModelLookup {
 			Collection<ModifyInterface<Interface>> initialMarkedInterfaces){
 		Map<Component, Set<ModifyInterface<Interface>>> results = new HashMap<Component, Set<ModifyInterface<Interface>>>();
 		for(ModifyInterface<Interface> modifyInterface : initialMarkedInterfaces){
-			for(Component component : version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant()){
+			for(Component component : version.getAPSPlant().getComponentRepository().getAllComponentsInPlant()){
 				if(modifyInterface.getAffectedElement() instanceof Interface){
 					for(Interface componentInterface : component.getConnectedInterfaces()){
 						if(componentInterface.getId() == modifyInterface.getAffectedElement().getId()){
@@ -441,7 +441,7 @@ public class APSArchitectureModelLookup extends ArchitectureModelLookup {
 
 	public static BusComponentsParams lookUpChangesBasedOnBusModification(APSArchitectureVersion version,
 			Collection<BusBox> initialMarkedBusBoxes){
-		EList<Component> allComponents = version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant();
+		EList<Component> allComponents = version.getAPSPlant().getComponentRepository().getAllComponentsInPlant();
 		bcParams = initBusComponentParams(initialMarkedBusBoxes);
 		setAllBusComponentsInParams(allComponents);
 		

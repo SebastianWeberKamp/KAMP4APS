@@ -11,14 +11,14 @@ import org.eclipse.emf.common.util.EList;
 
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
-import xPPU.ComponentRepository.Component;
-import xPPU.InterfaceRepository.Interface;
-import xPPU.ModuleRepository.Module;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagationDueToHardwareChange;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 
 public class InterfaceChanges {
 
@@ -33,7 +33,7 @@ public class InterfaceChanges {
 	public void addInitialMarkedInterfacesToList(
 			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
 		for(Interface interfac : initialMarkedInterfaces){
-			ModifyInterface<Interface> modifyInterface = ModificationmarksFactory.eINSTANCE.createModifyInterface();
+			ModifyInterface<Interface> modifyInterface = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyInterface();
 			modifyInterface.setToolderived(false);
 			modifyInterface.setAffectedElement(interfac);
 			modifyInterface.setId("Modification of " + interfac.getName());
@@ -60,7 +60,7 @@ public class InterfaceChanges {
 			List<ModifyModule<Module>> modifyModules = new ArrayList<ModifyModule<Module>>();
 			for(Map.Entry<Interface, Set<Module>> modulesToBeMarkedEntry : modulesToBeMarked.entrySet()){
 				for(Module module : modulesToBeMarkedEntry.getValue()){
-					ModifyModule<Module> modifyModule = ModificationmarksFactory.eINSTANCE.createModifyModule();
+					ModifyModule<Module> modifyModule = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyModule();
 					modifyModule.setToolderived(true);
 					modifyModule.setAffectedElement(module);
 					modifyModule.getCausingElements().add(modulesToBeMarkedEntry.getKey());
@@ -108,7 +108,7 @@ public class InterfaceChanges {
 			List<ModifyComponent<Component>> modifyComponents = new ArrayList<ModifyComponent<Component>>();
 			for(Map.Entry<Interface, Set<Component>> componentsToBeMarkedEntry : componentsToBeMarked.entrySet()){
 				for(Component component : componentsToBeMarkedEntry.getValue()){
-					ModifyComponent<Component> modifyComponent = ModificationmarksFactory.eINSTANCE.createModifyComponent();
+					ModifyComponent<Component> modifyComponent = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyComponent();
 					modifyComponent.setToolderived(true);
 					modifyComponent.setAffectedElement(component);
 					modifyComponent.getCausingElements().add(componentsToBeMarkedEntry.getKey());
@@ -146,7 +146,7 @@ public class InterfaceChanges {
 			for(ModifyInterface<Interface> secondModifyInterface : modifyInterfaces){
 				if(modifyInterface.getAffectedElement().getId() == secondModifyInterface.getAffectedElement().getId()
 						&& modifyInterface != secondModifyInterface){
-					ModifyInterface<Interface> newModifyInterface = ModificationmarksFactory.eINSTANCE.createModifyInterface();
+					ModifyInterface<Interface> newModifyInterface = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyInterface();
 					newModifyInterface.setToolderived(true);
 					newModifyInterface.setAffectedElement(modifyInterface.getAffectedElement());
 					newModifyInterface.setId(modifyInterface.getId());

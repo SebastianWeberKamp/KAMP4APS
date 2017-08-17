@@ -14,8 +14,8 @@ import org.eclipse.emf.compare.ReferenceChange;
 import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4aps.core.APSActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.APSActivityType;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider.LabelCustomizing;
-import xPPU.Identifier.NamedElement;
+import edu.kit.ipd.sdq.kamp4aps.labels.LabelCustomizing;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement;
 
 /**
  * 
@@ -39,7 +39,7 @@ public class APSDifferenceCalculation extends AbstractDifferenceCalculation<APSA
 			if (detectionRuleAdded(diffElement, elementType.getElementClass())) {
 				NamedElement architectureElement = (NamedElement) (((ReferenceChange) diffElement).getValue());
 				Activity newActivity = new Activity(APSActivityType.ARCHITECTUREMODELDIFF, elementType, architectureElement,
-						LabelCustomizing.getIdentifierName(architectureElement), null, BasicActivity.ADD,
+						LabelCustomizing.getName(architectureElement), null, BasicActivity.ADD,
 						createAddElementDescription(architectureElement));
 				workplan.add(newActivity);
 				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
@@ -47,7 +47,7 @@ public class APSDifferenceCalculation extends AbstractDifferenceCalculation<APSA
 			} else if (detectionRuleDeleted(diffElement, elementType.getElementClass())) {
 				NamedElement architectureElement = (NamedElement) (((ReferenceChange) diffElement).getValue());
 				Activity newActivity = new Activity(APSActivityType.ARCHITECTUREMODELDIFF, elementType, architectureElement,
-						LabelCustomizing.getIdentifierName(architectureElement), null, BasicActivity.REMOVE,
+						LabelCustomizing.getName(architectureElement), null, BasicActivity.REMOVE,
 						createRemoveElementDescription(architectureElement));
 				workplan.add(newActivity);
 				this.architectureSubactivityDerivation.deriveSubactivities(architectureElement, newActivity, version);
@@ -61,7 +61,7 @@ public class APSDifferenceCalculation extends AbstractDifferenceCalculation<APSA
 		this.version = targetVersion;
 		List<Activity> activityList = new ArrayList<Activity>();
 		
-		List<Diff> plantDiff = calculateDiffModel(baseVersion.getXPPUPlant(), targetVersion.getXPPUPlant());
+		List<Diff> plantDiff = calculateDiffModel(baseVersion.getAPSPlant(), targetVersion.getAPSPlant());
 		
 		List<Activity> plantActivities = deriveAddAndRemoveActivities(plantDiff);
 		plantActivities = removeDuplicates(plantActivities);

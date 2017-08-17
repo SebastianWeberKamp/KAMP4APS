@@ -1,12 +1,13 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
-import DeploymentContext.DeploymentContextFactory;
-import DeploymentContext.DeploymentContextRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextRepository;
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
-import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
-import fieldofactivityannotations.FieldofactivityannotationsFactory;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.AbstractKAPSModificationRepository;
-import xPPU.Plant;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.AbstractKAMP4aPSModificationRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.Plant;
 
 /**
  * This class creates the structural and non-structural
@@ -16,17 +17,17 @@ import xPPU.Plant;
  *
  */
 
-public class APSArchitectureVersion extends AbstractArchitectureVersion<AbstractKAPSModificationRepository<?>> {
+public class APSArchitectureVersion extends AbstractArchitectureVersion<AbstractKAMP4aPSModificationRepository<?>> {
 	private FieldOfActivityAnnotationRepository _fieldOfActivityRepository;
-	private Plant _xppuPlant;
+	private Plant _aPSPlant;
 	private DeploymentContextRepository _deploymentContextRepository;
 	
 	public static class ArchitectureVersionParams{
 		public String name;
 		public FieldOfActivityAnnotationRepository fieldOfActivityRepository;
-		public AbstractKAPSModificationRepository<?> modificationMarkRepository;
+		public KAMP4aPSModificationRepository modificationMarkRepository;
 		public DeploymentContextRepository deploymentContextRepository;
-		public Plant xPPUPlant;
+		public Plant aPSPlant;
 	}
 	
 	public APSArchitectureVersion(ArchitectureVersionParams params) {
@@ -40,7 +41,7 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 					createFieldOfActivityAnnotationRepository();
 
 		_fieldOfActivityRepository = params.fieldOfActivityRepository;
-		_xppuPlant = params.xPPUPlant;
+		_aPSPlant = params.aPSPlant;
 		
 		if(params.deploymentContextRepository == null)
 			params.deploymentContextRepository = DeploymentContextFactory.eINSTANCE.createDeploymentContextRepository();
@@ -56,12 +57,12 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 		this._fieldOfActivityRepository = fieldOfActivityRepository;
 	}
 
-	public Plant getXPPUPlant(){
-		return _xppuPlant;
+	public Plant getAPSPlant(){
+		return _aPSPlant;
 	}
 
-	public void setXPPUPlant(Plant plant) {
-		this._xppuPlant = plant;
+	public void setAPSPlant(Plant plant) {
+		this._aPSPlant = plant;
 	}
 
 	public DeploymentContextRepository getDeploymentContextRepository(){

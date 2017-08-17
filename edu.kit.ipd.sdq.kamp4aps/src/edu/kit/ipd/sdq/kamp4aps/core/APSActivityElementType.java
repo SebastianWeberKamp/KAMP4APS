@@ -1,23 +1,23 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
 import edu.kit.ipd.sdq.kamp.workplan.AbstractActivityElementType;
-import fieldofactivityannotations.CalibrationConfiguration;
-import fieldofactivityannotations.ComponentStockList;
-import fieldofactivityannotations.Drawing;
-import fieldofactivityannotations.HMIConfiguration;
-import fieldofactivityannotations.InterfaceStockList;
-import fieldofactivityannotations.MainteneanceDocumentation;
-import fieldofactivityannotations.ModuleStockList;
-import fieldofactivityannotations.OperatorInstructions;
-import fieldofactivityannotations.StructureStockList;
-import fieldofactivityannotations.TestCase;
-import fieldofactivityannotations.TrainingDocExternal;
-import fieldofactivityannotations.TrainingDocIntern;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.CalibrationConfiguration;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ComponentStockList;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.Drawing;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.HMIConfiguration;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.InterfaceStockList;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.MainteneanceDocumentation;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ModuleStockList;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.OperatorInstructions;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StructureStockList;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.TestCase;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.TrainingDocExternal;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.TrainingDocIntern;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
-import xPPU.ComponentRepository.Component;
-import xPPU.InterfaceRepository.Interface;
-import xPPU.ModuleRepository.Module;
-import xPPU.StructureRepository.Structure;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
 /**
  * This class represents the elements an activity can affect.

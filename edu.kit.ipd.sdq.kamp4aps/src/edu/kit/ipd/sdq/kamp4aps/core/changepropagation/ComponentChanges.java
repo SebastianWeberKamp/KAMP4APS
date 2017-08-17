@@ -9,12 +9,12 @@ import java.util.Set;
 
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
-import xPPU.ComponentRepository.Component;
-import xPPU.InterfaceRepository.Interface;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagationDueToHardwareChange;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 
 public class ComponentChanges {
 	
@@ -29,7 +29,7 @@ public class ComponentChanges {
 	public void addInitialMarkedModulesToList(
 			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
 		for(Component component : initialMarkedComponents){
-			ModifyComponent<Component> modifyComponent = ModificationmarksFactory.eINSTANCE.createModifyComponent();
+			ModifyComponent<Component> modifyComponent = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyComponent();
 			modifyComponent.setToolderived(false);
 			modifyComponent.setAffectedElement(component);
 			modifyComponent.setId("Modification of " + component.getName());
@@ -62,7 +62,7 @@ public class ComponentChanges {
 				List<ModifyInterface<Interface>> modifyInterfaces = new ArrayList<ModifyInterface<Interface>>();
 				for(Map.Entry<Component, Set<Interface>> interfacesToBeMarkedEntry : interfacesToBeMarked.entrySet()){
 					for(Interface interfac : interfacesToBeMarkedEntry.getValue()){
-						ModifyInterface<Interface> modifyInterface = ModificationmarksFactory.eINSTANCE.createModifyInterface();
+						ModifyInterface<Interface> modifyInterface = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyInterface();
 						modifyInterface.setToolderived(true);
 						modifyInterface.setAffectedElement(interfac);
 						modifyInterface.getCausingElements().add(interfacesToBeMarkedEntry.getKey());

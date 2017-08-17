@@ -15,7 +15,11 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.emf.compare.rcp;bundle-version="2.3.0",
  edu.kit.ipd.sdq.kamp,
  edu.kit.ipd.sdq.kamp.model.modificationmarks,
- xPPU
+ edu.kit.ipd.sdq.kamp4aps.aps,
+ edu.kit.ipd.sdq.kamp4iec.model,
+ edu.kit.ipd.sdq.kamp.model.modificationmarks.edit;bundle-version="1.0.0",
+ edu.kit.ipd.sdq.kamp.model.modificationmarks.editor;bundle-version="1.0.0",
+ edu.kit.ipd.sdq.kamp.model.modificationmarks.tests;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
@@ -24,8 +28,5 @@ Export-Package: edu.kit.ipd.sdq.kamp4aps.activator,
  edu.kit.ipd.sdq.kamp4aps.core,
  edu.kit.ipd.sdq.kamp4aps.core.derivation,
  edu.kit.ipd.sdq.kamp4aps.ui
-Import-Package: DeploymentContext,
- edu.kit.ipd.sdq.kamp4iec.model.IECModel,
- edu.kit.ipd.sdq.kamp4iec.model.IECRepository,
- edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.provider,
- xPPU
+Import-Package: edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext,
+ edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.provider

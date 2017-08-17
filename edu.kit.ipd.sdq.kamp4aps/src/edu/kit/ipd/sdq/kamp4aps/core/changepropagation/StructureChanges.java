@@ -8,14 +8,14 @@ import java.util.Set;
 
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
-import xPPU.ComponentRepository.Component;
-import xPPU.ModuleRepository.Module;
-import xPPU.StructureRepository.Structure;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagationDueToHardwareChange;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyModule;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyStructure;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
 public class StructureChanges {
 	private APSArchitectureVersion version;
@@ -30,7 +30,7 @@ public class StructureChanges {
 			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
 		for(Structure structure : initialMarkedStructures){
 			if(!modifyStructureContainsInitialMarkedStructure(structure, changePropagationDueToHardwareChange)){
-				ModifyStructure<Structure> modifyStructure = ModificationmarksFactory.eINSTANCE.createModifyStructure();
+				ModifyStructure<Structure> modifyStructure = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyStructure();
 				modifyStructure.setToolderived(false);
 				modifyStructure.setAffectedElement(structure);
 				modifyStructure.setId("Modification of " + structure.getName());
@@ -66,7 +66,7 @@ public class StructureChanges {
 			List<ModifyModule<Module>> modifyModules = new ArrayList<ModifyModule<Module>>();
 			for(Map.Entry<Structure, Set<Module>> modulesToBeMarkedEntry : modulesToBeMarked.entrySet()){
 				for(Module module : modulesToBeMarkedEntry.getValue()){
-					ModifyModule<Module> modifyModule = ModificationmarksFactory.eINSTANCE.createModifyModule();
+					ModifyModule<Module> modifyModule = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyModule();
 					modifyModule.setToolderived(true);
 					modifyModule.setAffectedElement(module);
 					modifyModule.getCausingElements().add(modulesToBeMarkedEntry.getKey());
@@ -90,7 +90,7 @@ public class StructureChanges {
 			List<ModifyComponent<Component>> modifyComponents = new ArrayList<ModifyComponent<Component>>();
 			for(Map.Entry<Structure, Set<Component>> componentsToBeMarkedEntry : componentsToBeMarked.entrySet()){
 				for(Component component : componentsToBeMarkedEntry.getValue()){
-					ModifyComponent<Component> modifyComponent = ModificationmarksFactory.eINSTANCE.createModifyComponent();
+					ModifyComponent<Component> modifyComponent = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyComponent();
 					modifyComponent.setToolderived(true);
 					modifyComponent.setAffectedElement(component);
 					modifyComponent.getCausingElements().add(componentsToBeMarkedEntry.getKey());

@@ -7,10 +7,10 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: fieldofactivityannotations,
- fieldofactivityannotations.impl,
- fieldofactivityannotations.util
+Export-Package: edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations,
+ edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.impl,
+ edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.util
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
- xPPU;visibility:=reexport
+ edu.kit.ipd.sdq.kamp4aps.aps;visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -6,14 +6,14 @@ import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4aps.core.APSActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.APSActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
-import xPPU.ComponentRepository.Component;
-import xPPU.ComponentRepository.MicroswitchModule;
-import xPPU.ComponentRepository.TurningTable;
-import xPPU.Identifier.Identifier;
-import xPPU.Identifier.NamedElement;
-import xPPU.InterfaceRepository.Interface;
-import xPPU.ModuleRepository.Module;
-import xPPU.StructureRepository.Structure;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
 /**
  * 
@@ -48,7 +48,7 @@ public class APSSubactivityDerivation {
 
 	private void deriveSubactivity(Component plantElement, Activity parentActivity, APSArchitectureVersion version) {
 		if (plantElement instanceof MicroswitchModule) {
-			for (Component c : version.getXPPUPlant().getComponentRepository().getAllComponentsInPlant()) {
+			for (Component c : version.getAPSPlant().getComponentRepository().getAllComponentsInPlant()) {
 				if (c instanceof TurningTable) {
 					TurningTable tt = (TurningTable) c;
 					for(MicroswitchModule mm : tt.getMicroswitchModule()){

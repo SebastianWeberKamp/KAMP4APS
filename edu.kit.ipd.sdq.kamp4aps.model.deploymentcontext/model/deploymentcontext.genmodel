@@ -3,10 +3,11 @@
     xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/edu.kit.ipd.sdq.kamp4aps.model.deploymentcontext/src"
     modelPluginID="edu.kit.ipd.sdq.kamp4aps.model.deploymentcontext" modelName="Deploymentcontext"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies/model/ComponentInternalDependencies.genmodel#//ComponentInternalDependencies ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.genmodel#//IECModel ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository ../../xPPU/model/xPPU.old.genmodel#//xPPU"
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.kamp4aps.aps/model/aps.genmodel#//aPS ../../edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies/model/ComponentInternalDependencies.genmodel#//ComponentInternalDependencies ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.genmodel#//IECModel ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.genmodel#//IECRepository"
     operationReflection="true" importOrganizing="true">
   <foreignModel>deploymentcontext.ecore</foreignModel>
-  <genPackages prefix="DeploymentContext" disposableProviderFactory="true" ecorePackage="deploymentcontext.ecore#/">
+  <genPackages prefix="DeploymentContext" basePackage="edu.kit.ipd.sdq.kamp4aps.model"
+      disposableProviderFactory="true" ecorePackage="deploymentcontext.ecore#/">
     <genClasses ecoreClass="deploymentcontext.ecore#//DeploymentContextRepository">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference deploymentcontext.ecore#//DeploymentContextRepository/componentCorrelation"/>
     </genClasses>

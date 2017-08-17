@@ -7,33 +7,33 @@ import java.util.Map;
 
 import org.eclipse.emf.ecore.EObject;
 
-import DeploymentContext.ComponentCorrelation;
-import DeploymentContext.VariableMapping;
+import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.ComponentCorrelation;
+import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.VariableMapping;
 import edu.kit.ipd.sdq.kamp.workplan.Activity;
-import fieldofactivityannotations.CalibrationConfiguration;
-import fieldofactivityannotations.ComponentDocumentationFiles;
-import fieldofactivityannotations.ComponentDrawing;
-import fieldofactivityannotations.ComponentStockList;
-import fieldofactivityannotations.DocumentationFiles;
-import fieldofactivityannotations.Drawing;
-import fieldofactivityannotations.HMIConfiguration;
-import fieldofactivityannotations.InterfaceDocumentationFiles;
-import fieldofactivityannotations.InterfaceDrawing;
-import fieldofactivityannotations.InterfaceStockList;
-import fieldofactivityannotations.ModuleDocumentationFiles;
-import fieldofactivityannotations.ModuleDrawing;
-import fieldofactivityannotations.ModuleStockList;
-import fieldofactivityannotations.StructureDocumentationFiles;
-import fieldofactivityannotations.StructureDrawing;
-import fieldofactivityannotations.StructureStockList;
-import fieldofactivityannotations.SystemTest;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.CalibrationConfiguration;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ComponentDocumentationFiles;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ComponentDrawing;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ComponentStockList;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.DocumentationFiles;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.Drawing;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.HMIConfiguration;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.InterfaceDocumentationFiles;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.InterfaceDrawing;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.InterfaceStockList;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ModuleDocumentationFiles;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ModuleDrawing;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ModuleStockList;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StructureDocumentationFiles;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StructureDrawing;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StructureStockList;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.SystemTest;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
-import xPPU.Plant;
-import xPPU.ComponentRepository.Component;
-import xPPU.InterfaceRepository.Interface;
-import xPPU.ModuleRepository.Module;
-import xPPU.StructureRepository.Structure;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.Plant;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
 /**
  * This class represents the implementation of the change rules

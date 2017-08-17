@@ -7,11 +7,11 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.tests
+Export-Package: edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.tests
 Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.aps;visibility:=reexport,
  edu.kit.ipd.sdq.kamp.model.modificationmarks;visibility:=reexport,
- xPPU;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

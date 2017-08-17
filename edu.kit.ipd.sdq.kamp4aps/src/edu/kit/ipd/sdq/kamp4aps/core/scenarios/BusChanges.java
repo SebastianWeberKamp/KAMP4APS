@@ -6,20 +6,20 @@ import java.util.Set;
 import org.eclipse.emf.common.util.EList;
 import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusCable;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
-import xPPU.Plant;
-import xPPU.BusComponents.BusBox;
-import xPPU.BusComponents.BusCable;
-import xPPU.BusComponents.BusMaster;
-import xPPU.BusComponents.BusSlave;
-import xPPU.ComponentRepository.Component;
-import xPPU.Identifier.Identifier;
-import xPPU.InterfaceRepository.SignalInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagationDueToHardwareChange;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyBusBox;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyBusCable;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyBusMaster;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyBusSlave;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.Plant;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusBox;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusCable;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusMaster;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.SignalInterface;
 
 public class BusChanges {
 
@@ -45,7 +45,7 @@ public class BusChanges {
 
 	public ModifyBusBox createNewModifyBusBox(BusBox busBox) {
 		Collection<BusBox> initialMarkedBusBoxes = getInitialMarkedBusBoxes();
-		ModifyBusBox modifyBusBox = ModificationmarksFactory.eINSTANCE.createModifyBusBox();
+		ModifyBusBox modifyBusBox = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusBox();
 		modifyBusBox.setToolderived(true);
 		modifyBusBox.setAffectedElement(busBox);
 		modifyBusBox.getCausingElements().addAll(initialMarkedBusBoxes);
@@ -53,7 +53,7 @@ public class BusChanges {
 	}
 	
 	public ModifyBusMaster createNewModifyBusMaster(BusMaster busMaster, Set<Identifier> causingElements) {
-		ModifyBusMaster modifyBusMaster = ModificationmarksFactory.eINSTANCE.createModifyBusMaster();
+		ModifyBusMaster modifyBusMaster = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusMaster();
 		modifyBusMaster.setToolderived(true);
 		modifyBusMaster.setAffectedElement(busMaster);
 		modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusMaster());
@@ -62,7 +62,7 @@ public class BusChanges {
 	}
 	
 	public ModifyBusSlave createNewModifyBusSlave(BusSlave busSlave, Set<Identifier> causingElements) {
-		ModifyBusSlave modifyBusSlave = ModificationmarksFactory.eINSTANCE.createModifyBusSlave();
+		ModifyBusSlave modifyBusSlave = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusSlave();
 		modifyBusSlave.setToolderived(true);
 		modifyBusSlave.setAffectedElement(busSlave);
 		modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusSlave());
@@ -71,7 +71,7 @@ public class BusChanges {
 	}
 	
 	public ModifyBusCable createNewModifyBusCable(BusCable busCable, Set<Identifier> causingElements) {
-		ModifyBusCable modifyBusCable = ModificationmarksFactory.eINSTANCE.createModifyBusCable();
+		ModifyBusCable modifyBusCable = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusCable();
 		modifyBusCable.setToolderived(true);
 		modifyBusCable.setAffectedElement(busCable);
 		modifyBusCable.getCausingElements().addAll(getInitialMarkedBusCable());
@@ -82,7 +82,7 @@ public class BusChanges {
 	public void markChangesBasedOnBusBox(BusBox busBox, ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
 		SignalInterface siMaster = busBox.getSignalinterface_master();
 
-		Plant xPPUPlant = version.getXPPUPlant();
+		Plant xPPUPlant = version.getAPSPlant();
 		EList<Component> xppuComponents = xPPUPlant.getComponentRepository().getAllComponentsInPlant();
 		if(siMaster != null){
 			for(Component component : xppuComponents){
@@ -91,7 +91,7 @@ public class BusChanges {
 					for(SignalInterface si : sis){
 						if(si == siMaster){
 							BusMaster bm = (BusMaster) component;
-							ModifyBusMaster modifyBusMaster = ModificationmarksFactory.eINSTANCE.createModifyBusMaster();
+							ModifyBusMaster modifyBusMaster = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusMaster();
 							modifyBusMaster.setToolderived(true);
 							modifyBusMaster.setAffectedElement(bm);
 							modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusBoxes());
@@ -110,7 +110,7 @@ public class BusChanges {
 					for(SignalInterface si : siSlaves){
 						if(si == slaveSignalInterface){
 							BusSlave bs = (BusSlave) component;
-							ModifyBusSlave modifyBusSlave = ModificationmarksFactory.eINSTANCE.createModifyBusSlave();
+							ModifyBusSlave modifyBusSlave = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusSlave();
 							modifyBusSlave.setToolderived(true);
 							modifyBusSlave.setAffectedElement(bs);
 							modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusBoxes());
@@ -119,7 +119,7 @@ public class BusChanges {
 					}
 				} else if (component instanceof BusCable){
 					BusCable busCable = ((BusCable)component);
-					ModifyBusCable modifyBusCable = ModificationmarksFactory.eINSTANCE.createModifyBusCable();
+					ModifyBusCable modifyBusCable = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusCable();
 					modifyBusCable.setToolderived(true);
 					modifyBusCable.setAffectedElement(busCable);
 					modifyBusCable.getCausingElements().addAll(getInitialMarkedBusBoxes());
@@ -132,7 +132,7 @@ public class BusChanges {
 	public void markChangesBasedOnBusMaster(BusMaster busMaster, ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
 		SignalInterface siController = busMaster.getSignalinterface_controller();
 		
-		Plant xPPUPlant = version.getXPPUPlant();
+		Plant xPPUPlant = version.getAPSPlant();
 		EList<Component> xppuComponents = xPPUPlant.getComponentRepository().getAllComponentsInPlant();
 		
 		if(siController != null){
@@ -142,7 +142,7 @@ public class BusChanges {
 					for(SignalInterface si : sis){
 						if(si == siController){
 							BusMaster bm = (BusMaster) component;
-							ModifyBusMaster modifyBusMaster = ModificationmarksFactory.eINSTANCE.createModifyBusMaster();
+							ModifyBusMaster modifyBusMaster = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusMaster();
 							modifyBusMaster.setToolderived(true);
 							modifyBusMaster.setAffectedElement(bm);
 							modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusMaster());
@@ -161,7 +161,7 @@ public class BusChanges {
 					for(SignalInterface si : siSlaves){
 						if(si == slaveSignalInterface){
 							BusSlave bs = (BusSlave) component;
-							ModifyBusSlave modifyBusSlave = ModificationmarksFactory.eINSTANCE.createModifyBusSlave();
+							ModifyBusSlave modifyBusSlave = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusSlave();
 							modifyBusSlave.setToolderived(true);
 							modifyBusSlave.setAffectedElement(bs);
 							modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusSlave());
@@ -170,7 +170,7 @@ public class BusChanges {
 					}
 				} else if (component instanceof BusCable){
 					BusCable busCable = ((BusCable)component);
-					ModifyBusCable modifyBusCable = ModificationmarksFactory.eINSTANCE.createModifyBusCable();
+					ModifyBusCable modifyBusCable = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusCable();
 					modifyBusCable.setToolderived(true);
 					modifyBusCable.setAffectedElement(busCable);
 					modifyBusCable.getCausingElements().addAll(getInitialMarkedBusCable());
@@ -181,7 +181,7 @@ public class BusChanges {
 	}
 	
 	public void markChangesBasedOnBusSlave(BusSlave busSlave, ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
-		Plant xPPUPlant = version.getXPPUPlant();
+		Plant xPPUPlant = version.getAPSPlant();
 		EList<Component> xppuComponents = xPPUPlant.getComponentRepository().getAllComponentsInPlant();
 		
 		SignalInterface siMaster = busSlave.getSignalinterface_master();
@@ -192,7 +192,7 @@ public class BusChanges {
 					for(SignalInterface si : sis){
 						if(si == siMaster){
 							BusMaster bm = (BusMaster) component;
-							ModifyBusMaster modifyBusMaster = ModificationmarksFactory.eINSTANCE.createModifyBusMaster();
+							ModifyBusMaster modifyBusMaster = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusMaster();
 							modifyBusMaster.setToolderived(true);
 							modifyBusMaster.setAffectedElement(bm);
 							modifyBusMaster.getCausingElements().addAll(getInitialMarkedBusMaster());
@@ -209,7 +209,7 @@ public class BusChanges {
         		if(component instanceof BusSlave){
                     if(component == siSlave){
                         BusSlave bs = (BusSlave) component;
-                        ModifyBusSlave modifyBusSlave = ModificationmarksFactory.eINSTANCE.createModifyBusSlave();
+                        ModifyBusSlave modifyBusSlave = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyBusSlave();
                         modifyBusSlave.setToolderived(true);
                         modifyBusSlave.setAffectedElement(bs);
                         modifyBusSlave.getCausingElements().addAll(getInitialMarkedBusSlave());

@@ -9,29 +9,29 @@ import edu.kit.ipd.sdq.kamp4aps.core.scenarios.BusChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SensorChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SignalInterfacePropagation;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SwitchChanges;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ChangePropagationDueToHardwareChange;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusBox;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusCable;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusMaster;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyBusSlave;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyComponent;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyInterface;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyModule;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModifyStructure;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
-import xPPU.Plant;
-import xPPU.BusComponents.BusBox;
-import xPPU.BusComponents.BusCable;
-import xPPU.BusComponents.BusMaster;
-import xPPU.BusComponents.BusSlave;
-import xPPU.ComponentRepository.Component;
-import xPPU.ComponentRepository.MicroswitchModule;
-import xPPU.ComponentRepository.Sensor;
-import xPPU.InterfaceRepository.Interface;
-import xPPU.InterfaceRepository.PhysicalConnection;
-import xPPU.InterfaceRepository.SignalInterface;
-import xPPU.ModuleRepository.Module;
-import xPPU.StructureRepository.Structure;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagationDueToHardwareChange;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyBusBox;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyBusCable;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyBusMaster;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyBusSlave;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyModule;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyStructure;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.Plant;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusBox;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusCable;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusMaster;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Sensor;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.PhysicalConnection;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.SignalInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -65,19 +65,15 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 	@Override
 	public void runChangePropagationAnalysis(APSArchitectureVersion version) {
 		// Setup
-		setChangePropagationDueToHardwareChange(ModificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange());
+		setChangePropagationDueToHardwareChange(KAMP4aPSModificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange());
 		
 		// Calculate
 		do {
 			changePropagationDueToHardwareChange.setChanged(false);
 			calculateAndMarkFromStructurePropagation(version);
-			System.out.println(changePropagationDueToHardwareChange.isChanged());
 			calculateAndMarkFromModulePropagation(version);
-			System.out.println(changePropagationDueToHardwareChange.isChanged());
 			calculateAndMarkFromComponentPropagation(version);
-			System.out.println(changePropagationDueToHardwareChange.isChanged());
 			calculateAndMarkFromInterfacePropagation(version);
-			System.out.println(changePropagationDueToHardwareChange.isChanged());
 		} while(changePropagationDueToHardwareChange.isChanged());
 		
 			
@@ -196,8 +192,8 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 		version.getModificationMarkRepository().getChangePropagationSteps().add(changePropagationDueToHardwareChange);
 	}
 		
-	protected void setChangePropagationDueToHardwareChange(ChangePropagationDueToHardwareChange changePropagationDueToDataDependencies) {
-		this.changePropagationDueToHardwareChange = changePropagationDueToDataDependencies;
+	protected void setChangePropagationDueToHardwareChange(ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
+		this.changePropagationDueToHardwareChange = changePropagationDueToHardwareChange;
 	}
 
 

@@ -1,21 +1,21 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
-import DeploymentContext.DeploymentContextFactory;
-import DeploymentContext.DeploymentContextRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextRepository;
 
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion.ArchitectureVersionParams;
-import fieldofactivityannotations.CalibrationSpecification;
-import fieldofactivityannotations.DocumentationSpecification;
-import fieldofactivityannotations.ECADSpecification;
-import fieldofactivityannotations.FieldOfActivityAnnotationRepository;
-import fieldofactivityannotations.FieldofactivityannotationsFactory;
-import fieldofactivityannotations.HMISpecification;
-import fieldofactivityannotations.StaffSpecification;
-import fieldofactivityannotations.StockSpecification;
-import fieldofactivityannotations.TestSpecification;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSModificationRepository;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.KAPSSeedModifications;
-import edu.kit.ipd.sdq.kamp4aps.model.modificationmarks.ModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.CalibrationSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.DocumentationSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ECADSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.HMISpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StaffSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StockSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.TestSpecification;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSSeedModifications;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationmarksFactory;
 
 /**
  * This class loads the structural and non-structural models
@@ -35,15 +35,15 @@ public class APSArchitectureModelFactoryFacade {
 	public static APSArchitectureVersion createEmptyModel(String name) {
 		archParams.name = name;
 		archParams.fieldOfActivityRepository = APSArchitectureModelFactoryFacade.createFieldOfActivityAnnotationsRepository();
-		archParams.modificationMarkRepository = APSArchitectureModelFactoryFacade.createKAPSModificationMarkRepository();
+		archParams.modificationMarkRepository = APSArchitectureModelFactoryFacade.createKAMP4aPSModificationMarkRepository();
 		archParams.deploymentContextRepository = APSArchitectureModelFactoryFacade.createDeploymentContextRepository();
 		return new APSArchitectureVersion(archParams);
 	}
 	
-	public static KAPSModificationRepository createKAPSModificationMarkRepository() {
-		KAPSModificationRepository repository = ModificationmarksFactory.eINSTANCE.createKAPSModificationRepository();
+	public static KAMP4aPSModificationRepository createKAMP4aPSModificationMarkRepository() {
+		KAMP4aPSModificationRepository repository = KAMP4aPSModificationmarksFactory.eINSTANCE.createKAMP4aPSModificationRepository();
 
-		KAPSSeedModifications seedModifications = ModificationmarksFactory.eINSTANCE.createKAPSSeedModifications();
+		KAMP4aPSSeedModifications seedModifications = KAMP4aPSModificationmarksFactory.eINSTANCE.createKAMP4aPSSeedModifications();
 		repository.setSeedModifications(seedModifications);
 		
 		return repository;

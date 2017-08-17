@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="DeploymentContext.presentation.DeploymentContextModelWizardID"
+            id="edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.presentation.DeploymentContextModelWizardID"
             name="%_UI_DeploymentContextModelWizard_label"
-            class="DeploymentContext.presentation.DeploymentContextModelWizard"
+            class="edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.presentation.DeploymentContextModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/DeploymentContextModelFile.gif">
          <description>%_UI_DeploymentContextModelWizard_description</description>
@@ -25,13 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated deploymentcontext -->
       <editor
-            id="DeploymentContext.presentation.DeploymentContextEditorID"
+            id="edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.presentation.DeploymentContextEditorID"
             name="%_UI_DeploymentContextEditor_label"
             icon="icons/full/obj16/DeploymentContextModelFile.gif"
             extensions="deploymentcontext"
-            class="DeploymentContext.presentation.DeploymentContextEditor"
-            contributorClass="DeploymentContext.presentation.DeploymentContextActionBarContributor">
+            class="edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.presentation.DeploymentContextEditor"
+            contributorClass="edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.presentation.DeploymentContextActionBarContributor">
       </editor>
    </extension>
-
 </plugin>

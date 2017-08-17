@@ -4,19 +4,19 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: edu.kit.ipd.sdq.kamp4aps.model.deploymentcontext.editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: DeploymentContext.presentation.DeploymentcontextEditorPlugin$Implementation
+Bundle-Activator: edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.presentation.DeploymentcontextEditorPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: DeploymentContext.presentation
+Export-Package: edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4aps.model.deploymentcontext.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
  org.eclipse.ui.ide;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.aps.edit;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies.edit;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model.edit;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4iec.model.repo.edit;visibility:=reexport,
- xPPU.edit;visibility:=reexport
+ edu.kit.ipd.sdq.kamp4iec.model.repo.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
