@@ -28,7 +28,7 @@
             id="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation.KAMP4aPSFieldofactivityannotationsEditorID"
             name="%_UI_KAMP4aPSFieldofactivityannotationsEditor_label"
             icon="icons/full/obj16/KAMP4aPSFieldofactivityannotationsModelFile.gif"
-            extensions="kamp4apsfieldofactivityannotations"
+            extensions="fieldofactivityannotations"
             class="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation.KAMP4aPSFieldofactivityannotationsEditor"
             contributorClass="edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.presentation.KAMP4aPSFieldofactivityannotationsActionBarContributor">
       </editor>

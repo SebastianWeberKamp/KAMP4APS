@@ -3,8 +3,8 @@
 package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.impl;
 
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.File;
-
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.KAMP4aPSFieldofactivityannotationsPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

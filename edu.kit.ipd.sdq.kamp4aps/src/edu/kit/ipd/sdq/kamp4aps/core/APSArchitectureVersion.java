@@ -4,7 +4,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextFactory
 import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextRepository;
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.KAMP4aPSFieldofactivityannotationsFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.AbstractKAMP4aPSModificationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.Plant;
@@ -37,7 +37,7 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 		// instantiated with empty collections, so the algorithm can handle them)
 		
 		if (params.fieldOfActivityRepository == null)
-			params.fieldOfActivityRepository = FieldofactivityannotationsFactory.eINSTANCE.
+			params.fieldOfActivityRepository = KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.
 					createFieldOfActivityAnnotationRepository();
 
 		_fieldOfActivityRepository = params.fieldOfActivityRepository;

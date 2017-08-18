@@ -9,10 +9,11 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
+
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.HMIConfiguration;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.HMISpecification;
-
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.KAMP4aPSFieldofactivityannotationsPackage;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

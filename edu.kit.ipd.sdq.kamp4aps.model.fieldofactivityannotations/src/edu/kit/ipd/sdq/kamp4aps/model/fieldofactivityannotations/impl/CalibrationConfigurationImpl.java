@@ -13,6 +13,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.CalibrationConfiguration;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.CalibrationSpecification;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.KAMP4aPSFieldofactivityannotationsPackage;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

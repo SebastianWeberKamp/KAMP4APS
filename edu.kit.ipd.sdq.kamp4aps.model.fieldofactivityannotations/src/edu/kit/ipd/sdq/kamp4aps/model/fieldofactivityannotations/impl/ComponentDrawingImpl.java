@@ -6,6 +6,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ComponentDrawing;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.KAMP4aPSFieldofactivityannotationsPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;

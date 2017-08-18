@@ -8,7 +8,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.CalibrationSpec
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.DocumentationSpecification;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ECADSpecification;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
-import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldofactivityannotationsFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.KAMP4aPSFieldofactivityannotationsFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.HMISpecification;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StaffSpecification;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StockSpecification;
@@ -55,29 +55,29 @@ public class APSArchitectureModelFactoryFacade {
 	}
 
 	public static FieldOfActivityAnnotationRepository createFieldOfActivityAnnotationsRepository() {
-		FieldOfActivityAnnotationRepository repository =  FieldofactivityannotationsFactory.eINSTANCE.createFieldOfActivityAnnotationRepository();
+		FieldOfActivityAnnotationRepository repository =  KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.createFieldOfActivityAnnotationRepository();
 		
-		TestSpecification testSpec = FieldofactivityannotationsFactory.eINSTANCE.createTestSpecification();
+		TestSpecification testSpec = KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.createTestSpecification();
 		repository.setTestSpecification(testSpec);
 		
-		StockSpecification stockSpec = FieldofactivityannotationsFactory.eINSTANCE.createStockSpecification();
+		StockSpecification stockSpec = KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.createStockSpecification();
 		repository.setStockSpecification(stockSpec);
 		
-		HMISpecification hmiSpec = FieldofactivityannotationsFactory.eINSTANCE.createHMISpecification();
+		HMISpecification hmiSpec = KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.createHMISpecification();
 		repository.setHmiSpecification(hmiSpec);
 		
-		ECADSpecification ecadSpec = FieldofactivityannotationsFactory.eINSTANCE.createECADSpecification();
+		ECADSpecification ecadSpec = KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.createECADSpecification();
 		repository.setEcadSpecification(ecadSpec);
 		
-		DocumentationSpecification docSpec = FieldofactivityannotationsFactory.eINSTANCE.createDocumentationSpecification();
+		DocumentationSpecification docSpec = KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.createDocumentationSpecification();
 		repository.setDocumentationSpecification(docSpec);
 
-		StaffSpecification staffSpec = FieldofactivityannotationsFactory.eINSTANCE.createStaffSpecification();
+		StaffSpecification staffSpec = KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.createStaffSpecification();
 		repository.setStaffSpecification(staffSpec);
-		staffSpec.setPersonList(FieldofactivityannotationsFactory.eINSTANCE.createPersonList());
-		staffSpec.setRoleList(FieldofactivityannotationsFactory.eINSTANCE.createRoleList());
+		staffSpec.setPersonList(KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.createPersonList());
+		staffSpec.setRoleList(KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.createRoleList());
 		
-		CalibrationSpecification calSpec = FieldofactivityannotationsFactory.eINSTANCE.createCalibrationSpecification();
+		CalibrationSpecification calSpec = KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.createCalibrationSpecification();
 		repository.setCalibrationSpecification(calSpec);
 		
 		return repository;

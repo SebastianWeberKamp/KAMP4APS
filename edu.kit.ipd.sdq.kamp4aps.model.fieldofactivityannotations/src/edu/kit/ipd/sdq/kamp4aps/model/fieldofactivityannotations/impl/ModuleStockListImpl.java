@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.impl;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
+
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.KAMP4aPSFieldofactivityannotationsPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.ModuleStockList;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StockSpecification;

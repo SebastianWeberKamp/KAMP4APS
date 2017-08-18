@@ -7,7 +7,8 @@
     operationReflection="true" importOrganizing="true">
   <foreignModel>KAMP4APSFieldofactivityannotations.ecore</foreignModel>
   <genPackages prefix="KAMP4aPSFieldofactivityannotations" basePackage="edu.kit.ipd.sdq.kamp4aps.model"
-      disposableProviderFactory="true" ecorePackage="KAMP4APSFieldofactivityannotations.ecore#/">
+      disposableProviderFactory="true" fileExtensions="fieldofactivityannotations"
+      ecorePackage="KAMP4APSFieldofactivityannotations.ecore#/">
     <genClasses ecoreClass="KAMP4APSFieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAMP4APSFieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/calibrationSpecification"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference KAMP4APSFieldofactivityannotations.ecore#//FieldOfActivityAnnotationRepository/testSpecification"/>

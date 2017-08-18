@@ -59,7 +59,7 @@ public class KAMP4aPSFieldofactivityannotationsExample {
 		if (args.length == 0) {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
-				Resource resource = resourceSet.createResource(URI.createURI("http:///My.kamp4apsfieldofactivityannotations"));
+				Resource resource = resourceSet.createResource(URI.createURI("http:///My.fieldofactivityannotations"));
 				FieldOfActivityAnnotationRepository root = KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.createFieldOfActivityAnnotationRepository();
 				resource.getContents().add(root);
 				resource.save(System.out, null);

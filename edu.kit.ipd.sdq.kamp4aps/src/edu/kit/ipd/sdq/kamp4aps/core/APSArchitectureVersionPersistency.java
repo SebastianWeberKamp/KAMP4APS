@@ -26,7 +26,7 @@ public class APSArchitectureVersionPersistency extends AbstractArchitectureVersi
 	private ArchitectureVersionParams archParams = new ArchitectureVersionParams();
 	public static final String FILEEXTENSION_REPOSITORY = "repository";
 	public static final String FILEEXTENSION_SYSTEM = "system";
-	public static final String FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS = "kamp4apsfieldofactivityannotations";
+	public static final String FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS = "fieldofactivityannotations";
 	public static final String FILEEXTENSION_APS = "aps";
 	public static final String FILEEXTENSION_MODIFICATIONMARKS = "modificationmarks";
 	public static final String FILEEXTENSION_DEPLOYMENTCONTEXT = "deploymentcontext";
