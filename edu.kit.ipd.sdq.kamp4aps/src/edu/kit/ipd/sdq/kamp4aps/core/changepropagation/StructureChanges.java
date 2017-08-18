@@ -17,12 +17,11 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
-public class StructureChanges {
-	private APSArchitectureVersion version;
+public class StructureChanges extends Change {
 	private Collection<Structure> initialMarkedStructures;
 	
 	public StructureChanges(APSArchitectureVersion v){
-		version = v;
+		super(v);
 		initialMarkedStructures = APSArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, Structure.class);
 	}
 	

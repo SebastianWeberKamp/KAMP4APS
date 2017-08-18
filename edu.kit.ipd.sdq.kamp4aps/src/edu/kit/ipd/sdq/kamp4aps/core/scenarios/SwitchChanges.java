@@ -6,6 +6,7 @@ import java.util.List;
 
 import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.core.changepropagation.Change;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
@@ -20,12 +21,10 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.PhysicalConnection;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
-public class SwitchChanges {
-
-	private APSArchitectureVersion version;
+public class SwitchChanges extends Change {
 
 	public SwitchChanges(APSArchitectureVersion v) {
-		version = v;
+		super(v);
 	}
 
 	public Collection<MicroswitchModule> getInitialMarkedMicroswitchModules() {

@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.core.changepropagation.Change;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyPhysicalConnection;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifySensor;
@@ -13,12 +14,10 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Sensor;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.PhysicalConnection;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.SignalInterface;
 
-public class SensorChanges {
-	
-	private APSArchitectureVersion version;
+public class SensorChanges extends Change {
 	
 	public SensorChanges(APSArchitectureVersion v) {
-		version = v;
+		super(v);
 	}
 	
 	public Collection<Sensor> getInitialMarkedSensors(){

@@ -16,13 +16,12 @@ import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 
-public class ComponentChanges {
+public class ComponentChanges extends Change {
 	
-	private APSArchitectureVersion version;
 	private Collection<Component> initialMarkedComponents;
 	
 	public ComponentChanges(APSArchitectureVersion v){
-		version = v;
+		super(v);
 		initialMarkedComponents = APSArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, Component.class);
 	}
 	

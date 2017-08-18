@@ -20,13 +20,12 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
-public class ModuleChanges {
+public class ModuleChanges extends Change {
 	
-	private APSArchitectureVersion version;
 	private Collection<Module> initialMarkedModules;
 	
 	public ModuleChanges(APSArchitectureVersion v){
-		version = v;
+		super(v);
 		initialMarkedModules = APSArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, Module.class);
 	}
 	

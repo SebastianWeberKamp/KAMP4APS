@@ -6,6 +6,7 @@ import java.util.Set;
 import org.eclipse.emf.common.util.EList;
 import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.core.changepropagation.Change;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyBusBox;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyBusCable;
@@ -21,12 +22,10 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.SignalInterface;
 
-public class BusChanges {
-
-	private APSArchitectureVersion version;
+public class BusChanges extends Change {
 
 	public BusChanges(APSArchitectureVersion v) {
-		version = v;
+		super(v);
 	}
 
 	public Collection<BusBox> getInitialMarkedBusBoxes() {

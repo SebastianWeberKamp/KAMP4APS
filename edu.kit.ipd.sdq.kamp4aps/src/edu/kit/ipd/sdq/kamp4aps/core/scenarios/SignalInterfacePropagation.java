@@ -3,6 +3,7 @@ package edu.kit.ipd.sdq.kamp4aps.core.scenarios;
 import java.util.List;
 
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4aps.core.changepropagation.Change;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
@@ -10,11 +11,10 @@ import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 
-public class SignalInterfacePropagation {
-	private APSArchitectureVersion v;
+public class SignalInterfacePropagation extends Change {
 
-	public SignalInterfacePropagation(APSArchitectureVersion version) {
-		v = version;
+	public SignalInterfacePropagation(APSArchitectureVersion v) {
+		super(v);
 	}
 
 	public void markChangesBasedOnSignalInterfaces(Component component, ChangePropagationDueToHardwareChange cp, boolean hasChanged) {
