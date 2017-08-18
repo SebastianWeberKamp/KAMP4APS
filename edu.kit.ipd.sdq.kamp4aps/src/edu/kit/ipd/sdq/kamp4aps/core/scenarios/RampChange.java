@@ -51,4 +51,11 @@ public class RampChange extends Change {
 	// in unserem fall kann das nur ein FRAME objekt sein.
 	// das wars dann auch schon. sehr ernüchternd!!! :(
 	// gut für mich, weniger zu tun :D
+	
+	//TODO: doppeltes hinzufügen von rampen und deren schnittstellen vermeiden
+	
+	//TODO: lookup methode für alle schnittstellen einer rampe schreiben
+	//TODO: lookup methode für alle frames die von den schnittstellen beeinflusst werden schreiben
+	
+	
 }
