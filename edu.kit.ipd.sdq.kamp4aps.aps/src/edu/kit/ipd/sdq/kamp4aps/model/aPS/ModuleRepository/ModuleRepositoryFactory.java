@@ -22,6 +22,15 @@ public interface ModuleRepositoryFactory extends EFactory {
 	ModuleRepositoryFactory eINSTANCE = edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>Microswitch Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Microswitch Module</em>'.
+	 * @generated
+	 */
+	MicroswitchModule createMicroswitchModule();
+
+	/**
 	 * Returns a new object of class '<em>Module Repository</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

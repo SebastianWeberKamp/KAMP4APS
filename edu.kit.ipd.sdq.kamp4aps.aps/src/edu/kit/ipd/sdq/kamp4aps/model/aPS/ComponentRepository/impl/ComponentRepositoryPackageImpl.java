@@ -25,7 +25,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Frame;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.InductiveSensor;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.LogicalWiring;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MechanicalAssembly;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MonostableCylinder;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Motor;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.OperationPanel;
@@ -348,13 +347,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * @generated
 	 */
 	private EClass logicalWiringEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass microswitchModuleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1346,33 +1338,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getMicroswitchModule() {
-		return microswitchModuleEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMicroswitchModule_BusSlave() {
-		return (EReference)microswitchModuleEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getMicroswitchModule_Switch() {
-		return (EReference)microswitchModuleEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getPotentiometer() {
 		return potentiometerEClass;
 	}
@@ -1704,10 +1669,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		logicalWiringEClass = createEClass(LOGICAL_WIRING);
 		createEReference(logicalWiringEClass, LOGICAL_WIRING__BUS_CABLE);
 
-		microswitchModuleEClass = createEClass(MICROSWITCH_MODULE);
-		createEReference(microswitchModuleEClass, MICROSWITCH_MODULE__BUS_SLAVE);
-		createEReference(microswitchModuleEClass, MICROSWITCH_MODULE__SWITCH);
-
 		potentiometerEClass = createEClass(POTENTIOMETER);
 
 		vacuumSwitchEClass = createEClass(VACUUM_SWITCH);
@@ -1814,7 +1775,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		turningTableEClass.getESuperTypes().add(this.getComponent());
 		controllerEClass.getESuperTypes().add(this.getComponent());
 		logicalWiringEClass.getESuperTypes().add(this.getComponent());
-		microswitchModuleEClass.getESuperTypes().add(theModuleRepositoryPackage.getModule());
 		potentiometerEClass.getESuperTypes().add(theElectronicComponentsPackage.getElectronicPart());
 		vacuumSwitchEClass.getESuperTypes().add(theElectronicComponentsPackage.getSwitch());
 		reedSwitchEClass.getESuperTypes().add(theElectronicComponentsPackage.getSwitch());
@@ -1942,7 +1902,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		initEReference(getTurningTable_Rack_for_turningtable(), this.getRack(), null, "rack_for_turningtable", null, 1, 1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTurningTable_Table_to_stand_on(), theMechanicalComponentsPackage.getTable(), null, "table_to_stand_on", null, 1, 1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTurningTable_Motor_to_drive(), this.getSimpleMotor(), null, "motor_to_drive", null, 1, 1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTurningTable_MicroswitchModule(), this.getMicroswitchModule(), null, "microswitchModule", null, 1, -1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTurningTable_MicroswitchModule(), theModuleRepositoryPackage.getMicroswitchModule(), null, "microswitchModule", null, 1, -1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTurningTable_BusSlave(), theBusComponentsPackage.getBusSlave(), null, "busSlave", null, 1, 1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTurningTable_BusBox(), theBusComponentsPackage.getBusBox(), null, "busBox", null, 1, 1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTurningTable_BusCable(), theBusComponentsPackage.getBusCable(), null, "busCable", null, 1, -1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1954,10 +1914,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 
 		initEClass(logicalWiringEClass, LogicalWiring.class, "LogicalWiring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLogicalWiring_BusCable(), theBusComponentsPackage.getBusCable(), null, "busCable", null, 1, -1, LogicalWiring.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(microswitchModuleEClass, MicroswitchModule.class, "MicroswitchModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMicroswitchModule_BusSlave(), theBusComponentsPackage.getBusSlave(), null, "busSlave", null, 1, -1, MicroswitchModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getMicroswitchModule_Switch(), theElectronicComponentsPackage.getMicroSwitch(), theElectronicComponentsPackage.getMicroSwitch_MsModule(), "switch", null, 1, 1, MicroswitchModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(potentiometerEClass, Potentiometer.class, "Potentiometer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

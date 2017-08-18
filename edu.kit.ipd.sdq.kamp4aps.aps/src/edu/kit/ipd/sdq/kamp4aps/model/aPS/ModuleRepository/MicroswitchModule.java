@@ -1,12 +1,10 @@
 /**
  */
-package edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository;
+package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.MicroSwitch;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -19,11 +17,11 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule#getBusSlave <em>Bus Slave</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule#getSwitch <em>Switch</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule#getBusSlave <em>Bus Slave</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule#getSwitch <em>Switch</em>}</li>
  * </ul>
  *
- * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage#getMicroswitchModule()
+ * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage#getMicroswitchModule()
  * @model
  * @generated
  */
@@ -38,7 +36,7 @@ public interface MicroswitchModule extends Module {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Bus Slave</em>' containment reference list.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage#getMicroswitchModule_BusSlave()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage#getMicroswitchModule_BusSlave()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
@@ -55,7 +53,7 @@ public interface MicroswitchModule extends Module {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Switch</em>' containment reference.
 	 * @see #setSwitch(MicroSwitch)
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage#getMicroswitchModule_Switch()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage#getMicroswitchModule_Switch()
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.MicroSwitch#getMsModule
 	 * @model opposite="msModule" containment="true" required="true"
 	 * @generated
@@ -63,7 +61,7 @@ public interface MicroswitchModule extends Module {
 	MicroSwitch getSwitch();
 
 	/**
-	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule#getSwitch <em>Switch</em>}' containment reference.
+	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule#getSwitch <em>Switch</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Switch</em>' containment reference.

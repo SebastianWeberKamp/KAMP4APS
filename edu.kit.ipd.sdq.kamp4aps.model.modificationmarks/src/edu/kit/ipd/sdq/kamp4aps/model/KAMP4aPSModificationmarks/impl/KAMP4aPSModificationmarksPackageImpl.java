@@ -750,7 +750,7 @@ public class KAMP4aPSModificationmarksPackageImpl extends EPackageImpl implement
 		g1.getETypeArguments().add(g2);
 		modifyPhysicalConnectionEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getModifyModule());
-		g2 = createEGenericType(theComponentRepositoryPackage.getMicroswitchModule());
+		g2 = createEGenericType(theModuleRepositoryPackage.getMicroswitchModule());
 		g1.getETypeArguments().add(g2);
 		modifyMicroSwitchModuleEClass.getEGenericSuperTypes().add(g1);
 		g1 = createEGenericType(this.getModifyComponent());

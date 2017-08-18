@@ -16,8 +16,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.MechanicalPart;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.Ramp;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -451,16 +449,6 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = caseEntity(logicalWiring);
 				if (result == null) result = caseIdentifier(logicalWiring);
 				if (result == null) result = caseNamedElement(logicalWiring);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE: {
-				MicroswitchModule microswitchModule = (MicroswitchModule)theEObject;
-				T result = caseMicroswitchModule(microswitchModule);
-				if (result == null) result = caseModule(microswitchModule);
-				if (result == null) result = caseEntity(microswitchModule);
-				if (result == null) result = caseIdentifier(microswitchModule);
-				if (result == null) result = caseNamedElement(microswitchModule);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1116,21 +1104,6 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Microswitch Module</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Microswitch Module</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMicroswitchModule(MicroswitchModule object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Potentiometer</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1352,21 +1325,6 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInterface(Interface object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Module</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Module</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseModule(Module object) {
 		return null;
 	}
 

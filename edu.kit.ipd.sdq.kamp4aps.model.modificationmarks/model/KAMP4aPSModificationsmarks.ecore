@@ -143,7 +143,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="isReplaced" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eGenericSuperTypes eClassifier="#//ModifyModule">
-      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.aps/model/aPS.ecore#//ComponentRepository/MicroswitchModule"/>
+      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.aps/model/aPS.ecore#//ModuleRepository/MicroswitchModule"/>
     </eGenericSuperTypes>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModifyBusBox">

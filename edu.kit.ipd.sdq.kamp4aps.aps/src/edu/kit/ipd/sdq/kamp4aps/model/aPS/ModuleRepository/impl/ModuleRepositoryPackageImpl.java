@@ -28,6 +28,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.impl.MechanicalCo
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ConveyorBeltModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.InductiveSensorModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryFactory;
@@ -61,6 +62,13 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * @generated
  */
 public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleRepositoryPackage {
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass microswitchModuleEClass = null;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -223,6 +231,33 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		// Update the registry and return the package
 		EPackage.Registry.INSTANCE.put(ModuleRepositoryPackage.eNS_URI, theModuleRepositoryPackage);
 		return theModuleRepositoryPackage;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMicroswitchModule() {
+		return microswitchModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMicroswitchModule_BusSlave() {
+		return (EReference)microswitchModuleEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getMicroswitchModule_Switch() {
+		return (EReference)microswitchModuleEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -505,6 +540,10 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		isCreated = true;
 
 		// Create classes and their features
+		microswitchModuleEClass = createEClass(MICROSWITCH_MODULE);
+		createEReference(microswitchModuleEClass, MICROSWITCH_MODULE__BUS_SLAVE);
+		createEReference(microswitchModuleEClass, MICROSWITCH_MODULE__SWITCH);
+
 		moduleRepositoryEClass = createEClass(MODULE_REPOSITORY);
 		createEReference(moduleRepositoryEClass, MODULE_REPOSITORY__ALL_MODULES_IN_PLANT);
 
@@ -569,11 +608,12 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
+		ElectronicComponentsPackage theElectronicComponentsPackage = (ElectronicComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(ElectronicComponentsPackage.eNS_URI);
 		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 		apsPackage theapsPackage = (apsPackage)EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI);
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
-		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
 		MechanicalComponentsPackage theMechanicalComponentsPackage = (MechanicalComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI);
 
 		// Create type parameters
@@ -581,6 +621,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		microswitchModuleEClass.getESuperTypes().add(this.getModule());
 		moduleRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
 		moduleEClass.getESuperTypes().add(theapsPackage.getEntity());
 		rampModuleEClass.getESuperTypes().add(this.getModule());
@@ -594,6 +635,10 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		conveyorBeltModuleEClass.getESuperTypes().add(this.getModule());
 
 		// Initialize classes, features, and operations; add parameters
+		initEClass(microswitchModuleEClass, MicroswitchModule.class, "MicroswitchModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getMicroswitchModule_BusSlave(), theBusComponentsPackage.getBusSlave(), null, "busSlave", null, 1, -1, MicroswitchModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMicroswitchModule_Switch(), theElectronicComponentsPackage.getMicroSwitch(), theElectronicComponentsPackage.getMicroSwitch_MsModule(), "switch", null, 1, 1, MicroswitchModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(moduleRepositoryEClass, ModuleRepository.class, "ModuleRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModuleRepository_AllModulesInPlant(), this.getModule(), null, "allModulesInPlant", null, 0, -1, ModuleRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

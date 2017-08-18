@@ -84,7 +84,6 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 			case ComponentRepositoryPackage.TURNING_TABLE: return createTurningTable();
 			case ComponentRepositoryPackage.CONTROLLER: return createController();
 			case ComponentRepositoryPackage.LOGICAL_WIRING: return createLogicalWiring();
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE: return createMicroswitchModule();
 			case ComponentRepositoryPackage.POTENTIOMETER: return createPotentiometer();
 			case ComponentRepositoryPackage.VACUUM_SWITCH: return createVacuumSwitch();
 			case ComponentRepositoryPackage.REED_SWITCH: return createReedSwitch();
@@ -378,16 +377,6 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 	public LogicalWiring createLogicalWiring() {
 		LogicalWiringImpl logicalWiring = new LogicalWiringImpl();
 		return logicalWiring;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public MicroswitchModule createMicroswitchModule() {
-		MicroswitchModuleImpl microswitchModule = new MicroswitchModuleImpl();
-		return microswitchModule;
 	}
 
 	/**

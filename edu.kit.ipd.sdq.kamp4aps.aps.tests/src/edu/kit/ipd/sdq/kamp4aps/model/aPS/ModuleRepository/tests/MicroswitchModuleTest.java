@@ -1,11 +1,9 @@
 /**
  */
-package edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.tests;
+package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.tests;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryFactory;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.tests.ModuleTest;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryFactory;
 
 import junit.textui.TestRunner;
 
@@ -55,7 +53,7 @@ public class MicroswitchModuleTest extends ModuleTest {
 	 */
 	@Override
 	protected void setUp() throws Exception {
-		setFixture(ComponentRepositoryFactory.eINSTANCE.createMicroswitchModule());
+		setFixture(ModuleRepositoryFactory.eINSTANCE.createMicroswitchModule());
 	}
 
 	/**

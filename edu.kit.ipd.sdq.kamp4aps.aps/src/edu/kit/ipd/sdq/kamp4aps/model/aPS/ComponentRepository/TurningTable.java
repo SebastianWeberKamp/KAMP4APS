@@ -8,6 +8,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.Table;
 
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -114,7 +116,7 @@ public interface TurningTable extends Component {
 
 	/**
 	 * Returns the value of the '<em><b>Microswitch Module</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Microswitch Module</em>' containment reference list isn't clear,

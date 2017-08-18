@@ -316,6 +316,7 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		// Obtain other dependent packages
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
+		ModuleRepositoryPackage theModuleRepositoryPackage = (ModuleRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -340,7 +341,7 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		initEClass(buttonEClass, Button.class, "Button", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(microSwitchEClass, MicroSwitch.class, "MicroSwitch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getMicroSwitch_MsModule(), theComponentRepositoryPackage.getMicroswitchModule(), theComponentRepositoryPackage.getMicroswitchModule_Switch(), "msModule", null, 1, 1, MicroSwitch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getMicroSwitch_MsModule(), theModuleRepositoryPackage.getMicroswitchModule(), theModuleRepositoryPackage.getMicroswitchModule_Switch(), "msModule", null, 1, 1, MicroSwitch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 	}
 
 } //ElectronicComponentsPackageImpl

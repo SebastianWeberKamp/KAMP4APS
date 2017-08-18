@@ -11,6 +11,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.MechanicalComponentsFactory;
 
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryFactory;
+
 import java.util.Collection;
 import java.util.List;
 
@@ -172,7 +174,7 @@ public class TurningTableItemProvider extends ComponentItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ComponentRepositoryPackage.Literals.TURNING_TABLE__MICROSWITCH_MODULE,
-				 ComponentRepositoryFactory.eINSTANCE.createMicroswitchModule()));
+				 ModuleRepositoryFactory.eINSTANCE.createMicroswitchModule()));
 
 		newChildDescriptors.add
 			(createChildParameter

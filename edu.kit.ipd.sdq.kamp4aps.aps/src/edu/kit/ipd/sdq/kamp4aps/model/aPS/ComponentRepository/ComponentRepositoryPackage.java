@@ -8,8 +8,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.MechanicalComponentsPackage;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
 import org.eclipse.emf.ecore.EClass;
@@ -3423,106 +3421,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int LOGICAL_WIRING_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.MicroswitchModuleImpl <em>Microswitch Module</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.MicroswitchModuleImpl
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getMicroswitchModule()
-	 * @generated
-	 */
-	int MICROSWITCH_MODULE = 36;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICROSWITCH_MODULE__ID = ModuleRepositoryPackage.MODULE__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICROSWITCH_MODULE__NAME = ModuleRepositoryPackage.MODULE__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Parent Entity</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICROSWITCH_MODULE__PARENT_ENTITY = ModuleRepositoryPackage.MODULE__PARENT_ENTITY;
-
-	/**
-	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICROSWITCH_MODULE__MODULES = ModuleRepositoryPackage.MODULE__MODULES;
-
-	/**
-	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICROSWITCH_MODULE__COMPONENTS = ModuleRepositoryPackage.MODULE__COMPONENTS;
-
-	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICROSWITCH_MODULE__INTERFACES = ModuleRepositoryPackage.MODULE__INTERFACES;
-
-	/**
-	 * The feature id for the '<em><b>Bus Slave</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICROSWITCH_MODULE__BUS_SLAVE = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Switch</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICROSWITCH_MODULE__SWITCH = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>Microswitch Module</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICROSWITCH_MODULE_FEATURE_COUNT = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>Microswitch Module</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int MICROSWITCH_MODULE_OPERATION_COUNT = ModuleRepositoryPackage.MODULE_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.PotentiometerImpl <em>Potentiometer</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3530,7 +3428,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPotentiometer()
 	 * @generated
 	 */
-	int POTENTIOMETER = 37;
+	int POTENTIOMETER = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3621,7 +3519,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getVacuumSwitch()
 	 * @generated
 	 */
-	int VACUUM_SWITCH = 38;
+	int VACUUM_SWITCH = 37;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3712,7 +3610,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getReedSwitch()
 	 * @generated
 	 */
-	int REED_SWITCH = 39;
+	int REED_SWITCH = 38;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3803,7 +3701,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPowerSplitter()
 	 * @generated
 	 */
-	int POWER_SPLITTER = 40;
+	int POWER_SPLITTER = 39;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3894,7 +3792,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getWaterSplitter()
 	 * @generated
 	 */
-	int WATER_SPLITTER = 41;
+	int WATER_SPLITTER = 40;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3985,7 +3883,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPneumaticSplitter()
 	 * @generated
 	 */
-	int PNEUMATIC_SPLITTER = 42;
+	int PNEUMATIC_SPLITTER = 41;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4076,7 +3974,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getCylinderPart()
 	 * @generated
 	 */
-	int CYLINDER_PART = 43;
+	int CYLINDER_PART = 42;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4158,7 +4056,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getMonostableCylinder()
 	 * @generated
 	 */
-	int MONOSTABLE_CYLINDER = 44;
+	int MONOSTABLE_CYLINDER = 43;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4303,7 +4201,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getComponentRepository()
 	 * @generated
 	 */
-	int COMPONENT_REPOSITORY = 45;
+	int COMPONENT_REPOSITORY = 44;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4349,7 +4247,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getFixture()
 	 * @generated
 	 */
-	int FIXTURE = 46;
+	int FIXTURE = 45;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -5392,38 +5290,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	EReference getLogicalWiring_BusCable();
 
 	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule <em>Microswitch Module</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Microswitch Module</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule
-	 * @generated
-	 */
-	EClass getMicroswitchModule();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule#getBusSlave <em>Bus Slave</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bus Slave</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule#getBusSlave()
-	 * @see #getMicroswitchModule()
-	 * @generated
-	 */
-	EReference getMicroswitchModule_BusSlave();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule#getSwitch <em>Switch</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Switch</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule#getSwitch()
-	 * @see #getMicroswitchModule()
-	 * @generated
-	 */
-	EReference getMicroswitchModule_Switch();
-
-	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Potentiometer <em>Potentiometer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6463,32 +6329,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOGICAL_WIRING__BUS_CABLE = eINSTANCE.getLogicalWiring_BusCable();
-
-		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.MicroswitchModuleImpl <em>Microswitch Module</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.MicroswitchModuleImpl
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getMicroswitchModule()
-		 * @generated
-		 */
-		EClass MICROSWITCH_MODULE = eINSTANCE.getMicroswitchModule();
-
-		/**
-		 * The meta object literal for the '<em><b>Bus Slave</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MICROSWITCH_MODULE__BUS_SLAVE = eINSTANCE.getMicroswitchModule_BusSlave();
-
-		/**
-		 * The meta object literal for the '<em><b>Switch</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference MICROSWITCH_MODULE__SWITCH = eINSTANCE.getMicroswitchModule_Switch();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.PotentiometerImpl <em>Potentiometer</em>}' class.

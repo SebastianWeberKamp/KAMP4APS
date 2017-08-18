@@ -73,6 +73,10 @@ public class ModuleRepositoryAdapterFactory extends AdapterFactoryImpl {
 	protected ModuleRepositorySwitch<Adapter> modelSwitch =
 		new ModuleRepositorySwitch<Adapter>() {
 			@Override
+			public Adapter caseMicroswitchModule(MicroswitchModule object) {
+				return createMicroswitchModuleAdapter();
+			}
+			@Override
 			public Adapter caseModuleRepository(ModuleRepository object) {
 				return createModuleRepositoryAdapter();
 			}
@@ -147,6 +151,20 @@ public class ModuleRepositoryAdapterFactory extends AdapterFactoryImpl {
 		return modelSwitch.doSwitch((EObject)target);
 	}
 
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule <em>Microswitch Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule
+	 * @generated
+	 */
+	public Adapter createMicroswitchModuleAdapter() {
+		return null;
+	}
 
 	/**
 	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepository <em>Module Repository</em>}'.

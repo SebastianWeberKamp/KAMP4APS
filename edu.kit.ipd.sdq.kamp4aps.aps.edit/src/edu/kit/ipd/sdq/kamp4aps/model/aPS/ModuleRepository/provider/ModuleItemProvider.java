@@ -207,6 +207,11 @@ public class ModuleItemProvider extends EntityItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ModuleRepositoryPackage.Literals.MODULE__MODULES,
+				 ModuleRepositoryFactory.eINSTANCE.createMicroswitchModule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModuleRepositoryPackage.Literals.MODULE__MODULES,
 				 ModuleRepositoryFactory.eINSTANCE.createRampModule()));
 
 		newChildDescriptors.add
@@ -248,11 +253,6 @@ public class ModuleItemProvider extends EntityItemProvider {
 			(createChildParameter
 				(ModuleRepositoryPackage.Literals.MODULE__MODULES,
 				 ModuleRepositoryFactory.eINSTANCE.createConveyorBeltModule()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModuleRepositoryPackage.Literals.MODULE__MODULES,
-				 ComponentRepositoryFactory.eINSTANCE.createMicroswitchModule()));
 
 		newChildDescriptors.add
 			(createChildParameter

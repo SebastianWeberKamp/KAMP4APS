@@ -162,7 +162,7 @@
       <eStructuralFeatures xsi:type="ecore:EReference" name="motor_to_drive" lowerBound="1"
           eType="#//ComponentRepository/SimpleMotor" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="microswitchModule" lowerBound="1"
-          upperBound="-1" eType="#//ComponentRepository/MicroswitchModule" containment="true"/>
+          upperBound="-1" eType="#//ModuleRepository/MicroswitchModule" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="busSlave" lowerBound="1"
           eType="#//BusComponents/BusSlave" containment="true"/>
       <eStructuralFeatures xsi:type="ecore:EReference" name="busBox" lowerBound="1"
@@ -181,12 +181,6 @@
     <eClassifiers xsi:type="ecore:EClass" name="LogicalWiring" eSuperTypes="#//ComponentRepository/Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="busCable" lowerBound="1"
           upperBound="-1" eType="#//BusComponents/BusCable" containment="true"/>
-    </eClassifiers>
-    <eClassifiers xsi:type="ecore:EClass" name="MicroswitchModule" eSuperTypes="#//ModuleRepository/Module">
-      <eStructuralFeatures xsi:type="ecore:EReference" name="busSlave" lowerBound="1"
-          upperBound="-1" eType="#//BusComponents/BusSlave" containment="true"/>
-      <eStructuralFeatures xsi:type="ecore:EReference" name="switch" lowerBound="1"
-          eType="#//ElectronicComponents/MicroSwitch" containment="true" eOpposite="#//ElectronicComponents/MicroSwitch/msModule"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="Potentiometer" eSuperTypes="#//ElectronicComponents/ElectronicPart"/>
     <eClassifiers xsi:type="ecore:EClass" name="VacuumSwitch" eSuperTypes="#//ElectronicComponents/Switch"/>
@@ -275,7 +269,7 @@
     <eClassifiers xsi:type="ecore:EClass" name="Button" eSuperTypes="#//ElectronicComponents/ElectronicPart"/>
     <eClassifiers xsi:type="ecore:EClass" name="MicroSwitch" eSuperTypes="#//ElectronicComponents/Switch">
       <eStructuralFeatures xsi:type="ecore:EReference" name="msModule" lowerBound="1"
-          eType="#//ComponentRepository/MicroswitchModule" eOpposite="#//ComponentRepository/MicroswitchModule/switch"/>
+          eType="#//ModuleRepository/MicroswitchModule" eOpposite="#//ModuleRepository/MicroswitchModule/switch"/>
     </eClassifiers>
   </eSubpackages>
   <eSubpackages name="MechanicalComponents" nsURI="edu.kit.ipd.sdq.kaps.xppu.mechanicalcomponents"
@@ -337,6 +331,12 @@
   </eSubpackages>
   <eSubpackages name="ModuleRepository" nsURI="edu.kit.ipd.sdq.kaps.xppu.modulerepository"
       nsPrefix="ModuleRepository">
+    <eClassifiers xsi:type="ecore:EClass" name="MicroswitchModule" eSuperTypes="#//ModuleRepository/Module">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="busSlave" lowerBound="1"
+          upperBound="-1" eType="#//BusComponents/BusSlave" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="switch" lowerBound="1"
+          eType="#//ElectronicComponents/MicroSwitch" containment="true" eOpposite="#//ElectronicComponents/MicroSwitch/msModule"/>
+    </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="ModuleRepository" eSuperTypes="#//Identifier/Identifier">
       <eStructuralFeatures xsi:type="ecore:EReference" name="allModulesInPlant" upperBound="-1"
           eType="#//ModuleRepository/Module"/>

@@ -2,11 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicComponentsPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.MicroSwitch;
+
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -84,7 +84,7 @@ public class MicroSwitchImpl extends SwitchImpl implements MicroSwitch {
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			if (newMsModule != null)
-				msgs = ((InternalEObject)newMsModule).eInverseAdd(this, ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH, MicroswitchModule.class, msgs);
+				msgs = ((InternalEObject)newMsModule).eInverseAdd(this, ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH, MicroswitchModule.class, msgs);
 			msgs = basicSetMsModule(newMsModule, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
@@ -131,7 +131,7 @@ public class MicroSwitchImpl extends SwitchImpl implements MicroSwitch {
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
 			case ElectronicComponentsPackage.MICRO_SWITCH__MS_MODULE:
-				return eInternalContainer().eInverseRemove(this, ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH, MicroswitchModule.class, msgs);
+				return eInternalContainer().eInverseRemove(this, ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH, MicroswitchModule.class, msgs);
 		}
 		return super.eBasicRemoveFromContainerFeature(msgs);
 	}

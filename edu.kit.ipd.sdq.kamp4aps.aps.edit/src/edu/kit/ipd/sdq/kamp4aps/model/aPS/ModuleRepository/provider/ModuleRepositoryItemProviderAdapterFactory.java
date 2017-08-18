@@ -72,6 +72,29 @@ public class ModuleRepositoryItemProviderAdapterFactory extends ModuleRepository
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MicroswitchModuleItemProvider microswitchModuleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMicroswitchModuleAdapter() {
+		if (microswitchModuleItemProvider == null) {
+			microswitchModuleItemProvider = new MicroswitchModuleItemProvider(this);
+		}
+
+		return microswitchModuleItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepository} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -423,6 +446,7 @@ public class ModuleRepositoryItemProviderAdapterFactory extends ModuleRepository
 	 * @generated
 	 */
 	public void dispose() {
+		if (microswitchModuleItemProvider != null) microswitchModuleItemProvider.dispose();
 		if (moduleRepositoryItemProvider != null) moduleRepositoryItemProvider.dispose();
 		if (moduleItemProvider != null) moduleItemProvider.dispose();
 		if (rampModuleItemProvider != null) rampModuleItemProvider.dispose();

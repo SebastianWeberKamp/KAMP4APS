@@ -156,12 +156,12 @@ public class StructureItemProvider extends EntityItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(StructureRepositoryPackage.Literals.STRUCTURE__MODULES,
-				 ComponentRepositoryFactory.eINSTANCE.createMicroswitchModule()));
+				 ModuleRepositoryFactory.eINSTANCE.createModule()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(StructureRepositoryPackage.Literals.STRUCTURE__MODULES,
-				 ModuleRepositoryFactory.eINSTANCE.createModule()));
+				 ModuleRepositoryFactory.eINSTANCE.createMicroswitchModule()));
 
 		newChildDescriptors.add
 			(createChildParameter

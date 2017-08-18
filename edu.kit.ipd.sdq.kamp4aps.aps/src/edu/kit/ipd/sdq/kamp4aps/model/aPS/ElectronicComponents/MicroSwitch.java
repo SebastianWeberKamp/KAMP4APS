@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,7 +23,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
 public interface MicroSwitch extends Switch {
 	/**
 	 * Returns the value of the '<em><b>Ms Module</b></em>' container reference.
-	 * It is bidirectional and its opposite is '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule#getSwitch <em>Switch</em>}'.
+	 * It is bidirectional and its opposite is '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule#getSwitch <em>Switch</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Ms Module</em>' container reference isn't clear,
@@ -33,7 +33,7 @@ public interface MicroSwitch extends Switch {
 	 * @return the value of the '<em>Ms Module</em>' container reference.
 	 * @see #setMsModule(MicroswitchModule)
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicComponentsPackage#getMicroSwitch_MsModule()
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule#getSwitch
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule#getSwitch
 	 * @model opposite="switch" required="true" transient="false"
 	 * @generated
 	 */

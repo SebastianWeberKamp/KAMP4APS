@@ -7,13 +7,14 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusCable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Potentiometer;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Rack;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.SimpleMotor;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.Table;
+
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
 
 import java.util.Collection;
 

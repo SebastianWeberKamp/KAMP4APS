@@ -17,8 +17,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.MechanicalPart;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.Ramp;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -227,10 +225,6 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 				return createLogicalWiringAdapter();
 			}
 			@Override
-			public Adapter caseMicroswitchModule(MicroswitchModule object) {
-				return createMicroswitchModuleAdapter();
-			}
-			@Override
 			public Adapter casePotentiometer(Potentiometer object) {
 				return createPotentiometerAdapter();
 			}
@@ -289,10 +283,6 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseInterface(Interface object) {
 				return createInterfaceAdapter();
-			}
-			@Override
-			public Adapter caseModule(Module object) {
-				return createModuleAdapter();
 			}
 			@Override
 			public Adapter caseElectronicPart(ElectronicPart object) {
@@ -831,20 +821,6 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule <em>Microswitch Module</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule
-	 * @generated
-	 */
-	public Adapter createMicroswitchModuleAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Potentiometer <em>Potentiometer</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -1051,20 +1027,6 @@ public class ComponentRepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createInterfaceAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module <em>Module</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module
-	 * @generated
-	 */
-	public Adapter createModuleAdapter() {
 		return null;
 	}
 

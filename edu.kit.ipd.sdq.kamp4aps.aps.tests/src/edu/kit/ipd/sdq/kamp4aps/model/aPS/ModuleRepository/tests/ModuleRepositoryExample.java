@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.tests;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepository;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage;
 
@@ -60,7 +60,7 @@ public class ModuleRepositoryExample {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.modulerepository"));
-				ModuleRepository root = ModuleRepositoryFactory.eINSTANCE.createModuleRepository();
+				MicroswitchModule root = ModuleRepositoryFactory.eINSTANCE.createMicroswitchModule();
 				resource.getContents().add(root);
 				resource.save(System.out, null);
 			}

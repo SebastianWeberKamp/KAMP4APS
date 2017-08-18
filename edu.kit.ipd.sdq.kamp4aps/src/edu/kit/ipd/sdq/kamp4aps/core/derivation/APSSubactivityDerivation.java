@@ -7,7 +7,7 @@ import edu.kit.ipd.sdq.kamp4aps.core.APSActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.APSActivityType;
 import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement;

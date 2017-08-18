@@ -274,15 +274,6 @@ public interface ComponentRepositoryFactory extends EFactory {
 	LogicalWiring createLogicalWiring();
 
 	/**
-	 * Returns a new object of class '<em>Microswitch Module</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Microswitch Module</em>'.
-	 * @generated
-	 */
-	MicroswitchModule createMicroswitchModule();
-
-	/**
 	 * Returns a new object of class '<em>Potentiometer</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

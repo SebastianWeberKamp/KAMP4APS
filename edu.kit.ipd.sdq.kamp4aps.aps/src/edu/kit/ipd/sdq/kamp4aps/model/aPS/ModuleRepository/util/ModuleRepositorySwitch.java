@@ -71,6 +71,16 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE: {
+				MicroswitchModule microswitchModule = (MicroswitchModule)theEObject;
+				T result = caseMicroswitchModule(microswitchModule);
+				if (result == null) result = caseModule(microswitchModule);
+				if (result == null) result = caseEntity(microswitchModule);
+				if (result == null) result = caseIdentifier(microswitchModule);
+				if (result == null) result = caseNamedElement(microswitchModule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ModuleRepositoryPackage.MODULE_REPOSITORY: {
 				ModuleRepository moduleRepository = (ModuleRepository)theEObject;
 				T result = caseModuleRepository(moduleRepository);
@@ -179,6 +189,21 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Microswitch Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Microswitch Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMicroswitchModule(MicroswitchModule object) {
+		return null;
 	}
 
 	/**

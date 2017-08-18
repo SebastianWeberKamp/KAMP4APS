@@ -1,20 +1,14 @@
 /**
  */
-package edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.provider;
+package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.provider;
 
-
-import edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider.ApsEditPlugin;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusComponentsFactory;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicComponentsFactory;
 
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.provider.ModuleItemProvider;
 
 import java.util.Collection;
 import java.util.List;
@@ -22,15 +16,13 @@ import java.util.List;
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.ResourceLocator;
-
 import org.eclipse.emf.ecore.EStructuralFeature;
 
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule} object.
+ * This is the item provider adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -73,8 +65,8 @@ public class MicroswitchModuleItemProvider extends ModuleItemProvider {
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE);
-			childrenFeatures.add(ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__SWITCH);
+			childrenFeatures.add(ModuleRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE);
+			childrenFeatures.add(ModuleRepositoryPackage.Literals.MICROSWITCH_MODULE__SWITCH);
 		}
 		return childrenFeatures;
 	}
@@ -130,8 +122,8 @@ public class MicroswitchModuleItemProvider extends ModuleItemProvider {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(MicroswitchModule.class)) {
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -151,22 +143,22 @@ public class MicroswitchModuleItemProvider extends ModuleItemProvider {
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE,
+				(ModuleRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE,
 				 BusComponentsFactory.eINSTANCE.createBusSlave()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE,
+				(ModuleRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE,
 				 BusComponentsFactory.eINSTANCE.createProfibusDPSlave()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE,
+				(ModuleRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE,
 				 BusComponentsFactory.eINSTANCE.createEtherCATSlave()));
 
 		newChildDescriptors.add
 			(createChildParameter
-				(ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__SWITCH,
+				(ModuleRepositoryPackage.Literals.MICROSWITCH_MODULE__SWITCH,
 				 ElectronicComponentsFactory.eINSTANCE.createMicroSwitch()));
 	}
 
@@ -183,8 +175,8 @@ public class MicroswitchModuleItemProvider extends ModuleItemProvider {
 
 		boolean qualify =
 			childFeature == ModuleRepositoryPackage.Literals.MODULE__COMPONENTS ||
-			childFeature == ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE ||
-			childFeature == ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE__SWITCH;
+			childFeature == ModuleRepositoryPackage.Literals.MICROSWITCH_MODULE__BUS_SLAVE ||
+			childFeature == ModuleRepositoryPackage.Literals.MICROSWITCH_MODULE__SWITCH;
 
 		if (qualify) {
 			return getString
@@ -192,17 +184,6 @@ public class MicroswitchModuleItemProvider extends ModuleItemProvider {
 				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
 		}
 		return super.getCreateChildText(owner, feature, child, selection);
-	}
-
-	/**
-	 * Return the resource locator for this item provider's resources.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ResourceLocator getResourceLocator() {
-		return ApsEditPlugin.INSTANCE;
 	}
 
 }

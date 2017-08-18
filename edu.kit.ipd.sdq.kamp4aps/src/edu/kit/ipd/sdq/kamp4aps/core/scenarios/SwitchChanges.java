@@ -15,7 +15,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyPhysicalCo
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyStructure;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.PhysicalConnection;

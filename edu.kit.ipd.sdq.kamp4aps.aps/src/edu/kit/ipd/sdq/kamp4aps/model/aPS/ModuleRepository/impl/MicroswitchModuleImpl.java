@@ -1,16 +1,14 @@
 /**
  */
-package edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl;
+package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.MicroswitchModule;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicComponentsPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.MicroSwitch;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleImpl;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage;
 
 import java.util.Collection;
 
@@ -35,8 +33,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.MicroswitchModuleImpl#getBusSlave <em>Bus Slave</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.MicroswitchModuleImpl#getSwitch <em>Switch</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.MicroswitchModuleImpl#getBusSlave <em>Bus Slave</em>}</li>
+ *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.MicroswitchModuleImpl#getSwitch <em>Switch</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,7 +76,7 @@ public class MicroswitchModuleImpl extends ModuleImpl implements MicroswitchModu
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ComponentRepositoryPackage.Literals.MICROSWITCH_MODULE;
+		return ModuleRepositoryPackage.Literals.MICROSWITCH_MODULE;
 	}
 
 	/**
@@ -88,7 +86,7 @@ public class MicroswitchModuleImpl extends ModuleImpl implements MicroswitchModu
 	 */
 	public EList<BusSlave> getBusSlave() {
 		if (busSlave == null) {
-			busSlave = new EObjectContainmentEList<BusSlave>(BusSlave.class, this, ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE);
+			busSlave = new EObjectContainmentEList<BusSlave>(BusSlave.class, this, ModuleRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE);
 		}
 		return busSlave;
 	}
@@ -111,7 +109,7 @@ public class MicroswitchModuleImpl extends ModuleImpl implements MicroswitchModu
 		MicroSwitch oldSwitch = switch_;
 		switch_ = newSwitch;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH, oldSwitch, newSwitch);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH, oldSwitch, newSwitch);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -133,7 +131,7 @@ public class MicroswitchModuleImpl extends ModuleImpl implements MicroswitchModu
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH, newSwitch, newSwitch));
+			eNotify(new ENotificationImpl(this, Notification.SET, ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH, newSwitch, newSwitch));
 	}
 
 	/**
@@ -144,9 +142,9 @@ public class MicroswitchModuleImpl extends ModuleImpl implements MicroswitchModu
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
 				if (switch_ != null)
-					msgs = ((InternalEObject)switch_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH, null, msgs);
+					msgs = ((InternalEObject)switch_).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH, null, msgs);
 				return basicSetSwitch((MicroSwitch)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
@@ -160,9 +158,9 @@ public class MicroswitchModuleImpl extends ModuleImpl implements MicroswitchModu
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
 				return ((InternalEList<?>)getBusSlave()).basicRemove(otherEnd, msgs);
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
 				return basicSetSwitch(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -176,9 +174,9 @@ public class MicroswitchModuleImpl extends ModuleImpl implements MicroswitchModu
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
 				return getBusSlave();
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
 				return getSwitch();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -193,11 +191,11 @@ public class MicroswitchModuleImpl extends ModuleImpl implements MicroswitchModu
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
 				getBusSlave().clear();
 				getBusSlave().addAll((Collection<? extends BusSlave>)newValue);
 				return;
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
 				setSwitch((MicroSwitch)newValue);
 				return;
 		}
@@ -212,10 +210,10 @@ public class MicroswitchModuleImpl extends ModuleImpl implements MicroswitchModu
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
 				getBusSlave().clear();
 				return;
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
 				setSwitch((MicroSwitch)null);
 				return;
 		}
@@ -230,9 +228,9 @@ public class MicroswitchModuleImpl extends ModuleImpl implements MicroswitchModu
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__BUS_SLAVE:
 				return busSlave != null && !busSlave.isEmpty();
-			case ComponentRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
+			case ModuleRepositoryPackage.MICROSWITCH_MODULE__SWITCH:
 				return switch_ != null;
 		}
 		return super.eIsSet(featureID);
