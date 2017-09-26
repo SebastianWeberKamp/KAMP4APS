@@ -111,7 +111,7 @@ public class APSInternalModificationDerivation {
 	private void deriveComponentModifications(APSArchitectureVersion targetVersion, List<Activity> activityList) {
 		Collection<ModifyComponent> modifyComponents = ArchitectureModelLookup
 				.lookUpAllCalculatedMarksOfAType(targetVersion, ModifyComponent.class);
-		for (ModifyComponent<?> modifyComponent : modifyComponents) {
+		for (ModifyComponent<Component> modifyComponent : modifyComponents) {
 			Activity componentActivity = createModificationActivity(modifyComponent, APSActivityElementType.COMPONENT);
 			activityList.add(componentActivity);
 //			this.deriveSubActivities(modifyComponent, componentActivity);

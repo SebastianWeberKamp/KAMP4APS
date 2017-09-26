@@ -19,8 +19,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusCable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusMaster;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.SignalInterface;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Identifier;
 
 public class BusChanges extends Change {
 

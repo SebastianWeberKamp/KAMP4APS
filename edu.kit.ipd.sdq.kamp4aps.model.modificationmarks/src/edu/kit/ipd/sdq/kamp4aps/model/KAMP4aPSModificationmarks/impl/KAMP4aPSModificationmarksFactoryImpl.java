@@ -79,6 +79,7 @@ public class KAMP4aPSModificationmarksFactoryImpl extends EFactoryImpl implement
 			case KAMP4aPSModificationmarksPackage.MODIFY_BUS_SLAVE: return createModifyBusSlave();
 			case KAMP4aPSModificationmarksPackage.MODIFY_BUS_CABLE: return createModifyBusCable();
 			case KAMP4aPSModificationmarksPackage.MODIFY_SENSOR: return createModifySensor();
+			case KAMP4aPSModificationmarksPackage.MODIFY_RAMP: return createModifyRamp();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -232,6 +233,16 @@ public class KAMP4aPSModificationmarksFactoryImpl extends EFactoryImpl implement
 	public ModifySensor createModifySensor() {
 		ModifySensorImpl modifySensor = new ModifySensorImpl();
 		return modifySensor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public ModifyRamp createModifyRamp() {
+		ModifyRampImpl modifyRamp = new ModifyRampImpl();
+		return modifyRamp;
 	}
 
 	/**

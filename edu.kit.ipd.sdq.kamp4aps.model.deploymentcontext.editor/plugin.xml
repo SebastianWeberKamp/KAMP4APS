@@ -33,4 +33,5 @@
             contributorClass="edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.presentation.DeploymentContextActionBarContributor">
       </editor>
    </extension>
+
 </plugin>

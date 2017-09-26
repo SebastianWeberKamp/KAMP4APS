@@ -13,5 +13,7 @@ Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4aps.aps;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4aps.aps.edit;visibility:=reexport
+ edu.kit.ipd.sdq.kamp4aps.aps.edit;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.basic;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.basic.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

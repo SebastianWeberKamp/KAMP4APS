@@ -4,6 +4,7 @@ package edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.impl;
 
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationmarksPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyMicroSwitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -23,7 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ModifyMicroSwitchModuleImpl extends ModifyModuleImpl<edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule> implements ModifyMicroSwitchModule {
+public class ModifyMicroSwitchModuleImpl extends ModifyModuleImpl<MicroswitchModule> implements ModifyMicroSwitchModule {
 	/**
 	 * The default value of the '{@link #isIsReplaced() <em>Is Replaced</em>}' attribute.
 	 * <!-- begin-user-doc -->

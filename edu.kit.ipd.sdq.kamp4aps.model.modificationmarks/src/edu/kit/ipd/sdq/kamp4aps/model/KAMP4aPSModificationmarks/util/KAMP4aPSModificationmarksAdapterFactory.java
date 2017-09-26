@@ -11,9 +11,6 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.*;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
@@ -100,7 +97,7 @@ public class KAMP4aPSModificationmarksAdapterFactory extends AdapterFactoryImpl 
 				return createChangePropagationDueToHardwareChangeAdapter();
 			}
 			@Override
-			public <T extends Entity> Adapter caseModifyEntity(ModifyEntity<T> object) {
+			public <T extends edu.kit.ipd.sdq.kamp4aps.model.basic.Entity> Adapter caseModifyEntity(ModifyEntity<T> object) {
 				return createModifyEntityAdapter();
 			}
 			@Override
@@ -150,6 +147,10 @@ public class KAMP4aPSModificationmarksAdapterFactory extends AdapterFactoryImpl 
 			@Override
 			public Adapter caseModifySensor(ModifySensor object) {
 				return createModifySensorAdapter();
+			}
+			@Override
+			public Adapter caseModifyRamp(ModifyRamp object) {
+				return createModifyRampAdapter();
 			}
 			@Override
 			public <S extends AbstractSeedModifications, T extends AbstractChangePropagationStep> Adapter caseAbstractModificationRepository(AbstractModificationRepository<S, T> object) {
@@ -426,6 +427,20 @@ public class KAMP4aPSModificationmarksAdapterFactory extends AdapterFactoryImpl 
 	 * @generated
 	 */
 	public Adapter createModifySensorAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyRamp <em>Modify Ramp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyRamp
+	 * @generated
+	 */
+	public Adapter createModifyRampAdapter() {
 		return null;
 	}
 

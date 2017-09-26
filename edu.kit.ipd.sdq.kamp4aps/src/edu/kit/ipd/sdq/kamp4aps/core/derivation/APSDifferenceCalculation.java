@@ -15,7 +15,7 @@ import edu.kit.ipd.sdq.kamp.workplan.BasicActivity;
 import edu.kit.ipd.sdq.kamp4aps.core.APSActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.APSActivityType;
 import edu.kit.ipd.sdq.kamp4aps.labels.LabelCustomizing;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement;
 
 /**
  * 
@@ -80,6 +80,8 @@ public class APSDifferenceCalculation extends AbstractDifferenceCalculation<APSA
 		for(Activity activity : plantActivities){
 			isContained = false;
 			for(Activity tmpActivity : newActivities){
+				if(tmpActivity.getElementName() == null || activity.getElementName() == null)
+					System.out.println("gnah");
 				if(tmpActivity.getElementName().equals(activity.getElementName()))
 					isContained = true;
 			}

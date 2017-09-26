@@ -9,8 +9,8 @@ import edu.kit.ipd.sdq.kamp4aps.core.APSArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
@@ -53,9 +53,9 @@ public class APSSubactivityDerivation {
 					TurningTable tt = (TurningTable) c;
 					for(MicroswitchModule mm : tt.getMicroswitchModule()){
 						if (plantElement.getId() == mm.getId()) {
-							addSubActivity((Component) tt, APSActivityElementType.COMPONENT, c,
+							addSubActivity((Module) tt, APSActivityElementType.COMPONENT, c,
 									parentActivity);
-							addSubActivity((Structure) tt.getParent(), APSActivityElementType.STRUCTURE, c,
+							addSubActivity(tt.getTable_to_stand_on().getParent(), APSActivityElementType.STRUCTURE, c,
 									parentActivity);
 						}
 					}
@@ -70,6 +70,14 @@ public class APSSubactivityDerivation {
 		parentActivity.addSubActivity(result);
 		return parentActivity;
 	}
+	
+	private Activity addSubActivity(Module module, APSActivityElementType elementType, Component parentElement, Activity parentActivity) {
+		Activity result = new Activity(APSActivityType.ARCHITECTUREMODELDIFF, elementType, module, module.getId(), null, parentActivity.getBasicActivity(), 
+				generateDescription(parentElement, module, parentActivity.getBasicActivity()));
+		parentActivity.addSubActivity(result);
+		return parentActivity;
+	}
+
 
 	private Activity addSubActivity(Structure structure, APSActivityElementType elementType, Component parentElement, Activity parentActivity) {
 		Activity result = new Activity(APSActivityType.ARCHITECTUREMODELDIFF, elementType, structure, structure.getId(), null, parentActivity.getBasicActivity(), 

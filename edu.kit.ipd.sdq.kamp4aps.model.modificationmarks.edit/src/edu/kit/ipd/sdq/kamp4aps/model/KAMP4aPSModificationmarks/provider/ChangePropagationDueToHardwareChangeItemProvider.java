@@ -275,6 +275,11 @@ public class ChangePropagationDueToHardwareChangeItemProvider extends ChangeProp
 
 		newChildDescriptors.add
 			(createChildParameter
+				(KAMP4aPSModificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__COMPONENT_MODIFICATIONS,
+				 KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyRamp()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(KAMP4aPSModificationmarksPackage.Literals.CHANGE_PROPAGATION_DUE_TO_HARDWARE_CHANGE__STRUCTURE_MODIFICATIONS,
 				 KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyStructure()));
 

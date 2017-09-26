@@ -6,6 +6,7 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.provider.ModificationmarksEd
 
 import edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider.ApsEditPlugin;
 
+import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.BasicEditPlugin;
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
@@ -46,6 +47,7 @@ public final class KAMP4aPSModificationmarksEditorPlugin extends EMFPlugin {
 			(new ResourceLocator [] {
 				ApsEditPlugin.INSTANCE,
 				ModificationmarksEditPlugin.INSTANCE,
+				BasicEditPlugin.INSTANCE,
 			});
 	}
 

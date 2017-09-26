@@ -20,6 +20,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyMicroSwitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyModule;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyPhysicalConnection;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyRamp;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifySensor;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifySignalinterface;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyStructure;
@@ -36,6 +37,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.StructureRepositor
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EGenericType;
@@ -170,6 +172,13 @@ public class KAMP4aPSModificationmarksPackageImpl extends EPackageImpl implement
 	 * @generated
 	 */
 	private EClass modifySensorEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass modifyRampEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -574,6 +583,15 @@ public class KAMP4aPSModificationmarksPackageImpl extends EPackageImpl implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getModifyRamp() {
+		return modifyRampEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public KAMP4aPSModificationmarksFactory getKAMP4aPSModificationmarksFactory() {
 		return (KAMP4aPSModificationmarksFactory)getEFactoryInstance();
 	}
@@ -650,6 +668,8 @@ public class KAMP4aPSModificationmarksPackageImpl extends EPackageImpl implement
 		modifySensorEClass = createEClass(MODIFY_SENSOR);
 		createEReference(modifySensorEClass, MODIFY_SENSOR__MODIFY_SIGNAL_INTERFACES);
 		createEReference(modifySensorEClass, MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS);
+
+		modifyRampEClass = createEClass(MODIFY_RAMP);
 	}
 
 	/**
@@ -681,7 +701,7 @@ public class KAMP4aPSModificationmarksPackageImpl extends EPackageImpl implement
 		ModuleRepositoryPackage theModuleRepositoryPackage = (ModuleRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI);
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
-		apsPackage theapsPackage = (apsPackage)EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI);
+		BasicPackage theBasicPackage = (BasicPackage)EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
 		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
 
 		// Create type parameters
@@ -695,7 +715,7 @@ public class KAMP4aPSModificationmarksPackageImpl extends EPackageImpl implement
 		// Set bounds for type parameters
 		EGenericType g1 = createEGenericType(this.getKAMP4aPSSeedModifications());
 		abstractKAMP4aPSModificationRepositoryEClass_T.getEBounds().add(g1);
-		g1 = createEGenericType(theapsPackage.getEntity());
+		g1 = createEGenericType(theBasicPackage.getEntity());
 		modifyEntityEClass_T.getEBounds().add(g1);
 		g1 = createEGenericType(theComponentRepositoryPackage.getComponent());
 		modifyComponentEClass_T.getEBounds().add(g1);
@@ -773,6 +793,10 @@ public class KAMP4aPSModificationmarksPackageImpl extends EPackageImpl implement
 		g2 = createEGenericType(theComponentRepositoryPackage.getSensor());
 		g1.getETypeArguments().add(g2);
 		modifySensorEClass.getEGenericSuperTypes().add(g1);
+		g1 = createEGenericType(this.getModifyComponent());
+		g2 = createEGenericType(theComponentRepositoryPackage.getRegularRamp());
+		g1.getETypeArguments().add(g2);
+		modifyRampEClass.getEGenericSuperTypes().add(g1);
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(abstractKAMP4aPSModificationRepositoryEClass, AbstractKAMP4aPSModificationRepository.class, "AbstractKAMP4aPSModificationRepository", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -852,6 +876,8 @@ public class KAMP4aPSModificationmarksPackageImpl extends EPackageImpl implement
 		initEClass(modifySensorEClass, ModifySensor.class, "ModifySensor", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModifySensor_ModifySignalInterfaces(), theInterfaceRepositoryPackage.getSignalInterface(), null, "modifySignalInterfaces", null, 0, -1, ModifySensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModifySensor_ModifyPhysicalConnections(), theInterfaceRepositoryPackage.getPhysicalConnection(), null, "modifyPhysicalConnections", null, 0, -1, ModifySensor.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(modifyRampEClass, ModifyRamp.class, "ModifyRamp", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

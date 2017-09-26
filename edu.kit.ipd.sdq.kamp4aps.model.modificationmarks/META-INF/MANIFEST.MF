@@ -14,5 +14,6 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4aps.aps;visibility:=reexport,
- edu.kit.ipd.sdq.kamp.model.modificationmarks;visibility:=reexport
+ edu.kit.ipd.sdq.kamp.model.modificationmarks;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.basic;visibility:=reexport
 Bundle-ActivationPolicy: lazy

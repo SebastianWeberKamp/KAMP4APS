@@ -6,6 +6,8 @@ import edu.kit.ipd.sdq.kamp4aps.core.changepropagation.InterfaceChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.changepropagation.ModuleChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.changepropagation.StructureChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.BusChanges;
+import edu.kit.ipd.sdq.kamp4aps.core.scenarios.RampChange;
+import edu.kit.ipd.sdq.kamp4aps.core.scenarios.ScrewingChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SensorChanges;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SignalInterfacePropagation;
 import edu.kit.ipd.sdq.kamp4aps.core.scenarios.SwitchChanges;
@@ -68,10 +70,25 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 			calculateAndMarkFromComponentPropagation(version);
 			calculateAndMarkFromInterfacePropagation(version);
 		} while(changePropagationDueToHardwareChange.isChanged());
-		
+//		calculateAndMarkRampChanges(version);
+//		calculateAndMarkScrewingChanges(version);
 			
 		// Update
 		addAllChangePropagations(version);
+	}
+
+	private void calculateAndMarkScrewingChanges(APSArchitectureVersion version) {
+		ScrewingChanges sc = new ScrewingChanges(version);
+		sc.addInitialMarkedScrewingsToList(changePropagationDueToHardwareChange);
+		sc.calculateAndMarkAffectedComponentsByScrewingChange(changePropagationDueToHardwareChange);
+		sc.calclulateAndMarkAffectedModulesByScrewingChange(changePropagationDueToHardwareChange);
+	}
+
+	private void calculateAndMarkRampChanges(APSArchitectureVersion version) {
+		RampChange rc = new RampChange(version);
+		rc.addInitialMarkedModulesToList(changePropagationDueToHardwareChange);
+		rc.calculateAndMarkAffectedInterfacesByRampChange(changePropagationDueToHardwareChange);
+		rc.calculateAndMarkToFramePropagation(changePropagationDueToHardwareChange);
 	}
 
 	private void calculateAndMarkFromStructurePropagation(APSArchitectureVersion version) {

@@ -54,7 +54,7 @@ public class InterfaceChanges extends Change {
 		} while (mapHash != modulesToBeMarked.hashCode());
 	}
 	
-		private List<ModifyModule<Module>> createModifyModulesFromAffectedModules(
+		protected List<ModifyModule<Module>> createModifyModulesFromAffectedModules(
 				Map<Interface, Set<Module>> modulesToBeMarked) {
 			List<ModifyModule<Module>> modifyModules = new ArrayList<ModifyModule<Module>>();
 			for(Map.Entry<Interface, Set<Module>> modulesToBeMarkedEntry : modulesToBeMarked.entrySet()){
@@ -71,7 +71,7 @@ public class InterfaceChanges extends Change {
 		}
 		
 	
-		private void addToModifyModulesToChangePropagation(List<ModifyModule<Module>> modifyModules,
+		protected void addToModifyModulesToChangePropagation(List<ModifyModule<Module>> modifyModules,
 				ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
 			List<ModifyModule<Module>> modifyModulesToRemove = new ArrayList<ModifyModule<Module>>();
 			for(ModifyModule<Module> currentModifyModule : changePropagationDueToHardwareChange.getModuleModifications()){
@@ -102,7 +102,7 @@ public class InterfaceChanges extends Change {
 		} while (mapHash != componentsToBeMarked.hashCode());		
 	}
 	
-		private List<ModifyComponent<Component>> createModifyComponentsFromAffectedComponents(
+		protected List<ModifyComponent<Component>> createModifyComponentsFromAffectedComponents(
 				Map<Interface, Set<Component>> componentsToBeMarked) {
 			List<ModifyComponent<Component>> modifyComponents = new ArrayList<ModifyComponent<Component>>();
 			for(Map.Entry<Interface, Set<Component>> componentsToBeMarkedEntry : componentsToBeMarked.entrySet()){
@@ -118,7 +118,7 @@ public class InterfaceChanges extends Change {
 			return modifyComponents;
 		}
 	
-		private void addToModifyComponentsToChangePropagation(List<ModifyComponent<Component>> modifyComponents,
+		protected void addToModifyComponentsToChangePropagation(List<ModifyComponent<Component>> modifyComponents,
 				ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
 			List<ModifyComponent<Component>> modifyComponentsToRemove = new ArrayList<ModifyComponent<Component>>();
 			for(ModifyComponent<Component> currentModifyComponent : changePropagationDueToHardwareChange.getComponentModifications()){

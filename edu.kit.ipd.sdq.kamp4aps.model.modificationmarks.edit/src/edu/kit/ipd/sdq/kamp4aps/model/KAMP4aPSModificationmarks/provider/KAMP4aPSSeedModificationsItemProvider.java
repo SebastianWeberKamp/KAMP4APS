@@ -190,6 +190,11 @@ public class KAMP4aPSSeedModificationsItemProvider extends AbstractSeedModificat
 
 		newChildDescriptors.add
 			(createChildParameter
+				(KAMP4aPSModificationmarksPackage.Literals.KAMP_4A_PS_SEED_MODIFICATIONS__COMPONENT_MODIFICATIONS,
+				 KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyRamp()));
+
+		newChildDescriptors.add
+			(createChildParameter
 				(KAMP4aPSModificationmarksPackage.Literals.KAMP_4A_PS_SEED_MODIFICATIONS__INTERFACE_MODIFICATIONS,
 				 KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyInterface()));
 

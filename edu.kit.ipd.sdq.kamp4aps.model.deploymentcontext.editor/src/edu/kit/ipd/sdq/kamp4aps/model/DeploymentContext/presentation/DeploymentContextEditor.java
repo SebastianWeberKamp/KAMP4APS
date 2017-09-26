@@ -162,8 +162,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.provider.Component
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.provider.ElectronicComponentsItemProviderAdapterFactory;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.provider.IdentifierItemProviderAdapterFactory;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.provider.InterfaceRepositoryItemProviderAdapterFactory;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.provider.MechanicalComponentsItemProviderAdapterFactory;
@@ -173,6 +171,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.provider.ModuleReposi
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.provider.StructureRepositoryItemProviderAdapterFactory;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.provider.apsItemProviderAdapterFactory;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.BasicItemProviderAdapterFactory;
 
 import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.provider.ComponentInternalDependenciesItemProviderAdapterFactory;
 
@@ -734,10 +734,10 @@ public class DeploymentContextEditor
 		adapterFactory.addAdapterFactory(new StructureRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ModuleRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new InterfaceRepositoryItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ComponentInternalDependenciesItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IECModelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IECRepositoryItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new BasicItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

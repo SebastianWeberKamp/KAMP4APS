@@ -417,6 +417,29 @@ public class KAMP4aPSModificationmarksItemProviderAdapterFactory extends KAMP4aP
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyRamp} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ModifyRampItemProvider modifyRampItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyRamp}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createModifyRampAdapter() {
+		if (modifyRampItemProvider == null) {
+			modifyRampItemProvider = new ModifyRampItemProvider(this);
+		}
+
+		return modifyRampItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -530,6 +553,7 @@ public class KAMP4aPSModificationmarksItemProviderAdapterFactory extends KAMP4aP
 		if (modifyBusSlaveItemProvider != null) modifyBusSlaveItemProvider.dispose();
 		if (modifyBusCableItemProvider != null) modifyBusCableItemProvider.dispose();
 		if (modifySensorItemProvider != null) modifySensorItemProvider.dispose();
+		if (modifyRampItemProvider != null) modifyRampItemProvider.dispose();
 	}
 
 }

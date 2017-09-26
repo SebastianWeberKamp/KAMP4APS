@@ -10,7 +10,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.PowerSupply;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Sensor;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.PhysicalConnection;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.SignalInterface;
@@ -145,7 +144,7 @@ public class LabelCustomizing {
 		return modification.getAffectedElement() != null;
 	}
 
-	public static String getName(NamedElement architectureElement) {
+	public static String getName(edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement architectureElement) {
 		return architectureElement.getName();
 	}
 

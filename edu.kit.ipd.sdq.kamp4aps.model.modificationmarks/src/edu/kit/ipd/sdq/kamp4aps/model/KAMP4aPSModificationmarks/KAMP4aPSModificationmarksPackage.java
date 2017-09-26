@@ -1337,6 +1337,80 @@ public interface KAMP4aPSModificationmarksPackage extends EPackage {
 
 
 	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.impl.ModifyRampImpl <em>Modify Ramp</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.impl.ModifyRampImpl
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.impl.KAMP4aPSModificationmarksPackageImpl#getModifyRamp()
+	 * @generated
+	 */
+	int MODIFY_RAMP = 17;
+
+	/**
+	 * The feature id for the '<em><b>Affected Element</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_RAMP__AFFECTED_ELEMENT = MODIFY_COMPONENT__AFFECTED_ELEMENT;
+
+	/**
+	 * The feature id for the '<em><b>Causing Elements</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_RAMP__CAUSING_ELEMENTS = MODIFY_COMPONENT__CAUSING_ELEMENTS;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_RAMP__ID = MODIFY_COMPONENT__ID;
+
+	/**
+	 * The feature id for the '<em><b>Toolderived</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_RAMP__TOOLDERIVED = MODIFY_COMPONENT__TOOLDERIVED;
+
+	/**
+	 * The feature id for the '<em><b>User Decision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_RAMP__USER_DECISION = MODIFY_COMPONENT__USER_DECISION;
+
+	/**
+	 * The number of structural features of the '<em>Modify Ramp</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_RAMP_FEATURE_COUNT = MODIFY_COMPONENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Modify Ramp</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODIFY_RAMP_OPERATION_COUNT = MODIFY_COMPONENT_OPERATION_COUNT + 0;
+
+
+	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.AbstractKAMP4aPSModificationRepository <em>Abstract KAMP 4a PS Modification Repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1727,6 +1801,16 @@ public interface KAMP4aPSModificationmarksPackage extends EPackage {
 	EReference getModifySensor_ModifyPhysicalConnections();
 
 	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyRamp <em>Modify Ramp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Modify Ramp</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyRamp
+	 * @generated
+	 */
+	EClass getModifyRamp();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2078,6 +2162,16 @@ public interface KAMP4aPSModificationmarksPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MODIFY_SENSOR__MODIFY_PHYSICAL_CONNECTIONS = eINSTANCE.getModifySensor_ModifyPhysicalConnections();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.impl.ModifyRampImpl <em>Modify Ramp</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.impl.ModifyRampImpl
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.impl.KAMP4aPSModificationmarksPackageImpl#getModifyRamp()
+		 * @generated
+		 */
+		EClass MODIFY_RAMP = eINSTANCE.getModifyRamp();
 
 	}
 

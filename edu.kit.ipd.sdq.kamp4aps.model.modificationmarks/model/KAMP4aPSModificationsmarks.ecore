@@ -90,7 +90,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ModifyEntity" abstract="true">
     <eTypeParameters name="T">
-      <eBounds eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.aps/model/aPS.ecore#//Entity"/>
+      <eBounds eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.ecore#//Entity"/>
     </eTypeParameters>
     <eGenericSuperTypes eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp.model.modificationmarks/model/Modificationmarks.ecore#//AbstractModification">
       <eTypeArguments eTypeParameter="#//ModifyEntity/T"/>
@@ -175,6 +175,11 @@
         containment="true"/>
     <eGenericSuperTypes eClassifier="#//ModifyComponent">
       <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.aps/model/aPS.ecore#//ComponentRepository/Sensor"/>
+    </eGenericSuperTypes>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ModifyRamp">
+    <eGenericSuperTypes eClassifier="#//ModifyComponent">
+      <eTypeArguments eClassifier="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.aps/model/aPS.ecore#//ComponentRepository/RegularRamp"/>
     </eGenericSuperTypes>
   </eClassifiers>
 </ecore:EPackage>

@@ -4,6 +4,8 @@ package edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.provider;
 
 import edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider.ApsEditPlugin;
 
+import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.BasicEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.util.ResourceLocator;
@@ -41,6 +43,7 @@ public final class KAMP4APSFieldofactivityannotationsEditPlugin extends EMFPlugi
 		super
 		  (new ResourceLocator [] {
 		     ApsEditPlugin.INSTANCE,
+		     BasicEditPlugin.INSTANCE,
 		   });
 	}
 

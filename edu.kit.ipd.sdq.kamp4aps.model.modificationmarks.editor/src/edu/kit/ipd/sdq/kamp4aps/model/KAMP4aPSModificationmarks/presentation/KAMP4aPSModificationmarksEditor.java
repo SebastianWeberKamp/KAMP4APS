@@ -163,9 +163,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.provider.BusComponentsIt
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.provider.ComponentRepositoryItemProviderAdapterFactory;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.provider.ElectronicComponentsItemProviderAdapterFactory;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.provider.IdentifierItemProviderAdapterFactory;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.provider.InterfaceRepositoryItemProviderAdapterFactory;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.provider.MechanicalComponentsItemProviderAdapterFactory;
@@ -176,6 +173,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.provider.Structure
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.provider.apsItemProviderAdapterFactory;
 
+import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.BasicItemProviderAdapterFactory;
 import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 
@@ -730,8 +728,8 @@ public class KAMP4aPSModificationmarksEditor
 		adapterFactory.addAdapterFactory(new StructureRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ModuleRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new InterfaceRepositoryItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ModificationmarksItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new BasicItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ReflectiveItemProviderAdapterFactory());
 
 		// Create the command stack that will notify this editor as commands are executed.

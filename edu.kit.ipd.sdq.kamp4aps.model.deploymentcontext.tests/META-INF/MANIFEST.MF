@@ -14,6 +14,7 @@ Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model.repo;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.basic;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

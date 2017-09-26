@@ -165,6 +165,15 @@ public interface KAMP4aPSModificationmarksFactory extends EFactory {
 	ModifySensor createModifySensor();
 
 	/**
+	 * Returns a new object of class '<em>Modify Ramp</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Modify Ramp</em>'.
+	 * @generated
+	 */
+	ModifyRamp createModifyRamp();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

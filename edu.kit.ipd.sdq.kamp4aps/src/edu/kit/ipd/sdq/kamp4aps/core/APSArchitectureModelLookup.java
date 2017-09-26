@@ -17,18 +17,18 @@ import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyModule;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyStructure;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.Plant;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusBox;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusCable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusMaster;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.SignalInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Identifier;
 
 /**
  * This class represents a part of the change rules implementation
@@ -317,7 +317,7 @@ public class APSArchitectureModelLookup extends ArchitectureModelLookup {
 	 * @param initialMarkedComponents
 	 * @return
 	 */
-	public static Map<Component, Set<Interface>> lookUpInterfacesOfComponents(Collection<Component> initialMarkedComponents, 
+	public static Map<Component, Set<Interface>> lookUpInterfacesOfComponents(Collection<? extends Component> initialMarkedComponents, 
 			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
 		Map<Component, Set<Interface>> results = new HashMap<Component, Set<Interface>>();
 		for(Component modifyComponent : initialMarkedComponents){
@@ -354,7 +354,7 @@ public class APSArchitectureModelLookup extends ArchitectureModelLookup {
 	 * @return
 	 */
 	public static Map<Interface, Set<Module>> lookUpParentModulesOfInterfaces(
-			Collection<Interface> initialMarkedInterfaces,
+			Collection<? extends Interface> initialMarkedInterfaces,
 			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
 		Map<Interface, Set<Module>> results = new HashMap<Interface, Set<Module>>();
 		for(Interface modifyInterface : initialMarkedInterfaces){
@@ -388,7 +388,7 @@ public class APSArchitectureModelLookup extends ArchitectureModelLookup {
 	 * @return
 	 */
 	public static Map<Interface, Set<Component>> lookUpParentComponentsOfInterfaces(
-			Collection<Interface> initialMarkedInterfaces,
+			Collection<? extends Interface> initialMarkedInterfaces,
 			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
 		Map<Interface, Set<Component>> results = new HashMap<Interface, Set<Component>>();
 		for(Interface modifyInterface : initialMarkedInterfaces){

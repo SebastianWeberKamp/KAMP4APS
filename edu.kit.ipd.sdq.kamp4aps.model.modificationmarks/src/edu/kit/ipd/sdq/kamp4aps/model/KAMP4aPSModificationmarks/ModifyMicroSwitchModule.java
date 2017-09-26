@@ -2,6 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks;
 
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Modify Micro Switch Module</b></em>'.
@@ -18,7 +20,7 @@ package edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks;
  * @model
  * @generated
  */
-public interface ModifyMicroSwitchModule extends ModifyModule<edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule> {
+public interface ModifyMicroSwitchModule extends ModifyModule<MicroswitchModule> {
 	/**
 	 * Returns the value of the '<em><b>Is Replaced</b></em>' attribute.
 	 * <!-- begin-user-doc -->

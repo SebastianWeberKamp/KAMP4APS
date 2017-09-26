@@ -56,7 +56,7 @@ public class ComponentChanges extends Change {
 
 			
 
-			private List<ModifyInterface<Interface>> createModifyInterfaceFromAffectedInterfaces(
+			protected List<ModifyInterface<Interface>> createModifyInterfaceFromAffectedInterfaces(
 					Map<Component, Set<Interface>> interfacesToBeMarked) {
 				List<ModifyInterface<Interface>> modifyInterfaces = new ArrayList<ModifyInterface<Interface>>();
 				for(Map.Entry<Component, Set<Interface>> interfacesToBeMarkedEntry : interfacesToBeMarked.entrySet()){
@@ -72,7 +72,7 @@ public class ComponentChanges extends Change {
 				return modifyInterfaces;
 			}
 			
-			private void addToModifyInterfacesToChangePropagation(List<ModifyInterface<Interface>> modifyInterfaces,
+			protected void addToModifyInterfacesToChangePropagation(List<ModifyInterface<Interface>> modifyInterfaces,
 					ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
 				List<ModifyInterface<Interface>> modifyInterfacesToRemove = new ArrayList<ModifyInterface<Interface>>();
 				for(ModifyInterface<Interface> currentModifyInterface : changePropagationDueToHardwareChange.getInterfaceModifications()){

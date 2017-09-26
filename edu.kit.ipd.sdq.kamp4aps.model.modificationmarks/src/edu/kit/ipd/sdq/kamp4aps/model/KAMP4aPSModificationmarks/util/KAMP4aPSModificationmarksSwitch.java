@@ -11,9 +11,6 @@ import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.*;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
@@ -223,6 +220,15 @@ public class KAMP4aPSModificationmarksSwitch<T1> extends Switch<T1> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case KAMP4aPSModificationmarksPackage.MODIFY_RAMP: {
+				ModifyRamp modifyRamp = (ModifyRamp)theEObject;
+				T1 result = caseModifyRamp(modifyRamp);
+				if (result == null) result = caseModifyComponent(modifyRamp);
+				if (result == null) result = caseModifyEntity(modifyRamp);
+				if (result == null) result = caseAbstractModification(modifyRamp);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -298,7 +304,7 @@ public class KAMP4aPSModificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends Entity> T1 caseModifyEntity(ModifyEntity<T> object) {
+	public <T extends edu.kit.ipd.sdq.kamp4aps.model.basic.Entity> T1 caseModifyEntity(ModifyEntity<T> object) {
 		return null;
 	}
 
@@ -479,6 +485,21 @@ public class KAMP4aPSModificationmarksSwitch<T1> extends Switch<T1> {
 	 * @generated
 	 */
 	public T1 caseModifySensor(ModifySensor object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Modify Ramp</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Modify Ramp</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T1 caseModifyRamp(ModifyRamp object) {
 		return null;
 	}
 

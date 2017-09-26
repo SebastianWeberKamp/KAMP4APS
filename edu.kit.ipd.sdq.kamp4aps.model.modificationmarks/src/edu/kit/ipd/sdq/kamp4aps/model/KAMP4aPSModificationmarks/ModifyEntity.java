@@ -3,9 +3,6 @@
 package edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks;
 
 import edu.kit.ipd.sdq.kamp.model.modificationmarks.AbstractModification;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -18,5 +15,5 @@ import org.eclipse.emf.ecore.EObject;
  * @model abstract="true"
  * @generated
  */
-public interface ModifyEntity<T extends Entity> extends AbstractModification<T, EObject> {
+public interface ModifyEntity<T extends edu.kit.ipd.sdq.kamp4aps.model.basic.Entity> extends AbstractModification<T, EObject> {
 } // ModifyEntity

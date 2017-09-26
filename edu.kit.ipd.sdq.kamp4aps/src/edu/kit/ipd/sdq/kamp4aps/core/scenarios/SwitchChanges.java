@@ -11,11 +11,13 @@ import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagatio
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyMicroSwitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyModule;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyPhysicalConnection;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyStructure;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.PhysicalConnection;
@@ -44,23 +46,23 @@ public class SwitchChanges extends Change {
 		modifyMicroSwitchModule.getCausingElements().addAll(initialMarkedMicroswitches);
 		modifyMicroSwitchModule.setIsReplaced(true);
 		
-		for(Component component : version.getAPSPlant().getComponentRepository().getAllComponentsInPlant()){
-			if(component instanceof TurningTable){
-				TurningTable tt = (TurningTable)component;
+		for(Module module : version.getAPSPlant().getModuleRepository().getAllModulesInPlant()){
+			if(module instanceof TurningTable){
+				TurningTable tt = (TurningTable)module;
 				if(microswitchModule == tt.getMicroswitchModule()){
-					ModifyComponent<Component> mtt = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyComponent();
+					ModifyModule<Module> mtt = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyModule();
 					mtt.setToolderived(true);
 					mtt.setAffectedElement(tt);
 					mtt.getCausingElements().addAll(initialMarkedMicroswitches);
 					
 					ModifyStructure<Structure> mcrane = KAMP4aPSModificationmarksFactory.eINSTANCE.createModifyStructure();
 					mcrane.setToolderived(true);
-					mcrane.setAffectedElement(tt.getParent());
+					mcrane.setAffectedElement(tt.getTable_to_stand_on().getParent());
 					mcrane.getCausingElements().addAll(initialMarkedMicroswitches);
 					mcrane.getCausingElements().add(tt);
 					
-					if(!changePropagationDueToHardwareChange.getComponentModifications().contains(mtt))
-						changePropagationDueToHardwareChange.getComponentModifications().add(mtt);
+					if(!changePropagationDueToHardwareChange.getModuleModifications().contains(mtt))
+						changePropagationDueToHardwareChange.getModuleModifications().add(mtt);
 					
 					if(!changePropagationDueToHardwareChange.getStructureModifications().contains(mcrane))
 						changePropagationDueToHardwareChange.getStructureModifications().add(mcrane);
