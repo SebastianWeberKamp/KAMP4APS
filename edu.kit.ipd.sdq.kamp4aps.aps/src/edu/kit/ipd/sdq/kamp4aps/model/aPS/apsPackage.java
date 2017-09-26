@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -59,52 +59,6 @@ public interface apsPackage extends EPackage {
 	apsPackage eINSTANCE = edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.apsPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.EntityImpl <em>Entity</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.EntityImpl
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.apsPackageImpl#getEntity()
-	 * @generated
-	 */
-	int ENTITY = 1;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__ID = IdentifierPackage.IDENTIFIER__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY__NAME = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>Entity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>Entity</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ENTITY_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.PlantImpl <em>Plant</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -121,7 +75,7 @@ public interface apsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__ID = ENTITY__ID;
+	int PLANT__ID = BasicPackage.ENTITY__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -130,7 +84,7 @@ public interface apsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__NAME = ENTITY__NAME;
+	int PLANT__NAME = BasicPackage.ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Plant Name</b></em>' attribute.
@@ -139,7 +93,7 @@ public interface apsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__PLANT_NAME = ENTITY_FEATURE_COUNT + 0;
+	int PLANT__PLANT_NAME = BasicPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Structures</b></em>' containment reference list.
@@ -148,7 +102,7 @@ public interface apsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__STRUCTURES = ENTITY_FEATURE_COUNT + 1;
+	int PLANT__STRUCTURES = BasicPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Interface Repository</b></em>' containment reference.
@@ -157,7 +111,7 @@ public interface apsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__INTERFACE_REPOSITORY = ENTITY_FEATURE_COUNT + 2;
+	int PLANT__INTERFACE_REPOSITORY = BasicPackage.ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Component Repository</b></em>' containment reference.
@@ -166,7 +120,7 @@ public interface apsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__COMPONENT_REPOSITORY = ENTITY_FEATURE_COUNT + 3;
+	int PLANT__COMPONENT_REPOSITORY = BasicPackage.ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Module Repository</b></em>' containment reference.
@@ -175,7 +129,7 @@ public interface apsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT__MODULE_REPOSITORY = ENTITY_FEATURE_COUNT + 4;
+	int PLANT__MODULE_REPOSITORY = BasicPackage.ENTITY_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>Plant</em>' class.
@@ -184,7 +138,7 @@ public interface apsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_FEATURE_COUNT = ENTITY_FEATURE_COUNT + 5;
+	int PLANT_FEATURE_COUNT = BasicPackage.ENTITY_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>Plant</em>' class.
@@ -193,7 +147,7 @@ public interface apsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLANT_OPERATION_COUNT = ENTITY_OPERATION_COUNT + 0;
+	int PLANT_OPERATION_COUNT = BasicPackage.ENTITY_OPERATION_COUNT + 0;
 
 
 	/**
@@ -260,16 +214,6 @@ public interface apsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPlant_ModuleRepository();
-
-	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity <em>Entity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Entity</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity
-	 * @generated
-	 */
-	EClass getEntity();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -343,16 +287,6 @@ public interface apsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PLANT__MODULE_REPOSITORY = eINSTANCE.getPlant_ModuleRepository();
-
-		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.EntityImpl <em>Entity</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.EntityImpl
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.apsPackageImpl#getEntity()
-		 * @generated
-		 */
-		EClass ENTITY = eINSTANCE.getEntity();
 
 	}
 

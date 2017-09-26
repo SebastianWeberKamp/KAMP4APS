@@ -8,7 +8,7 @@ import edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider.ApsEditPlugin;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.provider.EntityItemProvider;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.EntityItemProvider;
 
 import java.util.Collection;
 import java.util.List;

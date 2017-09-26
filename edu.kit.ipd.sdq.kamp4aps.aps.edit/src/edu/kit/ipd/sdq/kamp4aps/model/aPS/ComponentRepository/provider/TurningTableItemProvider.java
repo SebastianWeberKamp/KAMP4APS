@@ -3,21 +3,30 @@
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.provider;
 
 
+import edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider.ApsEditPlugin;
+
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusComponentsFactory;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
 
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicComponentsFactory;
+
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.MechanicalComponentsFactory;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryFactory;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage;
+
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.provider.ModuleItemProvider;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
@@ -30,7 +39,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TurningTableItemProvider extends ComponentItemProvider {
+public class TurningTableItemProvider extends ModuleItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -224,7 +233,49 @@ public class TurningTableItemProvider extends ComponentItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ComponentRepositoryPackage.Literals.TURNING_TABLE__POTENTIOMETER,
-				 ComponentRepositoryFactory.eINSTANCE.createPotentiometer()));
+				 ElectronicComponentsFactory.eINSTANCE.createPotentiometer()));
+	}
+
+	/**
+	 * This returns the label text for {@link org.eclipse.emf.edit.command.CreateChildCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getCreateChildText(Object owner, Object feature, Object child, Collection<?> selection) {
+		Object childFeature = feature;
+		Object childObject = child;
+
+		boolean qualify =
+			childFeature == ModuleRepositoryPackage.Literals.MODULE__MODULES ||
+			childFeature == ComponentRepositoryPackage.Literals.TURNING_TABLE__MICROSWITCH_MODULE ||
+			childFeature == ModuleRepositoryPackage.Literals.MODULE__COMPONENTS ||
+			childFeature == ComponentRepositoryPackage.Literals.TURNING_TABLE__MOTOR_TO_DRIVE ||
+			childFeature == ComponentRepositoryPackage.Literals.TURNING_TABLE__RACK_FOR_TURNINGTABLE ||
+			childFeature == ComponentRepositoryPackage.Literals.TURNING_TABLE__BUS_BOX ||
+			childFeature == ComponentRepositoryPackage.Literals.TURNING_TABLE__BUS_SLAVE ||
+			childFeature == ComponentRepositoryPackage.Literals.TURNING_TABLE__BUS_CABLE ||
+			childFeature == ComponentRepositoryPackage.Literals.TURNING_TABLE__POTENTIOMETER ||
+			childFeature == ComponentRepositoryPackage.Literals.TURNING_TABLE__TABLE_TO_STAND_ON;
+
+		if (qualify) {
+			return getString
+				("_UI_CreateChild_text2",
+				 new Object[] { getTypeText(childObject), getFeatureText(childFeature), getTypeText(owner) });
+		}
+		return super.getCreateChildText(owner, feature, child, selection);
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return ApsEditPlugin.INSTANCE;
 	}
 
 }

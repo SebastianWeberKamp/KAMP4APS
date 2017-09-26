@@ -14,10 +14,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicCompone
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.impl.IdentifierPackageImpl;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Clamping;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Fixture;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Gearing;
@@ -56,6 +52,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.impl.StructureRepo
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.apsPackageImpl;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -256,6 +254,9 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		BasicPackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
 		apsPackageImpl theapsPackage = (apsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) instanceof apsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) : apsPackage.eINSTANCE);
 		ComponentRepositoryPackageImpl theComponentRepositoryPackage = (ComponentRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) instanceof ComponentRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) : ComponentRepositoryPackage.eINSTANCE);
@@ -264,7 +265,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		MechanicalComponentsPackageImpl theMechanicalComponentsPackage = (MechanicalComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) instanceof MechanicalComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) : MechanicalComponentsPackage.eINSTANCE);
 		StructureRepositoryPackageImpl theStructureRepositoryPackage = (StructureRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) instanceof StructureRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) : StructureRepositoryPackage.eINSTANCE);
 		ModuleRepositoryPackageImpl theModuleRepositoryPackage = (ModuleRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) instanceof ModuleRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) : ModuleRepositoryPackage.eINSTANCE);
-		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theInterfaceRepositoryPackage.createPackageContents();
@@ -275,7 +275,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		theMechanicalComponentsPackage.createPackageContents();
 		theStructureRepositoryPackage.createPackageContents();
 		theModuleRepositoryPackage.createPackageContents();
-		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theInterfaceRepositoryPackage.initializePackageContents();
@@ -286,7 +285,6 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		theMechanicalComponentsPackage.initializePackageContents();
 		theStructureRepositoryPackage.initializePackageContents();
 		theModuleRepositoryPackage.initializePackageContents();
-		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theInterfaceRepositoryPackage.freeze();
@@ -590,16 +588,15 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
-		apsPackage theapsPackage = (apsPackage)EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI);
+		BasicPackage theBasicPackage = (BasicPackage)EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		interfaceRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
-		interfaceEClass.getESuperTypes().add(theapsPackage.getEntity());
+		interfaceRepositoryEClass.getESuperTypes().add(theBasicPackage.getEntity());
+		interfaceEClass.getESuperTypes().add(theBasicPackage.getEntity());
 		screwingEClass.getESuperTypes().add(this.getInterface());
 		screwingSplitterEClass.getESuperTypes().add(this.getScrewing());
 		screwingMotorEClass.getESuperTypes().add(this.getScrewing());
@@ -624,7 +621,7 @@ public class InterfaceRepositoryPackageImpl extends EPackageImpl implements Inte
 		initEReference(getInterfaceRepository_AllInterfacesInPlant(), this.getInterface(), null, "allInterfacesInPlant", null, 0, -1, InterfaceRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(interfaceEClass, Interface.class, "Interface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getInterface_ParentElement(), theIdentifierPackage.getIdentifier(), null, "parentElement", null, 1, -1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getInterface_ParentElement(), theBasicPackage.getEntity(), null, "parentElement", null, 1, -1, Interface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(screwingEClass, Screwing.class, "Screwing", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

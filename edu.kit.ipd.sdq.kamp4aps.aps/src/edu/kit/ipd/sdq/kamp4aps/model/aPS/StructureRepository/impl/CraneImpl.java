@@ -2,12 +2,12 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.impl;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.Arm;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.MechanicalComponentsPackage;
+
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.VacuumGripperModule;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Crane;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.StructureRepositoryPackage;
@@ -64,7 +64,7 @@ public class CraneImpl extends StructureImpl implements Crane {
 	 * @generated
 	 * @ordered
 	 */
-	protected VacuumGripper vacuumgripper;
+	protected VacuumGripperModule vacuumgripper;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -188,10 +188,10 @@ public class CraneImpl extends StructureImpl implements Crane {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VacuumGripper getVacuumgripper() {
+	public VacuumGripperModule getVacuumgripper() {
 		if (vacuumgripper != null && vacuumgripper.eIsProxy()) {
 			InternalEObject oldVacuumgripper = (InternalEObject)vacuumgripper;
-			vacuumgripper = (VacuumGripper)eResolveProxy(oldVacuumgripper);
+			vacuumgripper = (VacuumGripperModule)eResolveProxy(oldVacuumgripper);
 			if (vacuumgripper != oldVacuumgripper) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, StructureRepositoryPackage.CRANE__VACUUMGRIPPER, oldVacuumgripper, vacuumgripper));
@@ -205,7 +205,7 @@ public class CraneImpl extends StructureImpl implements Crane {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VacuumGripper basicGetVacuumgripper() {
+	public VacuumGripperModule basicGetVacuumgripper() {
 		return vacuumgripper;
 	}
 
@@ -214,33 +214,11 @@ public class CraneImpl extends StructureImpl implements Crane {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetVacuumgripper(VacuumGripper newVacuumgripper, NotificationChain msgs) {
-		VacuumGripper oldVacuumgripper = vacuumgripper;
+	public void setVacuumgripper(VacuumGripperModule newVacuumgripper) {
+		VacuumGripperModule oldVacuumgripper = vacuumgripper;
 		vacuumgripper = newVacuumgripper;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, StructureRepositoryPackage.CRANE__VACUUMGRIPPER, oldVacuumgripper, newVacuumgripper);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setVacuumgripper(VacuumGripper newVacuumgripper) {
-		if (newVacuumgripper != vacuumgripper) {
-			NotificationChain msgs = null;
-			if (vacuumgripper != null)
-				msgs = ((InternalEObject)vacuumgripper).eInverseRemove(this, ComponentRepositoryPackage.VACUUM_GRIPPER__MOUNTED_TO, VacuumGripper.class, msgs);
-			if (newVacuumgripper != null)
-				msgs = ((InternalEObject)newVacuumgripper).eInverseAdd(this, ComponentRepositoryPackage.VACUUM_GRIPPER__MOUNTED_TO, VacuumGripper.class, msgs);
-			msgs = basicSetVacuumgripper(newVacuumgripper, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, StructureRepositoryPackage.CRANE__VACUUMGRIPPER, newVacuumgripper, newVacuumgripper));
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, StructureRepositoryPackage.CRANE__VACUUMGRIPPER, oldVacuumgripper, vacuumgripper));
 	}
 
 	/**
@@ -255,10 +233,6 @@ public class CraneImpl extends StructureImpl implements Crane {
 				if (arm != null)
 					msgs = ((InternalEObject)arm).eInverseRemove(this, MechanicalComponentsPackage.ARM__MOUNTED_TO, Arm.class, msgs);
 				return basicSetArm((Arm)otherEnd, msgs);
-			case StructureRepositoryPackage.CRANE__VACUUMGRIPPER:
-				if (vacuumgripper != null)
-					msgs = ((InternalEObject)vacuumgripper).eInverseRemove(this, ComponentRepositoryPackage.VACUUM_GRIPPER__MOUNTED_TO, VacuumGripper.class, msgs);
-				return basicSetVacuumgripper((VacuumGripper)otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -273,8 +247,6 @@ public class CraneImpl extends StructureImpl implements Crane {
 		switch (featureID) {
 			case StructureRepositoryPackage.CRANE__ARM:
 				return basicSetArm(null, msgs);
-			case StructureRepositoryPackage.CRANE__VACUUMGRIPPER:
-				return basicSetVacuumgripper(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -315,7 +287,7 @@ public class CraneImpl extends StructureImpl implements Crane {
 				setMountedOn((TurningTable)newValue);
 				return;
 			case StructureRepositoryPackage.CRANE__VACUUMGRIPPER:
-				setVacuumgripper((VacuumGripper)newValue);
+				setVacuumgripper((VacuumGripperModule)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -336,7 +308,7 @@ public class CraneImpl extends StructureImpl implements Crane {
 				setMountedOn((TurningTable)null);
 				return;
 			case StructureRepositoryPackage.CRANE__VACUUMGRIPPER:
-				setVacuumgripper((VacuumGripper)null);
+				setVacuumgripper((VacuumGripperModule)null);
 				return;
 		}
 		super.eUnset(featureID);

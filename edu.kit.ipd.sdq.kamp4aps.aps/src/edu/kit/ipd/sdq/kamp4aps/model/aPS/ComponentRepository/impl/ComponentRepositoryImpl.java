@@ -6,7 +6,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.impl.IdentifierImpl;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.impl.EntityImpl;
 
 import java.util.Collection;
 
@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ComponentRepositoryImpl extends IdentifierImpl implements ComponentRepository {
+public class ComponentRepositoryImpl extends EntityImpl implements ComponentRepository {
 	/**
 	 * The cached value of the '{@link #getAllComponentsInPlant() <em>All Components In Plant</em>}' reference list.
 	 * <!-- begin-user-doc -->

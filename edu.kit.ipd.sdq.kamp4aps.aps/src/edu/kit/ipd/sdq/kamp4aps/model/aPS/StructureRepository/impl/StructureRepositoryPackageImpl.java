@@ -14,10 +14,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicCompone
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.impl.IdentifierPackageImpl;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.impl.InterfaceRepositoryPackageImpl;
@@ -45,6 +41,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.StructureRepositor
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.apsPackageImpl;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -168,6 +166,9 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		BasicPackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
 		apsPackageImpl theapsPackage = (apsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) instanceof apsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) : apsPackage.eINSTANCE);
 		ComponentRepositoryPackageImpl theComponentRepositoryPackage = (ComponentRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) instanceof ComponentRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) : ComponentRepositoryPackage.eINSTANCE);
@@ -176,7 +177,6 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		MechanicalComponentsPackageImpl theMechanicalComponentsPackage = (MechanicalComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) instanceof MechanicalComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) : MechanicalComponentsPackage.eINSTANCE);
 		ModuleRepositoryPackageImpl theModuleRepositoryPackage = (ModuleRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) instanceof ModuleRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) : ModuleRepositoryPackage.eINSTANCE);
 		InterfaceRepositoryPackageImpl theInterfaceRepositoryPackage = (InterfaceRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) instanceof InterfaceRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) : InterfaceRepositoryPackage.eINSTANCE);
-		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theStructureRepositoryPackage.createPackageContents();
@@ -187,7 +187,6 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		theMechanicalComponentsPackage.createPackageContents();
 		theModuleRepositoryPackage.createPackageContents();
 		theInterfaceRepositoryPackage.createPackageContents();
-		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theStructureRepositoryPackage.initializePackageContents();
@@ -198,7 +197,6 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		theMechanicalComponentsPackage.initializePackageContents();
 		theModuleRepositoryPackage.initializePackageContents();
 		theInterfaceRepositoryPackage.initializePackageContents();
-		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theStructureRepositoryPackage.freeze();
@@ -441,6 +439,7 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
+		BasicPackage theBasicPackage = (BasicPackage)EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
 		apsPackage theapsPackage = (apsPackage)EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI);
 		ModuleRepositoryPackage theModuleRepositoryPackage = (ModuleRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI);
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
@@ -451,7 +450,7 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		structureEClass.getESuperTypes().add(theapsPackage.getEntity());
+		structureEClass.getESuperTypes().add(theBasicPackage.getEntity());
 		communicationNetworkEClass.getESuperTypes().add(this.getStructure());
 		powerNetworkEClass.getESuperTypes().add(this.getStructure());
 		controlCabinetEClass.getESuperTypes().add(this.getStructure());
@@ -482,7 +481,7 @@ public class StructureRepositoryPackageImpl extends EPackageImpl implements Stru
 		initEClass(craneEClass, Crane.class, "Crane", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getCrane_Arm(), theMechanicalComponentsPackage.getArm(), theMechanicalComponentsPackage.getArm_MountedTo(), "arm", null, 1, 1, Crane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getCrane_MountedOn(), theComponentRepositoryPackage.getTurningTable(), null, "mountedOn", null, 1, 1, Crane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getCrane_Vacuumgripper(), theComponentRepositoryPackage.getVacuumGripper(), theComponentRepositoryPackage.getVacuumGripper_MountedTo(), "vacuumgripper", null, 1, 1, Crane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getCrane_Vacuumgripper(), theModuleRepositoryPackage.getVacuumGripperModule(), null, "vacuumgripper", null, 1, 1, Crane.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(powerWiringEClass, PowerWiring.class, "PowerWiring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

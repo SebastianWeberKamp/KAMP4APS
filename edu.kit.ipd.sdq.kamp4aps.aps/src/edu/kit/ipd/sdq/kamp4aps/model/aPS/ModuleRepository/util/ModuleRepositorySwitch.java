@@ -2,12 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.util;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.*;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -81,10 +80,22 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ModuleRepositoryPackage.POTENTIOMETER_MODULE: {
+				PotentiometerModule potentiometerModule = (PotentiometerModule)theEObject;
+				T result = casePotentiometerModule(potentiometerModule);
+				if (result == null) result = caseModule(potentiometerModule);
+				if (result == null) result = caseEntity(potentiometerModule);
+				if (result == null) result = caseIdentifier(potentiometerModule);
+				if (result == null) result = caseNamedElement(potentiometerModule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case ModuleRepositoryPackage.MODULE_REPOSITORY: {
 				ModuleRepository moduleRepository = (ModuleRepository)theEObject;
 				T result = caseModuleRepository(moduleRepository);
+				if (result == null) result = caseEntity(moduleRepository);
 				if (result == null) result = caseIdentifier(moduleRepository);
+				if (result == null) result = caseNamedElement(moduleRepository);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -187,6 +198,26 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ModuleRepositoryPackage.VACUUM_GRIPPER_MODULE: {
+				VacuumGripperModule vacuumGripperModule = (VacuumGripperModule)theEObject;
+				T result = caseVacuumGripperModule(vacuumGripperModule);
+				if (result == null) result = caseModule(vacuumGripperModule);
+				if (result == null) result = caseEntity(vacuumGripperModule);
+				if (result == null) result = caseIdentifier(vacuumGripperModule);
+				if (result == null) result = caseNamedElement(vacuumGripperModule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case ModuleRepositoryPackage.MONOSTABLE_CYLINDER_MODULE: {
+				MonostableCylinderModule monostableCylinderModule = (MonostableCylinderModule)theEObject;
+				T result = caseMonostableCylinderModule(monostableCylinderModule);
+				if (result == null) result = caseModule(monostableCylinderModule);
+				if (result == null) result = caseEntity(monostableCylinderModule);
+				if (result == null) result = caseIdentifier(monostableCylinderModule);
+				if (result == null) result = caseNamedElement(monostableCylinderModule);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -203,6 +234,21 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMicroswitchModule(MicroswitchModule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Potentiometer Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Potentiometer Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePotentiometerModule(PotentiometerModule object) {
 		return null;
 	}
 
@@ -368,6 +414,36 @@ public class ModuleRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseConveyorBeltModule(ConveyorBeltModule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Vacuum Gripper Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Vacuum Gripper Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVacuumGripperModule(VacuumGripperModule object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Monostable Cylinder Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Monostable Cylinder Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMonostableCylinderModule(MonostableCylinderModule object) {
 		return null;
 	}
 

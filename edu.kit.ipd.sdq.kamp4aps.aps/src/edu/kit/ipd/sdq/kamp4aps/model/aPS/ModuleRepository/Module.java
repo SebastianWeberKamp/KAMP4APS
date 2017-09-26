@@ -4,9 +4,9 @@ package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
 
 import org.eclipse.emf.common.util.EList;
 

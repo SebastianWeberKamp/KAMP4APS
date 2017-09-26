@@ -5,7 +5,7 @@ package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.tests;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryFactory;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.tests.EntityTest;
+import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
@@ -15,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ModuleTest extends EntityTest {
+public class ModuleTest extends TestCase {
+
+	/**
+	 * The fixture for this Module test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Module fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -37,14 +45,23 @@ public class ModuleTest extends EntityTest {
 	}
 
 	/**
+	 * Sets the fixture for this Module test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Module fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Module test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Module getFixture() {
-		return (Module)fixture;
+		return fixture;
 	}
 
 	/**

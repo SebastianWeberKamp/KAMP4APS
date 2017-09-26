@@ -2,11 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.impl;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.impl.IdentifierImpl;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.impl.EntityImpl;
 
 import java.util.Collection;
 
@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class InterfaceRepositoryImpl extends IdentifierImpl implements InterfaceRepository {
+public class InterfaceRepositoryImpl extends EntityImpl implements InterfaceRepository {
 	/**
 	 * The cached value of the '{@link #getAllInterfacesInPlant() <em>All Interfaces In Plant</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -2,12 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.util;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.*;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -74,7 +73,9 @@ public class InterfaceRepositorySwitch<T> extends Switch<T> {
 			case InterfaceRepositoryPackage.INTERFACE_REPOSITORY: {
 				InterfaceRepository interfaceRepository = (InterfaceRepository)theEObject;
 				T result = caseInterfaceRepository(interfaceRepository);
+				if (result == null) result = caseEntity(interfaceRepository);
 				if (result == null) result = caseIdentifier(interfaceRepository);
+				if (result == null) result = caseNamedElement(interfaceRepository);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

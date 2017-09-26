@@ -15,11 +15,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicCompone
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicComponentsPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicPart;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.MicroSwitch;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.Potentiometer;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.Switch;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.impl.IdentifierPackageImpl;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
 
@@ -40,6 +37,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.impl.StructureRepo
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.apsPackageImpl;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -90,6 +89,13 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 	private EClass microSwitchEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass potentiometerEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -135,6 +141,9 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		BasicPackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
 		apsPackageImpl theapsPackage = (apsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) instanceof apsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) : apsPackage.eINSTANCE);
 		ComponentRepositoryPackageImpl theComponentRepositoryPackage = (ComponentRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) instanceof ComponentRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) : ComponentRepositoryPackage.eINSTANCE);
@@ -143,7 +152,6 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		StructureRepositoryPackageImpl theStructureRepositoryPackage = (StructureRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) instanceof StructureRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) : StructureRepositoryPackage.eINSTANCE);
 		ModuleRepositoryPackageImpl theModuleRepositoryPackage = (ModuleRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) instanceof ModuleRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) : ModuleRepositoryPackage.eINSTANCE);
 		InterfaceRepositoryPackageImpl theInterfaceRepositoryPackage = (InterfaceRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) instanceof InterfaceRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) : InterfaceRepositoryPackage.eINSTANCE);
-		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theElectronicComponentsPackage.createPackageContents();
@@ -154,7 +162,6 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		theStructureRepositoryPackage.createPackageContents();
 		theModuleRepositoryPackage.createPackageContents();
 		theInterfaceRepositoryPackage.createPackageContents();
-		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theElectronicComponentsPackage.initializePackageContents();
@@ -165,7 +172,6 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		theStructureRepositoryPackage.initializePackageContents();
 		theModuleRepositoryPackage.initializePackageContents();
 		theInterfaceRepositoryPackage.initializePackageContents();
-		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theElectronicComponentsPackage.freeze();
@@ -253,6 +259,15 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPotentiometer() {
+		return potentiometerEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ElectronicComponentsFactory getElectronicComponentsFactory() {
 		return (ElectronicComponentsFactory)getEFactoryInstance();
 	}
@@ -288,6 +303,8 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 
 		microSwitchEClass = createEClass(MICRO_SWITCH);
 		createEReference(microSwitchEClass, MICRO_SWITCH__MS_MODULE);
+
+		potentiometerEClass = createEClass(POTENTIOMETER);
 	}
 
 	/**
@@ -328,6 +345,7 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 		ledEClass.getESuperTypes().add(this.getElectronicPart());
 		buttonEClass.getESuperTypes().add(this.getElectronicPart());
 		microSwitchEClass.getESuperTypes().add(this.getSwitch());
+		potentiometerEClass.getESuperTypes().add(this.getElectronicPart());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(electronicPartEClass, ElectronicPart.class, "ElectronicPart", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -342,6 +360,8 @@ public class ElectronicComponentsPackageImpl extends EPackageImpl implements Ele
 
 		initEClass(microSwitchEClass, MicroSwitch.class, "MicroSwitch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMicroSwitch_MsModule(), theModuleRepositoryPackage.getMicroswitchModule(), theModuleRepositoryPackage.getMicroswitchModule_Switch(), "msModule", null, 1, 1, MicroSwitch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(potentiometerEClass, Potentiometer.class, "Potentiometer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //ElectronicComponentsPackageImpl

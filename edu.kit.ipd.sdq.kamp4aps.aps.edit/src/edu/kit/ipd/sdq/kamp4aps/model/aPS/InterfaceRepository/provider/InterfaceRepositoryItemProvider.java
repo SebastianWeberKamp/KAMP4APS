@@ -7,11 +7,11 @@ import edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider.ApsEditPlugin;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryFactory;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.provider.IdentifierItemProvider;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.EntityItemProvider;
 
 import java.util.Collection;
 import java.util.List;
@@ -32,7 +32,7 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InterfaceRepositoryItemProvider extends IdentifierItemProvider {
+public class InterfaceRepositoryItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -107,7 +107,7 @@ public class InterfaceRepositoryItemProvider extends IdentifierItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((InterfaceRepository)object).getId();
+		String label = ((InterfaceRepository)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_InterfaceRepository_type") :
 			getString("_UI_InterfaceRepository_type") + " " + label;

@@ -25,10 +25,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicCompone
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.impl.IdentifierPackageImpl;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.impl.InterfaceRepositoryPackageImpl;
@@ -48,6 +44,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.impl.StructureRepo
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.apsPackageImpl;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -192,6 +190,9 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		BasicPackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
 		apsPackageImpl theapsPackage = (apsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) instanceof apsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) : apsPackage.eINSTANCE);
 		ComponentRepositoryPackageImpl theComponentRepositoryPackage = (ComponentRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) instanceof ComponentRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) : ComponentRepositoryPackage.eINSTANCE);
@@ -200,7 +201,6 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 		StructureRepositoryPackageImpl theStructureRepositoryPackage = (StructureRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) instanceof StructureRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) : StructureRepositoryPackage.eINSTANCE);
 		ModuleRepositoryPackageImpl theModuleRepositoryPackage = (ModuleRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) instanceof ModuleRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) : ModuleRepositoryPackage.eINSTANCE);
 		InterfaceRepositoryPackageImpl theInterfaceRepositoryPackage = (InterfaceRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) instanceof InterfaceRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) : InterfaceRepositoryPackage.eINSTANCE);
-		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theBusComponentsPackage.createPackageContents();
@@ -211,7 +211,6 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 		theStructureRepositoryPackage.createPackageContents();
 		theModuleRepositoryPackage.createPackageContents();
 		theInterfaceRepositoryPackage.createPackageContents();
-		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theBusComponentsPackage.initializePackageContents();
@@ -222,7 +221,6 @@ public class BusComponentsPackageImpl extends EPackageImpl implements BusCompone
 		theStructureRepositoryPackage.initializePackageContents();
 		theModuleRepositoryPackage.initializePackageContents();
 		theInterfaceRepositoryPackage.initializePackageContents();
-		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theBusComponentsPackage.freeze();

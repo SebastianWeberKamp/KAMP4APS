@@ -60,6 +60,7 @@ public class ElectronicComponentsFactoryImpl extends EFactoryImpl implements Ele
 			case ElectronicComponentsPackage.LED: return createLED();
 			case ElectronicComponentsPackage.BUTTON: return createButton();
 			case ElectronicComponentsPackage.MICRO_SWITCH: return createMicroSwitch();
+			case ElectronicComponentsPackage.POTENTIOMETER: return createPotentiometer();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -103,6 +104,16 @@ public class ElectronicComponentsFactoryImpl extends EFactoryImpl implements Ele
 	public MicroSwitch createMicroSwitch() {
 		MicroSwitchImpl microSwitch = new MicroSwitchImpl();
 		return microSwitch;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Potentiometer createPotentiometer() {
+		PotentiometerImpl potentiometer = new PotentiometerImpl();
+		return potentiometer;
 	}
 
 	/**

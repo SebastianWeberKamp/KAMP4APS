@@ -521,6 +521,97 @@ public interface ElectronicComponentsPackage extends EPackage {
 	 */
 	int MICRO_SWITCH_OPERATION_COUNT = SWITCH_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.PotentiometerImpl <em>Potentiometer</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.PotentiometerImpl
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.ElectronicComponentsPackageImpl#getPotentiometer()
+	 * @generated
+	 */
+	int POTENTIOMETER = 5;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER__ID = ELECTRONIC_PART__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER__NAME = ELECTRONIC_PART__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER__CONNECTED_INTERFACES = ELECTRONIC_PART__CONNECTED_INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER__PARENT = ELECTRONIC_PART__PARENT;
+
+	/**
+	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER__PARENT_MODULE = ELECTRONIC_PART__PARENT_MODULE;
+
+	/**
+	 * The feature id for the '<em><b>Pin</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER__PIN = ELECTRONIC_PART__PIN;
+
+	/**
+	 * The feature id for the '<em><b>Physicalconnection</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER__PHYSICALCONNECTION = ELECTRONIC_PART__PHYSICALCONNECTION;
+
+	/**
+	 * The number of structural features of the '<em>Potentiometer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER_FEATURE_COUNT = ELECTRONIC_PART_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Potentiometer</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER_OPERATION_COUNT = ELECTRONIC_PART_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicPart <em>Electronic Part</em>}'.
@@ -604,6 +695,16 @@ public interface ElectronicComponentsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMicroSwitch_MsModule();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.Potentiometer <em>Potentiometer</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Potentiometer</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.Potentiometer
+	 * @generated
+	 */
+	EClass getPotentiometer();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -701,6 +802,16 @@ public interface ElectronicComponentsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MICRO_SWITCH__MS_MODULE = eINSTANCE.getMicroSwitch_MsModule();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.PotentiometerImpl <em>Potentiometer</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.PotentiometerImpl
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.ElectronicComponentsPackageImpl#getPotentiometer()
+		 * @generated
+		 */
+		EClass POTENTIOMETER = eINSTANCE.getPotentiometer();
 
 	}
 

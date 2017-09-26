@@ -3,9 +3,10 @@
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.Arm;
+
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.VacuumGripperModule;
 
 /**
  * <!-- begin-user-doc -->
@@ -82,7 +83,6 @@ public interface Crane extends Structure {
 
 	/**
 	 * Returns the value of the '<em><b>Vacuumgripper</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getMountedTo <em>Mounted To</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Vacuumgripper</em>' reference isn't clear,
@@ -90,13 +90,12 @@ public interface Crane extends Structure {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Vacuumgripper</em>' reference.
-	 * @see #setVacuumgripper(VacuumGripper)
+	 * @see #setVacuumgripper(VacuumGripperModule)
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.StructureRepositoryPackage#getCrane_Vacuumgripper()
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getMountedTo
-	 * @model opposite="mountedTo" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	VacuumGripper getVacuumgripper();
+	VacuumGripperModule getVacuumgripper();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Crane#getVacuumgripper <em>Vacuumgripper</em>}' reference.
@@ -106,6 +105,6 @@ public interface Crane extends Structure {
 	 * @see #getVacuumgripper()
 	 * @generated
 	 */
-	void setVacuumgripper(VacuumGripper value);
+	void setVacuumgripper(VacuumGripperModule value);
 
 } // Crane

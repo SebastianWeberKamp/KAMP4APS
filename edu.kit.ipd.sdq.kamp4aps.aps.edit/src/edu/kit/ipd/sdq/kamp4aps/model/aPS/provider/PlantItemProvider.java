@@ -3,6 +3,8 @@
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.provider;
 
 
+import edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider.ApsEditPlugin;
+
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryFactory;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryFactory;
@@ -15,11 +17,15 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.StructureRepositor
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
+import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.EntityItemProvider;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
+import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
 
@@ -237,6 +243,17 @@ public class PlantItemProvider extends EntityItemProvider {
 			(createChildParameter
 				(apsPackage.Literals.PLANT__MODULE_REPOSITORY,
 				 ModuleRepositoryFactory.eINSTANCE.createModuleRepository()));
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return ApsEditPlugin.INSTANCE;
 	}
 
 }

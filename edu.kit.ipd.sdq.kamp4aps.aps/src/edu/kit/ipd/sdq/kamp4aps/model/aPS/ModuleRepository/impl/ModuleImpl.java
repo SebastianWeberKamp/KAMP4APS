@@ -5,14 +5,14 @@ package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.EntityImpl;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.impl.EntityImpl;
 
 import java.util.Collection;
 

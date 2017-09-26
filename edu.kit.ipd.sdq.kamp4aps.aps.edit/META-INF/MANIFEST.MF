@@ -12,7 +12,6 @@ Export-Package: edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider,
  edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.provider,
  edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.provider,
  edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.provider,
- edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.provider,
  edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.provider,
  edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.provider,
  edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.provider,
@@ -20,5 +19,7 @@ Export-Package: edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider,
  edu.kit.ipd.sdq.kamp4aps.model.aPS.provider
 Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4aps.aps;visibility:=reexport,
- org.eclipse.emf.edit;visibility:=reexport
+ org.eclipse.emf.edit;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.basic;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.basic.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface ComponentRepository extends Identifier {
+public interface ComponentRepository extends Entity {
 	/**
 	 * Returns the value of the '<em><b>All Components In Plant</b></em>' reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component}.

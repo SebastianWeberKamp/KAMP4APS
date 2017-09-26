@@ -6,15 +6,16 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.*;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicPart;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.MechanicalPart;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.Ramp;
+
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -381,16 +382,6 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case ComponentRepositoryPackage.VACUUM_GRIPPER: {
-				VacuumGripper vacuumGripper = (VacuumGripper)theEObject;
-				T result = caseVacuumGripper(vacuumGripper);
-				if (result == null) result = caseComponent(vacuumGripper);
-				if (result == null) result = caseEntity(vacuumGripper);
-				if (result == null) result = caseIdentifier(vacuumGripper);
-				if (result == null) result = caseNamedElement(vacuumGripper);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case ComponentRepositoryPackage.CONVEYOR_BELT: {
 				ConveyorBelt conveyorBelt = (ConveyorBelt)theEObject;
 				T result = caseConveyorBelt(conveyorBelt);
@@ -425,7 +416,7 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 			case ComponentRepositoryPackage.TURNING_TABLE: {
 				TurningTable turningTable = (TurningTable)theEObject;
 				T result = caseTurningTable(turningTable);
-				if (result == null) result = caseComponent(turningTable);
+				if (result == null) result = caseModule(turningTable);
 				if (result == null) result = caseEntity(turningTable);
 				if (result == null) result = caseIdentifier(turningTable);
 				if (result == null) result = caseNamedElement(turningTable);
@@ -449,17 +440,6 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 				if (result == null) result = caseEntity(logicalWiring);
 				if (result == null) result = caseIdentifier(logicalWiring);
 				if (result == null) result = caseNamedElement(logicalWiring);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case ComponentRepositoryPackage.POTENTIOMETER: {
-				Potentiometer potentiometer = (Potentiometer)theEObject;
-				T result = casePotentiometer(potentiometer);
-				if (result == null) result = caseElectronicPart(potentiometer);
-				if (result == null) result = caseComponent(potentiometer);
-				if (result == null) result = caseEntity(potentiometer);
-				if (result == null) result = caseIdentifier(potentiometer);
-				if (result == null) result = caseNamedElement(potentiometer);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -545,7 +525,9 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 			case ComponentRepositoryPackage.COMPONENT_REPOSITORY: {
 				ComponentRepository componentRepository = (ComponentRepository)theEObject;
 				T result = caseComponentRepository(componentRepository);
+				if (result == null) result = caseEntity(componentRepository);
 				if (result == null) result = caseIdentifier(componentRepository);
+				if (result == null) result = caseNamedElement(componentRepository);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -999,21 +981,6 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Vacuum Gripper</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Vacuum Gripper</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVacuumGripper(VacuumGripper object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>Conveyor Belt</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -1100,21 +1067,6 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseLogicalWiring(LogicalWiring object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Potentiometer</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Potentiometer</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T casePotentiometer(Potentiometer object) {
 		return null;
 	}
 
@@ -1325,6 +1277,21 @@ public class ComponentRepositorySwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseInterface(Interface object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Module</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseModule(Module object) {
 		return null;
 	}
 

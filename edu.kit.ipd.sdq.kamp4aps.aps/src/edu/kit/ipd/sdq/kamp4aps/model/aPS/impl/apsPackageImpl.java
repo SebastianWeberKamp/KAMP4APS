@@ -14,12 +14,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicCompone
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.impl.IdentifierPackageImpl;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.impl.InterfaceRepositoryPackageImpl;
@@ -41,6 +35,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.impl.StructureRepo
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -61,13 +57,6 @@ public class apsPackageImpl extends EPackageImpl implements apsPackage {
 	 * @generated
 	 */
 	private EClass plantEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass entityEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -115,6 +104,9 @@ public class apsPackageImpl extends EPackageImpl implements apsPackage {
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		BasicPackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
 		ComponentRepositoryPackageImpl theComponentRepositoryPackage = (ComponentRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) instanceof ComponentRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) : ComponentRepositoryPackage.eINSTANCE);
 		BusComponentsPackageImpl theBusComponentsPackage = (BusComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI) instanceof BusComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI) : BusComponentsPackage.eINSTANCE);
@@ -123,7 +115,6 @@ public class apsPackageImpl extends EPackageImpl implements apsPackage {
 		StructureRepositoryPackageImpl theStructureRepositoryPackage = (StructureRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) instanceof StructureRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) : StructureRepositoryPackage.eINSTANCE);
 		ModuleRepositoryPackageImpl theModuleRepositoryPackage = (ModuleRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) instanceof ModuleRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) : ModuleRepositoryPackage.eINSTANCE);
 		InterfaceRepositoryPackageImpl theInterfaceRepositoryPackage = (InterfaceRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) instanceof InterfaceRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) : InterfaceRepositoryPackage.eINSTANCE);
-		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theapsPackage.createPackageContents();
@@ -134,7 +125,6 @@ public class apsPackageImpl extends EPackageImpl implements apsPackage {
 		theStructureRepositoryPackage.createPackageContents();
 		theModuleRepositoryPackage.createPackageContents();
 		theInterfaceRepositoryPackage.createPackageContents();
-		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theapsPackage.initializePackageContents();
@@ -145,7 +135,6 @@ public class apsPackageImpl extends EPackageImpl implements apsPackage {
 		theStructureRepositoryPackage.initializePackageContents();
 		theModuleRepositoryPackage.initializePackageContents();
 		theInterfaceRepositoryPackage.initializePackageContents();
-		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theapsPackage.freeze();
@@ -215,15 +204,6 @@ public class apsPackageImpl extends EPackageImpl implements apsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getEntity() {
-		return entityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public apsFactory getapsFactory() {
 		return (apsFactory)getEFactoryInstance();
 	}
@@ -253,8 +233,6 @@ public class apsPackageImpl extends EPackageImpl implements apsPackage {
 		createEReference(plantEClass, PLANT__INTERFACE_REPOSITORY);
 		createEReference(plantEClass, PLANT__COMPONENT_REPOSITORY);
 		createEReference(plantEClass, PLANT__MODULE_REPOSITORY);
-
-		entityEClass = createEClass(ENTITY);
 	}
 
 	/**
@@ -288,7 +266,7 @@ public class apsPackageImpl extends EPackageImpl implements apsPackage {
 		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
 		ModuleRepositoryPackage theModuleRepositoryPackage = (ModuleRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
-		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
+		BasicPackage theBasicPackage = (BasicPackage)EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
 
 		// Add subpackages
 		getESubpackages().add(theComponentRepositoryPackage);
@@ -298,16 +276,13 @@ public class apsPackageImpl extends EPackageImpl implements apsPackage {
 		getESubpackages().add(theStructureRepositoryPackage);
 		getESubpackages().add(theModuleRepositoryPackage);
 		getESubpackages().add(theInterfaceRepositoryPackage);
-		getESubpackages().add(theIdentifierPackage);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		plantEClass.getESuperTypes().add(this.getEntity());
-		entityEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
-		entityEClass.getESuperTypes().add(theIdentifierPackage.getNamedElement());
+		plantEClass.getESuperTypes().add(theBasicPackage.getEntity());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(plantEClass, Plant.class, "Plant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -316,8 +291,6 @@ public class apsPackageImpl extends EPackageImpl implements apsPackage {
 		initEReference(getPlant_InterfaceRepository(), theInterfaceRepositoryPackage.getInterfaceRepository(), null, "interfaceRepository", null, 1, 1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_ComponentRepository(), theComponentRepositoryPackage.getComponentRepository(), null, "componentRepository", null, 1, 1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPlant_ModuleRepository(), theModuleRepositoryPackage.getModuleRepository(), null, "moduleRepository", null, 1, 1, Plant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(entityEClass, Entity.class, "Entity", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

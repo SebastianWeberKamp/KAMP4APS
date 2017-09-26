@@ -555,29 +555,6 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected VacuumGripperItemProvider vacuumGripperItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createVacuumGripperAdapter() {
-		if (vacuumGripperItemProvider == null) {
-			vacuumGripperItemProvider = new VacuumGripperItemProvider(this);
-		}
-
-		return vacuumGripperItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ConveyorBelt} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -713,29 +690,6 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 		}
 
 		return logicalWiringItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Potentiometer} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected PotentiometerItemProvider potentiometerItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Potentiometer}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createPotentiometerAdapter() {
-		if (potentiometerItemProvider == null) {
-			potentiometerItemProvider = new PotentiometerItemProvider(this);
-		}
-
-		return potentiometerItemProvider;
 	}
 
 	/**
@@ -1065,14 +1019,12 @@ public class ComponentRepositoryItemProviderAdapterFactory extends ComponentRepo
 		if (dispenserItemProvider != null) dispenserItemProvider.dispose();
 		if (bottleSeperatorItemProvider != null) bottleSeperatorItemProvider.dispose();
 		if (powerSupplyItemProvider != null) powerSupplyItemProvider.dispose();
-		if (vacuumGripperItemProvider != null) vacuumGripperItemProvider.dispose();
 		if (conveyorBeltItemProvider != null) conveyorBeltItemProvider.dispose();
 		if (frameItemProvider != null) frameItemProvider.dispose();
 		if (pusherItemProvider != null) pusherItemProvider.dispose();
 		if (turningTableItemProvider != null) turningTableItemProvider.dispose();
 		if (controllerItemProvider != null) controllerItemProvider.dispose();
 		if (logicalWiringItemProvider != null) logicalWiringItemProvider.dispose();
-		if (potentiometerItemProvider != null) potentiometerItemProvider.dispose();
 		if (vacuumSwitchItemProvider != null) vacuumSwitchItemProvider.dispose();
 		if (reedSwitchItemProvider != null) reedSwitchItemProvider.dispose();
 		if (powerSplitterItemProvider != null) powerSplitterItemProvider.dispose();

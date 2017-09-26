@@ -95,6 +95,29 @@ public class ModuleRepositoryItemProviderAdapterFactory extends ModuleRepository
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PotentiometerModule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PotentiometerModuleItemProvider potentiometerModuleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PotentiometerModule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPotentiometerModuleAdapter() {
+		if (potentiometerModuleItemProvider == null) {
+			potentiometerModuleItemProvider = new PotentiometerModuleItemProvider(this);
+		}
+
+		return potentiometerModuleItemProvider;
+	}
+
+	/**
 	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepository} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -348,6 +371,52 @@ public class ModuleRepositoryItemProviderAdapterFactory extends ModuleRepository
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.VacuumGripperModule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected VacuumGripperModuleItemProvider vacuumGripperModuleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.VacuumGripperModule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createVacuumGripperModuleAdapter() {
+		if (vacuumGripperModuleItemProvider == null) {
+			vacuumGripperModuleItemProvider = new VacuumGripperModuleItemProvider(this);
+		}
+
+		return vacuumGripperModuleItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MonostableCylinderModule} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected MonostableCylinderModuleItemProvider monostableCylinderModuleItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MonostableCylinderModule}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createMonostableCylinderModuleAdapter() {
+		if (monostableCylinderModuleItemProvider == null) {
+			monostableCylinderModuleItemProvider = new MonostableCylinderModuleItemProvider(this);
+		}
+
+		return monostableCylinderModuleItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -447,6 +516,7 @@ public class ModuleRepositoryItemProviderAdapterFactory extends ModuleRepository
 	 */
 	public void dispose() {
 		if (microswitchModuleItemProvider != null) microswitchModuleItemProvider.dispose();
+		if (potentiometerModuleItemProvider != null) potentiometerModuleItemProvider.dispose();
 		if (moduleRepositoryItemProvider != null) moduleRepositoryItemProvider.dispose();
 		if (moduleItemProvider != null) moduleItemProvider.dispose();
 		if (rampModuleItemProvider != null) rampModuleItemProvider.dispose();
@@ -458,6 +528,8 @@ public class ModuleRepositoryItemProviderAdapterFactory extends ModuleRepository
 		if (presenceSensorModuleItemProvider != null) presenceSensorModuleItemProvider.dispose();
 		if (pressureSensorModuleItemProvider != null) pressureSensorModuleItemProvider.dispose();
 		if (conveyorBeltModuleItemProvider != null) conveyorBeltModuleItemProvider.dispose();
+		if (vacuumGripperModuleItemProvider != null) vacuumGripperModuleItemProvider.dispose();
+		if (monostableCylinderModuleItemProvider != null) monostableCylinderModuleItemProvider.dispose();
 	}
 
 }

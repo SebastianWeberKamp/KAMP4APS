@@ -15,6 +15,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.StructureRepositor
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
+import edu.kit.ipd.sdq.kamp4aps.model.basic.impl.EntityImpl;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

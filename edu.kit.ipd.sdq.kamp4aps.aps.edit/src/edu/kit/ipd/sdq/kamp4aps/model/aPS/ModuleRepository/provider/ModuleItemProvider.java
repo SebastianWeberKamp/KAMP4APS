@@ -17,7 +17,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.provider.EntityItemProvider;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.EntityItemProvider;
 
 import java.util.Collection;
 import java.util.List;
@@ -212,6 +212,11 @@ public class ModuleItemProvider extends EntityItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ModuleRepositoryPackage.Literals.MODULE__MODULES,
+				 ModuleRepositoryFactory.eINSTANCE.createPotentiometerModule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModuleRepositoryPackage.Literals.MODULE__MODULES,
 				 ModuleRepositoryFactory.eINSTANCE.createRampModule()));
 
 		newChildDescriptors.add
@@ -253,6 +258,21 @@ public class ModuleItemProvider extends EntityItemProvider {
 			(createChildParameter
 				(ModuleRepositoryPackage.Literals.MODULE__MODULES,
 				 ModuleRepositoryFactory.eINSTANCE.createConveyorBeltModule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModuleRepositoryPackage.Literals.MODULE__MODULES,
+				 ModuleRepositoryFactory.eINSTANCE.createVacuumGripperModule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModuleRepositoryPackage.Literals.MODULE__MODULES,
+				 ModuleRepositoryFactory.eINSTANCE.createMonostableCylinderModule()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModuleRepositoryPackage.Literals.MODULE__MODULES,
+				 ComponentRepositoryFactory.eINSTANCE.createTurningTable()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -362,11 +382,6 @@ public class ModuleItemProvider extends EntityItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ModuleRepositoryPackage.Literals.MODULE__COMPONENTS,
-				 ComponentRepositoryFactory.eINSTANCE.createVacuumGripper()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModuleRepositoryPackage.Literals.MODULE__COMPONENTS,
 				 ComponentRepositoryFactory.eINSTANCE.createConveyorBelt()));
 
 		newChildDescriptors.add
@@ -382,22 +397,12 @@ public class ModuleItemProvider extends EntityItemProvider {
 		newChildDescriptors.add
 			(createChildParameter
 				(ModuleRepositoryPackage.Literals.MODULE__COMPONENTS,
-				 ComponentRepositoryFactory.eINSTANCE.createTurningTable()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModuleRepositoryPackage.Literals.MODULE__COMPONENTS,
 				 ComponentRepositoryFactory.eINSTANCE.createController()));
 
 		newChildDescriptors.add
 			(createChildParameter
 				(ModuleRepositoryPackage.Literals.MODULE__COMPONENTS,
 				 ComponentRepositoryFactory.eINSTANCE.createLogicalWiring()));
-
-		newChildDescriptors.add
-			(createChildParameter
-				(ModuleRepositoryPackage.Literals.MODULE__COMPONENTS,
-				 ComponentRepositoryFactory.eINSTANCE.createPotentiometer()));
 
 		newChildDescriptors.add
 			(createChildParameter
@@ -518,6 +523,11 @@ public class ModuleItemProvider extends EntityItemProvider {
 			(createChildParameter
 				(ModuleRepositoryPackage.Literals.MODULE__COMPONENTS,
 				 ElectronicComponentsFactory.eINSTANCE.createMicroSwitch()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(ModuleRepositoryPackage.Literals.MODULE__COMPONENTS,
+				 ElectronicComponentsFactory.eINSTANCE.createPotentiometer()));
 
 		newChildDescriptors.add
 			(createChildParameter

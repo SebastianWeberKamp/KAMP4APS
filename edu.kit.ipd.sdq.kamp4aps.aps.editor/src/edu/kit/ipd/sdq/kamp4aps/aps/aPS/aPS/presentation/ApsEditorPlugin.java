@@ -2,6 +2,8 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.aps.aPS.aPS.presentation;
 
+import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.BasicEditPlugin;
+
 import org.eclipse.emf.common.EMFPlugin;
 
 import org.eclipse.emf.common.ui.EclipseUIPlugin;
@@ -40,6 +42,7 @@ public final class ApsEditorPlugin extends EMFPlugin {
 	public ApsEditorPlugin() {
 		super
 			(new ResourceLocator [] {
+				BasicEditPlugin.INSTANCE,
 			});
 	}
 

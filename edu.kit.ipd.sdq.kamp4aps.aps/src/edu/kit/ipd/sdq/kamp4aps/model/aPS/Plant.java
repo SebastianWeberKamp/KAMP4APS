@@ -10,6 +10,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepository;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

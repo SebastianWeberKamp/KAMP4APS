@@ -77,14 +77,12 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 			case ComponentRepositoryPackage.DISPENSER: return createDispenser();
 			case ComponentRepositoryPackage.BOTTLE_SEPERATOR: return createBottleSeperator();
 			case ComponentRepositoryPackage.POWER_SUPPLY: return createPowerSupply();
-			case ComponentRepositoryPackage.VACUUM_GRIPPER: return createVacuumGripper();
 			case ComponentRepositoryPackage.CONVEYOR_BELT: return createConveyorBelt();
 			case ComponentRepositoryPackage.FRAME: return createFrame();
 			case ComponentRepositoryPackage.PUSHER: return createPusher();
 			case ComponentRepositoryPackage.TURNING_TABLE: return createTurningTable();
 			case ComponentRepositoryPackage.CONTROLLER: return createController();
 			case ComponentRepositoryPackage.LOGICAL_WIRING: return createLogicalWiring();
-			case ComponentRepositoryPackage.POTENTIOMETER: return createPotentiometer();
 			case ComponentRepositoryPackage.VACUUM_SWITCH: return createVacuumSwitch();
 			case ComponentRepositoryPackage.REED_SWITCH: return createReedSwitch();
 			case ComponentRepositoryPackage.POWER_SPLITTER: return createPowerSplitter();
@@ -314,16 +312,6 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VacuumGripper createVacuumGripper() {
-		VacuumGripperImpl vacuumGripper = new VacuumGripperImpl();
-		return vacuumGripper;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public ConveyorBelt createConveyorBelt() {
 		ConveyorBeltImpl conveyorBelt = new ConveyorBeltImpl();
 		return conveyorBelt;
@@ -377,16 +365,6 @@ public class ComponentRepositoryFactoryImpl extends EFactoryImpl implements Comp
 	public LogicalWiring createLogicalWiring() {
 		LogicalWiringImpl logicalWiring = new LogicalWiringImpl();
 		return logicalWiring;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Potentiometer createPotentiometer() {
-		PotentiometerImpl potentiometer = new PotentiometerImpl();
-		return potentiometer;
 	}
 
 	/**

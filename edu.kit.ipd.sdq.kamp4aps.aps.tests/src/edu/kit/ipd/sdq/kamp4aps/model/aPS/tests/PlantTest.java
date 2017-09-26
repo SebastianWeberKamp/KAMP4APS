@@ -5,6 +5,8 @@ package edu.kit.ipd.sdq.kamp4aps.model.aPS.tests;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.Plant;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsFactory;
 
+import junit.framework.TestCase;
+
 import junit.textui.TestRunner;
 
 /**
@@ -13,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class PlantTest extends EntityTest {
+public class PlantTest extends TestCase {
+
+	/**
+	 * The fixture for this Plant test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Plant fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -35,14 +45,23 @@ public class PlantTest extends EntityTest {
 	}
 
 	/**
+	 * Sets the fixture for this Plant test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Plant fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Plant test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Plant getFixture() {
-		return (Plant)fixture;
+		return fixture;
 	}
 
 	/**

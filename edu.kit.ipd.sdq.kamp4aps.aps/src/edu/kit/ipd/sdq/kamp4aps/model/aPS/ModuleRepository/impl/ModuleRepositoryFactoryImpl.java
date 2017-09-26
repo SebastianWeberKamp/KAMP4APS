@@ -57,6 +57,7 @@ public class ModuleRepositoryFactoryImpl extends EFactoryImpl implements ModuleR
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case ModuleRepositoryPackage.MICROSWITCH_MODULE: return createMicroswitchModule();
+			case ModuleRepositoryPackage.POTENTIOMETER_MODULE: return createPotentiometerModule();
 			case ModuleRepositoryPackage.MODULE_REPOSITORY: return createModuleRepository();
 			case ModuleRepositoryPackage.MODULE: return createModule();
 			case ModuleRepositoryPackage.RAMP_MODULE: return createRampModule();
@@ -68,6 +69,8 @@ public class ModuleRepositoryFactoryImpl extends EFactoryImpl implements ModuleR
 			case ModuleRepositoryPackage.PRESENCE_SENSOR_MODULE: return createPresenceSensorModule();
 			case ModuleRepositoryPackage.PRESSURE_SENSOR_MODULE: return createPressureSensorModule();
 			case ModuleRepositoryPackage.CONVEYOR_BELT_MODULE: return createConveyorBeltModule();
+			case ModuleRepositoryPackage.VACUUM_GRIPPER_MODULE: return createVacuumGripperModule();
+			case ModuleRepositoryPackage.MONOSTABLE_CYLINDER_MODULE: return createMonostableCylinderModule();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -81,6 +84,16 @@ public class ModuleRepositoryFactoryImpl extends EFactoryImpl implements ModuleR
 	public MicroswitchModule createMicroswitchModule() {
 		MicroswitchModuleImpl microswitchModule = new MicroswitchModuleImpl();
 		return microswitchModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PotentiometerModule createPotentiometerModule() {
+		PotentiometerModuleImpl potentiometerModule = new PotentiometerModuleImpl();
+		return potentiometerModule;
 	}
 
 	/**
@@ -191,6 +204,26 @@ public class ModuleRepositoryFactoryImpl extends EFactoryImpl implements ModuleR
 	public ConveyorBeltModule createConveyorBeltModule() {
 		ConveyorBeltModuleImpl conveyorBeltModule = new ConveyorBeltModuleImpl();
 		return conveyorBeltModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VacuumGripperModule createVacuumGripperModule() {
+		VacuumGripperModuleImpl vacuumGripperModule = new VacuumGripperModuleImpl();
+		return vacuumGripperModule;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public MonostableCylinderModule createMonostableCylinderModule() {
+		MonostableCylinderModuleImpl monostableCylinderModule = new MonostableCylinderModuleImpl();
+		return monostableCylinderModule;
 	}
 
 	/**

@@ -5,10 +5,10 @@ package edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.PowerSupply;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
 
 import java.util.Collection;
 
@@ -40,7 +40,7 @@ public class PowerSupplyImpl extends ComponentImpl implements PowerSupply {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Identifier> parentElement;
+	protected EList<Entity> parentElement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -66,9 +66,9 @@ public class PowerSupplyImpl extends ComponentImpl implements PowerSupply {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Identifier> getParentElement() {
+	public EList<Entity> getParentElement() {
 		if (parentElement == null) {
-			parentElement = new EObjectResolvingEList<Identifier>(Identifier.class, this, ComponentRepositoryPackage.POWER_SUPPLY__PARENT_ELEMENT);
+			parentElement = new EObjectResolvingEList<Entity>(Entity.class, this, ComponentRepositoryPackage.POWER_SUPPLY__PARENT_ELEMENT);
 		}
 		return parentElement;
 	}
@@ -98,7 +98,7 @@ public class PowerSupplyImpl extends ComponentImpl implements PowerSupply {
 		switch (featureID) {
 			case ComponentRepositoryPackage.POWER_SUPPLY__PARENT_ELEMENT:
 				getParentElement().clear();
-				getParentElement().addAll((Collection<? extends Identifier>)newValue);
+				getParentElement().addAll((Collection<? extends Entity>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

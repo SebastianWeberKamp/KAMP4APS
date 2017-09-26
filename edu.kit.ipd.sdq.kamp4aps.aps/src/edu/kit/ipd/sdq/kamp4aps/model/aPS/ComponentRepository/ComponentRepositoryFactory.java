@@ -211,15 +211,6 @@ public interface ComponentRepositoryFactory extends EFactory {
 	PowerSupply createPowerSupply();
 
 	/**
-	 * Returns a new object of class '<em>Vacuum Gripper</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Vacuum Gripper</em>'.
-	 * @generated
-	 */
-	VacuumGripper createVacuumGripper();
-
-	/**
 	 * Returns a new object of class '<em>Conveyor Belt</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -272,15 +263,6 @@ public interface ComponentRepositoryFactory extends EFactory {
 	 * @generated
 	 */
 	LogicalWiring createLogicalWiring();
-
-	/**
-	 * Returns a new object of class '<em>Potentiometer</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Potentiometer</em>'.
-	 * @generated
-	 */
-	Potentiometer createPotentiometer();
 
 	/**
 	 * Returns a new object of class '<em>Vacuum Switch</em>'.

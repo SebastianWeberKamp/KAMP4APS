@@ -2,12 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.util;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.*;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -77,6 +76,10 @@ public class ModuleRepositoryAdapterFactory extends AdapterFactoryImpl {
 				return createMicroswitchModuleAdapter();
 			}
 			@Override
+			public Adapter casePotentiometerModule(PotentiometerModule object) {
+				return createPotentiometerModuleAdapter();
+			}
+			@Override
 			public Adapter caseModuleRepository(ModuleRepository object) {
 				return createModuleRepositoryAdapter();
 			}
@@ -121,6 +124,14 @@ public class ModuleRepositoryAdapterFactory extends AdapterFactoryImpl {
 				return createConveyorBeltModuleAdapter();
 			}
 			@Override
+			public Adapter caseVacuumGripperModule(VacuumGripperModule object) {
+				return createVacuumGripperModuleAdapter();
+			}
+			@Override
+			public Adapter caseMonostableCylinderModule(MonostableCylinderModule object) {
+				return createMonostableCylinderModuleAdapter();
+			}
+			@Override
 			public Adapter caseIdentifier(Identifier object) {
 				return createIdentifierAdapter();
 			}
@@ -163,6 +174,20 @@ public class ModuleRepositoryAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createMicroswitchModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PotentiometerModule <em>Potentiometer Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PotentiometerModule
+	 * @generated
+	 */
+	public Adapter createPotentiometerModuleAdapter() {
 		return null;
 	}
 
@@ -321,13 +346,41 @@ public class ModuleRepositoryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier <em>Identifier</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.VacuumGripperModule <em>Vacuum Gripper Module</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.VacuumGripperModule
+	 * @generated
+	 */
+	public Adapter createVacuumGripperModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MonostableCylinderModule <em>Monostable Cylinder Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MonostableCylinderModule
+	 * @generated
+	 */
+	public Adapter createMonostableCylinderModuleAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.basic.Identifier <em>Identifier</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.basic.Identifier
 	 * @generated
 	 */
 	public Adapter createIdentifierAdapter() {
@@ -335,13 +388,13 @@ public class ModuleRepositoryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement <em>Named Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement <em>Named Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement
 	 * @generated
 	 */
 	public Adapter createNamedElementAdapter() {
@@ -349,13 +402,13 @@ public class ModuleRepositoryAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity <em>Entity</em>}'.
+	 * Creates a new adapter for an object of class '{@link edu.kit.ipd.sdq.kamp4aps.model.basic.Entity <em>Entity</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.basic.Entity
 	 * @generated
 	 */
 	public Adapter createEntityAdapter() {

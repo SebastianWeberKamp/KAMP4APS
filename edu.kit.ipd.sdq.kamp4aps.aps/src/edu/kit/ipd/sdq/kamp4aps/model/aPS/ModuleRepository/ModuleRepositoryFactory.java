@@ -31,6 +31,15 @@ public interface ModuleRepositoryFactory extends EFactory {
 	MicroswitchModule createMicroswitchModule();
 
 	/**
+	 * Returns a new object of class '<em>Potentiometer Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Potentiometer Module</em>'.
+	 * @generated
+	 */
+	PotentiometerModule createPotentiometerModule();
+
+	/**
 	 * Returns a new object of class '<em>Module Repository</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -128,6 +137,24 @@ public interface ModuleRepositoryFactory extends EFactory {
 	 * @generated
 	 */
 	ConveyorBeltModule createConveyorBeltModule();
+
+	/**
+	 * Returns a new object of class '<em>Vacuum Gripper Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Vacuum Gripper Module</em>'.
+	 * @generated
+	 */
+	VacuumGripperModule createVacuumGripperModule();
+
+	/**
+	 * Returns a new object of class '<em>Monostable Cylinder Module</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Monostable Cylinder Module</em>'.
+	 * @generated
+	 */
+	MonostableCylinderModule createMonostableCylinderModule();
 
 	/**
 	 * Returns the package supported by this factory.

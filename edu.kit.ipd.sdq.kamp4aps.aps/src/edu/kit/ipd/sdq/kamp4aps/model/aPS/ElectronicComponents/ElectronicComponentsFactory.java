@@ -58,6 +58,15 @@ public interface ElectronicComponentsFactory extends EFactory {
 	MicroSwitch createMicroSwitch();
 
 	/**
+	 * Returns a new object of class '<em>Potentiometer</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Potentiometer</em>'.
+	 * @generated
+	 */
+	Potentiometer createPotentiometer();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

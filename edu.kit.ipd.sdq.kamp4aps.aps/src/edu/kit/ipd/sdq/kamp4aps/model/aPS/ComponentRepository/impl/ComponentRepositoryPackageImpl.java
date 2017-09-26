@@ -33,7 +33,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Panel;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Pipe;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.PneumaticPipe;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.PneumaticSplitter;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Potentiometer;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.PowerCable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.PowerSplitter;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.PowerSupply;
@@ -50,7 +49,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.SimpleMotor;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Splitter;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Tank;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumSwitch;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Valve;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.WaterSplitter;
@@ -58,10 +56,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.WaterSplitter;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicComponentsPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.impl.IdentifierPackageImpl;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
 
@@ -82,6 +76,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.impl.StructureRepo
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.apsPackageImpl;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -304,13 +300,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vacuumGripperEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass conveyorBeltEClass = null;
 
 	/**
@@ -347,13 +336,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * @generated
 	 */
 	private EClass logicalWiringEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass potentiometerEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -464,6 +446,9 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		BasicPackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
 		apsPackageImpl theapsPackage = (apsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) instanceof apsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) : apsPackage.eINSTANCE);
 		BusComponentsPackageImpl theBusComponentsPackage = (BusComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI) instanceof BusComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI) : BusComponentsPackage.eINSTANCE);
@@ -472,7 +457,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		StructureRepositoryPackageImpl theStructureRepositoryPackage = (StructureRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) instanceof StructureRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) : StructureRepositoryPackage.eINSTANCE);
 		ModuleRepositoryPackageImpl theModuleRepositoryPackage = (ModuleRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) instanceof ModuleRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI) : ModuleRepositoryPackage.eINSTANCE);
 		InterfaceRepositoryPackageImpl theInterfaceRepositoryPackage = (InterfaceRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) instanceof InterfaceRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) : InterfaceRepositoryPackage.eINSTANCE);
-		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theComponentRepositoryPackage.createPackageContents();
@@ -483,7 +467,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		theStructureRepositoryPackage.createPackageContents();
 		theModuleRepositoryPackage.createPackageContents();
 		theInterfaceRepositoryPackage.createPackageContents();
-		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theComponentRepositoryPackage.initializePackageContents();
@@ -494,7 +477,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		theStructureRepositoryPackage.initializePackageContents();
 		theModuleRepositoryPackage.initializePackageContents();
 		theInterfaceRepositoryPackage.initializePackageContents();
-		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theComponentRepositoryPackage.freeze();
@@ -1059,60 +1041,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVacuumGripper() {
-		return vacuumGripperEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVacuumGripper_MountedTo() {
-		return (EReference)vacuumGripperEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVacuumGripper_GripperPart() {
-		return (EReference)vacuumGripperEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVacuumGripper_Valve() {
-		return (EReference)vacuumGripperEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVacuumGripper_VacuumSwitch() {
-		return (EReference)vacuumGripperEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVacuumGripper_BusSlave() {
-		return (EReference)vacuumGripperEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getConveyorBelt() {
 		return conveyorBeltEClass;
 	}
@@ -1331,15 +1259,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 	 */
 	public EReference getLogicalWiring_BusCable() {
 		return (EReference)logicalWiringEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getPotentiometer() {
-		return potentiometerEClass;
 	}
 
 	/**
@@ -1631,13 +1550,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 
 		powerSupplyEClass = createEClass(POWER_SUPPLY);
 
-		vacuumGripperEClass = createEClass(VACUUM_GRIPPER);
-		createEReference(vacuumGripperEClass, VACUUM_GRIPPER__MOUNTED_TO);
-		createEReference(vacuumGripperEClass, VACUUM_GRIPPER__GRIPPER_PART);
-		createEReference(vacuumGripperEClass, VACUUM_GRIPPER__VALVE);
-		createEReference(vacuumGripperEClass, VACUUM_GRIPPER__VACUUM_SWITCH);
-		createEReference(vacuumGripperEClass, VACUUM_GRIPPER__BUS_SLAVE);
-
 		conveyorBeltEClass = createEClass(CONVEYOR_BELT);
 		createEReference(conveyorBeltEClass, CONVEYOR_BELT__MOUNTED_TO);
 		createEReference(conveyorBeltEClass, CONVEYOR_BELT__FRAME);
@@ -1668,8 +1580,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 
 		logicalWiringEClass = createEClass(LOGICAL_WIRING);
 		createEReference(logicalWiringEClass, LOGICAL_WIRING__BUS_CABLE);
-
-		potentiometerEClass = createEClass(POTENTIOMETER);
 
 		vacuumSwitchEClass = createEClass(VACUUM_SWITCH);
 
@@ -1724,21 +1634,20 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		apsPackage theapsPackage = (apsPackage)EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI);
+		BasicPackage theBasicPackage = (BasicPackage)EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
 		StructureRepositoryPackage theStructureRepositoryPackage = (StructureRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI);
 		ModuleRepositoryPackage theModuleRepositoryPackage = (ModuleRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ModuleRepositoryPackage.eNS_URI);
 		ElectronicComponentsPackage theElectronicComponentsPackage = (ElectronicComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(ElectronicComponentsPackage.eNS_URI);
 		MechanicalComponentsPackage theMechanicalComponentsPackage = (MechanicalComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI);
 		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
-		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		componentEClass.getESuperTypes().add(theapsPackage.getEntity());
+		componentEClass.getESuperTypes().add(theBasicPackage.getEntity());
 		panelEClass.getESuperTypes().add(this.getComponent());
 		operationPanelEClass.getESuperTypes().add(this.getPanel());
 		motorEClass.getESuperTypes().add(this.getComponent());
@@ -1768,14 +1677,12 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		splitterEClass.getESuperTypes().add(this.getComponent());
 		powerSupplyEClass.getESuperTypes().add(this.getComponent());
 		powerSupplyEClass.getESuperTypes().add(theInterfaceRepositoryPackage.getInterface());
-		vacuumGripperEClass.getESuperTypes().add(this.getComponent());
 		conveyorBeltEClass.getESuperTypes().add(this.getComponent());
 		frameEClass.getESuperTypes().add(this.getMechanicalAssembly());
 		pusherEClass.getESuperTypes().add(this.getComponent());
-		turningTableEClass.getESuperTypes().add(this.getComponent());
+		turningTableEClass.getESuperTypes().add(theModuleRepositoryPackage.getModule());
 		controllerEClass.getESuperTypes().add(this.getComponent());
 		logicalWiringEClass.getESuperTypes().add(this.getComponent());
-		potentiometerEClass.getESuperTypes().add(theElectronicComponentsPackage.getElectronicPart());
 		vacuumSwitchEClass.getESuperTypes().add(theElectronicComponentsPackage.getSwitch());
 		reedSwitchEClass.getESuperTypes().add(theElectronicComponentsPackage.getSwitch());
 		powerSplitterEClass.getESuperTypes().add(this.getSplitter());
@@ -1783,7 +1690,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		pneumaticSplitterEClass.getESuperTypes().add(this.getSplitter());
 		cylinderPartEClass.getESuperTypes().add(theMechanicalComponentsPackage.getMechanicalPart());
 		monostableCylinderEClass.getESuperTypes().add(this.getCylinder());
-		componentRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
+		componentRepositoryEClass.getESuperTypes().add(theBasicPackage.getEntity());
 		fixtureEClass.getESuperTypes().add(this.getComponent());
 
 		// Initialize classes, features, and operations; add parameters
@@ -1877,13 +1784,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 
 		initEClass(powerSupplyEClass, PowerSupply.class, "PowerSupply", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(vacuumGripperEClass, VacuumGripper.class, "VacuumGripper", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVacuumGripper_MountedTo(), theStructureRepositoryPackage.getCrane(), theStructureRepositoryPackage.getCrane_Vacuumgripper(), "mountedTo", null, 1, 1, VacuumGripper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVacuumGripper_GripperPart(), theMechanicalComponentsPackage.getGripperPart(), null, "gripperPart", null, 1, 1, VacuumGripper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVacuumGripper_Valve(), this.getRegularValve(), null, "valve", null, 1, 1, VacuumGripper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVacuumGripper_VacuumSwitch(), this.getVacuumSwitch(), null, "vacuumSwitch", null, 1, 1, VacuumGripper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVacuumGripper_BusSlave(), theBusComponentsPackage.getProfibusDPSlave(), null, "busSlave", null, 1, -1, VacuumGripper.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
 		initEClass(conveyorBeltEClass, ConveyorBelt.class, "ConveyorBelt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConveyorBelt_MountedTo(), theStructureRepositoryPackage.getConveyor(), theStructureRepositoryPackage.getConveyor_Belts(), "mountedTo", null, 1, 1, ConveyorBelt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConveyorBelt_Frame(), this.getFrame(), null, "frame", null, 1, 1, ConveyorBelt.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1906,7 +1806,7 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 		initEReference(getTurningTable_BusSlave(), theBusComponentsPackage.getBusSlave(), null, "busSlave", null, 1, 1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTurningTable_BusBox(), theBusComponentsPackage.getBusBox(), null, "busBox", null, 1, 1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTurningTable_BusCable(), theBusComponentsPackage.getBusCable(), null, "busCable", null, 1, -1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getTurningTable_Potentiometer(), this.getPotentiometer(), null, "potentiometer", null, 1, -1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTurningTable_Potentiometer(), theElectronicComponentsPackage.getPotentiometer(), null, "potentiometer", null, 1, -1, TurningTable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(controllerEClass, Controller.class, "Controller", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getController_Powersupply(), this.getPowerSupply(), null, "powersupply", null, 1, 1, Controller.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1914,8 +1814,6 @@ public class ComponentRepositoryPackageImpl extends EPackageImpl implements Comp
 
 		initEClass(logicalWiringEClass, LogicalWiring.class, "LogicalWiring", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getLogicalWiring_BusCable(), theBusComponentsPackage.getBusCable(), null, "busCable", null, 1, -1, LogicalWiring.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(potentiometerEClass, Potentiometer.class, "Potentiometer", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vacuumSwitchEClass, VacuumSwitch.class, "VacuumSwitch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

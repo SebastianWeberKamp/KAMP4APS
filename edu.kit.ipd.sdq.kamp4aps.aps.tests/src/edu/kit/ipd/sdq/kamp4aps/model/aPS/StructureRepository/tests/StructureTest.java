@@ -5,7 +5,7 @@ package edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.tests;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.StructureRepositoryFactory;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.tests.EntityTest;
+import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
@@ -15,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class StructureTest extends EntityTest {
+public class StructureTest extends TestCase {
+
+	/**
+	 * The fixture for this Structure test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Structure fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -37,14 +45,23 @@ public class StructureTest extends EntityTest {
 	}
 
 	/**
+	 * Sets the fixture for this Structure test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Structure fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Structure test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Structure getFixture() {
-		return (Structure)fixture;
+		return fixture;
 	}
 
 	/**

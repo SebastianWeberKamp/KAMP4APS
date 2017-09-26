@@ -5,6 +5,8 @@ package edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.tests;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
 
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.tests.ModuleTest;
+
 import junit.textui.TestRunner;
 
 /**
@@ -13,7 +15,7 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class TurningTableTest extends ComponentTest {
+public class TurningTableTest extends ModuleTest {
 
 	/**
 	 * <!-- begin-user-doc -->

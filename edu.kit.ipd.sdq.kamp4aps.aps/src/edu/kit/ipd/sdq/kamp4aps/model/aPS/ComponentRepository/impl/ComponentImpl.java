@@ -13,7 +13,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPacka
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.StructureRepositoryPackage;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.EntityImpl;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.impl.EntityImpl;
 
 import java.util.Collection;
 

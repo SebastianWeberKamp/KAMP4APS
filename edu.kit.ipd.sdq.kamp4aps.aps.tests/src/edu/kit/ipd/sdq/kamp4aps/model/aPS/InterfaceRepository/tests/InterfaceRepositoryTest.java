@@ -2,10 +2,10 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.tests;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.tests.IdentifierTest;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryFactory;
+
+import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
@@ -15,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class InterfaceRepositoryTest extends IdentifierTest {
+public class InterfaceRepositoryTest extends TestCase {
+
+	/**
+	 * The fixture for this Interface Repository test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected InterfaceRepository fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -37,14 +45,23 @@ public class InterfaceRepositoryTest extends IdentifierTest {
 	}
 
 	/**
+	 * Sets the fixture for this Interface Repository test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(InterfaceRepository fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Interface Repository test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected InterfaceRepository getFixture() {
-		return (InterfaceRepository)fixture;
+		return fixture;
 	}
 
 	/**

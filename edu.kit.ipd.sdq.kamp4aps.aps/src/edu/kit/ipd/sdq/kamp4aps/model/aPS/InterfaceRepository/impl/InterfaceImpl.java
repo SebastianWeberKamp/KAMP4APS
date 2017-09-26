@@ -2,12 +2,12 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.impl;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.EntityImpl;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.impl.EntityImpl;
 
 import java.util.Collection;
 
@@ -39,7 +39,7 @@ public class InterfaceImpl extends EntityImpl implements Interface {
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Identifier> parentElement;
+	protected EList<Entity> parentElement;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -65,9 +65,9 @@ public class InterfaceImpl extends EntityImpl implements Interface {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Identifier> getParentElement() {
+	public EList<Entity> getParentElement() {
 		if (parentElement == null) {
-			parentElement = new EObjectResolvingEList<Identifier>(Identifier.class, this, InterfaceRepositoryPackage.INTERFACE__PARENT_ELEMENT);
+			parentElement = new EObjectResolvingEList<Entity>(Entity.class, this, InterfaceRepositoryPackage.INTERFACE__PARENT_ELEMENT);
 		}
 		return parentElement;
 	}
@@ -97,7 +97,7 @@ public class InterfaceImpl extends EntityImpl implements Interface {
 		switch (featureID) {
 			case InterfaceRepositoryPackage.INTERFACE__PARENT_ELEMENT:
 				getParentElement().clear();
-				getParentElement().addAll((Collection<? extends Identifier>)newValue);
+				getParentElement().addAll((Collection<? extends Entity>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

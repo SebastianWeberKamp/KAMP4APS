@@ -2,11 +2,11 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.impl.IdentifierImpl;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.impl.EntityImpl;
 
 import java.util.Collection;
 
@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class ModuleRepositoryImpl extends IdentifierImpl implements ModuleRepository {
+public class ModuleRepositoryImpl extends EntityImpl implements ModuleRepository {
 	/**
 	 * The cached value of the '{@link #getAllModulesInPlant() <em>All Modules In Plant</em>}' reference list.
 	 * <!-- begin-user-doc -->

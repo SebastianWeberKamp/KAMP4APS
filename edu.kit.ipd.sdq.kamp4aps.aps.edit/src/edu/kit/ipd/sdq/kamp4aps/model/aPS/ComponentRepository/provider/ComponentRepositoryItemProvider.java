@@ -8,7 +8,7 @@ import edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider.ApsEditPlugin;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.provider.IdentifierItemProvider;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.EntityItemProvider;
 
 import java.util.Collection;
 import java.util.List;
@@ -27,7 +27,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComponentRepositoryItemProvider extends IdentifierItemProvider {
+public class ComponentRepositoryItemProvider extends EntityItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
@@ -95,7 +95,7 @@ public class ComponentRepositoryItemProvider extends IdentifierItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((ComponentRepository)object).getId();
+		String label = ((ComponentRepository)object).getName();
 		return label == null || label.length() == 0 ?
 			getString("_UI_ComponentRepository_type") :
 			getString("_UI_ComponentRepository_type") + " " + label;

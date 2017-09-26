@@ -164,6 +164,29 @@ public class ElectronicComponentsItemProviderAdapterFactory extends ElectronicCo
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.Potentiometer} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PotentiometerItemProvider potentiometerItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.Potentiometer}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPotentiometerAdapter() {
+		if (potentiometerItemProvider == null) {
+			potentiometerItemProvider = new PotentiometerItemProvider(this);
+		}
+
+		return potentiometerItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -266,6 +289,7 @@ public class ElectronicComponentsItemProviderAdapterFactory extends ElectronicCo
 		if (ledItemProvider != null) ledItemProvider.dispose();
 		if (buttonItemProvider != null) buttonItemProvider.dispose();
 		if (microSwitchItemProvider != null) microSwitchItemProvider.dispose();
+		if (potentiometerItemProvider != null) potentiometerItemProvider.dispose();
 	}
 
 }

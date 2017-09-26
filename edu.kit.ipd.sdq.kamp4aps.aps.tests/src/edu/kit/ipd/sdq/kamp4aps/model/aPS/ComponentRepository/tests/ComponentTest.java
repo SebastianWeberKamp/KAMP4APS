@@ -5,7 +5,7 @@ package edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.tests;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryFactory;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.tests.EntityTest;
+import junit.framework.TestCase;
 
 import junit.textui.TestRunner;
 
@@ -15,7 +15,15 @@ import junit.textui.TestRunner;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ComponentTest extends EntityTest {
+public class ComponentTest extends TestCase {
+
+	/**
+	 * The fixture for this Component test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected Component fixture = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -37,14 +45,23 @@ public class ComponentTest extends EntityTest {
 	}
 
 	/**
+	 * Sets the fixture for this Component test case.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void setFixture(Component fixture) {
+		this.fixture = fixture;
+	}
+
+	/**
 	 * Returns the fixture for this Component test case.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
 	protected Component getFixture() {
-		return (Component)fixture;
+		return fixture;
 	}
 
 	/**

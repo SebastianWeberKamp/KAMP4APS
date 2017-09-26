@@ -2,9 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -76,7 +74,16 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_REPOSITORY__ID = IdentifierPackage.IDENTIFIER__ID;
+	int INTERFACE_REPOSITORY__ID = BasicPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERFACE_REPOSITORY__NAME = BasicPackage.ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>All Interfaces In Plant</b></em>' containment reference list.
@@ -85,7 +92,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int INTERFACE_REPOSITORY__ALL_INTERFACES_IN_PLANT = BasicPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Interface Repository</em>' class.
@@ -94,7 +101,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_REPOSITORY_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int INTERFACE_REPOSITORY_FEATURE_COUNT = BasicPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Interface Repository</em>' class.
@@ -103,7 +110,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_REPOSITORY_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
+	int INTERFACE_REPOSITORY_OPERATION_COUNT = BasicPackage.ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.impl.InterfaceImpl <em>Interface</em>}' class.
@@ -122,7 +129,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE__ID = apsPackage.ENTITY__ID;
+	int INTERFACE__ID = BasicPackage.ENTITY__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -131,7 +138,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE__NAME = apsPackage.ENTITY__NAME;
+	int INTERFACE__NAME = BasicPackage.ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent Element</b></em>' reference list.
@@ -140,7 +147,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE__PARENT_ELEMENT = apsPackage.ENTITY_FEATURE_COUNT + 0;
+	int INTERFACE__PARENT_ELEMENT = BasicPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Interface</em>' class.
@@ -149,7 +156,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_FEATURE_COUNT = apsPackage.ENTITY_FEATURE_COUNT + 1;
+	int INTERFACE_FEATURE_COUNT = BasicPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Interface</em>' class.
@@ -158,7 +165,7 @@ public interface InterfaceRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERFACE_OPERATION_COUNT = apsPackage.ENTITY_OPERATION_COUNT + 0;
+	int INTERFACE_OPERATION_COUNT = BasicPackage.ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.impl.ScrewingImpl <em>Screwing</em>}' class.

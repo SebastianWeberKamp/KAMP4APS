@@ -2,9 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -67,7 +65,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getModule()
 	 * @generated
 	 */
-	int MODULE = 2;
+	int MODULE = 3;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -76,7 +74,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__ID = apsPackage.ENTITY__ID;
+	int MODULE__ID = BasicPackage.ENTITY__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -85,7 +83,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__NAME = apsPackage.ENTITY__NAME;
+	int MODULE__NAME = BasicPackage.ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent Entity</b></em>' reference.
@@ -94,7 +92,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__PARENT_ENTITY = apsPackage.ENTITY_FEATURE_COUNT + 0;
+	int MODULE__PARENT_ENTITY = BasicPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
@@ -103,7 +101,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__MODULES = apsPackage.ENTITY_FEATURE_COUNT + 1;
+	int MODULE__MODULES = BasicPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -112,7 +110,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__COMPONENTS = apsPackage.ENTITY_FEATURE_COUNT + 2;
+	int MODULE__COMPONENTS = BasicPackage.ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
@@ -121,7 +119,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE__INTERFACES = apsPackage.ENTITY_FEATURE_COUNT + 3;
+	int MODULE__INTERFACES = BasicPackage.ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>Module</em>' class.
@@ -130,7 +128,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_FEATURE_COUNT = apsPackage.ENTITY_FEATURE_COUNT + 4;
+	int MODULE_FEATURE_COUNT = BasicPackage.ENTITY_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Module</em>' class.
@@ -139,7 +137,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_OPERATION_COUNT = apsPackage.ENTITY_OPERATION_COUNT + 0;
+	int MODULE_OPERATION_COUNT = BasicPackage.ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.MicroswitchModuleImpl <em>Microswitch Module</em>}' class.
@@ -242,14 +240,14 @@ public interface ModuleRepositoryPackage extends EPackage {
 	int MICROSWITCH_MODULE_OPERATION_COUNT = MODULE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryImpl <em>Module Repository</em>}' class.
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.PotentiometerModuleImpl <em>Potentiometer Module</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryImpl
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getModuleRepository()
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.PotentiometerModuleImpl
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getPotentiometerModule()
 	 * @generated
 	 */
-	int MODULE_REPOSITORY = 1;
+	int POTENTIOMETER_MODULE = 1;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -258,7 +256,107 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_REPOSITORY__ID = IdentifierPackage.IDENTIFIER__ID;
+	int POTENTIOMETER_MODULE__ID = MODULE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER_MODULE__NAME = MODULE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER_MODULE__PARENT_ENTITY = MODULE__PARENT_ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER_MODULE__MODULES = MODULE__MODULES;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER_MODULE__COMPONENTS = MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER_MODULE__INTERFACES = MODULE__INTERFACES;
+
+	/**
+	 * The feature id for the '<em><b>Poti</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER_MODULE__POTI = MODULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Potentiometer Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER_MODULE_FEATURE_COUNT = MODULE_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Potentiometer Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POTENTIOMETER_MODULE_OPERATION_COUNT = MODULE_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryImpl <em>Module Repository</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryImpl
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getModuleRepository()
+	 * @generated
+	 */
+	int MODULE_REPOSITORY = 2;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_REPOSITORY__ID = BasicPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE_REPOSITORY__NAME = BasicPackage.ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>All Modules In Plant</b></em>' reference list.
@@ -267,7 +365,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_REPOSITORY__ALL_MODULES_IN_PLANT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int MODULE_REPOSITORY__ALL_MODULES_IN_PLANT = BasicPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Module Repository</em>' class.
@@ -276,7 +374,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_REPOSITORY_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int MODULE_REPOSITORY_FEATURE_COUNT = BasicPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Module Repository</em>' class.
@@ -285,7 +383,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_REPOSITORY_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
+	int MODULE_REPOSITORY_OPERATION_COUNT = BasicPackage.ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.RampModuleImpl <em>Ramp Module</em>}' class.
@@ -295,7 +393,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getRampModule()
 	 * @generated
 	 */
-	int RAMP_MODULE = 3;
+	int RAMP_MODULE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -377,7 +475,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getPusherModule()
 	 * @generated
 	 */
-	int PUSHER_MODULE = 4;
+	int PUSHER_MODULE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -459,7 +557,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getMotorModule()
 	 * @generated
 	 */
-	int MOTOR_MODULE = 5;
+	int MOTOR_MODULE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -577,7 +675,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getSensorModule()
 	 * @generated
 	 */
-	int SENSOR_MODULE = 6;
+	int SENSOR_MODULE = 7;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -659,7 +757,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getOpticalSensorModule()
 	 * @generated
 	 */
-	int OPTICAL_SENSOR_MODULE = 7;
+	int OPTICAL_SENSOR_MODULE = 8;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -759,7 +857,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getInductiveSensorModule()
 	 * @generated
 	 */
-	int INDUCTIVE_SENSOR_MODULE = 8;
+	int INDUCTIVE_SENSOR_MODULE = 9;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -859,7 +957,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getPresenceSensorModule()
 	 * @generated
 	 */
-	int PRESENCE_SENSOR_MODULE = 9;
+	int PRESENCE_SENSOR_MODULE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -959,7 +1057,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getPressureSensorModule()
 	 * @generated
 	 */
-	int PRESSURE_SENSOR_MODULE = 10;
+	int PRESSURE_SENSOR_MODULE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1041,7 +1139,7 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getConveyorBeltModule()
 	 * @generated
 	 */
-	int CONVEYOR_BELT_MODULE = 11;
+	int CONVEYOR_BELT_MODULE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1133,6 +1231,171 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 */
 	int CONVEYOR_BELT_MODULE_OPERATION_COUNT = MODULE_OPERATION_COUNT + 0;
 
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.VacuumGripperModuleImpl <em>Vacuum Gripper Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.VacuumGripperModuleImpl
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getVacuumGripperModule()
+	 * @generated
+	 */
+	int VACUUM_GRIPPER_MODULE = 13;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER_MODULE__ID = MODULE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER_MODULE__NAME = MODULE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER_MODULE__PARENT_ENTITY = MODULE__PARENT_ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER_MODULE__MODULES = MODULE__MODULES;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER_MODULE__COMPONENTS = MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER_MODULE__INTERFACES = MODULE__INTERFACES;
+
+	/**
+	 * The number of structural features of the '<em>Vacuum Gripper Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER_MODULE_FEATURE_COUNT = MODULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Vacuum Gripper Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VACUUM_GRIPPER_MODULE_OPERATION_COUNT = MODULE_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.MonostableCylinderModuleImpl <em>Monostable Cylinder Module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.MonostableCylinderModuleImpl
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getMonostableCylinderModule()
+	 * @generated
+	 */
+	int MONOSTABLE_CYLINDER_MODULE = 14;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER_MODULE__ID = MODULE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER_MODULE__NAME = MODULE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Parent Entity</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER_MODULE__PARENT_ENTITY = MODULE__PARENT_ENTITY;
+
+	/**
+	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER_MODULE__MODULES = MODULE__MODULES;
+
+	/**
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER_MODULE__COMPONENTS = MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER_MODULE__INTERFACES = MODULE__INTERFACES;
+
+	/**
+	 * The number of structural features of the '<em>Monostable Cylinder Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER_MODULE_FEATURE_COUNT = MODULE_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Monostable Cylinder Module</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONOSTABLE_CYLINDER_MODULE_OPERATION_COUNT = MODULE_OPERATION_COUNT + 0;
+
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule <em>Microswitch Module</em>}'.
@@ -1165,6 +1428,27 @@ public interface ModuleRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getMicroswitchModule_Switch();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PotentiometerModule <em>Potentiometer Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Potentiometer Module</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PotentiometerModule
+	 * @generated
+	 */
+	EClass getPotentiometerModule();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PotentiometerModule#getPoti <em>Poti</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Poti</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PotentiometerModule#getPoti()
+	 * @see #getPotentiometerModule()
+	 * @generated
+	 */
+	EReference getPotentiometerModule_Poti();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepository <em>Module Repository</em>}'.
@@ -1464,6 +1748,26 @@ public interface ModuleRepositoryPackage extends EPackage {
 	EReference getConveyorBeltModule_Frame();
 
 	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.VacuumGripperModule <em>Vacuum Gripper Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Vacuum Gripper Module</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.VacuumGripperModule
+	 * @generated
+	 */
+	EClass getVacuumGripperModule();
+
+	/**
+	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MonostableCylinderModule <em>Monostable Cylinder Module</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Monostable Cylinder Module</em>'.
+	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MonostableCylinderModule
+	 * @generated
+	 */
+	EClass getMonostableCylinderModule();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1511,6 +1815,24 @@ public interface ModuleRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference MICROSWITCH_MODULE__SWITCH = eINSTANCE.getMicroswitchModule_Switch();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.PotentiometerModuleImpl <em>Potentiometer Module</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.PotentiometerModuleImpl
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getPotentiometerModule()
+		 * @generated
+		 */
+		EClass POTENTIOMETER_MODULE = eINSTANCE.getPotentiometerModule();
+
+		/**
+		 * The meta object literal for the '<em><b>Poti</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference POTENTIOMETER_MODULE__POTI = eINSTANCE.getPotentiometerModule_Poti();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryImpl <em>Module Repository</em>}' class.
@@ -1757,6 +2079,26 @@ public interface ModuleRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CONVEYOR_BELT_MODULE__FRAME = eINSTANCE.getConveyorBeltModule_Frame();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.VacuumGripperModuleImpl <em>Vacuum Gripper Module</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.VacuumGripperModuleImpl
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getVacuumGripperModule()
+		 * @generated
+		 */
+		EClass VACUUM_GRIPPER_MODULE = eINSTANCE.getVacuumGripperModule();
+
+		/**
+		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.MonostableCylinderModuleImpl <em>Monostable Cylinder Module</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.MonostableCylinderModuleImpl
+		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleRepositoryPackageImpl#getMonostableCylinderModule()
+		 * @generated
+		 */
+		EClass MONOSTABLE_CYLINDER_MODULE = eINSTANCE.getMonostableCylinderModule();
 
 	}
 

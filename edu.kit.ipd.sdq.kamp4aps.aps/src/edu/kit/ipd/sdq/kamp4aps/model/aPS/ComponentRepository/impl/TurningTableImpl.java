@@ -7,14 +7,17 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusCable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Potentiometer;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Rack;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.SimpleMotor;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.TurningTable;
 
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.Potentiometer;
+
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.Table;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
+
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.impl.ModuleImpl;
 
 import java.util.Collection;
 
@@ -51,7 +54,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class TurningTableImpl extends ComponentImpl implements TurningTable {
+public class TurningTableImpl extends ModuleImpl implements TurningTable {
 	/**
 	 * The cached value of the '{@link #getRack_for_turningtable() <em>Rack for turningtable</em>}' containment reference.
 	 * <!-- begin-user-doc -->

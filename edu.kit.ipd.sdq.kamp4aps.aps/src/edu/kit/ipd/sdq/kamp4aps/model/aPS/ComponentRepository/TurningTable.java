@@ -6,9 +6,12 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusBox;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusCable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
 
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.Potentiometer;
+
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.Table;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -35,7 +38,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface TurningTable extends Component {
+public interface TurningTable extends Module {
 	/**
 	 * Returns the value of the '<em><b>Rack for turningtable</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -200,7 +203,7 @@ public interface TurningTable extends Component {
 
 	/**
 	 * Returns the value of the '<em><b>Potentiometer</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Potentiometer}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.Potentiometer}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Potentiometer</em>' containment reference list isn't clear,

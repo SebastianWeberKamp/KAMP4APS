@@ -6,10 +6,9 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.*;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.NamedElement;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -128,6 +127,17 @@ public class ElectronicComponentsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case ElectronicComponentsPackage.POTENTIOMETER: {
+				Potentiometer potentiometer = (Potentiometer)theEObject;
+				T result = casePotentiometer(potentiometer);
+				if (result == null) result = caseElectronicPart(potentiometer);
+				if (result == null) result = caseComponent(potentiometer);
+				if (result == null) result = caseEntity(potentiometer);
+				if (result == null) result = caseIdentifier(potentiometer);
+				if (result == null) result = caseNamedElement(potentiometer);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -204,6 +214,21 @@ public class ElectronicComponentsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseMicroSwitch(MicroSwitch object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Potentiometer</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Potentiometer</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePotentiometer(Potentiometer object) {
 		return null;
 	}
 

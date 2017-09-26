@@ -14,10 +14,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicCompone
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.impl.ElectronicComponentsPackageImpl;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.impl.IdentifierPackageImpl;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.impl.InterfaceRepositoryPackageImpl;
@@ -33,13 +29,16 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MonostableCylinderModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MotorModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.OpticalSensorModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PotentiometerModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PresenceSensorModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PressureSensorModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.PusherModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.RampModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.SensorModule;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.VacuumGripperModule;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.StructureRepositoryPackage;
 
@@ -48,6 +47,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.impl.StructureRepo
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.impl.apsPackageImpl;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -68,6 +69,13 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 	 * @generated
 	 */
 	private EClass microswitchModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass potentiometerModuleEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -147,6 +155,20 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 	private EClass conveyorBeltModuleEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vacuumGripperModuleEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass monostableCylinderModuleEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -192,6 +214,9 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 
 		isInited = true;
 
+		// Initialize simple dependencies
+		BasicPackage.eINSTANCE.eClass();
+
 		// Obtain or create and register interdependencies
 		apsPackageImpl theapsPackage = (apsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) instanceof apsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI) : apsPackage.eINSTANCE);
 		ComponentRepositoryPackageImpl theComponentRepositoryPackage = (ComponentRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) instanceof ComponentRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI) : ComponentRepositoryPackage.eINSTANCE);
@@ -200,7 +225,6 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		MechanicalComponentsPackageImpl theMechanicalComponentsPackage = (MechanicalComponentsPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) instanceof MechanicalComponentsPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI) : MechanicalComponentsPackage.eINSTANCE);
 		StructureRepositoryPackageImpl theStructureRepositoryPackage = (StructureRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) instanceof StructureRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(StructureRepositoryPackage.eNS_URI) : StructureRepositoryPackage.eINSTANCE);
 		InterfaceRepositoryPackageImpl theInterfaceRepositoryPackage = (InterfaceRepositoryPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) instanceof InterfaceRepositoryPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI) : InterfaceRepositoryPackage.eINSTANCE);
-		IdentifierPackageImpl theIdentifierPackage = (IdentifierPackageImpl)(EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) instanceof IdentifierPackageImpl ? EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI) : IdentifierPackage.eINSTANCE);
 
 		// Create package meta-data objects
 		theModuleRepositoryPackage.createPackageContents();
@@ -211,7 +235,6 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		theMechanicalComponentsPackage.createPackageContents();
 		theStructureRepositoryPackage.createPackageContents();
 		theInterfaceRepositoryPackage.createPackageContents();
-		theIdentifierPackage.createPackageContents();
 
 		// Initialize created meta-data
 		theModuleRepositoryPackage.initializePackageContents();
@@ -222,7 +245,6 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		theMechanicalComponentsPackage.initializePackageContents();
 		theStructureRepositoryPackage.initializePackageContents();
 		theInterfaceRepositoryPackage.initializePackageContents();
-		theIdentifierPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theModuleRepositoryPackage.freeze();
@@ -258,6 +280,24 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 	 */
 	public EReference getMicroswitchModule_Switch() {
 		return (EReference)microswitchModuleEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getPotentiometerModule() {
+		return potentiometerModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPotentiometerModule_Poti() {
+		return (EReference)potentiometerModuleEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -517,6 +557,24 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getVacuumGripperModule() {
+		return vacuumGripperModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getMonostableCylinderModule() {
+		return monostableCylinderModuleEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ModuleRepositoryFactory getModuleRepositoryFactory() {
 		return (ModuleRepositoryFactory)getEFactoryInstance();
 	}
@@ -543,6 +601,9 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		microswitchModuleEClass = createEClass(MICROSWITCH_MODULE);
 		createEReference(microswitchModuleEClass, MICROSWITCH_MODULE__BUS_SLAVE);
 		createEReference(microswitchModuleEClass, MICROSWITCH_MODULE__SWITCH);
+
+		potentiometerModuleEClass = createEClass(POTENTIOMETER_MODULE);
+		createEReference(potentiometerModuleEClass, POTENTIOMETER_MODULE__POTI);
 
 		moduleRepositoryEClass = createEClass(MODULE_REPOSITORY);
 		createEReference(moduleRepositoryEClass, MODULE_REPOSITORY__ALL_MODULES_IN_PLANT);
@@ -582,6 +643,10 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		conveyorBeltModuleEClass = createEClass(CONVEYOR_BELT_MODULE);
 		createEReference(conveyorBeltModuleEClass, CONVEYOR_BELT_MODULE__RUBBER_BAND);
 		createEReference(conveyorBeltModuleEClass, CONVEYOR_BELT_MODULE__FRAME);
+
+		vacuumGripperModuleEClass = createEClass(VACUUM_GRIPPER_MODULE);
+
+		monostableCylinderModuleEClass = createEClass(MONOSTABLE_CYLINDER_MODULE);
 	}
 
 	/**
@@ -610,8 +675,7 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		// Obtain other dependent packages
 		BusComponentsPackage theBusComponentsPackage = (BusComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(BusComponentsPackage.eNS_URI);
 		ElectronicComponentsPackage theElectronicComponentsPackage = (ElectronicComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(ElectronicComponentsPackage.eNS_URI);
-		IdentifierPackage theIdentifierPackage = (IdentifierPackage)EPackage.Registry.INSTANCE.getEPackage(IdentifierPackage.eNS_URI);
-		apsPackage theapsPackage = (apsPackage)EPackage.Registry.INSTANCE.getEPackage(apsPackage.eNS_URI);
+		BasicPackage theBasicPackage = (BasicPackage)EPackage.Registry.INSTANCE.getEPackage(BasicPackage.eNS_URI);
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
 		MechanicalComponentsPackage theMechanicalComponentsPackage = (MechanicalComponentsPackage)EPackage.Registry.INSTANCE.getEPackage(MechanicalComponentsPackage.eNS_URI);
@@ -622,8 +686,9 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 
 		// Add supertypes to classes
 		microswitchModuleEClass.getESuperTypes().add(this.getModule());
-		moduleRepositoryEClass.getESuperTypes().add(theIdentifierPackage.getIdentifier());
-		moduleEClass.getESuperTypes().add(theapsPackage.getEntity());
+		potentiometerModuleEClass.getESuperTypes().add(this.getModule());
+		moduleRepositoryEClass.getESuperTypes().add(theBasicPackage.getEntity());
+		moduleEClass.getESuperTypes().add(theBasicPackage.getEntity());
 		rampModuleEClass.getESuperTypes().add(this.getModule());
 		pusherModuleEClass.getESuperTypes().add(this.getModule());
 		motorModuleEClass.getESuperTypes().add(this.getModule());
@@ -633,17 +698,22 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		presenceSensorModuleEClass.getESuperTypes().add(this.getModule());
 		pressureSensorModuleEClass.getESuperTypes().add(this.getModule());
 		conveyorBeltModuleEClass.getESuperTypes().add(this.getModule());
+		vacuumGripperModuleEClass.getESuperTypes().add(this.getModule());
+		monostableCylinderModuleEClass.getESuperTypes().add(this.getModule());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(microswitchModuleEClass, MicroswitchModule.class, "MicroswitchModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getMicroswitchModule_BusSlave(), theBusComponentsPackage.getBusSlave(), null, "busSlave", null, 1, -1, MicroswitchModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getMicroswitchModule_Switch(), theElectronicComponentsPackage.getMicroSwitch(), theElectronicComponentsPackage.getMicroSwitch_MsModule(), "switch", null, 1, 1, MicroswitchModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(potentiometerModuleEClass, PotentiometerModule.class, "PotentiometerModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPotentiometerModule_Poti(), theElectronicComponentsPackage.getPotentiometer(), null, "poti", null, 1, 1, PotentiometerModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(moduleRepositoryEClass, ModuleRepository.class, "ModuleRepository", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getModuleRepository_AllModulesInPlant(), this.getModule(), null, "allModulesInPlant", null, 0, -1, ModuleRepository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(moduleEClass, Module.class, "Module", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getModule_ParentEntity(), theapsPackage.getEntity(), null, "parentEntity", null, 1, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getModule_ParentEntity(), theBasicPackage.getEntity(), null, "parentEntity", null, 1, 1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModule_Modules(), this.getModule(), null, "modules", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModule_Components(), theComponentRepositoryPackage.getComponent(), theComponentRepositoryPackage.getComponent_ParentModule(), "components", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getModule_Interfaces(), theInterfaceRepositoryPackage.getInterface(), null, "interfaces", null, 0, -1, Module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -677,6 +747,10 @@ public class ModuleRepositoryPackageImpl extends EPackageImpl implements ModuleR
 		initEClass(conveyorBeltModuleEClass, ConveyorBeltModule.class, "ConveyorBeltModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getConveyorBeltModule_RubberBand(), theMechanicalComponentsPackage.getRubberBand(), null, "rubberBand", null, 1, 1, ConveyorBeltModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getConveyorBeltModule_Frame(), theComponentRepositoryPackage.getFrame(), null, "frame", null, 1, 1, ConveyorBeltModule.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vacuumGripperModuleEClass, VacuumGripperModule.class, "VacuumGripperModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(monostableCylinderModuleEClass, MonostableCylinderModule.class, "MonostableCylinderModule", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 	}
 
 } //ModuleRepositoryPackageImpl

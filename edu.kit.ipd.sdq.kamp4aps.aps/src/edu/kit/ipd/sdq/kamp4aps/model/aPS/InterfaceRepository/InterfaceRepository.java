@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -22,7 +22,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface InterfaceRepository extends Identifier {
+public interface InterfaceRepository extends Entity {
 	/**
 	 * Returns the value of the '<em><b>All Interfaces In Plant</b></em>' containment reference list.
 	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface}.

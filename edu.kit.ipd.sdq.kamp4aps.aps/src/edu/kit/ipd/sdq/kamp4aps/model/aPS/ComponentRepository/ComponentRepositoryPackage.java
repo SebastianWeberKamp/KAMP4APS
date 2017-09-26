@@ -4,11 +4,11 @@ package edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ElectronicComponents.ElectronicComponentsPackage;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.IdentifierPackage;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.MechanicalComponentsPackage;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.ModuleRepositoryPackage;
+
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -80,7 +80,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__ID = apsPackage.ENTITY__ID;
+	int COMPONENT__ID = BasicPackage.ENTITY__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -89,7 +89,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__NAME = apsPackage.ENTITY__NAME;
+	int COMPONENT__NAME = BasicPackage.ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
@@ -98,7 +98,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__CONNECTED_INTERFACES = apsPackage.ENTITY_FEATURE_COUNT + 0;
+	int COMPONENT__CONNECTED_INTERFACES = BasicPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Parent</b></em>' container reference.
@@ -107,7 +107,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__PARENT = apsPackage.ENTITY_FEATURE_COUNT + 1;
+	int COMPONENT__PARENT = BasicPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
@@ -116,7 +116,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT__PARENT_MODULE = apsPackage.ENTITY_FEATURE_COUNT + 2;
+	int COMPONENT__PARENT_MODULE = BasicPackage.ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Component</em>' class.
@@ -125,7 +125,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_FEATURE_COUNT = apsPackage.ENTITY_FEATURE_COUNT + 3;
+	int COMPONENT_FEATURE_COUNT = BasicPackage.ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Component</em>' class.
@@ -134,7 +134,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_OPERATION_COUNT = apsPackage.ENTITY_OPERATION_COUNT + 0;
+	int COMPONENT_OPERATION_COUNT = BasicPackage.ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.PanelImpl <em>Panel</em>}' class.
@@ -2694,124 +2694,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int POWER_SUPPLY_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.VacuumGripperImpl <em>Vacuum Gripper</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.VacuumGripperImpl
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getVacuumGripper()
-	 * @generated
-	 */
-	int VACUUM_GRIPPER = 29;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER__ID = COMPONENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER__NAME = COMPONENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER__PARENT = COMPONENT__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER__PARENT_MODULE = COMPONENT__PARENT_MODULE;
-
-	/**
-	 * The feature id for the '<em><b>Mounted To</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER__MOUNTED_TO = COMPONENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Gripper Part</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER__GRIPPER_PART = COMPONENT_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Valve</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER__VALVE = COMPONENT_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Vacuum Switch</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER__VACUUM_SWITCH = COMPONENT_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Bus Slave</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER__BUS_SLAVE = COMPONENT_FEATURE_COUNT + 4;
-
-	/**
-	 * The number of structural features of the '<em>Vacuum Gripper</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 5;
-
-	/**
-	 * The number of operations of the '<em>Vacuum Gripper</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VACUUM_GRIPPER_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ConveyorBeltImpl <em>Conveyor Belt</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2819,7 +2701,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getConveyorBelt()
 	 * @generated
 	 */
-	int CONVEYOR_BELT = 30;
+	int CONVEYOR_BELT = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2919,7 +2801,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getFrame()
 	 * @generated
 	 */
-	int FRAME = 31;
+	int FRAME = 30;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2992,7 +2874,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPusher()
 	 * @generated
 	 */
-	int PUSHER = 32;
+	int PUSHER = 31;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3110,7 +2992,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getTurningTable()
 	 * @generated
 	 */
-	int TURNING_TABLE = 33;
+	int TURNING_TABLE = 32;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3119,7 +3001,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__ID = COMPONENT__ID;
+	int TURNING_TABLE__ID = ModuleRepositoryPackage.MODULE__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3128,34 +3010,43 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__NAME = COMPONENT__NAME;
+	int TURNING_TABLE__NAME = ModuleRepositoryPackage.MODULE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
+	 * The feature id for the '<em><b>Parent Entity</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__CONNECTED_INTERFACES = COMPONENT__CONNECTED_INTERFACES;
+	int TURNING_TABLE__PARENT_ENTITY = ModuleRepositoryPackage.MODULE__PARENT_ENTITY;
 
 	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__PARENT = COMPONENT__PARENT;
+	int TURNING_TABLE__MODULES = ModuleRepositoryPackage.MODULE__MODULES;
 
 	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
+	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__PARENT_MODULE = COMPONENT__PARENT_MODULE;
+	int TURNING_TABLE__COMPONENTS = ModuleRepositoryPackage.MODULE__COMPONENTS;
+
+	/**
+	 * The feature id for the '<em><b>Interfaces</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TURNING_TABLE__INTERFACES = ModuleRepositoryPackage.MODULE__INTERFACES;
 
 	/**
 	 * The feature id for the '<em><b>Rack for turningtable</b></em>' containment reference.
@@ -3164,7 +3055,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__RACK_FOR_TURNINGTABLE = COMPONENT_FEATURE_COUNT + 0;
+	int TURNING_TABLE__RACK_FOR_TURNINGTABLE = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Table to stand on</b></em>' containment reference.
@@ -3173,7 +3064,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__TABLE_TO_STAND_ON = COMPONENT_FEATURE_COUNT + 1;
+	int TURNING_TABLE__TABLE_TO_STAND_ON = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Motor to drive</b></em>' containment reference.
@@ -3182,7 +3073,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__MOTOR_TO_DRIVE = COMPONENT_FEATURE_COUNT + 2;
+	int TURNING_TABLE__MOTOR_TO_DRIVE = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Microswitch Module</b></em>' containment reference list.
@@ -3191,7 +3082,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__MICROSWITCH_MODULE = COMPONENT_FEATURE_COUNT + 3;
+	int TURNING_TABLE__MICROSWITCH_MODULE = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Bus Slave</b></em>' containment reference.
@@ -3200,7 +3091,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__BUS_SLAVE = COMPONENT_FEATURE_COUNT + 4;
+	int TURNING_TABLE__BUS_SLAVE = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Bus Box</b></em>' containment reference.
@@ -3209,7 +3100,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__BUS_BOX = COMPONENT_FEATURE_COUNT + 5;
+	int TURNING_TABLE__BUS_BOX = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Bus Cable</b></em>' containment reference list.
@@ -3218,7 +3109,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__BUS_CABLE = COMPONENT_FEATURE_COUNT + 6;
+	int TURNING_TABLE__BUS_CABLE = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Potentiometer</b></em>' containment reference list.
@@ -3227,7 +3118,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE__POTENTIOMETER = COMPONENT_FEATURE_COUNT + 7;
+	int TURNING_TABLE__POTENTIOMETER = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>Turning Table</em>' class.
@@ -3236,7 +3127,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE_FEATURE_COUNT = COMPONENT_FEATURE_COUNT + 8;
+	int TURNING_TABLE_FEATURE_COUNT = ModuleRepositoryPackage.MODULE_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>Turning Table</em>' class.
@@ -3245,7 +3136,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TURNING_TABLE_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
+	int TURNING_TABLE_OPERATION_COUNT = ModuleRepositoryPackage.MODULE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ControllerImpl <em>Controller</em>}' class.
@@ -3255,7 +3146,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getController()
 	 * @generated
 	 */
-	int CONTROLLER = 34;
+	int CONTROLLER = 33;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3346,7 +3237,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getLogicalWiring()
 	 * @generated
 	 */
-	int LOGICAL_WIRING = 35;
+	int LOGICAL_WIRING = 34;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3421,97 +3312,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	int LOGICAL_WIRING_OPERATION_COUNT = COMPONENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.PotentiometerImpl <em>Potentiometer</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.PotentiometerImpl
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPotentiometer()
-	 * @generated
-	 */
-	int POTENTIOMETER = 36;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POTENTIOMETER__ID = ElectronicComponentsPackage.ELECTRONIC_PART__ID;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POTENTIOMETER__NAME = ElectronicComponentsPackage.ELECTRONIC_PART__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Connected Interfaces</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POTENTIOMETER__CONNECTED_INTERFACES = ElectronicComponentsPackage.ELECTRONIC_PART__CONNECTED_INTERFACES;
-
-	/**
-	 * The feature id for the '<em><b>Parent</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POTENTIOMETER__PARENT = ElectronicComponentsPackage.ELECTRONIC_PART__PARENT;
-
-	/**
-	 * The feature id for the '<em><b>Parent Module</b></em>' container reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POTENTIOMETER__PARENT_MODULE = ElectronicComponentsPackage.ELECTRONIC_PART__PARENT_MODULE;
-
-	/**
-	 * The feature id for the '<em><b>Pin</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POTENTIOMETER__PIN = ElectronicComponentsPackage.ELECTRONIC_PART__PIN;
-
-	/**
-	 * The feature id for the '<em><b>Physicalconnection</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POTENTIOMETER__PHYSICALCONNECTION = ElectronicComponentsPackage.ELECTRONIC_PART__PHYSICALCONNECTION;
-
-	/**
-	 * The number of structural features of the '<em>Potentiometer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POTENTIOMETER_FEATURE_COUNT = ElectronicComponentsPackage.ELECTRONIC_PART_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Potentiometer</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POTENTIOMETER_OPERATION_COUNT = ElectronicComponentsPackage.ELECTRONIC_PART_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.VacuumSwitchImpl <em>Vacuum Switch</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3519,7 +3319,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getVacuumSwitch()
 	 * @generated
 	 */
-	int VACUUM_SWITCH = 37;
+	int VACUUM_SWITCH = 35;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3610,7 +3410,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getReedSwitch()
 	 * @generated
 	 */
-	int REED_SWITCH = 38;
+	int REED_SWITCH = 36;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3701,7 +3501,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPowerSplitter()
 	 * @generated
 	 */
-	int POWER_SPLITTER = 39;
+	int POWER_SPLITTER = 37;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3792,7 +3592,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getWaterSplitter()
 	 * @generated
 	 */
-	int WATER_SPLITTER = 40;
+	int WATER_SPLITTER = 38;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3883,7 +3683,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPneumaticSplitter()
 	 * @generated
 	 */
-	int PNEUMATIC_SPLITTER = 41;
+	int PNEUMATIC_SPLITTER = 39;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -3974,7 +3774,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getCylinderPart()
 	 * @generated
 	 */
-	int CYLINDER_PART = 42;
+	int CYLINDER_PART = 40;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4056,7 +3856,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getMonostableCylinder()
 	 * @generated
 	 */
-	int MONOSTABLE_CYLINDER = 43;
+	int MONOSTABLE_CYLINDER = 41;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4201,7 +4001,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getComponentRepository()
 	 * @generated
 	 */
-	int COMPONENT_REPOSITORY = 44;
+	int COMPONENT_REPOSITORY = 42;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4210,7 +4010,16 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_REPOSITORY__ID = IdentifierPackage.IDENTIFIER__ID;
+	int COMPONENT_REPOSITORY__ID = BasicPackage.ENTITY__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPONENT_REPOSITORY__NAME = BasicPackage.ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>All Components In Plant</b></em>' reference list.
@@ -4219,7 +4028,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_REPOSITORY__ALL_COMPONENTS_IN_PLANT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 0;
+	int COMPONENT_REPOSITORY__ALL_COMPONENTS_IN_PLANT = BasicPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Component Repository</em>' class.
@@ -4228,7 +4037,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_REPOSITORY_FEATURE_COUNT = IdentifierPackage.IDENTIFIER_FEATURE_COUNT + 1;
+	int COMPONENT_REPOSITORY_FEATURE_COUNT = BasicPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Component Repository</em>' class.
@@ -4237,7 +4046,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_REPOSITORY_OPERATION_COUNT = IdentifierPackage.IDENTIFIER_OPERATION_COUNT + 0;
+	int COMPONENT_REPOSITORY_OPERATION_COUNT = BasicPackage.ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.FixtureImpl <em>Fixture</em>}' class.
@@ -4247,7 +4056,7 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getFixture()
 	 * @generated
 	 */
-	int FIXTURE = 45;
+	int FIXTURE = 43;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -4956,71 +4765,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	EClass getPowerSupply();
 
 	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper <em>Vacuum Gripper</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Vacuum Gripper</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper
-	 * @generated
-	 */
-	EClass getVacuumGripper();
-
-	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getMountedTo <em>Mounted To</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Mounted To</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getMountedTo()
-	 * @see #getVacuumGripper()
-	 * @generated
-	 */
-	EReference getVacuumGripper_MountedTo();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getGripperPart <em>Gripper Part</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Gripper Part</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getGripperPart()
-	 * @see #getVacuumGripper()
-	 * @generated
-	 */
-	EReference getVacuumGripper_GripperPart();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getValve <em>Valve</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Valve</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getValve()
-	 * @see #getVacuumGripper()
-	 * @generated
-	 */
-	EReference getVacuumGripper_Valve();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getVacuumSwitch <em>Vacuum Switch</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Vacuum Switch</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getVacuumSwitch()
-	 * @see #getVacuumGripper()
-	 * @generated
-	 */
-	EReference getVacuumGripper_VacuumSwitch();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getBusSlave <em>Bus Slave</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Bus Slave</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumGripper#getBusSlave()
-	 * @see #getVacuumGripper()
-	 * @generated
-	 */
-	EReference getVacuumGripper_BusSlave();
-
-	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ConveyorBelt <em>Conveyor Belt</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5288,16 +5032,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getLogicalWiring_BusCable();
-
-	/**
-	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Potentiometer <em>Potentiometer</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Potentiometer</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Potentiometer
-	 * @generated
-	 */
-	EClass getPotentiometer();
 
 	/**
 	 * Returns the meta object for class '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.VacuumSwitch <em>Vacuum Switch</em>}'.
@@ -6069,56 +5803,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 		EClass POWER_SUPPLY = eINSTANCE.getPowerSupply();
 
 		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.VacuumGripperImpl <em>Vacuum Gripper</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.VacuumGripperImpl
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getVacuumGripper()
-		 * @generated
-		 */
-		EClass VACUUM_GRIPPER = eINSTANCE.getVacuumGripper();
-
-		/**
-		 * The meta object literal for the '<em><b>Mounted To</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VACUUM_GRIPPER__MOUNTED_TO = eINSTANCE.getVacuumGripper_MountedTo();
-
-		/**
-		 * The meta object literal for the '<em><b>Gripper Part</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VACUUM_GRIPPER__GRIPPER_PART = eINSTANCE.getVacuumGripper_GripperPart();
-
-		/**
-		 * The meta object literal for the '<em><b>Valve</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VACUUM_GRIPPER__VALVE = eINSTANCE.getVacuumGripper_Valve();
-
-		/**
-		 * The meta object literal for the '<em><b>Vacuum Switch</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VACUUM_GRIPPER__VACUUM_SWITCH = eINSTANCE.getVacuumGripper_VacuumSwitch();
-
-		/**
-		 * The meta object literal for the '<em><b>Bus Slave</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VACUUM_GRIPPER__BUS_SLAVE = eINSTANCE.getVacuumGripper_BusSlave();
-
-		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ConveyorBeltImpl <em>Conveyor Belt</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6329,16 +6013,6 @@ public interface ComponentRepositoryPackage extends EPackage {
 		 * @generated
 		 */
 		EReference LOGICAL_WIRING__BUS_CABLE = eINSTANCE.getLogicalWiring_BusCable();
-
-		/**
-		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.PotentiometerImpl <em>Potentiometer</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.PotentiometerImpl
-		 * @see edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.ComponentRepositoryPackageImpl#getPotentiometer()
-		 * @generated
-		 */
-		EClass POTENTIOMETER = eINSTANCE.getPotentiometer();
 
 		/**
 		 * The meta object literal for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.impl.VacuumSwitchImpl <em>Vacuum Switch</em>}' class.

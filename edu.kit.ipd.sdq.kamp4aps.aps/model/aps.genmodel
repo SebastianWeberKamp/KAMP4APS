@@ -4,7 +4,8 @@
     modelName="Aps" editPluginClass="edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider.ApsEditPlugin"
     editorPluginClass="edu.kit.ipd.sdq.kamp4aps.aps.aPS.aPS.presentation.ApsEditorPlugin"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
-    complianceLevel="8.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+    complianceLevel="8.0" copyrightFields="false" usedGenPackages="../../edu.kit.ipd.sdq.kamp4aps.basic/model/basic.genmodel#//basic"
+    operationReflection="true" importOrganizing="true">
   <foreignModel>aPS.ecore</foreignModel>
   <genPackages prefix="aps" basePackage="edu.kit.ipd.sdq.kamp4aps.model" disposableProviderFactory="true"
       ecorePackage="aPS.ecore#/">
@@ -15,9 +16,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//Plant/componentRepository"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//Plant/moduleRepository"/>
     </genClasses>
-    <genClasses image="false" ecoreClass="aPS.ecore#//Entity"/>
-    <nestedGenPackages prefix="ComponentRepository" disposableProviderFactory="true"
-        ecorePackage="aPS.ecore#//ComponentRepository">
+    <nestedGenPackages prefix="ComponentRepository" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//ComponentRepository">
       <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Component">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Component/connectedInterfaces"/>
@@ -117,14 +117,6 @@
             ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/Splitter/screwing"/>
       </genClasses>
       <genClasses ecoreClass="aPS.ecore#//ComponentRepository/PowerSupply"/>
-      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/VacuumGripper">
-        <genFeatures notify="false" createChild="false" propertySortChoices="true"
-            ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/VacuumGripper/mountedTo"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/VacuumGripper/gripperPart"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/VacuumGripper/valve"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/VacuumGripper/vacuumSwitch"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/VacuumGripper/busSlave"/>
-      </genClasses>
       <genClasses ecoreClass="aPS.ecore#//ComponentRepository/ConveyorBelt">
         <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/ConveyorBelt/mountedTo"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/ConveyorBelt/frame"/>
@@ -158,11 +150,6 @@
       <genClasses ecoreClass="aPS.ecore#//ComponentRepository/LogicalWiring">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/LogicalWiring/busCable"/>
       </genClasses>
-      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/MicroswitchModule">
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/MicroswitchModule/busSlave"/>
-        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ComponentRepository/MicroswitchModule/switch"/>
-      </genClasses>
-      <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Potentiometer"/>
       <genClasses ecoreClass="aPS.ecore#//ComponentRepository/VacuumSwitch"/>
       <genClasses ecoreClass="aPS.ecore#//ComponentRepository/ReedSwitch"/>
       <genClasses ecoreClass="aPS.ecore#//ComponentRepository/PowerSplitter">
@@ -192,7 +179,8 @@
       </genClasses>
       <genClasses ecoreClass="aPS.ecore#//ComponentRepository/Fixture"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="BusComponents" disposableProviderFactory="true" ecorePackage="aPS.ecore#//BusComponents">
+    <nestedGenPackages prefix="BusComponents" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//BusComponents">
       <genClasses ecoreClass="aPS.ecore#//BusComponents/BusBox">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference aPS.ecore#//BusComponents/BusBox/signalinterfaces"/>
@@ -228,8 +216,8 @@
       <genClasses ecoreClass="aPS.ecore#//BusComponents/EtherCATSlave"/>
       <genClasses ecoreClass="aPS.ecore#//BusComponents/EtherCATCable"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="ElectronicComponents" disposableProviderFactory="true"
-        ecorePackage="aPS.ecore#//ElectronicComponents">
+    <nestedGenPackages prefix="ElectronicComponents" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//ElectronicComponents">
       <genClasses image="false" ecoreClass="aPS.ecore#//ElectronicComponents/ElectronicPart">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ElectronicComponents/ElectronicPart/pin"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ElectronicComponents/ElectronicPart/physicalconnection"/>
@@ -240,9 +228,10 @@
       <genClasses ecoreClass="aPS.ecore#//ElectronicComponents/MicroSwitch">
         <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference aPS.ecore#//ElectronicComponents/MicroSwitch/msModule"/>
       </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ElectronicComponents/Potentiometer"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="MechanicalComponents" disposableProviderFactory="true"
-        ecorePackage="aPS.ecore#//MechanicalComponents">
+    <nestedGenPackages prefix="MechanicalComponents" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//MechanicalComponents">
       <genClasses image="false" ecoreClass="aPS.ecore#//MechanicalComponents/MechanicalPart">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference aPS.ecore#//MechanicalComponents/MechanicalPart/screwing"/>
@@ -266,8 +255,8 @@
       </genClasses>
       <genClasses ecoreClass="aPS.ecore#//MechanicalComponents/Table"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="StructureRepository" disposableProviderFactory="true"
-        ecorePackage="aPS.ecore#//StructureRepository">
+    <nestedGenPackages prefix="StructureRepository" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//StructureRepository">
       <genClasses ecoreClass="aPS.ecore#//StructureRepository/Structure">
         <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference aPS.ecore#//StructureRepository/Structure/parentPlant"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//StructureRepository/Structure/modules"/>
@@ -294,8 +283,15 @@
       <genClasses ecoreClass="aPS.ecore#//StructureRepository/PowerWiring"/>
       <genClasses ecoreClass="aPS.ecore#//StructureRepository/LogicalWiring"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="ModuleRepository" disposableProviderFactory="true"
-        ecorePackage="aPS.ecore#//ModuleRepository">
+    <nestedGenPackages prefix="ModuleRepository" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//ModuleRepository">
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/MicroswitchModule">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/MicroswitchModule/busSlave"/>
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/MicroswitchModule/switch"/>
+      </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/PotentiometerModule">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/PotentiometerModule/poti"/>
+      </genClasses>
       <genClasses ecoreClass="aPS.ecore#//ModuleRepository/ModuleRepository">
         <genFeatures notify="false" createChild="false" propertySortChoices="true"
             ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/ModuleRepository/allModulesInPlant"/>
@@ -334,9 +330,10 @@
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/ConveyorBeltModule/rubberBand"/>
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//ModuleRepository/ConveyorBeltModule/frame"/>
       </genClasses>
+      <genClasses ecoreClass="aPS.ecore#//ModuleRepository/VacuumGripperModule"/>
     </nestedGenPackages>
-    <nestedGenPackages prefix="InterfaceRepository" disposableProviderFactory="true"
-        ecorePackage="aPS.ecore#//InterfaceRepository">
+    <nestedGenPackages prefix="InterfaceRepository" basePackage="edu.kit.ipd.sdq.kamp4aps.model.aPS"
+        disposableProviderFactory="true" ecorePackage="aPS.ecore#//InterfaceRepository">
       <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/InterfaceRepository">
         <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference aPS.ecore#//InterfaceRepository/InterfaceRepository/allInterfacesInPlant"/>
       </genClasses>
@@ -362,14 +359,6 @@
       <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/PhysicalConnection"/>
       <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/TransportConnection"/>
       <genClasses ecoreClass="aPS.ecore#//InterfaceRepository/Fixture"/>
-    </nestedGenPackages>
-    <nestedGenPackages prefix="Identifier" disposableProviderFactory="true" ecorePackage="aPS.ecore#//Identifier">
-      <genClasses image="false" ecoreClass="aPS.ecore#//Identifier/Identifier">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aPS.ecore#//Identifier/Identifier/id"/>
-      </genClasses>
-      <genClasses image="false" ecoreClass="aPS.ecore#//Identifier/NamedElement">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute aPS.ecore#//Identifier/NamedElement/Name"/>
-      </genClasses>
     </nestedGenPackages>
   </genPackages>
 </genmodel:GenModel>

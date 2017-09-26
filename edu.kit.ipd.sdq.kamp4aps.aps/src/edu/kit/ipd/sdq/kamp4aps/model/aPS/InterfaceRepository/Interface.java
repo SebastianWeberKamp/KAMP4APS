@@ -2,9 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Entity;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -27,7 +25,7 @@ import org.eclipse.emf.common.util.EList;
 public interface Interface extends Entity {
 	/**
 	 * Returns the value of the '<em><b>Parent Element</b></em>' reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.aPS.Identifier.Identifier}.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.basic.Entity}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parent Element</em>' reference list isn't clear,
@@ -39,6 +37,6 @@ public interface Interface extends Entity {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<Identifier> getParentElement();
+	EList<Entity> getParentElement();
 
 } // Interface

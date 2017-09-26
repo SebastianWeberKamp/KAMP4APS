@@ -2,7 +2,7 @@
  */
 package edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository;
 
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -74,7 +74,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__ID = apsPackage.ENTITY__ID;
+	int STRUCTURE__ID = BasicPackage.ENTITY__ID;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -83,7 +83,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__NAME = apsPackage.ENTITY__NAME;
+	int STRUCTURE__NAME = BasicPackage.ENTITY__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Parent Plant</b></em>' container reference.
@@ -92,7 +92,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__PARENT_PLANT = apsPackage.ENTITY_FEATURE_COUNT + 0;
+	int STRUCTURE__PARENT_PLANT = BasicPackage.ENTITY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Modules</b></em>' containment reference list.
@@ -101,7 +101,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__MODULES = apsPackage.ENTITY_FEATURE_COUNT + 1;
+	int STRUCTURE__MODULES = BasicPackage.ENTITY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Components</b></em>' containment reference list.
@@ -110,7 +110,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE__COMPONENTS = apsPackage.ENTITY_FEATURE_COUNT + 2;
+	int STRUCTURE__COMPONENTS = BasicPackage.ENTITY_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Structure</em>' class.
@@ -119,7 +119,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_FEATURE_COUNT = apsPackage.ENTITY_FEATURE_COUNT + 3;
+	int STRUCTURE_FEATURE_COUNT = BasicPackage.ENTITY_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>Structure</em>' class.
@@ -128,7 +128,7 @@ public interface StructureRepositoryPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STRUCTURE_OPERATION_COUNT = apsPackage.ENTITY_OPERATION_COUNT + 0;
+	int STRUCTURE_OPERATION_COUNT = BasicPackage.ENTITY_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.impl.CommunicationNetworkImpl <em>Communication Network</em>}' class.

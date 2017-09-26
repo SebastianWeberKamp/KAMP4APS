@@ -22,5 +22,6 @@ Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4aps.aps.edit;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.eclipse.emf.edit.ui;visibility:=reexport,
- org.eclipse.ui.ide;visibility:=reexport
+ org.eclipse.ui.ide;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4aps.basic.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy
