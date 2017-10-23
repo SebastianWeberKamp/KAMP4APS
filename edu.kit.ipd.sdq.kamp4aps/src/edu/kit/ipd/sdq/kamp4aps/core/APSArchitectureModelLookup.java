@@ -171,7 +171,7 @@ public class APSArchitectureModelLookup extends ArchitectureModelLookup {
 	 * @param changePropagationDueToHardwareChange
 	 * @return
 	 */
-	public static Map<Module, Set<Module>> lookUpModulesOfModules(Collection<Module> initialMarkedModules, 
+	public static Map<Module, Set<Module>> lookUpModulesOfModules(Collection<? extends Module> initialMarkedModules, 
 			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
 		Map<Module, Set<Module>> results = new HashMap<Module, Set<Module>>();
 		for(Module modifyModule: initialMarkedModules){
@@ -200,7 +200,7 @@ public class APSArchitectureModelLookup extends ArchitectureModelLookup {
 	 * @param changePropagationDueToHardwareChange
 	 * @return
 	 */
-	public static Map<Module, Set<Component>> lookUpComponentsOfModules(Collection<Module> initialMarkedModules,
+	public static Map<Module, Set<Component>> lookUpComponentsOfModules(Collection<? extends Module> initialMarkedModules,
 			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
 		Map<Module, Set<Component>> results = new HashMap<Module, Set<Component>>();
 		
@@ -231,7 +231,7 @@ public class APSArchitectureModelLookup extends ArchitectureModelLookup {
 	 * @param changePropagationDueToHardwareChange
 	 * @return
 	 */
-	public static Map<Module, Set<Interface>> lookUpInterfacesOfModules(Collection<Module> initialMarkedModules,
+	public static Map<Module, Set<Interface>> lookUpInterfacesOfModules(Collection<? extends Module> initialMarkedModules,
 			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
 		Map<Module, Set<Interface>> results = new HashMap<Module, Set<Interface>>();
 		

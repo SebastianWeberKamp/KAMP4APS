@@ -43,8 +43,7 @@
           eType="#//ComponentRepository/PowerSupply"/>
     </eClassifiers>
     <eClassifiers xsi:type="ecore:EClass" name="SimpleMotor" eSuperTypes="#//ComponentRepository/Motor"/>
-    <eClassifiers xsi:type="ecore:EClass" name="MechanicalAssembly" abstract="true"
-        eSuperTypes="#//ComponentRepository/Component"/>
+    <eClassifiers xsi:type="ecore:EClass" name="MechanicalAssembly" eSuperTypes="#//ComponentRepository/Component"/>
     <eClassifiers xsi:type="ecore:EClass" name="RegularRamp" eSuperTypes="#//MechanicalComponents/Ramp"/>
     <eClassifiers xsi:type="ecore:EClass" name="Sensor" eSuperTypes="#//ComponentRepository/Component">
       <eStructuralFeatures xsi:type="ecore:EReference" name="physicalconnection" lowerBound="1"

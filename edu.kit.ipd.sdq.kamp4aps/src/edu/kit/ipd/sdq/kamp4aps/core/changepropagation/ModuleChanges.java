@@ -73,7 +73,7 @@ public class ModuleChanges extends Change {
 			} while (mapHash != modulesToBeMarked.hashCode());
 		}
 		
-			private List<ModifyModule<Module>> createModifyModulesFromAffectedModules(Map<Module, Set<Module>> modulesToBeMarked) {
+			protected List<ModifyModule<Module>> createModifyModulesFromAffectedModules(Map<Module, Set<Module>> modulesToBeMarked) {
 				List<ModifyModule<Module>> modifyModules = new ArrayList<ModifyModule<Module>>();
 				for(Map.Entry<Module, Set<Module>> modulesToBeMarkedEntry : modulesToBeMarked.entrySet()){
 					for(Module module : modulesToBeMarkedEntry.getValue()){
@@ -88,7 +88,7 @@ public class ModuleChanges extends Change {
 				return modifyModules;
 			}
 			
-			private void addToModifyModulesToChangePropagation(List<ModifyModule<Module>> modifyModules, ChangePropagationDueToHardwareChange cp) {
+			protected void addToModifyModulesToChangePropagation(List<ModifyModule<Module>> modifyModules, ChangePropagationDueToHardwareChange cp) {
 				List<ModifyModule<Module>> modifyModulesToRemove = new ArrayList<ModifyModule<Module>>();
 				for(ModifyModule<Module> currentModifyModule : cp.getModuleModifications()){
 					for(ModifyModule<Module> newModifyModule : modifyModules){
@@ -123,7 +123,7 @@ public class ModuleChanges extends Change {
 			} while (mapHash != componentsToBeMarked.hashCode());
 		}
 	
-			private List<ModifyComponent<Component>> createModifyComponentFromAffectedComponents(
+			protected List<ModifyComponent<Component>> createModifyComponentFromAffectedComponents(
 					Map<Module, Set<Component>> componentsToBeMarked) {
 				List<ModifyComponent<Component>> modifyComponents = new ArrayList<ModifyComponent<Component>>();
 				for(Map.Entry<Module, Set<Component>> componentsToBeMarkedEntry : componentsToBeMarked.entrySet()){
@@ -139,7 +139,7 @@ public class ModuleChanges extends Change {
 				return modifyComponents;
 			}
 			
-			private void addToModifyComponentsToChangePropagation(List<ModifyComponent<Component>> modifyComponents,
+			protected void addToModifyComponentsToChangePropagation(List<ModifyComponent<Component>> modifyComponents,
 					ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
 				List<ModifyComponent<Component>> modifyComponentsToRemove = new ArrayList<ModifyComponent<Component>>();
 				for(ModifyComponent<Component> currentModifyComponent : changePropagationDueToHardwareChange.getComponentModifications()){
@@ -175,7 +175,7 @@ public class ModuleChanges extends Change {
 			} while (mapHash != interfacesToBeMarked.hashCode());			
 		}
 
-			private List<ModifyInterface<Interface>> createModifyInterfaceFromAffectedInterfaces(
+			protected List<ModifyInterface<Interface>> createModifyInterfaceFromAffectedInterfaces(
 					Map<Module, Set<Interface>> interfacesToBeMarked) {
 				List<ModifyInterface<Interface>> modifyInterfaces = new ArrayList<ModifyInterface<Interface>>();
 				for(Map.Entry<Module, Set<Interface>> interfacesToBeMarkedEntry : interfacesToBeMarked.entrySet()){
@@ -191,7 +191,7 @@ public class ModuleChanges extends Change {
 				return modifyInterfaces;
 			}
 	
-			private void addToModifyInterfacesToChangePropagation(List<ModifyInterface<Interface>> modifyInterfaces,
+			protected void addToModifyInterfacesToChangePropagation(List<ModifyInterface<Interface>> modifyInterfaces,
 					ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
 				List<ModifyInterface<Interface>> modifyInterfacesToRemove = new ArrayList<ModifyInterface<Interface>>();
 				for(ModifyInterface<Interface> currentModifyInterface : changePropagationDueToHardwareChange.getInterfaceModifications()){

@@ -56,7 +56,6 @@ public class RampChange extends ComponentChanges {
 
 	public void calculateAndMarkToFramePropagation(
 			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
-		List<ModifyComponent<Component>> modifyFrames = null;
 		for (Map.Entry<Component, Set<Interface>> entry : interfacesToBeMarked.entrySet())
 		{
 			Map<Interface,Set<Component>> affectedComponents = APSArchitectureModelLookup.lookUpParentComponentsOfInterfaces(entry.getValue(), changePropagationDueToHardwareChange);
