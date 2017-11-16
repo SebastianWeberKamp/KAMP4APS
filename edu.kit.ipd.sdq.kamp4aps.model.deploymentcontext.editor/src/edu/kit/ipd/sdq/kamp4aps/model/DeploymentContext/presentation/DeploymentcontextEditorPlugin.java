@@ -5,9 +5,6 @@ package edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.presentation;
 import edu.kit.ipd.sdq.kamp4aps.aps.aPS.provider.ApsEditPlugin;
 
 import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.BasicEditPlugin;
-
-import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.provider.ComponentInternalDependenciesEditPlugin;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider.IECModelEditPlugin;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryEditPlugin;
@@ -51,7 +48,6 @@ public final class DeploymentcontextEditorPlugin extends EMFPlugin {
 		super
 			(new ResourceLocator [] {
 				ApsEditPlugin.INSTANCE,
-				ComponentInternalDependenciesEditPlugin.INSTANCE,
 				IECModelEditPlugin.INSTANCE,
 				IECRepositoryEditPlugin.INSTANCE,
 				BasicEditPlugin.INSTANCE,
