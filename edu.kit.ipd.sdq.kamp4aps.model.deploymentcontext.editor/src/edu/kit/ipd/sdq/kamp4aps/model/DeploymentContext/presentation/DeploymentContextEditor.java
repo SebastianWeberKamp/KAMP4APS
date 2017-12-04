@@ -173,9 +173,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.provider.Structure
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.provider.apsItemProviderAdapterFactory;
 
 import edu.kit.ipd.sdq.kamp4aps.model.basic.provider.BasicItemProviderAdapterFactory;
-
-import edu.kit.ipd.sdq.kamp4iec.model.ComponentInternalDependencies.provider.ComponentInternalDependenciesItemProviderAdapterFactory;
-
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.provider.IECModelItemProviderAdapterFactory;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.provider.IECRepositoryItemProviderAdapterFactory;
@@ -734,7 +731,6 @@ public class DeploymentContextEditor
 		adapterFactory.addAdapterFactory(new StructureRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ModuleRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new InterfaceRepositoryItemProviderAdapterFactory());
-		adapterFactory.addAdapterFactory(new ComponentInternalDependenciesItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IECModelItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IECRepositoryItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new BasicItemProviderAdapterFactory());

@@ -16,6 +16,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
 
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -304,6 +305,7 @@ public class DeploymentContextPackageImpl extends EPackageImpl implements Deploy
 		// Obtain other dependent packages
 		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
 		IECModelPackage theIECModelPackage = (IECModelPackage)EPackage.Registry.INSTANCE.getEPackage(IECModelPackage.eNS_URI);
+		IECRepositoryPackage theIECRepositoryPackage = (IECRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(IECRepositoryPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
 
 		// Create type parameters
@@ -325,7 +327,7 @@ public class DeploymentContextPackageImpl extends EPackageImpl implements Deploy
 
 		initEClass(variableMappingEClass, VariableMapping.class, "VariableMapping", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVariableMapping_Name(), ecorePackage.getEString(), "name", null, 0, 1, VariableMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVariableMapping_ProgramVariable(), theIECModelPackage.getGlobalVariable(), null, "programVariable", null, 1, 1, VariableMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVariableMapping_ProgramVariable(), theIECRepositoryPackage.getGlobalVariable(), null, "programVariable", null, 1, 1, VariableMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariableMapping_InterfaceDeclaration(), theInterfaceRepositoryPackage.getInterface(), null, "interfaceDeclaration", null, 1, 1, VariableMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVariableMapping_Parent(), this.getComponentCorrelation(), this.getComponentCorrelation_VariableMapping(), "parent", null, 1, 1, VariableMapping.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

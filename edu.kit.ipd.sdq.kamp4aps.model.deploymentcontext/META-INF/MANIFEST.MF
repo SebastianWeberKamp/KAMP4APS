@@ -13,7 +13,6 @@ Export-Package: edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext,
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4aps.aps;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4iec.model.componentInternalDependencies;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4iec.model.repo;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4aps.basic;visibility:=reexport

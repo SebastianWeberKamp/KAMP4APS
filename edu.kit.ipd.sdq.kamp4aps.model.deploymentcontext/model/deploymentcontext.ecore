@@ -18,7 +18,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="VariableMapping">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="programVariable" lowerBound="1"
-        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//GlobalVariable"/>
+        eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model.repo/model/IECRepository.ecore#//GlobalVariable"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceDeclaration" lowerBound="1"
         eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.aps/model/aPS.ecore#//InterfaceRepository/Interface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"

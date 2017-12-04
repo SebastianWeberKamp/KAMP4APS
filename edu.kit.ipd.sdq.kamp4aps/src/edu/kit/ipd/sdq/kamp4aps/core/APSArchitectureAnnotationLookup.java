@@ -28,7 +28,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StructureDrawin
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StructureStockList;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.SystemTest;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.Plant;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;

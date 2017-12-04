@@ -25,7 +25,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.Role;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StructureDrawing;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StructureStockList;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.Plant;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
@@ -82,8 +82,8 @@ public class APSEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 				for(Interface interfaceElement : variableChanges.keySet()){
 						if(component.getConnectedInterfaces().contains(interfaceElement) || component.getConnectedInterfaces().contains(interfaceElement)){
 							activity.addFollowupActivity(new Activity(APSActivityType.UPDATE_SOFTWARE, APSActivityElementType.PROGRAM_TYPE,
-									activity.getElement(), "Variable: " + variableChanges.get(interfaceElement).getType() + " " + variableChanges.get(interfaceElement).getName(), 
-									null, activity.getBasicActivity(), "Firmware of Element " + interfaceElement.getName() +": Variable "+ variableChanges.get(interfaceElement).getType()
+									activity.getElement(), "Variable: " + variableChanges.get(interfaceElement).getName() + " " + variableChanges.get(interfaceElement).getName(), 
+									null, activity.getBasicActivity(), "Firmware of Element " + interfaceElement.getName() +": Variable "+ variableChanges.get(interfaceElement).getName()
 									+ " " + variableChanges.get(interfaceElement).getName()));			
 						}
 					}
