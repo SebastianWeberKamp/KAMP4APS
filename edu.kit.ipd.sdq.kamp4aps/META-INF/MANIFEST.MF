@@ -7,7 +7,6 @@ Bundle-Activator: edu.kit.ipd.sdq.kamp4aps.activator.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  org.junit,
- org.palladiosimulator.pcm;bundle-version="3.2.0",
  org.eclipse.emf.compare;bundle-version="1.2.2",
  org.eclipse.core.resources;bundle-version="3.7.101",
  edu.kit.ipd.sdq.kamp4aps.model.modificationmarks;bundle-version="1.0.0",
