@@ -12,6 +12,8 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import edu.kit.ipd.sdq.kamp.architecture.ArchitectureModelLookup;
+import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.ComponentCorrelation;
+import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.VariableMapping;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ChangePropagationDueToHardwareChange;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
@@ -29,6 +31,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
 import edu.kit.ipd.sdq.kamp4aps.model.basic.Identifier;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 
 /**
  * This class represents a part of the change rules implementation
@@ -413,7 +416,30 @@ public class APSArchitectureModelLookup extends ArchitectureModelLookup {
 		}
 		return results;
 	}
-
+	
+	/**
+	 * 
+	 * @param initialMarkedInterfaces
+	 * @return
+	 */
+	public static Map<Interface, Set<GlobalVariable>> lookUpGlobalVariablesOfInterfaces(
+			APSArchitectureVersion version,
+			Collection<? extends Interface> initialMarkedInterfaces,
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange){
+		Map<Interface, Set<GlobalVariable>> results = new HashMap<Interface, Set<GlobalVariable>>();
+		for(Interface modifyInterface : initialMarkedInterfaces){
+			if(results.get(modifyInterface) == null)
+				results.put(modifyInterface, new HashSet<GlobalVariable>());
+			for(ComponentCorrelation correlation : version.getDeploymentContextRepository().getComponentCorrelation()) {
+				for(VariableMapping mapping : correlation.getVariableMapping()) {
+					if(modifyInterface.getId().equals(mapping.getInterfaceDeclaration().getId())) {
+						results.get(modifyInterface).add(mapping.getProgramVariable());
+					}
+				}
+			}
+		}
+		return results;
+	}
 	
 //#########################################################################################################################################
 //#########################################################################################################################################

@@ -9,8 +9,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="ComponentCorrelation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parent" lowerBound="1"
         eType="#//DeploymentContextRepository" eOpposite="#//DeploymentContextRepository/componentCorrelation"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="component" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4aps.aps/model/aPS.ecore#//ComponentRepository/Component"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="program" eType="ecore:EClass ../../edu.kit.ipd.sdq.kamp4iec.model/model/IECModel.ecore#//Program"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="variableMapping" upperBound="-1"
         eType="#//VariableMapping" containment="true" eOpposite="#//VariableMapping/parent"/>

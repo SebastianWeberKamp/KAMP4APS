@@ -16,9 +16,12 @@ Require-Bundle: org.eclipse.ui,
  edu.kit.ipd.sdq.kamp.model.modificationmarks,
  edu.kit.ipd.sdq.kamp4aps.aps,
  edu.kit.ipd.sdq.kamp4iec.model,
+ edu.kit.ipd.sdq.kamp4iec.model.repo,
  edu.kit.ipd.sdq.kamp.model.modificationmarks.edit;bundle-version="1.0.0",
  edu.kit.ipd.sdq.kamp.model.modificationmarks.editor;bundle-version="1.0.0",
- edu.kit.ipd.sdq.kamp4aps.basic;bundle-version="1.0.0"
+ edu.kit.ipd.sdq.kamp4aps.basic;bundle-version="1.0.0",
+ edu.kit.ipd.sdq.kamp4iec.model.modificationmarks;bundle-version="0.1.0",
+ edu.kit.ipd.sdq.kamp4iec;bundle-version="0.1.0"
 Bundle-ActivationPolicy: lazy
 Bundle-ClassPath: .
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

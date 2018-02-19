@@ -60,35 +60,22 @@ public class APSEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 
 	private void deriveSoftwareChangeActivities(APSArchitectureVersion baseVersion, APSArchitectureVersion targetVersion, 
 			List<Activity> baseActivityList) {
-		Map<Component, Program> softwareSeedChanges = new HashMap<Component, Program>();
 		Map<Interface, GlobalVariable> variableChanges = new HashMap<Interface, GlobalVariable>();
 		for(Activity activity : baseActivityList){
 			APSArchitectureVersion version = determineRelevantArchitectureVersion(activity, baseVersion, targetVersion);
-			softwareSeedChanges.putAll(APSArchitectureAnnotationLookup.lookUpToChangeSoftware(
-					version, activity));
 			variableChanges.putAll(APSArchitectureAnnotationLookup.lookUpInterfacesOfSoftwareChanges(
 					version, activity));
-			addSoftwareChanges(softwareSeedChanges, variableChanges, activity);
+			addSoftwareChanges(variableChanges, activity);
 		}
 	}
 
-	private void addSoftwareChanges(Map<Component, Program> softwareChangeAffectedParts, 
-									Map<Interface, GlobalVariable> variableChanges, Activity activity) {
-		for(Component component : softwareChangeAffectedParts.keySet()){
-			if(component == activity.getElement()){
-				activity.addFollowupActivity(new Activity(APSActivityType.UPDATE_SOFTWARE, APSActivityElementType.PROGRAM_TYPE,
-						activity.getElement(), component.getId() , null, activity.getBasicActivity(), "Firmware of Element " + component.getName() +" in ProgramType "+ softwareChangeAffectedParts.get(component).getName()));
-				
-				for(Interface interfaceElement : variableChanges.keySet()){
-						if(component.getConnectedInterfaces().contains(interfaceElement) || component.getConnectedInterfaces().contains(interfaceElement)){
-							activity.addFollowupActivity(new Activity(APSActivityType.UPDATE_SOFTWARE, APSActivityElementType.PROGRAM_TYPE,
-									activity.getElement(), "Variable: " + variableChanges.get(interfaceElement).getName() + " " + variableChanges.get(interfaceElement).getName(), 
-									null, activity.getBasicActivity(), "Firmware of Element " + interfaceElement.getName() +": Variable "+ variableChanges.get(interfaceElement).getName()
-									+ " " + variableChanges.get(interfaceElement).getName()));			
-						}
-					}
+	private void addSoftwareChanges(Map<Interface, GlobalVariable> variableChanges, Activity activity) {
+		for(Interface interfaceElement : variableChanges.keySet()){
+				activity.addFollowupActivity(new Activity(APSActivityType.UPDATE_SOFTWARE, APSActivityElementType.GLOBAL_VARIABLE_TYPE,
+						activity.getElement(), "Variable: " + variableChanges.get(interfaceElement).getName() + " " + variableChanges.get(interfaceElement).getName(), 
+						null, activity.getBasicActivity(), "Firmware of Element " + interfaceElement.getName() +": Variable "+ variableChanges.get(interfaceElement).getName()
+						+ " " + variableChanges.get(interfaceElement).getName()));		
 			}
-		}
 	}
 
 	private void deriveCalibrationActivities(APSArchitectureVersion baseVersion, APSArchitectureVersion targetVersion,

@@ -306,50 +306,18 @@ public class APSArchitectureAnnotationLookup {
 		}
 	}
 
-	public static Map<Component, Program> lookUpToChangeSoftware(APSArchitectureVersion version,
+	public static Map<Interface, GlobalVariable> lookUpInterfacesOfSoftwareChanges(APSArchitectureVersion version,
 			Activity activity) {
-		Map<Component, Program> softwareChangeAffectedParts = new HashMap<Component, Program>();
-		if(activity.getElement() instanceof Component){
-			Component component = (Component)activity.getElement();
+		Map<Interface, GlobalVariable> softwareChangeAffectedParts = new HashMap<Interface, GlobalVariable>();
+		if(activity.getElement() instanceof Interface){
+			Interface apsInterface = (Interface)activity.getElement();
 			for(ComponentCorrelation cc : version.getDeploymentContextRepository().getComponentCorrelation()){
-				if(cc.getComponent() == component)
-					softwareChangeAffectedParts.put(component, cc.getProgram());
-			}
-		} else if (activity.getElement() instanceof Interface){
-			Interface interfaze = (Interface)activity.getElement();
-			for(ComponentCorrelation cc : version.getDeploymentContextRepository().getComponentCorrelation()){
-				if(cc.getComponent().getConnectedInterfaces().contains(interfaze)){
-					softwareChangeAffectedParts.put(cc.getComponent(), cc.getProgram());
+				for(VariableMapping mapping : cc.getVariableMapping()) {
+					if(mapping.getInterfaceDeclaration() == apsInterface)
+						softwareChangeAffectedParts.put(apsInterface, mapping.getProgramVariable());
 				}
 			}
 		}
 		return softwareChangeAffectedParts;
-	}
-
-	public static Map<Interface, GlobalVariable> lookUpInterfacesOfSoftwareChanges(APSArchitectureVersion version,
-			Activity activity) {
-		Map<Interface, GlobalVariable> variableChanges = new HashMap<Interface, GlobalVariable>();
-		if(activity.getElement() instanceof Component){
-			Component component = (Component)activity.getElement();
-			for(ComponentCorrelation cc : version.getDeploymentContextRepository().getComponentCorrelation()){
-				if(cc.getComponent() == component){
-					List<VariableMapping> mappings = cc.getVariableMapping();
-					for(VariableMapping mapping : mappings){
-						variableChanges.put(mapping.getInterfaceDeclaration(), mapping.getProgramVariable());
-					}
-				}
-			}
-		} else if (activity.getElement() instanceof Interface){
-			Interface interfaze = (Interface)activity.getElement();
-			for(ComponentCorrelation cc : version.getDeploymentContextRepository().getComponentCorrelation()){
-				if(cc.getComponent().getConnectedInterfaces().contains(interfaze)){
-					List<VariableMapping> mappings = cc.getVariableMapping();
-					for(VariableMapping mapping : mappings){
-						variableChanges.put(mapping.getInterfaceDeclaration(), mapping.getProgramVariable());
-					}
-				}
-			}
-		}
-		return variableChanges;
 	}
 }

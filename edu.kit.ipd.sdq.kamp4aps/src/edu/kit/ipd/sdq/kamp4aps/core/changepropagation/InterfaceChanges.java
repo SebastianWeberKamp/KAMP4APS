@@ -19,6 +19,11 @@ import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyModule;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyGlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModifyProgram;
 
 public class InterfaceChanges extends Change {
 
@@ -99,7 +104,7 @@ public class InterfaceChanges extends Change {
 			componentsToBeMarked = APSArchitectureModelLookup.lookUpParentComponentsOfInterfaces(initialMarkedInterfaces, changePropagationDueToHardwareChange);
 			modifyComponents = createModifyComponentsFromAffectedComponents(componentsToBeMarked);
 			addToModifyComponentsToChangePropagation(modifyComponents, changePropagationDueToHardwareChange);
-		} while (mapHash != componentsToBeMarked.hashCode());		
+		} while (mapHash != componentsToBeMarked.hashCode());
 	}
 	
 		protected List<ModifyComponent<Component>> createModifyComponentsFromAffectedComponents(
@@ -173,4 +178,52 @@ public class InterfaceChanges extends Change {
 		changePropagationDueToHardwareChange.getInterfaceModifications().clear();
 		changePropagationDueToHardwareChange.getInterfaceModifications().addAll(plainModifyInterfaces);
 	}	
+
+	public void calculateAndMarkToGlobalVariablePropagation(
+			ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange, IECChangePropagationDueToDataDependency changePropagationDueToDataDependency) {
+		Map<Interface, Set<GlobalVariable>> globalVariablesToBeMarked = new HashMap<Interface, Set<GlobalVariable>>();
+		List<IECModifyGlobalVariable> modifyGlobalVariables = null;
+		int mapHash;
+		do {
+			mapHash = globalVariablesToBeMarked.hashCode();
+			globalVariablesToBeMarked = APSArchitectureModelLookup.lookUpGlobalVariablesOfInterfaces(version, initialMarkedInterfaces, changePropagationDueToHardwareChange);
+			modifyGlobalVariables = createModifyGlobalVariablesFromAffectedInterfaces(globalVariablesToBeMarked);
+			addToModifyGlobalVariablesToChangePropagation(modifyGlobalVariables, changePropagationDueToDataDependency);
+		} while (mapHash != globalVariablesToBeMarked.hashCode());
+	}
+	
+	protected List<IECModifyGlobalVariable> createModifyGlobalVariablesFromAffectedInterfaces(
+			Map<Interface, Set<GlobalVariable>> modulesToBeMarked) {
+		List<IECModifyGlobalVariable> modifyModules = new ArrayList<IECModifyGlobalVariable>();
+		for(Map.Entry<Interface, Set<GlobalVariable>> modulesToBeMarkedEntry : modulesToBeMarked.entrySet()){
+			for(GlobalVariable globalVariable : modulesToBeMarkedEntry.getValue()){
+				IECModifyGlobalVariable modifyGlobalVariable = IECModificationmarksFactory.eINSTANCE.createIECModifyGlobalVariable();
+				modifyGlobalVariable.setToolderived(true);
+				modifyGlobalVariable.setAffectedElement(globalVariable);
+				modifyGlobalVariable.getCausingElements().add(modulesToBeMarkedEntry.getKey());
+				modifyGlobalVariable.setId(globalVariable.getId() + "_" + globalVariable.getName());
+				modifyModules.add(modifyGlobalVariable);
+			}
+		}
+		return modifyModules;
+	}
+	
+	
+	protected void addToModifyGlobalVariablesToChangePropagation(List<IECModifyGlobalVariable> modifyGlobalVariables,
+			IECChangePropagationDueToDataDependency changePropagationDueToDataDependency) {
+		List<IECModifyGlobalVariable> modifyModulesToRemove = new ArrayList<IECModifyGlobalVariable>();
+		for(IECModifyGlobalVariable currentModifyModule : changePropagationDueToDataDependency.getGlobalVariableModifications()){
+			for(IECModifyGlobalVariable newModifyModule : modifyGlobalVariables){
+				if(currentModifyModule.getAffectedElement().getId() == newModifyModule.getAffectedElement().getId())
+					modifyModulesToRemove.add(newModifyModule);
+			}
+		}
+		
+		for(IECModifyGlobalVariable modifyModuleToRemove : modifyModulesToRemove){
+			modifyGlobalVariables.remove(modifyModuleToRemove);
+		}
+		if(!modifyGlobalVariables.isEmpty())
+			changePropagationDueToDataDependency.setChanged(true);
+		changePropagationDueToDataDependency.getGlobalVariableModifications().addAll(modifyGlobalVariables);	
+	}
 }

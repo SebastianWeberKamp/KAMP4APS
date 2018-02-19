@@ -7,15 +7,11 @@ import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextFactory
 import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.VariableMapping;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.ComponentRepositoryPackage;
-
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.InterfaceRepositoryPackage;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.apsPackage;
 
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.IECModelPackage;
-
+import edu.kit.ipd.sdq.kamp4aps.model.basic.BasicPackage;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECRepositoryPackage;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -100,7 +96,8 @@ public class DeploymentContextPackageImpl extends EPackageImpl implements Deploy
 
 		// Initialize simple dependencies
 		apsPackage.eINSTANCE.eClass();
-		IECModelPackage.eINSTANCE.eClass();
+		BasicPackage.eINSTANCE.eClass();
+		IECRepositoryPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theDeploymentContextPackage.createPackageContents();
@@ -158,26 +155,8 @@ public class DeploymentContextPackageImpl extends EPackageImpl implements Deploy
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getComponentCorrelation_Component() {
-		return (EReference)componentCorrelationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getComponentCorrelation_Program() {
-		return (EReference)componentCorrelationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EAttribute getComponentCorrelation_Name() {
-		return (EAttribute)componentCorrelationEClass.getEStructuralFeatures().get(3);
+		return (EAttribute)componentCorrelationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -186,7 +165,7 @@ public class DeploymentContextPackageImpl extends EPackageImpl implements Deploy
 	 * @generated
 	 */
 	public EReference getComponentCorrelation_VariableMapping() {
-		return (EReference)componentCorrelationEClass.getEStructuralFeatures().get(4);
+		return (EReference)componentCorrelationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -267,8 +246,6 @@ public class DeploymentContextPackageImpl extends EPackageImpl implements Deploy
 
 		componentCorrelationEClass = createEClass(COMPONENT_CORRELATION);
 		createEReference(componentCorrelationEClass, COMPONENT_CORRELATION__PARENT);
-		createEReference(componentCorrelationEClass, COMPONENT_CORRELATION__COMPONENT);
-		createEReference(componentCorrelationEClass, COMPONENT_CORRELATION__PROGRAM);
 		createEAttribute(componentCorrelationEClass, COMPONENT_CORRELATION__NAME);
 		createEReference(componentCorrelationEClass, COMPONENT_CORRELATION__VARIABLE_MAPPING);
 
@@ -303,8 +280,6 @@ public class DeploymentContextPackageImpl extends EPackageImpl implements Deploy
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		ComponentRepositoryPackage theComponentRepositoryPackage = (ComponentRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(ComponentRepositoryPackage.eNS_URI);
-		IECModelPackage theIECModelPackage = (IECModelPackage)EPackage.Registry.INSTANCE.getEPackage(IECModelPackage.eNS_URI);
 		IECRepositoryPackage theIECRepositoryPackage = (IECRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(IECRepositoryPackage.eNS_URI);
 		InterfaceRepositoryPackage theInterfaceRepositoryPackage = (InterfaceRepositoryPackage)EPackage.Registry.INSTANCE.getEPackage(InterfaceRepositoryPackage.eNS_URI);
 
@@ -320,8 +295,6 @@ public class DeploymentContextPackageImpl extends EPackageImpl implements Deploy
 
 		initEClass(componentCorrelationEClass, ComponentCorrelation.class, "ComponentCorrelation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getComponentCorrelation_Parent(), this.getDeploymentContextRepository(), this.getDeploymentContextRepository_ComponentCorrelation(), "parent", null, 1, 1, ComponentCorrelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponentCorrelation_Component(), theComponentRepositoryPackage.getComponent(), null, "component", null, 0, 1, ComponentCorrelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getComponentCorrelation_Program(), theIECModelPackage.getProgram(), null, "program", null, 0, 1, ComponentCorrelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getComponentCorrelation_Name(), ecorePackage.getEString(), "name", null, 1, 1, ComponentCorrelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getComponentCorrelation_VariableMapping(), this.getVariableMapping(), this.getVariableMapping_Parent(), "variableMapping", null, 0, -1, ComponentCorrelation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

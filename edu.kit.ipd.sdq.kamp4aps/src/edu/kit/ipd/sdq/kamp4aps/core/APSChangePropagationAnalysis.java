@@ -24,6 +24,9 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusMaster;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4iec.core.IECChangePropagationAnalysis;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECChangePropagationDueToDataDependency;
+import edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Sensor;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.PhysicalConnection;
@@ -50,8 +53,9 @@ import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
  *
  */
 public class APSChangePropagationAnalysis implements AbstractChangePropagationAnalysis<APSArchitectureVersion> {
-	
+
 	private ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange;
+	private IECChangePropagationDueToDataDependency changePropagationDueToDataDependency;
 	private SensorChanges scenarioZero;
 	private SwitchChanges scenarioOne;
 	private BusChanges scenarioTwo;
@@ -61,6 +65,7 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 	public void runChangePropagationAnalysis(APSArchitectureVersion version) {
 		// Setup
 		setChangePropagationDueToHardwareChange(KAMP4aPSModificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange());
+		setChangePropagationDueToDataDependency(IECModificationmarksFactory.eINSTANCE.createIECChangePropagationDueToDataDependency());
 		
 		// Calculate
 		do {
@@ -72,7 +77,7 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 		} while(changePropagationDueToHardwareChange.isChanged());
 //		calculateAndMarkRampChanges(version);
 //		calculateAndMarkScrewingChanges(version);
-			
+		
 		// Update
 		addAllChangePropagations(version);
 	}
@@ -118,6 +123,7 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 		ic.calculateAndMarkToModulePropagation(changePropagationDueToHardwareChange);
 		ic.calculateAndMarkToComponentPropagation(changePropagationDueToHardwareChange);
 		ic.flattenAllModifyInterfaces(changePropagationDueToHardwareChange);
+		ic.calculateAndMarkToGlobalVariablePropagation(changePropagationDueToHardwareChange, changePropagationDueToDataDependency);
 	}
 
 	/**
@@ -201,9 +207,13 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 	protected void addAllChangePropagations(APSArchitectureVersion version){
 		version.getModificationMarkRepository().getChangePropagationSteps().add(changePropagationDueToHardwareChange);
 	}
-		
+	
 	protected void setChangePropagationDueToHardwareChange(ChangePropagationDueToHardwareChange changePropagationDueToHardwareChange) {
 		this.changePropagationDueToHardwareChange = changePropagationDueToHardwareChange;
+	}
+	
+	protected void setChangePropagationDueToDataDependency(IECChangePropagationDueToDataDependency changePropagationDueToDataDependency) {
+		this.changePropagationDueToDataDependency = changePropagationDueToDataDependency;
 	}
 
 

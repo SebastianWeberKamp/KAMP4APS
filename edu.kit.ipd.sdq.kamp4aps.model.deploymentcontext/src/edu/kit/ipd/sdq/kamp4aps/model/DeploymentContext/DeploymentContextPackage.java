@@ -113,31 +113,13 @@ public interface DeploymentContextPackage extends EPackage {
 	int COMPONENT_CORRELATION__PARENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Component</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT_CORRELATION__COMPONENT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Program</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int COMPONENT_CORRELATION__PROGRAM = 2;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_CORRELATION__NAME = 3;
+	int COMPONENT_CORRELATION__NAME = 1;
 
 	/**
 	 * The feature id for the '<em><b>Variable Mapping</b></em>' containment reference list.
@@ -146,7 +128,7 @@ public interface DeploymentContextPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_CORRELATION__VARIABLE_MAPPING = 4;
+	int COMPONENT_CORRELATION__VARIABLE_MAPPING = 2;
 
 	/**
 	 * The number of structural features of the '<em>Component Correlation</em>' class.
@@ -155,7 +137,7 @@ public interface DeploymentContextPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int COMPONENT_CORRELATION_FEATURE_COUNT = 5;
+	int COMPONENT_CORRELATION_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Component Correlation</em>' class.
@@ -272,28 +254,6 @@ public interface DeploymentContextPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getComponentCorrelation_Parent();
-
-	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.ComponentCorrelation#getComponent <em>Component</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Component</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.ComponentCorrelation#getComponent()
-	 * @see #getComponentCorrelation()
-	 * @generated
-	 */
-	EReference getComponentCorrelation_Component();
-
-	/**
-	 * Returns the meta object for the reference '{@link edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.ComponentCorrelation#getProgram <em>Program</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Program</em>'.
-	 * @see edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.ComponentCorrelation#getProgram()
-	 * @see #getComponentCorrelation()
-	 * @generated
-	 */
-	EReference getComponentCorrelation_Program();
 
 	/**
 	 * Returns the meta object for the attribute '{@link edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.ComponentCorrelation#getName <em>Name</em>}'.
@@ -429,22 +389,6 @@ public interface DeploymentContextPackage extends EPackage {
 		 * @generated
 		 */
 		EReference COMPONENT_CORRELATION__PARENT = eINSTANCE.getComponentCorrelation_Parent();
-
-		/**
-		 * The meta object literal for the '<em><b>Component</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPONENT_CORRELATION__COMPONENT = eINSTANCE.getComponentCorrelation_Component();
-
-		/**
-		 * The meta object literal for the '<em><b>Program</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference COMPONENT_CORRELATION__PROGRAM = eINSTANCE.getComponentCorrelation_Program();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.

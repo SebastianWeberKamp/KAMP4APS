@@ -7,6 +7,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextPackage
 import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.VariableMapping;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -63,7 +64,7 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable programVariable;
+	protected GlobalVariable programVariable;
 
 	/**
 	 * The cached value of the '{@link #getInterfaceDeclaration() <em>Interface Declaration</em>}' reference.
@@ -120,10 +121,10 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable getProgramVariable() {
+	public GlobalVariable getProgramVariable() {
 		if (programVariable != null && programVariable.eIsProxy()) {
 			InternalEObject oldProgramVariable = (InternalEObject)programVariable;
-			programVariable = (edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable)eResolveProxy(oldProgramVariable);
+			programVariable = (GlobalVariable)eResolveProxy(oldProgramVariable);
 			if (programVariable != oldProgramVariable) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DeploymentContextPackage.VARIABLE_MAPPING__PROGRAM_VARIABLE, oldProgramVariable, programVariable));
@@ -137,7 +138,7 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable basicGetProgramVariable() {
+	public GlobalVariable basicGetProgramVariable() {
 		return programVariable;
 	}
 
@@ -146,8 +147,8 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProgramVariable(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable newProgramVariable) {
-		edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable oldProgramVariable = programVariable;
+	public void setProgramVariable(GlobalVariable newProgramVariable) {
+		GlobalVariable oldProgramVariable = programVariable;
 		programVariable = newProgramVariable;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, DeploymentContextPackage.VARIABLE_MAPPING__PROGRAM_VARIABLE, oldProgramVariable, programVariable));
@@ -310,7 +311,7 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 				setName((String)newValue);
 				return;
 			case DeploymentContextPackage.VARIABLE_MAPPING__PROGRAM_VARIABLE:
-				setProgramVariable((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable)newValue);
+				setProgramVariable((GlobalVariable)newValue);
 				return;
 			case DeploymentContextPackage.VARIABLE_MAPPING__INTERFACE_DECLARATION:
 				setInterfaceDeclaration((Interface)newValue);
@@ -334,7 +335,7 @@ public class VariableMappingImpl extends MinimalEObjectImpl.Container implements
 				setName(NAME_EDEFAULT);
 				return;
 			case DeploymentContextPackage.VARIABLE_MAPPING__PROGRAM_VARIABLE:
-				setProgramVariable((edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable)null);
+				setProgramVariable((GlobalVariable)null);
 				return;
 			case DeploymentContextPackage.VARIABLE_MAPPING__INTERFACE_DECLARATION:
 				setInterfaceDeclaration((Interface)null);

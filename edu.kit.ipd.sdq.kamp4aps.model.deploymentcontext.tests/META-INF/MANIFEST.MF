@@ -11,9 +11,8 @@ Export-Package: edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.tests
 Require-Bundle: org.eclipse.core.runtime,
  edu.kit.ipd.sdq.kamp4aps.model.deploymentcontext;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4aps.aps;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4iec.model;visibility:=reexport,
- edu.kit.ipd.sdq.kamp4iec.model.repo;visibility:=reexport,
  edu.kit.ipd.sdq.kamp4aps.basic;visibility:=reexport,
+ edu.kit.ipd.sdq.kamp4iec.model.repo;visibility:=reexport,
  org.eclipse.emf.ecore.xmi;visibility:=reexport,
  org.junit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

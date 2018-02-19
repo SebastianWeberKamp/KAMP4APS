@@ -63,55 +63,9 @@ public class ComponentCorrelationItemProvider
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addComponentPropertyDescriptor(object);
-			addProgramPropertyDescriptor(object);
 			addNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Component feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addComponentPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ComponentCorrelation_component_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentCorrelation_component_feature", "_UI_ComponentCorrelation_type"),
-				 DeploymentContextPackage.Literals.COMPONENT_CORRELATION__COMPONENT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Program feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addProgramPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_ComponentCorrelation_program_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ComponentCorrelation_program_feature", "_UI_ComponentCorrelation_type"),
-				 DeploymentContextPackage.Literals.COMPONENT_CORRELATION__PROGRAM,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
 	}
 
 	/**

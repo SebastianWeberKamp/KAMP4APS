@@ -13,7 +13,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.StructureStockL
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.TestCase;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.TrainingDocExternal;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.TrainingDocIntern;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
@@ -52,7 +52,7 @@ public enum APSActivityElementType implements AbstractActivityElementType {
 	INTERFACE_STOCKLIST(InterfaceStockList.class),
 	STRUCTURE_STOCKLIST(StructureStockList.class),
 
-	PROGRAM_TYPE(Program.class);
+	GLOBAL_VARIABLE_TYPE(GlobalVariable.class);
 	
 	private final Class<?> clazz;
 	private final String name;

@@ -3,6 +3,7 @@
 package edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -60,12 +61,12 @@ public interface VariableMapping extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Program Variable</em>' reference.
-	 * @see #setProgramVariable(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable)
+	 * @see #setProgramVariable(GlobalVariable)
 	 * @see edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextPackage#getVariableMapping_ProgramVariable()
 	 * @model required="true"
 	 * @generated
 	 */
-	edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable getProgramVariable();
+	GlobalVariable getProgramVariable();
 
 	/**
 	 * Sets the value of the '{@link edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.VariableMapping#getProgramVariable <em>Program Variable</em>}' reference.
@@ -75,7 +76,7 @@ public interface VariableMapping extends EObject {
 	 * @see #getProgramVariable()
 	 * @generated
 	 */
-	void setProgramVariable(edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable value);
+	void setProgramVariable(GlobalVariable value);
 
 	/**
 	 * Returns the value of the '<em><b>Interface Declaration</b></em>' reference.

@@ -6,11 +6,6 @@ import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.ComponentCorrelation;
 import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextPackage;
 import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.VariableMapping;
-
-import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
-
-import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Program;
-
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -37,8 +32,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.impl.ComponentCorrelationImpl#getParent <em>Parent</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.impl.ComponentCorrelationImpl#getComponent <em>Component</em>}</li>
- *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.impl.ComponentCorrelationImpl#getProgram <em>Program</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.impl.ComponentCorrelationImpl#getName <em>Name</em>}</li>
  *   <li>{@link edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.impl.ComponentCorrelationImpl#getVariableMapping <em>Variable Mapping</em>}</li>
  * </ul>
@@ -46,26 +39,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container implements ComponentCorrelation {
-	/**
-	 * The cached value of the '{@link #getComponent() <em>Component</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getComponent()
-	 * @generated
-	 * @ordered
-	 */
-	protected Component component;
-
-	/**
-	 * The cached value of the '{@link #getProgram() <em>Program</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getProgram()
-	 * @generated
-	 * @ordered
-	 */
-	protected Program program;
-
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -161,82 +134,6 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Component getComponent() {
-		if (component != null && component.eIsProxy()) {
-			InternalEObject oldComponent = (InternalEObject)component;
-			component = (Component)eResolveProxy(oldComponent);
-			if (component != oldComponent) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DeploymentContextPackage.COMPONENT_CORRELATION__COMPONENT, oldComponent, component));
-			}
-		}
-		return component;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Component basicGetComponent() {
-		return component;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setComponent(Component newComponent) {
-		Component oldComponent = component;
-		component = newComponent;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DeploymentContextPackage.COMPONENT_CORRELATION__COMPONENT, oldComponent, component));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Program getProgram() {
-		if (program != null && program.eIsProxy()) {
-			InternalEObject oldProgram = (InternalEObject)program;
-			program = (Program)eResolveProxy(oldProgram);
-			if (program != oldProgram) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM, oldProgram, program));
-			}
-		}
-		return program;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Program basicGetProgram() {
-		return program;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setProgram(Program newProgram) {
-		Program oldProgram = program;
-		program = newProgram;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM, oldProgram, program));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getName() {
 		return name;
 	}
@@ -324,12 +221,6 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 		switch (featureID) {
 			case DeploymentContextPackage.COMPONENT_CORRELATION__PARENT:
 				return getParent();
-			case DeploymentContextPackage.COMPONENT_CORRELATION__COMPONENT:
-				if (resolve) return getComponent();
-				return basicGetComponent();
-			case DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM:
-				if (resolve) return getProgram();
-				return basicGetProgram();
 			case DeploymentContextPackage.COMPONENT_CORRELATION__NAME:
 				return getName();
 			case DeploymentContextPackage.COMPONENT_CORRELATION__VARIABLE_MAPPING:
@@ -349,12 +240,6 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 		switch (featureID) {
 			case DeploymentContextPackage.COMPONENT_CORRELATION__PARENT:
 				setParent((DeploymentContextRepository)newValue);
-				return;
-			case DeploymentContextPackage.COMPONENT_CORRELATION__COMPONENT:
-				setComponent((Component)newValue);
-				return;
-			case DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM:
-				setProgram((Program)newValue);
 				return;
 			case DeploymentContextPackage.COMPONENT_CORRELATION__NAME:
 				setName((String)newValue);
@@ -378,12 +263,6 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 			case DeploymentContextPackage.COMPONENT_CORRELATION__PARENT:
 				setParent((DeploymentContextRepository)null);
 				return;
-			case DeploymentContextPackage.COMPONENT_CORRELATION__COMPONENT:
-				setComponent((Component)null);
-				return;
-			case DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM:
-				setProgram((Program)null);
-				return;
 			case DeploymentContextPackage.COMPONENT_CORRELATION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
@@ -404,10 +283,6 @@ public class ComponentCorrelationImpl extends MinimalEObjectImpl.Container imple
 		switch (featureID) {
 			case DeploymentContextPackage.COMPONENT_CORRELATION__PARENT:
 				return getParent() != null;
-			case DeploymentContextPackage.COMPONENT_CORRELATION__COMPONENT:
-				return component != null;
-			case DeploymentContextPackage.COMPONENT_CORRELATION__PROGRAM:
-				return program != null;
 			case DeploymentContextPackage.COMPONENT_CORRELATION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case DeploymentContextPackage.COMPONENT_CORRELATION__VARIABLE_MAPPING:
