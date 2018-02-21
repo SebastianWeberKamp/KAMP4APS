@@ -3,4 +3,9 @@
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersion"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.ChangePropagationAnalysis"/>
 <fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.ArchitectureVersionPersistency"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.VariableMapping"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.model.modificationmarks.IECModificationmarksFactory"/>
+<fullyQualifiedTypeName name="edu.kit.ipd.sdq.kamp4iec.core.IECChangePropagationAnalysis"/>
 </qualifiedTypeNameHistroy>
