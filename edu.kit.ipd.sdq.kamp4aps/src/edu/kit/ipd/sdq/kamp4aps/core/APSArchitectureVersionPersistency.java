@@ -1,6 +1,9 @@
 package edu.kit.ipd.sdq.kamp4aps.core;
 
+import java.io.IOException;
+
 import org.eclipse.core.resources.IContainer;
+
 import org.eclipse.core.resources.IFile;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
@@ -12,6 +15,11 @@ import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextReposit
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.KAMP4aPSModificationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.Plant;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
+import edu.kit.ipd.sdq.kamp4iec.core.AbstractKAMP4IECArchitectureVersionPersistency;
+import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.AbstractKAMP4IECModificationRepository;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
 
 /**
  * 
@@ -38,6 +46,11 @@ public class APSArchitectureVersionPersistency extends AbstractArchitectureVersi
 		String internalModFilePath = filename + "." + FILEEXTENSION_MODIFICATIONMARKS;
 		String xppufilePath = filename + "." + FILEEXTENSION_APS;
 
+		String internalIECFieldOfActivityFilePath = filename + "." + AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS;
+		String internalIecRepositoryFilePath = filename + "." + AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_REPOSITORY;
+		String internalConfigurationFilePath = filename + "." + AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_CONFIGURATION;
+		String internalIECModFilePath = filename + "." + AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_MODIFICATIONMARK;
+
 		archParams.name = versionname;
 		archParams.fieldOfActivityRepository = (FieldOfActivityAnnotationRepository) loadEmfModelFromResource(
 				folderpath, fieldOfActivityRepositoryFilePath, loadResourceSet);
@@ -46,6 +59,12 @@ public class APSArchitectureVersionPersistency extends AbstractArchitectureVersi
 		archParams.aPSPlant = (Plant) loadEmfModelFromResource(folderpath, xppufilePath, loadResourceSet);
 		archParams.deploymentContextRepository = (DeploymentContextRepository) loadEmfModelFromResource(folderpath,
 				internalModFilePath, loadResourceSet);
+
+		archParams.iecFieldOfActivityRepository = (IECFieldOfActivityAnnotationsRepository)loadEmfModelFromResource(folderpath, internalIECFieldOfActivityFilePath, loadResourceSet);
+		archParams.iecRepository = (Repository)loadEmfModelFromResource(folderpath, internalIecRepositoryFilePath, loadResourceSet);
+		archParams.configuration = (Configuration)loadEmfModelFromResource(folderpath, internalConfigurationFilePath, loadResourceSet);
+		archParams.iecModificationMarkRepository = (AbstractKAMP4IECModificationRepository)loadEmfModelFromResource(folderpath, internalIECModFilePath, loadResourceSet);
+
 		return new APSArchitectureVersion(archParams);
 	}
 
@@ -77,13 +96,47 @@ public class APSArchitectureVersionPersistency extends AbstractArchitectureVersi
 					loadResourceSet);
 		if (deploymentContextFile != null && deploymentContextFile.exists())
 			archParams.deploymentContextRepository = (DeploymentContextRepository) loadEmfModelFromResource(
-					deploymentContextFile.getFullPath().toString(), null, loadResourceSet);
+					deploymentContextFile.getFullPath().toString(), null, loadResourceSet);		
+
+		IFile internalIECFieldOfActivityFile = FileAndFolderManagement.retrieveFileWithExtension(folder, AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS);
+		IFile internalIECRepositoryFile = FileAndFolderManagement.retrieveFileWithExtension(folder, AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_REPOSITORY);
+		IFile internalConfigurationFile = FileAndFolderManagement.retrieveFileWithExtension(folder, AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_CONFIGURATION);
+		IFile internalIECModFile = FileAndFolderManagement.retrieveFileWithExtension(folder, AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_MODIFICATIONMARK);
+		
+		archParams.iecFieldOfActivityRepository = null;
+		archParams.iecRepository = null;
+		archParams.configuration = null;
+		archParams.iecModificationMarkRepository = null;
+		
+		archParams.name = versionname;
+		if (internalIECFieldOfActivityFile != null && internalIECFieldOfActivityFile.exists())
+			archParams.iecFieldOfActivityRepository = (IECFieldOfActivityAnnotationsRepository) loadEmfModelFromResource(internalIECFieldOfActivityFile.getFullPath().toString(), null, loadResourceSet);
+		if (internalIECRepositoryFile != null && internalIECRepositoryFile.exists())
+			archParams.iecRepository = (Repository)loadEmfModelFromResource(internalIECRepositoryFile.getFullPath().toString(), null, loadResourceSet);
+		if (internalConfigurationFile != null && internalConfigurationFile.exists())
+			archParams.configuration = (Configuration)loadEmfModelFromResource(internalConfigurationFile.getFullPath().toString(), null, loadResourceSet);
+		if (internalIECModFile != null && internalIECModFile.exists())
+			archParams.iecModificationMarkRepository = (AbstractKAMP4IECModificationRepository) loadEmfModelFromResource(internalIECModFile.getFullPath().toString(), null, loadResourceSet);
+
 		return new APSArchitectureVersion(archParams);
 	}
 
 	@Override
 	public void save(String targetDirectoryPath, String filename, APSArchitectureVersion version) {
 		savePCMAndKAMP4APSModels(targetDirectoryPath, filename, version);
+	}
+	
+	@Override
+	public void saveModificationMarkFile(String targetDirectoryPath, String filename, APSArchitectureVersion version)
+			throws IOException {
+		ResourceSet resourceSet = new ResourceSetImpl();
+		String internalModFilePath = filename + "." + FILEEXTENSION_MODIFICATIONMARK;	
+		if (version.getModificationMarkRepository()!=null)
+			saveEmfModelToResource(version.getModificationMarkRepository(), targetDirectoryPath, internalModFilePath, resourceSet);	
+		String internalIECModFilePath = filename + "." + AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_MODIFICATIONMARK;	
+		if (version.getIECModificationMarkRepository()!=null)
+			saveEmfModelToResource(version.getIECModificationMarkRepository(), targetDirectoryPath, internalIECModFilePath, resourceSet);		
+		
 	}
 
 	public static void savePCMAndKAMP4APSModels(String targetDirectoryPath, String filename, APSArchitectureVersion version) {
@@ -105,6 +158,20 @@ public class APSArchitectureVersionPersistency extends AbstractArchitectureVersi
 		if (version.getAPSPlant() != null)
 			saveEmfModelToResource(version.getAPSPlant(), targetDirectoryPath, xppuFilePath,
 					resourceSet);
+		
+		String repositoryfilePath = filename + "."+ AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_REPOSITORY;
+		String configurationFilePath = filename + "."+ AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_CONFIGURATION;
+		String internalIECModFilePath = filename + "." + AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_MODIFICATIONMARK;
+		String iecFieldOfActivityRepositoryFilePath = filename + "."+ AbstractKAMP4IECArchitectureVersionPersistency.FILEEXTENSION_FIELDOFACTIVITYANNOTATIONS;
+		
+		if (version.getIECRepository()!=null)
+			saveEmfModelToResource(version.getIECRepository(), targetDirectoryPath, repositoryfilePath, resourceSet);		
+		if (version.getConfiguration()!=null)
+			saveEmfModelToResource(version.getConfiguration(), targetDirectoryPath, configurationFilePath, resourceSet);		
+		if (version.getModificationMarkRepository()!=null)
+			saveEmfModelToResource(version.getModificationMarkRepository(), targetDirectoryPath, internalIECModFilePath, resourceSet);		
+		if (version.getFieldOfActivityRepository()!=null)
+			saveEmfModelToResource(version.getFieldOfActivityRepository(), targetDirectoryPath, iecFieldOfActivityRepositoryFilePath, resourceSet);
 	}
 
 }

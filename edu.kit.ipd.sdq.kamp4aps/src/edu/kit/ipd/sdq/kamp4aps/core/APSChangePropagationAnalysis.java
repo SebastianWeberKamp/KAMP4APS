@@ -24,18 +24,46 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusMaster;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.BusComponents.BusSlave;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.MicroswitchModule;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersionPersistency;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion.ArchitectureVersionParams;
 import edu.kit.ipd.sdq.kamp4iec.core.IECChangePropagationAnalysis;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECChangePropagationDueToDataDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyAbstractMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyAbstractProperty;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyConfiguration;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyFunction;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyFunctionBlock;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyGlobalVariable;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyInterface;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyMethod;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProgram;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProperty;
+import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.IECComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Sensor;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.PhysicalConnection;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.SignalInterface;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
+
+import org.eclipse.emf.common.notify.Adapter;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.util.TreeIterator;
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.ecore.EOperation;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
+import org.eclipse.emf.ecore.resource.Resource;
 
 import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
 /**
@@ -80,6 +108,26 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 		
 		// Update
 		addAllChangePropagations(version);
+		
+		IECArchitectureVersion iecVersion = extractIECArchitecture(version);
+		IECChangePropagationAnalysis iecAnalysis = new IECChangePropagationAnalysis();
+		List<IECComponent> iecSeed = new LinkedList<>();
+		for(IECModifyGlobalVariable mod : changePropagationDueToDataDependency.getGlobalVariableModifications()) {
+			iecSeed.add(mod.getAffectedElement());
+		}
+		iecAnalysis.setSeedModifications(iecSeed);
+		
+		iecAnalysis.runChangePropagationAnalysis(iecVersion);
+	}
+	
+	private IECArchitectureVersion extractIECArchitecture(APSArchitectureVersion apsArchitectureVersion) {
+		IECArchitectureVersion iecVersion = new IECArchitectureVersion(new ArchitectureVersionParams());
+		iecVersion.setFieldOfActivityRepository(apsArchitectureVersion.getIECFieldOfActivityRepository());
+		iecVersion.setIECRepository(apsArchitectureVersion.getIECRepository());
+		iecVersion.setKonfiguration(apsArchitectureVersion.getConfiguration());
+		iecVersion.setModificationMarkRepository(apsArchitectureVersion.getIECModificationMarkRepository());
+		iecVersion.setName(apsArchitectureVersion.getName());
+		return iecVersion;
 	}
 
 	private void calculateAndMarkScrewingChanges(APSArchitectureVersion version) {

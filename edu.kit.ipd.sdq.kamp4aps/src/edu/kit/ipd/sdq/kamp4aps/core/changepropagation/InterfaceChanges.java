@@ -23,7 +23,6 @@ import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.GlobalVariable;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECChangePropagationDueToDataDependency;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyGlobalVariable;
-import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModifyProgram;
 
 public class InterfaceChanges extends Change {
 

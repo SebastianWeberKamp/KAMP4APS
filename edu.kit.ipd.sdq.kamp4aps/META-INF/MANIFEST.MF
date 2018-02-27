@@ -31,4 +31,5 @@ Export-Package: edu.kit.ipd.sdq.kamp4aps.activator,
  edu.kit.ipd.sdq.kamp4aps.core.derivation,
  edu.kit.ipd.sdq.kamp4aps.ui
 Import-Package: edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext,
- edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.provider
+ edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.provider,
+ edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations

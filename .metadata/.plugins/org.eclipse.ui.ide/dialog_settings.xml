@@ -12,8 +12,8 @@
 		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
 		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
-			<item value="C:\Users\Jannis\Documents\workspace\KAMP4APS"/>
 			<item value="C:\Users\Jannis\Documents\workspace\KAMP4IEC"/>
+			<item value="C:\Users\Jannis\Documents\workspace\KAMP4APS"/>
 			<item value="C:\Users\Jannis\Documents\workspace\KAMP"/>
 			<item value="D:\workspace\KAMP4IEC\KAMP4IEC"/>
 			<item value="C:\Users\janni\workspace\KAMP4IEC\KAMP4IEC"/>
