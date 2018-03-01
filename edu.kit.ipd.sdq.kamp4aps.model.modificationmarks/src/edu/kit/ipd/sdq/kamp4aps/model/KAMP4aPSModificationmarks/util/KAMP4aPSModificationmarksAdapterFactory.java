@@ -17,6 +17,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -97,7 +98,7 @@ public class KAMP4aPSModificationmarksAdapterFactory extends AdapterFactoryImpl 
 				return createChangePropagationDueToHardwareChangeAdapter();
 			}
 			@Override
-			public <T extends edu.kit.ipd.sdq.kamp4aps.model.basic.Entity> Adapter caseModifyEntity(ModifyEntity<T> object) {
+			public <T extends Entity> Adapter caseModifyEntity(ModifyEntity<T> object) {
 				return createModifyEntityAdapter();
 			}
 			@Override

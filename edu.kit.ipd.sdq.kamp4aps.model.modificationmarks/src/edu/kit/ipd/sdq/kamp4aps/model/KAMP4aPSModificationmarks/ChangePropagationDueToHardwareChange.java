@@ -173,7 +173,7 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 
 	/**
 	 * Returns the value of the '<em><b>Interface Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface}&lt;edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface>.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface}<code>&lt;edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface&gt;</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Interface Modifications</em>' containment reference list isn't clear,
@@ -189,7 +189,7 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 
 	/**
 	 * Returns the value of the '<em><b>Component Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent}&lt;edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component>.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent}<code>&lt;edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component&gt;</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Component Modifications</em>' containment reference list isn't clear,
@@ -205,7 +205,7 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 
 	/**
 	 * Returns the value of the '<em><b>Structure Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyStructure}&lt;edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure>.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyStructure}<code>&lt;edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure&gt;</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Structure Modifications</em>' containment reference list isn't clear,
@@ -221,7 +221,7 @@ public interface ChangePropagationDueToHardwareChange extends ChangePropagationS
 
 	/**
 	 * Returns the value of the '<em><b>Module Modifications</b></em>' containment reference list.
-	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyModule}&lt;edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module>.
+	 * The list contents are of type {@link edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyModule}<code>&lt;edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module&gt;</code>.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Module Modifications</em>' containment reference list isn't clear,

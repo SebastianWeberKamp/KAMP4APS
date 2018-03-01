@@ -19,6 +19,7 @@ import edu.kit.ipd.sdq.kamp4iec.core.AbstractKAMP4IECArchitectureVersionPersiste
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.AbstractKAMP4IECModificationRepository;
+import edu.kit.ipd.sdq.kamp4iec.model.IECModificationmarks.IECModificationRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECRepository.Repository;
 
 /**
@@ -63,7 +64,7 @@ public class APSArchitectureVersionPersistency extends AbstractArchitectureVersi
 		archParams.iecFieldOfActivityRepository = (IECFieldOfActivityAnnotationsRepository)loadEmfModelFromResource(folderpath, internalIECFieldOfActivityFilePath, loadResourceSet);
 		archParams.iecRepository = (Repository)loadEmfModelFromResource(folderpath, internalIecRepositoryFilePath, loadResourceSet);
 		archParams.configuration = (Configuration)loadEmfModelFromResource(folderpath, internalConfigurationFilePath, loadResourceSet);
-		archParams.iecModificationMarkRepository = (AbstractKAMP4IECModificationRepository)loadEmfModelFromResource(folderpath, internalIECModFilePath, loadResourceSet);
+		archParams.iecModificationMarkRepository = (IECModificationRepository)loadEmfModelFromResource(folderpath, internalIECModFilePath, loadResourceSet);
 
 		return new APSArchitectureVersion(archParams);
 	}
@@ -108,7 +109,6 @@ public class APSArchitectureVersionPersistency extends AbstractArchitectureVersi
 		archParams.configuration = null;
 		archParams.iecModificationMarkRepository = null;
 		
-		archParams.name = versionname;
 		if (internalIECFieldOfActivityFile != null && internalIECFieldOfActivityFile.exists())
 			archParams.iecFieldOfActivityRepository = (IECFieldOfActivityAnnotationsRepository) loadEmfModelFromResource(internalIECFieldOfActivityFile.getFullPath().toString(), null, loadResourceSet);
 		if (internalIECRepositoryFile != null && internalIECRepositoryFile.exists())
@@ -116,7 +116,7 @@ public class APSArchitectureVersionPersistency extends AbstractArchitectureVersi
 		if (internalConfigurationFile != null && internalConfigurationFile.exists())
 			archParams.configuration = (Configuration)loadEmfModelFromResource(internalConfigurationFile.getFullPath().toString(), null, loadResourceSet);
 		if (internalIECModFile != null && internalIECModFile.exists())
-			archParams.iecModificationMarkRepository = (AbstractKAMP4IECModificationRepository) loadEmfModelFromResource(internalIECModFile.getFullPath().toString(), null, loadResourceSet);
+			archParams.iecModificationMarkRepository = (IECModificationRepository) loadEmfModelFromResource(internalIECModFile.getFullPath().toString(), null, loadResourceSet);
 
 		return new APSArchitectureVersion(archParams);
 	}

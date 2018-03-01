@@ -17,6 +17,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ModuleRepository.Module;
 
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.StructureRepository.Structure;
 
+import edu.kit.ipd.sdq.kamp4aps.model.basic.Entity;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -304,7 +305,7 @@ public class KAMP4aPSModificationmarksSwitch<T1> extends Switch<T1> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public <T extends edu.kit.ipd.sdq.kamp4aps.model.basic.Entity> T1 caseModifyEntity(ModifyEntity<T> object) {
+	public <T extends Entity> T1 caseModifyEntity(ModifyEntity<T> object) {
 		return null;
 	}
 

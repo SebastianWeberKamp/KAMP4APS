@@ -281,22 +281,24 @@ public class APSEnrichedWorkplanDerivation implements AbstractEnrichedWorkplanDe
 	}
 
 	private void deriveDocumentationForOneActivity(Activity activity, Map<APSActivityElementType, Integer> numberOfFiles) {
-		switch ((APSActivityElementType) activity.getElementType()) {
-		case COMPONENT:
-			addDocumentation(activity, numberOfFiles, "component");
-			break;
-		case INTERFACE:
-			addDocumentation(activity, numberOfFiles, "interface");
-			break;
-		case MODULE:
-			addDocumentation(activity, numberOfFiles, "module");
-			break;
-		case STRUCTURE:
-			addDocumentation(activity, numberOfFiles, "structure");
-			break;
-		default:
-			break;
+		if(activity.getElementType() instanceof APSActivityElementType) {
+			switch ((APSActivityElementType) activity.getElementType()) {
+			case COMPONENT:
+				addDocumentation(activity, numberOfFiles, "component");
+				break;
+			case INTERFACE:
+				addDocumentation(activity, numberOfFiles, "interface");
+				break;
+			case MODULE:
+				addDocumentation(activity, numberOfFiles, "module");
+				break;
+			case STRUCTURE:
+				addDocumentation(activity, numberOfFiles, "structure");
+				break;
+			default:
+				break;
 
+			}
 		}
 	}
 

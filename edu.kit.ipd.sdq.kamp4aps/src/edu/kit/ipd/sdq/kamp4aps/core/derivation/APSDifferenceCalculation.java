@@ -16,6 +16,9 @@ import edu.kit.ipd.sdq.kamp4aps.core.APSActivityElementType;
 import edu.kit.ipd.sdq.kamp4aps.core.APSActivityType;
 import edu.kit.ipd.sdq.kamp4aps.labels.LabelCustomizing;
 import edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion.ArchitectureVersionParams;
+import edu.kit.ipd.sdq.kamp4iec.core.derivation.IECDifferenceCalculation;
 
 /**
  * 
@@ -28,6 +31,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.basic.NamedElement;
  *
  */
 public class APSDifferenceCalculation extends AbstractDifferenceCalculation<APSArchitectureVersion>{
+	
+	IECDifferenceCalculation iecDifferenceCalculation = new IECDifferenceCalculation();
 
 	private final APSInternalModificationDerivation architectureInternalModificationDerivation = new APSInternalModificationDerivation();
 	private final APSSubactivityDerivation architectureSubactivityDerivation = new APSSubactivityDerivation();
@@ -62,16 +67,34 @@ public class APSDifferenceCalculation extends AbstractDifferenceCalculation<APSA
 		List<Activity> activityList = new ArrayList<Activity>();
 		
 		List<Diff> plantDiff = calculateDiffModel(baseVersion.getAPSPlant(), targetVersion.getAPSPlant());
+		List<Diff> konfigurationDiff = calculateDiffModel(baseVersion.getConfiguration(), targetVersion.getConfiguration());
+		List<Diff> repoDiff = calculateDiffModel(baseVersion.getIECRepository(), targetVersion.getIECRepository());		
 		
-		List<Activity> plantActivities = deriveAddAndRemoveActivities(plantDiff);
-		plantActivities = removeDuplicates(plantActivities);
-		activityList.addAll(plantActivities);		
+		activityList.addAll(removeDuplicates(deriveAddAndRemoveActivities(plantDiff)));	
+		
+		activityList.addAll(removeDuplicates(iecDifferenceCalculation.deriveAddAndRemoveActivities(konfigurationDiff)));
+		activityList.addAll(removeDuplicates(iecDifferenceCalculation.deriveAddAndRemoveActivities(repoDiff)));	
 		
 		List<Activity> internalModificationActivities = this.architectureInternalModificationDerivation
 				.deriveInternalModifications(targetVersion);
+		
+		List<Activity> internalIECModificationActivities = iecDifferenceCalculation.getArchitectureInternalModificationDerivation()
+				.deriveInternalModifications(extractIECArchitecture(targetVersion));
+
 		activityList.addAll(internalModificationActivities);
+		activityList.addAll(internalIECModificationActivities);
 
 		return activityList;
+	}
+	
+	private IECArchitectureVersion extractIECArchitecture(APSArchitectureVersion apsArchitectureVersion) {
+		IECArchitectureVersion iecVersion = new IECArchitectureVersion(new ArchitectureVersionParams());
+		iecVersion.setFieldOfActivityRepository(apsArchitectureVersion.getIECFieldOfActivityRepository());
+		iecVersion.setIECRepository(apsArchitectureVersion.getIECRepository());
+		iecVersion.setKonfiguration(apsArchitectureVersion.getConfiguration());
+		iecVersion.setModificationMarkRepository(apsArchitectureVersion.getIECModificationMarkRepository());
+		iecVersion.setName(apsArchitectureVersion.getName());
+		return iecVersion;
 	}
 
 	private List<Activity> removeDuplicates(List<Activity> plantActivities) {

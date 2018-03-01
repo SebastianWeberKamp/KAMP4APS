@@ -229,6 +229,7 @@ public class KAMP4aPSModificationmarksPackageImpl extends EPackageImpl implement
 		// Initialize simple dependencies
 		apsPackage.eINSTANCE.eClass();
 		ModificationmarksPackage.eINSTANCE.eClass();
+		BasicPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
 		theKAMP4aPSModificationmarksPackage.createPackageContents();

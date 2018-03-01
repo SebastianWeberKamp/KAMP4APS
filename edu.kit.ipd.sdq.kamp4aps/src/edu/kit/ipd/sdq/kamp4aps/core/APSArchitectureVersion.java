@@ -33,7 +33,7 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 	private Repository _IECRepository;
 	private Configuration _configuration;
 	private IECFieldOfActivityAnnotationsRepository _iecFieldOfActivityRepository;
-	public AbstractKAMP4IECModificationRepository _iecModificationMarkRepository;
+	public IECModificationRepository _iecModificationMarkRepository;
 	
 	public static class ArchitectureVersionParams{
 		public String name;
@@ -42,7 +42,7 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 		public DeploymentContextRepository deploymentContextRepository;
 		public Plant aPSPlant;
 
-		public AbstractKAMP4IECModificationRepository iecModificationMarkRepository;
+		public IECModificationRepository iecModificationMarkRepository;
 		public Repository iecRepository;
 		public Configuration configuration;
 		public IECFieldOfActivityAnnotationsRepository iecFieldOfActivityRepository;
@@ -57,9 +57,6 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 		if (params.fieldOfActivityRepository == null)
 			params.fieldOfActivityRepository = KAMP4aPSFieldofactivityannotationsFactory.eINSTANCE.
 					createFieldOfActivityAnnotationRepository();
-
-		_fieldOfActivityRepository = params.fieldOfActivityRepository;
-		_aPSPlant = params.aPSPlant;
 		
 		if(params.deploymentContextRepository == null)
 			params.deploymentContextRepository = DeploymentContextFactory.eINSTANCE.createDeploymentContextRepository();
@@ -75,7 +72,7 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 					createConfiguration();
 		}
 		this._configuration = params.configuration;
-		if (params.fieldOfActivityRepository == null) {
+		if (params.iecFieldOfActivityRepository == null) {
 			_iecFieldOfActivityRepository = IECFieldOfActivityAnnotationsFactory.eINSTANCE.
 					createIECFieldOfActivityAnnotationsRepository();
 		}
@@ -84,6 +81,14 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 			_iecModificationMarkRepository = IECModificationmarksFactory.eINSTANCE.
 					createIECModificationRepository();
 		}
+		
+		_fieldOfActivityRepository = params.fieldOfActivityRepository;
+		_aPSPlant = params.aPSPlant;
+		_deploymentContextRepository = params.deploymentContextRepository;
+		_IECRepository = params.iecRepository;
+		_configuration = params.configuration;
+		_iecFieldOfActivityRepository = params.iecFieldOfActivityRepository;
+		_iecModificationMarkRepository = params.iecModificationMarkRepository;
 	}
 
 	public FieldOfActivityAnnotationRepository getFieldOfActivityRepository() {
@@ -131,11 +136,11 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 		this._iecFieldOfActivityRepository = fieldOfActivityRepository;
 	}
 
-	public AbstractKAMP4IECModificationRepository getIECModificationMarkRepository() {
+	public IECModificationRepository getIECModificationMarkRepository() {
 		return _iecModificationMarkRepository;
 	}
 
-	public void setIECModificationMarkRepository(AbstractKAMP4IECModificationRepository _iecModificationMarkRepository) {
+	public void setIECModificationMarkRepository(IECModificationRepository _iecModificationMarkRepository) {
 		this._iecModificationMarkRepository = _iecModificationMarkRepository;
 	}
 }
