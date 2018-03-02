@@ -102,12 +102,12 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 			calculateAndMarkFromModulePropagation(version);
 			calculateAndMarkFromComponentPropagation(version);
 			calculateAndMarkFromInterfacePropagation(version);
+			addAllChangePropagations(version);
 		} while(changePropagationDueToHardwareChange.isChanged());
 //		calculateAndMarkRampChanges(version);
 //		calculateAndMarkScrewingChanges(version);
 		
 		// Update
-		addAllChangePropagations(version);
 		
 		IECArchitectureVersion iecVersion = extractIECArchitecture(version);
 		IECChangePropagationAnalysis iecAnalysis = new IECChangePropagationAnalysis();

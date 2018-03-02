@@ -3,6 +3,7 @@ package edu.kit.ipd.sdq.kamp4aps.core.changepropagation;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -31,6 +32,7 @@ public class InterfaceChanges extends Change {
 	public InterfaceChanges(APSArchitectureVersion v) {
 		super(v);
 		initialMarkedInterfaces = APSArchitectureModelLookup.lookUpMarkedObjectsOfAType(version, Interface.class);
+		
 	}
 	
 	public void addInitialMarkedInterfacesToList(

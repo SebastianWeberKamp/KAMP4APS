@@ -8,6 +8,8 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="lookUpMarkedObjectsOfAType"/>
+			<item value="duplicate"/>
 			<item value="relevant"/>
 			<item value="fieldof"/>
 			<item value="fieldofactivity"/>
