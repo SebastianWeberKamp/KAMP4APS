@@ -5,6 +5,9 @@ import edu.kit.ipd.sdq.kamp4aps.model.DeploymentContext.DeploymentContextReposit
 import edu.kit.ipd.sdq.kamp.architecture.AbstractArchitectureVersion;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.FieldOfActivityAnnotationRepository;
 import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.KAMP4aPSFieldofactivityannotationsFactory;
+import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository;
+import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationmarksFactory;
+import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Kamp4hmiModelFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
@@ -34,6 +37,8 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 	private Configuration _configuration;
 	private IECFieldOfActivityAnnotationsRepository _iecFieldOfActivityRepository;
 	public IECModificationRepository _iecModificationMarkRepository;
+	private edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Repository _hmiRepository;
+	private edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository _hmiModificationRepository;
 	
 	public static class ArchitectureVersionParams{
 		public String name;
@@ -46,6 +51,9 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 		public Repository iecRepository;
 		public Configuration configuration;
 		public IECFieldOfActivityAnnotationsRepository iecFieldOfActivityRepository;
+		
+		public edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Repository hmiRepository;
+		public HMIModificationMarksRepository hmiModificationMarksRepository;
 	}
 	
 	public APSArchitectureVersion(ArchitectureVersionParams params) {
@@ -81,6 +89,14 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 			_iecModificationMarkRepository = IECModificationmarksFactory.eINSTANCE.
 					createIECModificationRepository();
 		}
+		if (params.hmiRepository == null) {
+			_hmiRepository = Kamp4hmiModelFactory.eINSTANCE.createRepository();
+		}
+		this._hmiRepository = params.hmiRepository;	
+		if (params.hmiModificationMarksRepository == null) {
+			_hmiModificationRepository = HMIModificationmarksFactory.eINSTANCE.createHMIModificationMarksRepository();
+		}
+		this._hmiModificationRepository = params.hmiModificationMarksRepository;	
 		
 		_fieldOfActivityRepository = params.fieldOfActivityRepository;
 		_aPSPlant = params.aPSPlant;
@@ -142,5 +158,22 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 
 	public void setIECModificationMarkRepository(IECModificationRepository _iecModificationMarkRepository) {
 		this._iecModificationMarkRepository = _iecModificationMarkRepository;
+	}
+
+	public edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Repository getHmiRepository() {
+		return _hmiRepository;
+	}
+
+	public void setHmiRepository(edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Repository _hmiRepository) {
+		this._hmiRepository = _hmiRepository;
+	}
+
+	public edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository getHmiModificationRepository() {
+		return _hmiModificationRepository;
+	}
+
+	public void setHmiModificationRepository(
+			edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository _hmiModificationRepository) {
+		this._hmiModificationRepository = _hmiModificationRepository;
 	}
 }

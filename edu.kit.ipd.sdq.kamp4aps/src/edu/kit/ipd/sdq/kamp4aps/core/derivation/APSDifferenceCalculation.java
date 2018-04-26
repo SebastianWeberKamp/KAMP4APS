@@ -93,6 +93,8 @@ public class APSDifferenceCalculation extends AbstractDifferenceCalculation<APSA
 		iecVersion.setIECRepository(apsArchitectureVersion.getIECRepository());
 		iecVersion.setKonfiguration(apsArchitectureVersion.getConfiguration());
 		iecVersion.setModificationMarkRepository(apsArchitectureVersion.getIECModificationMarkRepository());
+		iecVersion.setHMIModificationRepository(apsArchitectureVersion.getHmiModificationRepository());
+		iecVersion.setHMIRepository(apsArchitectureVersion.getHmiRepository());
 		iecVersion.setName(apsArchitectureVersion.getName());
 		return iecVersion;
 	}

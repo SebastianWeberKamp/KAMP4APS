@@ -129,6 +129,8 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 		iecVersion.setKonfiguration(apsArchitectureVersion.getConfiguration());
 		iecVersion.setModificationMarkRepository(apsArchitectureVersion.getIECModificationMarkRepository());
 		iecVersion.setName(apsArchitectureVersion.getName());
+		iecVersion.setHMIModificationRepository(apsArchitectureVersion.getHmiModificationRepository());
+		iecVersion.setHMIRepository(apsArchitectureVersion.getHmiRepository());
 		return iecVersion;
 	}
 
