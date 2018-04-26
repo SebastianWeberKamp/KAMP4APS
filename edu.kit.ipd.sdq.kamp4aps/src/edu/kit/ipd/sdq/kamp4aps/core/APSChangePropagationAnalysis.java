@@ -102,22 +102,24 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 			calculateAndMarkFromModulePropagation(version);
 			calculateAndMarkFromComponentPropagation(version);
 			calculateAndMarkFromInterfacePropagation(version);
-			addAllChangePropagations(version);
 		} while(changePropagationDueToHardwareChange.isChanged());
 //		calculateAndMarkRampChanges(version);
 //		calculateAndMarkScrewingChanges(version);
 		
 		// Update
+		addAllChangePropagations(version);
 		
 		IECArchitectureVersion iecVersion = extractIECArchitecture(version);
-		IECChangePropagationAnalysis iecAnalysis = new IECChangePropagationAnalysis();
-		List<IECComponent> iecSeed = new LinkedList<>();
-		for(IECModifyGlobalVariable mod : changePropagationDueToDataDependency.getGlobalVariableModifications()) {
-			iecSeed.add(mod.getAffectedElement());
+		if(iecVersion.getModificationMarkRepository() != null && iecVersion.getConfiguration() != null) {
+			IECChangePropagationAnalysis iecAnalysis = new IECChangePropagationAnalysis();
+			List<IECComponent> iecSeed = new LinkedList<>();
+			for(IECModifyGlobalVariable mod : changePropagationDueToDataDependency.getGlobalVariableModifications()) {
+				iecSeed.add(mod.getAffectedElement());
+			}
+			iecAnalysis.setSeedModifications(iecSeed);
+			
+			iecAnalysis.runChangePropagationAnalysis(iecVersion);
 		}
-		iecAnalysis.setSeedModifications(iecSeed);
-		
-		iecAnalysis.runChangePropagationAnalysis(iecVersion);
 	}
 	
 	private IECArchitectureVersion extractIECArchitecture(APSArchitectureVersion apsArchitectureVersion) {
