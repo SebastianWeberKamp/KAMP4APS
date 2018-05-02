@@ -195,7 +195,7 @@ public class InterfaceChanges extends Change {
 	
 	protected List<IECModifyGlobalVariable> createModifyGlobalVariablesFromAffectedInterfaces(
 			Map<Interface, Set<GlobalVariable>> modulesToBeMarked) {
-		List<IECModifyGlobalVariable> modifyModules = new ArrayList<IECModifyGlobalVariable>();
+		List<IECModifyGlobalVariable> modifyVariables = new ArrayList<IECModifyGlobalVariable>();
 		for(Map.Entry<Interface, Set<GlobalVariable>> modulesToBeMarkedEntry : modulesToBeMarked.entrySet()){
 			for(GlobalVariable globalVariable : modulesToBeMarkedEntry.getValue()){
 				IECModifyGlobalVariable modifyGlobalVariable = IECModificationmarksFactory.eINSTANCE.createIECModifyGlobalVariable();
@@ -203,10 +203,10 @@ public class InterfaceChanges extends Change {
 				modifyGlobalVariable.setAffectedElement(globalVariable);
 				modifyGlobalVariable.getCausingElements().add(modulesToBeMarkedEntry.getKey());
 				modifyGlobalVariable.setId(globalVariable.getId() + "_" + globalVariable.getName());
-				modifyModules.add(modifyGlobalVariable);
+				modifyVariables.add(modifyGlobalVariable);
 			}
 		}
-		return modifyModules;
+		return modifyVariables;
 	}
 	
 	
