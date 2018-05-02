@@ -8,6 +8,8 @@ import edu.kit.ipd.sdq.kamp4aps.model.fieldofactivityannotations.KAMP4aPSFieldof
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository;
 import edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationmarksFactory;
 import edu.kit.ipd.sdq.kamp4hmi.model.Kamp4hmiModel.Kamp4hmiModelFactory;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion;
+import edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion.ArchitectureVersionParams;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsFactory;
 import edu.kit.ipd.sdq.kamp4iec.model.IECFieldOfActivityAnnotations.IECFieldOfActivityAnnotationsRepository;
 import edu.kit.ipd.sdq.kamp4iec.model.IECModel.Configuration;
@@ -175,5 +177,17 @@ public class APSArchitectureVersion extends AbstractArchitectureVersion<Abstract
 	public void setHmiModificationRepository(
 			edu.kit.ipd.sdq.kamp4hmi.model.HMIModificationmarks.HMIModificationMarksRepository _hmiModificationRepository) {
 		this._hmiModificationRepository = _hmiModificationRepository;
+	}
+	
+	public static IECArchitectureVersion extractIECArchitecture(APSArchitectureVersion apsArchitectureVersion) {
+		IECArchitectureVersion iecVersion = new IECArchitectureVersion(new edu.kit.ipd.sdq.kamp4iec.core.IECArchitectureVersion.ArchitectureVersionParams());
+		iecVersion.setFieldOfActivityRepository(apsArchitectureVersion.getIECFieldOfActivityRepository());
+		iecVersion.setIECRepository(apsArchitectureVersion.getIECRepository());
+		iecVersion.setKonfiguration(apsArchitectureVersion.getConfiguration());
+		iecVersion.setModificationMarkRepository(apsArchitectureVersion.getIECModificationMarkRepository());
+		iecVersion.setName(apsArchitectureVersion.getName());
+		iecVersion.setHMIModificationRepository(apsArchitectureVersion.getHmiModificationRepository());
+		iecVersion.setHMIRepository(apsArchitectureVersion.getHmiRepository());
+		return iecVersion;
 	}
 }

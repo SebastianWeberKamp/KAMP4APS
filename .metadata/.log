@@ -5797,3 +5797,15 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 !ENTRY org.apache.log4j 2 0 2018-05-02 10:35:42.504
 !MESSAGE org.eclipse.jgit.util.FS  - Cannot run program "git" (in directory "\usr\bin"): CreateProcess error=2, Das System kann die angegebene Datei nicht finden
 
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-05-02 13:49:15.334
+!MESSAGE Project facet jst.ejb has not been defined. It is used in plugin org.eclipse.jst.j2ee.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-05-02 13:49:15.349
+!MESSAGE Project facet jst.web has not been defined. It is used in plugin org.eclipse.jst.j2ee.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-05-02 13:49:15.350
+!MESSAGE Project facet jst.webfragment has not been defined. It is used in plugin org.eclipse.jst.j2ee.
+
+!ENTRY org.eclipse.wst.common.project.facet.core 4 0 2018-05-02 13:49:15.350
+!MESSAGE Project facet jst.connector has not been defined. It is used in plugin org.eclipse.jst.j2ee.

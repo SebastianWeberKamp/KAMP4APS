@@ -49,6 +49,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.SignalInterface;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -65,6 +66,7 @@ import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.ecore.resource.Resource;
 
+import edu.kit.ipd.sdq.kamp.model.modificationmarks.ChangePropagationStep;
 import edu.kit.ipd.sdq.kamp.propagation.AbstractChangePropagationAnalysis;
 /**
  * The change propagation analysis of KAMP4APS
@@ -94,6 +96,11 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 		// Setup
 		setChangePropagationDueToHardwareChange(KAMP4aPSModificationmarksFactory.eINSTANCE.createChangePropagationDueToHardwareChange());
 		setChangePropagationDueToDataDependency(IECModificationmarksFactory.eINSTANCE.createIECChangePropagationDueToDataDependency());
+		//remove old modifications from KAMP4IEC
+		for (Iterator<ChangePropagationStep> it = version.getIECModificationMarkRepository().getChangePropagationSteps().iterator(); it.hasNext(); ) {
+			ChangePropagationStep step = it.next();
+			it.remove();
+		}
 		
 		// Calculate
 		do {
@@ -109,7 +116,7 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 		
 		// Update
 		
-		IECArchitectureVersion iecVersion = extractIECArchitecture(version);
+		IECArchitectureVersion iecVersion = APSArchitectureVersion.extractIECArchitecture(version);
 		if(iecVersion.getModificationMarkRepository() != null && iecVersion.getConfiguration() != null) {
 			IECChangePropagationAnalysis iecAnalysis = new IECChangePropagationAnalysis();
 			List<IECComponent> iecSeed = new LinkedList<>();
@@ -120,18 +127,6 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 			
 			iecAnalysis.runChangePropagationAnalysis(iecVersion);
 		}
-	}
-	
-	private IECArchitectureVersion extractIECArchitecture(APSArchitectureVersion apsArchitectureVersion) {
-		IECArchitectureVersion iecVersion = new IECArchitectureVersion(new ArchitectureVersionParams());
-		iecVersion.setFieldOfActivityRepository(apsArchitectureVersion.getIECFieldOfActivityRepository());
-		iecVersion.setIECRepository(apsArchitectureVersion.getIECRepository());
-		iecVersion.setKonfiguration(apsArchitectureVersion.getConfiguration());
-		iecVersion.setModificationMarkRepository(apsArchitectureVersion.getIECModificationMarkRepository());
-		iecVersion.setName(apsArchitectureVersion.getName());
-		iecVersion.setHMIModificationRepository(apsArchitectureVersion.getHmiModificationRepository());
-		iecVersion.setHMIRepository(apsArchitectureVersion.getHmiRepository());
-		return iecVersion;
 	}
 
 	private void calculateAndMarkScrewingChanges(APSArchitectureVersion version) {
