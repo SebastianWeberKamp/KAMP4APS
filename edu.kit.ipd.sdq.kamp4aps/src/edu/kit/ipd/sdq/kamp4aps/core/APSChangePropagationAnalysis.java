@@ -98,26 +98,27 @@ public class APSChangePropagationAnalysis implements AbstractChangePropagationAn
 		// Calculate
 		do {
 			changePropagationDueToHardwareChange.setChanged(false);
+			calculateAndMarkRampChanges(version);
 			calculateAndMarkFromStructurePropagation(version);
 			calculateAndMarkFromModulePropagation(version);
 			calculateAndMarkFromComponentPropagation(version);
 			calculateAndMarkFromInterfacePropagation(version);
 			addAllChangePropagations(version);
 		} while(changePropagationDueToHardwareChange.isChanged());
-//		calculateAndMarkRampChanges(version);
-//		calculateAndMarkScrewingChanges(version);
+		//calculateAndMarkRampChanges(version);
+		//calculateAndMarkScrewingChanges(version);
 		
 		// Update
 		
-		IECArchitectureVersion iecVersion = extractIECArchitecture(version);
-		IECChangePropagationAnalysis iecAnalysis = new IECChangePropagationAnalysis();
-		List<IECComponent> iecSeed = new LinkedList<>();
-		for(IECModifyGlobalVariable mod : changePropagationDueToDataDependency.getGlobalVariableModifications()) {
-			iecSeed.add(mod.getAffectedElement());
-		}
-		iecAnalysis.setSeedModifications(iecSeed);
-		
-		iecAnalysis.runChangePropagationAnalysis(iecVersion);
+		//IECArchitectureVersion iecVersion = extractIECArchitecture(version);
+		//IECChangePropagationAnalysis iecAnalysis = new IECChangePropagationAnalysis();
+		//List<IECComponent> iecSeed = new LinkedList<>();
+		//for(IECModifyGlobalVariable mod : changePropagationDueToDataDependency.getGlobalVariableModifications()) {
+		//	iecSeed.add(mod.getAffectedElement());
+		//}
+		//iecAnalysis.setSeedModifications(iecSeed);
+		//
+		//iecAnalysis.runChangePropagationAnalysis(iecVersion);
 	}
 	
 	private IECArchitectureVersion extractIECArchitecture(APSArchitectureVersion apsArchitectureVersion) {

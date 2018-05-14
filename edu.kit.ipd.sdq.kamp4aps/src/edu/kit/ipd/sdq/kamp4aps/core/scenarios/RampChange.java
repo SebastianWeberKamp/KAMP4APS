@@ -2,6 +2,7 @@ package edu.kit.ipd.sdq.kamp4aps.core.scenarios;
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -15,6 +16,7 @@ import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Component;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.Frame;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.ComponentRepository.RegularRamp;
 import edu.kit.ipd.sdq.kamp4aps.model.aPS.InterfaceRepository.Interface;
+import edu.kit.ipd.sdq.kamp4aps.model.aPS.MechanicalComponents.Ramp;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyComponent;
 import edu.kit.ipd.sdq.kamp4aps.model.KAMP4aPSModificationmarks.ModifyInterface;
 
@@ -49,6 +51,16 @@ public class RampChange extends ComponentChanges {
 		do {
 			mapHash = interfacesToBeMarked.hashCode();
 			interfacesToBeMarked = APSArchitectureModelLookup.lookUpInterfacesOfComponents(initialMarkedRamps, changePropagationDueToHardwareChange);
+			HashMap<Component, Set<Interface>> cleandInterfaceMap = new HashMap<Component, Set<Interface>>(); 
+			for (ModifyComponent<Component> mc : changePropagationDueToHardwareChange.getComponentModifications()) {
+				if(mc.getAffectedElement() instanceof Ramp){
+					Set<Interface> blub = interfacesToBeMarked.get(mc.getAffectedElement());
+					if (blub != null) {
+						cleandInterfaceMap.put(mc.getAffectedElement(), blub);
+					}
+				}
+			}
+			interfacesToBeMarked = cleandInterfaceMap;
 			modifyInterfaces = createModifyInterfaceFromAffectedInterfaces(interfacesToBeMarked);
 			addToModifyInterfacesToChangePropagation(modifyInterfaces, changePropagationDueToHardwareChange);
 		} while(mapHash != interfacesToBeMarked.hashCode());
